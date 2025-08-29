@@ -7,16 +7,12 @@
 <style>
   /* ========= GLOBAL CONTROLS ========= */
   :root{
-    /* Height scales with viewport height and reacts a bit to width.
-       If you prefer fixed-by-height only, use: --band-h: 70vh; */
+    /* Height scales with viewport height & a bit with width. Use 70vh if you want fixed-by-height only. */
     --band-h: clamp(56svh, 56vw, 84svh);
 
-    /* How tightly items pack together (more = tighter) */
-    --cluster-overlap: 14vh;
+    /* Total width of the horizontal canvas (increase if you add more tiles) */
+    --rail-w: 220svh;
 
-    --gap: 0;                 /* we manage spacing via overlap, not gap */
-    --pad-y: 0;               /* top/bottom rail padding */
-    --pad-x: 0;               /* left/right rail padding */
     --bg: #0f0f12;
     --fg: #e7f1ff;
   }
@@ -40,44 +36,37 @@
   .hwrap::-webkit-scrollbar{ height:8px }
   .hwrap::-webkit-scrollbar-thumb{ background:#2c2c32; border-radius:8px }
 
-  /* ========= RAIL ========= */
+  /* ========= RAIL (ABSOLUTE PLACEMENT) ========= */
   .rail{
-    display:inline-flex; align-items:flex-end;
-    gap:var(--gap);
-    height:var(--band-h);
-    padding:var(--pad-y) var(--pad-x);
-    width:max-content; /* expands with content */
+    position: relative;
+    height: var(--band-h);
+    width: max(100%, var(--rail-w));  /* ensure scrollable width */
+    /* zero padding so the left-most item can truly hug the edge */
+    padding: 0;
   }
 
-  /* ========= SLOT CONTROL PANEL =========
+  /* ========= SLOT “CONTROL PANEL” =========
      Per-slot variables you can override:
-     --scale (size), --y (vertical), --x (visual X nudge),
-     --rot (rotation), --ml (layout margin-left), --z (stack order)
+     --left (horizontal position), --scale (size), --y (vertical nudge), --x (fine X nudge),
+     --rot (rotation), --z (stack order)
   */
   .slot{
+    --left: 0;      /* horizontal position along the rail */
     --scale: 1;
     --y: 0;
     --x: 0;
     --rot: 0deg;
-    --ml: 0;
     --z: 1;
 
-    display:flex; flex-direction:column; align-items:flex-start;
+    position: absolute;
+    left: var(--left);
+    bottom: 0;                          /* baseline alignment */
+    display: flex; align-items: flex-end;
     height: var(--band-h);
     transform: translate(var(--x), var(--y)) rotate(var(--rot));
     transform-origin: center bottom;
-    position: relative;
     z-index: var(--z);
-    color:inherit; text-decoration:none;
-  }
-
-  /* PACKING:
-     - First slot: uses only its own --ml
-     - Every next slot: subtracts --cluster-overlap to pack items left
-  */
-  .rail > .slot{ margin-left: var(--ml); }
-  .rail > .slot:not(:first-child){
-    margin-left: calc(var(--ml) - var(--cluster-overlap));
+    color: inherit; text-decoration: none;
   }
 
   /* Images scale with band height *and* per-slot --scale */
@@ -90,67 +79,69 @@
   }
 
   /* ========= PER-SLOT CUSTOMIZATION (EDIT THESE) =========
+     TIP: Use svh for positions so spacing stays proportional to height.
      Good starting ranges:
-     --scale: 0.85–1.35,  --y: -10svh..+10svh,  --x: -8svh..+8svh,  --ml: -8svh..+8svh
+       --left: 0..200svh,  --scale: 0.85–1.35,
+       --y: -10svh..+10svh,  --x: -6svh..+6svh
   */
 
-  /* 1) A SPECIAL MESSAGE FROM… — hugs left edge */
+  /* 1) A SPECIAL MESSAGE FROM… — hug the left edge */
   #special-message{
+    --left: 0svh;    /* start at the very left */
     --scale: 1.24;
     --y: -6svh;      /* up */
     --x: -2svh;      /* tiny nudge left if PNG has transparent padding */
     --rot: -2deg;
-    --ml: 0;         /* keep first slot at the true left */
     --z: 4;
   }
 
-  /* 2) “IZZY MACARTHUR” scribble — tucked under, slight tilt */
+  /* 2) IZZY MACARTHUR (scribble) — just to the right of the headline */
   #scribble-izzy{
+    --left: 18svh;
     --scale: 0.96;
     --y: -3svh;
     --x: 1svh;
     --rot: -6deg;
-    --ml: 0;
     --z: 3;
   }
 
-  /* 3) Torn note — a bit bigger, mild left tilt */
+  /* 3) Torn note — slightly bigger, overlapping cluster */
   #torn-note{
+    --left: 34svh;
     --scale: 1.08;
     --y: 1svh;
-    --x: 4svh;
+    --x: 2svh;
     --rot: -6deg;
-    --ml: 0;
-    --z: 5;          /* layer above for paper feel */
+    --z: 5;
   }
 
-  /* 4) Tracklist sheet — higher, rotated clockwise, a bit to the right */
+  /* 4) Tracklist sheet — staggered higher and a bit right */
   #tracklist{
+    --left: 52svh;
     --scale: 1.00;
     --y: -6svh;
-    --x: 8svh;
+    --x: 3svh;
     --rot: 8deg;
-    --ml: 0;
     --z: 3;
   }
 
-  /* 5) THE STORY BEHIND: — begins the heading pair */
+  /* 5) THE STORY BEHIND: — begin the heading pair */
   #the-story-behind{
+    --left: 74svh;
     --scale: 1.00;
     --y: -3svh;
-    --x: 12svh;
+    --x: 0;
     --rot: 0deg;
-    --ml: 0;
     --z: 2;
   }
 
-  /* 6) BLAME IT ON A BAD DREAM — sits next to the line above */
+  /* 6) BLAME IT ON A BAD DREAM — next to the line above */
   #album-title{
+    --left: 96svh;
     --scale: 1.00;
     --y: -3svh;
-    --x: 14svh;
+    --x: 2svh;
     --rot: 0deg;
-    --ml: 0;
     --z: 2;
   }
 </style>
@@ -202,7 +193,7 @@
         alt="BLAME IT ON A BAD DREAM" />
     </figure>
 
-    <!-- Add more slots here… -->
+    <!-- Add more slots here. For each new slot, give it a unique id and set --left. -->
 
   </div>
 </div>
