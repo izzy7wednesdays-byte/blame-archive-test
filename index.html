@@ -79,66 +79,69 @@
     filter: drop-shadow(0 .6svh 1.2svh rgba(0,0,0,.5));
   }
 
-  /* ========= PER-SLOT CUSTOMIZATION (EDIT THESE) ========= */
-  /* A SPECIAL MESSAGE FROM… */
-  #special-message{
-    --scale: 1.5;
-    --y: -30svh;
-    --x: -10;      /* nudge left without changing layout gaps */
-    --rot: 0deg;
-    --ml: 0;
-    --z: 4;
-  }
+/* ===== PER-SLOT CUSTOMIZATION (paste over your current section) ===== */
+/* TIP: keep rail padding at 0 so the left-most slot can truly hug the edge */
+/* :root { --pad-x: 0svh; --pad-y: 0svh; }  and .rail { padding: var(--pad-y) var(--pad-x); } */
 
-  /* IZZY MACARTHUR (scribble) */
-  #scribble-izzy{
-    --scale: 0.25;
-    --y: 20svh;
-    --x: 15svh;       /* slight nudge right */
-    --rot: 0deg;
-    --ml: 0;
-    --z: 2;
-  }
+/* 1) A SPECIAL MESSAGE FROM… — hugs left, slightly larger, lifted */
+#special-message{
+  --scale: 1.28;
+  --y: -6svh;     /* up */
+  --x: -2svh;     /* tiny nudge left to counter PNG left padding */
+  --rot: -2deg;
+  --ml: 0;        /* keep 0 so it truly sits at the edge */
+  --z: 4;
+}
 
-  /* Torn note */
-  #torn-note{
-    --scale: 0.75;
-    --y: 1svh;
-    --x: 20;
-    --rot: 0deg;
-    --ml: 0;
-    --z: 3;
-  }
+/* 2) “IZZY MACARTHUR” scribble — tucked under/nearby, slight tilt */
+#scribble-izzy{
+  --scale: 0.96;
+  --y: -2svh;     /* up a touch */
+  --x: 2svh;      /* a little to the right of the headline */
+  --rot: -6deg;
+  --ml: 0;
+  --z: 3;         /* below headline if they overlap; raise to 5 if you want it on top */
+}
 
-  /* Tracklist sheet */
-  #tracklist{
-    --scale: 1.0;
-    --y: -4svh;
-    --x: 3svh;
-    --rot: 8deg;
-    --ml: 0;
-    --z: 3;
-  }
+/* 3) Torn note — a bit bigger, mild left tilt, sits just below baseline */
+#torn-note{
+  --scale: 1.12;
+  --y: 1svh;      /* down a hair */
+  --x: 4svh;      /* to the right of the intro cluster */
+  --rot: -6deg;
+  --ml: 0;
+  --z: 5;         /* above neighbors for a layered paper feel */
+}
 
-  /* THE STORY BEHIND: */
-  #the-story-behind{
-    --scale: 1.0;
-    --y: -3svh;
-    --x: 0;
-    --rot: 0deg;
-    --ml: 0;
-    --z: 2;
-  }
+/* 4) Tracklist sheet — higher, rotated clockwise, further right */
+#tracklist{
+  --scale: 1.02;
+  --y: -7svh;     /* up to stagger against the torn note */
+  --x: 10svh;     /* move right along the rail */
+  --rot: 8deg;
+  --ml: 0;
+  --z: 3;
+}
 
-  /* BLAME IT ON A BAD DREAM (title) */
-  #album-title{
-    --scale: 1.0;
-    --y: -3svh;
-    --x: 2svh;
-    --rot: 0deg;
-    --ml: 0;
-    --z: 2;
-  }
+/* 5) THE STORY BEHIND: — same baseline as title cluster, no tilt */
+#the-story-behind{
+  --scale: 1.00;
+  --y: -3svh;
+  --x: 18svh;     /* push right to begin the heading pair */
+  --rot: 0deg;
+  --ml: 0;
+  --z: 2;
+}
+
+/* 6) BLAME IT ON A BAD DREAM — sits next to the “STORY BEHIND” line */
+#album-title{
+  --scale: 1.00;
+  --y: -3svh;
+  --x: 20svh;     /* a touch further to the right than the line above */
+  --rot: 0deg;
+  --ml: 0;
+  --z: 2;
+}
 </style>
 </head>
 <body>
