@@ -7,16 +7,16 @@
 <style>
   /* ========= GLOBAL CONTROLS ========= */
   :root{
-    /* Height scales with viewport height (and reacts a bit to width).
-       If you prefer fixed-by-height only, use:  --band-h: 70svh; */
+    /* Height scales with viewport height and reacts a bit to width.
+       If you prefer fixed-by-height only, use: --band-h: 70vh; */
     --band-h: clamp(56svh, 56vw, 84svh);
 
-    /* Base overlap between adjacent slots (bigger = tighter cluster) */
-    --cluster-overlap: 12svh;
+    /* How tightly items pack together (more = tighter) */
+    --cluster-overlap: 14vh;
 
-    --gap: 0;          /* no built-in gap; we control spacing via overlap */
-    --pad-y: 0svh;     /* top/bottom padding around the rail */
-    --pad-x: 0svh;     /* left/right padding around the rail */
+    --gap: 0;                 /* we manage spacing via overlap, not gap */
+    --pad-y: 0;               /* top/bottom rail padding */
+    --pad-x: 0;               /* left/right rail padding */
     --bg: #0f0f12;
     --fg: #e7f1ff;
   }
@@ -43,16 +43,17 @@
   /* ========= RAIL ========= */
   .rail{
     display:inline-flex; align-items:flex-end;
-    gap:var(--gap);                /* 0 by default */
+    gap:var(--gap);
     height:var(--band-h);
     padding:var(--pad-y) var(--pad-x);
-    width:max-content;             /* expands with content */
+    width:max-content; /* expands with content */
   }
 
   /* ========= SLOT CONTROL PANEL =========
      Per-slot variables you can override:
      --scale (size), --y (vertical), --x (visual X nudge),
-     --rot (rotation), --ml (extra margin-left), --z (stack order) */
+     --rot (rotation), --ml (layout margin-left), --z (stack order)
+  */
   .slot{
     --scale: 1;
     --y: 0;
@@ -70,12 +71,14 @@
     color:inherit; text-decoration:none;
   }
 
-  /* Default margins:
+  /* PACKING:
      - First slot: uses only its own --ml
-     - Every next slot: subtracts --cluster-overlap so items pack together
+     - Every next slot: subtracts --cluster-overlap to pack items left
   */
   .rail > .slot{ margin-left: var(--ml); }
-  .rail > .slot + .slot{ margin-left: calc(var(--ml) - var(--cluster-overlap)); }
+  .rail > .slot:not(:first-child){
+    margin-left: calc(var(--ml) - var(--cluster-overlap));
+  }
 
   /* Images scale with band height *and* per-slot --scale */
   .slot img{
@@ -83,11 +86,10 @@
     width: auto;
     display: block;
     object-fit: contain;
-    filter: drop-shadow(0 .6svh 1.2svh rgba(0,0,0,.5));
+    filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
   }
 
   /* ========= PER-SLOT CUSTOMIZATION (EDIT THESE) =========
-     Keep values modest at first; then nudge.
      Good starting ranges:
      --scale: 0.85–1.35,  --y: -10svh..+10svh,  --x: -8svh..+8svh,  --ml: -8svh..+8svh
   */
@@ -96,7 +98,7 @@
   #special-message{
     --scale: 1.24;
     --y: -6svh;      /* up */
-    --x: -2svh;      /* tiny nudge left to counter PNG padding */
+    --x: -2svh;      /* tiny nudge left if PNG has transparent padding */
     --rot: -2deg;
     --ml: 0;         /* keep first slot at the true left */
     --z: 4;
@@ -108,7 +110,7 @@
     --y: -3svh;
     --x: 1svh;
     --rot: -6deg;
-    --ml: 0;         /* add +svh if you want a hair more space before it */
+    --ml: 0;
     --z: 3;
   }
 
