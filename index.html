@@ -1,3 +1,5 @@
+  /* ========= V35 ========= */
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -78,6 +80,22 @@
     object-fit: contain;
     filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
   }
+
+  /* Lottie slot */
+.slot--lottie .lottie-box{
+  /* height follows your rail height × slot scale */
+  --h: calc(var(--band-h) * var(--scale));
+  height: var(--h);
+
+  /* width from an aspect ratio knob (inherits from the slot) */
+  width: calc(var(--h) * var(--ar, 1));  /* default square */
+
+  display:block;
+  overflow:hidden;
+  background: transparent;
+  cursor: pointer; /* for click-to-pause/play */
+  filter: drop-shadow(0 .6svh 1.2svh rgba(0,0,0,.5));
+}
 
   /* ========= PER-SLOT CUSTOMIZATION (EDIT THESE) =========
      Ranges: --left 0..200svh, --scale .85–1.35, --y -10..+10svh, --x -6..+6svh
