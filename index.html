@@ -7,10 +7,13 @@
 <style>
   /* ========= GLOBAL CONTROLS ========= */
   :root{
-    --band-h: 70svh;                 /* overall row height (try 60–80svh) */
+    /* Height scales with viewport height and reacts a bit to width.
+       If you prefer fixed-by-height only, change to:  --band-h: 70svh; */
+    --band-h: clamp(56svh, 56vw, 84svh);
+
     --gap: clamp(16px, 2svh, 32px);
-    --pad-y: 0svh;                   /* top/bottom breathing */
-    --pad-x: 0svh;                   /* left/right breathing */
+    --pad-y: 0svh;   /* top/bottom padding around the rail */
+    --pad-x: 0svh;   /* left/right padding around the rail */
     --bg: #0f0f12;
     --fg: #e7f1ff;
   }
@@ -25,8 +28,11 @@
 
   /* ========= HORIZONTAL SCROLLER ========= */
   .hwrap{
-    height:100svh; overflow-x:auto; overflow-y:hidden;
-    white-space:nowrap; scroll-behavior:smooth; scrollbar-width:thin;
+    height:100svh;
+    overflow-x:auto; overflow-y:hidden;
+    white-space:nowrap;
+    scroll-behavior:smooth;
+    scrollbar-width:thin;
   }
   .hwrap::-webkit-scrollbar{ height:8px }
   .hwrap::-webkit-scrollbar-thumb{ background:#2c2c32; border-radius:8px }
@@ -41,20 +47,22 @@
   }
 
   /* ========= SLOT “CONTROL PANEL” =========
-     Per-item variables you can override per slot:
-     --scale (size), --y (vertical offset), --rot (rotation),
-     --ml (extra left margin), --z (stacking order) */
+     Per-slot variables you can override:
+     --scale (size), --y (vertical), --x (horizontal visual nudge),
+     --rot (rotation), --ml (layout margin-left), --z (stack order)
+  */
   .slot{
     --scale: 1;
     --y: 0;
+    --x: 0;         /* NEW: visual left/right nudge without reflow */
     --rot: 0deg;
-    --ml: 0;
+    --ml: 0;        /* layout spacing before the slot (can be negative) */
     --z: 1;
 
     display:flex; flex-direction:column; align-items:flex-start;
     height: var(--band-h);
     margin-left: var(--ml);
-    transform: translateY(var(--y)) rotate(var(--rot));
+    transform: translate(var(--x), var(--y)) rotate(var(--rot));
     transform-origin: center bottom;
     position: relative;
     z-index: var(--z);
@@ -63,61 +71,74 @@
 
   /* Image tiles scale with band height *and* per-slot --scale */
   .slot img{
-    height: calc(var(--band-h) * var(--scale) - 10svh);
+    /* Use full band height; add "- 10svh" if you later add captions under images */
+    height: calc(var(--band-h) * var(--scale));
     width: auto;
     display: block;
     object-fit: contain;
     filter: drop-shadow(0 .6svh 1.2svh rgba(0,0,0,.5));
   }
 
-  /* ========= “A SPECIAL MESSAGE FROM…” CUSTOMIZATION ========= */
+  /* ========= PER-SLOT CUSTOMIZATION (EDIT THESE) ========= */
+  /* A SPECIAL MESSAGE FROM… */
   #special-message{
-    --scale: 2.5;   /* bigger/smaller (1 = original) */
-    --y:    -45svh;   /* move up/down (negative = up) */
-    --rot:  0deg;   /* tilt */
-    --ml:    -65svh;   /* extra left spacing (nudge right without reordering) */
-    --z:     4;      /* layering if overlapping neighbors */
+    --scale: 1.25;
+    --y: -6svh;
+    --x: -4svh;      /* nudge left without changing layout gaps */
+    --rot: -2deg;
+    --ml: 0;
+    --z: 4;
   }
-      /* ========= “IZZY MACARTHUR” CUSTOMIZATION ========= */
+
+  /* IZZY MACARTHUR (scribble) */
   #scribble-izzy{
-    --scale: 0.5;   /* bigger/smaller (1 = original) */
-    --y:    10svh;   /* move up/down (negative = up) */
-    --rot:  0deg;   /* tilt */
-    --ml:    -150svh;   /* extra left spacing (nudge right without reordering) */
-    --z:     2;      /* layering if overlapping neighbors */
+    --scale: 0.9;
+    --y: -2svh;
+    --x: 2svh;       /* slight nudge right */
+    --rot: -3deg;
+    --ml: 0;
+    --z: 2;
   }
-    /* ========= “torn note” CUSTOMIZATION ========= */
+
+  /* Torn note */
   #torn-note{
-    --scale: 0.5;   /* bigger/smaller (1 = original) */
-    --y:    200svh;   /* move up/down (negative = up) */
-    --rot:  0deg;   /* tilt */
-    --ml:   -150svh;   /* extra left spacing (nudge right without reordering) */
-    --z:     3;      /* layering if overlapping neighbors */
+    --scale: 1.1;
+    --y: 1svh;
+    --x: 0;
+    --rot: -6deg;
+    --ml: 0;
+    --z: 3;
   }
-    /* ========= “tracklist note” CUSTOMIZATION ========= */
+
+  /* Tracklist sheet */
   #tracklist{
-    --scale: 0.25;   /* bigger/smaller (1 = original) */
-    --y:    200svh;   /* move up/down (negative = up) */
-    --rot:  0deg;   /* tilt */
-    --ml:   20svh;   /* extra left spacing (nudge right without reordering) */
-    --z:     1;      /* layering if overlapping neighbors */
-  }  
-    /* ========= “THE STORY BEHIND” CUSTOMIZATION ========= */
+    --scale: 1.0;
+    --y: -4svh;
+    --x: 3svh;
+    --rot: 8deg;
+    --ml: 0;
+    --z: 3;
+  }
+
+  /* THE STORY BEHIND: */
   #the-story-behind{
-    --scale: 0.25;   /* bigger/smaller (1 = original) */
-    --y:    200svh;   /* move up/down (negative = up) */
-    --rot:  0deg;   /* tilt */
-    --ml:   -200svh;   /* extra left spacing (nudge right without reordering) */
-    --z:     6;      /* layering if overlapping neighbors */
-  }  
-      /* ========= “BLAME IT ON A BAD DREAM” CUSTOMIZATION ========= */
+    --scale: 1.0;
+    --y: -3svh;
+    --x: 0;
+    --rot: 0deg;
+    --ml: 0;
+    --z: 2;
+  }
+
+  /* BLAME IT ON A BAD DREAM (title) */
   #album-title{
-    --scale: 0.25;   /* bigger/smaller (1 = original) */
-    --y:    200svh;   /* move up/down (negative = up) */
-    --rot:  0deg;   /* tilt */
-    --ml:   -200svh;   /* extra left spacing (nudge right without reordering) */
-    --z:     5;      /* layering if overlapping neighbors */
-  } 
+    --scale: 1.0;
+    --y: -3svh;
+    --x: 2svh;
+    --rot: 0deg;
+    --ml: 0;
+    --z: 2;
+  }
 </style>
 </head>
 <body>
@@ -133,41 +154,41 @@
     </figure>
 
     <!-- ========== Izzy scribble ========== -->
-    <figure class="slot" id="scribble-izzy" style="--scale:0.5; --y:40svh; --rot:0deg; --ml:-150svh">
+    <figure class="slot" id="scribble-izzy">
       <img
         src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/scribble-izzy.png"
         alt="Izzy MacArthur" />
     </figure>
 
     <!-- ========== Torn note ========== -->
-    <figure class="slot" id="torn-note" style="--scale:1.25; --y:1svh; --rot:-6deg; --z:4">
+    <figure class="slot" id="torn-note">
       <img
         src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/torn-note.png"
         alt="Note from Izzy" />
     </figure>
 
     <!-- ========== Tracklist sheet ========== -->
-    <figure class="slot" id="tracklist" style="--scale:0.25; --y:-6svh; --rot:8deg; --z:3">
+    <figure class="slot" id="tracklist">
       <img
         src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/tracklist.png"
         alt="Tracklist" />
     </figure>
 
     <!-- ========== The Story Behind: ========== -->
-    <figure class="slot" id="the-story-behind" style="--scale:1; --y:-3svh">
+    <figure class="slot" id="the-story-behind">
       <img
         src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/the-story-behind.png"
         alt="THE STORY BEHIND:" />
     </figure>
 
     <!-- ========== Blame It On A Bad Dream (title) ========== -->
-    <figure class="slot" id="album-title" style="--scale:1; --y:-3svh; --ml:2svh">
+    <figure class="slot" id="album-title">
       <img
         src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/blame-it-on-a-bad-dream.png"
         alt="BLAME IT ON A BAD DREAM" />
     </figure>
 
-    <!-- Add more <figure class="slot">…</figure> items here as you export them -->
+    <!-- Add more <figure class="slot" id="your-id">…</figure> items as you export them -->
 
   </div>
 </div>
