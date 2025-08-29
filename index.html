@@ -143,6 +143,16 @@
     --z: 1;
   }
 
+   /* 7) Spotify playlist (NEW) */
+  #playlist-ex{
+    --left: 124svh;   /* move horizontally along the rail */
+    --scale: 0.95;    /* overall player height relative to band */
+    --y: -2svh;       /* up/down */
+    --x: 0svh;        /* fine left/right nudge */
+    --rot: 0deg;      /* tilt if you want */
+    --z: 3;           /* stacking order */
+  }
+
   /* ===== Example: shift entire collage 4svh left =====
   .rail{ --group-left: -4svh; }
   */
@@ -193,6 +203,19 @@
       <img
         src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/blame-it-on-a-bad-dream.png"
         alt="BLAME IT ON A BAD DREAM" />
+    </figure>
+
+    <!-- 7: Spotify playlist -->
+    <figure class="slot slot--spotify" id="playlist-ex">
+      <div class="sp-box">
+        <!-- Your exact embed (attributes kept; CSS will size it) -->
+        <iframe data-testid="embed-iframe" style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/07REAl6PPjOz2fLhehn0Xr?utm_source=generator"
+          width="100%" height="352" frameborder="0" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy" title="Spotify playlist">
+        </iframe>
+      </div>
     </figure>
 
     <!-- Add more slots here… (give each a unique id and set --left) -->
