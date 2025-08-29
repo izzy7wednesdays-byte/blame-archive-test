@@ -35,4 +35,90 @@
       gap:var(--gap);
       height:var(--band-h);
       padding:var(--pad-y) var(--pad-x);
-      width
+      width:max-content; /* expands with content */
+    }
+
+    /* Generic image slot */
+    .slot{
+      display:flex; flex-direction:column; align-items:flex-start;
+      height:var(--band-h);
+      transform: translateY(var(--y,0)) rotate(var(--rot,0deg));
+      transform-origin:center bottom;
+    }
+    .slot img{
+      height: calc(var(--band-h) - 10svh); /* leave room if you add captions later */
+      width:auto; display:block; object-fit:contain;
+      filter: drop-shadow(0 .6svh 1.2svh rgba(0,0,0,.5));
+    }
+  </style>
+</head>
+<body>
+
+<div class="hwrap" id="hwrap">
+  <div class="rail">
+
+    <!-- A SPECIAL MESSAGE FROM… -->
+    <figure class="slot" style="--y:-4svh">
+      <img
+        src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/headline-special-message.png"
+        alt="A SPECIAL MESSAGE FROM…" />
+    </figure>
+
+    <!-- IZXY MACARTHUR (scribble) -->
+    <figure class="slot" style="--y:-2svh; --rot:-3deg">
+      <img
+        src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/scribble-izzy.png"
+        alt="Izzy MacArthur" />
+    </figure>
+
+    <!-- Torn note -->
+    <figure class="slot" style="--y:2svh; --rot:-3deg">
+      <img
+        src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/torn-note.png"
+        alt="Note from Izzy" />
+    </figure>
+
+    <!-- Tracklist sheet -->
+    <figure class="slot" style="--y:-6svh; --rot:8deg">
+      <img
+        src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/tracklist.png"
+        alt="Tracklist" />
+    </figure>
+
+    <!-- THE STORY BEHIND: -->
+    <figure class="slot" style="--y:-3svh">
+      <img
+        src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/the-story-behind.png"
+        alt="THE STORY BEHIND:" />
+    </figure>
+
+    <!-- BLAME IT ON A BAD DREAM -->
+    <figure class="slot" style="--y:-3svh">
+      <img
+        src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/blame-it-on-a-bad-dream.png"
+        alt="BLAME IT ON A BAD DREAM" />
+    </figure>
+
+    <!-- Add more slots below as you export them (handwriting, imessage, cards, photos, boombox, etc.) -->
+    <!-- Example placeholder:
+    <figure class="slot" style="--y:-1svh; --rot:2deg">
+      <img src="https://raw.githubusercontent.com/.../img/your-next-image.png" alt="Description" />
+    </figure>
+    -->
+
+  </div>
+</div>
+
+<script>
+  // Convert vertical mouse wheel → horizontal scroll for desktop mice
+  const wrap = document.getElementById('hwrap');
+  wrap.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      wrap.scrollLeft += e.deltaY;
+      e.preventDefault();
+    }
+  }, { passive: false });
+</script>
+
+</body>
+</html>
