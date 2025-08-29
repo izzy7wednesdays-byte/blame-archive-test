@@ -38,18 +38,42 @@
       width:max-content; /* expands with content */
     }
 
-    /* Generic image slot */
-    .slot{
-      display:flex; flex-direction:column; align-items:flex-start;
-      height:var(--band-h);
-      transform: translateY(var(--y,0)) rotate(var(--rot,0deg));
-      transform-origin:center bottom;
-    }
-    .slot img{
-      height: calc(var(--band-h) - 10svh); /* leave room if you add captions later */
-      width:auto; display:block; object-fit:contain;
-      filter: drop-shadow(0 .6svh 1.2svh rgba(0,0,0,.5));
-    }
+/* GLOBAL CONTROLS (keep what you already have above/below) */
+:root{
+  --band-h: 70svh;             /* global row height (try 60–80svh) */
+  --gap: clamp(16px, 2.5svh, 40px);
+  --pad-y: 6svh;
+  --pad-x: 8svh;
+}
+
+/* Each slot = one tile on the rail */
+.slot{
+  /* per-slot knobs (defaults) */
+  --scale: 1;                  /* 1 = normal, 1.2 = 20% bigger, 0.85 = smaller */
+  --y: 0;                      /* vertical offset (e.g., -4svh up, +3svh down) */
+  --rot: 0deg;                 /* rotation (e.g., 6deg, -3deg) */
+  --ml: 0;                     /* extra left margin (e.g., 10svh) */
+  --z: 1;                      /* stacking; higher = on top */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: var(--band-h);
+  margin-left: var(--ml);
+  transform: translateY(var(--y)) rotate(var(--rot));
+  transform-origin: center bottom;
+  position: relative;
+  z-index: var(--z);
+}
+
+/* Image tiles scale with band height *and* per-slot --scale */
+.slot img{
+  height: calc(var(--band-h) * var(--scale) - 10svh);
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 .6svh 1.2svh rgba(0,0,0,.5));
+}
   </style>
 </head>
 <body>
