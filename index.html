@@ -1,153 +1,154 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Horizontal Archive</title>
-  <style>
-    :root{
-      --band-h: 70svh;                 /* overall row height (try 60–80svh) */
-      --gap: clamp(16px, 2.5svh, 40px);
-      --pad-y: 6svh;                   /* top/bottom breathing */
-      --pad-x: 8svh;                   /* left/right breathing */
-      --bg: #0f0f12;
-      --fg: #e7f1ff;
-    }
-    *{ box-sizing:border-box }
-    html,body{
-      margin:0; height:100%;
-      background:var(--bg); color:var(--fg);
-      overflow:hidden;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-    }
-
-    /* Horizontal scroll container */
-    .hwrap{
-      height:100svh; overflow-x:auto; overflow-y:hidden;
-      white-space:nowrap; scroll-behavior:smooth; scrollbar-width:thin;
-    }
-    .hwrap::-webkit-scrollbar{ height:8px }
-    .hwrap::-webkit-scrollbar-thumb{ background:#2c2c32; border-radius:8px }
-
-    /* Rail that holds all items */
-    .rail{
-      display:inline-flex; align-items:flex-end;
-      gap:var(--gap);
-      height:var(--band-h);
-      padding:var(--pad-y) var(--pad-x);
-      width:max-content; /* expands with content */
-    }
-
-/* GLOBAL CONTROLS (keep what you already have above/below) */
-:root{
-  --band-h: 70svh;             /* global row height (try 60–80svh) */
-  --gap: clamp(16px, 2.5svh, 40px);
-  --pad-y: 6svh;
-  --pad-x: 8svh;
-}
-
-/* Each slot = one tile on the rail */
-.slot{
-  /* per-slot knobs (defaults) */
-  --scale: 1;                  /* 1 = normal, 1.2 = 20% bigger, 0.85 = smaller */
-  --y: 0;                      /* vertical offset (e.g., -4svh up, +3svh down) */
-  --rot: 0deg;                 /* rotation (e.g., 6deg, -3deg) */
-  --ml: 0;                     /* extra left margin (e.g., 10svh) */
-  --z: 1;                      /* stacking; higher = on top */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  height: var(--band-h);
-  margin-left: var(--ml);
-  transform: translateY(var(--y)) rotate(var(--rot));
-  transform-origin: center bottom;
-  position: relative;
-  z-index: var(--z);
-}
-
-/* Image tiles scale with band height *and* per-slot --scale */
-.slot img{
-  height: calc(var(--band-h) * var(--scale) - 10svh);
-  width: auto;
-  display: block;
-  object-fit: contain;
-  filter: drop-shadow(0 .6svh 1.2svh rgba(0,0,0,.5));
-}
- <!-- BODY -->
-<figure class="slot" id="special-message">
-  <img src=".../headline-special-message.png" alt="A SPECIAL MESSAGE FROM…">
-</figure> 
-      /* ↓ Per-tile overrides go AFTER the base rules ↓ */
-  #special-message{
-    --scale: 3;   /* bigger */
-    --y:    -5svh;   /* move up */
-    --rot:  0deg;   /* slight tilt */
-    --ml:    10svh;   /* extra left spacing (nudge right) */
-    --z:     3;      /* draw above neighbors if overlapping */
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Blame It On A Bad Dream — Horizontal Archive</title>
+<style>
+  /* ========= GLOBAL CONTROLS ========= */
+  :root{
+    --band-h: 70svh;                 /* overall row height (try 60–80svh) */
+    --gap: clamp(16px, 2.5svh, 40px);
+    --pad-y: 6svh;                   /* top/bottom breathing */
+    --pad-x: 8svh;                   /* left/right breathing */
+    --bg: #0f0f12;
+    --fg: #e7f1ff;
   }
-    
-  </style>
+
+  *{ box-sizing:border-box }
+  html,body{
+    margin:0; height:100%;
+    background:var(--bg); color:var(--fg);
+    overflow:hidden;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* ========= HORIZONTAL SCROLLER ========= */
+  .hwrap{
+    height:100svh; overflow-x:auto; overflow-y:hidden;
+    white-space:nowrap; scroll-behavior:smooth; scrollbar-width:thin;
+  }
+  .hwrap::-webkit-scrollbar{ height:8px }
+  .hwrap::-webkit-scrollbar-thumb{ background:#2c2c32; border-radius:8px }
+
+  /* ========= RAIL (HOLDS ALL SLOTS) ========= */
+  .rail{
+    display:inline-flex; align-items:flex-end;
+    gap:var(--gap);
+    height:var(--band-h);
+    padding:var(--pad-y) var(--pad-x);
+    width:max-content; /* expands with content */
+  }
+
+  /* ========= SLOT “CONTROL PANEL” =========
+     Each slot accepts per-item variables:
+     --scale (size), --y (vertical offset), --rot (rotation),
+     --ml (extra left margin), --z (stacking) */
+  .slot{
+    --scale: 1;
+    --y: 0;
+    --rot: 0deg;
+    --ml: 0;
+    --z: 1;
+
+    display:flex; flex-direction:column; align-items:flex-start;
+    height: var(--band-h);
+    margin-left: var(--ml);
+    transform: translateY(var(--y)) rotate(var(--rot));
+    transform-origin: center bottom;
+    position: relative;
+    z-index: var(--z);
+    color:inherit; text-decoration:none;
+  }
+
+  /* Image tiles scale with band height *and* per-slot --scale */
+  .slot img{
+    height: calc(var(--band-h) * var(--scale) - 10svh);
+    width: auto;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 .6svh 1.2svh rgba(0,0,0,.5));
+  }
+
+  /* Text blocks */
+  .slot--text{
+    justify-content:flex-end;
+    width: clamp(28ch, 45ch, 60ch);
+    font: clamp(14px, 2svh, 18px)/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+  .slot--text h3{ margin: 0 0 .8svh 0; font: 700 clamp(16px, 2.4svh, 22px)/1.2 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+  .slot--text p{ margin: 0 0 1svh 0; }
+</style>
 </head>
 <body>
 
 <div class="hwrap" id="hwrap">
   <div class="rail">
 
-    <!-- A SPECIAL MESSAGE FROM… -->
-    <figure class="slot" style="--y:-4svh">
+    <!-- ========== WELCOME (TEXT) EXAMPLE ========== -->
+    <section class="slot slot--text" id="welcome"
+             style="--scale:1; --y:0svh; --rot:0deg; --ml:0; --z:1">
+      <h3>Welcome</h3>
+      <p>Scroll horizontally to explore the archive. This page scales with your window height.
+         We’ll keep adding tiles as we go — images, notes, screenshots, and more.</p>
+      <p><em>Tip:</em> on a mouse, your vertical wheel is converted to horizontal scroll.</p>
+    </section>
+
+    <!-- ========== A SPECIAL MESSAGE FROM… ========== -->
+    <figure class="slot" id="special-message"
+            style="--scale:1.18; --y:-5svh; --rot:-2deg; --ml:6svh; --z:2">
       <img
         src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/headline-special-message.png"
         alt="A SPECIAL MESSAGE FROM…" />
     </figure>
 
-    <!-- IZZY MACARTHUR (scribble) -->
-    <figure class="slot" style="--y:-2svh; --rot:-3deg">
+    <!-- ========== Izzy scribble ========== -->
+    <figure class="slot" id="scribble-izzy"
+            style="--scale:1.0; --y:-2svh; --rot:-3deg; --ml:4svh; --z:1">
       <img
         src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/scribble-izzy.png"
         alt="Izzy MacArthur" />
     </figure>
 
-    <!-- Torn note -->
-    <figure class="slot" style="--y:2svh; --rot:-3deg">
+    <!-- ========== Torn note ========== -->
+    <figure class="slot" id="torn-note"
+            style="--scale:1.25; --y:1svh; --rot:-6deg; --ml:0; --z:4">
       <img
         src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/torn-note.png"
         alt="Note from Izzy" />
     </figure>
 
-    <!-- Tracklist sheet -->
-    <figure class="slot" style="--y:-6svh; --rot:8deg">
+    <!-- ========== Tracklist sheet ========== -->
+    <figure class="slot" id="tracklist"
+            style="--scale:1.2; --y:-6svh; --rot:8deg; --ml:0; --z:3">
       <img
         src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/tracklist.png"
         alt="Tracklist" />
     </figure>
 
-    <!-- THE STORY BEHIND: -->
-    <figure class="slot" style="--y:-3svh">
+    <!-- ========== The Story Behind: ========== -->
+    <figure class="slot" id="the-story-behind"
+            style="--scale:1.1; --y:-3svh; --rot:0deg; --ml:0; --z:1">
       <img
         src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/the-story-behind.png"
         alt="THE STORY BEHIND:" />
     </figure>
 
-    <!-- BLAME IT ON A BAD DREAM -->
-    <figure class="slot" style="--y:-3svh">
+    <!-- ========== Blame It On A Bad Dream (title) ========== -->
+    <figure class="slot" id="album-title"
+            style="--scale:1.1; --y:-3svh; --rot:0deg; --ml:2svh; --z:1">
       <img
         src="https://raw.githubusercontent.com/izzy7wednesdays-byte/Blame-it-on-a-bad-dream-story-board/refs/heads/main/img/blame-it-on-a-bad-dream.png"
         alt="BLAME IT ON A BAD DREAM" />
     </figure>
 
-    <!-- Add more slots below as you export them (handwriting, imessage, cards, photos, boombox, etc.) -->
-    <!-- Example placeholder:
-    <figure class="slot" style="--y:-1svh; --rot:2deg">
-      <img src="https://raw.githubusercontent.com/.../img/your-next-image.png" alt="Description" />
-    </figure>
-    -->
+    <!-- Add more <figure class="slot">…</figure> items here as you export them -->
 
   </div>
 </div>
 
 <script>
-  // Convert vertical mouse wheel → horizontal scroll for desktop mice
+  /* Mouse wheel → horizontal scroll (desktop mice) */
   const wrap = document.getElementById('hwrap');
   wrap.addEventListener('wheel', (e) => {
     if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
@@ -155,6 +156,15 @@
       e.preventDefault();
     }
   }, { passive: false });
+
+  /* OPTIONAL: jump to a specific slot on load (e.g., center on #special-message)
+  window.addEventListener('load', () => {
+    const t = document.getElementById('special-message');
+    if (!t) return;
+    const left = t.offsetLeft - (wrap.clientWidth - t.clientWidth)/2;
+    wrap.scrollTo({ left, behavior: 'instant' });
+  });
+  */
 </script>
 
 </body>
