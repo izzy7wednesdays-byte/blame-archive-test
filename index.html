@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-    /* ========= V41 ========= */
+    /* ========= V42 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -83,8 +83,8 @@
 /* Spotify slot */
 .slot--spotify .sp-box{
   /* NEW: local sizing knobs (can be overridden per slot) */
-  --sp-shrink: 0.75;      /* < 1 makes it smaller than other slots */
-  --sp-ratio: 0.80;       /* width = height * ratio (narrower than 0.9) */
+  --sp-shrink: 0.675;      /* < 1 makes it smaller than other slots */
+  --sp-ratio: 0.889;       /* width = height * ratio (narrower than 0.9) */
   --sp-min: 220px;        /* min width */
   --sp-max: 520px;        /* max width */
 
@@ -176,10 +176,6 @@
     --x: 0svh;        /* fine left/right nudge */
     --rot: 0deg;      /* tilt if you want */
     --z: 2;           /* stacking order */
-  }
-  #playlist-ex .spbox{
-    --sp-shrink: 0.675; /* if it was 0.75, 0.75 × 0.90 = 0.675 (10% shorter) */
-    --sp-ratio: 0.889;  /* if it was 0.80, 0.80 ÷ 0.90 ≈ 0.889 (keeps width) */
   }
     
   /* ===== Example: shift entire collage 4svh left =====
