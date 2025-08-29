@@ -7,10 +7,11 @@
 <style>
   /* ========= GLOBAL CONTROLS ========= */
   :root{
-    /* Height scales with viewport height & a bit with width. Use 70vh if you want fixed-by-height only. */
+    /* Height scales with viewport height & a bit with width.
+       If you prefer fixed-by-height only, use: --band-h: 70vh; */
     --band-h: clamp(56svh, 56vw, 84svh);
 
-    /* Total width of the horizontal canvas (increase if you add more tiles) */
+    /* Total width of the horizontal canvas (increase as you add slots) */
     --rail-w: 220svh;
 
     --bg: #0f0f12;
@@ -36,31 +37,31 @@
   .hwrap::-webkit-scrollbar{ height:8px }
   .hwrap::-webkit-scrollbar-thumb{ background:#2c2c32; border-radius:8px }
 
-  /* ========= RAIL (ABSOLUTE PLACEMENT) ========= */
+  /* ========= RAIL (ABSOLUTE LAYOUT + GROUP NUDGE) ========= */
   .rail{
     position: relative;
     height: var(--band-h);
-    width: max(100%, var(--rail-w));  /* ensure scrollable width */
-    /* zero padding so the left-most item can truly hug the edge */
-    padding: 0;
+    width: max(100%, var(--rail-w));
+    padding: 0;            /* let the first slot hug the left */
+    --group-left: 0svh;    /* ← move whole collage left/right here */
   }
 
-  /* ========= SLOT “CONTROL PANEL” =========
+  /* ========= SLOT CONTROL PANEL =========
      Per-slot variables you can override:
-     --left (horizontal position), --scale (size), --y (vertical nudge), --x (fine X nudge),
-     --rot (rotation), --z (stack order)
+     --left (base X position), --scale (size), --y (vertical),
+     --x (fine X nudge), --rot (rotation), --z (stack order)
   */
   .slot{
-    --left: 0;      /* horizontal position along the rail */
+    --left: 0svh;
     --scale: 1;
-    --y: 0;
-    --x: 0;
+    --y: 0svh;
+    --x: 0svh;
     --rot: 0deg;
     --z: 1;
 
     position: absolute;
-    left: var(--left);
-    bottom: 0;                          /* baseline alignment */
+    left: calc(var(--left) + var(--group-left));  /* global nudge applied */
+    bottom: 0;
     display: flex; align-items: flex-end;
     height: var(--band-h);
     transform: translate(var(--x), var(--y)) rotate(var(--rot));
@@ -79,63 +80,60 @@
   }
 
   /* ========= PER-SLOT CUSTOMIZATION (EDIT THESE) =========
-     TIP: Use svh for positions so spacing stays proportional to height.
-     Good starting ranges:
-       --left: 0..200svh,  --scale: 0.85–1.35,
-       --y: -10svh..+10svh,  --x: -6svh..+6svh
+     Ranges: --left 0..200svh, --scale .85–1.35, --y -10..+10svh, --x -6..+6svh
   */
 
   /* 1) A SPECIAL MESSAGE FROM… — hug the left edge */
   #special-message{
-    --left: 0svh;    /* start at the very left */
-    --scale: 2;
-    --y: -6svh;      /* up */
-    --x: -10svh;      /* tiny nudge left if PNG has transparent padding */
-    --rot: 0deg;
+    --left: 0svh;
+    --scale: 1.24;
+    --y: -6svh;
+    --x: -2svh;   /* compensate PNG padding if needed */
+    --rot: -2deg;
     --z: 4;
   }
 
-  /* 2) IZZY MACARTHUR (scribble) — just to the right of the headline */
+  /* 2) “IZZY MACARTHUR” scribble */
   #scribble-izzy{
     --left: 18svh;
-    --scale: 0.5;
+    --scale: 0.96;
     --y: -3svh;
-    --x: -10svh;
-    --rot: 0deg;
+    --x: 1svh;
+    --rot: -6deg;
     --z: 3;
   }
 
-  /* 3) Torn note — slightly bigger, overlapping cluster */
+  /* 3) Torn note */
   #torn-note{
     --left: 34svh;
-    --scale: 0.5;
+    --scale: 1.08;
     --y: 1svh;
     --x: 2svh;
-    --rot: 0deg;
+    --rot: -6deg;
     --z: 5;
   }
 
-  /* 4) Tracklist sheet — staggered higher and a bit right */
+  /* 4) Tracklist sheet */
   #tracklist{
     --left: 52svh;
-    --scale: 0.25;
+    --scale: 1.00;
     --y: -6svh;
     --x: 3svh;
     --rot: 8deg;
     --z: 3;
   }
 
-  /* 5) THE STORY BEHIND: — begin the heading pair */
+  /* 5) THE STORY BEHIND: */
   #the-story-behind{
     --left: 74svh;
     --scale: 1.00;
     --y: -3svh;
-    --x: 0;
+    --x: 0svh;
     --rot: 0deg;
     --z: 2;
   }
 
-  /* 6) BLAME IT ON A BAD DREAM — next to the line above */
+  /* 6) BLAME IT ON A BAD DREAM (title) */
   #album-title{
     --left: 96svh;
     --scale: 1.00;
@@ -144,6 +142,10 @@
     --rot: 0deg;
     --z: 2;
   }
+
+  /* ===== Example: shift entire collage 4svh left =====
+  .rail{ --group-left: -4svh; }
+  */
 </style>
 </head>
 <body>
@@ -193,7 +195,7 @@
         alt="BLAME IT ON A BAD DREAM" />
     </figure>
 
-    <!-- Add more slots here. For each new slot, give it a unique id and set --left. -->
+    <!-- Add more slots here… (give each a unique id and set --left) -->
 
   </div>
 </div>
@@ -208,6 +210,5 @@
     }
   }, { passive: false });
 </script>
-
 </body>
 </html>
