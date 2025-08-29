@@ -43,7 +43,7 @@
     height: var(--band-h);
     width: max(100%, var(--rail-w));
     padding: 0;            /* let the first slot hug the left */
-    --group-left: -15svh;    /* ← move whole collage left/right here */
+    --group-left: -30svh;    /* ← move whole collage left/right here */
   }
 
   /* ========= SLOT CONTROL PANEL =========
@@ -86,10 +86,10 @@
   /* 1) A SPECIAL MESSAGE FROM… — hug the left edge */
   #special-message{
     --left: 0svh;
-    --scale: 1.24;
+    --scale: 2;
     --y: -6svh;
     --x: -2svh;   /* compensate PNG padding if needed */
-    --rot: -2deg;
+    --rot: 0deg;
     --z: 4;
   }
 
@@ -119,14 +119,14 @@
     --scale: 0.5;
     --y: -6svh;
     --x: 3svh;
-    --rot: 0deg;
+    --rot: 8deg;
     --z: 3;
   }
 
   /* 5) THE STORY BEHIND: */
   #the-story-behind{
     --left: 74svh;
-    --scale: 0.25;
+    --scale: 0.15;
     --y: -3svh;
     --x: 0svh;
     --rot: 0deg;
@@ -136,7 +136,7 @@
   /* 6) BLAME IT ON A BAD DREAM (title) */
   #album-title{
     --left: 96svh;
-    --scale: 0.25;
+    --scale: 0.5;
     --y: -3svh;
     --x: 2svh;
     --rot: 0deg;
