@@ -1,86 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Horizontal Strip</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Horizontal Archive</title>
   <style>
-    :root { --band-h: 70svh; }           /* adjust 60–80svh to taste */
-
-    html, body {
-      margin: 0; padding: 0; height: 100%;
-      background: #fff; color: #111;
-      overflow: hidden;                  /* we'll scroll inside .hwrap */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+    :root{
+      --band-h: 70svh;                 /* overall row height (try 60–80svh) */
+      --gap: clamp(16px, 2.5svh, 40px);
+      --pad-y: 6svh;                   /* top/bottom breathing */
+      --pad-x: 8svh;                   /* left/right breathing */
+      --bg: #0f0f12;
+      --fg: #e7f1ff;
+    }
+    *{ box-sizing:border-box }
+    html,body{
+      margin:0; height:100%;
+      background:var(--bg); color:var(--fg);
+      overflow:hidden;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
 
     /* Horizontal scroll container */
-    .hwrap {
-      height: 100svh;                    /* fill viewport height */
-      overflow-x: auto; overflow-y: hidden;
-      scroll-behavior: smooth;
-      white-space: nowrap;
-      scrollbar-width: thin;             /* Firefox */
+    .hwrap{
+      height:100svh; overflow-x:auto; overflow-y:hidden;
+      white-space:nowrap; scroll-behavior:smooth; scrollbar-width:thin;
     }
-    .hwrap::-webkit-scrollbar { height: 8px; }
-    .hwrap::-webkit-scrollbar-thumb { background: #c7c7c7; border-radius: 8px; }
+    .hwrap::-webkit-scrollbar{ height:8px }
+    .hwrap::-webkit-scrollbar-thumb{ background:#2c2c32; border-radius:8px }
 
-    /* Band that scales with viewport height */
-    .band {
-      display: inline-flex;
-      align-items: flex-end;
-      gap: clamp(16px, 2.5svh, 40px);    /* spacing scales with height */
-      height: var(--band-h);
-      padding: 6svh 8svh;                /* top/btm & side breathing */
-      box-sizing: border-box;
-    }
-
-    .item { display: flex; flex-direction: column; }
-    .item img {
-      height: calc(var(--band-h) - 10svh); /* leave room for caption */
-      width: auto; display: block; object-fit: contain;
-    }
-    .item figcaption {
-      margin-top: 1svh;
-      font: 500 clamp(12px, 1.8svh, 18px)/1.3 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      opacity: .85;
-    }
-
-    /* Optional: reduce accidental text selection while dragging */
-    .hwrap, .band, .item { user-select: none; }
-  </style>
-</head>
-<body>
-
-  <!-- Horizontal scroll area -->
-  <div class="hwrap" id="hwrap" aria-label="Horizontal gallery">
-    <div class="band" id="band">
-      <!-- EXAMPLE items — replace/duplicate with your own -->
-      <figure class="item">
-        <img src="https://raw.githubusercontent.com/izzy7wednesdays-byte/readymag-assets/refs/heads/main/12.png" alt="Exit Wounds">
-        <figcaption>Exit Wounds</figcaption>
-      </figure>
-
-      <figure class="item">
-        <img src="https://raw.githubusercontent.com/izzy7wednesdays-byte/readymag-assets/refs/heads/main/12.png" alt="Another Work">
-        <figcaption>Another Work</figcaption>
-      </figure>
-
-      <!-- Add more <figure class="item"> … </figure> as needed -->
-    </div>
-  </div>
-
-  <script>
-    // Convert vertical mouse wheel to horizontal scroll (desktop mice)
-    const wrap = document.getElementById('hwrap');
-    wrap.addEventListener('wheel', (e) => {
-      // If vertical intent is stronger than horizontal, hijack it
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        wrap.scrollLeft += e.deltaY;
-        e.preventDefault();
-      }
-    }, { passive: false });
-  </script>
-</body>
-</html>
+    /* Rail that holds all items */
+    .rail{
+      display:inline-flex; align-items:flex-end;
+      gap:var(--gap);
+      height:var(--band-h);
+      padding:var(--pad-y) var(--pad-x);
+      width
