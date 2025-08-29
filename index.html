@@ -8,9 +8,9 @@
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     --band-h: 70svh;                 /* overall row height (try 60–80svh) */
-    --gap: clamp(16px, 2.5svh, 40px);
-    --pad-y: 6svh;                   /* top/bottom breathing */
-    --pad-x: 8svh;                   /* left/right breathing */
+    --gap: clamp(16px, 2svh, 32px);
+    --pad-y: 0svh;                   /* top/bottom breathing */
+    --pad-x: 0svh;                   /* left/right breathing */
     --bg: #0f0f12;
     --fg: #e7f1ff;
   }
@@ -76,6 +76,14 @@
     --y:    -20svh;   /* move up/down (negative = up) */
     --rot:  0deg;   /* tilt */
     --ml:    -20svh;   /* extra left spacing (nudge right without reordering) */
+    --z:     2;      /* layering if overlapping neighbors */
+  }
+    /* ========= “SCRIBBLE IZZY” CUSTOMIZATION ========= */
+  #scribble-izzy{
+    --scale: 1.0;   /* bigger/smaller (1 = original) */
+    --y:    -20svh;   /* move up/down (negative = up) */
+    --rot:  0deg;   /* tilt */
+    --ml:    -50svh;   /* extra left spacing (nudge right without reordering) */
     --z:     2;      /* layering if overlapping neighbors */
   }
 </style>
