@@ -1,0 +1,10 @@
+<figure class="slot slot--lottiewc" id="light-sleeper-title">
+  <div class="lottiewc-box">
+    <dotlottie-wc
+      src="lottie/light-sleeper-title.lottie?v=1"
+      autoplay loop speed="1"
+      aria-label="Light Sleeper title animation">
+    </dotlottie-wc>
+  </div>
+</figure>
+
