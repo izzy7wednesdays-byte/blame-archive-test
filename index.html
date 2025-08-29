@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-    /* ========= V42 ========= */
+    /* ========= V43 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -102,6 +102,19 @@
 }
 .slot--spotify iframe{
   width:100%; height:100%; border:0; border-radius:12px;
+}
+    /* Debug: make sure this rule is applying */
+#playlist-ex .sp-box{ outline: 2px solid magenta; }
+
+/* Keep width the same, make height shorter (k = 0.90 = 10% shorter) */
+#playlist-ex .sp-box{
+  /* 1) shorten the height by factor k */
+  --h: calc(var(--band-h) * var(--scale) * 0.90);
+  height: var(--h);
+
+  /* 2) bump the width ratio so width stays the same:
+        old ratio was 0.9 → new ratio = 0.9 / 0.90 = 1 */
+  width: clamp(260px, calc(var(--h) * 1), 640px);
 }
 
   /* ========= PER-SLOT CUSTOMIZATION (EDIT THESE) =========
