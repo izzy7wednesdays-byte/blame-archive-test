@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-    /* ========= V82 ========= */
+    /* ========= V83 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -174,6 +174,7 @@
     display: block;
     border: 0;
   }
+    
   /* === Gif Slot === */
   .slot--gif .gif-box{
     --h: calc(var(--band-h) * var(--scale));
@@ -191,7 +192,20 @@
     object-fit:cover;   /* or 'contain' if you don’t want any crop */
     display:block;
   }
-   
+    
+  /* SoundCloud image-controlled slot */
+  .slot--sc .sc-iframe{
+    position:absolute;
+    left:-9999px; top:auto; width:1px; height:1px; opacity:0; pointer-events:none;
+    border:0;
+  }
+  .slot--sc .sc-trigger{
+    height: calc(var(--band-h) * var(--scale));
+    width: auto; display:block; object-fit: contain;
+    filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
+    cursor: pointer;
+  }
+ 
   /* ========= PER-SLOT CUSTOMIZATION (EDIT THESE) =========
      Ranges: --left 0..200svh, --scale .85–1.35, --y -10..+10svh, --x -6..+6svh
   */
@@ -366,7 +380,17 @@
     --rot: -14deg;
     --z: 1;
   }
-
+    
+  /* 18: Exit Wounds Boombox */
+  #play-exit-wounds{
+    --left: 360svh;
+    --scale: 0.4;
+    --y: 0svh;
+    --x: 0svh;
+    --rot: -14deg;
+    --z: 1;
+  }
+    
   /* ===== Example: shift entire collage 4svh left =====
   .rail{ --group-left: -4svh; }
   */
@@ -503,20 +527,32 @@
     <img src="img/blame-it-notesapp.png?v=1" alt="Blame It notes app" loading="lazy" decoding="async">
   </figure>
 
-<!-- 15: Broken Breathing (placeholder) -->
-  <figure class="slot" id="broken-breathing-placeholder">
-    <img src="img/broken-breathing-placeholder.png?v=1" alt="Broken Breathing placeholder" loading="lazy" decoding="async">
-  </figure>
+  <!-- 15: Broken Breathing (placeholder) -->
+    <figure class="slot" id="broken-breathing-placeholder">
+      <img src="img/broken-breathing-placeholder.png?v=1" alt="Broken Breathing placeholder" loading="lazy" decoding="async">
+    </figure>
 
   <!-- 16: LS – Behind the Song (placeholder) -->
   <figure class="slot" id="ls-behind-the-song-placeholder">
     <img src="img/ls-behind-the-song-placeholder.png?v=1" alt="Light Sleeper - Behind the Song placeholder" loading="lazy" decoding="async">
   </figure>
 
-        <!-- 16: LS – Behind the Song (placeholder) -->
+    <!-- 17: Exit Wounds Title  -->
   <figure class="slot" id="exit-wounds-title">
     <img src="img/exit-wounds-title.png?v=1" alt="Exit Wounds Title" loading="lazy" decoding="async">
   </figure>
+
+<!-- 18: SOUND (SoundCloud) — click image to play/pause -->
+  <figure class="slot slot--sc" id="play-exit-wounds"
+          style="--left: 200svh; --scale: 1.0; --y: -2svh; --x: 0svh; --rot: 0deg; --z: 5;">
+    <!-- Clickable artwork -->
+    <img class="sc-trigger"
+         src="img/exit-wounds-boombox.png"
+         alt="Play Exit Wounds (SoundCloud)">
+    <!-- Hidden SoundCloud player (src set by JS) -->
+    <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
+  </figure>
+      
           <!-- Add more slots here… (give each a unique id and set --left) -->
   </div>
 </div>
@@ -530,6 +566,35 @@
       e.preventDefault();
     }
   }, { passive: false });
+</script>
+    
+<script src="https://w.soundcloud.com/player/api.js"></script>
+     <script>
+      // Initialize every SoundCloud slot on the page
+      document.querySelectorAll('.slot--sc').forEach((slot) => {
+        const scUrl = slot.dataset.scUrl || 'https://soundcloud.com/izzy-macarthur/exit-wounds';
+        const iframe = slot.querySelector('.sc-iframe');
+        const trigger = slot.querySelector('.sc-trigger');
+
+        // Build embed URL
+        const embed = 'https://w.soundcloud.com/player/?url=' +
+          encodeURIComponent(scUrl) +
+          '&auto_play=false&hide_related=true&show_comments=false&show_user=false' +
+          '&show_reposts=false&visual=false';
+
+            iframe.src = embed;
+
+        // Hook up the widget
+        const widget = SC.Widget(iframe);
+        let isPlaying = false;
+        widget.bind(SC.Widget.Events.PLAY,  () => { isPlaying = true;  });
+        widget.bind(SC.Widget.Events.PAUSE, () => { isPlaying = false; });
+
+        // Click image → toggle play/pause
+        trigger.addEventListener('click', () => {
+          isPlaying ? widget.pause() : widget.play();
+        });
+      });
 </script>
 </body>
 </html>
