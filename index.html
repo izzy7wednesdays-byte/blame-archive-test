@@ -174,7 +174,24 @@
     display: block;
     border: 0;
   }
-    
+  /* === Gif Slot === */
+  .slot--gif .gif-box{
+    --h: calc(var(--band-h) * var(--scale));
+    height: var(--h);
+    width: calc(var(--h) * var(--ar, 1)); /* set --ar per slot if needed */
+    display:block;
+    overflow:hidden;
+    border-radius:12px; /* optional */
+    filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
+    background:#0000;
+  }
+  .slot--gif img{
+    width:100%;
+    height:100%;
+    object-fit:cover;   /* or 'contain' if you don’t want any crop */
+    display:block;
+  }
+   
   /* ========= PER-SLOT CUSTOMIZATION (EDIT THESE) =========
      Ranges: --left 0..200svh, --scale .85–1.35, --y -10..+10svh, --x -6..+6svh
   */
@@ -281,10 +298,20 @@
 
   /* 11) Vimeo slot tuned to 1080×1920 (portrait) */
   #light-sleeper-studio{
-    --left: 230svh;  /* horizontal anchor — change to place it */
+    --left: 250svh;  /* horizontal anchor — change to place it */
     --scale: 0.60;    /* overall height vs band (bigger/smaller) */
     --ar: 9/16;      /* 1080/1920 portrait ratio = 0.5625 */
-    --y: -2svh;      /* up/down (neg = up) */
+    --y: 12svh;      
+    --x: 0svh;       /* fine left/right nudge */
+    --rot: 0deg;
+    --z: 4;
+  }
+    
+  /* 12) GIF: tv-message-1.gif */
+  #tv-message-1{
+    --left: 150svh;  /* move along the rail */
+    --scale: 1.0;    /* height vs band */
+    --y: -2svh;      /* neg = up, pos = down */
     --x: 0svh;       /* fine left/right nudge */
     --rot: 0deg;
     --z: 4;
@@ -399,18 +426,23 @@
     </div>
   </figure>
 
-      <!-- 11: Vimeo (portrait 1080×1920) - Light Sleeper -->
-<figure class="slot slot--video" id="light-sleeper-studio">
-  <div class="video-box">
-    <iframe
-      src="https://player.vimeo.com/video/1114381114?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-      loading="lazy"
-      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-      allowfullscreen
-      title="Light Sleeper Studio">
-    </iframe>
-  </div>
-</figure>
+   <!-- 11: Vimeo (portrait 1080×1920) - Light Sleeper -->
+  <figure class="slot slot--video" id="light-sleeper-studio">
+    <div class="video-box">
+      <iframe
+        src="https://player.vimeo.com/video/1114381114?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+        loading="lazy"
+        allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+        allowfullscreen
+        title="Light Sleeper Studio">
+      </iframe>
+    </div>
+  </figure>
+
+  <!-- 12: GIF slot -->
+  <figure class="slot" id="tv-message-1">
+    <img src="img/tv-message-1.gif?v=1" alt="TV message" loading="lazy" decoding="async">
+  </figure>
 
           <!-- Add more slots here… (give each a unique id and set --left) -->
 
