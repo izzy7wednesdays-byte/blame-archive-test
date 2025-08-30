@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-    /* ========= V68 ========= */
+    /* ========= V69 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -298,10 +298,10 @@
 
   /* 11) Vimeo slot tuned to 1080×1920 (portrait) */
   #light-sleeper-studio{
-    --left: 290svh;  /* horizontal anchor — change to place it */
+    --left: 293svh;  /* horizontal anchor — change to place it */
     --scale: 0.60;    /* overall height vs band (bigger/smaller) */
     --ar: 9/16;      /* 1080/1920 portrait ratio = 0.5625 */
-    --y: 35svh;      
+    --y: 30svh;      
     --x: 0svh;       /* fine left/right nudge */
     --rot: 0deg;
     --z: 4;
@@ -309,14 +309,52 @@
     
   /* 12) GIF: tv-message-1.gif */
   #tv-message-1{
-    --left: 250svh;  /* move along the rail */
+    --left: 255svh;  /* move along the rail */
     --scale: 0.5;    /* height vs band */
     --y: 40svh;      /* neg = up, pos = down */
     --x: 0svh;       /* fine left/right nudge */
     --rot: -10deg;
     --z: 4;
   }
+  /* 13: AUTUMN TEXT */
+  #autumn-text{
+    --left: 150svh;  /* move along the rail */
+    --scale: 1.0;
+    --y: 0svh;
+    --x: 0svh;
+    --rot: 0deg;
+    --z: 3;
+  }
 
+  /* 14: BLAME IT Notes App */
+  #blame-it-notesapp{
+    --left: 162svh;
+    --scale: 1.0;
+    --y: -2svh;
+    --x: 0svh;
+    --rot: -2deg;
+    --z: 4;
+  }
+
+/* 15: Broken Breathing (placeholder) */
+  #broken-breathing-placeholder{
+    --left: 174svh;
+    --scale: 1.0;
+    --y: -1svh;
+    --x: 1svh;
+    --rot: 2deg;
+    --z: 3;
+  }
+
+/* 16: LS – Behind the Song (placeholder) */
+  #ls-behind-the-song-placeholder{
+    --left: 186svh;
+    --scale: 1.0;
+    --y: -3svh;
+    --x: 0svh;
+    --rot: 0deg;
+    --z: 3;
+  }
 
   /* ===== Example: shift entire collage 4svh left =====
   .rail{ --group-left: -4svh; }
@@ -443,9 +481,28 @@
   <figure class="slot" id="tv-message-1">
     <img src="img/tv-message-1.gif?v=1" alt="TV message" loading="lazy" decoding="async">
   </figure>
+      
+  <!-- 13: AUTUMN TEXT -->
+  <figure class="slot" id="autumn-text">
+    <img src="img/autumn-text.png?v=1" alt="Autumn text" loading="lazy" decoding="async">
+  </figure>
+
+  <!-- 15: BLAME IT Notes App -->
+  <figure class="slot" id="blame-it-notesapp">
+    <img src="img/blame-it-notesapp.png?v=1" alt="Blame It notes app" loading="lazy" decoding="async">
+  </figure>
+
+<!-- 15: Broken Breathing (placeholder) -->
+  <figure class="slot" id="broken-breathing-placeholder">
+    <img src="img/broken-breathing-placeholder.png?v=1" alt="Broken Breathing placeholder" loading="lazy" decoding="async">
+  </figure>
+
+  <!-- 16: LS – Behind the Song (placeholder) -->
+  <figure class="slot" id="ls-behind-the-song-placeholder">
+    <img src="img/ls-behind-the-song-placeholder.png?v=1" alt="Light Sleeper - Behind the Song placeholder" loading="lazy" decoding="async">
+  </figure>
 
           <!-- Add more slots here… (give each a unique id and set --left) -->
-
   </div>
 </div>
 
