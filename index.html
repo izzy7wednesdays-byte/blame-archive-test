@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-  /* ========= V117 ========= */
+  /* ========= V118 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -461,6 +461,15 @@
     --z: 7;
     pointer-events: none;
   }
+  #landmines-bts-clip{
+    --left: 610svh;  
+    --scale: 0.60;  
+    --ar: 16/9;     
+    --y: 0svh;      
+    --x: 0svh;       
+    --rot: 0deg;
+    --z: 5;       
+}
 </style>
 
 <!-- Lottie web component -->
@@ -689,6 +698,19 @@
       </div>
     </figure>
     
+    <!-- 29: Vimeo – Landmines BTS (16:9) -->
+    <figure class="slot slot--video" id="landmines-bts-clip">
+      <div class="video-box">
+        <iframe
+          src="ttps://player.vimeo.com/video/1114719211?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          loading="lazy"
+          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="Landmines — BTS">
+        </iframe>
+      </div>
+    </figure>
+   
     <!-- Add more slots here… -->
   </div>
 </div>
