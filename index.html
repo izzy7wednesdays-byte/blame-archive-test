@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-    /* ========= V96 ========= */
+    /* ========= V97 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -572,15 +572,13 @@
       <img src="img/exit-wounds-title.png?v=1" alt="Exit Wounds Title" loading="lazy" decoding="async">
     </figure>
 
-    <!-- 18: SOUND (SoundCloud) — click image to play/pause -->
-    <figure class="slot slot--sc" id="play-exit-wounds"
-      <!-- Clickable artwork -->
-      <img class="sc-trigger"
-           src="img/exit-wounds-boombox.png"
-           alt="Play Exit Wounds (SoundCloud)">
-      <!-- Hidden SoundCloud player (src set by JS) -->
-      <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
-    </figure>
+     <!-- 18: SOUND (SoundCloud) — click image to play/pause --> 
+     <figure class="slot slot--sc" id="play-exit-wounds" 
+        <img class="sc-trigger" src="img/exit-wounds-boombox.png" alt="Play Exit Wounds (SoundCloud)"> 
+        <!-- Hidden SoundCloud player (src set by JS) --> 
+        <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay">
+        </iframe> 
+     </figure>
       
     <!-- 19: Press Play -->
     <figure class="slot" id="press-play-dj">
@@ -615,7 +613,6 @@
     }
   }, { passive: false });
 </script>
-    
 <script src="https://w.soundcloud.com/player/api.js"></script>
      <script>
       // Initialize every SoundCloud slot on the page
@@ -644,5 +641,6 @@
         });
       });
 </script>
+
 </body>
 </html>
