@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-  /* ========= V116 ========= */
+  /* ========= V117 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -189,22 +189,22 @@
     outline-offset: 6px;
   }
   
-  /* ===== Overlay that fills screen; image card fills MOST of the page ===== */
+  /* Overlay fills viewport; the image card fills MOST of the page (smaller) */
   #overlay{
-    position: fixed;
+    position: fixed !important;
     inset: 0;
-     display: none;                /* toggled with .is-open */
-     align-items: center;
-     justify-content: center;
-     background: rgba(0,0,0,.72);  /* dim backdrop */
-     z-index: 9999;
+    display: none;                 /* toggled via .is-open */
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,.72);
+    z-index: 9999;
   }
-
-  /* Default size (override per-slot via data-attrs below if you want) */
+  
   #overlay .ov-card{
-    --ov-max-w: min(86vw, 1400px);
-    --ov-max-h: 86svh;
-    --ov-pad:   1.6svh;
+    /* smaller defaults than before */
+    --ov-max-w: min(72vw, 1100px);
+    --ov-max-h: 72svh;
+    --ov-pad:   1svh;
 
     max-width:  var(--ov-max-w);
     max-height: var(--ov-max-h);
@@ -215,16 +215,13 @@
     border-radius: 16px;
     box-shadow: 0 1.6svh 3.2svh rgba(0,0,0,.55);
   }
-
+  
   #overlay img{
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     object-fit: contain;
-    border-radius: 12px;
-    display: block;
+    border-radius: 12px; display: block;
   }
-
-#overlay.is-open{ display: flex; }  /* show overlay */
+  #overlay.is-open{ display: flex; }
 
   /* ========= PER-SLOT CUSTOMIZATION ========= */
   #special-message{ 
@@ -579,15 +576,11 @@
       </div>
     </figure>
 
-    <!-- 12: GIF slot (now also opens an overlay image when clicked) -->
+    <!-- 12: GIF slot (opens overlay to show lightsleeper-about.png) -->
     <figure class="slot" id="tv-message-1"
-        data-overlay-src="img/lightsleeper-about.png?v=1"
-        data-overlay-alt="About Light Sleeper"
-        data-ov-w="min(82vw, 1200px)"   <!-- optional -->
-        data-ov-h="82svh"               <!-- optional -->
-        data-ov-pad="1.2svh">           <!-- optional -->
-      <img src="img/tv-message-1.gif?v=1" alt="TV message" loading="lazy" decoding="async"
-       style="cursor: zoom-in;">
+      data-overlay-src="img/lightsleeper-about.png?v=1"
+      data-overlay-alt="About Light Sleeper">
+      <img src="img/tv-message-1.gif?v=1" alt="TV message" loading="lazy" decoding="async" style="cursor:zoom-in;">
     </figure>
 
     <!-- 13: AUTUMN TEXT -->
@@ -698,12 +691,12 @@
     <!-- Add more slots here… -->
   </div>
 </div>
-
-  <!-- Reusable not-fullscreen overlay -->
-  <div id="overlay" aria-hidden="true">
+  
+  <!-- Reusable overlay (must NOT be inside .hwrap/.rail) -->
+  <div id="overlay" aria-hidden="true" style="display:none">
     <div class="ov-card"><img alt=""></div>
   </div>
-  
+
 <script>
   /* Mouse wheel → horizontal scroll (desktop mice) */
   const wrap = document.getElementById('hwrap');
