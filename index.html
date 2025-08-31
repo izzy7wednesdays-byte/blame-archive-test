@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-  /* ========= V112 ========= */
+  /* ========= V113 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -364,10 +364,10 @@
   }
     #read-exitwounds{ 
       --left: 486svh; 
-      --scale: 0.20; 
-      --y: 18svh; 
+      --scale: 0.3; 
+      --y: 45svh; 
       --x: 0svh; 
-      --rot: 7.75deg; 
+      --rot: 5deg; 
       --z: 4;
       pointer-events: none;
   }
@@ -390,7 +390,25 @@
   }
    #glitter-truck{
     --left: 500svh;
-    --scale: 0.5;
+    --scale: 0.35;
+    --y: -5svh;
+    --x: 0svh;
+    --rot: 0deg;
+    --z: 7;
+    pointer-events: none;
+  }
+  #exitwounds-lyricvideo-placeholder{
+    --left: 500svh;
+    --scale: 0.35;
+    --y: -5svh;
+    --x: 0svh;
+    --rot: 0deg;
+    --z: 7;
+    pointer-events: none;
+  }
+  #exitwounds-behindthesong-placeholder{
+    --left: 500svh;
+    --scale: 0.35;
     --y: -5svh;
     --x: 0svh;
     --rot: 0deg;
@@ -594,12 +612,22 @@
     <figure class="slot" id="exit-wounds-clickme">
       <img src="img/exit-wounds-clickme.png?v=1" alt="exit wounds click me" loading="lazy" decoding="async">
     </figure>
+
+    <!-- 25: Exit Wounds: Behind the Song Placeholder -->
+    <figure class="slot" id="exitwounds-behindthesong-placeholder">
+      <img src="img/exitwounds-behindthesong-placeholder.png?v=1" alt="exit wounds behind the song placeholder" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 26: Exit Wounds: Lyric Video Placeholder -->
+    <figure class="slot" id="exitwounds-lyricvideo-placeholder">
+      <img src="img/exitwounds-lyricvideo-placeholder.png?v=1" alt="exit wounds lyric video placeholder" loading="lazy" decoding="async">
+    </figure>
     
-    <!-- 25: Glitter Truck -->
+    <!-- 27: Glitter Truck -->
     <figure class="slot" id="glitter-truck">
       <img src="img/glitter-truck.png?v=1" alt="glitter truck" loading="lazy" decoding="async">
     </figure>
-        
+     
     <!-- Add more slots here… -->
   </div>
 </div>
