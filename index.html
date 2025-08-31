@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-    /* ========= V93 ========= */
+  /* ========= V100 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -14,7 +14,7 @@
 
     /* Total width of the horizontal canvas (increase as you add slots) */
     --rail-w: 600svh;
-    
+
     --bg: #0f0f12;
     --fg: #e7f1ff;
   }
@@ -44,14 +44,10 @@
     height: var(--band-h);
     width: max(100%, var(--rail-w));
     padding: 0;            /* let the first slot hug the left */
-    --group-left: -25svh;    /* ← move whole collage left/right here */
+    --group-left: -25svh;  /* ← move whole collage left/right here */
   }
 
-  /* ========= SLOT CONTROL PANEL =========
-     Per-slot variables you can override:
-     --left (base X position), --scale (size), --y (vertical),
-     --x (fine X nudge), --rot (rotation), --z (stack order)
-  */
+  /* ========= SLOT CONTROL PANEL ========= */
   .slot{
     --left: 0svh;
     --scale: 1;
@@ -61,7 +57,7 @@
     --z: 1;
 
     position: absolute;
-    left: calc(var(--left) + var(--group-left));  /* global nudge applied */
+    left: calc(var(--left) + var(--group-left));
     bottom: 0;
     display: flex; align-items: flex-end;
     height: var(--band-h);
@@ -79,120 +75,90 @@
     object-fit: contain;
     filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
   }
-    
+
   /* Spotify slot */
   .slot--spotify .sp-box{
-    /* NEW: local sizing knobs (can be overridden per slot) */
-    --sp-shrink: 0.675;      /* < 1 makes it smaller than other slots */
-    --sp-ratio: 0.889;       /* width = height * ratio (narrower than 0.9) */
-    --sp-min: 220px;        /* min width */
-    --sp-max: 520px;        /* max width */
-
-    /* Height still follows the global band + per-slot --scale */
+    --sp-shrink: 0.675;
+    --sp-ratio: 0.889;
+    --sp-min: 220px;
+    --sp-max: 520px;
     --h: calc(var(--band-h) * var(--scale) * var(--sp-shrink));
-
     width: clamp(var(--sp-min), calc(var(--h) * var(--sp-ratio)), var(--sp-max));
     height: var(--h);
-
     display:block;
     overflow:hidden;
     border-radius:12px;
     filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
     background:#121212;
   }
-    .slot--spotify iframe{
-      width:100%; height:100%; border:0; border-radius:12px;
-    }
-  /* Overrides Spotify playlist's Height to Width Ratio */
-    #playlist-ex .sp-box{
-      height: auto;            /* override base height */
-      aspect-ratio: 685 / 302; /* ≈ 2.268:1 */
+  .slot--spotify iframe{ width:100%; height:100%; border:0; border-radius:12px; }
+  #playlist-ex .sp-box{
+    height: auto;
+    aspect-ratio: 685 / 302; /* ≈ 2.268:1 */
   }
 
-    /* YouTube slot */
-    .slot--youtube .yt-box{
-        /* knobs you can tweak */
-      --yt-shrink: 0.85;  /* < 1 = a bit smaller than same --scale images */
-      --ratio: 16/9;      /* standard video ratio */
-      --h: calc(var(--band-h) * var(--scale) * var(--yt-shrink));
-
-      /* width derives from height (same pattern as Spotify) */
-      width: clamp(300px, calc(var(--h) * var(--ratio)), 960px);
-      height: var(--h);
-
-      display:block;
-      overflow:hidden;
-      border-radius:12px;
-      filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
-      background:#000;
-  }  
-  .slot--youtube iframe{
-    width:100%;
-    height:100%;
-    border:0;
+  /* YouTube slot */
+  .slot--youtube .yt-box{
+    --yt-shrink: 0.85;
+    --ratio: 16/9;
+    --h: calc(var(--band-h) * var(--scale) * var(--yt-shrink));
+    width: clamp(300px, calc(var(--h) * var(--ratio)), 960px);
+    height: var(--h);
+    display:block;
+    overflow:hidden;
     border-radius:12px;
+    filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
+    background:#000;
   }
-    
+  .slot--youtube iframe{ width:100%; height:100%; border:0; border-radius:12px; }
+
   /* Lottie slot */
   .slot--lottie .lot-box{
-    /* knobs you can tweak */
-    --lot-shrink: 0.85;      /* <1 = a bit smaller vs. same --scale images */
-    --ratio: 1.8;            /* width = height * ratio (change per animation) */
-    --lot-min: 220px;        /* min width */
-    --lot-max: 960px;        /* max width */
+    --lot-shrink: 0.85;
+    --ratio: 1.8;
+    --lot-min: 220px;
+    --lot-max: 960px;
     --h: calc(var(--band-h) * var(--scale) * var(--lot-shrink));
-
     width: clamp(var(--lot-min), calc(var(--h) * var(--ratio)), var(--lot-max));
     height: var(--h);
-
     display:block;
     overflow:hidden;
     border-radius:12px;
     filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
     background: transparent;
   }
-    .slot--lottie dotlottie-wc{
-      width:100%;
+  .slot--lottie dotlottie-wc{
+    width:100%;
     height:100%;
     display:block;
   }
-    
+
   /* === Video slot (Vimeo iframe) === */
   .slot--video .video-box{
-    --h: calc(var(--band-h) * var(--scale));   /* height follows your rail */
+    --h: calc(var(--band-h) * var(--scale));
     height: var(--h);
-    width: calc(var(--h) * var(--ar, 16/9));   /* aspect ratio per slot */
+    width: calc(var(--h) * var(--ar, 16/9));
     display: block;
     overflow: hidden;
     border-radius: 12px;
     filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
     background: #000;
   }
-  .slot--video iframe{
-    width: 100%;
-    height: 100%;
-    display: block;
-    border: 0;
-  }
-    
+  .slot--video iframe{ width: 100%; height: 100%; display:block; border:0; }
+
   /* === Gif Slot === */
   .slot--gif .gif-box{
     --h: calc(var(--band-h) * var(--scale));
     height: var(--h);
-    width: calc(var(--h) * var(--ar, 1)); /* set --ar per slot if needed */
+    width: calc(var(--h) * var(--ar, 1));
     display:block;
     overflow:hidden;
-    border-radius:12px; /* optional */
+    border-radius:12px;
     filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
     background:#0000;
   }
-  .slot--gif img{
-    width:100%;
-    height:100%;
-    object-fit:cover;   /* or 'contain' if you don’t want any crop */
-    display:block;
-  }
-    
+  .slot--gif img{ width:100%; height:100%; object-fit:cover; display:block; }
+
   /* SoundCloud image-controlled slot */
   .slot--sc .sc-iframe{
     position:absolute;
@@ -205,210 +171,206 @@
     filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
     cursor: pointer;
   }
- 
-  /* ========= PER-SLOT CUSTOMIZATION (EDIT THESE) =========
-     Ranges: --left 0..200svh, --scale .85–1.35, --y -10..+10svh, --x -6..+6svh
-  */
 
-  /* 1) A SPECIAL MESSAGE FROM… — hug the left edge */
-  #special-message{
-    --left: -45svh;
-    --scale: 1.95;
-    --y: -31svh;
-    --x: 0svh;   /* compensate PNG padding if needed */
-    --rot: 0deg;
-    --z: 5;
+  /* === Audio (image-controlled .mp4/.mp3) === */
+  .slot--audio .audio-trigger{
+    height: calc(var(--band-h) * var(--scale));
+    width: auto; display:block; object-fit: contain;
+    filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
+    cursor: pointer; user-select: none;
+  }
+  .slot--audio audio{
+    position:absolute; left:-9999px; top:auto;
+    width:1px; height:1px; opacity:0; pointer-events:none; border:0;
+  }
+  .slot--audio.is-playing .audio-trigger{
+    outline: 2px dashed rgba(231,241,255,.35);
+    outline-offset: 6px;
   }
 
-  /* 2) “IZZY MACARTHUR” scribble */
-  #scribble-izzy{
-    --left: 10svh;
-    --scale: 0.25;
-    --y: 38svh;
-    --x: 8svh;
-    --rot: 0deg;
-    --z: 4;
+  /* ========= PER-SLOT CUSTOMIZATION ========= */
+  #special-message{ 
+      --left: -45svh; 
+      --scale: 1.95; 
+      --y: -31svh; 
+      --x: 0svh; 
+      --rot: 0deg; 
+      --z: 5;
   }
-
-  /* 3) Torn note */
-  #torn-note{
-    --left: 12svh;
-    --scale: 0.83;
-    --y: -25svh;
-    --x: -2svh;
+  #scribble-izzy{ 
+      --left: 10svh; 
+      --scale: 0.25; 
+      --y: 38svh; 
+      --x: 8svh; 
+      --rot: 0deg; 
+      --z: 4; 
+  }
+  #torn-note{ 
+      --left: 12svh; 
+      --scale: 0.83; 
+      --y: -25svh; 
+      --x: -2svh; 
+      --rot: 0deg; 
+      --z: 3; 
+  }
+  #tracklist{ 
+      --left: 130svh; 
+      --scale: 0.55; 
+      --y: 35svh; 
+      --x: 15svh; 
+      --rot: 8deg; 
+      --z: 4; 
+  }
+  #the-story-behind{ 
+      --left: 74svh; 
+      --scale: 0.15; 
+      --y: 20svh; 
+      --x: 0svh; 
+      --rot: 0deg; 
+      --z: 2; 
+  }
+  #album-title{ 
+      --left: 85svh; 
+      --scale: 0.33; 
+      --y: -8svh; 
+      --x: -6svh; 
+      --rot: 0deg; 
+      --z: 1; 
+  }
+  #playlist-ex{ 
+      --left: 203svh; 
+      --scale: 0.90; 
+      --y: 55svh; 
+      --x: 0svh; 
+      --rot: 0deg; 
+      --z: 2; 
+  }
+  #light-sleeper-visualizer{ 
+      --left: 167svh; 
+      --scale: 0.50; 
+      --y: -12svh; 
+      --x: 10svh; 
+      --rot: 0deg; 
+      --z: 3; 
+  }
+  #light-sleeper-title{ 
+      --left: 205svh; 
+      --scale: 0.3; 
+      --y: 25svh; 
+      --x: -4svh; 
+      --rot: 0deg; 
+      --z: 4; 
+  }
+  #pink-flashing-arrow{ 
+      --left: 155svh; 
+      --scale: 0.05; 
+      --y: -5svh; 
+      --x: 0svh; 
+      --rot: 0deg; 
+      --z: 5; 
+  }
+  #light-sleeper-studio{ 
+      --left: 293svh; 
+      --scale: 0.60; 
+      --ar: 9/16; 
+      --y: 30svh; 
+      --x: 0svh; 
+      --rot: 0deg; 
+      --z: 4; 
+  }
+  #tv-message-1{ 
+      --left: 255svh; 
+      --scale: 0.47; 
+      --y: 40svh; 
+      --x: 0svh; 
+      --rot: -10deg; 
+      --z: 4; 
+  }
+  #autumn-text{ 
+      --left: 253svh; 
+      --scale: 0.33; 
+      --y: 9svh; 
+      --x: 0svh; 
+      --rot: 0deg; 
+      --z: 0; 
+  }
+  #blame-it-notesapp{ 
+      --left: 255svh; 
+      --scale: 0.25; 
+      --y: -14svh; 
+      --x: 0svh; 
+      --rot: -2deg; 
+      --z: 4; 
+  }
+  #broken-breathing-placeholder{ 
+      --left: 300svh; 
+      --scale: 0.4; 
+      --y: -10svh; 
+      --x: 1svh; 
+      --rot: 0deg; 
+      --z: 3; 
+  }
+  #ls-behind-the-song-placeholder{ 
+      --left: 340svh; 
+      --scale: 0.4; 
+      --y: 40svh;
+      --x: 0svh; 
+      --rot: 0deg; 
+      --z: 1; 
+  }
+  #exit-wounds-title{ 
+      --left: 373svh; 
+      --scale: 0.43; 
+      --y: 0svh; 
+      --x: 0svh; 
+      --rot: -14deg; 
+      --z: 1; 
+  }
+  #play-exit-wounds{ 
+      --left: 411svh; 
+      --scale: 0.55; 
+      --y: 40svh; 
+      --x: 0svh; 
+      --rot: -12deg; 
+      --z: 6; 
+  }
+  #press-play-dj{ 
+      --left: 414svh; 
+      --scale: 0.15; 
+      --y: 39svh; 
+      --x: 0svh; 
+      --rot: 0deg; 
+      --z: 1;
+      pointer-events: none;
+  }
+  #link-exit-wounds-substack{ 
+      --left: 510svh; 
+      --scale: 0.75; 
+      --y: 15svh; 
+      --x: 0svh; 
+      --rot: 17deg; 
+      --z: 4; 
+  }
+  #substack-point-arrow{ 
+      --left: 480svh; 
+      --scale: 0.45; 
+      --y: 15svh; 
+      --x: 0svh; 
+      --rot: 15deg; 
+      --z: 4; 
+  }
+  #play-exit-wounds-voicememo{
+    --left: 435svh;
+    --scale: 0.40;
+    --y: 18svh;
+    --x: 0svh;
     --rot: 0deg;
     --z: 3;
   }
-
-  /* 4) Tracklist sheet */
-  #tracklist{
-    --left: 130svh;
-    --scale: 0.55;
-    --y: 35svh;
-    --x: 15svh;
-    --rot: 8deg;
-    --z: 4;
-  }
-
-  /* 5) THE STORY BEHIND: */
-  #the-story-behind{
-    --left: 74svh;
-    --scale: 0.15;
-    --y: 20svh;
-    --x: 0svh;
-    --rot: 0deg;
-    --z: 2;
-  }
-
-  /* 6) BLAME IT ON A BAD DREAM (title) */
-  #album-title{
-    --left: 85svh;
-    --scale: 0.33;
-    --y: -8svh;
-    --x: -6svh;
-    --rot: 0deg;
-    --z: 1;
-  }
-
-  /* 7) Spotify playlist (NEW) */
-  #playlist-ex{
-    --left: 203svh;   /* move horizontally along the rail */
-    --scale: 0.90;    /* overall player height relative to band */
-    --y: 55svh;       /* up/down */
-    --x: 0svh;        /* fine left/right nudge */
-    --rot: 0deg;      /* tilt if you want */
-    --z: 2;           /* stacking order */
-  }
-    
-  /* 8) YouTube: Light Sleeper Visualizer */
-  #light-sleeper-visualizer{
-    --left: 167svh;  /* move along the rail (tweak as you like) */
-    --scale: 0.50;   /* overall size (height driver) */
-    --y: -12svh;      /* up/down */
-    --x: 10svh;       /* fine left/right */
-    --rot: 0deg;     /* tilt if desired */
-    --z: 3;          /* stacking order */
-  }   
-    
-    /* 9) Lottie: Light Sleeper Title */
-  #light-sleeper-title{
-    --left: 205svh;  /* move along the rail */
-    --scale: 0.3;   /* overall size (height driver) */
-    --y: 25svh;      /* up/down */
-    --x: -4svh;      /* fine left/right */
-    --rot: 0deg;     /* tilt if desired */
-    --z: 4;          /* stacking order */
-  }
-
-    /* 10) Lottie: Pink Flashing Arrow */
-  #pink-flashing-arrow{
-    --left: 155svh; /* move along the rail; tweak to place it */
-    --scale: 0.05;  /* overall size (height driver) */
-    --y: -5svh;      /* up/down (+ goes up because we transform from bottom) */
-    --x: 0svh;     /* fine left/right */
-    --rot: 0deg;    /* tilt if desired */
-    --z: 5;         /* stack order (higher = in front) */
-  }
-
-  /* 11) Vimeo slot tuned to 1080×1920 (portrait) */
-  #light-sleeper-studio{
-    --left: 293svh;  /* horizontal anchor — change to place it */
-    --scale: 0.60;    /* overall height vs band (bigger/smaller) */
-    --ar: 9/16;      /* 1080/1920 portrait ratio = 0.5625 */
-    --y: 30svh;      
-    --x: 0svh;       /* fine left/right nudge */
-    --rot: 0deg;
-    --z: 4;
-  }
-    
-  /* 12) GIF) tv-message-1.gif */
-  #tv-message-1{
-    --left: 255svh;  /* move along the rail */
-    --scale: 0.47;    /* height vs band */
-    --y: 40svh;      /* neg = up, pos = down */
-    --x: 0svh;       /* fine left/right nudge */
-    --rot: -10deg;
-    --z: 4;
-  }
-    
-  /* 13) AUTUMN TEXT */
-  #autumn-text{
-    --left: 253svh;  /* move along the rail */
-    --scale: 0.33;
-    --y: 9svh;
-    --x: 0svh;
-    --rot: 0deg;
-    --z: 0;
-  }
-
-  /* 14) BLAME IT Notes App */
-  #blame-it-notesapp{
-    --left: 255svh;
-    --scale: 0.25;
-    --y: -14svh;
-    --x: 0svh;
-    --rot: -2deg;
-    --z: 4;
-  }
-
-/* 15) Broken Breathing (placeholder) */
-  #broken-breathing-placeholder{
-    --left: 300svh;
-    --scale: 0.4;
-    --y: -10svh;
-    --x: 1svh;
-    --rot: 0deg;
-    --z: 3;
-  }
-
-/* 16) LS – Behind the Song (placeholder) */
-  #ls-behind-the-song-placeholder{
-    --left: 340svh;
-    --scale: 0.4;
-    --y: 40svh;
-    --x: 0svh;
-    --rot: 0deg;
-    --z: 1;
-  }
-    
-  /* 17) Exit Wounds Title */
-  #exit-wounds-title{
-    --left: 375svh;
-    --scale: 0.43;
-    --y: 0svh;
-    --x: 0svh;
-    --rot: -14deg;
-    --z: 1;
-  }
-    
-  /* 18) Exit Wounds Boombox */
-  #play-exit-wounds{
-    --left: 416svh;
-    --scale: 0.55;
-    --y: 44svh;
-    --x: 0svh;
-    --rot: -12deg;
-    --z: 1;
-  }
-
-   /* 19) Exit Wounds → Substack */
-  #link-exit-wounds-substack{
-    --left: 445svh;  /* move along the rail */
-    --scale: 0.75;   /* size vs band */
-    --y: 6svh;       /* POSITIVE = up (your setup uses calc(-1 * var(--y))) */
-    --x: 0svh;       /* fine left/right */
-    --rot: 17deg;
-    --z: 4;
-  }
-    
-  /* ===== Example: shift entire collage 4svh left =====
-  .rail{ --group-left: -4svh; }
-  */
-    
 </style>
-    
-    <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"></script>
-    
+
+<!-- Lottie web component -->
+<script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"></script>
 </head>
 <body>
 
@@ -460,7 +422,6 @@
     <!-- 7: Spotify playlist -->
     <figure class="slot slot--spotify" id="playlist-ex">
       <div class="sp-box">
-        <!-- Your exact embed (attributes kept; CSS will size it) -->
         <iframe data-testid="embed-iframe" style="border-radius:12px"
           src="https://open.spotify.com/embed/playlist/07REAl6PPjOz2fLhehn0Xr?utm_source=generator"
           width="100%" height="352" frameborder="0" allowfullscreen
@@ -470,109 +431,128 @@
       </div>
     </figure>
 
-  <!-- 8: YouTube – Light Sleeper Visualizer -->
-  <figure class="slot slot--youtube" id="light-sleeper-visualizer">
-    <div class="yt-box">
-      <iframe
-        src="https://www.youtube.com/embed/Hvy3xS_jpAM?rel=0&modestbranding=1&playsinline=1"
-        title="Light Sleeper – Visualizer"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </figure>
-      
-  <!-- 9: Lottie — Light Sleeper Title -->
-  <figure class="slot slot--lottie" id="light-sleeper-title">
-    <div class="lot-box">
-      <dotlottie-wc
-        src="Lottie/light-sleeper-title.lottie"
-        autoplay
-        loop
-        speed="2"
-        style="width:100%;height:100%">
-      </dotlottie-wc>
-    </div>
-  </figure>
+    <!-- 8: YouTube – Light Sleeper Visualizer -->
+    <figure class="slot slot--youtube" id="light-sleeper-visualizer">
+      <div class="yt-box">
+        <iframe
+          src="https://www.youtube.com/embed/Hvy3xS_jpAM?rel=0&modestbranding=1&playsinline=1"
+          title="Light Sleeper – Visualizer"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </figure>
 
-  <!-- 10: Lottie — Pink Flashing Arrow -->
-  <figure class="slot slot--lottie" id="pink-flashing-arrow">
-    <div class="lot-box">
-      <dotlottie-wc
-        src="Lottie/pink-flashing-arrow.lottie"
-        autoplay
-        loop
-        speed="1"
-        style="width:100%;height:100%">
-      </dotlottie-wc>
-    </div>
-  </figure>
+    <!-- 9: Lottie — Light Sleeper Title -->
+    <figure class="slot slot--lottie" id="light-sleeper-title">
+      <div class="lot-box">
+        <dotlottie-wc
+          src="Lottie/light-sleeper-title.lottie"
+          autoplay
+          loop
+          speed="2"
+          style="width:100%;height:100%">
+        </dotlottie-wc>
+      </div>
+    </figure>
 
-   <!-- 11: Vimeo (portrait 1080×1920) - Light Sleeper -->
-  <figure class="slot slot--video" id="light-sleeper-studio">
-    <div class="video-box">
-      <iframe
-        src="https://player.vimeo.com/video/1114381114?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-        loading="lazy"
-        allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-        allowfullscreen
-        title="Light Sleeper Studio">
-      </iframe>
-    </div>
-  </figure>
+    <!-- 10: Lottie — Pink Flashing Arrow -->
+    <figure class="slot slot--lottie" id="pink-flashing-arrow">
+      <div class="lot-box">
+        <dotlottie-wc
+          src="Lottie/pink-flashing-arrow.lottie"
+          autoplay
+          loop
+          speed="1"
+          style="width:100%;height:100%">
+         </dotlottie-wc>
+      </div>
+    </figure>
 
-  <!-- 12: GIF slot -->
-  <figure class="slot" id="tv-message-1">
-    <img src="img/tv-message-1.gif?v=1" alt="TV message" loading="lazy" decoding="async">
-  </figure>
-      
-  <!-- 13: AUTUMN TEXT -->
-  <figure class="slot" id="autumn-text">
-    <img src="img/autumn-text.png?v=1" alt="Autumn text" loading="lazy" decoding="async">
-  </figure>
+    <!-- 11: Vimeo (portrait 1080×1920) - Light Sleeper -->
+    <figure class="slot slot--video" id="light-sleeper-studio">
+      <div class="video-box">
+        <iframe
+          src="https://player.vimeo.com/video/1114381114?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          loading="lazy"
+          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="Light Sleeper Studio">
+        </iframe>
+      </div>
+    </figure>
 
-  <!-- 15: BLAME IT Notes App -->
-  <figure class="slot" id="blame-it-notesapp">
-    <img src="img/blame-it-notesapp.png?v=1" alt="Blame It notes app" loading="lazy" decoding="async">
-  </figure>
+    <!-- 12: GIF slot -->
+    <figure class="slot" id="tv-message-1">
+      <img src="img/tv-message-1.gif?v=1" alt="TV message" loading="lazy" decoding="async">
+    </figure>
 
-  <!-- 15: Broken Breathing (placeholder) -->
+    <!-- 13: AUTUMN TEXT -->
+    <figure class="slot" id="autumn-text">
+      <img src="img/autumn-text.png?v=1" alt="Autumn text" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 15: BLAME IT Notes App -->
+    <figure class="slot" id="blame-it-notesapp">
+      <img src="img/blame-it-notesapp.png?v=1" alt="Blame It notes app" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 16: Broken Breathing (placeholder) -->
     <figure class="slot" id="broken-breathing-placeholder">
       <img src="img/broken-breathing-placeholder.png?v=1" alt="Broken Breathing placeholder" loading="lazy" decoding="async">
     </figure>
 
-  <!-- 16: LS – Behind the Song (placeholder) -->
-  <figure class="slot" id="ls-behind-the-song-placeholder">
-    <img src="img/ls-behind-the-song-placeholder.png?v=1" alt="Light Sleeper - Behind the Song placeholder" loading="lazy" decoding="async">
-  </figure>
+    <!-- 17: LS – Behind the Song (placeholder) -->
+    <figure class="slot" id="ls-behind-the-song-placeholder">
+      <img src="img/ls-behind-the-song-placeholder.png?v=1" alt="Light Sleeper - Behind the Song placeholder" loading="lazy" decoding="async">
+    </figure>
 
-    <!-- 17: Exit Wounds Title  -->
-  <figure class="slot" id="exit-wounds-title">
-    <img src="img/exit-wounds-title.png?v=1" alt="Exit Wounds Title" loading="lazy" decoding="async">
-  </figure>
+    <!-- 18: Exit Wounds Title  -->
+    <figure class="slot" id="exit-wounds-title">
+      <img src="img/exit-wounds-title.png?v=1" alt="Exit Wounds Title" loading="lazy" decoding="async">
+    </figure>
 
-  <!-- 18: SOUND (SoundCloud) — click image to play/pause -->
-  <figure class="slot slot--sc" id="play-exit-wounds"
-    <!-- Clickable artwork -->
-    <img class="sc-trigger"
-         src="img/exit-wounds-boombox.png"
-         alt="Play Exit Wounds (SoundCloud)">
-    <!-- Hidden SoundCloud player (src set by JS) -->
-    <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
-  </figure>
+    <!-- SOUND (SoundCloud) — click image to play/pause -->
+    <figure class="slot slot--sc" id="play-exit-wounds"
+            data-sc-url="https://soundcloud.com/izzy-macarthur/exit-wounds">
+      <img class="sc-trigger"
+           src="img/exit-wounds-boombox.png"
+           alt="Play Exit Wounds (SoundCloud)">
+      <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
+    </figure>
 
-  <!-- CLICKABLE IMAGE → opens Substack in new tab -->
-  <figure class="slot" id="link-exit-wounds-substack">
-    <a href="https://izzymacarthur.substack.com/p/with-no-exit-wounds"
-       target="_blank" rel="noopener noreferrer">
-      <img src="img/exit-wounds-substack-flier.png?v=1"
-           alt="With No Exit Wounds — read on Substack">
+    <!-- Optional: NEW Voice Memo image-controlled audio (single-click toggle) -->
+    <figure class="slot slot--audio" id="play-exit-wounds-voicememo"
+            data-audio-src="audio/exit-wounds-voicememo.mp4" data-loop="false">
+      <img class="audio-trigger"
+           src="img/exit-wounds-voicememo.png"
+           alt="Play Exit Wounds Voice Memo">
+      <audio preload="auto" playsinline>
+        <source src="audio/exit-wounds-voicememo.mp4" type="audio/mp4">
+      </audio>
+    </figure>
+
+    <!-- 19: Press Play -->
+    <figure class="slot" id="press-play-dj">
+      <img src="img/press-play-dj.png?v=1" alt="press play dj" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 20: CLICKABLE IMAGE → opens Substack in new tab -->
+    <figure class="slot" id="link-exit-wounds-substack">
+      <a href="https://izzymacarthur.substack.com/p/with-no-exit-wounds"
+         target="_blank" rel="noopener noreferrer">
+        <img src="img/exit-wounds-substack-flier.png?v=1"
+             alt="With No Exit Wounds — read on Substack">
       </a>
     </figure>
 
-      
-          <!-- Add more slots here… (give each a unique id and set --left) -->
+    <!-- 21: Arrow Pointing to Exit Wounds Flier -->
+    <figure class="slot" id="substack-point-arrow">
+      <img src="img/substack-point-arrow.png?v=1" alt="substack point arrow" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- Add more slots here… -->
   </div>
 </div>
 
@@ -586,34 +566,149 @@
     }
   }, { passive: false });
 </script>
-    
+
+<!-- SoundCloud API -->
 <script src="https://w.soundcloud.com/player/api.js"></script>
-     <script>
-      // Initialize every SoundCloud slot on the page
-      document.querySelectorAll('.slot--sc').forEach((slot) => {
-        const scUrl = slot.dataset.scUrl || 'https://soundcloud.com/izzy-macarthur/exit-wounds';
-        const iframe = slot.querySelector('.sc-iframe');
-        const trigger = slot.querySelector('.sc-trigger');
 
-        // Build embed URL
-        const embed = 'https://w.soundcloud.com/player/?url=' +
-          encodeURIComponent(scUrl) +
-          '&auto_play=false&hide_related=true&show_comments=false&show_user=false' +
-          '&show_reposts=false&visual=false';
+<!-- SoundCloud initializer (READY-safe + pointer events + cross-pause) -->
+<script>
+(() => {
+  function initSoundCloud() {
+    window.__scWidgets = [];
 
-            iframe.src = embed;
+    document.querySelectorAll('.slot--sc').forEach((slot) => {
+      const scUrl   = (slot.dataset.scUrl || '').trim();
+      const iframe  = slot.querySelector('.sc-iframe');
+      const trigger = slot.querySelector('.sc-trigger');
+      if (!scUrl || !iframe || !trigger) return;
 
-        // Hook up the widget
-        const widget = SC.Widget(iframe);
-        let isPlaying = false;
-        widget.bind(SC.Widget.Events.PLAY,  () => { isPlaying = true;  });
-        widget.bind(SC.Widget.Events.PAUSE, () => { isPlaying = false; });
+      const embed = 'https://w.soundcloud.com/player/?url=' +
+        encodeURIComponent(scUrl) +
+        '&auto_play=false&hide_related=true&show_comments=false&show_user=false' +
+        '&show_reposts=false&visual=false';
+      iframe.src = embed;
 
-        // Click image → toggle play/pause
-        trigger.addEventListener('click', () => {
-          isPlaying ? widget.pause() : widget.play();
+      const widget = SC.Widget(iframe);
+      window.__scWidgets.push(widget);
+
+      let ready = false;
+      widget.bind(SC.Widget.Events.READY, () => { ready = true; });
+
+      const setPlaying = (on) => slot.classList.toggle('is-playing', !!on);
+      widget.bind(SC.Widget.Events.PLAY, () => {
+        setPlaying(true);
+        // Pause any HTML <audio> voice-memos
+        document.querySelectorAll('.slot--audio audio').forEach(a => a.pause());
+      });
+      const notPlaying = () => setPlaying(false);
+      widget.bind(SC.Widget.Events.PAUSE,  notPlaying);
+      widget.bind(SC.Widget.Events.FINISH, notPlaying);
+
+      const toggle = () => {
+        if (!ready) {
+          widget.bind(SC.Widget.Events.READY, () => widget.isPaused(p => p ? widget.play() : widget.pause()));
+          return;
+        }
+        widget.isPaused(p => p ? widget.play() : widget.pause());
+      };
+
+      if (window.PointerEvent) {
+        trigger.addEventListener('pointerup', (e) => {
+          e.preventDefault(); e.stopPropagation();
+          toggle();
+        }, { passive: false });
+      } else {
+        let ignoreNextClick = false;
+        trigger.addEventListener('touchend', (e) => {
+          e.preventDefault(); e.stopPropagation();
+          ignoreNextClick = true; setTimeout(() => ignoreNextClick = false, 400);
+          toggle();
+        }, { passive: false });
+        trigger.addEventListener('click', (e) => {
+          if (ignoreNextClick) { e.preventDefault(); return; }
+          e.preventDefault(); e.stopPropagation();
+          toggle();
+        }, { passive: false });
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSoundCloud);
+  } else {
+    initSoundCloud();
+  }
+})();
+</script>
+
+<!-- Single-click TOGGLE for image-controlled audio (.mp4/.mp3) -->
+<script>
+(() => {
+  function initImageAudio(){
+    document.querySelectorAll('.slot--audio').forEach((slot) => {
+      const audio   = slot.querySelector('audio');
+      const trigger = slot.querySelector('.audio-trigger');
+      if (!audio || !trigger) return;
+
+      const srcAttr = slot.dataset.audioSrc || '';
+      if (srcAttr && !audio.src && !audio.querySelector('source')) audio.src = srcAttr;
+      audio.loop = (slot.dataset.loop === 'true');
+      audio.preload = 'auto';
+      audio.setAttribute('playsinline', '');
+
+      const updateUI = () => {
+        const playing = !audio.paused && !audio.ended;
+        slot.classList.toggle('is-playing', playing);
+        trigger.setAttribute('aria-pressed', playing ? 'true' : 'false');
+      };
+
+      audio.addEventListener('play', () => {
+        // Pause other HTML <audio> players
+        document.querySelectorAll('.slot--audio audio').forEach((a) => { if (a !== audio) a.pause(); });
+        // Pause SC widgets if any are playing
+        if (window.__scWidgets && Array.isArray(window.__scWidgets)) {
+          window.__scWidgets.forEach(w => { try { w.pause(); } catch(e){} });
+        }
+        updateUI();
+      });
+      audio.addEventListener('pause', updateUI);
+      audio.addEventListener('ended', updateUI);
+
+      const toggle = () => {
+        if (audio.paused || audio.ended) {
+          const p = audio.play();
+          if (p && typeof p.catch === 'function') p.catch(() => {});
+        } else {
+          audio.pause();
+        }
+      };
+
+      if (window.PointerEvent) {
+        trigger.addEventListener('pointerup', (e) => { e.preventDefault(); e.stopPropagation(); toggle(); }, { passive: false });
+      } else {
+        trigger.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); toggle(); }, { passive: false });
+        trigger.addEventListener('touchend', () => toggle(), { passive: true });
+      }
+
+      audio.addEventListener('error', () => {
+        const err = audio.error;
+        console.warn('[Audio Error]', {
+          code: err && err.code, // 1 aborted, 2 network, 3 decode, 4 src unsupported
+          src: audio.currentSrc || srcAttr
         });
       });
+
+      updateUI();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initImageAudio);
+  } else {
+    initImageAudio();
+  }
+})();
 </script>
+
 </body>
 </html>
