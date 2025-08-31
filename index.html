@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-    /* ========= V97 ========= */
+    /* ========= V98 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -567,19 +567,20 @@
       <img src="img/ls-behind-the-song-placeholder.png?v=1" alt="Light Sleeper - Behind the Song placeholder" loading="lazy" decoding="async">
     </figure>
 
-      <!-- 18: Exit Wounds Title  -->
+    <!-- 18: Exit Wounds Title  -->
     <figure class="slot" id="exit-wounds-title">
       <img src="img/exit-wounds-title.png?v=1" alt="Exit Wounds Title" loading="lazy" decoding="async">
     </figure>
 
-     <!-- 18: SOUND (SoundCloud) — click image to play/pause --> 
-     <figure class="slot slot--sc" id="play-exit-wounds" 
-        <img class="sc-trigger" src="img/exit-wounds-boombox.png" alt="Play Exit Wounds (SoundCloud)"> 
-        <!-- Hidden SoundCloud player (src set by JS) --> 
-        <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay">
-        </iframe> 
-     </figure>
-      
+    <!-- 18: SOUND (SoundCloud) — click image to play/pause -->
+    <figure class="slot slot--sc" id="play-exit-wounds"
+        data-sc-url="https://soundcloud.com/izzy-macarthur/exit-wounds">
+      <img class="sc-trigger"
+       src="img/exit-wounds-boombox.png"
+       alt="Play Exit Wounds (SoundCloud)">
+      <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
+    </figure>
+     
     <!-- 19: Press Play -->
     <figure class="slot" id="press-play-dj">
       <img src="img/press-play-dj.png?v=1" alt="press play dj" loading="lazy" decoding="async">
@@ -613,33 +614,55 @@
     }
   }, { passive: false });
 </script>
-<script src="https://w.soundcloud.com/player/api.js"></script>
-     <script>
-      // Initialize every SoundCloud slot on the page
-      document.querySelectorAll('.slot--sc').forEach((slot) => {
-        const scUrl = slot.dataset.scUrl || 'https://soundcloud.com/izzy-macarthur/exit-wounds';
-        const iframe = slot.querySelector('.sc-iframe');
-        const trigger = slot.querySelector('.sc-trigger');
 
-        // Build embed URL
-        const embed = 'https://w.soundcloud.com/player/?url=' +
-          encodeURIComponent(scUrl) +
-          '&auto_play=false&hide_related=true&show_comments=false&show_user=false' +
-          '&show_reposts=false&visual=false';
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+<script>
+  // Keep a global list so other players can pause SC when they start
+  window.__scWidgets = [];
 
-            iframe.src = embed;
+  document.querySelectorAll('.slot--sc').forEach((slot) => {
+    const scUrl   = slot.dataset.scUrl || 'https://soundcloud.com/izzy-macarthur/exit-wounds';
+    const iframe  = slot.querySelector('.sc-iframe');
+    const trigger = slot.querySelector('.sc-trigger');
 
-        // Hook up the widget
-        const widget = SC.Widget(iframe);
-        let isPlaying = false;
-        widget.bind(SC.Widget.Events.PLAY,  () => { isPlaying = true;  });
-        widget.bind(SC.Widget.Events.PAUSE, () => { isPlaying = false; });
+    // Build a robust embed URL
+    const params = new URLSearchParams({
+      url: scUrl,
+      auto_play: 'false',
+      hide_related: 'true',
+      show_comments: 'false',
+      show_user: 'false',
+      show_reposts: 'false',
+      visual: 'false'
+    });
+    iframe.src = `https://w.soundcloud.com/player/?${params.toString()}`;
 
-        // Click image → toggle play/pause
-        trigger.addEventListener('click', () => {
-          isPlaying ? widget.pause() : widget.play();
-        });
-      });
+    const widget = SC.Widget(iframe);
+    window.__scWidgets.push(widget);
+
+    // Sync state + pause HTML <audio> voice-memos when SC plays
+    widget.bind(SC.Widget.Events.PLAY, () => {
+      slot.classList.add('is-playing');
+      document.querySelectorAll('.slot--audio audio').forEach(a => a.pause());
+    });
+    widget.bind(SC.Widget.Events.PAUSE,  () => slot.classList.remove('is-playing'));
+    widget.bind(SC.Widget.Events.FINISH, () => slot.classList.remove('is-playing'));
+
+    // Reliable toggle using widget.isPaused(callback)
+    const toggleSC = () => {
+      try {
+        widget.isPaused((paused) => paused ? widget.play() : widget.pause());
+      } catch {
+        // Fallback for older widgets
+        if (typeof widget.toggle === 'function') widget.toggle();
+        else widget.play();
+      }
+    };
+
+    // Single-click (and tap) toggles SC; prevent default to avoid ghost drags
+    trigger.addEventListener('click', (e) => { e.preventDefault(); toggleSC(); }, { passive: false });
+    trigger.addEventListener('touchend', () => toggleSC(), { passive: true });
+  });
 </script>
 
 </body>
