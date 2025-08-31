@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-    /* ========= V96 ========= */
+    /* ========= V98 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -204,6 +204,19 @@
     width: auto; display:block; object-fit: contain;
     filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
     cursor: pointer;
+  }
+
+  /* === Audio (MP3) image-controlled slot === */
+  .slot--audio .audio-trigger{
+    height: calc(var(--band-h) * var(--scale));
+    width: auto; display:block; object-fit: contain;
+    filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
+    cursor: pointer; user-select: none;
+  }
+  .slot--audio audio{
+    /* keep the <audio> off-screen */
+    position:absolute; left:-9999px; top:auto;
+    width:1px; height:1px; opacity:0; pointer-events:none; border:0;
   }
  
   /* ========= PER-SLOT CUSTOMIZATION (EDIT THESE) =========
@@ -420,7 +433,17 @@
     --rot: 15deg;
     --z: 4;
   }
-    
+
+  /* Voice memo image position (tweak these like your other slots) */
+  #play-exit-wounds-voicememo{
+    --left: 435svh;   /* choose where it lives */
+    --scale: 0.40;
+    --y: 18svh;
+    --x: 0svh;
+    --rot: 0deg;
+    --z: 3;
+  }
+
   /* ===== Example: shift entire collage 4svh left =====
   .rail{ --group-left: -4svh; }
   */
@@ -572,15 +595,13 @@
       <img src="img/exit-wounds-title.png?v=1" alt="Exit Wounds Title" loading="lazy" decoding="async">
     </figure>
 
-    <!-- 18: SOUND (SoundCloud) — click image to play/pause -->
-    <figure class="slot slot--sc" id="play-exit-wounds"
-      <!-- Clickable artwork -->
-      <img class="sc-trigger"
-           src="img/exit-wounds-boombox.png"
-           alt="Play Exit Wounds (SoundCloud)">
-      <!-- Hidden SoundCloud player (src set by JS) -->
-      <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
-    </figure>
+   <!-- 18: SOUND (SoundCloud) — click image to play/pause -->
+  <figure class="slot slot--sc" id="play-exit-wounds">
+    <img class="sc-trigger"
+         src="img/exit-wounds-boombox.png"
+         alt="Play Exit Wounds (SoundCloud)">
+    <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
+  </figure>
       
     <!-- 19: Press Play -->
     <figure class="slot" id="press-play-dj">
@@ -600,7 +621,16 @@
     <figure class="slot" id="substack-point-arrow">
       <img src="img/substack-point-arrow.png?v=1" alt="substack pont arrow" loading="lazy" decoding="async">
     </figure>
-      
+
+    <!-- 22: Exit Wounds Voice Memo (.mp4) — single-click = play, double-click = pause -->
+    <figure class="slot slot--audio" id="play-exit-wounds-voicememo"
+          data-audio-src="audio/exit-wounds-voicememo.mp4" data-loop="false">
+    <img class="audio-trigger"
+         src="img/exit-wounds-voicememo.png"   <!-- change to your actual PNG/JPG -->
+         alt="Play Exit Wounds Voice Memo">
+    <audio preload="auto"></audio>
+    </figure>
+     
           <!-- Add more slots here… (give each a unique id and set --left) -->
   </div>
 </div>
@@ -617,32 +647,86 @@
 </script>
     
 <script src="https://w.soundcloud.com/player/api.js"></script>
-     <script>
-      // Initialize every SoundCloud slot on the page
-      document.querySelectorAll('.slot--sc').forEach((slot) => {
-        const scUrl = slot.dataset.scUrl || 'https://soundcloud.com/izzy-macarthur/exit-wounds';
-        const iframe = slot.querySelector('.sc-iframe');
-        const trigger = slot.querySelector('.sc-trigger');
+<script>
+  // Store SC widget refs globally so other players can pause them
+  window.__scWidgets = window.__scWidgets || [];
 
-        // Build embed URL
-        const embed = 'https://w.soundcloud.com/player/?url=' +
-          encodeURIComponent(scUrl) +
-          '&auto_play=false&hide_related=true&show_comments=false&show_user=false' +
-          '&show_reposts=false&visual=false';
+  // Initialize every SoundCloud slot on the page
+  document.querySelectorAll('.slot--sc').forEach((slot) => {
+    const scUrl = slot.dataset.scUrl || 'https://soundcloud.com/izzy-macarthur/exit-wounds';
+    const iframe = slot.querySelector('.sc-iframe');
+    const trigger = slot.querySelector('.sc-trigger');
 
-            iframe.src = embed;
+    const embed = 'https://w.soundcloud.com/player/?url=' +
+      encodeURIComponent(scUrl) +
+      '&auto_play=false&hide_related=true&show_comments=false&show_user=false' +
+      '&show_reposts=false&visual=false';
 
-        // Hook up the widget
-        const widget = SC.Widget(iframe);
-        let isPlaying = false;
-        widget.bind(SC.Widget.Events.PLAY,  () => { isPlaying = true;  });
-        widget.bind(SC.Widget.Events.PAUSE, () => { isPlaying = false; });
+    iframe.src = embed;
 
-        // Click image → toggle play/pause
-        trigger.addEventListener('click', () => {
-          isPlaying ? widget.pause() : widget.play();
-        });
-      });
+    const widget = SC.Widget(iframe);
+    window.__scWidgets.push(widget);             // <-- add this
+    let isPlaying = false;
+
+    widget.bind(SC.Widget.Events.PLAY,  () => {
+      isPlaying = true;
+      // Pause any HTML <audio> voice-memos when SC starts
+      document.querySelectorAll('.slot--audio audio').forEach((a) => a.pause()); // <-- add this
+    });
+    widget.bind(SC.Widget.Events.PAUSE, () => { isPlaying = false; });
+
+    // Click image → toggle play/pause on SC
+    trigger.addEventListener('click', () => {
+      isPlaying ? widget.pause() : widget.play();
+    });
+  });
 </script>
+
+    
+    <script>
+    // Init every MP4/MP3 image-controlled slot
+    document.querySelectorAll('.slot--audio').forEach((slot) => {
+      const audio   = slot.querySelector('audio');
+      const trigger = slot.querySelector('.audio-trigger');
+
+      const src  = slot.dataset.audioSrc || audio.getAttribute('src') || '';
+      const loop = (slot.dataset.loop === 'true');
+      if (src) audio.src = src;
+      audio.loop = loop;
+      audio.preload = 'auto';
+
+      // When this audio plays, pause all other audios AND any SoundCloud widgets
+      audio.addEventListener('play', () => {
+        // pause other <audio> players
+        document.querySelectorAll('.slot--audio audio').forEach((a) => {
+          if (a !== audio) a.pause();
+        });
+        // pause SC widgets too
+        if (window.__scWidgets && Array.isArray(window.__scWidgets)) {
+          window.__scWidgets.forEach(w => { try { w.pause(); } catch(e){} });
+        }
+        slot.classList.add('is-playing');
+      });
+
+      audio.addEventListener('pause', () => {
+        slot.classList.remove('is-playing');
+      });
+
+      // Single click => PLAY (only). If already playing, do nothing.
+      trigger.addEventListener('click', () => {
+        if (audio.paused) {
+          const p = audio.play();
+          if (p && typeof p.catch === 'function') p.catch(() => {});
+        }
+      });
+
+      // Double click => PAUSE
+      trigger.addEventListener('dblclick', (e) => {
+        e.preventDefault();
+        audio.pause();
+      });
+    });
+  </script>
+
 </body>
 </html>
