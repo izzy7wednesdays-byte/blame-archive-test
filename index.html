@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-  /* ========= V104 ========= */
+  /* ========= V105 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -190,7 +190,7 @@
 
   /* ========= PER-SLOT CUSTOMIZATION ========= */
   #special-message{ 
-      --left: -45svh; 
+      --left: -48svh; 
       --scale: 1.95; 
       --y: -31svh; 
       --x: 0svh; 
@@ -222,7 +222,7 @@
       --z: 4; 
   }
   #the-story-behind{ 
-      --left: 74svh; 
+      --left: 70svh; 
       --scale: 0.15; 
       --y: 20svh; 
       --x: 0svh; 
@@ -230,7 +230,7 @@
       --z: 2; 
   }
   #album-title{ 
-      --left: 85svh; 
+      --left: 80svh; 
       --scale: 0.33; 
       --y: -8svh; 
       --x: -6svh; 
@@ -263,7 +263,7 @@
   }
   #pink-flashing-arrow{ 
       --left: 155svh; 
-      --scale: 0.05; 
+      --scale: 0.08; 
       --y: -5svh; 
       --x: 0svh; 
       --rot: 0deg; 
@@ -353,9 +353,9 @@
       --z: 4; 
   }
   #substack-point-arrow{ 
-      --left: 480svh; 
-      --scale: 0.45; 
-      --y: 15svh; 
+      --left: 482svh; 
+      --scale: 0.40; 
+      --y: 18svh; 
       --x: 0svh; 
       --rot: 12deg; 
       --z: 4;
@@ -364,7 +364,7 @@
   #play-exit-wounds-voicememo{
     --left: 443svh;
     --scale: 0.30;
-    --y: -6svh;
+    --y: -12svh;
     --x: 0svh;
     --rot: 0deg;
     --z: 7;
@@ -515,7 +515,7 @@
       <img src="img/exit-wounds-title.png?v=1" alt="Exit Wounds Title" loading="lazy" decoding="async">
     </figure>
 
-    <!-- SOUND (SoundCloud) — click image to play/pause -->
+    <!-- 19: SOUND (SoundCloud) — click image to play/pause -->
     <figure class="slot slot--sc" id="play-exit-wounds"
             data-sc-url="https://soundcloud.com/izzy-macarthur/exit-wounds">
       <img class="sc-trigger"
@@ -524,7 +524,12 @@
       <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
     </figure>
 
-    <!-- Optional: NEW Voice Memo image-controlled audio (single-click toggle) -->
+    <!-- 19: Press Play -->
+    <figure class="slot" id="press-play-dj">
+      <img src="img/press-play-dj.png?v=1" alt="press play dj" loading="lazy" decoding="async">
+    </figure>
+    
+    <!-- 20: Exit Wounds Voicememo -->
     <figure class="slot slot--audio" id="play-exit-wounds-voicememo"
             data-audio-src="audio/exit-wounds-voicememo.mp4" data-loop="false">
       <img class="audio-trigger"
@@ -535,12 +540,21 @@
       </audio>
     </figure>
 
-    <!-- 19: Press Play -->
-    <figure class="slot" id="press-play-dj">
-      <img src="img/press-play-dj.png?v=1" alt="press play dj" loading="lazy" decoding="async">
+    <!-- 21: Exit Wounds Voicememo -->
+      <figure class="slot slot--audio" id="play-exit-wounds-voicememo"
+          data-audio-src="audio/exit-wounds-voicememo.mp4" data-loop="false">
+        <img class="audio-trigger"
+           src="img/exit-wounds-voicememo.png"
+           alt="Play Exit Wounds Voice Memo">
+      <audio preload="auto" playsinline>
+        <!-- Prefer an mp3/m4a if you have one; otherwise leave just the mp4 -->
+        <!-- <source src="audio/exit-wounds-voicememo.mp3" type="audio/mpeg"> -->
+        <!-- <source src="audio/exit-wounds-voicememo.m4a" type="audio/mp4"> -->
+        <source src="audio/exit-wounds-voicememo.mp4" type="video/mp4">
+      </audio>
     </figure>
 
-    <!-- 20: CLICKABLE IMAGE → opens Substack in new tab -->
+    <!-- 23: Exit Wounds Substack Flier -->
     <figure class="slot" id="link-exit-wounds-substack">
       <a href="https://izzymacarthur.substack.com/p/with-no-exit-wounds"
          target="_blank" rel="noopener noreferrer">
@@ -549,7 +563,7 @@
       </a>
     </figure>
 
-    <!-- 21: Arrow Pointing to Exit Wounds Flier -->
+    <!-- 24: Arrow Pointing to Exit Wounds Flier -->
     <figure class="slot" id="substack-point-arrow">
       <img src="img/substack-point-arrow.png?v=1" alt="substack point arrow" loading="lazy" decoding="async">
     </figure>
@@ -643,7 +657,7 @@
 })();
 </script>
 
-<!-- Single-click TOGGLE for image-controlled audio (.mp4/.mp3) -->
+  <!-- Audio-Image initializer  -->
 <script>
 (() => {
   function initImageAudio(){
@@ -652,8 +666,13 @@
       const trigger = slot.querySelector('.audio-trigger');
       if (!audio || !trigger) return;
 
-      const srcAttr = slot.dataset.audioSrc || '';
-      if (srcAttr && !audio.src && !audio.querySelector('source')) audio.src = srcAttr;
+      // If a data-audio-src is given, prefer it (works even without <source>)
+      const srcAttr = (slot.dataset.audioSrc || '').trim();
+      if (srcAttr) audio.src = srcAttr;
+
+      // Ensure <source> tags (if any) are registered before first play
+      audio.load();
+
       audio.loop = (slot.dataset.loop === 'true');
       audio.preload = 'auto';
       audio.setAttribute('playsinline', '');
@@ -667,7 +686,7 @@
       audio.addEventListener('play', () => {
         // Pause other HTML <audio> players
         document.querySelectorAll('.slot--audio audio').forEach((a) => { if (a !== audio) a.pause(); });
-        // Pause SC widgets if any are playing
+        // Pause SoundCloud if it’s playing
         if (window.__scWidgets && Array.isArray(window.__scWidgets)) {
           window.__scWidgets.forEach(w => { try { w.pause(); } catch(e){} });
         }
@@ -679,12 +698,17 @@
       const toggle = () => {
         if (audio.paused || audio.ended) {
           const p = audio.play();
-          if (p && typeof p.catch === 'function') p.catch(() => {});
+          if (p && typeof p.catch === 'function') {
+            p.catch((e) => {
+              console.warn('[VoiceMemo] play() failed. src:', audio.currentSrc || srcAttr, e);
+            });
+          }
         } else {
           audio.pause();
         }
       };
 
+      // Use pointer events to avoid touch+click double-fire
       if (window.PointerEvent) {
         trigger.addEventListener('pointerup', (e) => { e.preventDefault(); e.stopPropagation(); toggle(); }, { passive: false });
       } else {
@@ -694,9 +718,9 @@
 
       audio.addEventListener('error', () => {
         const err = audio.error;
-        console.warn('[Audio Error]', {
+        console.warn('[VoiceMemo] <audio> error', {
           code: err && err.code, // 1 aborted, 2 network, 3 decode, 4 src unsupported
-          src: audio.currentSrc || srcAttr
+          currentSrc: audio.currentSrc || srcAttr
         });
       });
 
