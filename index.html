@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-  /* ========= V115 ========= */
+  /* ========= V116 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -188,6 +188,43 @@
     outline-color: #4C58E9;
     outline-offset: 6px;
   }
+  
+  /* ===== Overlay that fills screen; image card fills MOST of the page ===== */
+  #overlay{
+    position: fixed;
+    inset: 0;
+     display: none;                /* toggled with .is-open */
+     align-items: center;
+     justify-content: center;
+     background: rgba(0,0,0,.72);  /* dim backdrop */
+     z-index: 9999;
+  }
+
+  /* Default size (override per-slot via data-attrs below if you want) */
+  #overlay .ov-card{
+    --ov-max-w: min(86vw, 1400px);
+    --ov-max-h: 86svh;
+    --ov-pad:   1.6svh;
+
+    max-width:  var(--ov-max-w);
+    max-height: var(--ov-max-h);
+    padding:    var(--ov-pad);
+
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(15,15,18,.85);
+    border-radius: 16px;
+    box-shadow: 0 1.6svh 3.2svh rgba(0,0,0,.55);
+  }
+
+  #overlay img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
+  }
+
+#overlay.is-open{ display: flex; }  /* show overlay */
 
   /* ========= PER-SLOT CUSTOMIZATION ========= */
   #special-message{ 
@@ -542,9 +579,15 @@
       </div>
     </figure>
 
-    <!-- 12: GIF slot -->
-    <figure class="slot" id="tv-message-1">
-      <img src="img/tv-message-1.gif?v=1" alt="TV message" loading="lazy" decoding="async">
+    <!-- 12: GIF slot (now also opens an overlay image when clicked) -->
+    <figure class="slot" id="tv-message-1"
+        data-overlay-src="img/lightsleeper-about.png?v=1"
+        data-overlay-alt="About Light Sleeper"
+        data-ov-w="min(82vw, 1200px)"   <!-- optional -->
+        data-ov-h="82svh"               <!-- optional -->
+        data-ov-pad="1.2svh">           <!-- optional -->
+      <img src="img/tv-message-1.gif?v=1" alt="TV message" loading="lazy" decoding="async"
+       style="cursor: zoom-in;">
     </figure>
 
     <!-- 13: AUTUMN TEXT -->
@@ -611,32 +654,32 @@
 
     <!-- 22: Arrow Pointing to Exit Wounds Flier -->
     <figure class="slot" id="substack-point-arrow">
-      <img src="img/substack-point-arrow.png?v=1" alt="substack point arrow" loading="lazy" decoding="async">
+        <img src="img/substack-point-arrow.png?v=1" alt="substack point arrow" loading="lazy" decoding="async">
     </figure>
     
     <!-- 23: Arrow Pointing to Exit Wounds Flier -->
     <figure class="slot" id="read-exitwounds">
-      <img src="img/read-exitwounds.png?v=1" alt="read exit wounds" loading="lazy" decoding="async">
+        <img src="img/read-exitwounds.png?v=1" alt="read exit wounds" loading="lazy" decoding="async">
     </figure>
 
     <!-- 24: Exit Wounds Click Me -->
     <figure class="slot" id="exit-wounds-clickme">
-      <img src="img/exit-wounds-clickme.png?v=1" alt="exit wounds click me" loading="lazy" decoding="async">
+        <img src="img/exit-wounds-clickme.png?v=1" alt="exit wounds click me" loading="lazy" decoding="async">
     </figure>
 
     <!-- 25: Exit Wounds: Behind the Song Placeholder -->
     <figure class="slot" id="exitwounds-behindthesong-placeholder">
-      <img src="img/exitwounds-behindthesong-placeholder.png?v=1" alt="exit wounds behind the song placeholder" loading="lazy" decoding="async">
+        <img src="img/exitwounds-behindthesong-placeholder.png?v=1" alt="exit wounds behind the song placeholder" loading="lazy" decoding="async">
     </figure>
 
     <!-- 26: Exit Wounds: Lyric Video Placeholder -->
     <figure class="slot" id="exitwounds-lyricvideo-placeholder">
-      <img src="img/exitwounds-lyricvideo-placeholder.png?v=1" alt="exit wounds lyric video placeholder" loading="lazy" decoding="async">
+        <img src="img/exitwounds-lyricvideo-placeholder.png?v=1" alt="exit wounds lyric video placeholder" loading="lazy" decoding="async">
     </figure>
     
     <!-- 27: Glitter Truck -->
     <figure class="slot" id="glitter-truck">
-      <img src="img/glitter-truck.png?v=1" alt="glitter truck" loading="lazy" decoding="async">
+        <img src="img/glitter-truck.png?v=1" alt="glitter truck" loading="lazy" decoding="async">
     </figure>
 
     <!-- 28: Lottie — Crashing Down Animation -->
@@ -656,6 +699,11 @@
   </div>
 </div>
 
+  <!-- Reusable not-fullscreen overlay -->
+  <div id="overlay" aria-hidden="true">
+    <div class="ov-card"><img alt=""></div>
+  </div>
+  
 <script>
   /* Mouse wheel → horizontal scroll (desktop mice) */
   const wrap = document.getElementById('hwrap');
@@ -817,6 +865,48 @@
   } else {
     initImageAudio();
   }
+})();
+</script>
+
+  <!-- Open//Close Behavior -->
+  <script>
+(() => {
+  const overlay    = document.getElementById('overlay');
+  const ovCard     = overlay.querySelector('.ov-card');
+  const overlayImg = overlay.querySelector('img');
+
+  // Any slot with data-overlay-src opens the overlay when its <img> is clicked
+  document.querySelectorAll('.rail .slot[data-overlay-src]').forEach(slot => {
+    const img = slot.querySelector('img');
+    if (!img) return;
+
+    img.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      overlayImg.src = slot.getAttribute('data-overlay-src');
+      overlayImg.alt = slot.getAttribute('data-overlay-alt') || img.getAttribute('alt') || '';
+
+      // Optional per-slot sizing overrides
+      const w = slot.getAttribute('data-ov-w');
+      const h = slot.getAttribute('data-ov-h');
+      const p = slot.getAttribute('data-ov-pad');
+      if (w) ovCard.style.setProperty('--ov-max-w', w); else ovCard.style.removeProperty('--ov-max-w');
+      if (h) ovCard.style.setProperty('--ov-max-h', h); else ovCard.style.removeProperty('--ov-max-h');
+      if (p) ovCard.style.setProperty('--ov-pad',   p); else ovCard.style.removeProperty('--ov-pad');
+
+      overlay.classList.add('is-open');
+    });
+  });
+
+  // Click backdrop (outside the card) → close
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) overlay.classList.remove('is-open');
+  });
+
+  // ESC to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') overlay.classList.remove('is-open');
+  });
 })();
 </script>
 
