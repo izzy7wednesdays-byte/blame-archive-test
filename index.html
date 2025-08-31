@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-    /* ========= V95 ========= */
+    /* ========= V96 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -215,7 +215,7 @@
     --left: -45svh;
     --scale: 1.95;
     --y: -31svh;
-    --x: 0svh;   /* compensate PNG padding if needed */
+    --x: 0svh;   
     --rot: 0deg;
     --z: 5;
   }
@@ -270,70 +270,70 @@
     --z: 1;
   }
 
-  /* 7) Spotify playlist (NEW) */
+  /* 7) Spotify playlist */
   #playlist-ex{
-    --left: 203svh;   /* move horizontally along the rail */
-    --scale: 0.90;    /* overall player height relative to band */
-    --y: 55svh;       /* up/down */
-    --x: 0svh;        /* fine left/right nudge */
-    --rot: 0deg;      /* tilt if you want */
-    --z: 2;           /* stacking order */
+    --left: 203svh;   
+    --scale: 0.90;    
+    --y: 55svh;      
+    --x: 0svh;       
+    --rot: 0deg;     
+    --z: 2;          
   }
     
   /* 8) YouTube: Light Sleeper Visualizer */
   #light-sleeper-visualizer{
-    --left: 167svh;  /* move along the rail (tweak as you like) */
-    --scale: 0.50;   /* overall size (height driver) */
-    --y: -12svh;      /* up/down */
-    --x: 10svh;       /* fine left/right */
-    --rot: 0deg;     /* tilt if desired */
-    --z: 3;          /* stacking order */
+    --left: 167svh;  
+    --scale: 0.50;   
+    --y: -12svh;      
+    --x: 10svh;      
+    --rot: 0deg;   
+    --z: 3;          
   }   
     
     /* 9) Lottie: Light Sleeper Title */
   #light-sleeper-title{
-    --left: 205svh;  /* move along the rail */
-    --scale: 0.3;   /* overall size (height driver) */
-    --y: 25svh;      /* up/down */
-    --x: -4svh;      /* fine left/right */
-    --rot: 0deg;     /* tilt if desired */
-    --z: 4;          /* stacking order */
+    --left: 205svh; 
+    --scale: 0.3;  
+    --y: 25svh;     
+    --x: -4svh;     
+    --rot: 0deg;    
+    --z: 4;         
   }
 
     /* 10) Lottie: Pink Flashing Arrow */
   #pink-flashing-arrow{
-    --left: 155svh; /* move along the rail; tweak to place it */
-    --scale: 0.05;  /* overall size (height driver) */
-    --y: -5svh;      /* up/down (+ goes up because we transform from bottom) */
-    --x: 0svh;     /* fine left/right */
-    --rot: 0deg;    /* tilt if desired */
-    --z: 5;         /* stack order (higher = in front) */
+    --left: 155svh; 
+    --scale: 0.05;  
+    --y: -5svh;      
+    --x: 0svh;    
+    --rot: 0deg;   
+    --z: 5;       
   }
 
   /* 11) Vimeo slot tuned to 1080×1920 (portrait) */
   #light-sleeper-studio{
-    --left: 293svh;  /* horizontal anchor — change to place it */
-    --scale: 0.60;    /* overall height vs band (bigger/smaller) */
-    --ar: 9/16;      /* 1080/1920 portrait ratio = 0.5625 */
+    --left: 293svh; 
+    --scale: 0.60;    
+    --ar: 9/16;      
     --y: 30svh;      
-    --x: 0svh;       /* fine left/right nudge */
+    --x: 0svh;   
     --rot: 0deg;
     --z: 4;
   }
     
   /* 12) GIF) tv-message-1.gif */
   #tv-message-1{
-    --left: 255svh;  /* move along the rail */
-    --scale: 0.47;    /* height vs band */
-    --y: 40svh;      /* neg = up, pos = down */
-    --x: 0svh;       /* fine left/right nudge */
+    --left: 255svh;  
+    --scale: 0.47;    
+    --y: 40svh;      
+    --x: 0svh;       
     --rot: -10deg;
     --z: 4;
   }
     
   /* 13) AUTUMN TEXT */
   #autumn-text{
-    --left: 253svh;  /* move along the rail */
+    --left: 253svh; 
     --scale: 0.33;
     --y: 9svh;
     --x: 0svh;
@@ -394,7 +394,7 @@
   /* 19) Press Play Instructions */
   #press-play-dj{
     --left: 411svh;
-    --scale: 0.3;
+    --scale: 0.15;
     --y: 40svh;
     --x: 0svh;
     --rot: -11deg;
@@ -403,20 +403,20 @@
     
   /* 20) Exit Wounds → Substack */
   #link-exit-wounds-substack{
-    --left: 470svh;  /* move along the rail */
-    --scale: 0.75;   /* size vs band */
-    --y: 15svh;       /* POSITIVE = up (your setup uses calc(-1 * var(--y))) */
-    --x: 0svh;       /* fine left/right */
+    --left: 490svh; 
+    --scale: 0.75;  
+    --y: 15svh;       
+    --x: 0svh;      
     --rot: 17deg;
     --z: 4;
   }
   /* 21) Substack Exit Wounds →  */
   #substack-point-arrow{
-    --left: 470svh;  /* move along the rail */
-    --scale: 0.75;   /* size vs band */
-    --y: 15svh;       /* POSITIVE = up (your setup uses calc(-1 * var(--y))) */
-    --x: 0svh;       /* fine left/right */
-    --rot: 17deg;
+    --left: 48-svh; 
+    --scale: 0.55;  
+    --y: 15svh;     
+    --x: 0svh;       
+    --rot: 15deg;
     --z: 4;
   }
     
