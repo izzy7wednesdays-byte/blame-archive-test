@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-    /* ========= V93 ========= */
+    /* ========= V94 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -351,7 +351,7 @@
     --z: 4;
   }
 
-/* 15) Broken Breathing (placeholder) */
+  /* 15) Broken Breathing (placeholder) */
   #broken-breathing-placeholder{
     --left: 300svh;
     --scale: 0.4;
@@ -361,7 +361,7 @@
     --z: 3;
   }
 
-/* 16) LS – Behind the Song (placeholder) */
+  /* 16) LS – Behind the Song (placeholder) */
   #ls-behind-the-song-placeholder{
     --left: 340svh;
     --scale: 0.4;
@@ -383,15 +383,25 @@
     
   /* 18) Exit Wounds Boombox */
   #play-exit-wounds{
-    --left: 412svh;
+    --left: 411svh;
     --scale: 0.55;
     --y: 40svh;
     --x: 0svh;
     --rot: -12deg;
     --z: 1;
   }
-
-   /* 19) Exit Wounds → Substack */
+    
+  /* 19) Press Play Instructions */
+  #press-play-dj{
+    --left: 411svh;
+    --scale: 0.55;
+    --y: 40svh;
+    --x: 0svh;
+    --rot: -12deg;
+    --z: 1;
+  }
+    
+  /* 20) Exit Wounds → Substack */
   #link-exit-wounds-substack{
     --left: 455svh;  /* move along the rail */
     --scale: 0.75;   /* size vs band */
@@ -470,107 +480,111 @@
       </div>
     </figure>
 
-  <!-- 8: YouTube – Light Sleeper Visualizer -->
-  <figure class="slot slot--youtube" id="light-sleeper-visualizer">
-    <div class="yt-box">
-      <iframe
-        src="https://www.youtube.com/embed/Hvy3xS_jpAM?rel=0&modestbranding=1&playsinline=1"
-        title="Light Sleeper – Visualizer"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </figure>
+    <!-- 8: YouTube – Light Sleeper Visualizer -->
+    <figure class="slot slot--youtube" id="light-sleeper-visualizer">
+      <div class="yt-box">
+        <iframe
+          src="https://www.youtube.com/embed/Hvy3xS_jpAM?rel=0&modestbranding=1&playsinline=1"
+          title="Light Sleeper – Visualizer"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </figure>
       
-  <!-- 9: Lottie — Light Sleeper Title -->
-  <figure class="slot slot--lottie" id="light-sleeper-title">
-    <div class="lot-box">
-      <dotlottie-wc
-        src="Lottie/light-sleeper-title.lottie"
-        autoplay
-        loop
-        speed="2"
-        style="width:100%;height:100%">
-      </dotlottie-wc>
-    </div>
-  </figure>
+    <!-- 9: Lottie — Light Sleeper Title -->
+    <figure class="slot slot--lottie" id="light-sleeper-title">
+      <div class="lot-box">
+        <dotlottie-wc
+          src="Lottie/light-sleeper-title.lottie"
+          autoplay
+          loop
+          speed="2"
+          style="width:100%;height:100%">
+        </dotlottie-wc>
+      </div>
+    </figure>
 
-  <!-- 10: Lottie — Pink Flashing Arrow -->
-  <figure class="slot slot--lottie" id="pink-flashing-arrow">
-    <div class="lot-box">
-      <dotlottie-wc
-        src="Lottie/pink-flashing-arrow.lottie"
-        autoplay
-        loop
-        speed="1"
-        style="width:100%;height:100%">
-      </dotlottie-wc>
-    </div>
-  </figure>
+    <!-- 10: Lottie — Pink Flashing Arrow -->
+    <figure class="slot slot--lottie" id="pink-flashing-arrow">
+      <div class="lot-box">
+        <dotlottie-wc
+          src="Lottie/pink-flashing-arrow.lottie"
+          autoplay
+          loop
+          speed="1"
+          style="width:100%;height:100%">
+         </dotlottie-wc>
+      </div>
+    </figure>
 
-   <!-- 11: Vimeo (portrait 1080×1920) - Light Sleeper -->
-  <figure class="slot slot--video" id="light-sleeper-studio">
-    <div class="video-box">
-      <iframe
-        src="https://player.vimeo.com/video/1114381114?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-        loading="lazy"
-        allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-        allowfullscreen
-        title="Light Sleeper Studio">
-      </iframe>
-    </div>
-  </figure>
+     <!-- 11: Vimeo (portrait 1080×1920) - Light Sleeper -->
+    <figure class="slot slot--video" id="light-sleeper-studio">
+      <div class="video-box">
+        <iframe
+          src="https://player.vimeo.com/video/1114381114?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          loading="lazy"
+          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="Light Sleeper Studio">
+        </iframe>
+      </div>
+    </figure>
 
-  <!-- 12: GIF slot -->
-  <figure class="slot" id="tv-message-1">
-    <img src="img/tv-message-1.gif?v=1" alt="TV message" loading="lazy" decoding="async">
-  </figure>
+    <!-- 12: GIF slot -->
+    <figure class="slot" id="tv-message-1">
+      <img src="img/tv-message-1.gif?v=1" alt="TV message" loading="lazy" decoding="async">
+    </figure>
       
-  <!-- 13: AUTUMN TEXT -->
-  <figure class="slot" id="autumn-text">
-    <img src="img/autumn-text.png?v=1" alt="Autumn text" loading="lazy" decoding="async">
-  </figure>
+    <!-- 13: AUTUMN TEXT -->
+    <figure class="slot" id="autumn-text">
+      <img src="img/autumn-text.png?v=1" alt="Autumn text" loading="lazy" decoding="async">
+    </figure>
 
-  <!-- 15: BLAME IT Notes App -->
-  <figure class="slot" id="blame-it-notesapp">
-    <img src="img/blame-it-notesapp.png?v=1" alt="Blame It notes app" loading="lazy" decoding="async">
-  </figure>
+    <!-- 15: BLAME IT Notes App -->
+    <figure class="slot" id="blame-it-notesapp">
+      <img src="img/blame-it-notesapp.png?v=1" alt="Blame It notes app" loading="lazy" decoding="async">
+    </figure>
 
-  <!-- 15: Broken Breathing (placeholder) -->
+    <!-- 16: Broken Breathing (placeholder) -->
     <figure class="slot" id="broken-breathing-placeholder">
       <img src="img/broken-breathing-placeholder.png?v=1" alt="Broken Breathing placeholder" loading="lazy" decoding="async">
     </figure>
 
-  <!-- 16: LS – Behind the Song (placeholder) -->
-  <figure class="slot" id="ls-behind-the-song-placeholder">
-    <img src="img/ls-behind-the-song-placeholder.png?v=1" alt="Light Sleeper - Behind the Song placeholder" loading="lazy" decoding="async">
-  </figure>
-
-    <!-- 17: Exit Wounds Title  -->
-  <figure class="slot" id="exit-wounds-title">
-    <img src="img/exit-wounds-title.png?v=1" alt="Exit Wounds Title" loading="lazy" decoding="async">
-  </figure>
-
-  <!-- 18: SOUND (SoundCloud) — click image to play/pause -->
-  <figure class="slot slot--sc" id="play-exit-wounds"
-    <!-- Clickable artwork -->
-    <img class="sc-trigger"
-         src="img/exit-wounds-boombox.png"
-         alt="Play Exit Wounds (SoundCloud)">
-    <!-- Hidden SoundCloud player (src set by JS) -->
-    <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
-  </figure>
-
-  <!-- CLICKABLE IMAGE → opens Substack in new tab -->
-  <figure class="slot" id="link-exit-wounds-substack">
-    <a href="https://izzymacarthur.substack.com/p/with-no-exit-wounds"
-       target="_blank" rel="noopener noreferrer">
-      <img src="img/exit-wounds-substack-flier.png?v=1"
-           alt="With No Exit Wounds — read on Substack">
-      </a>
+    <!-- 17: LS – Behind the Song (placeholder) -->
+    <figure class="slot" id="ls-behind-the-song-placeholder">
+      <img src="img/ls-behind-the-song-placeholder.png?v=1" alt="Light Sleeper - Behind the Song placeholder" loading="lazy" decoding="async">
     </figure>
 
+      <!-- 18: Exit Wounds Title  -->
+    <figure class="slot" id="exit-wounds-title">
+      <img src="img/exit-wounds-title.png?v=1" alt="Exit Wounds Title" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 18: SOUND (SoundCloud) — click image to play/pause -->
+    <figure class="slot slot--sc" id="play-exit-wounds"
+      <!-- Clickable artwork -->
+      <img class="sc-trigger"
+           src="img/exit-wounds-boombox.png"
+           alt="Play Exit Wounds (SoundCloud)">
+      <!-- Hidden SoundCloud player (src set by JS) -->
+      <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
+    </figure>
+
+  <!-- 19: CLICKABLE IMAGE → opens Substack in new tab -->
+    <figure class="slot" id="link-exit-wounds-substack">
+      <a href="https://izzymacarthur.substack.com/p/with-no-exit-wounds"
+         target="_blank" rel="noopener noreferrer">
+        <img src="img/exit-wounds-substack-flier.png?v=1"
+             alt="With No Exit Wounds — read on Substack">
+        </a>
+      </figure>
+      
+    <!-- 20: Press Play -->
+    <figure class="slot" id="press-play-dj">
+      <img src="img/press-play-dj.png?v=1" alt="press play dj" loading="lazy" decoding="async">
+    </figure>
       
           <!-- Add more slots here… (give each a unique id and set --left) -->
   </div>
