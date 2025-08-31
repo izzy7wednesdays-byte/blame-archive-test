@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-  /* ========= V114 ========= */
+  /* ========= V115 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -415,6 +415,15 @@
     --z: 7;
     pointer-events: none;
   }
+  #crashing-down-animation{
+    --left: 465svh;
+    --scale: 0.40;
+    --y: 8svh;
+    --x: 0svh;
+    --rot: 0deg;
+    --z: 7;
+    pointer-events: none;
+  }
 </style>
 
 <!-- Lottie web component -->
@@ -627,7 +636,20 @@
     <figure class="slot" id="glitter-truck">
       <img src="img/glitter-truck.png?v=1" alt="glitter truck" loading="lazy" decoding="async">
     </figure>
-     
+
+    <!-- 28: Lottie — Crashing Down Animation -->
+    <figure class="slot slot--lottie" id="crashing-down-animation">
+      <div class="lot-box">
+        <dotlottie-wc
+          src="Lottie/crashing-down-animation.lottie"
+          autoplay
+          loop
+          speed="1"
+          style="width:100%;height:100%">
+        </dotlottie-wc>
+      </div>
+    </figure>
+    
     <!-- Add more slots here… -->
   </div>
 </div>
