@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-    /* ========= V94 ========= */
+    /* ========= V95 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -373,7 +373,7 @@
     
   /* 17) Exit Wounds Title */
   #exit-wounds-title{
-    --left: 375svh;
+    --left: 373svh;
     --scale: 0.43;
     --y: 0svh;
     --x: 0svh;
@@ -394,16 +394,25 @@
   /* 19) Press Play Instructions */
   #press-play-dj{
     --left: 411svh;
-    --scale: 0.55;
+    --scale: 0.3;
     --y: 40svh;
     --x: 0svh;
-    --rot: -12deg;
+    --rot: -11deg;
     --z: 1;
   }
     
   /* 20) Exit Wounds → Substack */
   #link-exit-wounds-substack{
-    --left: 455svh;  /* move along the rail */
+    --left: 470svh;  /* move along the rail */
+    --scale: 0.75;   /* size vs band */
+    --y: 15svh;       /* POSITIVE = up (your setup uses calc(-1 * var(--y))) */
+    --x: 0svh;       /* fine left/right */
+    --rot: 17deg;
+    --z: 4;
+  }
+  /* 21) Substack Exit Wounds →  */
+  #substack-point-arrow{
+    --left: 470svh;  /* move along the rail */
     --scale: 0.75;   /* size vs band */
     --y: 15svh;       /* POSITIVE = up (your setup uses calc(-1 * var(--y))) */
     --x: 0svh;       /* fine left/right */
@@ -571,8 +580,13 @@
       <!-- Hidden SoundCloud player (src set by JS) -->
       <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
     </figure>
+      
+    <!-- 19: Press Play -->
+    <figure class="slot" id="press-play-dj">
+      <img src="img/press-play-dj.png?v=1" alt="press play dj" loading="lazy" decoding="async">
+    </figure>
 
-  <!-- 19: CLICKABLE IMAGE → opens Substack in new tab -->
+  <!-- 20: CLICKABLE IMAGE → opens Substack in new tab -->
     <figure class="slot" id="link-exit-wounds-substack">
       <a href="https://izzymacarthur.substack.com/p/with-no-exit-wounds"
          target="_blank" rel="noopener noreferrer">
@@ -581,9 +595,9 @@
         </a>
       </figure>
       
-    <!-- 20: Press Play -->
-    <figure class="slot" id="press-play-dj">
-      <img src="img/press-play-dj.png?v=1" alt="press play dj" loading="lazy" decoding="async">
+    <!-- 21: Arrow Pointing to Exit Wounds Flier -->
+    <figure class="slot" id="substack-point-arrow">
+      <img src="img/substack-point-arrow.png?v=1" alt="substack pont arrow" loading="lazy" decoding="async">
     </figure>
       
           <!-- Add more slots here… (give each a unique id and set --left) -->
