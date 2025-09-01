@@ -213,7 +213,7 @@
     display: flex; align-items: center; justify-content: center;
     background: rgba(15,15,18,.85);
     border-radius: 16px;
-    box-shadow: 0 1.6svh 3.2svh rgba(0,0,0,.55);
+    box-shadow: none; /*0 1.6svh 3.2svh rgba(0,0,0,.55)*/
   }
   
   #overlay img{
@@ -482,12 +482,12 @@
   #landmines-voicememo{
     --left: 630svh;  
     --scale: 0.35;       
-    --y: 20svh;      
+    --y: 0svh;      
     --x: 0svh;       
     --rot: 0deg;
-    --z: 30 !important;       
+    --z: 30 !important;
+    filter: none;
   }
-  #landmines-voicememo .video-box{ outline: 1px dashed #6cf; --z: 30 !important;}
 
 </style>
 
