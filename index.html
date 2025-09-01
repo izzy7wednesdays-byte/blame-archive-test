@@ -5,12 +5,19 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-  /* ========= V120 ========= */
+  /* ========= V121 (fill-height + vmin ruler + dvh/svh alignment) ========= */
+
   /* ========= GLOBAL CONTROLS ========= */
   :root{
-    /* Height scales with viewport height & a bit with width.
-       If you prefer fixed-by-height only, use: --band-h: 70vh; */
-    --band-h: clamp(48vmin,56vmin,84vmin);
+    /* Switch: 0 = scale by vmin (original curve), 1 = always fill viewport height */
+    --fill-height: 1;
+
+    /* Original vmin-based band size (used when --fill-height = 0) */
+    --band-base: clamp(48vmin, 56vmin, 84vmin);
+
+    /* Blend between vmin curve and exact viewport height (svh/dvh fallback) */
+    --band-h: calc( (1 - var(--fill-height)) * var(--band-base) + var(--fill-height) * 100svh );
+    --band-h: calc( (1 - var(--fill-height)) * var(--band-base) + var(--fill-height) * 100dvh );
 
     /* Total width of the horizontal canvas (increase as you add slots) */
     --rail-w: 1000vmin;
@@ -25,15 +32,24 @@
     background:var(--bg); color:var(--fg);
     overflow:hidden;
     -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    /* avoid tiny gaps from viewport rounding on some mobiles */
+    min-height: 100svh;
+    min-height: 100dvh;
   }
 
   /* ========= HORIZONTAL SCROLLER ========= */
   .hwrap{
-    height:100svh;
+    /* Make the inner page height match the iframe height exactly */
+    height: 100svh;  /* fallback */
+    height: 100dvh;  /* overrides when supported */
     overflow-x:auto; overflow-y:hidden;
     white-space:nowrap;
     scroll-behavior:smooth;
     scrollbar-width:thin;
+
+    /* optional: keeps band vertically centered if you flip fill-height off */
+    display: grid; 
+    align-items: center;
   }
   .hwrap::-webkit-scrollbar{ height:8px }
   .hwrap::-webkit-scrollbar-thumb{ background:#2c2c32; border-radius:8px }
@@ -44,15 +60,15 @@
     height: var(--band-h);
     width: max(100%, var(--rail-w));
     padding: 0;            /* let the first slot hug the left */
-    --group-left: -25vmin;  /* ← move whole collage left/right here */
+    --group-left: -25vmin; /* ← move whole collage left/right here */
   }
 
   /* ========= SLOT CONTROL PANEL ========= */
   .slot{
-    --left: 0svh;
+    --left: 0vmin;
     --scale: 1;
-    --y: 0svh;
-    --x: 0svh;
+    --y: 0vmin;
+    --x: 0vmin;
     --rot: 0deg;
     --z: 1;
 
@@ -73,7 +89,7 @@
     width: auto;
     display: block;
     object-fit: contain;
-    filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
+    /* drop-shadow removed via global override below */
   }
 
   /* Spotify slot */
@@ -88,7 +104,6 @@
     display:block;
     overflow:hidden;
     border-radius:12px;
-    filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
     background:#121212;
   }
   .slot--spotify iframe{ width:100%; height:100%; border:0; border-radius:12px; }
@@ -107,7 +122,6 @@
     display:block;
     overflow:hidden;
     border-radius:12px;
-    filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
     background:#000;
   }
   .slot--youtube iframe{ width:100%; height:100%; border:0; border-radius:12px; }
@@ -124,7 +138,6 @@
     display:block;
     overflow:hidden;
     border-radius:12px;
-    filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
     background: transparent;
   }
   .slot--lottie dotlottie-wc{
@@ -141,7 +154,6 @@
     display: block;
     overflow: hidden;
     border-radius: 12px;
-    filter: none /*drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5))*/;
     background: #000;
   }
   .slot--video iframe{ width: 100%; height: 100%; display:block; border:0; }
@@ -154,7 +166,6 @@
     display:block;
     overflow:hidden;
     border-radius:12px;
-    filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
     background:#0000;
   }
   .slot--gif img{ width:100%; height:100%; object-fit:cover; display:block; }
@@ -168,7 +179,6 @@
   .slot--sc .sc-trigger{
     height: calc(var(--band-h) * var(--scale));
     width: auto; display:block; object-fit: contain;
-    filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
     cursor: pointer;
   }
 
@@ -176,7 +186,6 @@
   .slot--audio .audio-trigger{
     height: calc(var(--band-h) * var(--scale));
     width: auto; display:block; object-fit: contain;
-    filter: drop-shadow(0 .6vh 1.2vh rgba(0,0,0,.5));
     cursor: pointer; user-select: none;
   }
   .slot--audio audio{
@@ -201,7 +210,6 @@
   }
   
   #overlay .ov-card{
-    /* smaller defaults than before */
     --ov-max-w: min(72vw, 1100px);
     --ov-max-h: 72svh;
     --ov-pad:   1svh;
@@ -213,7 +221,7 @@
     display: flex; align-items: center; justify-content: center;
     background: rgba(15,15,18,.85);
     border-radius: 16px;
-    box-shadow: none; /*0 1.6svh 3.2svh rgba(0,0,0,.55)*/
+    box-shadow: none;
   }
   
   #overlay img{
@@ -223,384 +231,64 @@
   }
   #overlay.is-open{ display: flex !important; }
 
-/* remove drop-shadows from all slot content */
-.slot img,
-.slot--spotify .sp-box,
-.slot--youtube .yt-box,
-.slot--lottie .lot-box,
-.slot--video .video-box,
-.slot--gif .gif-box {
-  filter: none !important;
-}
-  
-/* ========= PER-SLOT CUSTOMIZATION (vmin units) ========= */
-#special-message{ 
-  --left: -48vmin; 
-  --scale: 1.95; 
-  --y: -31vmin; 
-  --x: 0vmin; 
-  --rot: 0deg; 
-  --z: 1;
-}
-#scribble-izzy{ 
-  --left: 10vmin; 
-  --scale: 0.25; 
-  --y: 38vmin; 
-  --x: 8vmin; 
-  --rot: 0deg; 
-  --z: 2; 
-}
-#torn-note{ 
-  --left: 12vmin; 
-  --scale: 0.83; 
-  --y: -25vmin; 
-  --x: -2vmin; 
-  --rot: 0deg; 
-  --z: 3; 
-}
-#tracklist{ 
-  --left: 130vmin; 
-  --scale: 0.55; 
-  --y: 35vmin; 
-  --x: 15vmin; 
-  --rot: 8deg; 
-  --z: 2;
-  pointer-events: none;
-}
-#the-story-behind{ 
-  --left: 70vmin; 
-  --scale: 0.15; 
-  --y: 20vmin; 
-  --x: 0vmin; 
-  --rot: 0deg; 
-  --z: 4; 
-}
-#album-title{ 
-  --left: 78vmin; 
-  --scale: 0.33; 
-  --y: -8vmin; 
-  --x: -6vmin; 
-  --rot: 0deg; 
-  --z: 5;
-}
-#playlist-ex{ 
-  --left: 203vmin; 
-  --scale: 0.90; 
-  --y: 55vmin; 
-  --x: 0vmin; 
-  --rot: 0deg; 
-  --z: 2; 
-}
-#light-sleeper-visualizer{ 
-  --left: 167vmin; 
-  --scale: 0.50; 
-  --y: -12vmin; 
-  --x: 10vmin; 
-  --rot: 0deg; 
-  --z: 3; 
-}
-#light-sleeper-title{ 
-  --left: 205vmin; 
-  --scale: 0.36; 
-  --y: 25vmin; 
-  --x: -4vmin; 
-  --rot: 0deg; 
-  --z: 4;
-  pointer-events: none;
-}
-#pink-flashing-arrow{ 
-  --left: 148vmin; 
-  --scale: 0.09; 
-  --y: -5vmin; 
-  --x: 0vmin; 
-  --rot: 0deg; 
-  --z: 5; 
-}
-#light-sleeper-studio{ 
-  --left: 293vmin; 
-  --scale: 0.60; 
-  --ar: 9/16; 
-  --y: 30vmin; 
-  --x: 0vmin; 
-  --rot: 0deg; 
-  --z: 4; 
-}
-#tv-message-1{ 
-  --left: 255vmin; 
-  --scale: 0.47; 
-  --y: 40vmin; 
-  --x: 0vmin; 
-  --rot: -10deg; 
-  --z: 20; 
-  pointer-events: auto;
-}
-#autumn-text{ 
-  --left: 253vmin; 
-  --scale: 0.33; 
-  --y: 9vmin; 
-  --x: 0vmin; 
-  --rot: 2deg; 
-  --z: 0; 
-}
-#blame-it-notesapp{ 
-  --left: 245vmin; 
-  --scale: 0.25; 
-  --y: -14vmin; 
-  --x: 0vmin; 
-  --rot: -2deg; 
-  --z: 4; 
-}
-#broken-breathing-placeholder{ 
-  --left: 296vmin; 
-  --scale: 0.40; 
-  --y: -10vmin; 
-  --x: 1vmin; 
-  --rot: 0deg; 
-  --z: 3; 
-}
-#ls-behind-the-song-placeholder{ 
-  --left: 330vmin; 
-  --scale: 0.40; 
-  --y: 40vmin;
-  --x: 0vmin; 
-  --rot: 0deg; 
-  --z: 1; 
-}
-#exit-wounds-title{ 
-  --left: 365vmin; 
-  --scale: 0.45; 
-  --y: -10vmin; 
-  --x: 0vmin; 
-  --rot: -14deg; 
-  --z: 1;
-  pointer-events: none;
-}
-#play-exit-wounds{ 
-  --left: 399vmin; 
-  --scale: 0.55; 
-  --y: 40vmin; 
-  --x: 0vmin; 
-  --rot: -12deg; 
-  --z: 6; 
-}
-#press-play-dj{ 
-  --left: 405vmin; 
-  --scale: 0.15; 
-  --y: 39vmin; 
-  --x: 0vmin; 
-  --rot: 0deg; 
-  --z: 1;
-  pointer-events: none;
-}
-#link-exit-wounds-substack{ 
-  --left: 543vmin; 
-  --scale: 0.95; 
-  --y: 2vmin; 
-  --x: 0vmin; 
-  --rot: 15deg; 
-  --z: 4; 
-}
-#substack-point-arrow{ 
-  --left: 528vmin; 
-  --scale: 0.34; 
-  --y: 32vmin; 
-  --x: 0vmin; 
-  --rot: -7deg; 
-  --z: 4;
-  pointer-events: none;
-}
-#read-exitwounds{ 
-  --left: 516vmin; 
-  --scale: 0.25; 
-  --y: 55vmin; 
-  --x: 0vmin; 
-  --rot: 5deg; 
-  --z: 4;
-  pointer-events: none;
-}
-#play-exit-wounds-voicememo{
-  --left: 441vmin;
-  --scale: 0.28;
-  --y: -17vmin;
-  --x: 0vmin;
-  --rot: 0deg;
-  --z: 7;
-}
-#exit-wounds-clickme{
-  --left: 462vmin;
-  --scale: 0.07;
-  --y: -5vmin;
-  --x: 0vmin;
-  --rot: 0deg;
-  --z: 7;
-  pointer-events: none;
-}
-#glitter-truck{
-  --left: 575vmin;
-  --scale: 0.65;
-  --y: -38vmin;
-  --x: 0vmin;
-  --rot: 0deg;
-  --z: 7;
-  pointer-events: none;
-}
-#exitwounds-lyricvideo-placeholder{
-  --left: 450vmin;
-  --scale: 0.45;
-  --y: 43vmin;
-  --x: 0vmin;
-  --rot: 0deg;
-  --z: 7;
-  pointer-events: none;
-}
-#exitwounds-behindthesong-placeholder{
-  --left: 465vmin;
-  --scale: 0.40;
-  --y: 8vmin;
-  --x: 0vmin;
-  --rot: 0deg;
-  --z: 7;
-  pointer-events: none;
-}
-#crashing-down-animation{
-  --left: 464vmin;
-  --scale: 0.60;
-  --y: -20vmin;
-  --x: 0vmin;
-  --rot: 0deg;
-  --z: 7;
-  pointer-events: none;
-}
-#subscribe-button{
-  --left: 545vmin;
-  --scale: 0.16;
-  --y: -17vmin;
-  --x: 0vmin;
-  --rot: 2deg;
-  --z: 20;
-  filter: none;
-}
-#subscribe-arrow{
-  --left: 524vmin;
-  --scale: 0.25;
-  --y: -9vmin;
-  --x: 0vmin;
-  --rot: 2deg;
-  --z: 20;
-  pointer-events: none;
-  filter: none;
-}   
-#landmines-bts-clip{
-  --left: 629vmin;  
-  --scale: 0.35;  
-  --ar: 16/9;     
-  --y: 50vmin;      
-  --x: 0vmin;       
-  --rot: 0deg;
-  --z: 40;
-}
-#landmines-license{
-  --left: 688vmin;  
-  --scale: 0.33;     
-  --y: 49vmin;      
-  --x: 0vmin;       
-  --rot: -8deg;
-  --z: 16;
-  pointer-events: none;
-}
-#landmines-voicememo{
-  --left: 624vmin;  
-  --scale: 0.29;       
-  --y: 21vmin;      
-  --x: 0vmin;       
-  --rot: 0deg;
-  --z: 30;
-  filter: none !important;
-}
-#kat-stratford-car{
-  --left: 615vmin;  
-  --scale: 0.28;       
-  --y: -6vmin;      
-  --x: 0vmin;       
-  --rot: 0deg;
-  --z: 30 !important;
-  filter: none;
-  pointer-events: none;
-}
-#landmines-title{
-  --left: 670vmin;  
-  --scale: 0.20;       
-  --y: 26vmin;      
-  --x: 0vmin;       
-  --rot: 0deg;
-  --z: 30 !important;
-  filter: none;
-  pointer-events: none;
-}
-#landmines-lyricvideo{ 
-  --left: 655vmin; 
-  --scale: 0.48; 
-  --y: -16vmin; 
-  --x: 10vmin; 
-  --rot: 0deg; 
-  --z: 38; 
-}
-#landmines-session-voicememos{
-  --left: 719vmin; 
-  --scale: 0.33; 
-  --y: -16vmin; 
-  --x: 10vmin; 
-  --rot: 6deg; 
-  --z: 38; 
-}
-#read-about-landmines{
-  --left: 705vmin; 
-  --scale: 0.26; 
-  --y: 24vmin; 
-  --x: 10vmin; 
-  --rot: -5deg; 
-  --z: 38;
-  filter: none;
-}
-#landmines-visualizer{
-  --left: 743vmin; 
-  --scale: 0.48; 
-  --y: 8vmin; 
-  --x: 10vmin; 
-  --rot: 0deg; 
-  --z: 38; 
-}
-#landmines-behindthesong{
-  --left: 723vmin; 
-  --scale: 0.48; 
-  --y: 44vmin; 
-  --x: 10vmin; 
-  --rot: 0deg; 
-  --z: 38;
-}
-#misery-title{
-  --left: 805vmin; 
-  --scale: 1; 
-  --y: 15vmin; 
-  --x: 10vmin; 
-  --rot: 0deg; 
-  --z: 38;
-  filter: none !important;
-}
-#misery-bts{
-  --left: 805vmin; 
-  --scale: 0.50; 
-  --y: -15vmin; 
-  --x: 10vmin; 
-  --rot: 0deg; 
-  --z: 39;
-  filter: none;
-}
+  /* ===== Remove drop-shadows from all slot content (global override) ===== */
+  .slot img,
+  .slot--spotify .sp-box,
+  .slot--youtube .yt-box,
+  .slot--lottie .lot-box,
+  .slot--video .video-box,
+  .slot--gif .gif-box {
+    filter: none !important;
+  }
+
+  /* ========= PER-SLOT CUSTOMIZATION (vmin units) ========= */
+  #special-message{ --left:-48vmin; --scale:1.95; --y:-31vmin; --x:0vmin; --rot:0deg; --z:1; }
+  #scribble-izzy{ --left:10vmin; --scale:.25; --y:38vmin; --x:8vmin; --rot:0deg; --z:2; }
+  #torn-note{ --left:12vmin; --scale:.83; --y:-25vmin; --x:-2vmin; --rot:0deg; --z:3; }
+  #tracklist{ --left:130vmin; --scale:.55; --y:35vmin; --x:15vmin; --rot:8deg; --z:2; pointer-events:none; }
+  #the-story-behind{ --left:70vmin; --scale:.15; --y:20vmin; --x:0vmin; --rot:0deg; --z:4; }
+  #album-title{ --left:78vmin; --scale:.33; --y:-8vmin; --x:-6vmin; --rot:0deg; --z:5; }
+  #playlist-ex{ --left:203vmin; --scale:.90; --y:55vmin; --x:0vmin; --rot:0deg; --z:2; }
+  #light-sleeper-visualizer{ --left:167vmin; --scale:.50; --y:-12vmin; --x:10vmin; --rot:0deg; --z:3; }
+  #light-sleeper-title{ --left:205vmin; --scale:.36; --y:25vmin; --x:-4vmin; --rot:0deg; --z:4; pointer-events:none; }
+  #pink-flashing-arrow{ --left:148vmin; --scale:.09; --y:-5vmin; --x:0vmin; --rot:0deg; --z:5; }
+  #light-sleeper-studio{ --left:293vmin; --scale:.60; --ar:9/16; --y:30vmin; --x:0vmin; --rot:0deg; --z:4; }
+  #tv-message-1{ --left:255vmin; --scale:.47; --y:40vmin; --x:0vmin; --rot:-10deg; --z:20; pointer-events:auto; }
+  #autumn-text{ --left:253vmin; --scale:.33; --y:9vmin; --x:0vmin; --rot:2deg; --z:0; }
+  #blame-it-notesapp{ --left:245vmin; --scale:.25; --y:-14vmin; --x:0vmin; --rot:-2deg; --z:4; }
+  #broken-breathing-placeholder{ --left:296vmin; --scale:.40; --y:-10vmin; --x:1vmin; --rot:0deg; --z:3; }
+  #ls-behind-the-song-placeholder{ --left:330vmin; --scale:.40; --y:40vmin; --x:0vmin; --rot:0deg; --z:1; }
+  #exit-wounds-title{ --left:365vmin; --scale:.45; --y:-10vmin; --x:0vmin; --rot:-14deg; --z:1; pointer-events:none; }
+  #play-exit-wounds{ --left:399vmin; --scale:.55; --y:40vmin; --x:0vmin; --rot:-12deg; --z:6; }
+  #press-play-dj{ --left:405vmin; --scale:.15; --y:39vmin; --x:0vmin; --rot:0deg; --z:1; pointer-events:none; }
+  #link-exit-wounds-substack{ --left:543vmin; --scale:.95; --y:2vmin; --x:0vmin; --rot:15deg; --z:4; }
+  #substack-point-arrow{ --left:528vmin; --scale:.34; --y:32vmin; --x:0vmin; --rot:-7deg; --z:4; pointer-events:none; }
+  #read-exitwounds{ --left:516vmin; --scale:.25; --y:55vmin; --x:0vmin; --rot:5deg; --z:4; pointer-events:none; }
+  #play-exit-wounds-voicememo{ --left:441vmin; --scale:.28; --y:-17vmin; --x:0vmin; --rot:0deg; --z:7; }
+  #exit-wounds-clickme{ --left:462vmin; --scale:.07; --y:-5vmin; --x:0vmin; --rot:0deg; --z:7; pointer-events:none; }
+  #glitter-truck{ --left:575vmin; --scale:.65; --y:-38vmin; --x:0vmin; --rot:0deg; --z:7; pointer-events:none; }
+  #exitwounds-lyricvideo-placeholder{ --left:450vmin; --scale:.45; --y:43vmin; --x:0vmin; --rot:0deg; --z:7; pointer-events:none; }
+  #exitwounds-behindthesong-placeholder{ --left:465vmin; --scale:.40; --y:8vmin; --x:0vmin; --rot:0deg; --z:7; pointer-events:none; }
+  #crashing-down-animation{ --left:464vmin; --scale:.60; --y:-20vmin; --x:0vmin; --rot:0deg; --z:7; pointer-events:none; }
+  #subscribe-button{ --left:545vmin; --scale:.16; --y:-17vmin; --x:0vmin; --rot:2deg; --z:20; filter:none; }
+  #subscribe-arrow{ --left:524vmin; --scale:.25; --y:-9vmin; --x:0vmin; --rot:2deg; --z:20; pointer-events:none; filter:none; }
+  #landmines-bts-clip{ --left:629vmin; --scale:.35; --ar:16/9; --y:50vmin; --x:0vmin; --rot:0deg; --z:40; }
+  #landmines-license{ --left:688vmin; --scale:.33; --y:49vmin; --x:0vmin; --rot:-8deg; --z:16; pointer-events:none; }
+  #landmines-voicememo{ --left:624vmin; --scale:.29; --y:21vmin; --x:0vmin; --rot:0deg; --z:30; filter:none !important; }
+  #kat-stratford-car{ --left:615vmin; --scale:.28; --y:-6vmin; --x:0vmin; --rot:0deg; --z:30 !important; filter:none; pointer-events:none; }
+  #landmines-title{ --left:670vmin; --scale:.20; --y:26vmin; --x:0vmin; --rot:0deg; --z:30 !important; filter:none; pointer-events:none; }
+  #landmines-lyricvideo{ --left:655vmin; --scale:.48; --y:-16vmin; --x:10vmin; --rot:0deg; --z:38; }
+  #landmines-session-voicememos{ --left:719vmin; --scale:.33; --y:-16vmin; --x:10vmin; --rot:6deg; --z:38; }
+  #read-about-landmines{ --left:705vmin; --scale:.26; --y:24vmin; --x:10vmin; --rot:-5deg; --z:38; filter:none; }
+  #landmines-visualizer{ --left:743vmin; --scale:.48; --y:8vmin; --x:10vmin; --rot:0deg; --z:38; }
+  #landmines-behindthesong{ --left:723vmin; --scale:.48; --y:44vmin; --x:10vmin; --rot:0deg; --z:38; }
+  #misery-title{ --left:805vmin; --scale:1; --y:15vmin; --x:10vmin; --rot:0deg; --z:38; filter:none !important; }
+  #misery-bts{ --left:805vmin; --scale:.50; --y:-15vmin; --x:10vmin; --rot:0deg; --z:39; filter:none; }
 </style>
 
-  <!-- Lottie web component -->
-    <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"></script>
-  </head>
+<!-- Lottie web component -->
+<script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"></script>
+</head>
   
 <body>
 <div class="hwrap" id="hwrap">
@@ -759,15 +447,12 @@
     </figure>
     
     <!-- 20: Exit Wounds Voicememo -->
-      <figure class="slot slot--audio" id="play-exit-wounds-voicememo"
-          data-audio-src="audio/exit-wounds-voicememo.m4a" data-loop="false">
-        <img class="audio-trigger"
+    <figure class="slot slot--audio" id="play-exit-wounds-voicememo"
+        data-audio-src="audio/exit-wounds-voicememo.m4a" data-loop="false">
+      <img class="audio-trigger"
            src="img/exit-wounds-voicememo.png"
            alt="Play Exit Wounds Voice Memo">
       <audio preload="auto" playsinline>
-        <!-- Prefer an mp3/m4a if you have one; otherwise leave just the mp4 -->
-        <!-- <source src="audio/exit-wounds-voicememo.mp3" type="audio/mpeg"> -->
-        <!-- <source src="audio/exit-wounds-voicememo.m4a" type="audio/mp4"> -->
         <source src="audio/exit-wounds-voicememo.m4a" type="audio/mp4">
       </audio>
     </figure>
@@ -783,27 +468,27 @@
 
     <!-- 22: Arrow Pointing to Exit Wounds Flier -->
     <figure class="slot" id="substack-point-arrow">
-        <img src="img/substack-point-arrow.png?v=1" alt="substack point arrow" loading="lazy" decoding="async">
+      <img src="img/substack-point-arrow.png?v=1" alt="substack point arrow" loading="lazy" decoding="async">
     </figure>
     
     <!-- 23: Arrow Pointing to Exit Wounds Flier -->
     <figure class="slot" id="read-exitwounds">
-        <img src="img/read-exitwounds.png?v=1" alt="read exit wounds" loading="lazy" decoding="async">
+      <img src="img/read-exitwounds.png?v=1" alt="read exit wounds" loading="lazy" decoding="async">
     </figure>
 
     <!-- 24: Exit Wounds Click Me -->
     <figure class="slot" id="exit-wounds-clickme">
-        <img src="img/exit-wounds-clickme.png?v=1" alt="exit wounds click me" loading="lazy" decoding="async">
+      <img src="img/exit-wounds-clickme.png?v=1" alt="exit wounds click me" loading="lazy" decoding="async">
     </figure>
 
     <!-- 25: Exit Wounds: Behind the Song Placeholder -->
     <figure class="slot" id="exitwounds-behindthesong-placeholder">
-        <img src="img/exitwounds-behindthesong-placeholder.png?v=1" alt="exit wounds behind the song placeholder" loading="lazy" decoding="async">
+      <img src="img/exitwounds-behindthesong-placeholder.png?v=1" alt="exit wounds behind the song placeholder" loading="lazy" decoding="async">
     </figure>
 
     <!-- 26: Exit Wounds: Lyric Video Placeholder -->
     <figure class="slot" id="exitwounds-lyricvideo-placeholder">
-        <img src="img/exitwounds-lyricvideo-placeholder.png?v=1" alt="exit wounds lyric video placeholder" loading="lazy" decoding="async">
+      <img src="img/exitwounds-lyricvideo-placeholder.png?v=1" alt="exit wounds lyric video placeholder" loading="lazy" decoding="async">
     </figure>
 
     <!-- 28: Lottie — Glitter Truck -->
@@ -846,7 +531,7 @@
       <img src="img/subscribe-arrow.png?v=1" alt="subscribe arrow" loading="lazy" decoding="async">
     </figure>
 
-        <!-- 32: Exit Wounds Substack Flier -->
+    <!-- 32: Exit Wounds Substack Flier (duplicate anchor) -->
     <figure class="slot" id="link-exit-wounds-substack">
       <a href="https://izzymacarthur.substack.com/p/with-no-exit-wounds"
          target="_blank" rel="noopener noreferrer">
@@ -859,335 +544,4 @@
     <figure class="slot slot--video" id="landmines-bts-clip">
       <div class="video-box">
         <iframe
-          src="https://player.vimeo.com/video/1114719211?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          allowfullscreen
-          title="landmines-bts-clip">
-        </iframe>
-      </div>
-    </figure>
-    
-    <!-- 34: Landmines License  -->
-    <figure class="slot" id="landmines-license">
-      <img src="img/landmines-license.png?v=1" alt="Landmines License" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 35: Vimeo – Landmines Voicememo -->
-    <figure class="slot slot--video" id="landmines-voicememo">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1114741947?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          allowfullscreen
-          title="landmines-voicememo">
-        </iframe>
-      </div>
-    </figure>
-    
-    <!-- 36: Kat Stratford Driver Gif -->
-    <figure class="slot" id="kat-stratford-car">
-      <img src="img/kat-stratford-car.gif?v=1" alt="kat stratford car" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 37: Landmines Title  -->
-    <figure class="slot" id="landmines-title">
-      <img src="img/landmines-title.png?v=1" alt="landmines title" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 38: YouTube – Landmines Lyric Video -->
-    <figure class="slot slot--youtube" id="landmines-lyricvideo">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/1ZjReUQ6WTU?si=6G7zcN05vVEXl2in"
-          title="Landmines – lyric video"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-      
-    <!-- 39: Landmines Session Voicememo -->
-    <figure class="slot slot--audio" id="landmines-session-voicememos"
-        data-audio-src="audio/exit-wounds-voicememo.m4a" data-loop="false">
-        <img class="audio-trigger"
-           src="img/landmines-session-voicememos.png?v=2"
-           alt="Play Landmines Voice Memo">
-      <audio preload="auto" playsinline>
-        <!-- Prefer an mp3/m4a if you have one; otherwise leave just the mp4 -->
-        <!-- <source src="audio/exit-wounds-voicememo.mp3" type="audio/mpeg"> -->
-        <!-- <source src="audio/exit-wounds-voicememo.m4a" type="audio/mp4"> -->
-        <source src="audio/exit-wounds-voicememo.m4a" type="audio/mp4">
-      </audio>
-    </figure>
-
-    <!-- 40: Landmines (opens overlay to show landmines-about.png) -->
-    <figure class="slot" id="read-about-landmines"
-      data-overlay-src="img/about-landmines.png?v=1"
-      data-overlay-alt="About Landmines">
-      <img src="img/read-about-landmines.png?v=1" alt="Landmines Letter" loading="lazy" decoding="async" style="cursor:zoom-in;">
-    </figure>
-
-    <!--41: YouTube – Landmines Lyric Video -->
-    <figure class="slot slot--youtube" id="landmines-visualizer">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/a6PH2dehR9U?si=zSV6GM_KZZdUjr76"
-          title="Landmines – Visualizer"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 42: YouTube – Landmines Behind The Song -->
-    <figure class="slot slot--youtube" id="landmines-behindthesong">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/QaUcTqDd5kM?si=xPmwA4LV9PuGcTeT"
-          title="Landmines – Behind the Song"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 43: YouTube – Misery Missing Company Behind the Scenes -->
-    <figure class="slot slot--youtube" id="misery-bts">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/xTEO4nrPAxg?si=AETAqKiEoCS8J_hK"
-          title="Misery Missing Company Behind the Scenes"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 44: Subscribe Arrow  -->
-    <figure class="slot" id="misery-title">
-      <img src="img/misery-title.png?v=1" alt="subscribe arrow" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- Add more slots here… -->
-  </div>
-</div>
-  
-  <!-- Reusable overlay (must NOT be inside .hwrap/.rail) -->
-  <div id="overlay" aria-hidden="true" style="display:none">
-    <div class="ov-card"><img alt=""></div>
-  </div>
-
-<script>
-  /* Mouse wheel → horizontal scroll (desktop mice) */
-  const wrap = document.getElementById('hwrap');
-  wrap.addEventListener('wheel', (e) => {
-    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-      wrap.scrollLeft += e.deltaY;
-      e.preventDefault();
-    }
-  }, { passive: false });
-</script>
-
-<!-- SoundCloud API -->
-<script src="https://w.soundcloud.com/player/api.js"></script>
-
-<!-- SoundCloud initializer (READY-safe + pointer events + cross-pause) -->
-<script>
-(() => {
-  function initSoundCloud() {
-    window.__scWidgets = [];
-
-    document.querySelectorAll('.slot--sc').forEach((slot) => {
-      const scUrl   = (slot.dataset.scUrl || '').trim();
-      const iframe  = slot.querySelector('.sc-iframe');
-      const trigger = slot.querySelector('.sc-trigger');
-      if (!scUrl || !iframe || !trigger) return;
-
-      const embed = 'https://w.soundcloud.com/player/?url=' +
-        encodeURIComponent(scUrl) +
-        '&auto_play=false&hide_related=true&show_comments=false&show_user=false' +
-        '&show_reposts=false&visual=false';
-      iframe.src = embed;
-
-      const widget = SC.Widget(iframe);
-      window.__scWidgets.push(widget);
-
-      let ready = false;
-      widget.bind(SC.Widget.Events.READY, () => { ready = true; });
-
-      const setPlaying = (on) => slot.classList.toggle('is-playing', !!on);
-      widget.bind(SC.Widget.Events.PLAY, () => {
-        setPlaying(true);
-        // Pause any HTML <audio> voice-memos
-        document.querySelectorAll('.slot--audio audio').forEach(a => a.pause());
-      });
-      const notPlaying = () => setPlaying(false);
-      widget.bind(SC.Widget.Events.PAUSE,  notPlaying);
-      widget.bind(SC.Widget.Events.FINISH, notPlaying);
-
-      const toggle = () => {
-        if (!ready) {
-          widget.bind(SC.Widget.Events.READY, () => widget.isPaused(p => p ? widget.play() : widget.pause()));
-          return;
-        }
-        widget.isPaused(p => p ? widget.play() : widget.pause());
-      };
-
-      if (window.PointerEvent) {
-        trigger.addEventListener('pointerup', (e) => {
-          e.preventDefault(); e.stopPropagation();
-          toggle();
-        }, { passive: false });
-      } else {
-        let ignoreNextClick = false;
-        trigger.addEventListener('touchend', (e) => {
-          e.preventDefault(); e.stopPropagation();
-          ignoreNextClick = true; setTimeout(() => ignoreNextClick = false, 400);
-          toggle();
-        }, { passive: false });
-        trigger.addEventListener('click', (e) => {
-          if (ignoreNextClick) { e.preventDefault(); return; }
-          e.preventDefault(); e.stopPropagation();
-          toggle();
-        }, { passive: false });
-      }
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initSoundCloud);
-  } else {
-    initSoundCloud();
-  }
-})();
-</script>
-
-  <!-- Audio-Image initializer  -->
-<script>
-(() => {
-  function initImageAudio(){
-    document.querySelectorAll('.slot--audio').forEach((slot) => {
-      const audio   = slot.querySelector('audio');
-      const trigger = slot.querySelector('.audio-trigger');
-      if (!audio || !trigger) return;
-
-      // If a data-audio-src is given, prefer it (works even without <source>)
-      const srcAttr = (slot.dataset.audioSrc || '').trim();
-      if (srcAttr) audio.src = srcAttr;
-
-      // Ensure <source> tags (if any) are registered before first play
-      audio.load();
-
-      audio.loop = (slot.dataset.loop === 'true');
-      audio.preload = 'auto';
-      audio.setAttribute('playsinline', '');
-
-      const updateUI = () => {
-        const playing = !audio.paused && !audio.ended;
-        slot.classList.toggle('is-playing', playing);
-        trigger.setAttribute('aria-pressed', playing ? 'true' : 'false');
-      };
-
-      audio.addEventListener('play', () => {
-        // Pause other HTML <audio> players
-        document.querySelectorAll('.slot--audio audio').forEach((a) => { if (a !== audio) a.pause(); });
-        // Pause SoundCloud if it’s playing
-        if (window.__scWidgets && Array.isArray(window.__scWidgets)) {
-          window.__scWidgets.forEach(w => { try { w.pause(); } catch(e){} });
-        }
-        updateUI();
-      });
-      audio.addEventListener('pause', updateUI);
-      audio.addEventListener('ended', updateUI);
-
-      const toggle = () => {
-        if (audio.paused || audio.ended) {
-          const p = audio.play();
-          if (p && typeof p.catch === 'function') {
-            p.catch((e) => {
-              console.warn('[VoiceMemo] play() failed. src:', audio.currentSrc || srcAttr, e);
-            });
-          }
-        } else {
-          audio.pause();
-        }
-      };
-
-      // Use pointer events to avoid touch+click double-fire
-      if (window.PointerEvent) {
-        trigger.addEventListener('pointerup', (e) => { e.preventDefault(); e.stopPropagation(); toggle(); }, { passive: false });
-      } else {
-        trigger.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); toggle(); }, { passive: false });
-        trigger.addEventListener('touchend', () => toggle(), { passive: true });
-      }
-
-      audio.addEventListener('error', () => {
-        const err = audio.error;
-        console.warn('[VoiceMemo] <audio> error', {
-          code: err && err.code, // 1 aborted, 2 network, 3 decode, 4 src unsupported
-          currentSrc: audio.currentSrc || srcAttr
-        });
-      });
-
-      updateUI();
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initImageAudio);
-  } else {
-    initImageAudio();
-  }
-})();
-</script>
-
-  <!-- Open//Close Behavior -->
-  <script>
-(() => {
-  const overlay    = document.getElementById('overlay');
-  const ovCard     = overlay.querySelector('.ov-card');
-  const overlayImg = overlay.querySelector('img');
-
-  // Any slot with data-overlay-src opens the overlay when its <img> is clicked
-  document.querySelectorAll('.rail .slot[data-overlay-src]').forEach(slot => {
-    const img = slot.querySelector('img');
-    if (!img) return;
-
-    img.addEventListener('click', (e) => {
-      e.stopPropagation();
-
-      overlayImg.src = slot.getAttribute('data-overlay-src');
-      overlayImg.alt = slot.getAttribute('data-overlay-alt') || img.getAttribute('alt') || '';
-
-      // Optional per-slot sizing overrides
-      const w = slot.getAttribute('data-ov-w');
-      const h = slot.getAttribute('data-ov-h');
-      const p = slot.getAttribute('data-ov-pad');
-      if (w) ovCard.style.setProperty('--ov-max-w', w); else ovCard.style.removeProperty('--ov-max-w');
-      if (h) ovCard.style.setProperty('--ov-max-h', h); else ovCard.style.removeProperty('--ov-max-h');
-      if (p) ovCard.style.setProperty('--ov-pad',   p); else ovCard.style.removeProperty('--ov-pad');
-
-      overlay.classList.add('is-open');
-    });
-  });
-
-  // Click backdrop (outside the card) → close
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) overlay.classList.remove('is-open');
-  });
-
-  // ESC to close
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') overlay.classList.remove('is-open');
-  });
-})();
-</script>
-
-</body>
-</html>
+          src="https://player.vimeo.com/video/111471
