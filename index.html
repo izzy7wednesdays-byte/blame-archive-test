@@ -493,7 +493,7 @@
   #landmines-license{
     --left: 683svh;  
     --scale: 0.35;     
-    --y: 45svh;      
+    --y: 48svh;      
     --x: 0svh;       
     --rot: 8deg;
     --z: 20;
@@ -519,14 +519,22 @@
     pointer-events: none;
   }
   #landmines-title{
-    --left: 670svh;  
+    --left: 672svh;  
     --scale: 0.2;       
-    --y: 18svh;      
+    --y: 24svh;      
     --x: 0svh;       
     --rot: 0deg;
     --z: 30 !important;
     filter: none;
     pointer-events: none;
+  }
+  #landmines-lyricvideo{ 
+      --left: 630svh; 
+      --scale: 0.50; 
+      --y: -12svh; 
+      --x: 10svh; 
+      --rot: 0deg; 
+      --z: 38; 
   }
 </style>
 
@@ -826,6 +834,19 @@
     <!-- 37: Landmines Title  -->
     <figure class="slot" id="landmines-title">
       <img src="img/landmines-title.png?v=1" alt="landmines title" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 38: YouTube – Landmines Lyric Video -->
+    <figure class="slot slot--youtube" id="landmines-lyricvideo">
+      <div class="yt-box">
+        <iframe
+          src="https://www.youtube.com/embed/1ZjReUQ6WTU?si=6G7zcN05vVEXl2in"
+          title="Landmines – lyric video"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
     </figure>
  
     <!-- Add more slots here… -->
