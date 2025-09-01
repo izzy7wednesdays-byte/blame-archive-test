@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-  /* ========= V124 (fill-height + vmin ruler + dvh/svh alignment) ========= */
+  /* ========= V125 (fill-height + svh) ========= */
 
   /* ========= GLOBAL CONTROLS ========= */
 :root{
@@ -16,7 +16,7 @@
   --band-h: calc( (1 - var(--fill-height)) * var(--band-base)
                  + var(--fill-height) * calc(var(--vh, 1vh) * 100) );
 
-  --rail-w: 1000vmin;
+  --rail-w: 1000svh;
   --bg: #0d161d;
   --fg: #e7f1ff;
 }
@@ -49,7 +49,7 @@
     height: var(--band-h);
     width: max(100%, var(--rail-w));
     padding: 0;            /* let the first slot hug the left */
-    --group-left: -25vmin; /* ← move whole collage left/right here */
+    --group-left: -25svh; /* ← move whole collage left/right here */
   }
 
   /* ========= SLOT CONTROL PANEL ========= */
@@ -230,48 +230,49 @@
   }
 
   /* ========= PER-SLOT CUSTOMIZATION (vmin units) ========= */
-  #special-message{ --left:-48vmin; --scale:1.95; --y:-31vmin; --x:0vmin; --rot:0deg; --z:1; }
-  #scribble-izzy{ --left:10vmin; --scale:.25; --y:38vmin; --x:8vmin; --rot:0deg; --z:2; }
-  #torn-note{ --left:12vmin; --scale:.83; --y:-25vmin; --x:-2vmin; --rot:0deg; --z:3; }
-  #tracklist{ --left:130vmin; --scale:.55; --y:35vmin; --x:15vmin; --rot:8deg; --z:2; pointer-events:none; }
-  #the-story-behind{ --left:70vmin; --scale:.15; --y:20vmin; --x:0vmin; --rot:0deg; --z:4; }
-  #album-title{ --left:78vmin; --scale:.33; --y:-8vmin; --x:-6vmin; --rot:0deg; --z:5; }
-  #playlist-ex{ --left:203vmin; --scale:.90; --y:55vmin; --x:0vmin; --rot:0deg; --z:2; }
-  #light-sleeper-visualizer{ --left:167vmin; --scale:.50; --y:-12vmin; --x:10vmin; --rot:0deg; --z:3; }
-  #light-sleeper-title{ --left:205vmin; --scale:.36; --y:25vmin; --x:-4vmin; --rot:0deg; --z:4; pointer-events:none; }
-  #pink-flashing-arrow{ --left:148vmin; --scale:.09; --y:-5vmin; --x:0vmin; --rot:0deg; --z:5; }
-  #light-sleeper-studio{ --left:293vmin; --scale:.60; --ar:9/16; --y:30vmin; --x:0vmin; --rot:0deg; --z:4; }
-  #tv-message-1{ --left:255vmin; --scale:.47; --y:40vmin; --x:0vmin; --rot:-10deg; --z:20; pointer-events:auto; }
-  #autumn-text{ --left:253vmin; --scale:.33; --y:9vmin; --x:0vmin; --rot:2deg; --z:0; }
-  #blame-it-notesapp{ --left:245vmin; --scale:.25; --y:-14vmin; --x:0vmin; --rot:-2deg; --z:4; }
-  #broken-breathing-placeholder{ --left:296vmin; --scale:.40; --y:-10vmin; --x:1vmin; --rot:0deg; --z:3; }
-  #ls-behind-the-song-placeholder{ --left:330vmin; --scale:.40; --y:40vmin; --x:0vmin; --rot:0deg; --z:1; }
-  #exit-wounds-title{ --left:365vmin; --scale:.45; --y:-10vmin; --x:0vmin; --rot:-14deg; --z:1; pointer-events:none; }
-  #play-exit-wounds{ --left:399vmin; --scale:.55; --y:40vmin; --x:0vmin; --rot:-12deg; --z:6; }
-  #press-play-dj{ --left:405vmin; --scale:.15; --y:39vmin; --x:0vmin; --rot:0deg; --z:1; pointer-events:none; }
-  #link-exit-wounds-substack{ --left:543vmin; --scale:.95; --y:2vmin; --x:0vmin; --rot:15deg; --z:4; }
-  #substack-point-arrow{ --left:528vmin; --scale:.34; --y:32vmin; --x:0vmin; --rot:-7deg; --z:4; pointer-events:none; }
-  #read-exitwounds{ --left:516vmin; --scale:.25; --y:55vmin; --x:0vmin; --rot:5deg; --z:4; pointer-events:none; }
-  #play-exit-wounds-voicememo{ --left:441vmin; --scale:.28; --y:-17vmin; --x:0vmin; --rot:0deg; --z:7; }
-  #exit-wounds-clickme{ --left:462vmin; --scale:.07; --y:-5vmin; --x:0vmin; --rot:0deg; --z:7; pointer-events:none; }
-  #glitter-truck{ --left:575vmin; --scale:.65; --y:-38vmin; --x:0vmin; --rot:0deg; --z:7; pointer-events:none; }
-  #exitwounds-lyricvideo-placeholder{ --left:450vmin; --scale:.45; --y:43vmin; --x:0vmin; --rot:0deg; --z:7; pointer-events:none; }
-  #exitwounds-behindthesong-placeholder{ --left:465vmin; --scale:.40; --y:8vmin; --x:0vmin; --rot:0deg; --z:7; pointer-events:none; }
-  #crashing-down-animation{ --left:464vmin; --scale:.60; --y:-20vmin; --x:0vmin; --rot:0deg; --z:7; pointer-events:none; }
-  #subscribe-button{ --left:545vmin; --scale:.16; --y:-17vmin; --x:0vmin; --rot:2deg; --z:20; filter:none; }
-  #subscribe-arrow{ --left:524vmin; --scale:.25; --y:-9vmin; --x:0vmin; --rot:2deg; --z:20; pointer-events:none; filter:none; }
-  #landmines-bts-clip{ --left:629vmin; --scale:.35; --ar:16/9; --y:50vmin; --x:0vmin; --rot:0deg; --z:40; }
-  #landmines-license{ --left:688vmin; --scale:.33; --y:49vmin; --x:0vmin; --rot:-8deg; --z:16; pointer-events:none; }
-  #landmines-voicememo{ --left:624vmin; --scale:.29; --y:21vmin; --x:0vmin; --rot:0deg; --z:30; filter:none !important; }
-  #kat-stratford-car{ --left:615vmin; --scale:.28; --y:-6vmin; --x:0vmin; --rot:0deg; --z:30 !important; filter:none; pointer-events:none; }
-  #landmines-title{ --left:670vmin; --scale:.20; --y:26vmin; --x:0vmin; --rot:0deg; --z:30 !important; filter:none; pointer-events:none; }
-  #landmines-lyricvideo{ --left:655vmin; --scale:.48; --y:-16vmin; --x:10vmin; --rot:0deg; --z:38; }
-  #landmines-session-voicememos{ --left:719vmin; --scale:.33; --y:-16vmin; --x:10vmin; --rot:6deg; --z:38; }
-  #read-about-landmines{ --left:705vmin; --scale:.26; --y:24vmin; --x:10vmin; --rot:-5deg; --z:38; filter:none; }
-  #landmines-visualizer{ --left:743vmin; --scale:.48; --y:8vmin; --x:10vmin; --rot:0deg; --z:38; }
-  #landmines-behindthesong{ --left:723vmin; --scale:.48; --y:44vmin; --x:10vmin; --rot:0deg; --z:38; }
-  #misery-title{ --left:805vmin; --scale:1; --y:15vmin; --x:10vmin; --rot:0deg; --z:38; filter:none !important; }
-  #misery-bts{ --left:805vmin; --scale:.50; --y:-15vmin; --x:10vmin; --rot:0deg; --z:39; filter:none; }
+/* ========= PER-SLOT CUSTOMIZATION (svh units) ========= */
+#special-message{ --left:-48svh; --scale:1.95; --y:-31svh; --x:0svh; --rot:0deg; --z:1; }
+#scribble-izzy{ --left:10svh; --scale:.25; --y:38svh; --x:8svh; --rot:0deg; --z:2; }
+#torn-note{ --left:12svh; --scale:.83; --y:-25svh; --x:-2svh; --rot:0deg; --z:3; }
+#tracklist{ --left:130svh; --scale:.55; --y:35svh; --x:15svh; --rot:8deg; --z:2; pointer-events:none; }
+#the-story-behind{ --left:70svh; --scale:.15; --y:20svh; --x:0svh; --rot:0deg; --z:4; }
+#album-title{ --left:78svh; --scale:.33; --y:-8svh; --x:-6svh; --rot:0deg; --z:5; }
+#playlist-ex{ --left:203svh; --scale:.90; --y:55svh; --x:0svh; --rot:0deg; --z:2; }
+#light-sleeper-visualizer{ --left:167svh; --scale:.50; --y:-12svh; --x:10svh; --rot:0deg; --z:3; }
+#light-sleeper-title{ --left:205svh; --scale:.36; --y:25svh; --x:-4svh; --rot:0deg; --z:4; pointer-events:none; }
+#pink-flashing-arrow{ --left:148svh; --scale:.09; --y:-5svh; --x:0svh; --rot:0deg; --z:5; }
+#light-sleeper-studio{ --left:293svh; --scale:.60; --ar:9/16; --y:30svh; --x:0svh; --rot:0deg; --z:4; }
+#tv-message-1{ --left:255svh; --scale:.47; --y:40svh; --x:0svh; --rot:-10deg; --z:20; pointer-events:auto; }
+#autumn-text{ --left:253svh; --scale:.33; --y:9svh; --x:0svh; --rot:2deg; --z:0; }
+#blame-it-notesapp{ --left:245svh; --scale:.25; --y:-14svh; --x:0svh; --rot:-2deg; --z:4; }
+#broken-breathing-placeholder{ --left:296svh; --scale:.40; --y:-10svh; --x:1svh; --rot:0deg; --z:3; }
+#ls-behind-the-song-placeholder{ --left:330svh; --scale:.40; --y:40svh; --x:0svh; --rot:0deg; --z:1; }
+#exit-wounds-title{ --left:365svh; --scale:.45; --y:-10svh; --x:0svh; --rot:-14deg; --z:1; pointer-events:none; }
+#play-exit-wounds{ --left:399svh; --scale:.55; --y:40svh; --x:0svh; --rot:-12deg; --z:6; }
+#press-play-dj{ --left:405svh; --scale:.15; --y:39svh; --x:0svh; --rot:0deg; --z:1; pointer-events:none; }
+#link-exit-wounds-substack{ --left:543svh; --scale:.95; --y:2svh; --x:0svh; --rot:15deg; --z:4; }
+#substack-point-arrow{ --left:528svh; --scale:.34; --y:32svh; --x:0svh; --rot:-7deg; --z:4; pointer-events:none; }
+#read-exitwounds{ --left:516svh; --scale:.25; --y:55svh; --x:0svh; --rot:5deg; --z:4; pointer-events:none; }
+#play-exit-wounds-voicememo{ --left:441svh; --scale:.28; --y:-17svh; --x:0svh; --rot:0deg; --z:7; }
+#exit-wounds-clickme{ --left:462svh; --scale:.07; --y:-5svh; --x:0svh; --rot:0deg; --z:7; pointer-events:none; }
+#glitter-truck{ --left:575svh; --scale:.65; --y:-38svh; --x:0svh; --rot:0deg; --z:7; pointer-events:none; }
+#exitwounds-lyricvideo-placeholder{ --left:450svh; --scale:.45; --y:43svh; --x:0svh; --rot:0deg; --z:7; pointer-events:none; }
+#exitwounds-behindthesong-placeholder{ --left:465svh; --scale:.40; --y:8svh; --x:0svh; --rot:0deg; --z:7; pointer-events:none; }
+#crashing-down-animation{ --left:464svh; --scale:.60; --y:-20svh; --x:0svh; --rot:0deg; --z:7; pointer-events:none; }
+#subscribe-button{ --left:545svh; --scale:.16; --y:-17svh; --x:0svh; --rot:2deg; --z:20; filter:none; }
+#subscribe-arrow{ --left:524svh; --scale:.25; --y:-9svh; --x:0svh; --rot:2deg; --z:20; pointer-events:none; filter:none; }
+#landmines-bts-clip{ --left:629svh; --scale:.35; --ar:16/9; --y:50svh; --x:0svh; --rot:0deg; --z:40; }
+#landmines-license{ --left:688svh; --scale:.33; --y:49svh; --x:0svh; --rot:-8deg; --z:16; pointer-events:none; }
+#landmines-voicememo{ --left:624svh; --scale:.29; --y:21svh; --x:0svh; --rot:0deg; --z:30; filter:none !important; }
+#kat-stratford-car{ --left:615svh; --scale:.28; --y:-6svh; --x:0svh; --rot:0deg; --z:30 !important; filter:none; pointer-events:none; }
+#landmines-title{ --left:670svh; --scale:.20; --y:26svh; --x:0svh; --rot:0deg; --z:30 !important; filter:none; pointer-events:none; }
+#landmines-lyricvideo{ --left:655svh; --scale:.48; --y:-16svh; --x:10svh; --rot:0deg; --z:38; }
+#landmines-session-voicememos{ --left:719svh; --scale:.33; --y:-16svh; --x:10svh; --rot:6deg; --z:38; }
+#read-about-landmines{ --left:705svh; --scale:.26; --y:24svh; --x:10svh; --rot:-5deg; --z:38; filter:none; }
+#landmines-visualizer{ --left:743svh; --scale:.48; --y:8svh; --x:10svh; --rot:0deg; --z:38; }
+#landmines-behindthesong{ --left:723svh; --scale:.48; --y:44svh; --x:10svh; --rot:0deg; --z:38; }
+#misery-title{ --left:805svh; --scale:1; --y:15svh; --x:10svh; --rot:0deg; --z:38; filter:none !important; }
+#misery-bts{ --left:805svh; --scale:.50; --y:-15svh; --x:10svh; --rot:0deg; --z:39; filter:none; }
 </style>
 
 <!-- Lottie web component -->
