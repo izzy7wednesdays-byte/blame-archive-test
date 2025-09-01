@@ -10,7 +10,7 @@
   :root{
     /* Height scales with viewport height & a bit with width.
        If you prefer fixed-by-height only, use: --band-h: 70vh; */
-    --band-h: clamp(56svh, 56vw, 84svh);
+    --band-h: min(84svh, 56svw);
 
     /* Total width of the horizontal canvas (increase as you add slots) */
     --rail-w: 1000svh;
