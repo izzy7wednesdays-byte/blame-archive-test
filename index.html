@@ -191,7 +191,7 @@
     display: none;                 /* toggled via .is-open */
     align-items: center;
     justify-content: center;
-    background: none;
+    background: rgba(0,0,0,.72);
     z-index: 9999;
   }
   #overlay .ov-card{
@@ -370,8 +370,8 @@
     pointer-events: none; 
   }
   #tv-message-1{ 
-    --left:205svh; 
-    --scale:.47; 
+    --left:210svh; 
+    --scale:.4; 
     --y:53svh; 
     --x:0svh; 
     --rot:-10deg; 
@@ -379,15 +379,15 @@
     pointer-events:auto;
   }
   #autumn-text{ 
-    --left:245svh; 
-    --scale:.33; 
-    --y:30svh; 
+    --left:237svh; 
+    --scale:.3; 
+    --y:25svh; 
     --x:0svh; 
     --rot:2deg; 
     --z:0; 
   }
   #blame-it-notesapp{ 
-    --left:240svh; 
+    --left:237svh; 
     --scale:.25; 
     --y:0svh; 
     --x:0svh; 
@@ -398,13 +398,27 @@
     --left:293svh; 
     --scale:.40; 
     --ar:9/16; 
-    --y:50svh; 
+    --y:60svh; 
     --x:0svh; 
     --rot:0deg; 
     --z:4; 
   }
-  #broken-breathing-placeholder{ --left:296svh; --scale:.40; --y:-10svh; --x:1svh; --rot:0deg; --z:3; }
-  #ls-behind-the-song-placeholder{ --left:330svh; --scale:.40; --y:40svh; --x:0svh; --rot:0deg; --z:1; }
+  #broken-breathing-placeholder{ 
+    --left: 294svh; 
+    --scale:.30; 
+    --y: 0svh; 
+    --x: 1svh; 
+    --rot: 0deg; 
+    --z: 3; 
+  }
+  #ls-behind-the-song{ 
+    --left: 330svh; 
+    --scale: .40; 
+    --y: 40svh; 
+    --x: 0svh; 
+    --rot: 0deg; 
+    --z: 1; 
+  }
   #exit-wounds-title{ --left:365svh; --scale:.45; --y:-10svh; --x:0svh; --rot:-14deg; --z:1; pointer-events:none; }
   #play-exit-wounds{ --left:399svh; --scale:.55; --y:40svh; --x:0svh; --rot:-12deg; --z:6; }
   #press-play-dj{ --left:405svh; --scale:.15; --y:39svh; --x:0svh; --rot:0deg; --z:1; pointer-events:none; }
@@ -619,9 +633,17 @@
       <img src="img/broken-breathing-placeholder.png?v=1" alt="Broken Breathing placeholder" loading="lazy" decoding="async">
     </figure>
 
-    <!-- 17: LS – Behind the Song (placeholder) -->
-    <figure class="slot" id="ls-behind-the-song-placeholder">
-      <img src="img/ls-behind-the-song-placeholder.png?v=1" alt="Light Sleeper - Behind the Song placeholder" loading="lazy" decoding="async">
+    <!-- 17: YouTube – Light Sleeper – Behind the Song -->
+    <figure class="slot slot--youtube" id="ls-behind-the-song">
+      <div class="yt-box">
+        <iframe
+          src="https://www.youtube.com/embed/Q-lxkWW9WaU?si=ua8uwDTaXLU0hYrZ"
+          title="Light Sleeper – Behind the Song"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
     </figure>
 
     <!-- 18: Exit Wounds Title  -->
