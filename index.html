@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-  /* ========= V118 ========= */
+  /* ========= V119 ========= */
   /* ========= GLOBAL CONTROLS ========= */
   :root{
     /* Height scales with viewport height & a bit with width.
@@ -471,14 +471,22 @@
     --z: 20;       
   }
   #landmines-license{
-    --left: 650svh;  
-    --scale: 0.35;  
-    --ar: 16/9;     
+    --left: 670svh;  
+    --scale: 0.35;     
     --y: 45svh;      
     --x: 0svh;       
     --rot: 8deg;
+    --z: 20;
+    pointer-events: none;
+  }
+    #landmines-voicememo{
+    --left: 630svh;  
+    --scale: 0.35;       
+    --y: 20svh;      
+    --x: 0svh;       
+    --rot: 0deg;
     --z: 20;       
-}
+  }
 </style>
 
   <!-- Lottie web component -->
@@ -731,6 +739,19 @@
     <!-- 30: Landmines License  -->
     <figure class="slot" id="landmines-license">
       <img src="img/landmines-license.png?v=1" alt="Landmines License" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 31: Vimeo – Landmines Voicememo -->
+    <figure class="slot slot--video" id="landmines-voicememo">
+      <div class="video-box">
+        <iframe
+          src="https://player.vimeo.com/video/1114741947?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          allowfullscreen
+          title="landmines-voicememo">
+        </iframe>
+      </div>
     </figure>
  
     <!-- Add more slots here… -->
