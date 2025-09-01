@@ -545,14 +545,29 @@
     --z: 38; 
   }
   #read-about-landmines{
-    --left: 710svh; 
-    --scale: 0.25; 
+    --left: 700svh; 
+    --scale: 0.50; 
     --y: 23svh; 
     --x: 10svh; 
     --rot: -5deg; 
     --z: 38; 
   }
-  
+  #landmines-visualizer{
+    --left: 750svh; 
+    --scale: 0.50; 
+    --y: 23svh; 
+    --x: 10svh; 
+    --rot: -5deg; 
+    --z: 38; 
+  }
+  #landmines-behindthesong{
+    --left: 750svh; 
+    --scale: 0.25; 
+    --y: 40svh; 
+    --x: 10svh; 
+    --rot: -5deg; 
+    --z: 38; 
+  }
 </style>
 
   <!-- Lottie web component -->
@@ -866,7 +881,7 @@
       </div>
     </figure>
       
-    <!-- 39: Exit Wounds Voicememo -->
+    <!-- 39: Landmines Session Voicememo -->
     <figure class="slot slot--audio" id="landmines-session-voicememos"
         data-audio-src="audio/exit-wounds-voicememo.m4a" data-loop="false">
         <img class="audio-trigger"
@@ -886,7 +901,32 @@
       data-overlay-alt="About Landmines">
       <img src="img/read-about-landmines.png?v=1" alt="Landmines Letter" loading="lazy" decoding="async" style="cursor:zoom-in;">
     </figure>
-    
+
+    <!--41: YouTube – Landmines Lyric Video -->
+    <figure class="slot slot--youtube" id="landmines-visualizer">
+      <div class="yt-box">
+        <iframe
+          src="https://www.youtube.com/embed/1ZjReUQ6WTU?si=6G7zcN05vVEXl2in"
+          title="Landmines – Visualizer"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </figure>
+
+    <!-- 42: YouTube – Landmines Behind The Song -->
+    <figure class="slot slot--youtube" id="landmines-behindthesong">
+      <div class="yt-box">
+        <iframe
+          src="https://www.youtube.com/embed/1ZjReUQ6WTU?si=6G7zcN05vVEXl2in"
+          title="Landmines – Behind the Song"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </figure>
     <!-- Add more slots here… -->
   </div>
 </div>
