@@ -2,29 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 <style>
-  /* ========= V121 (fill-height + vmin ruler + dvh/svh alignment) ========= */
+  /* ========= V122 (fill-height + vmin ruler + dvh/svh alignment) ========= */
 
   /* ========= GLOBAL CONTROLS ========= */
-  :root{
-    /* Switch: 0 = scale by vmin (original curve), 1 = always fill viewport height */
-    --fill-height: 1;
+:root{
+  --fill-height: 1;
+  --band-base: clamp(48vmin, 56vmin, 84vmin);
 
-    /* Original vmin-based band size (used when --fill-height = 0) */
-    --band-base: clamp(48vmin, 56vmin, 84vmin);
+  /* Use our JS-driven vh so height = the visible viewport, exactly */
+  --band-h: calc( (1 - var(--fill-height)) * var(--band-base)
+                 + var(--fill-height) * calc(var(--vh, 1vh) * 100) );
 
-    /* Blend between vmin curve and exact viewport height (svh/dvh fallback) */
-    --band-h: calc( (1 - var(--fill-height)) * var(--band-base) + var(--fill-height) * 100svh );
-    --band-h: calc( (1 - var(--fill-height)) * var(--band-base) + var(--fill-height) * 100dvh );
-
-    /* Total width of the horizontal canvas (increase as you add slots) */
-    --rail-w: 1000vmin;
-
-    --bg: #0d161d;
-    --fg: #e7f1ff;
-  }
+  --rail-w: 1000vmin;
+  --bg: #0d161d;
+  --fg: #e7f1ff;
+}
 
   *{ box-sizing:border-box }
   html,body{
@@ -38,21 +33,15 @@
   }
 
   /* ========= HORIZONTAL SCROLLER ========= */
-  .hwrap{
-    /* Make the inner page height match the iframe height exactly */
-    height: 100svh;  /* fallback */
-    height: 100dvh;  /* overrides when supported */
-    overflow-x:auto; overflow-y:hidden;
-    white-space:nowrap;
-    scroll-behavior:smooth;
-    scrollbar-width:thin;
-
-    /* optional: keeps band vertically centered if you flip fill-height off */
-    display: grid; 
-    align-items: center;
-  }
-  .hwrap::-webkit-scrollbar{ height:8px }
-  .hwrap::-webkit-scrollbar-thumb{ background:#2c2c32; border-radius:8px }
+ /* HORIZONTAL SCROLLER */
+.hwrap{
+  height: calc(var(--vh, 1vh) * 100); /* replaces the dvh/svh lines */
+  overflow-x:auto; overflow-y:hidden;
+  white-space:nowrap;
+  scroll-behavior:smooth;
+  scrollbar-width:thin;
+  display:grid; align-items:center; /* keep centered if band is shorter */
+}
 
   /* ========= RAIL (ABSOLUTE LAYOUT + GROUP NUDGE) ========= */
   .rail{
@@ -287,6 +276,20 @@
 
 <!-- Lottie web component -->
 <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"></script>
+
+<script>
+  // Define a robust --vh unit inside the iframe document
+  (function () {
+    function setVH() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', vh + 'px');
+    }
+    setVH();
+    window.addEventListener('resize', setVH, { passive: true });
+    window.addEventListener('orientationchange', setVH, { passive: true });
+  })();
+</script>
+
 </head>
   
 <body>
