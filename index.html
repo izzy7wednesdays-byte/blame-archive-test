@@ -223,16 +223,50 @@
   #overlay.is-open{ display: flex !important; }
 
   /* ========= TEXT SLOT (plain, non-clickable) ========= */
-  /* your existing text-slot rule — add the var(--ff, ...) bit */
+    /* TEXT SLOT */
 .slot--text .text-box{
+  /* core type */
   font-family: var(--ff, "Thinker"), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: var(--fw, 400);
-  font-size: clamp(14px, calc(var(--band-h) * var(--scale) * .11), 120px);
-  line-height: 1.08;
+  font-style: var(--fstyle, normal);
+  font-stretch: var(--fstr, normal);
+  font-size: clamp(14px, calc(var(--band-h) * var(--scale) * var(--fs-mul, .11)), 120px);
+  line-height: var(--lh, 1.08);
+  letter-spacing: var(--ls, .01em);
+  word-spacing: var(--ws, 0);
   color: var(--text-color, var(--fg));
-  white-space: normal; overflow-wrap: anywhere; max-width: min(90svh, 28ch);
-  padding: 0; background: transparent; border-radius: 0;
+
+  /* text behavior */
+  text-align: var(--ta, left);
+  text-transform: var(--tt, none);
+  white-space: var(--ws-mode, normal);
+  text-wrap: var(--wrap, pretty);           /* or 'balance' */
+  hyphens: var(--hy, manual);
+  overflow-wrap: anywhere;
+  max-width: min(90svh, var(--ch, 28ch));
+
+  /* decoration / effects */
+  text-decoration: var(--dec, none);
+  text-underline-offset: var(--uoff, .15em);
+  text-decoration-thickness: var(--uthick, auto);
+  text-shadow: var(--shadow, none);
+  -webkit-text-stroke: var(--stroke, 0) var(--stroke-color, transparent);
+
+  /* optional gradient text */
+  background: var(--bgc, transparent);
+  -webkit-background-clip: var(--bgclip, initial);
+          background-clip: var(--bgclip, initial);
+
+  /* opentype / variable font controls */
+  font-variant-ligatures: var(--liga, normal);
+  font-feature-settings: var(--features, normal);
+  font-variation-settings: var(--axes, normal);
+
+  /* box (usually keep plain for “text only”) */
+  padding: var(--pad, 0);
+  border-radius: var(--br, 0);
 }
+
 
     /* ===== Remove drop-shadows globally ===== */
   .slot img,
@@ -367,6 +401,7 @@
   #press-play-dj{
   --left: 411svh; --scale: .20; --y: 118svh; --x: 0svh; --rot: -15deg; --z: 8;
   /* typography overrides for THIS slot */
+  --ff: "Thinker";
   --fw: 400;                 /* 400 regular, 700 bold, etc. */
   --fs-mul: .17;             /* bigger/smaller text (multiplies into font-size) */
   --text-color: #4C58E9;     /* any CSS color */
@@ -442,11 +477,12 @@
     pointer-events:none; 
   }
   #read-susbstack{
-    --left: 411svh; --scale: .20; --y: 18svh; --x: 0svh; --rot: 6deg; --z: 8;
+    --left: 411svh; --scale: .20; --y: 30svh; --x: 0svh; --rot: 7deg; --z: 8; pointer-events:none;
   /* typography overrides for THIS slot */
-  --ff: "Manic"
+  --ff: "Manic";
+  --ta: center;  
   --fw: 400;                 /* 400 regular, 700 bold, etc. */
-  --fs-mul: .15;             /* bigger/smaller text (multiplies into font-size) */
+  --fs-mul: .16;             /* bigger/smaller text (multiplies into font-size) */
   --text-color: #4C58E9;     /* any CSS color */
   }
   #substack-point-arrow{ 
