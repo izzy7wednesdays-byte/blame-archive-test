@@ -6,18 +6,50 @@
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 
 <link rel="preload" as="font" href="fonts/Thinker.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="fonts/manic-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="fonts/manic-alt1.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="fonts/manic-alt2.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="fonts/manic-alt3.woff2" type="font/woff2" crossorigin>
 
 <style>
   /* ========= V131 — Height-locked (svh) ========= */
   
-  /* === WEBFONT: Thinker === */
-  @font-face{
+            /* === WEBFONTS === */
+                 /* === Thinker === */
+@font-face{
     font-family: "Thinker";
     src: url("fonts/Thinker.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
+
+              /* === MANIC families === */
+@font-face{
+  font-family: "Manic";
+  src: url("fonts/manic-regular.woff2") format("woff2"),
+       url("fonts/manic-regular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face{
+  font-family: "Manic Alt 1";
+  src: url("fonts/manic-alt1.woff2") format("woff2"),
+       url("fonts/manic-alt1.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face{
+  font-family: "Manic Alt 2";
+  src: url("fonts/manic-alt2.woff2") format("woff2"),
+       url("fonts/manic-alt2.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+  @font-face{
+    font-family: "Manic Alt 3";
+    src: url("fonts/manic-alt3.woff2") format("woff2"),
+      url("fonts/manic-alt3.otf") format("opentype");
+    font-weight: 400; font-style: normal; font-display: swap;
+  }
+
   
   /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -227,15 +259,16 @@
   #overlay.is-open{ display: flex !important; }
 
   /* ========= TEXT SLOT (plain, non-clickable) ========= */
-  .slot--text .text-box{
-    font-family: "Thinker", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    font-weight: var(--fw, 400); /* per-slot weight */
-    font-size: clamp(14px, calc(var(--band-h) * var(--scale) * var(--fs-mul, .11)), 120px); /* per-slot size */
-    line-height: 1.08;
-    color: var(--text-color, var(--fg)); /* per-slot color */
-    white-space: normal; overflow-wrap: anywhere; max-width: min(90svh, 28ch);
-    padding: 0; background: transparent; border-radius: 0;
-  }
+  /* your existing text-slot rule — add the var(--ff, ...) bit */
+.slot--text .text-box{
+  font-family: var(--ff, "Thinker"), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: var(--fw, 400);
+  font-size: clamp(14px, calc(var(--band-h) * var(--scale) * .11), 120px);
+  line-height: 1.08;
+  color: var(--text-color, var(--fg));
+  white-space: normal; overflow-wrap: anywhere; max-width: min(90svh, 28ch);
+  padding: 0; background: transparent; border-radius: 0;
+}
 
     /* ===== Remove drop-shadows globally ===== */
   .slot img,
@@ -402,7 +435,7 @@
   }
   #click-me-arrow{ 
     --left:410svh; 
-    --scale:.03; 
+    --scale:.04; 
     --y:11svh; 
     --x:0svh; 
     --rot:0deg; 
@@ -410,7 +443,7 @@
     pointer-events:none; 
   }
   #click-me-text{
-  --left: 411svh; --scale: .20; --y: 18svh; --x: 0svh; --rot: 2deg; --z: 8;
+  --left: 411svh; --scale: .20; --y: 17svh; --x: 0svh; --rot: 2deg; --z: 8;
   /* typography overrides for THIS slot */
   --fw: 400;                 /* 400 regular, 700 bold, etc. */
   --fs-mul: .15;             /* bigger/smaller text (multiplies into font-size) */
@@ -443,6 +476,14 @@
     --rot:3deg; 
     --z:2; 
     pointer-events:none; 
+  }
+  #read-susbstack{
+    --left: 411svh; --scale: .20; --y: 18svh; --x: 0svh; --rot: 6deg; --z: 8;
+  /* typography overrides for THIS slot */
+  --ff: "Manic"
+  --fw: 400;                 /* 400 regular, 700 bold, etc. */
+  --fs-mul: .15;             /* bigger/smaller text (multiplies into font-size) */
+  --text-color: #4C58E9;     /* any CSS color */
   }
   #substack-point-arrow{ 
     --left:441svh; 
@@ -1043,6 +1084,15 @@
     <!-- 45: Text - Press Play, DJ! -->
     <figure class="slot slot--text" id="press-play-dj">
       <div class="text-box">click to press play, dj!</div>
+    </figure>
+
+    <!-- 45: Text - Read More About Exit Wounds -->
+    <figure class="slot slot--text" id="read-susbstack">
+      <div class="text-box">
+        READ MORE ABOUT ABOUT EXIT WOUNDS
+        ON MY SUBSTACK "10 THINGS I'M 
+        THINKING ABOUT"!
+      </div>
     </figure>
 
     <!-- Add more slots here… -->
