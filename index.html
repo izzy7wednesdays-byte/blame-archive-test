@@ -367,15 +367,14 @@
     --rot:-11.5deg; 
     --z:6; 
   }
-  #press-play-dj{ 
-    --left:361svh; 
-    --scale:.13; 
-    --y:59svh; 
-    --x:0svh; 
-    --rot:0deg; 
-    --z:1; 
-    pointer-events:none; 
+  #press-play-dj{
+  --left: 411svh; --scale: .20; --y: 118svh; --x: 0svh; --rot: -15deg; --z: 8;
+  /* typography overrides for THIS slot */
+  --fw: 400;                 /* 400 regular, 700 bold, etc. */
+  --fs-mul: .17;             /* bigger/smaller text (multiplies into font-size) */
+  --text-color: #4C58E9;     /* any CSS color */
   }
+    
   #crashing-down-animation{ 
       --left:393svh; 
       --scale:.35; 
@@ -810,11 +809,6 @@
       <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
     </figure>
 
-    <!-- 19: Press Play -->
-    <figure class="slot" id="press-play-dj">
-      <img src="img/press-play-dj.png?v=1" alt="press play dj" loading="lazy" decoding="async">
-    </figure>
-    
     <!-- 20: Exit Wounds Voicememo -->
     <figure class="slot slot--audio" id="play-exit-wounds-voicememo"
         data-audio-src="audio/exit-wounds-voicememo.m4a" data-loop="false">
@@ -1041,9 +1035,14 @@
       <img src="img/misery-title.png?v=1" alt="Misery Title" loading="lazy" decoding="async">
     </figure>
     
-    <!-- 44: Click Me -->
+    <!-- 44: Text - Click Me -->
     <figure class="slot slot--text" id="click-me-text">
       <div class="text-box">click me</div>
+    </figure>
+
+    <!-- 45: Text - Press Play, DJ! -->
+    <figure class="slot slot--text" id="press-play-dj">
+      <div class="text-box">click to press play, dj!</div>
     </figure>
 
     <!-- Add more slots here… -->
