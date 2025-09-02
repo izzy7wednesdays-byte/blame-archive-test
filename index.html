@@ -5,51 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>Blame It On A Bad Dream — Horizontal Archive</title>
 
+<!-- Preload only the fonts visible on first paint -->
 <link rel="preload" as="font" href="fonts/Thinker.woff2" type="font/woff2" crossorigin>
 <link rel="preload" as="font" href="fonts/manic-regular.woff2" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="fonts/manic-alt1.woff2" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="fonts/manic-alt2.woff2" type="font/woff2" crossorigin>
-<link rel="preload" as="font" href="fonts/manic-alt3.woff2" type="font/woff2" crossorigin>
+
+<!-- Load all font-face rules -->
+<link rel="stylesheet" href="css/fonts.css">
 
 <style>
   /* ========= V131 — Height-locked (svh) ========= */
-  
-            /* === WEBFONTS === */
-                 /* === Thinker === */
-@font-face{
-    font-family: "Thinker";
-    src: url("fonts/Thinker.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-              /* === MANIC families === */
-@font-face{
-  font-family: "Manic";
-  src: url("fonts/manic-regular.woff2") format("woff2"),
-       url("fonts/manic-regular.otf") format("opentype");
-  font-weight: 400; font-style: normal; font-display: swap;
-}
-@font-face{
-  font-family: "Manic Alt 1";
-  src: url("fonts/manic-alt1.woff2") format("woff2"),
-       url("fonts/manic-alt1.otf") format("opentype");
-  font-weight: 400; font-style: normal; font-display: swap;
-}
-@font-face{
-  font-family: "Manic Alt 2";
-  src: url("fonts/manic-alt2.woff2") format("woff2"),
-       url("fonts/manic-alt2.otf") format("opentype");
-  font-weight: 400; font-style: normal; font-display: swap;
-}
-  @font-face{
-    font-family: "Manic Alt 3";
-    src: url("fonts/manic-alt3.woff2") format("woff2"),
-      url("fonts/manic-alt3.otf") format("opentype");
-    font-weight: 400; font-style: normal; font-display: swap;
-  }
-
   
   /* ========= GLOBAL CONTROLS ========= */
   :root{
