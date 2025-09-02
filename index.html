@@ -399,7 +399,7 @@
     --z:6; 
   }
   #press-play-dj{
-  --left: 360svh; --scale: .20; --y: 40svh; --x: 0svh; --rot: -15deg; --z: 8;
+  --left: 362svh; --scale: .20; --y: 60svh; --x: 0svh; --rot: -15deg; --z: 8;
   /* typography overrides for THIS slot */
   --ff: "Thinker";
   --fw: 400;                 /* 400 regular, 700 bold, etc. */
@@ -433,7 +433,7 @@
     --z:7; 
   }
   #click-me-arrow{ 
-    --left:410svh; 
+    --left:411svh; 
     --scale:.04; 
     --y:11svh; 
     --x:0svh; 
@@ -442,7 +442,7 @@
     pointer-events:none; 
   }
   #click-me-text{
-  --left: 411svh; --scale: .20; --y: 17svh; --x: 0svh; --rot: 2deg; --z: 8;
+  --left: 412svh; --scale: .20; --y: 15svh; --x: 0svh; --rot: 2deg; --z: 8;
   /* typography overrides for THIS slot */
   --fw: 400;                 /* 400 regular, 700 bold, etc. */
   --fs-mul: .15;             /* bigger/smaller text (multiplies into font-size) */
@@ -456,6 +456,16 @@
     --rot:2deg; 
     --z:20; 
     filter:none;
+  }
+  subscribe-susbstack{
+  --left: 412svh; --scale: .20; --y: 9svh; --x: 0svh; --rot: -3deg; --z: 8;
+  /* typography overrides for THIS slot */
+  --ff: "Manic";
+  --fw: 400;                  /* 400 regular, 700 bold, etc. */
+  --fs-mul: .12;             /* bigger/smaller text (multiplies into font-size) */
+  --ta: center;
+  --tt: uppercase;
+  --text-color: #4C58E9;     /* any CSS color */
   }
   #subscribe-arrow{ 
     --left:450svh; 
@@ -477,12 +487,12 @@
     pointer-events:none; 
   }
   #read-susbstack{
-    --left: 411svh; --scale: .20; --y: 30svh; --x: 0svh; --rot: 7deg; --z: 8; pointer-events:none;
+    --left: 411svh; --scale: .20; --y: 60svh; --x: 0svh; --rot: 7deg; --z: 8; pointer-events:none;
   /* typography overrides for THIS slot */
   --ff: "Manic";
   --ta: center;  
   --fw: 400;                 /* 400 regular, 700 bold, etc. */
-  --fs-mul: .16;             /* bigger/smaller text (multiplies into font-size) */
+  --fs-mul: .15;             /* bigger/smaller text (multiplies into font-size) */
   --text-color: #4C58E9;     /* any CSS color */
   }
   #substack-point-arrow{ 
@@ -1076,22 +1086,31 @@
       <img src="img/misery-title.png?v=1" alt="Misery Title" loading="lazy" decoding="async">
     </figure>
     
-    <!-- 44: Text - Click Me -->
+    <!-- 45: Text - Click Me -->
     <figure class="slot slot--text" id="click-me-text">
       <div class="text-box">click me</div>
     </figure>
 
-    <!-- 45: Text - Press Play, DJ! -->
+    <!-- 46: Text - Press Play, DJ! -->
     <figure class="slot slot--text" id="press-play-dj">
       <div class="text-box">click to press play, dj!</div>
     </figure>
 
-    <!-- 45: Text - Read More About Exit Wounds -->
+    <!-- 47: Text - Read More About Exit Wounds -->
     <figure class="slot slot--text" id="read-susbstack">
       <div class="text-box">
-        READ MORE ABOUT ABOUT EXIT WOUNDS<br>
-        ON MY SUBSTACK "10 THINGS I'M <br>
+        READ MORE ABOUT EXIT WOUNDS<br>
+        ON MY SUBSTACK "10 THINGS I'M<br>
         THINKING ABOUT"!
+      </div>
+    </figure>
+
+    <!-- 48: Text - Subscribe to Substack -->
+    <figure class="slot slot--text" id="subscribe-susbstack">
+      <div class="text-box">
+        if you don't think<br>
+        it's, like, totally lame,<br>
+        you should subscribe
       </div>
     </figure>
 
