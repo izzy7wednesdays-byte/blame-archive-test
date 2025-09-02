@@ -1,0 +1,32 @@
+/* === Core webfonts === */
+
+/* Thinker (regular) */
+@font-face{
+  font-family: "Thinker";
+  src: url("../fonts/Thinker.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Manic families — treat alternates as separate families */
+@font-face{
+  font-family: "Manic";
+  src: url("../fonts/manic-regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face{
+  font-family: "Manic Alt 1";
+  src: url("../fonts/manic-alt1.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face{
+  font-family: "Manic Alt 2";
+  src: url("../fonts/manic-alt2.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face{
+  font-family: "Manic Alt 3";
+  src: url("../fonts/manic-alt3.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
