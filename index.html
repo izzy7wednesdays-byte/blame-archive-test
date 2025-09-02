@@ -481,16 +481,16 @@
     pointer-events:none; 
   }
   #crashing-down-animation{ 
-      --left:445svh; 
+      --left:447svh; 
       --scale:.45; 
-      --y:40svh; 
+      --y:45svh; 
       --x:0svh; 
       --rot:0deg; 
       --z:2; 
       pointer-events:none; 
     }
   #play-exit-wounds-voicememo{ 
-    --left:415svh; 
+    --left:413svh; 
     --scale:.23; 
     --y:3svh; 
     --x:0svh; 
@@ -498,7 +498,7 @@
     --z:7; 
   }
   #exit-wounds-clickme{ 
-    --left:435svh; 
+    --left:433svh; 
     --scale:.07; 
     --y:12svh; 
     --x:0svh; 
@@ -506,11 +506,19 @@
     --z:8; 
     pointer-events:none; 
   }
+  #exitwounds-behindthesong-placeholder{ 
+    --left:465svh; 
+    --scale:.38; 
+    --y:8svh; 
+    --x:0svh; 
+    --rot:0deg; 
+    --z:7; 
+    pointer-events:none;
+  }
   #link-exit-wounds-substack{ --left:543svh; --scale:.95; --y:2svh; --x:0svh; --rot:15deg; --z:4; }
   #substack-point-arrow{ --left:528svh; --scale:.34; --y:32svh; --x:0svh; --rot:-7deg; --z:4; pointer-events:none; }
   #read-exitwounds{ --left:516svh; --scale:.25; --y:55svh; --x:0svh; --rot:5deg; --z:4; pointer-events:none; }
   #glitter-truck{ --left:575svh; --scale:.65; --y:-38svh; --x:0svh; --rot:0deg; --z:7; pointer-events:none; }
-  #exitwounds-behindthesong-placeholder{ --left:465svh; --scale:.40; --y:8svh; --x:0svh; --rot:0deg; --z:7; pointer-events:none; }
   #subscribe-button{ --left:545svh; --scale:.16; --y:-17svh; --x:0svh; --rot:2deg; --z:20; filter:none; }
   #subscribe-arrow{ --left:524svh; --scale:.25; --y:-9svh; --x:0svh; --rot:2deg; --z:20; pointer-events:none; filter:none; }
   #landmines-bts-clip{ --left:629svh; --scale:.35; --ar:16/9; --y:50svh; --x:0svh; --rot:0deg; --z:40; }
@@ -801,9 +809,17 @@
       <img src="img/exit-wounds-clickme.png?v=1" alt="exit wounds click me" loading="lazy" decoding="async">
     </figure>
 
-    <!-- 25: Exit Wounds: Behind the Song Placeholder -->
-    <figure class="slot" id="exitwounds-behindthesong-placeholder">
-      <img src="img/exitwounds-behindthesong-placeholder.png?v=1" alt="exit wounds behind the song placeholder" loading="lazy" decoding="async">
+    <!-- 25: YouTube – Exit Wounds: Behind the Song Placeholder -->
+    <figure class="slot slot--youtube" id="exitwounds-behindthesong">
+      <div class="yt-box">
+        <iframe
+          src="https://www.youtube.com/embed/WozDukWhyzU?si=YCGe6g6t6BojajME"
+          title="Exit Wounds - Behind the Song"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
     </figure>
 
     <!-- 26: YouTube – Exit Wounds: Lyric Video Placeholder -->
