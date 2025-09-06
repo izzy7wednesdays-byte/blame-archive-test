@@ -383,12 +383,13 @@
 
 
   //* PLACEHOLDERS *//
-  #ep-title{ --left:1000svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
-  #artwork-title{ --left:1150svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
-  #videos-title{ --left:1350svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
-  #merch-title{ --left:1550svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
-  #london-title{ --left:1750svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
-  #next-title{ --left:1950svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
+  #ep-title{ --left:1150svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
+    #ep-inspo{  --left:1150svh; --scale:.80; --y:70svh; --x:0svh; --rot:0deg; --z:30; }
+  #artwork-title{ --left:1350svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
+  #videos-title{ --left:1550svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
+  #merch-title{ --left:1750svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
+  #london-title{ --left:1950svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
+  #next-title{ --left:3250svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
 </style>
   
 
@@ -1125,6 +1126,18 @@
     <!-- 24: EP – EP Title -->
     <figure class="slot" id="ep-title">
       <img src="img/placeholders/ep.webp?v=2" alt="The Star Tarot Card" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 8): Spotify playlist -->
+    <figure class="slot slot--spotify" id="ep-inspo">
+      <div class="sp-box">
+        <iframe data-testid="embed-iframe" style="border-radius:0px"
+          src="https://open.spotify.com/embed/playlist/7btb3TEGUxfPXy4RdNsGXT?utm_source=generator"
+          width="100%" height="352" frameborder="0" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy" title="Blame it on a Bad Dream Inspo">
+        </iframe>
+      </div>
     </figure>
 
     <!-- 24: Artwork – Artwork Title -->
