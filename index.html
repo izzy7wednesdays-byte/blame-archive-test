@@ -371,6 +371,7 @@
                           --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: left; --tt: uppercase; --text-color: #4C58E9;}
   #misery-behindthesong{ /* Holly Humberstone (faatw behind the song) */ --left:898svh; --scale:.38; --y:62svh; --x:10svh; --rot:0deg; --z:70; }
   #smurfette-1{--left:886svh; --scale:.27; --y:33svh; --x:10svh; --rot:0deg; --z:70; pointer-events:none;}
+  #play-sleepwalking{--left:915svh; --scale:.27; --y:33svh; --x:10svh; --rot:10deg; --z:38;}
   #thestar-tarot{ --left:963svh; --scale:.38; --y:60svh; --x:10svh; --rot:-9deg; --z:70; pointer-events:none; }
   #sleepwalking-visualizer{ --left:1000svh; --scale:.38; --y:54svh; --x:0svh; --rot:0deg; --z:40; }
   #sleepwalking-radio{ --left:920svh; --scale:.22; --y:7svh; --x:1svh; --rot:0deg; --z:40; }
@@ -978,6 +979,15 @@
     <!-- 44: Smurfette -->
     <figure class="slot" id="smurfette-1">
       <img src="img/sleepwalking/smurfette-1.webp?v=1" alt="Smurfette" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 15: SOUND (SoundCloud) — click image to play/pause -->
+    <figure class="slot slot--sc" id="play-sleepwalking"
+            data-sc-url="https://soundcloud.com/izzy-macarthur/sleepwalking">
+      <img class="sc-trigger"
+           src="img/sleepwalking/play-sleepwalking.webp?v=1"
+           alt="Play Sleepwalking (SoundCloud)">
+      <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
     </figure>
 
     <!-- 44: Misery Title -->
