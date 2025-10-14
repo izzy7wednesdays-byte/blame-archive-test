@@ -375,14 +375,14 @@
   /* ========= SLEEPWALKING SECTION ========= */
   #smurfette-1{--left:886svh; --scale:.27; --y:33svh; --x:10svh; --rot:0deg; --z:70; pointer-events:none; }
   #play-sleepwalking{--left:910svh; --scale:.2; --y:38svh; --x:10svh; --rot:10deg; --z:50;}
-  #thestar-tarot{ --left:963svh; --scale:.38; --y:60svh; --x:10svh; --rot:-9deg; --z:70; pointer-events:none; }
-  #sleepwalking-visualizer{ --left:1000svh; --scale:.38; --y:63svh; --x:0svh; --rot:0deg; --z:40; }
-  #sleepwalking-receipt{ --left:1030svh; --scale:.35; --y:30svh; --x:0svh; --rot:15deg; --z:70; pointer-events: none; }
   #sleepwalking-radio{ --left:920svh; --scale:.22; --y:7svh; --x:1svh; --rot:0deg; --z:40; }
   #sleepwalking-radio-text{--left:920svh; --scale:.2; --y:0svh; --x:1svh; --rot:0deg; --z:42; pointer-events:none;
                           --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4C58E9;}
   #sleepwalking-radio-polaroid{ --left:954svh; --scale:.22; --y:20svh; --x:1svh; --rot:-10deg; --z:40; pointer-events:none; }
+  #thestar-tarot{ --left:963svh; --scale:.38; --y:60svh; --x:10svh; --rot:-9deg; --z:70; pointer-events:none; }
   #sleepwalking-behindthesong{ /* Holly Humberstone (faatw behind the song) */ --left:970svh; --scale:.38; --y:0svh; --x:0svh; --rot:0deg; --z:70; }
+  #sleepwalking-visualizer{ --left:1000svh; --scale:.38; --y:63svh; --x:0svh; --rot:0deg; --z:40; }
+  #sleepwalking-receipt{ --left:1030svh; --scale:.35; --y:30svh; --x:0svh; --rot:15deg; --z:70; pointer-events: none; }
   #sleepwalking-listeningparty{ --left:1029svh; --scale:.33; --ar:4/3; --y:0svh; --x:0svh; --rot:0deg; --z:71; }
   /* ========= EP SECTION ========= */
   #ep-inspo-sp{ --left:1073svh; --scale:.54; --y:-16svh; --x:0svh; --rot:0deg; --z:30; }
@@ -1192,6 +1192,109 @@
     <figure class="slot" id="smurfette-1">
       <img src="img/sleepwalking/smurfette-1.webp?v=1" alt="Smurfette" loading="lazy" decoding="async">
     </figure>
+
+     <!-- 2) SOUND (SoundCloud) — click image to play/pause -->
+    <figure class="slot slot--sc" id="play-sleepwalking"
+            data-sc-url="https://soundcloud.com/izzy-macarthur/sleepwalking">
+      <img class="sc-trigger"
+           src="img/sleepwalking/play-sleepwalking.webp?v=1"
+           alt="Play Sleepwalking (SoundCloud)">
+      <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
+    </figure>
+
+    <!-- 3) Vimeo – Sleepwalking – Sleepwalking on Radio -->
+    <figure class="slot slot--video" id="sleepwalking-radio">
+      <div class="video-box">
+        <iframe
+          src="https://player.vimeo.com/video/1116313498?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          allowfullscreen
+          title="Sleepwalking on the Radio">
+        </iframe>
+      </div>
+    </figure>
+
+    <!-- 4) Text - Sleepwalking Radio Text -->
+    <figure class="slot slot--text" id="sleepwalking-radio-text">
+      <div class="text-box">
+        me in my music tech class when<br>sleepwalking was played on the<br>radio for the first time ever
+      </div>
+    </figure>
+
+    <!-- 5) Sleepwalking – Polaroid -->
+    <figure class="slot" id="sleepwalking-radio-polaroid">
+      <img src="img/sleepwalking/sleepwalking-radio.webp?v=1" alt="Sleepwalking Radio Polaroid" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 6) Sleepwalking – The Star Tarot Card -->
+    <figure class="slot" id="thestar-tarot">
+      <img src="img/sleepwalking/thestar-tarot.webp?v=2" alt="The Star Tarot Card" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 8) YouTube – Sleepwalking: Behind the Song -->
+    <figure class="slot slot--youtube" id="sleepwalking-behindthesong">
+      <div class="yt-box">
+        <iframe
+          src="https://www.youtube.com/embed/_MOSQIXigB8?si=K5d65gYgNHqj2BOq"
+          title="Misery Missing Company: Behind the Song"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </figure>
+
+    <!-- 9) YouTube – Sleepwalking - Visualizer -->
+    <figure class="slot slot--youtube" id="sleepwalking-visualizer">
+      <div class="yt-box">
+        <iframe
+          src="https://www.youtube.com/embed/hD2rvD9Wbc4?si=XtN3IJfM587HXjKe"
+          title="Sleepwalking Visualizer"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </figure>
+
+    <!-- 11) Sleepwalking – The Receipt -->
+    <figure class="slot" id="sleepwalking-receipt">
+      <img src="img/sleepwalking/sleepwalking-receipt.webp?v=1" alt="The Star Tarot Card" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 12) Vimeo (Regular) – Sleepwalking – Listening Party -->
+    <figure class="slot slot--video" id="sleepwalking-listeningparty">
+      <div class="video-box">
+        <iframe
+          src="https://player.vimeo.com/video/1121321795?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          loading="lazy"
+          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+          allowfullscreen
+          title=”Sleepwalking from the Listening Party">
+        </iframe>
+      </div>
+    </figure>
+
+    <!-- ========================= -->
+           <!-- THE EP -->
+    <!-- ========================= --> 
+    <!-- 1): Spotify playlist -->
+    <figure class="slot slot--spotify" id="ep-inspo-sp">
+      <div class="sp-box">
+        <iframe data-testid="embed-iframe"
+          src="https://open.spotify.com/embed/playlist/7btb3TEGUxfPXy4RdNsGXT?utm_source=generator"
+          width="100%" height="352" frameborder="0" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy" title="Spotify playlist">
+        </iframe>
+      </div>
+    </figure>
+    
+    <!-- 2) EP – EP Inspo Playlist -->
+    <figure class="slot" id="ep-inspo">
+      <img src="img/blame/ep-inspo-playlist.webp?v=1" alt="EP Inspo Playlist" loading="lazy" decoding="async">
+    </figure>
     
     <!-- 43: YouTube – Misery Missing Company Behind the Scenes -->
     <figure class="slot slot--youtube" id="misery-bts">
@@ -1205,106 +1308,10 @@
         </iframe>
       </div>
     </figure>
-    
-    <!-- 43: YouTube – Sleepwalking: Behind the Scenes -->
-    <figure class="slot slot--youtube" id="sleepwalking-behindthesong">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/_MOSQIXigB8?si=K5d65gYgNHqj2BOq"
-          title="Misery Missing Company: Behind the Song"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 15: SOUND (SoundCloud) — click image to play/pause -->
-    <figure class="slot slot--sc" id="play-sleepwalking"
-            data-sc-url="https://soundcloud.com/izzy-macarthur/sleepwalking">
-      <img class="sc-trigger"
-           src="img/sleepwalking/play-sleepwalking.webp?v=1"
-           alt="Play Sleepwalking (SoundCloud)">
-      <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
-    </figure>
-
-
-    <!-- 24: Sleepwalking – The Star Tarot Card -->
-    <figure class="slot" id="thestar-tarot">
-      <img src="img/sleepwalking/thestar-tarot.webp?v=2" alt="The Star Tarot Card" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 43: YouTube – Sleepwalking - Visualizer -->
-    <figure class="slot slot--youtube" id="sleepwalking-visualizer">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/hD2rvD9Wbc4?si=XtN3IJfM587HXjKe"
-          title="Sleepwalking Visualizer"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 24: Sleepwalking – The Star Tarot Card -->
-    <figure class="slot" id="sleepwalking-receipt">
-      <img src="img/sleepwalking/sleepwalking-receipt.webp?v=1" alt="The Star Tarot Card" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 35: Vimeo – Sleepwalking – Sleepwalking on Radio -->
-    <figure class="slot slot--video" id="sleepwalking-radio">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1116313498?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          allowfullscreen
-          title="Sleepwalking on the Radio">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 47: Text - Sleepwalking Radio Text -->
-    <figure class="slot slot--text" id="sleepwalking-radio-text">
-      <div class="text-box">
-        me in my music tech class when<br>sleepwalking was played on the<br>radio for the first time ever
-      </div>
-    </figure>
-
-    <!-- 24: Sleepwalking – The Star Tarot Card -->
-    <figure class="slot" id="sleepwalking-radio-polaroid">
-      <img src="img/sleepwalking/sleepwalking-radio.webp?v=1" alt="Sleepwalking Radio Polaroid" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- 24: Vimeo (Regular) – Sleepwalking – Listening Party -->
-    <figure class="slot slot--video" id="sleepwalking-listeningparty">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1121321795?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Sleepwalking from the Listening Party">
-        </iframe>
-      </div>
-    </figure>
 
     <!-- 24: EP – EP Title -->
     <figure class="slot" id="ep-title">
       <img src="img/placeholders/ep.webp?v=1" alt="EP Title" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 8): Spotify playlist -->
-    <figure class="slot slot--spotify" id="ep-inspo-sp">
-      <div class="sp-box">
-        <iframe data-testid="embed-iframe"
-          src="https://open.spotify.com/embed/playlist/7btb3TEGUxfPXy4RdNsGXT?utm_source=generator"
-          width="100%" height="352" frameborder="0" allowfullscreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy" title="Spotify playlist">
-        </iframe>
-      </div>
     </figure>
 
     <!-- 24: Vimeo (1080x1920) – EP – Migos -->
@@ -1656,11 +1663,6 @@
         and become a<br>
         #beautyguru
       </div>
-    </figure>
-    
-    <!-- 24: EP – EP Inspo Playlist -->
-    <figure class="slot" id="ep-inspo">
-      <img src="img/blame/ep-inspo-playlist.webp?v=1" alt="EP Inspo Playlist" loading="lazy" decoding="async">
     </figure>
 
     <!-- 12: EP – Listening Party (opens overlay to show misery-about.png) -->
