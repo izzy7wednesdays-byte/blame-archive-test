@@ -85,7 +85,7 @@
     object-fit: contain;
   }
 
-  /* Spotify slot */
+  /* MEDIA: SPOTIFY PLAYLIST SLOT */
   .slot--spotify .sp-box{
     --sp-shrink: 0.675;
     --sp-ratio: 0.889;
@@ -105,7 +105,7 @@
     /* aspect-ratio: 685 / 302; /* ≈ 2.268:1 */ */
   } 
 
-  /* YouTube slot */
+  /* MEDIA: YOUTUBE SLOT */
   .slot--youtube .yt-box{
     --yt-shrink: 0.85;
     --ratio: 16/9;
@@ -119,7 +119,7 @@
   }
   .slot--youtube iframe{ width:100%; height:100%; border:0; border-radius:12px; }
 
-  /* TikTok slot */
+  /* MEDIA: TIKTOK SLOT */
   .tiktok-box{
     position: relative;
     width: calc(var(--band-h) * 0.75);
@@ -136,34 +136,6 @@
     justify-content: center;
   }
   
-  /* TikTok injects blockquote > section > (div...) > iframe with fixed px.
-     We hard-override all layers to fill the box. */
-  .tiktok-box .tiktok-embed{
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-    background: transparent !important;
-  }
-  
-  .tiktok-box .tiktok-embed > section{
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  
-  /* Catch any inner wrappers TikTok injects */
-  .tiktok-box .tiktok-embed *{
-    box-sizing: border-box;
-  }
-  
-  /* Finally, force the iframe itself to fill */
   .tiktok-box iframe{
     position: absolute !important;
     inset: 0 !important;
@@ -176,7 +148,7 @@
     background: transparent !important;
   }
 
-  /* Lottie slot */
+  /* MEDIA: LOTTIE SLOT */
   .slot--lottie .lot-box{
     --lot-shrink: 0.85;
     --ratio: 1.8;
@@ -196,8 +168,7 @@
     display:block;
   }
   
-  /* Vimeo */
- /* Video slot (Vimeo iframe) */
+  /* MEDIA: VIMEO VIDEO SLOT */
   .slot--video .video-box{
     --h: calc(var(--band-h) * var(--scale));
     height: var(--h);
@@ -210,7 +181,7 @@
   .slot--video iframe{ width: 100%; height: 100%; display:block; border:0; }
 
 
-  /* Gif Slot */
+  /* MEDIA: GIF SLOT */
   .slot--gif .gif-box{
     --h: calc(var(--band-h) * var(--scale));
     height: var(--h);
@@ -222,7 +193,7 @@
   }
   .slot--gif img{ width:100%; height:100%; object-fit:cover; display:block; }
 
-  /* SoundCloud image-controlled slot */
+  /* MEDIA: SOUNDCLOUD (IMAGE-CONTROLLED) SLOT */
   .slot--sc .sc-iframe{
     position:absolute;
     left:-9999px; top:auto; width:1px; height:1px; opacity:0; pointer-events:none;
@@ -234,7 +205,7 @@
     cursor: pointer;
   }
 
-  /* Audio (image-controlled) */
+  /* MEDIA: AUDIO (IMAGE-CONTROLLED) SLOT */
   .slot--audio .audio-trigger{
     height: calc(var(--band-h) * var(--scale));
     width: auto; display:block; object-fit: contain;
@@ -250,7 +221,7 @@
     outline-offset: 6px;
   }
 
-  /* Overlay fills viewport; image card fills most of the page */
+  /* MEDIA: OVERLAY SLOT */
   #overlay{
     position: fixed !important;
     inset: 0;
@@ -615,7 +586,7 @@
   --y: -10svh;
   --x: 0svh;
   --rot: 0deg;
-  --z: 56; 
+  --z: 55; 
   }
   #landmines-bts{ 
     --left:1850svh; 
@@ -623,7 +594,7 @@
     --y:13svh; 
     --x:0svh; 
     --rot:0deg; 
-    --z:55; 
+    --z:54; 
   }
   #backtruck-2{ 
     --left:1895svh; 
@@ -2097,13 +2068,15 @@
     </figure>
     
     <!-- 24) Videos – Landmines BTS TikTok -->
-    <figure class="slot slot--tiktok" id="landmines-bts-tiktok">
+    <figure class="slot slot--tiktok" id="tiktok-demo">
       <div class="tiktok-box">
         <iframe
-          src="https://www.tiktok.com/embed/v2/7414307908718120238"
+          src="https://www.tiktok.com/player/v1/7414307908718120238?controls=1&progress_bar=1&autoplay=0&loop=0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
           referrerpolicy="strict-origin-when-cross-origin"
-          loading="lazy">
+          loading="lazy"
+          title="TikTok player">
         </iframe>
       </div>
     </figure>
