@@ -119,35 +119,6 @@
   }
   .slot--youtube iframe{ width:100%; height:100%; border:0; border-radius:12px; }
 
-  /* MEDIA: TIKTOK SLOT */
-  .tiktok-box{
-    position: relative;
-    width: calc(var(--band-h) * 0.75);
-    aspect-ratio: 9 / 16;
-    display: block;
-    overflow: hidden;
-    margin: 0;
-  }
-  
-  .slot--tiktok{
-    pointer-events: auto;
-    display: block;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .tiktok-box iframe{
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    border: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-    background: transparent !important;
-  }
-
   /* MEDIA: LOTTIE SLOT */
   .slot--lottie .lot-box{
     --lot-shrink: 0.85;
@@ -2082,15 +2053,14 @@
     </figure>
     
     <!-- 25) Videos – Landmines BTS TikTok -->
-    <figure class="slot slot--tiktok" id="landmines-bts-tiktok">
-      <div class="tiktok-box">
+    <figure class="slot slot--video" id="landmines-bts-tiktok">
+      <div class="video-box">
         <iframe
-          src="https://www.tiktok.com/player/v1/7414307908718120238?autoplay=0&loop=0&controls=1&progress_bar=1"
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          referrerpolicy="strict-origin-when-cross-origin"
+          src="https://player.vimeo.com/video/1127317659?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
-          title="TikTok player">
+          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+          allowfullscreen
+          title=”Landmines BTS TikTok Video">
         </iframe>
       </div>
     </figure>
