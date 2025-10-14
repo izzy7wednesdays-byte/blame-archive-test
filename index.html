@@ -470,7 +470,9 @@
 <div class="hwrap" id="hwrap">
   <div class="rail">
 
-    /* ========= WELCOME ========= */
+    <!-- ========================= -->
+            <!-- WELCOME -->
+    <!-- ========================= -->
     <!-- 1) A Special Message From... -->
     <figure class="slot" id="special-message">
       <img
@@ -581,7 +583,7 @@
       </div>
     </figure>
     
-    <!-- 15): Spotify playlist -->
+    <!-- 15) Spotify playlist -->
     <figure class="slot slot--spotify" id="playlist-ex">
       <div class="sp-box">
         <iframe data-testid="embed-iframe"
@@ -593,7 +595,23 @@
       </div>
     </figure>
 
-    <!-- 9): YouTube – Light Sleeper Visualizer -->
+    <!-- ========================= -->
+          <!-- LIGHT SLEEPER -->
+    <!-- ========================= -->
+    <!-- 16) Lottie — Light Sleeper Title -->
+    <figure class="slot slot--lottie" id="lightsleeper-title">
+      <div class="lot-box">
+        <dotlottie-wc
+          src="Lottie/light-sleeper-title.lottie"
+          autoplay
+          loop
+          speed="2"
+          style="width:100%;height:100%">
+        </dotlottie-wc>
+      </div>
+    </figure>
+    
+    <!-- 17) YouTube – Light Sleeper Visualizer -->
     <figure class="slot slot--youtube" id="lightsleeper-visualizer">
       <div class="yt-box">
         <iframe
@@ -606,20 +624,29 @@
       </div>
     </figure>
 
-    <!-- 9: Lottie — Light Sleeper Title -->
-    <figure class="slot slot--lottie" id="lightsleeper-title">
-      <div class="lot-box">
-        <dotlottie-wc
-          src="Lottie/light-sleeper-title.lottie"
-          autoplay
-          loop
-          speed="2"
-          style="width:100%;height:100%">
-        </dotlottie-wc>
-      </div>
+    <!-- 18) GIF - About Light Sleeper -->
+    <figure class="slot" id="lightsleeper-about"
+      data-overlay-src="img/light-sleeper/lightsleeper-about.webp?v=2"
+      data-overlay-alt="About Light Sleeper">
+      <img src="img/light-sleeper/tv-message-1.webp?v=2" alt="TV message" loading="lazy" decoding="async" style="cursor:zoom-in;">
     </figure>
 
-    <!-- 11: Vimeo (portrait 1080×1920) - Light Sleeper -->
+    <!-- 19) AUTUMN TEXT -->
+    <figure class="slot" id="autumn-text">
+      <img src="img/light-sleeper/autumn-text.webp?v=3" alt="Autumn text" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 20) BLAME IT Notes App -->
+    <figure class="slot" id="blame-it-notesapp">
+      <img src="img/light-sleeper/blame-it-notesapp.webp?v=2" alt="Blame It notes app" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 21) Silver Star Overlay -->
+    <figure class="slot" id="silver-star1-1">
+      <img src="img/extra/silver-star1.webp?v=2" alt="silver star" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 22) Vimeo - Light Sleeper Studio -->
     <figure class="slot slot--video" id="lightsleeper-studio">
       <div class="video-box">
         <iframe
@@ -632,26 +659,23 @@
       </div>
     </figure>
 
-    <!-- 12: GIF slot (opens overlay to show lightsleeper-about.png) -->
-    <figure class="slot" id="lightsleeper-about"
-      data-overlay-src="img/light-sleeper/lightsleeper-about.webp?v=2"
-      data-overlay-alt="About Light Sleeper">
-      <img src="img/light-sleeper/tv-message-1.webp?v=2" alt="TV message" loading="lazy" decoding="async" style="cursor:zoom-in;">
-    </figure>
-
-    <!-- 13: GIF slot (opens overlay to show light-sleeper-chords.png) -->
+    <!-- 23) GIF - Click for Chordz Gif -->
     <figure class="slot" id="izzymacarthur-withguitar"
       data-overlay-src="img/light-sleeper/lightsleeper-chords.webp?v=3"
       data-overlay-alt="Izzy with Guitar">
       <img src="img/light-sleeper/izzymacarthur-withguitar.webp?v=1" alt="Light Sleeper Chords" loading="lazy" decoding="async" style="cursor:zoom-in;">
     </figure>
 
-    <!-- 46: Text - Click4Chordz -->
+    <!-- 24) Text - Click4Chordz -->
     <figure class="slot slot--text" id="click4chordz">
-      <div class="text-box">click<br>4<br>chordz</div>
+      <div class="text-box">
+        click<br>
+        4<br>
+        chordz
+      </div>
     </figure>
 
-    <!-- 15: SOUND (SoundCloud) — click image to play/pause -->
+    <!-- 25) SOUND (SoundCloud) — Play Light Sleeper -->
     <figure class="slot slot--sc" id="play-lightsleeper"
             data-sc-url="https://soundcloud.com/izzy-macarthur/light-sleeper">
       <img class="sc-trigger"
@@ -660,22 +684,20 @@
       <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
     </figure>
 
-    <!-- 15: AUTUMN TEXT -->
-    <figure class="slot" id="autumn-text">
-      <img src="img/light-sleeper/autumn-text.webp?v=3" alt="Autumn text" loading="lazy" decoding="async">
+    <!-- 26) YouTube – Light Sleeper – Behind the Song – Holly Humberstone Deep End Placeholder -->
+    <figure class="slot slot--youtube" id="lightsleeper-behindthesong">
+      <div class="yt-box">
+        <iframe
+          src="https://www.youtube.com/embed/tie87p1l9YM?si=rP307mgprtgeQVX-"
+          title="Light Sleeper – Behind the Song"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
     </figure>
-
-    <!-- 16: BLAME IT Notes App -->
-    <figure class="slot" id="blame-it-notesapp">
-      <img src="img/light-sleeper/blame-it-notesapp.webp?v=2" alt="Blame It notes app" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 16: Silver star over blame it notesapp -->
-    <figure class="slot" id="silver-star1-1">
-      <img src="img/extra/silver-star1.webp?v=2" alt="silver star" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 33: Vimeo – Broken Breathing (16:9) -->
+    
+    <!-- 27) Vimeo – Broken Breathing (16:9) -->
     <figure class="slot slot--video" id="broken-breathing">
       <div class="video-box">
         <iframe
@@ -688,20 +710,10 @@
       </div>
     </figure>
 
-    <!-- 17: YouTube – Light Sleeper – Behind the Song – Holly Humberstone Deep End Placeholder -->
-    <figure class="slot slot--youtube" id="lightsleeper-behindthesong">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/tie87p1l9YM?si=rP307mgprtgeQVX-"
-          title="Light Sleeper – Behind the Song"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 18: Exit Wounds Title  -->
+    <!-- ========================= -->
+          <!-- EXIT WOUNDS -->
+    <!-- ========================= -->
+    <!-- 28) Exit Wounds Title  -->
     <figure class="slot" id="exitwounds-title">
       <img src="img/exit-wounds/exit-wounds-title.webp?v=2" alt="Exit Wounds Title" loading="lazy" decoding="async">
     </figure>
