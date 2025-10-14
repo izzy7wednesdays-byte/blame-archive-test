@@ -120,37 +120,60 @@
   .slot--youtube iframe{ width:100%; height:100%; border:0; border-radius:12px; }
 
   /* TikTok slot */
-  .tiktok-box {
+  .tiktok-box{
     position: relative;
     width: calc(var(--band-h) * 0.75);
     aspect-ratio: 9 / 16;
-    overflow: hidden;
     display: block;
+    overflow: hidden;
     margin: 0;
-  }  
-  .slot--tiktok {
+  }
+  
+  .slot--tiktok{
     pointer-events: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-  }  
-  .tiktok-box .tiktok-embed {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    border: none;
   }
-  .tiktok-box iframe {
+  
+  /* TikTok injects blockquote > section > (div...) > iframe with fixed px.
+     We hard-override all layers to fill the box. */
+  .tiktok-box .tiktok-embed{
+    position: absolute !important;
+    inset: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    border: none !important;
     margin: 0 !important;
     padding: 0 !important;
-    display: block;
-    background: transparent;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  
+  .tiktok-box .tiktok-embed > section{
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Catch any inner wrappers TikTok injects */
+  .tiktok-box .tiktok-embed *{
+    box-sizing: border-box;
+  }
+  
+  /* Finally, force the iframe itself to fill */
+  .tiktok-box iframe{
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    background: transparent !important;
   }
 
   /* Lottie slot */
@@ -2076,14 +2099,14 @@
     <!-- 24) Videos – Landmines BTS TikTok -->
     <figure class="slot slot--tiktok" id="landmines-bts-tiktok">
       <div class="tiktok-box">
-          <blockquote
-            class="tiktok-embed"
-            cite="https://www.tiktok.com/@izzyrmac/video/7414307908718120238"
-            data-video-id="7414307908718120238">
-            <section></section>
-          </blockquote>
-        </div>
-      </figure>
+        <iframe
+          src="https://www.tiktok.com/embed/v2/7414307908718120238"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          loading="lazy">
+        </iframe>
+      </div>
+    </figure>
 
     <!-- 25) YouTube – Landmines Behind the Scenes -->
     <figure class="slot slot--youtube" id="landmines-bts">
