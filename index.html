@@ -502,28 +502,22 @@
     --rot:0deg; 
     --z:54; 
   }
-  #backtruck-2{ 
-    --left:1932svh; 
-    --scale:.29; 
-    --y:27svh; 
-    --x:0svh; 
-    --rot:2deg; 
-    --z:56; 
-    pointer-events:none;
-  }
-  #backtruck-1{ 
-    --left:1935svh; 
-    --scale:.29; 
-    --y:3svh; 
-    --x:0svh; 
-    --rot:4deg; 
-    --z:55; 
-    pointer-events:none;
-  }
+  #backtruck-2{ --left:1932svh; --scale:.29; --y:27svh; --x:0svh; --rot:2deg; --z:56; pointer-events:none;}
+  #backtruck-1{ --left:1935svh; --scale:.29; --y:3svh; --x:0svh; --rot:4deg; --z:55; pointer-events:none; }
   #glitter-truck-2{ --left:1864svh; --scale:.6; --y:-22svh; --x:0svh; --rot:0deg; --z:57; pointer-events:none;}
 
   /* ========= MERCH SECTION ========= */
-  #merch-title{ --left:2050svh; --scale:.35; --y:40svh; --x:10svh; --rot:0deg; --z:40; }
+  ##landmines-matches{ --left:1935svh; --scale:.35; --y:60svh; --x:0svh; --rot:-2deg; --z:40; pointer-events:none;  }
+  #matches-title{ --left:1935svh; --scale:.35; --y:40svh; --x:0svh; --rot:-3deg; --z:40; pointer-events:none; }
+  #fire-meme{ 
+    --left:1965svh; 
+    --scale:.29; 
+    --y:10svh; 
+    --x:0svh; 
+    --rot:0deg; 
+    --z:55; 
+    pointer-events:none;
+  }
   /* ========= LONDON SECTION ========= */
   #london-title{ --left:2250svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
   /* ========= WHAT'S NEXT SECTION ========= */
@@ -2038,9 +2032,19 @@
     <!-- ========================= -->
            <!-- THE MERCH -->
     <!-- ========================= --> 
-     <!-- 24: Merch – Merch Title -->
-    <figure class="slot" id="merch-title">
-      <img src="img/placeholders/merch.webp?v=2" alt="The Star Tarot Card" loading="lazy" decoding="async">
+    <!-- 1) Merch – Landmines Matches -->
+    <figure class="slot" id="landmines-matches">
+      <img src="img/matches/landmines-matches.webp?v=1" alt="Landmines Matches" loading="lazy" decoding="async">
+    </figure>
+    
+     <!-- 2) Merch – Matches & Merch Title -->
+    <figure class="slot" id="matchbooks-title">
+      <img src="img/matches/matches-merch.webp?v=1" alt="Matches + Merch Title" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 2) Merch – Merch Title -->
+    <figure class="slot" id="fire-meme">
+      <img src="img/matches/fire-meme.webp?v=1" alt="Framed Fire Meme" loading="lazy" decoding="async">
     </figure>
 
     <!-- 24: London – London Title -->
