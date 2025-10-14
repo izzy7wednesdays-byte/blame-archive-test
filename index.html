@@ -446,21 +446,21 @@
   #shoot-bts-2{ --left:1572svh; --scale:.38; --ar:9/16; --y:5svh; --x:0svh; --rot:0deg; --z:48; }
   #dorm-mirror{ --left:1587svh; --scale:.35; --y:42svh; --x:0svh; --rot:0.0deg; --z:40; pointer-events:none; }
   /* ========= VIDEO SECTION ========= */
+  #misery-bts{ --left:1612svh; --scale:.38; --y:62svh; --x:0svh; --rot:0deg; --z:39; }
+  #buddy-gif{ --left:1612svh; --scale:.15; --y:45svh; --x:0svh; --rot:0.0deg; --z:53; pointer-events:none; }
   #video-title-gif{ --left:1589svh; --scale:.20; --y:10svh; --x:10svh; --rot:-3deg; --z:40; pointer-events:none; }
   #video-title-camcorder{ --left:1587svh; --scale:.54; --y:-14svh; --x:10svh; --rot:0deg; --z:41; pointer-events:none; }
-  #misery-bts{ --left:1612svh; --scale:.38; --y:62svh; --x:0svh; --rot:0deg; --z:39; }
   #misery-brainstorm-1{ --left:0svh; --scale:.28!important; --y:40svh; --x:0svh; --rot:0deg; --z:43; pointer-events: none; }
+  #misery-polaroids{ --left:-40svh!important; --scale:.38; --y:0svh; --x:0svh; --rot:0deg; --z:43; pointer-events: none; }
   #misery-brainstorm-arrow{ --left:10svh; --scale:.28!important; --y:40svh; --x:0svh; --rot:0deg; --z:43; pointer-events: none; }
   #misery-brainstorm-text{ --left:10svh; --scale:.18; --y:40svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
                     --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: lowercase; --text-color: #e1effa;}
-  #misery-brainstorm-2{ --left:40svh; --scale:.28!important; --y:40svh; --x:0svh; --rot:0deg; --z:43; pointer-events: none; }
-  #misery-polaroids{ --left:-40svh!important; --scale:.38; --y:0svh; --x:0svh; --rot:0deg; --z:43; pointer-events: none; }
-  #buddy-gif{ --left:1612svh; --scale:.15; --y:45svh; --x:0svh; --rot:0.0deg; --z:53; pointer-events:none; }
   #editing-misery-thought{ --left:1662svh; --scale:.20; --y:75svh; --x:0svh; --rot:2deg; --z:41; pointer-events:none; }
   #editing-misery{ --left:1665svh; --scale:.25; --y:80svh; --x:0svh; --rot:90deg; --z:40; pointer-events:none; }
-  #happy-easter{ --left:1708svh; --scale:.27; --ar:16/9; --y:65svh; --x:0svh; --rot:0.0deg; --z:50; }
-  #cake-boss{ --left:1700svh; --scale:.25; --ar:16/9; --y:38svh; --x:0svh; --rot:0.0deg; --z:51; }
+  #misery-brainstorm-2{ --left:40svh; --scale:.28!important; --y:40svh; --x:0svh; --rot:0deg; --z:43; pointer-events: none; }
   #the-cake{ --left:1690svh; --scale:.25; --ar:16/9; --y:5svh; --x:0svh; --rot:0.0deg; --z:52; }
+  #cake-boss{ --left:1700svh; --scale:.25; --ar:16/9; --y:38svh; --x:0svh; --rot:0.0deg; --z:51; }
+  #happy-easter{ --left:1708svh; --scale:.27; --ar:16/9; --y:65svh; --x:0svh; --rot:0.0deg; --z:50; }
   #dab-video{ --left:1740svh; --scale:.25; --ar:16/9; --y:5svh; --x:0svh; --rot:0.0deg; --z:54; }
   #exitwounds-film-roll{ --left:1860svh; --scale:.65; --y:65svh; --x:0svh; --rot:-90deg; --z:56; pointer-events:none; }
   #exitwounds-bts{ --left:1760svh; --scale:.4; --y:5svh; --x:0svh; --rot:0deg; --z:55; }
@@ -1564,19 +1564,6 @@
     <figure class="slot" id="ep-cover">
       <img src="img/artwork/ep-cover.webp?v=1" alt="Blame it on a Bad Dream EP Cover Art" loading="lazy" decoding="async">
     </figure>
-    
-    <!-- 43: YouTube – Misery Missing Company Behind the Scenes -->
-    <figure class="slot slot--youtube" id="misery-bts">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/xTEO4nrPAxg?si=AETAqKiEoCS8J_hK"
-          title="Misery Missing Company Behind the Scenes"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
 
     <!-- ========================= -->
            <!-- THE ARTWORK -->
@@ -1716,7 +1703,25 @@
     <!-- ========================= -->
            <!-- THE VIDEOS -->
     <!-- ========================= --> 
-    <!-- 9: Videos – Lottie — The Videos Title -->
+    <!-- 1) YouTube – Misery Missing Company Behind the Scenes -->
+    <figure class="slot slot--youtube" id="misery-bts">
+      <div class="yt-box">
+        <iframe
+          src="https://www.youtube.com/embed/xTEO4nrPAxg?si=AETAqKiEoCS8J_hK"
+          title="Misery Missing Company Behind the Scenes"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </figure>
+
+    <!-- 2) Videos – Misery Brainstorm -->
+    <figure class="slot" id="buddy-gif">
+      <img src="img/video/buddy-cakeboss.gif?v=1" alt="Cake Boss Gif" loading="lazy" decoding="async">
+    </figure>
+    
+    <!-- 3) Videos – Lottie — The Videos Title -->
     <figure class="slot slot--lottie" id="video-title-gif">
       <div class="lot-box">
         <dotlottie-wc
@@ -1729,49 +1734,52 @@
       </div>
     </figure>
 
-    <!-- ##: Videos – Editing misery video thought bubble -->
+    <!-- 4) Videos – The Videos Title Camcorder -->
     <figure class="slot" id="video-title-camcorder">
       <img src="img/video/video-title-camcorder.webp?v=1" alt="Videos Section Title Camcorder Overlay" loading="lazy" decoding="async">
     </figure>
 
-    <!-- ##: Videos – Editing misery video thought bubble -->
+    <!-- 5) Videos – Misery Brainstorm -->
+    <figure class="slot" id="misery-brainstorm-1">
+      <img src="img/video/misery-brainstorm-1.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 6) Videos – Misery Polaroids -->
+    <figure class="slot" id="misery-polaroids">
+      <img src="img/video/misery-video-polaroids.gif?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 7) Videos – Misery Brainstorm Arrow -->
+    <figure class="slot" id="misery-brainstorm-arrow">
+      <img src="img/video/misery-brainstorm-arrow.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 8) Videos – Misery Brainstorm Text -->
+    <figure class="slot slot--text" id="misery-brainstorm-text">
+      <div class="text-box">
+        brainstorming the<br>
+        misery visualizer<br>
+        (ft. my horrible<br>
+        sketches)
+      </div>
+    </figure>
+
+    <!-- 9) Videos – Editing misery video thought bubble -->
     <figure class="slot" id="editing-misery-thought">
       <img src="img/video/editing-misery-thought.webp?v=1" alt="Editing Misery Thought Bubble" loading="lazy" decoding="async">
     </figure>
     
-    <!-- ##: Videos – Editing misery video -->
+    <!-- 10) Videos – Editing misery video -->
     <figure class="slot" id="editing-misery">
       <img src="img/video/editing-misery-video.webp?v=1" alt="Editing Misery Video" loading="lazy" decoding="async">
     </figure>
 
-    <!-- ##: Videos – Happy Easter (Misery BTS) -->
-    <figure class="slot slot--video" id="happy-easter">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1126857557?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Happy Easter BTS Misery Video">
-        </iframe>
-      </div>
+    <!-- 11) Videos – Misery Brainstorm 2 -->
+    <figure class="slot" id="misery-brainstorm-2">
+      <img src="img/video/misery-brainstorm-2.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
     </figure>
 
-    <!-- ##: Videos – Cake Boss (Misery BTS) -->
-    <figure class="slot slot--video" id="cake-boss">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1126857359?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Cake Boss BTS Misery Video">
-        </iframe>
-      </div>
-    </figure>
-
-    
-    <!-- ##: Videos – The Cake (Misery BTS) -->
+    <!-- 12) Videos – The Cake (Misery BTS) -->
     <figure class="slot slot--video" id="the-cake">
       <div class="video-box">
         <iframe
@@ -1784,12 +1792,33 @@
       </div>
     </figure>
 
-     <!-- ##: Videos – Misery Brainstorm -->
-    <figure class="slot" id="buddy-gif">
-      <img src="img/video/buddy-cakeboss.gif?v=1" alt="Cake Boss Gif" loading="lazy" decoding="async">
+    <!-- 13) Videos – Cake Boss (Misery BTS) -->
+    <figure class="slot slot--video" id="cake-boss">
+      <div class="video-box">
+        <iframe
+          src="https://player.vimeo.com/video/1126857359?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          loading="lazy"
+          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+          allowfullscreen
+          title=”Cake Boss BTS Misery Video">
+        </iframe>
+      </div>
     </figure>
 
-    <!-- ##: Videos – Dab Video (Misery BTS) -->
+    <!-- 14) Videos – Happy Easter (Misery BTS) -->
+    <figure class="slot slot--video" id="happy-easter">
+      <div class="video-box">
+        <iframe
+          src="https://player.vimeo.com/video/1126857557?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          loading="lazy"
+          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+          allowfullscreen
+          title=”Happy Easter BTS Misery Video">
+        </iframe>
+      </div>
+    </figure>
+
+    <!-- 15) Videos – Dab Video (Misery BTS) -->
     <figure class="slot slot--video" id="dab-video">
       <div class="video-box">
         <iframe
@@ -1802,12 +1831,12 @@
       </div>
     </figure>
 
-    <!-- ##: Videos – Exit Wounds Film Roll -->
+    <!-- 16) Videos – Exit Wounds Film Roll -->
     <figure class="slot" id="exitwounds-film-roll">
       <img src="img/video/exitwounds-film-roll.webp?v=1" alt="Cake Boss Gif" loading="lazy" decoding="async">
     </figure>
 
-    <!-- 43: YouTube – Exit Wounds Behind the Scenes -->
+    <!-- 21) YouTube – Exit Wounds Behind the Scenes -->
     <figure class="slot slot--youtube" id="exitwounds-bts">
       <div class="yt-box">
         <iframe
@@ -1819,36 +1848,9 @@
         </iframe>
       </div>
 
-    <!-- ##: Videos – Misery Brainstorm -->
-    <figure class="slot" id="misery-brainstorm-1">
-      <img src="img/video/misery-brainstorm-1.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 47: Videos – Misery Brainstorm Arrow -->
-    <figure class="slot" id="misery-brainstorm-arrow">
-      <img src="img/video/misery-brainstorm-arrow.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 47: Videos – Misery Brainstorm Text -->
-    <figure class="slot slot--text" id="misery-brainstorm-text">
-      <div class="text-box">
-        brainstorming the<br>
-        misery visualizer<br>
-        (ft. my horrible<br>
-        sketches)
-      </div>
-    </figure>
-
-    <!-- ##: Videos – Misery Brainstorm 2 -->
-    <figure class="slot" id="misery-brainstorm-2">
-      <img src="img/video/misery-brainstorm-2.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- ##: Videos – Misery Polaroids -->
-    <figure class="slot" id="misery-polaroids">
-      <img src="img/video/misery-video-polaroids.gif?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
-    </figure>
-
+    <!-- ========================= -->
+           <!-- THE MERCH -->
+    <!-- ========================= --> 
      <!-- 24: Merch – Merch Title -->
     <figure class="slot" id="merch-title">
       <img src="img/placeholders/merch.webp?v=2" alt="The Star Tarot Card" loading="lazy" decoding="async">
