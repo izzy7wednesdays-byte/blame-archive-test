@@ -119,6 +119,24 @@
   }
   .slot--youtube iframe{ width:100%; height:100%; border:0; border-radius:12px; }
 
+  /* TikTok slot */
+  .tiktok-box{
+    /* size it like your other boxes—no inline styles needed */
+    width: clamp(325px, 42svh, 605px);
+    height: auto;
+    display: block;
+  }  
+  .slot--tiktok{
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }  
+  .tiktok-box .tiktok-embed{
+    width: 100%;
+    margin: 0;
+  }
+
   /* Lottie slot */
   .slot--lottie .lot-box{
     --lot-shrink: 0.85;
@@ -273,6 +291,7 @@
   .slot img,
   .slot--spotify .sp-box,
   .slot--youtube .yt-box,
+  .slot--tiktok .tiktok-box,
   .slot--lottie .lot-box,
   .slot--video .video-box,
   .slot--gif .gif-box, .slot--text .text-box {
@@ -549,6 +568,13 @@
     --x:0svh; 
     --rot:87.0deg; 
     --z:52; }
+  #landmines-bts-tiktok{
+  --left: 1800svh;   /* adjust for horizontal placement */
+  --scale: .6;
+  --y: 10svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 56;}
   /* ========= MERCH SECTION ========= */
   #merch-title{ --left:1750svh; --scale:.35; --y:40svh; --x:10svh; --rot:0deg; --z:40; }
   /* ========= LONDON SECTION ========= */
@@ -556,7 +582,9 @@
   /* ========= WHAT'S NEXT SECTION ========= */
   #next-title{ --left:3250svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
 </style>
-  
+
+  <!-- TikTok Embed Script -->
+  <script async src="https://www.tiktok.com/embed.js"></script>
 
   <!-- Lottie web component -->
   <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"></script>
@@ -1997,9 +2025,17 @@
     <figure class="slot" id="exitwounds-subway">
       <img src="img/video/exitwounds-subway.webp?v=1" alt="Exit Wounds Subway Gif" loading="lazy" decoding="async">
     </figure>
-
     
-      
+    <!-- 24) Videos – Landmines BTS TikTok -->
+    <figure class="slot slot--tiktok" id="landmines-bts-tiktok">
+      <blockquote
+        class="tiktok-embed"
+        cite="https://www.tiktok.com/@izzymacarthur/video/7345678912345678901"
+        data-video-id="7345678912345678901">
+        <section></section>
+      </blockquote>
+    </figure>
+        
     <!-- ========================= -->
            <!-- THE MERCH -->
     <!-- ========================= --> 
