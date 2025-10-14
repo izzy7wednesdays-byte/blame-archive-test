@@ -469,7 +469,8 @@
 <body>
 <div class="hwrap" id="hwrap">
   <div class="rail">
-    
+
+    /* ========= WELCOME ========= */
     <!-- 1) A Special Message From... -->
     <figure class="slot" id="special-message">
       <img
@@ -484,56 +485,55 @@
         alt="Izzy MacArthur" />
     </figure>
 
-    <!-- 4) Social Buttons -->
-      <!-- a) Social Sparkles (decorative, no link) -->
-      <figure class="slot" id="social-sparkles">
-        <img src="img/social-buttons/social-sparkles.webp?v=2"
-          alt="Social Sparkles" loading="lazy" decoding="async">
-      </figure>
+    <!-- 3) Social Sparkles (decorative, no link) -->
+    <figure class="slot" id="social-sparkles">
+      <img src="img/social-buttons/social-sparkles.webp?v=2"
+         alt="Social Sparkles" loading="lazy" decoding="async">
+     </figure>
 
-      <!-- b) TikTok -->
-      <figure class="slot" id="tiktok">
-        <a href="https://www.tiktok.com/@izzyrmac" target="_blank" rel="noopener noreferrer">
-          <img src="img/social-buttons/tiktok.webp?v=2" alt="TikTok" loading="lazy" decoding="async">
-        </a>
-      </figure>
+    <!-- 4) Instagram -->
+    <figure class="slot" id="instagram">
+      <a href="https://www.instagram.com/izzyrmac/" target="_blank" rel="noopener noreferrer">
+        <img src="img/social-buttons/instagram.webp?v=2" alt="Instagram" loading="lazy" decoding="async">
+      </a>
+    </figure>
 
-      <!-- c) Instagram -->
-      <figure class="slot" id="instagram">
-        <a href="https://www.instagram.com/izzyrmac/" target="_blank" rel="noopener noreferrer">
-          <img src="img/social-buttons/instagram.webp?v=2" alt="Instagram" loading="lazy" decoding="async">
-        </a>
-      </figure>
+    <!-- 5) TikTok -->
+    <figure class="slot" id="tiktok">
+      <a href="https://www.tiktok.com/@izzyrmac" target="_blank" rel="noopener noreferrer">
+        <img src="img/social-buttons/tiktok.webp?v=2" alt="TikTok" loading="lazy" decoding="async">
+      </a>
+    </figure>
 
-      <!-- d) Twitter -->
-      <figure class="slot" id="twitter">
-        <a href="https://x.com/izzymacarthur" target="_blank" rel="noopener noreferrer">
-          <img src="img/social-buttons/twitter.webp?v=2" alt="Twitter" loading="lazy" decoding="async">
-        </a>
-      </figure>
+    <!-- 6) Twitter -->
+    <figure class="slot" id="twitter">
+      <a href="https://x.com/izzymacarthur" target="_blank" rel="noopener noreferrer">
+        <img src="img/social-buttons/twitter.webp?v=2" alt="Twitter" loading="lazy" decoding="async">
+      </a>
+    </figure>
 
-      <!-- e) Discord -->
-      <figure class="slot" id="discord">
-        <a href="https://discord.gg/ThyMfuESqz" target="_blank" rel="noopener noreferrer">
-          <img src="img/social-buttons/discord.webp?v=2" alt="Discord" loading="lazy" decoding="async">
-        </a>
-      </figure>
+    <!-- 7) Discord -->
+    <figure class="slot" id="discord">
+      <a href="https://discord.gg/ThyMfuESqz" target="_blank" rel="noopener noreferrer">
+        <img src="img/social-buttons/discord.webp?v=2" alt="Discord" loading="lazy" decoding="async">
+      </a>
+    </figure>
 
-      <!-- f) Spotify -->
-      <figure class="slot" id="spotify">
-        <a href="https://open.spotify.com/artist/0Fs1CZdAsOEh1R93yK4UAE?si=DmfA6Y10Td2h7h4O5gCqBA" target="_blank" rel="noopener noreferrer">
-          <img src="img/social-buttons/spotify.webp?v=2" alt="Spotify" loading="lazy" decoding="async">
-        </a>
-      </figure>
+    <!-- 8) Spotify -->
+    <figure class="slot" id="spotify">
+      <a href="https://open.spotify.com/artist/0Fs1CZdAsOEh1R93yK4UAE?si=DmfA6Y10Td2h7h4O5gCqBA" target="_blank" rel="noopener noreferrer">
+        <img src="img/social-buttons/spotify.webp?v=2" alt="Spotify" loading="lazy" decoding="async">
+      </a>
+    </figure>
 
-      <!-- g) Apple Music -->
-      <figure class="slot" id="apple-music">
-        <a href="https://music.apple.com/us/artist/izzy-macarthur/1741386936" target="_blank" rel="noopener noreferrer">
-          <img src="img/social-buttons/apple-music.webp?v=2" alt="Apple Music" loading="lazy" decoding="async">
-        </a>
-      </figure>
+    <!-- 9) Apple Music -->
+    <figure class="slot" id="apple-music">
+      <a href="https://music.apple.com/us/artist/izzy-macarthur/1741386936" target="_blank" rel="noopener noreferrer">
+        <img src="img/social-buttons/apple-music.webp?v=2" alt="Apple Music" loading="lazy" decoding="async">
+      </a>
+    </figure>
     
-    <!-- 4) Note from Izzy -->
+    <!-- 10) Note from Izzy -->
     <figure class="slot" id="torn-note">
       <img
         src="img/welcome/torn-note.webp?v=2"
@@ -541,22 +541,47 @@
       </a>
     </figure>
 
-    <!-- 5) Tracklist -->
+    <!-- 11) Tracklist -->
     <figure class="slot" id="tracklist">
       <img
         src="img/welcome/tracklist.webp?v=2"
         alt="Tracklist" />
     </figure>
 
-    <!-- 6) The Scrapbook -->
+    <!-- 12) The Scrapbook -->
     <figure class="slot" id="the-scrapbook">
       <img
         src="img/welcome/the-scrapbook.webp?v=1"
         alt="THE STORY BEHIND:" />
     </figure>
-    
 
-    <!-- 8): Spotify playlist -->
+    <!-- 13) Lottie — LFG -->
+    <figure class="slot slot--lottie" id="lfg">
+      <div class="lot-box">
+        <dotlottie-wc
+          src="Lottie/lfg.lottie"
+          autoplay
+          loop
+          speed="1"
+          style="width:100%;height:100%">
+         </dotlottie-wc>
+      </div>
+    </figure>
+
+    <!-- 14) Lottie — Pink Flashing Arrow -->
+    <figure class="slot slot--lottie" id="pink-flashing-arrow">
+      <div class="lot-box">
+        <dotlottie-wc
+          src="Lottie/pink-flashing-arrow.lottie"
+          autoplay
+          loop
+          speed="1"
+          style="width:100%;height:100%">
+         </dotlottie-wc>
+      </div>
+    </figure>
+    
+    <!-- 15): Spotify playlist -->
     <figure class="slot slot--spotify" id="playlist-ex">
       <div class="sp-box">
         <iframe data-testid="embed-iframe"
@@ -591,32 +616,6 @@
           speed="2"
           style="width:100%;height:100%">
         </dotlottie-wc>
-      </div>
-    </figure>
-
-    <!-- 10: Lottie — Pink Flashing Arrow -->
-    <figure class="slot slot--lottie" id="pink-flashing-arrow">
-      <div class="lot-box">
-        <dotlottie-wc
-          src="Lottie/pink-flashing-arrow.lottie"
-          autoplay
-          loop
-          speed="1"
-          style="width:100%;height:100%">
-         </dotlottie-wc>
-      </div>
-    </figure>
-
-    <!-- 10: Lottie — LFG -->
-    <figure class="slot slot--lottie" id="lfg">
-      <div class="lot-box">
-        <dotlottie-wc
-          src="Lottie/lfg.lottie"
-          autoplay
-          loop
-          speed="1"
-          style="width:100%;height:100%">
-         </dotlottie-wc>
       </div>
     </figure>
 
