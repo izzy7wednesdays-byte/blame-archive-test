@@ -468,32 +468,10 @@
   #mazzy-star{ --left:1818svh; --scale:.26; --ar:407/482; --y:64svh; --x:0svh; --rot:0.0deg; --z:54; }
   #tisthedamn{ --left:1840svh;--scale:.26; --ar:357/481; --y:64svh;--x:0svh; --rot:0.0deg; --z:55; }
   #exitwounds-bts{ --left:1859svh; --scale:.4; --y:60svh; --x:0svh; --rot:0deg; --z:57; }
-  #tv-unboxing{ --left:1780svh; --scale:.56; --ar:9/16; --y:2svh; --x:0svh; --rot:0.0deg; --z:54; }
-  #videos-about{ 
-    --left:1805svh; 
-    --scale:.20; 
-    --y:33svh; 
-    --x:0svh; 
-    --rot:-2.0deg; 
-    --z:55; }
-  #exitwounds-subway{ 
-    --left:1801svh; 
-    --scale:.29; 
-    --y:18svh; 
-    --x:0svh; 
-    --rot:87.0deg; 
-    --z:49; 
-    pointer-events:none;
-  }
-  #landmines-bts-tiktok{
-  --left: 1853svh;
-  --scale:0.5;
-  --ar:9/16; 
-  --y: 3svh;
-  --x: 0svh;
-  --rot: -1deg;
-  --z: 55; 
-  }
+  #tv-unboxing{ --left:1780svh; --scale:.56; --ar:9/16; --y:2svh; --x:0svh; --rot:0.0deg; --z:49; }
+  #videos-about{ --left:1805svh; --scale:.20; --y:33svh; --x:0svh; --rot:-2.0deg; --z:50; }
+  #exitwounds-subway{ --left:1801svh; --scale:.29; --y:18svh; --x:0svh; --rot:87.0deg; --z:49; pointer-events:none; }
+  #landmines-bts-tiktok{--left: 1853svh;--scale:0.5;--ar:9/16; --y: 3svh;--x: 0svh; --rot: -1deg;--z: 55; }
   #landmines-bts{ 
     --left:1877svh; 
     --scale:.4; 
@@ -507,25 +485,20 @@
   #glitter-truck-2{ --left:1864svh; --scale:.6; --y:-22svh; --x:0svh; --rot:0deg; --z:57; pointer-events:none;}
 
   /* ========= MERCH SECTION ========= */
-  #landmines-matches{ --left:1925svh; --scale:.35; --y:60svh; --x:0svh; --rot:-2deg; --z:60; pointer-events:none;  }
-  #matchbooks-title{ --left:1935svh; --scale:.25; --y:35svh; --x:0svh; --rot:-3deg; --z:61; pointer-events:none; }
-  #fire-meme{ 
-    --left:1950svh; 
-    --scale:.26; 
-    --y:16svh; 
-    --x:0svh; 
-    --rot:0deg; 
-    --z:60; 
-    pointer-events:none;
-  }
+  #landmines-matches{ --left:1923svh; --scale:.35; --y:60svh; --x:0svh; --rot:-2deg; --z:60; pointer-events:none;  }
+  #pretty-little-liars{ --left:1943svh; --scale:.35; --y:60svh; --x:0svh; --rot:-2deg; --z:60; pointer-events:none;  }
+  #pretty-little-liars-text{ --left:1473svh; --scale:.18; --y:10svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
+                             --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: lowercase; --text-color: #4C58E9; }
+  #matchbooks-title{ --left:1935svh; --scale:.20; --y:38svh; --x:0svh; --rot:-3deg; --z:61; pointer-events:none; }
+  #fire-meme{ --left:1950svh; --scale:.26; --y:16svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none; }
   #candle-lighting{ 
     --left:1970svh; 
     --scale:.26; 
+    --ar:9/16;
     --y:8svh; 
     --x:0svh; 
     --rot:0deg; 
     --z:60; 
-    pointer-events:none;
   }
   /* ========= LONDON SECTION ========= */
   #london-title{ --left:2250svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
@@ -2045,18 +2018,32 @@
     <figure class="slot" id="landmines-matches">
       <img src="img/matches/landmines-matches.webp?v=1" alt="Landmines Matches" loading="lazy" decoding="async">
     </figure>
+
+    <!-- 2) Merch – Pretty Little Liars Gif -->
+    <figure class="slot" id="pretty-little-liars">
+      <img src="img/matches/pretty-little-liars.gif?v=1" alt="Landmines Matches" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 3) Merch – Pretty Little Liars Text -->
+    <figure class="slot slot--text" id="pretty-little-liars-text">
+      <div class="text-box">
+        anytime i light a match, i feel like<br>
+        i’m committing a crime straight out<br>
+        of pretty little liars
+      </div>
+    </figure>
     
-     <!-- 2) Merch – Matches & Merch Title -->
+     <!-- 4) Merch – Matches & Merch Title -->
     <figure class="slot" id="matchbooks-title">
       <img src="img/matches/matches-merch.webp?v=1" alt="Matches + Merch Title" loading="lazy" decoding="async">
     </figure>
 
-    <!-- 2) Merch – Merch Title -->
+    <!-- 5) Merch – Merch Title -->
     <figure class="slot" id="fire-meme">
       <img src="img/matches/fire-meme.webp?v=1" alt="Framed Fire Meme" loading="lazy" decoding="async">
     </figure>
 
-    <!-- 25) Merch – Candle Lighting -->
+    <!-- 6) Merch – Candle Lighting -->
     <figure class="slot slot--video" id="candle-lighting">
       <div class="video-box">
         <iframe
