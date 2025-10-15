@@ -489,24 +489,53 @@
   #pretty-little-liars{ --left:1990svh; --scale:.22; --y:73svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none;  }
   #pretty-little-liars-text{ --left:1990svh; --scale:.22; --y:65svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
                              --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9; }
-  #matchbooks-title{ --left:1965svh; --scale:.14; --y:49svh; --x:0svh; --rot:-3deg; --z:61; pointer-events:none; }
+  #m-title{ --left:1963svh; --scale:.16; --y:49svh; --x:0svh; --rot:-3deg; --z:61; pointer-events:none; }
   #fire-meme{ --left:1950svh; --scale:.26; --y:16svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none; }
-  #candle-lighting{ 
-    --left:1981svh; 
-    --scale:.45; 
-    --ar:9/16;
-    --y:-1svh; 
+  #candle-lighting{ --left:1981svh; --scale:.45; --ar:9/16; --y:-1svh; --x:0svh; --rot:0deg; --z:60; }
+  #early-posters{ --left:2006svh; --scale:.45;--y:-2svh; --x:0svh; --rot:0deg; --z:59; pointer-events:none; }
+  #early-posters-text{ 
+    --left:2026svh; 
+    --scale:.55;
+    --y:20svh; 
     --x:0svh; 
     --rot:0deg; 
     --z:60; 
+    pointer-events:none;
+    --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9; }
+  #poster-arrow{ 
+    --left:2035svh; 
+    --scale:.55;
+    --y:10svh; 
+    --x:0svh; 
+    --rot:0deg; 
+    --z:60; 
+    pointer-events:none;
   }
-  #early-posters{ 
-    --left:2006svh; 
-    --scale:.45;
+  #thank-you-text{ 
+    --left:2040svh; 
+    --scale:.55;
+    --y:5svh; 
+    --x:0svh; 
+    --rot:0deg; 
+    --z:60; 
+    pointer-events:none;
+    --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9; }
+  #poster{ 
+    --left:2056svh; 
+    --scale:.55;
+    --y:3svh; 
+    --x:0svh; 
+    --rot:0deg; 
+    --z:61; 
+    pointer-events:none;
+  }
+  #selfie-poster{ 
+    --left:2076svh; 
+    --scale:.55;
     --y:-2svh; 
     --x:0svh; 
     --rot:0deg; 
-    --z:59; 
+    --z:60; 
     pointer-events:none;
   }
   /* ========= LONDON SECTION ========= */
@@ -2043,7 +2072,7 @@
     </figure>
     
      <!-- 4) Merch – Matches & Merch Title -->
-    <figure class="slot" id="matchbooks-title">
+    <figure class="slot" id="m-title">
       <img src="img/matches/matches-merch.webp?v=1" alt="Matches + Merch Title" loading="lazy" decoding="async">
     </figure>
 
@@ -2068,6 +2097,39 @@
     <!-- 5) Merch – Early Posters -->
     <figure class="slot" id="early-posters">
       <img src="img/matches/poster-earlyversion.webp?v=1" alt="Early Versions of Posters" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 3) Merch – Early Posters Text -->
+    <figure class="slot slot--text" id="early-posters-text">
+      <div class="text-box">
+        anytime i light a match, i feel like<br>
+        i’m committing a crime straight out<br>
+        of pretty little liars
+      </div>
+    </figure>
+
+    <!-- 5) Merch – Posters Arrow -->
+    <figure class="slot" id="poster-arrow">
+      <img src="img/matches/poster-arrow.webp?v=1" alt="Early Versions of Posters" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 3) Merch – Early Posters Text -->
+    <figure class="slot slot--text" id="thank-you-text">
+      <div class="text-box">
+        anytime i light a match, i feel like<br>
+        i’m committing a crime straight out<br>
+        of pretty little liars
+      </div>
+    </figure>
+
+    <!-- 5) Merch – Poster -->
+    <figure class="slot" id="poster">
+      <img src="img/matches/poster.webp?v=1" alt="Final Version of Poster" loading="lazy" decoding="async">
+    </figure>
+
+    <!-- 5) Merch – Poster Selfie -->
+    <figure class="slot" id="selfie-poster">
+      <img src="img/matches/selfie-poster.webp?v=1" alt="Selfie with Poster" loading="lazy" decoding="async">
     </figure>
 
     <!-- 24: London – London Title -->
