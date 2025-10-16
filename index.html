@@ -212,40 +212,40 @@
   }
 
 /* ===== MEDIA: OVERLAY CARD (Scrollable & Height-locked) ===== */
-  #overlay .ov-card{
-    --ov-max-w: min(72vw, 1100px);
-    --ov-max-h: 72svh;
-    --ov-pad:   1svh;
-  
-    max-width:  var(--ov-max-w);
-    max-height: var(--ov-max-h);
-    padding:    var(--ov-pad);
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    background: none;
-    border-radius: 0;
-    box-shadow: none;
-  
-    /* NEW: maintain height lock & scroll within the frame */
-    overflow-y: auto;
-    overflow-x: hidden;
-    overscroll-behavior: contain;
-  }
+  #overlay .ov-card {
+  --ov-max-w: min(72vw, 1100px);
+  --ov-max-h: 72svh;
+  --ov-pad:   1svh;
+
+  display: block;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scroll-behavior: auto; /* normal feel, not “sticky” */
+
+  max-width:  var(--ov-max-w);
+  max-height: var(--ov-max-h);
+  padding:    var(--ov-pad);
+  margin: 0 auto;
+
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
   
   /* ===== Inner image should fit and stay contained ===== */
     /* Corrected: only affects overlay image, not all slots */
   #overlay .ov-card > img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 12px;
-    display: block;
-  }
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
 
   /* ===== BEHAVIOR: GROW-ON-HOVER for clickable slots ===== */
   .slot[data-overlay-src] img {
