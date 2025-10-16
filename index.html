@@ -213,26 +213,33 @@
 
 /* ===== MEDIA: OVERLAY CARD (Scrollable & Height-locked) ===== */
   #overlay .ov-card {
-  --ov-max-w: min(72vw, 1100px);
-  --ov-max-h: 72svh;
-  --ov-pad:   1svh;
-
-  display: block;
-  position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
-  overscroll-behavior: contain;
-  scroll-behavior: auto; /* normal feel, not “sticky” */
-
-  max-width:  var(--ov-max-w);
-  max-height: var(--ov-max-h);
-  padding:    var(--ov-pad);
-  margin: 0 auto;
-
-  background: none;
-  border-radius: 0;
-  box-shadow: none;
-}
+    --ov-max-w: min(72vw, 1100px);
+    --ov-max-h: 72svh;
+    --ov-pad:   1svh;
+  
+    display: block;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scroll-behavior: auto; /* normal feel, not “sticky” */
+  
+    max-width:  var(--ov-max-w);
+    max-height: var(--ov-max-h);
+    padding:    var(--ov-pad);
+    margin: 0 auto;
+  
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  #overlay .ov-card::-webkit-scrollbar {
+    width: 6px;
+ }
+  #overlay .ov-card::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+    border-radius: 3px;
+  }
   
   /* ===== Inner image should fit and stay contained ===== */
     /* Corrected: only affects overlay image, not all slots */
@@ -270,7 +277,6 @@
 
   /* ========= BEHAVIOR: OPENING OVERLAY FLOAT EFFECT (inside overlay scroll) ========= */
   #overlay .ov-card {
-    perspective: 1000px;
     overflow-y: auto;
     overflow-x: hidden;
     overscroll-behavior: contain;
