@@ -191,6 +191,25 @@
     outline-color: #4C58E9;
     outline-offset: 6px;
   }
+  
+/* ===== OVERLAY: BASE ===== */
+  #overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.75);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s ease, visibility .35s ease;
+  }
+  #overlay.is-open {
+    display: flex !important;
+    opacity: 1;
+    visibility: visible;
+  }
 
 /* ===== MEDIA: OVERLAY CARD (Scrollable & Height-locked) ===== */
   #overlay .ov-card{
