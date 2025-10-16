@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/fonts.css">
 
 <style>
-  /* ========= V134 — NEW OPEN/CLOSE BEHAVIOR ========= */
+  /* ========= V134 — NEW OPEN/CLOSE BEHAVIOR == FIX: SLOT ISSUE WITH IMAGE OVERRIDE ========= */
   
   /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -216,8 +216,9 @@
     overscroll-behavior: contain;
   }
   
-  /* Inner image should fit and stay contained */
-  #overlay .ov-card img{
+  /* ===== Inner image should fit and stay contained ===== */
+    /* Corrected: only affects overlay image, not all slots */
+  #overlay .ov-card > img {
     width: auto;
     height: auto;
     max-width: 100%;
