@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/fonts.css">
 
 <style>
-  /* ========= V133 — NEW OPEN/CLOSE BEHAVIOR ========= */
+  /* ========= V134 — NEW OPEN/CLOSE BEHAVIOR ========= */
   
   /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -192,69 +192,92 @@
     outline-offset: 6px;
   }
 
-  /* MEDIA: OVERLAY SLOT */
-  #overlay{
-    position: fixed !important;
-    inset: 0;
-    display: none;                 /* toggled via .is-open */
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0,.72);
-    z-index: 9999;
-  }
+/* ===== MEDIA: OVERLAY CARD (Scrollable & Height-locked) ===== */
   #overlay .ov-card{
     --ov-max-w: min(72vw, 1100px);
     --ov-max-h: 72svh;
     --ov-pad:   1svh;
-
+  
     max-width:  var(--ov-max-w);
     max-height: var(--ov-max-h);
     padding:    var(--ov-pad);
-
-    display: flex; align-items: center; justify-content: center;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
     background: none;
-    border-radius: 0px;
+    border-radius: 0;
     box-shadow: none;
+  
+    /* NEW: maintain height lock & scroll within the frame */
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
   }
-  #overlay img{
-    width: 100%; height: 100%;
+  
+  /* Inner image should fit and stay contained */
+  #overlay .ov-card img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
-    border-radius: 12px; display: block;
+    border-radius: 12px;
+    display: block;
   }
-  #overlay.is-open{ display: flex !important; }
 
-  /* ===== OVERLAY: FADE ANIMATION ===== */
-#overlay {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .35s ease, visibility .35s ease;
-}
-#overlay.is-open {
-  opacity: 1;
-  visibility: visible;
-  display: flex !important;
-}
+  /* ===== BEHAVIOR: GROW-ON-HOVER for clickable slots ===== */
+  .slot[data-overlay-src] img {
+    transition: transform .25s ease, filter .25s ease;
+  }
+  .slot[data-overlay-src] img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.08);
+    cursor: zoom-in;
+  }
+  
+  /* Optional: smooth fade for overlay image itself */
+  #overlay .ov-card img {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity .35s ease, transform .35s ease;
+  }
+  #overlay.is-open .ov-card img {
+    opacity: 1;
+    transform: scale(1);
+  }
 
-/* ===== GROW-ON-HOVER for clickable slots ===== */
-.slot[data-overlay-src] img {
+  /* ========= BEHAVIOR: OPENING OVERLAY FLOAT EFFECT (inside overlay scroll) ========= */
+  #overlay .ov-card {
+    perspective: 1000px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+  }
+  #overlay .ov-card img {
+    will-change: transform;
+    transition: transform .3s ease-out;
+  }
+  
+  /* When the user scrolls inside the overlay, JS will add .is-scrolling */
+  #overlay .ov-card.is-scrolling img {
+    transform: translateY(var(--scroll-shift, 0px)) scale(1.02);
+  }
+
+/* ========= GROW-ON-HOVER for ALL interactive media ========= */
+/* Overlays, SoundCloud, and Audio triggers */
+.slot[data-overlay-src] img,
+.slot--sc .sc-trigger,
+.slot--audio .audio-trigger {
   transition: transform .25s ease, filter .25s ease;
 }
-.slot[data-overlay-src] img:hover {
-  transform: scale(1.05);
-  filter: brightness(1.08);
-  cursor: zoom-in;
-}
+.slot[data-overlay-src] img:hover,
+.slot--sc .sc-trigger:hover,
+.slot--audio .audio-trigger:hover {
+  transform: scale(
 
-/* Optional: smooth fade for overlay image itself */
-#overlay .ov-card img {
-  opacity: 0;
-  transform: scale(0.98);
-  transition: opacity .35s ease, transform .35s ease;
-}
-#overlay.is-open .ov-card img {
-  opacity: 1;
-  transform: scale(1);
-}
 
   /* ========= TEXT SLOT (plain, non-clickable) ========= */
     /* TEXT SLOT */
@@ -2419,6 +2442,27 @@
   // Close on click-outside or ESC
   overlay.addEventListener('click', e => { if (e.target === overlay) closeOverlay(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOverlay(); });
+})();
+</script>
+
+  // FLOAT SCRIPT: GROW on HOVER for ALL CLICKABLE/LINKED slots
+<script>
+(() => {
+  const ovCard = document.querySelector('#overlay .ov-card');
+  const ovImg  = ovCard?.querySelector('img');
+  if (!ovCard || !ovImg) return;
+
+  let scrollTimer;
+  ovCard.addEventListener('scroll', () => {
+    const maxShift = 15;
+    const progress = ovCard.scrollTop / (ovCard.scrollHeight - ovCard.clientHeight);
+    const shift = (progress - 0.5) * maxShift;
+    ovCard.style.setProperty('--scroll-shift', `${shift}px`);
+    ovCard.classList.add('is-scrolling');
+
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => ovCard.classList.remove('is-scrolling'), 150);
+  });
 })();
 </script>
 
