@@ -293,6 +293,26 @@
     object-fit: contain;
   }
 
+    /* ========= FINAL CLICK ZONE CORRECTION ========= */
+  /* Make clickable media fill slot area exactly (without changing scale) */
+  .slot[data-overlay-src] img,
+  .slot--sc .sc-trigger,
+  .slot--audio .audio-trigger,
+  .slot a img {
+    position: relative;
+    pointer-events: auto;
+  }
+  
+  /* Ensure rotated / transformed slots remain fully clickable */
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    position: absolute;
+    pointer-events: auto;
+    transform-style: preserve-3d;
+  }
+
   .slot[data-overlay-src],
   .slot--sc,
   .slot--audio,
@@ -301,6 +321,15 @@
     align-items: flex-end;
     pointer-events: auto;
   }
+
+    /* TEMP DEBUG — outlines clickable slots, remove when satisfied */
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    outline: 1px dashed rgba(255,255,255,0.15);
+  }
+
 
   /* ========= BEHAVIOR: OPENING OVERLAY FLOAT EFFECT (inside overlay scroll) ========= */
   #overlay .ov-card {
