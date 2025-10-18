@@ -13,7 +13,8 @@
 <link rel="stylesheet" href="css/fonts.css">
 
 <style>
-  /* ========= V139 — FIXING VIMEO / YOUTUBE LINK CLICK ISSUES ========= */
+  
+  /* ========= V140 — FIXING VIMEO / YOUTUBE LINK CLICK ISSUES & FRAME SIZE FOR CLICKABLE OBJECTS ========= */
   
   /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -282,16 +283,6 @@
   .slot a {
     pointer-events: auto;
   }
-  
-  .slot[data-overlay-src] img,
-  .slot--sc .sc-trigger,
-  .slot--audio .audio-trigger,
-  .slot a img {
-    display: block;
-    height: calc(var(--band-h) * var(--scale));
-    width: auto;
-    object-fit: contain;
-  }
 
     /* ========= FINAL CLICK ZONE CORRECTION ========= */
   /* Make clickable media fill slot area exactly (without changing scale) */
@@ -303,16 +294,81 @@
     pointer-events: auto;
   }
   
-   /* Ensure rotated / transformed slots remain fully clickable — but don’t affect video slots */
+   /* Keep clickable elements interactive, but do NOT remove them from layout */
   .slot[data-overlay-src],
   .slot--sc,
   .slot--audio,
   .slot a {
-    position: absolute;
+    position: relative;
     pointer-events: auto;
-    transform-style: preserve-3d;
+    transform-style: flat;
+    z-index: 5;
   }
   
+  /* Ensure video and YouTube slots sit above overlaps and size correctly */
+  .slot--video,
+  .slot--youtube {
+    position: relative;
+    pointer-events: auto;
+    z-index: 10;
+  }
+
+      /* ========= CLICKABLE BOX SIZING FIX ========= */
+    /* Force each clickable area to match the exact size of its visible media */
+    .slot[data-overlay-src],
+    .slot--sc,
+    .slot--audio,
+    .slot a,
+    .slot--youtube,
+    .slot--vimeo {
+      display: inline-block;
+      width: auto;
+      height: auto;
+    }
+    
+    /* Their internal media defines their real size */
+    .slot[data-overlay-src] img,
+    .slot--sc .sc-trigger,
+    .slot--audio .audio-trigger,
+    .slot--youtube iframe,
+    .slot--vimeo iframe,
+    .slot a img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+      /* ========= CLICKABLE BOX SIZING FIX ========= */
+    /* Force each clickable area to match the exact size of its visible media */
+    .slot[data-overlay-src],
+    .slot--sc,
+    .slot--audio,
+    .slot a,
+    .slot--youtube,
+    .slot--vimeo {
+      display: inline-block;
+      width: auto;
+      height: auto;
+    }
+    
+    /* Their internal media defines their real size */
+    .slot[data-overlay-src] img,
+    .slot--sc .sc-trigger,
+    .slot--audio .audio-trigger,
+    .slot--youtube iframe,
+    .slot--vimeo iframe,
+    .slot a img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
   /* Restore normal flow and pointer behavior for video embeds */
   .slot--youtube,
   .slot--vimeo {
