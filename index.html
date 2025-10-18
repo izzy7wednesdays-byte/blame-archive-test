@@ -292,26 +292,25 @@
   }
 
 /* ========= GROW-ON-HOVER for ALL interactive media ========= */
-/* ========= GROW-ON-HOVER for ALL interactive media & linked images ========= */
 /* Base state for all clickable media */
 .slot[data-overlay-src] img,
 .slot--sc .sc-trigger,
 .slot--audio .audio-trigger,
 .slot a img {
-  transition: transform .25s ease, filter .25s ease;
+  transition: transform .45s cubic-bezier(0.25, 1, 0.5, 1),
+              filter .45s cubic-bezier(0.25, 1, 0.5, 1);
   cursor: pointer;
+  transform-origin: center center;
 }
 
-/* Hover behavior (slight scale + brightness) */
+/* Hover behavior (gentle growth + brightness) */
 .slot[data-overlay-src] img:hover,
 .slot--sc .sc-trigger:hover,
 .slot--audio .audio-trigger:hover,
 .slot a img:hover {
   transform: scale(1.05);
   filter: brightness(1.08);
-  cursor: pointer;
 }
-
 
   /* ========= TEXT SLOT (plain, non-clickable) ========= */
     /* TEXT SLOT */
