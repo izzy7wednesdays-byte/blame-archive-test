@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/fonts.css">
 
 <style>
-  /* ========= V138 — FIXING LINK CLICK ISSUES ========= */
+  /* ========= V139 — FIXING VIMEO / YOUTUBE LINK CLICK ISSUES ========= */
   
   /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -303,7 +303,7 @@
     pointer-events: auto;
   }
   
-  /* Ensure rotated / transformed slots remain fully clickable */
+   /* Ensure rotated / transformed slots remain fully clickable — but don’t affect video slots */
   .slot[data-overlay-src],
   .slot--sc,
   .slot--audio,
@@ -312,7 +312,15 @@
     pointer-events: auto;
     transform-style: preserve-3d;
   }
-
+  
+  /* Restore normal flow and pointer behavior for video embeds */
+  .slot--youtube,
+  .slot--vimeo {
+    position: relative;
+    pointer-events: auto;
+    z-index: 2; /* ensures iframe sits above neighboring layers */
+  }
+  
   .slot[data-overlay-src],
   .slot--sc,
   .slot--audio,
@@ -322,14 +330,25 @@
     pointer-events: auto;
   }
 
-    /* TEMP DEBUG — outlines clickable slots, remove when satisfied */
+  /* Make sure iframe fills its box and accepts pointer events */
+  .slot--youtube iframe,
+  .slot--vimeo iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+    display: block;
+    border: none;
+  }
+
+/* ========= BEHAVIOR: TEMP DEBUG — outlines clickable slots ========= */
   .slot[data-overlay-src],
+  .slot--youtube,
+  .slot--vimeo,
   .slot--sc,
   .slot--audio,
   .slot a {
     outline: 1px dashed rgba(255,255,255,0.15);
   }
-
 
   /* ========= BEHAVIOR: OPENING OVERLAY FLOAT EFFECT (inside overlay scroll) ========= */
   #overlay .ov-card {
