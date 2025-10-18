@@ -13,8 +13,7 @@
 <link rel="stylesheet" href="css/fonts.css">
 
 <style>
-  
-  /* ========= V141 — FIXING VIMEO / YOUTUBE LINK CLICK ISSUES & FRAME SIZE FOR CLICKABLE OBJECTS ========= */
+  /* ========= V138 — FIXING LINK CLICK ISSUES ========= */
   
   /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -275,59 +274,61 @@
     transform: scale(1);
   }
 
-    /* ========= INTERACTIVE MEDIA HIT ZONE FIX (clean) ========= */
-    /* Make interactive media respect your per-slot scaling and stay clickable */
-    .slot[data-overlay-src],
-    .slot--sc,
-    .slot--audio,
-    .slot a {
-      display: inline-flex;
-      align-items: flex-end;
-      pointer-events: auto;
-      position: relative;   /* stay in normal flow */
-      z-index: 5;           /* above decor, below videos */
-    }
-    
-    /* Each clickable image keeps its scaled size set by --scale */
-    .slot[data-overlay-src] img,
-    .slot--sc .sc-trigger,
-    .slot--audio .audio-trigger,
-    .slot a img {
-      display: block;
-      height: calc(var(--band-h) * var(--scale));
-      width: auto;
-      object-fit: contain;
-      pointer-events: auto;
-    }
-    
+  /* ========= INTERACTIVE MEDIA HIT ZONE FIX ========= */
+  /* Ensure all clickable media fills its slot area for consistent hit zones */
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    pointer-events: auto;
+  }
+  
+  .slot[data-overlay-src] img,
+  .slot--sc .sc-trigger,
+  .slot--audio .audio-trigger,
+  .slot a img {
+    display: block;
+    height: calc(var(--band-h) * var(--scale));
+    width: auto;
+    object-fit: contain;
+  }
+
     /* ========= FINAL CLICK ZONE CORRECTION ========= */
-    /* Keep YouTube/Vimeo embeds functional and above neighbors */
-    .slot--youtube,
-    .slot--vimeo {
-      position: relative;
-      pointer-events: auto;
-      z-index: 10;
-    }
-    
-    /* Iframe fills its box and accepts pointer events */
-    .slot--youtube iframe,
-    .slot--vimeo iframe {
-      width: 100%;
-      height: 100%;
-      display: block;
-      border: none;
-      pointer-events: auto;
-    }
-    
-    /* ========= BEHAVIOR: TEMP DEBUG — outlines clickable slots ========= */
-    .slot[data-overlay-src],
-    .slot--youtube,
-    .slot--vimeo,
-    .slot--sc,
-    .slot--audio,
-    .slot a {
-      outline: 1px dashed rgba(255,255,255,0.15);
-    }
+  /* Make clickable media fill slot area exactly (without changing scale) */
+  .slot[data-overlay-src] img,
+  .slot--sc .sc-trigger,
+  .slot--audio .audio-trigger,
+  .slot a img {
+    position: relative;
+    pointer-events: auto;
+  }
+  
+  /* Ensure rotated / transformed slots remain fully clickable */
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    position: absolute;
+    pointer-events: auto;
+    transform-style: preserve-3d;
+  }
+
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    display: inline-flex;
+    align-items: flex-end;
+    pointer-events: auto;
+  }
+
+    /* TEMP DEBUG — outlines clickable slots, remove when satisfied */
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    outline: 1px dashed rgba(255,255,255,0.15);
+  }
 
 
   /* ========= BEHAVIOR: OPENING OVERLAY FLOAT EFFECT (inside overlay scroll) ========= */
