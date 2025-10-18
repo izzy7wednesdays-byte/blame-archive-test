@@ -430,6 +430,36 @@
   .slot:not([data-overlay-src]):not(.slot--sc):not(.slot--audio):not(:has(a)) {
     pointer-events: none;
   }
+
+  /* ===== FINAL LAYER + DEBUG FIX for YouTube/Vimeo ===== */
+  
+  /* Ensure video wrappers receive clicks and sit above neighbors */
+  .slot--youtube,
+  .slot--vimeo {
+    position: relative;
+    pointer-events: auto;
+    z-index: 40; /* sits above image/audio layers */
+  }
+  
+  /* Ensure iframe itself accepts pointer events and fills box */
+  .slot--youtube iframe,
+  .slot--vimeo iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+    pointer-events: auto;
+  }
+  
+  /* === Include video slots in debug outlines === */
+  .slot[data-overlay-src],
+  .slot--youtube,
+  .slot--vimeo,
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    outline: 1px dashed rgba(255,255,255,0.15);
+  }
   
   /* ========= PER-SLOT CUSTOMIZATION (svh units) ========= */
   
