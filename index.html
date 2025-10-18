@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/fonts.css">
 
 <style>
-  /* ========= V137 — NEW GROW ON HOVER BEHAVIOR ========= */
+  /* ========= V138 — FIXING LINK CLICK ISSUES ========= */
   
   /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -274,6 +274,26 @@
     transform: scale(1);
   }
 
+  /* ========= INTERACTIVE MEDIA HIT ZONE FIX ========= */
+  /* Ensure all clickable media fills its slot area for consistent hit zones */
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    pointer-events: auto;
+  }
+  
+  .slot[data-overlay-src] img,
+  .slot--sc .sc-trigger,
+  .slot--audio .audio-trigger,
+  .slot a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+
   /* ========= BEHAVIOR: OPENING OVERLAY FLOAT EFFECT (inside overlay scroll) ========= */
   #overlay .ov-card {
     overflow-y: auto;
@@ -366,6 +386,12 @@
   .slot--video .video-box,
   .slot--gif .gif-box, .slot--text .text-box {
     filter: none !important;
+  }
+
+  /* ========= NON-CLICKABLE SLOT SAFEGUARD ========= */
+  /* Decorative or text-only slots ignore pointer events so they don’t block clicks */
+  .slot:not([data-overlay-src]):not(.slot--sc):not(.slot--audio):not(:has(a)) {
+    pointer-events: none;
   }
   
   /* ========= PER-SLOT CUSTOMIZATION (svh units) ========= */
