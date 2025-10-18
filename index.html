@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/fonts.css">
 
 <style>
-  /* ========= V136 — NEW OPEN/CLOSE BEHAVIOR == FIX: SLOT ISSUE WITH IMAGE OVERRIDE + ZOOM-IN CURSOR ========= */
+  /* ========= V137 — NEW GROW ON HOVER BEHAVIOR ========= */
   
   /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -264,7 +264,6 @@
     cursor: pointer;
   }
   
-  /* Optional: smooth fade for overlay image itself */
   #overlay .ov-card img {
     opacity: 0;
     transform: scale(0.98);
@@ -293,21 +292,26 @@
   }
 
 /* ========= GROW-ON-HOVER for ALL interactive media ========= */
-  /* Overlays, SoundCloud, and Audio triggers */
-  .slot[data-overlay-src] img,
-  .slot--sc .sc-trigger,
-  .slot--audio .audio-trigger {
-    transition: transform .25s ease, filter .25s ease;
-    cursor: pointer;
-  }
-  
-  .slot[data-overlay-src] img:hover,
-  .slot--sc .sc-trigger:hover,
-  .slot--audio .audio-trigger:hover {
-    transform: scale(1.05);
-    filter: brightness(1.08);
-    cursor: pointer;
-  }
+/* ========= GROW-ON-HOVER for ALL interactive media & linked images ========= */
+/* Base state for all clickable media */
+.slot[data-overlay-src] img,
+.slot--sc .sc-trigger,
+.slot--audio .audio-trigger,
+.slot a img {
+  transition: transform .25s ease, filter .25s ease;
+  cursor: pointer;
+}
+
+/* Hover behavior (slight scale + brightness) */
+.slot[data-overlay-src] img:hover,
+.slot--sc .sc-trigger:hover,
+.slot--audio .audio-trigger:hover,
+.slot a img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.08);
+  cursor: pointer;
+}
+
 
   /* ========= TEXT SLOT (plain, non-clickable) ========= */
     /* TEXT SLOT */
