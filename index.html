@@ -431,35 +431,32 @@
     pointer-events: none;
   }
 
-  /* ===== FINAL LAYER + DEBUG FIX for YouTube/Vimeo ===== */
+  /* ===== YouTube + Vimeo clickability + debug outline ONLY ===== */
   
-  /* Ensure video wrappers receive clicks and sit above neighbors */
+  /* Make the video slot wrappers clickable and visible above others */
   .slot--youtube,
   .slot--vimeo {
     position: relative;
-    pointer-events: auto;
-    z-index: 40; /* sits above image/audio layers */
+    z-index: 50;          /* lifts above other slots */
+    pointer-events: auto; /* wrapper receives mouse input */
   }
   
-  /* Ensure iframe itself accepts pointer events and fills box */
+  /* Make the iframe inside playable and fill its box */
   .slot--youtube iframe,
   .slot--vimeo iframe {
     width: 100%;
     height: 100%;
     display: block;
     border: none;
-    pointer-events: auto;
+    pointer-events: auto; /* enables play/pause inside iframe */
   }
   
-  /* === Include video slots in debug outlines === */
-  .slot[data-overlay-src],
+  /* Add these to your existing debug outlines */
   .slot--youtube,
-  .slot--vimeo,
-  .slot--sc,
-  .slot--audio,
-  .slot a {
+  .slot--vimeo {
     outline: 1px dashed rgba(255,255,255,0.15);
   }
+
   
   /* ========= PER-SLOT CUSTOMIZATION (svh units) ========= */
   
