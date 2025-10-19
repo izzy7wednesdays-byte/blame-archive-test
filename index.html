@@ -372,11 +372,20 @@
   }
 
   .slot--lottie[data-link]:hover {
-  transform: scale(1.05);
-  filter: brightness(1.08);
-  transition: transform .35s cubic-bezier(0.25,1,0.5,1),
-              filter .35s cubic-bezier(0.25,1,0.5,1);
+    transform: scale(1.05);
+    filter: brightness(1.08);
+    transition: transform .35s cubic-bezier(0.25,1,0.5,1),
+                filter .35s cubic-bezier(0.25,1,0.5,1);
   }
+
+  .slot--lottie[data-overlay-src] lottie-player:hover {
+    transform: scale(1.05);
+    filter: brightness(1.08);
+    transition: transform .35s cubic-bezier(0.25,1,0.5,1),
+                filter .35s cubic-bezier(0.25,1,0.5,1);
+    cursor: pointer;
+  }
+
 
   /* ========= TEXT SLOT (plain, non-clickable) ========= */
   /* TEXT SLOT */
@@ -2700,5 +2709,43 @@
     });
   });
   </script>
+
+  <script>
+  /* ===== Lottie overlay trigger ===== */
+  (() => {
+    const overlay = document.getElementById('overlay');
+    const ovCard  = overlay.querySelector('.ov-card');
+    const ovImg   = overlay.querySelector('img');
+  
+    document.querySelectorAll('.slot--lottie[data-overlay-src]').forEach(slot => {
+      const lottie = slot.querySelector('lottie-player');
+      if (!lottie) return;
+  
+      // Make Lottie clickable
+      lottie.style.cursor = 'pointer';
+  
+      // Open overlay on click
+      lottie.addEventListener('click', e => {
+        e.stopPropagation();
+        const src = slot.getAttribute('data-overlay-src');
+        const alt = slot.getAttribute('data-overlay-alt') || '';
+  
+        ovImg.src = src;
+        ovImg.alt = alt;
+  
+        overlay.classList.add('is-open');
+      });
+    });
+  
+    // Close overlay when clicking outside or pressing ESC (reuse existing behavior)
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) overlay.classList.remove('is-open');
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') overlay.classList.remove('is-open');
+    });
+  })();
+  </script>
+
 </body>
 </html>
