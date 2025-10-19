@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/fonts.css">
 
 <style>
-  /* ========= V140 — ADDING CLICKABLE LOTTIE ========= */
+  /* ========= V141 — ADDING JSON FILE READER ========= */
   
   /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -1459,19 +1459,19 @@
       <img src="img/sleepwalking/sleepwalking-radio.webp?v=1" alt="Sleepwalking Radio Polaroid" loading="lazy" decoding="async">
     </figure>
     
-    <!-- 6) Sleepwalking – The Star Tarot Card -->
+    <!-- 6) SLEEPWALKING – The Star Tarot Card -->
     <figure class="slot" id="thestar-tarot">
       <img src="img/sleepwalking/thestar-tarot.webp?v=2" alt="The Star Tarot Card" loading="lazy" decoding="async">
     </figure>
 
-    <!-- 7) LOTTIE - SLEEPWALKING – TITLE -->
+    <!-- 7) LOTTIE — SLEEPWALKING TITLE SLOT -->
     <figure class="slot slot--lottie" id="sleepwalking-title">
       <div class="lot-box">
         <dotlottie-wc
-          src="Lottie/sleepwalking-title.lottie"
+          src="Lottie/sleepwalking-title-small-opt.json"
           autoplay
           loop
-          speed="0.5"
+          speed="1"
           style="width:100%;height:100%">
         </dotlottie-wc>
       </div>
@@ -2783,6 +2783,20 @@
       if (e.key === 'Escape') overlay.classList.remove('is-open');
     });
   })();
+  </script>
+
+  <!-- Step 4 — Lottie visibility optimization -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const players = document.querySelectorAll('dotlottie-wc');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(({ isIntersecting, target }) => {
+        if (isIntersecting) target.play?.();
+        else target.pause?.();
+      });
+    }, { threshold: 0.01 });
+    players.forEach(p => io.observe(p));
+  });
   </script>
 </body>
 </html>
