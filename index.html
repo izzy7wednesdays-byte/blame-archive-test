@@ -274,6 +274,8 @@
     transform: scale(1);
   }
 
+  
+
   /* ========= INTERACTIVE MEDIA HIT ZONE FIX ========= */
   /* Ensure all clickable media fills its slot area for consistent hit zones */
   .slot[data-overlay-src],
@@ -349,70 +351,77 @@
   }
 
 /* ========= GROW-ON-HOVER for ALL interactive media ========= */
-/* Base state for all clickable media */
-.slot[data-overlay-src] img,
-.slot--sc .sc-trigger,
-.slot--audio .audio-trigger,
-.slot a img {
-  transition: transform .45s cubic-bezier(0.25, 1, 0.5, 1),
-              filter .45s cubic-bezier(0.25, 1, 0.5, 1);
-  cursor: pointer;
-  transform-origin: center center;
-}
+  /* Base state for all clickable media */
+  .slot[data-overlay-src] img,
+  .slot--sc .sc-trigger,
+  .slot--audio .audio-trigger,
+  .slot a img {
+    transition: transform .45s cubic-bezier(0.25, 1, 0.5, 1),
+                filter .45s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    transform-origin: center center;
+  }
+  
+  /* Hover behavior (gentle growth + brightness) */
+  .slot[data-overlay-src] img:hover,
+  .slot--sc .sc-trigger:hover,
+  .slot--audio .audio-trigger:hover,
+  .slot a img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.08);
+  }
 
-/* Hover behavior (gentle growth + brightness) */
-.slot[data-overlay-src] img:hover,
-.slot--sc .sc-trigger:hover,
-.slot--audio .audio-trigger:hover,
-.slot a img:hover {
+  .slot--lottie[data-link]:hover {
   transform: scale(1.05);
   filter: brightness(1.08);
-}
+  transition: transform .35s cubic-bezier(0.25,1,0.5,1),
+              filter .35s cubic-bezier(0.25,1,0.5,1);
+  }
 
   /* ========= TEXT SLOT (plain, non-clickable) ========= */
-    /* TEXT SLOT */
-.slot--text .text-box{
-  /* core type */
-  font-family: var(--ff, "Thinker"), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-weight: var(--fw, 400);
-  font-style: var(--fstyle, normal);
-  font-stretch: var(--fstr, normal);
-  font-size: clamp(14px, calc(var(--band-h) * var(--scale) * var(--fs-mul, .11)), 120px);
-  line-height: var(--lh, 1.08);
-  letter-spacing: var(--ls, .01em);
-  word-spacing: var(--ws, 0);
-  color: var(--text-color, var(--fg));
-
-  /* text behavior */
-  text-align: var(--ta, left);
-  text-transform: var(--tt, none);
-  white-space: var(--ws-mode, normal);
-  text-wrap: var(--wrap, pretty);           /* or 'balance' */
-  hyphens: var(--hy, manual);
-  overflow-wrap: anywhere;
-  max-width: min(90svh, var(--ch, 28ch));
-
-  /* decoration / effects */
-  text-decoration: var(--dec, none);
-  text-underline-offset: var(--uoff, .15em);
-  text-decoration-thickness: var(--uthick, auto);
-  text-shadow: var(--shadow, none);
-  -webkit-text-stroke: var(--stroke, 0) var(--stroke-color, transparent);
-
-  /* optional gradient text */
-  background: var(--bgc, transparent);
-  -webkit-background-clip: var(--bgclip, initial);
-          background-clip: var(--bgclip, initial);
-
-  /* opentype / variable font controls */
-  font-variant-ligatures: var(--liga, normal);
-  font-feature-settings: var(--features, normal);
-  font-variation-settings: var(--axes, normal);
-
-  /* box (usually keep plain for “text only”) */
-  padding: var(--pad, 0);
-  border-radius: var(--br, 0);
-}
+  /* TEXT SLOT */
+  .slot--text .text-box{
+    /* core type */
+    font-family: var(--ff, "Thinker"), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: var(--fw, 400);
+    font-style: var(--fstyle, normal);
+    font-stretch: var(--fstr, normal);
+    font-size: clamp(14px, calc(var(--band-h) * var(--scale) * var(--fs-mul, .11)), 120px);
+    line-height: var(--lh, 1.08);
+    letter-spacing: var(--ls, .01em);
+    word-spacing: var(--ws, 0);
+    color: var(--text-color, var(--fg));
+  
+    /* text behavior */
+    text-align: var(--ta, left);
+    text-transform: var(--tt, none);
+    white-space: var(--ws-mode, normal);
+    text-wrap: var(--wrap, pretty);           /* or 'balance' */
+    hyphens: var(--hy, manual);
+    overflow-wrap: anywhere;
+    max-width: min(90svh, var(--ch, 28ch));
+  
+    /* decoration / effects */
+    text-decoration: var(--dec, none);
+    text-underline-offset: var(--uoff, .15em);
+    text-decoration-thickness: var(--uthick, auto);
+    text-shadow: var(--shadow, none);
+    -webkit-text-stroke: var(--stroke, 0) var(--stroke-color, transparent);
+  
+    /* optional gradient text */
+    background: var(--bgc, transparent);
+    -webkit-background-clip: var(--bgclip, initial);
+            background-clip: var(--bgclip, initial);
+  
+    /* opentype / variable font controls */
+    font-variant-ligatures: var(--liga, normal);
+    font-feature-settings: var(--features, normal);
+    font-variation-settings: var(--axes, normal);
+  
+    /* box (usually keep plain for “text only”) */
+    padding: var(--pad, 0);
+    border-radius: var(--br, 0);
+  }
 
     /* ===== Remove drop-shadows globally ===== */
   .slot img,
@@ -2661,25 +2670,35 @@
 </script>
 
   // FLOAT SCRIPT: GROW on HOVER for ALL CLICKABLE/LINKED slots
-<script>
-(() => {
-  const ovCard = document.querySelector('#overlay .ov-card');
-  const ovImg  = ovCard?.querySelector('img');
-  if (!ovCard || !ovImg) return;
+  <script>
+  (() => {
+    const ovCard = document.querySelector('#overlay .ov-card');
+    const ovImg  = ovCard?.querySelector('img');
+    if (!ovCard || !ovImg) return;
+  
+    let scrollTimer;
+    ovCard.addEventListener('scroll', () => {
+      const maxShift = 15;
+      const progress = ovCard.scrollTop / (ovCard.scrollHeight - ovCard.clientHeight);
+      const shift = (progress - 0.5) * maxShift;
+      ovCard.style.setProperty('--scroll-shift', `${shift}px`);
+      ovCard.classList.add('is-scrolling');
+  
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => ovCard.classList.remove('is-scrolling'), 150);
+    });
+  })();
+  </script>
 
-  let scrollTimer;
-  ovCard.addEventListener('scroll', () => {
-    const maxShift = 15;
-    const progress = ovCard.scrollTop / (ovCard.scrollHeight - ovCard.clientHeight);
-    const shift = (progress - 0.5) * maxShift;
-    ovCard.style.setProperty('--scroll-shift', `${shift}px`);
-    ovCard.classList.add('is-scrolling');
-
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(() => ovCard.classList.remove('is-scrolling'), 150);
+  <script>
+  /* ===== Clickable Lottie slots ===== */
+  document.querySelectorAll('.slot--lottie[data-link]').forEach(slot => {
+    slot.style.cursor = 'pointer';
+    slot.addEventListener('click', e => {
+      const url = slot.getAttribute('data-link');
+      if (url) window.open(url, '_blank', 'noopener,noreferrer');
+    });
   });
-})();
-</script>
-
+  </script>
 </body>
 </html>
