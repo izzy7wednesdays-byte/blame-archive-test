@@ -684,18 +684,19 @@
   #rsvp-arrow{ --left:2242svh; --scale:.036; --y:42svh; --x:0svh; --rot:16deg; --z:44; pointer-events:none; }
   #hangout-rsvp{ --left:2251svh; --scale:.17; --y:42svh; --x:0svh; --rot:11deg; --z:44; pointer-events:none; }
   #london-about{ --left:2280svh; --scale:.57; --y:41svh; --x:0svh; --rot:-8deg; --z:45; }
-  #onedirection{ --left:2280svh; --scale:.17; --y:10svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
+  #onedirection{ --left:2280svh; --scale:.16; --y:10svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #onedirection-text{ --left:2280svh; --scale:.1; --y:5svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none;
                       --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
-  #london-tv{ --left:2315svh; --scale:.46; --y:59svh; --x:0svh; --rot:0deg; --z:46; }
+  #hangout-tweet{ --left:2316svh; --scale:.44; --y:59svh; --x:0svh; --rot:0deg; --z:46; }
+  #london-tv{ --left:2320svh; --scale:.44; --y:59svh; --x:0svh; --rot:0deg; --z:46; }
   #londoncard-v1{ --left:2310svh; --scale:.35; --y:4svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
-  #londoncard-arrow-1{ --left:2334svh; --scale:.04; --y:3svh; --x:0svh; --rot:-63deg; --z:46; pointer-events:none; }
-  #londoncard-text{ --left:2339svh; --scale:.13; --y:14svh; --x:0svh; --rot:0deg; --z:46; pointer-events:none;
+  #londoncard-arrow-1{ --left:2335svh; --scale:.04; --y:3svh; --x:0svh; --rot:-63deg; --z:46; pointer-events:none; }
+  #londoncard-text{ --left:2339svh; --scale:.18; --y:14svh; --x:0svh; --rot:0deg; --z:46; pointer-events:none;
                     --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
-  #londoncard-front{ --left:2356svh; --scale:.35; --y:28svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
+  #londoncard-front{ --left:2358svh; --scale:.35; --y:28svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #londoncard-arrow-2{ --left:2346svh; --scale:.04; --y:33svh; --x:0svh; --rot:170deg; --z:46; pointer-events:none; }
-  #londoncard-back{ --left:2368svh; --scale:.26; --y:0.0svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
-  #film-strip{ --left:2388svh; --scale:.72; --y:26svh; --x:0svh; --rot:-5.0deg; --z:44; pointer-events:none; }
+  #londoncard-back{ --left:2369svh; --scale:.26; --y:0.0svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
+  #film-strip{ --left:2388svh; --scale:.73; --y:26svh; --x:0svh; --rot:-5.0deg; --z:44; pointer-events:none; }
   /* ========= WHAT'S NEXT SECTION ========= */
   #next-title{ --left:2550svh; --scale:.2; --y:30svh; --x:10svh; --rot:0deg; --z:40; }
 </style>
@@ -2320,22 +2321,22 @@
            <!-- LONDON -->
     <!-- ========================= --> 
 
-    <!-- 1) London – London Title -->
+    <!-- 1) IMG - London – London Title -->
     <figure class="slot" id="london-title">
       <img src="img/placeholders/london-2.png?v=1" alt="london placeholder" loading="lazy" decoding="async">
     </figure>
 
-    <!-- #) London – Hangout Poster -->
+    <!-- #) IMG - London – Hangout Poster -->
     <figure class="slot" id="hangout-poster">
       <img src="img/london/hangout-poster.webp?v=2" alt="London Hangout Poster" loading="lazy" decoding="async">
     </figure>
 
-    <!-- #) London – Camcorder -->
+    <!-- #) IMG - London – Camcorder -->
     <figure class="slot" id="london-camcorder">
       <img src="img/london/camcorder-london.webp?v=2" alt="Camcorder Overlay" loading="lazy" decoding="async">
     </figure>
 
-    <!-- #) London – Sleepwalking Live from London -->
+    <!-- #) VIMEO - London – Sleepwalking Live from London -->
     <figure class="slot slot--video" id="london-live-1">
       <div class="video-box">
         <iframe
@@ -2348,7 +2349,7 @@
       </div>
     </figure>
 
-    <!-- #) London – Landmines Live from London -->
+    <!-- #) VIMEO - London – Landmines Live from London -->
     <figure class="slot slot--video" id="london-live-2">
       <div class="video-box">
         <iframe
@@ -2361,7 +2362,7 @@
       </div>
     </figure>
 
-    <!-- #) YouTube – London Vlog -->
+    <!-- #) YOUTUBE – London Vlog -->
     <figure class="slot slot--youtube" id="hangout-vlog">
       <div class="yt-box">
         <iframe
@@ -2374,17 +2375,17 @@
       </div>
     </figure>
 
-    <!-- #) London – Hangout Rsvp -->
+    <!-- #) IMG - London – Hangout Rsvp -->
     <figure class="slot" id="hangout-rsvp">
       <img src="img/london/rsvp-hangout.webp?v=1" alt="Future Hangout RSVP" loading="lazy" decoding="async">
     </figure>
     
-    <!-- #) London – Hangout RSVP Arrow -->
+    <!-- #) IMG - London – Hangout RSVP Arrow -->
     <figure class="slot" id="rsvp-arrow">
       <img src="img/arrows/swirl-arrow-l.webp?v=1" alt="Swirl Arrow 1" loading="lazy" decoding="async">
     </figure>
     
-    <!-- #) London – Hangout RSVP Button -->
+    <!-- #) IMG:URL - London – Hangout RSVP Button -->
     <figure class="slot" id="rsvp-button">
       <a href="https://www.fvr.fan/izzymacarthur/hangoutrequests?tag=storyboard"
          target="_blank" rel="noopener noreferrer">
@@ -2393,28 +2394,33 @@
       </a>
     </figure>
 
-    <!-- #) London – Matchbook -->
+    <!-- #) IMG - London – Matchbook -->
 
-    <!-- #) About London (opens overlay to show about-london.png) -->
+    <!-- #) IMG:OVERLAY - About London (opens overlay to show about-london.png) -->
     <figure class="slot" id="london-about"
       data-overlay-src="img/london/london-about.webp?v=1"
       data-overlay-alt="About London (from my substack)">
       <img src="img/london/london-about.webp?v=2" alt="London Composition Book" loading="lazy" decoding="async" style="cursor:pointer;">
     </figure>
 
-    <!-- #) Gif - One Direction Gif -->
+    <!-- #) GIG - One Direction Gif -->
     <figure class="slot" id="onedirection">
       <img src="img/london/one-direction.gif?v=1" alt="One Direction Gif" loading="lazy" decoding="async">
     </figure>
 
-    <!-- 14) Text – One Direction Text -->
+    <!-- #) TEXT – One Direction Text -->
     <figure class="slot slot--text" id="onedirection-text">
       <div class="text-box">
         (sorry, i had to)<br>
       </div>
     </figure>
+
+    <!-- #) IMG - Tweet from Hangout -->
+    <figure class="slot" id="hangout-tweet">
+      <img src="img/london/hangout-tweet.webp?v=1" alt="Tweet from London Hangout" loading="lazy" decoding="async">
+    </figure>
     
-    <!-- #) More from London (opens overlay to show more photos) -->
+    <!-- #) LOTTIE - More from London (opens overlay to show more photos) -->
     <figure class="slot slot--lottie"
             id="london-tv"
             data-overlay-src="img/london/london-about.webp?v=1"
@@ -2430,17 +2436,17 @@
       </div>
     </figure>
     
-    <!-- #) London – Card V1 -->
+    <!-- #) IMG - London – Card V1 -->
     <figure class="slot" id="londoncard-v1">
       <img src="img/london/london-card-v1.webp?v=1" alt="Version 1 of London Baseball Card Front" loading="lazy" decoding="async">
     </figure>
     
-    <!-- #) London – Card Arrow -->
+    <!-- #) IMG - London – Card Arrow -->
     <figure class="slot" id="londoncard-arrow-1">
       <img src="img/arrows/swirl-arrow-r.webp?v=1" alt="Swirl Arrow 1" loading="lazy" decoding="async">
     </figure>
     
-    <!-- #) London – Card Text -->
+    <!-- #) TEXT - London – Card Text -->
     <figure class="slot slot--text" id="londoncard-text">
       <div class="text-box">
         london hang<br>
@@ -2452,22 +2458,22 @@
       </div>
     </figure>
     
-    <!-- #) London – Card Arrow 2 -->
+    <!-- #) IMG - London – Card Arrow 2 -->
     <figure class="slot" id="londoncard-arrow-2">
       <img src="img/arrows/swirl-arrow-l.webp?v=1" alt="Swirl Arrow 2" loading="lazy" decoding="async">
     </figure>
     
-    <!-- #) London – Card Front -->
+    <!-- #) IMG - London – Card Front -->
     <figure class="slot" id="londoncard-front">
       <img src="img/london/london-card-front.webp?v=1" alt="London Baseball Card Front" loading="lazy" decoding="async">
     </figure>
     
-    <!-- #) London – Card Back -->
+    <!-- #) IMG - London – Card Back -->
     <figure class="slot" id="londoncard-back">
       <img src="img/london/london-card-back.webp?v=1" alt="London Baseball Card Back" loading="lazy" decoding="async">
     </figure>
     
-    <!-- #) London – Film -->
+    <!-- #) IMG - London – Film -->
     <figure class="slot" id="film-strip">
       <img src="img/london/film-hangout.jpg?v=1" alt="London Film Strip" loading="lazy" decoding="async">
     </figure>
