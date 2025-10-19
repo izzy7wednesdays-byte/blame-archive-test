@@ -560,6 +560,13 @@
   #sleepwalking-visualizer{ --left:1000svh; --scale:.38; --y:63svh; --x:0svh; --rot:0deg; --z:71; }
   #sleepwalking-receipt{ --left:1030svh; --scale:.35; --y:30svh; --x:0svh; --rot:15deg; --z:70; pointer-events: none; }
   #sleepwalking-listeningparty{ --left:1029svh; --scale:.33; --ar:4/3; --y:0svh; --x:0svh; --rot:0deg; --z:50; }
+
+  /* TEMP DEBUG – remove after */
+#sleepwalking-title .lot-box,
+#sleepwalking-title dotlottie-wc {
+  outline: 2px dashed #ff4d9a;
+  background: rgba(255, 77, 154, .06);
+}
   /* ========= EP SECTION ========= */
   #ep-inspo-sp{ --left:1073svh; --scale:.54; --y:-16svh; --x:0svh; --rot:0deg; --z:30; }
   #ep-inspo{ --left:1060svh; --scale:.53; --y:48svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
@@ -1465,17 +1472,17 @@
     </figure>
 
     <!-- 7) LOTTIE — SLEEPWALKING TITLE SLOT -->
-     <figure class="slot slot--lottie" id="sleepwalking-title">
-        <div class="lot-box">
-          <dotlottie-wc
-            src="Lottie/sleepwalking-title.lottie"
-            autoplay
-            loop
-            speed="1"
-            style="width:100%;height:100%">
-          </dotlottie-wc>
-        </div>
-      </figure>
+    <figure class="slot slot--lottie" id="sleepwalking-title">
+      <div class="lot-box">
+        <dotlottie-wc
+          src="Lottie/sleepwalking-title.lottie"
+          renderer="canvas"
+          autoplay loop speed="1"
+          style="width:100%;height:100%">
+        </dotlottie-wc>
+      </div>
+    </figure>
+
 
     <!-- 8) YouTube – Sleepwalking: Behind the Song -->
     <figure class="slot slot--youtube" id="sleepwalking-behindthesong">
