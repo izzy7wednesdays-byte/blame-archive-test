@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/fonts.css">
 
 <style>
-  /* ========= V139 — FIXING YOUTUBE + VIMEO ISSUES ========= */
+  /* ========= V140 — ADDING CLICKABLE LOTTIE ========= */
   
   /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -371,21 +371,13 @@
     filter: brightness(1.08);
   }
 
-  .slot--lottie[data-link]:hover {
-    transform: scale(1.05);
-    filter: brightness(1.08);
-    transition: transform .35s cubic-bezier(0.25,1,0.5,1),
-                filter .35s cubic-bezier(0.25,1,0.5,1);
-  }
-
-  .slot--lottie[data-overlay-src] lottie-player:hover {
+  .slot--lottie[data-overlay-src] dotlottie-wc:hover {
     transform: scale(1.05);
     filter: brightness(1.08);
     transition: transform .35s cubic-bezier(0.25,1,0.5,1),
                 filter .35s cubic-bezier(0.25,1,0.5,1);
     cursor: pointer;
   }
-
 
   /* ========= TEXT SLOT (plain, non-clickable) ========= */
   /* TEXT SLOT */
@@ -694,13 +686,14 @@
   #london-live-1{ --left:2177svh; --scale:.30; --ar:9/16; --y:2svh; --x:0svh; --rot:-2.0deg; --z:41; }
   #london-live-2{ --left:2198svh; --scale:.38; --ar:9/16; --y:2svh; --x:0svh; --rot:0.0deg; --z:43; }
   #hangout-vlog{ --left:2214svh; --scale:.35; --y:64svh; --x:0svh; --rot:0deg; --z:57; }
-  #rsvp-button{ --left:2219svh; --scale:.15; --y:49svh; --x:0svh; --rot:0deg; --z:57; }
-  #rsvp-arrow{ --left:2240svh; --scale:.036; --y:42svh; --x:0svh; --rot:13deg; --z:44; pointer-events:none; }
-  #hangout-rsvp{ --left:2248svh; --scale:.18; --y:42svh; --x:0svh; --rot:11deg; --z:44; pointer-events:none; }
+  #rsvp-button{ --left:2217svh; --scale:.15; --y:48svh; --x:0svh; --rot:0deg; --z:57; }
+  #rsvp-arrow{ --left:2240svh; --scale:.036; --y:42svh; --x:0svh; --rot:15deg; --z:44; pointer-events:none; }
+  #hangout-rsvp{ --left:2249svh; --scale:.18; --y:42svh; --x:0svh; --rot:11deg; --z:44; pointer-events:none; }
   #london-about{ --left:2280svh; --scale:.60; --y:39svh; --x:0svh; --rot:-8deg; --z:45; }
+  #london-tv{ --left:2300svh; --scale:.60; --y:39svh; --x:0svh; --rot:-8deg; --z:46; }
   #londoncard-v1{ --left:2310svh; --scale:.30; --y:8svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #londoncard-arrow-1{ --left:2333svh; --scale:.03; --y:7svh; --x:0svh; --rot:-65deg; --z:46; pointer-events:none; }
-  #londoncard-text{ --left:2339svh; --scale:.06; --y:14svh; --x:0svh; --rot:0deg; --z:46; pointer-events:none;
+  #londoncard-text{ --left:2339svh; --scale:.08; --y:14svh; --x:0svh; --rot:0deg; --z:46; pointer-events:none;
                     --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
   #londoncard-front{ --left:2356svh; --scale:.30; --y:26svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #londoncard-arrow-2{ --left:2346svh; --scale:.03; --y:31svh; --x:0svh; --rot:170deg; --z:46; pointer-events:none; }
@@ -2412,6 +2405,22 @@
       <img src="img/london/london-about.webp?v=2" alt="London Composition Book" loading="lazy" decoding="async" style="cursor:pointer;">
     </figure>
     
+    <!-- #) More from London (opens overlay to show more photos) -->
+    <figure class="slot slot--lottie"
+            id="london-tv"
+            data-overlay-src="img/london/london-about.webp?v=1"
+            data-overlay-alt="More Pics from London overlay">
+      <div class="lot-box">
+        <dotlottie-wc
+          src="Lottie/london-tv-opt.lottie"
+          autoplay
+          loop
+          speed="1"
+          style="width:100%;height:100%">
+        </dotlottie-wc>
+      </div>
+    </figure>
+    
     <!-- #) London – Card V1 -->
     <figure class="slot" id="londoncard-v1">
       <img src="img/london/london-card-v1.webp?v=1" alt="Version 1 of London Baseball Card Front" loading="lazy" decoding="async">
@@ -2709,7 +2718,7 @@
     });
   });
   </script>
-
+    
   <script>
   /* ===== Lottie overlay trigger ===== */
   (() => {
@@ -2718,10 +2727,10 @@
     const ovImg   = overlay.querySelector('img');
   
     document.querySelectorAll('.slot--lottie[data-overlay-src]').forEach(slot => {
-      const lottie = slot.querySelector('lottie-player');
+      const lottie = slot.querySelector('dotlottie-wc');
       if (!lottie) return;
   
-      // Make Lottie clickable
+      // Make it visually clickable
       lottie.style.cursor = 'pointer';
   
       // Open overlay on click
@@ -2737,7 +2746,7 @@
       });
     });
   
-    // Close overlay when clicking outside or pressing ESC (reuse existing behavior)
+    // Overlay close behavior (reuse existing system)
     overlay.addEventListener('click', e => {
       if (e.target === overlay) overlay.classList.remove('is-open');
     });
@@ -2746,6 +2755,5 @@
     });
   })();
   </script>
-
 </body>
 </html>
