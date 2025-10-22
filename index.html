@@ -2902,73 +2902,67 @@
       });
       </script>
     
-      <!-- Lazy Load -->
+  <!-- Lazy Load -->
+  <!-- Lazy Load (fixed) -->
   <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Collect all lazy elements
-        const lazyLotties = document.querySelectorAll("dotlottie-wc[data-src]");
-        const lazyFrames  = document.querySelectorAll("iframe[data-src]");
-        const lazyAudio   = document.querySelectorAll("audio[data-src]");
-        const lazyVideo   = document.querySelectorAll("video[data-src]");
-        
-        // Shared fade-in effect
-        const fadeIn = el => {
-          el.style.opacity = 0;
-          el.style.transition = "opacity 0.8s ease";
-          requestAnimationFrame(() => {
-            el.style.opacity = 1;
-          });
-        };
-      
-        // Core observer
-        const observer = new IntersectionObserver((entries, obs) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const el = entry.target;
-              const src = el.getAttribute("data-src");
-  
-          // Lottie / iFrame
-          if (el.tagName === "DOTLOTTIE-WC" || el.tagName === "IFRAME") {
-            if (src && !el.hasAttribute("src")) {
-              el.setAttribute("src", src);
-              fadeIn(el);
-            }
+    document.addEventListener("DOMContentLoaded", () => {
+      // Collect all lazy elements that declare a data-src
+      const lazyLotties = document.querySelectorAll("dotlottie-wc[data-src]");
+      const lazyFrames  = document.querySelectorAll("iframe[data-src]");
+      const lazyAudio   = document.querySelectorAll("audio[data-src]");
+      const lazyVideo   = document.querySelectorAll("video[data-src]");
+    
+      const fadeIn = (el) => {
+        el.style.opacity = 0;
+        el.style.transition = "opacity 0.8s ease";
+        requestAnimationFrame(() => { el.style.opacity = 1; });
+      };
+    
+      const rootEl = document.getElementById("hwrap"); // horizontal scroll container
+    
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const el  = entry.target;
+          const src = el.getAttribute("data-src");
+    
+          // dotlottie-wc & iframes: just set the real src
+          if ((el.tagName === "DOTLOTTIE-WC" || el.tagName === "IFRAME") && src && !el.hasAttribute("src")) {
+            el.setAttribute("src", src);
+            fadeIn(el);
           }
-  
-          // Audio
+    
+          // <audio> with data-src: create <source> and load
           if (el.tagName === "AUDIO" && src) {
             const source = document.createElement("source");
-            source.src = src;
+            source.src  = src;
             source.type = el.dataset.type || "audio/mp4";
             el.appendChild(source);
             el.load();
             fadeIn(el);
           }
-  
-          // Video
+    
+          // <video> with data-src: create <source> and load
           if (el.tagName === "VIDEO" && src) {
             const source = document.createElement("source");
-            source.src = src;
+            source.src  = src;
             source.type = el.dataset.type || "video/mp4";
             el.appendChild(source);
             el.load();
             fadeIn(el);
           }
-  
+    
           obs.unobserve(el);
-        }
+        });
+      }, {
+        root: rootEl,                 // observe within horizontal scroller
+        rootMargin: "0px 45% 0px 45%",// start loading when ~45% from left/right edge
+        threshold: 0.01
       });
-    }, {
-      root: document.getElementById("hwrap") || null, // your scroll container
-      rootMargin: "300svh", // start loading early
-      threshold: 0.01
-    });
-  
-    // Observe all sets
-    [...lazyLotties, ...lazyFrames, ...lazyAudio, ...lazyVideo].forEach(el => {
-      observer.observe(el);
-    });
-  });
-  </script>
-</body>
+    
+      // Start observing all lazy elements
+      [...lazyLotties, ...lazyFrames, ...lazyAudio, ...lazyVideo].forEach(el => observer.observe(el));
+      });
+    </script>
+  </body>
 </html>
