@@ -708,7 +708,7 @@
   #dreamdotnet{ --left:2417svh; --scale:.25; --y:72svh; --x:0svh; --rot:0.0deg; --z:44; pointer-events:none; }
   #church-video{ --left:2420svh; --scale:.30; --ar:336/299; --y:38svh; --x:0svh; --rot:0deg; --z:46; }
   #villains{ --left:2424svh; --scale:.30; --y:2svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
-  #strawberry{ --left:2455svh; --scale:.20; --y:30svh; --x:0svh; --rot:5deg; --z:46; }
+  #strawberry{ --left:2456svh; --scale:.20; --y:38svh; --x:0svh; --rot:5deg; --z:46; }
   #thankyou-note{ --left:2480svh; --scale:.58; --y:40svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none; }
   #next-title{ --left:2440svh; --scale:.05; --y:30svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
   #lock-logo{ --left:2440svh; --scale:.58; --y:20svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
@@ -1040,7 +1040,7 @@
            src="img/exit-wounds/exit-wounds-voicememo.webp?v=1"
            alt="Play Exit Wounds Voice Memo">
       <audio preload="auto" playsinline>
-        <source src="audio/exit-wounds-voicememo.m4a" type="audio/mp4">
+        <source data-src="audio/exit-wounds-voicememo.m4a" type="audio/mp4">
       </audio>
     </figure>
     
@@ -1255,7 +1255,7 @@
            src="img/landmines/landmines-session-voicememos.webp?v=4"
            alt="Play Landmines Voice Memo">
       <audio preload="auto" playsinline>
-        <source src="audio/landmines-session.mp3?v=1" type="audio/mpeg">
+        <source data-src="audio/landmines-session.mp3?v=1" type="audio/mpeg">
       </audio>
     </figure>
 
@@ -2581,7 +2581,7 @@
     <figure class="slot slot--lottie" id="lock-logo">
       <div class="lot-box">
         <dotlottie-wc
-          data-src="Lottie/lfg.lottie"
+          data-src="Lottie/flicker-logo.lottie"
           autoplay
           loop
           speed="1"
@@ -2903,29 +2903,72 @@
       </script>
     
       <!-- Lazy Load -->
-      <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const lazyLotties = document.querySelectorAll("dotlottie-wc[data-src]");
-    
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const el = entry.target;
-            const src = el.getAttribute("data-src");
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Collect all lazy elements
+        const lazyLotties = document.querySelectorAll("dotlottie-wc[data-src]");
+        const lazyFrames  = document.querySelectorAll("iframe[data-src]");
+        const lazyAudio   = document.querySelectorAll("audio[data-src]");
+        const lazyVideo   = document.querySelectorAll("video[data-src]");
+        
+        // Shared fade-in effect
+        const fadeIn = el => {
+          el.style.opacity = 0;
+          el.style.transition = "opacity 0.8s ease";
+          requestAnimationFrame(() => {
+            el.style.opacity = 1;
+          });
+        };
+      
+        // Core observer
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              const src = el.getAttribute("data-src");
+  
+          // Lottie / iFrame
+          if (el.tagName === "DOTLOTTIE-WC" || el.tagName === "IFRAME") {
             if (src && !el.hasAttribute("src")) {
               el.setAttribute("src", src);
+              fadeIn(el);
             }
-            obs.unobserve(el);
           }
-        });
-      }, {
-        root: document.getElementById('hwrap') || null, // use your scroll container if applicable
-        rootMargin: '300svh', // start loading when ~3 screen heights away
-        threshold: 0.01
+  
+          // Audio
+          if (el.tagName === "AUDIO" && src) {
+            const source = document.createElement("source");
+            source.src = src;
+            source.type = el.dataset.type || "audio/mp4";
+            el.appendChild(source);
+            el.load();
+            fadeIn(el);
+          }
+  
+          // Video
+          if (el.tagName === "VIDEO" && src) {
+            const source = document.createElement("source");
+            source.src = src;
+            source.type = el.dataset.type || "video/mp4";
+            el.appendChild(source);
+            el.load();
+            fadeIn(el);
+          }
+  
+          obs.unobserve(el);
+        }
       });
-    
-      lazyLotties.forEach(el => observer.observe(el));
+    }, {
+      root: document.getElementById("hwrap") || null, // your scroll container
+      rootMargin: "300svh", // start loading early
+      threshold: 0.01
     });
+  
+    // Observe all sets
+    [...lazyLotties, ...lazyFrames, ...lazyAudio, ...lazyVideo].forEach(el => {
+      observer.observe(el);
+    });
+  });
   </script>
 </body>
 </html>
