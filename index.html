@@ -2906,92 +2906,90 @@
       });
       </script>
     
-  <!-- Lazy Load (fixed) -->
+  <!-- UNIVERSAL LAZY-LOADER -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Collect all lazy elements
-      const lazyEls = document.querySelectorAll(
-        "dotlottie-wc[data-src], iframe[data-src], img[data-src], video[data-src], audio[data-src]"
-      );
-    
-      // Apply blur style initially
-      lazyEls.forEach(el => el.classList.add("lazy-blur"));
-    
-      // Fade-in helper
-      const reveal = el => {
-        el.classList.remove("lazy-blur");
-        el.classList.add("lazy-loaded");
-      };
-    
-      const rootEl = document.getElementById("hwrap") || null;
-    
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          const el = entry.target;
-          const src = el.getAttribute("data-src");
-          if (!src) return;
-    
-          switch (el.tagName) {
-            case "DOTLOTTIE-WC":
-            case "IFRAME":
-              if (!el.hasAttribute("src")) el.setAttribute("src", src);
-              el.addEventListener("load", () => reveal(el), { once: true });
-              break;
-    
-            case "IMG":
-              el.src = src;
-              el.addEventListener("load", () => reveal(el), { once: true });
-              break;
-    
-            case "VIDEO":
-              const vsrc = document.createElement("source");
-              vsrc.src = src;
-              vsrc.type = el.dataset.type || "video/mp4";
-              el.appendChild(vsrc);
-              el.load();
-              el.addEventListener("loadeddata", () => reveal(el), { once: true });
-              break;
-    
-            case "AUDIO":
-              const asrc = document.createElement("source");
-              asrc.src = src;
-              asrc.type = el.dataset.type || "audio/mp4";
-              el.appendChild(asrc);
-              el.load();
-              el.addEventListener("canplaythrough", () => reveal(el), { once: true });
-              break;
-          }
-    
-          obs.unobserve(el);
-        });
-      }, {
-        root: rootEl,
-        rootMargin: "300svh",
-        threshold: 0.01
+  document.addEventListener("DOMContentLoaded", () => {
+    const lazyEls = document.querySelectorAll(
+      "dotlottie-wc[data-src], iframe[data-src], img[data-src], video[data-src], audio[data-src]"
+    );
+  
+    // Apply blur placeholder
+    lazyEls.forEach(el => el.classList.add("lazy-blur"));
+  
+    const reveal = el => {
+      el.classList.remove("lazy-blur");
+      el.classList.add("lazy-loaded");
+    };
+  
+    const rootEl = document.getElementById("hwrap") || null;
+  
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const src = el.getAttribute("data-src");
+        if (!src) return;
+  
+        switch (el.tagName) {
+          case "DOTLOTTIE-WC":
+          case "IFRAME":
+            if (!el.hasAttribute("src")) el.setAttribute("src", src);
+            el.addEventListener("load", () => reveal(el), { once: true });
+            break;
+  
+          case "IMG":
+            el.src = src;
+            el.addEventListener("load", () => reveal(el), { once: true });
+            break;
+  
+          case "VIDEO":
+            const vsrc = document.createElement("source");
+            vsrc.src = src;
+            vsrc.type = el.dataset.type || "video/mp4";
+            el.appendChild(vsrc);
+            el.load();
+            el.addEventListener("loadeddata", () => reveal(el), { once: true });
+            break;
+  
+          case "AUDIO":
+            const asrc = document.createElement("source");
+            asrc.src = src;
+            asrc.type = el.dataset.type || "audio/mp4";
+            el.appendChild(asrc);
+            el.load();
+            el.addEventListener("canplaythrough", () => reveal(el), { once: true });
+            break;
+        }
+  
+        obs.unobserve(el);
       });
-    
-      lazyEls.forEach(el => observer.observe(el));
+    }, {
+      root: rootEl,
+      rootMargin: "300svh",
+      threshold: 0.01
     });
-    </script>
-
-    <script>
-      window.addEventListener("load", () => {
-        document.querySelectorAll("img[data-src]").forEach(img => {
-          const src = img.getAttribute("data-src");
-          if (!src) return;
-      
-          // Trigger immediately if already in view (fallback)
-          const rect = img.getBoundingClientRect();
-          const inView = rect.top < window.innerHeight && rect.bottom > 0;
-          if (inView) {
-            img.setAttribute("src", src);
-            img.classList.remove("lazy-blur");
-            img.classList.add("lazy-loaded");
-          }
-        });
-      });
-    </script>
+  
+    lazyEls.forEach(el => observer.observe(el));
+  });
+  
+  // --- Safety fallback: ensure anything visible still loads ---
+  window.addEventListener("load", () => {
+    document.querySelectorAll("[data-src]").forEach(el => {
+      const src = el.getAttribute("data-src");
+      if (!src) return;
+  
+      const rect = el.getBoundingClientRect();
+      const inView = rect.top < window.innerHeight && rect.bottom > 0;
+      if (inView && !el.getAttribute("src")) {
+        if (el.tagName === "DOTLOTTIE-WC" || el.tagName === "IFRAME") {
+          el.setAttribute("src", src);
+        } else if (el.tagName === "IMG") {
+          el.src = src;
+        }
+      }
+    });
+  });
+  </script>
 
   </body>
 </html>
