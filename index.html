@@ -2974,5 +2974,24 @@
       lazyEls.forEach(el => observer.observe(el));
     });
     </script>
+
+    <script>
+      window.addEventListener("load", () => {
+        document.querySelectorAll("img[data-src]").forEach(img => {
+          const src = img.getAttribute("data-src");
+          if (!src) return;
+      
+          // Trigger immediately if already in view (fallback)
+          const rect = img.getBoundingClientRect();
+          const inView = rect.top < window.innerHeight && rect.bottom > 0;
+          if (inView) {
+            img.setAttribute("src", src);
+            img.classList.remove("lazy-blur");
+            img.classList.add("lazy-loaded");
+          }
+        });
+      });
+    </script>
+
   </body>
 </html>
