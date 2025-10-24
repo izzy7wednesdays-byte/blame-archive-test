@@ -465,7 +465,7 @@ html, body {
   #the-scrapbook{ --left:65svh; --scale:.5; --y:15svh; --x:0svh; --rot:0deg; --z:4;pointer-events: none; }
   #lfg{ --left:97svh; --scale:.1; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
   #pink-flashing-arrow{ --left:123svh; --scale:.09; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
-  #playlist-ex{ --left:160svh; --scale:.63; --sp-ratio:1; --y:40svh; --x:0svh; --rot:0deg; --z:30; }
+  #playlist-ex{ --left:160svh; --scale:.65; --sp-ratio:1; --y:40svh; --x:0svh; --rot:0deg; --z:30; }
 
 /* ========= LIGHT SLEEPER SECTION ========= */
   #lightsleeper-title{ --left:170svh; --scale:.35; --y:30svh; --x:-4svh; --rot:-10deg; --z:4; pointer-events: none; }
@@ -564,24 +564,24 @@ html, body {
   #sleepwalking-listeningparty{ --left:1029svh; --scale:.33; --ar:4/3; --y:0svh; --x:0svh; --rot:0deg; --z:50; }
 
 /* ========= EP SECTION ========= */
-  #ep-inspo-sp{ --left:1073svh; --scale:.54; --y:-25svh; --x:0svh; --rot:0deg; --z:30; }
+  #ep-inspo-sp{ --left:1074svh; --scale:.54; --y:-25svh; --x:0svh; --rot:0deg; --z:30; }
   #ep-inspo{ --left:1060svh; --scale:.53; --y:48svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
   #ep-telephone{ --left:1069svh; --scale:.17; --y:27svh; --x:0svh; --rot:-8deg; --z:72; }
   #ep-phoningfriends{ --left:1075svh; --scale:.27; --y:21svh; --x:0svh; --rot:-8deg; --z:30; pointer-events:none;
                       --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4C58E9;}
   #ep-click-toread{ --left:1071svh; --scale:.24; --y:45svh; --x:0svh; --rot:7.5deg; --z:30; pointer-events:none;
                     --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4C58E9;}
-  #mixing-misery-1{ --left:1107svh; --scale:.41; --ar:9/16; --y:7svh; --x:0svh; --rot:0deg; --z:30; }
-  #mixing-misery-1-text{ --left:1107svh; --scale:.14; --y:2svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
-                       --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: lowercase; --text-color: #4C58E9;}
+  #mixing-misery-1{ --left:1110svh; --scale:.41; --ar:9/16; --y:7svh; --x:0svh; --rot:0deg; --z:30; }
+  #mixing-misery-1-text{ --left:1110svh; --scale:.15; --y:2svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
+                       --ff: "Thinker"; --fw: 400; --fs-mul: .2; --ta: center !important; --tt: lowercase; --text-color: #4C58E9;}
   #migos-mairead{ --left:1129svh; --scale:.5; --ar:9/16; --y:47svh; --x:0svh; --rot:0deg; --z:30; }
-  #air-quality{ --left:1132svh; --scale:.45; --y:1svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
-  #air-quality-text{ --left:1139svh; --scale:.19; --y:1svh; --x:0svh; --rot:0deg; --z:31; pointer-events:none;
+  #air-quality{ --left:1135svh; --scale:.45; --y:1svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
+  #air-quality-text{ --left:1142svh; --scale:.19; --y:1svh; --x:0svh; --rot:0deg; --z:31; pointer-events:none;
                      --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: lowercase; --text-color: #D9EBFF; pointer-events: none;}
   #hannah-montana{ --left:1160svh; --scale:.40; --ar:9/16; --y:58svh; --x:0svh; --rot:0deg; --z:30;}
   #migos-text{ --left:1158svh; --scale:.21; --y:47svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
                --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4C58E9;}
-  #ep-mixing-date{ --left:1159svh; --scale:.40; --y:5svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
+  #ep-mixing-date{ --left:1161svh; --scale:.40; --y:5svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
   #hannah-montana-text{ --left:1185svh; --scale:.21; --y:81svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
                        --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: lowercase; --text-color: #4C58E9;}
   #notebook{ --left:1185svh; --scale:.35; --y:42svh; --x:0svh; --rot:5deg; --z:29; pointer-events:none; }
