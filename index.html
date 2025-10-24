@@ -5,1532 +5,410 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>Blame It On A Bad Dream — Horizontal Archive</title>
   
-  <!-- Preload only the fonts visible on first paint -->
+  <!-- 1) Preload only the fonts visible on first paint -->
   <link rel="preload" as="font" href="fonts/Thinker.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="fonts/manic-regular.woff2" type="font/woff2" crossorigin>
   
-  <!-- Load all font-face rules -->
+  <!-- 2) Load all font-face rules -->
   <link rel="stylesheet" href="css/fonts.css">
 
-  <!-- Load all style CSS rules -->
+  <!-- 3) Preload style.css script -->
+  <link rel="preload" as="style" href="css/style.css?v=1.0">
+
+  <!-- 4) Load all style.css script -->
   <link rel="stylesheet" href="css/style.css?v=1.0">
   
-  <!-- TikTok Embed Script -->
+  <!-- #) TikTok Embed Script -->
   <script async src="https://www.tiktok.com/embed.js"></script>
   
-  <!-- Lottie web component -->
+  <!-- #) Lottie web component -->
   <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"></script>
 </head>
   
 <body>
-<div class="hwrap" id="hwrap">
-  <div class="rail">
+  <div class="hwrap" id="hwrap">
+    <div class="rail">
 
-    <!-- ========================= -->
-            <!-- WELCOME -->
-    <!-- ========================= -->
-    <!-- 1) A Special Message From... -->
-    <figure class="slot" id="special-message">
-      <img
-        src="img/welcome/headline-special-message.webp?v=2"
-        alt="A SPECIAL MESSAGE FROM…" />
-    </figure>
-
-    <!-- 2) Izzy MacArthur -->
-    <figure class="slot" id="izzymacarthur">
-      <img
-        src="img/welcome/scribble-izzy.webp?v=2"
-        alt="Izzy MacArthur" />
-    </figure>
-
-    <!-- 3) Social Sparkles (decorative, no link) -->
-    <figure class="slot" id="social-sparkles">
-      <img src="img/social-buttons/social-sparkles.webp?v=2"
-         alt="Social Sparkles" loading="lazy" decoding="async">
-     </figure>
-
-    <!-- 4) Instagram -->
-    <figure class="slot" id="instagram">
-      <a href="https://www.instagram.com/izzyrmac/" target="_blank" rel="noopener noreferrer">
-        <img src="img/social-buttons/instagram.webp?v=2" alt="Instagram" loading="lazy" decoding="async">
-      </a>
-    </figure>
-
-    <!-- 5) TikTok -->
-    <figure class="slot" id="tiktok">
-      <a href="https://www.tiktok.com/@izzyrmac" target="_blank" rel="noopener noreferrer">
-        <img src="img/social-buttons/tiktok.webp?v=2" alt="TikTok" loading="lazy" decoding="async">
-      </a>
-    </figure>
-
-    <!-- 6) Twitter -->
-    <figure class="slot" id="twitter">
-      <a href="https://x.com/izzymacarthur" target="_blank" rel="noopener noreferrer">
-        <img src="img/social-buttons/twitter.webp?v=2" alt="Twitter" loading="lazy" decoding="async">
-      </a>
-    </figure>
-
-    <!-- 7) Discord -->
-    <figure class="slot" id="discord">
-      <a href="https://discord.gg/ThyMfuESqz" target="_blank" rel="noopener noreferrer">
-        <img src="img/social-buttons/discord.webp?v=2" alt="Discord" loading="lazy" decoding="async">
-      </a>
-    </figure>
-
-    <!-- 8) Spotify -->
-    <figure class="slot" id="spotify">
-      <a href="https://open.spotify.com/artist/0Fs1CZdAsOEh1R93yK4UAE?si=DmfA6Y10Td2h7h4O5gCqBA" target="_blank" rel="noopener noreferrer">
-        <img src="img/social-buttons/spotify.webp?v=2" alt="Spotify" loading="lazy" decoding="async">
-      </a>
-    </figure>
-
-    <!-- 9) Apple Music -->
-    <figure class="slot" id="apple-music">
-      <a href="https://music.apple.com/us/artist/izzy-macarthur/1741386936" target="_blank" rel="noopener noreferrer">
-        <img src="img/social-buttons/apple-music.webp?v=2" alt="Apple Music" loading="lazy" decoding="async">
-      </a>
-    </figure>
-    
-    <!-- 10) Note from Izzy -->
-    <figure class="slot" id="torn-note">
-      <img
-        src="img/welcome/torn-note.webp?v=2"
-        alt="Note from Izzy" />
-      </a>
-    </figure>
-
-    <!-- 11) Tracklist -->
-    <figure class="slot" id="tracklist">
-      <img
-        src="img/welcome/tracklist.webp?v=2"
-        alt="Tracklist" />
-    </figure>
-
-    <!-- 12) The Scrapbook -->
-    <figure class="slot" id="the-scrapbook">
-      <img
-        src="img/welcome/the-scrapbook.webp?v=1"
-        alt="THE STORY BEHIND:" />
-    </figure>
-
-    <!-- 13) Lottie — LFG -->
-    <figure class="slot slot--lottie" id="lfg">
-      <div class="lot-box">
-        <dotlottie-wc
-          src="Lottie/lfg.lottie"
-          autoplay
-          loop
-          speed="1"
-          style="width:100%;height:100%">
-         </dotlottie-wc>
-      </div>
-    </figure>
-
-    <!-- 14) Lottie — Pink Flashing Arrow -->
-    <figure class="slot slot--lottie" id="pink-flashing-arrow">
-      <div class="lot-box">
-        <dotlottie-wc
-          src="Lottie/pink-flashing-arrow.lottie"
-          autoplay
-          loop
-          speed="1"
-          style="width:100%;height:100%">
-         </dotlottie-wc>
-      </div>
-    </figure>
-    
-    <!-- 15) Spotify playlist -->
-    <figure class="slot slot--spotify" id="playlist-ex">
-      <div class="sp-box">
-        <iframe data-testid="embed-iframe"
-          src="https://open.spotify.com/embed/playlist/07REAl6PPjOz2fLhehn0Xr?utm_source=generator"
-          width="100%" height="352" frameborder="0" allowfullscreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy" title="Spotify playlist">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- ========================= -->
-          <!-- LIGHT SLEEPER -->
-    <!-- ========================= -->
-    <!-- 1) Lottie — Light Sleeper Title -->
-    <figure class="slot slot--lottie" id="lightsleeper-title">
-      <div class="lot-box">
-        <dotlottie-wc
-          src="Lottie/light-sleeper-title.lottie"
-          autoplay
-          loop
-          speed="2"
-          style="width:100%;height:100%">
-        </dotlottie-wc>
-      </div>
-    </figure>
-    
-    <!-- 2) YouTube – Light Sleeper Visualizer -->
-    <figure class="slot slot--youtube" id="lightsleeper-visualizer">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/Hvy3xS_jpAM?rel=0&modestbranding=1&playsinline=1"
-          title="Light Sleeper – Visualizer"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 3) GIF - About Light Sleeper -->
-    <figure class="slot" id="lightsleeper-about"
-      data-overlay-src="img/light-sleeper/lightsleeper-about.webp?v=2"
-      data-overlay-alt="About Light Sleeper">
-      <img src="img/light-sleeper/tv-message-1.webp?v=2" alt="TV message" loading="lazy" decoding="async" style="cursor:pointer;">
-    </figure>
-
-    <!-- 3) AUTUMN TEXT -->
-    <figure class="slot" id="autumn-text">
-      <img src="img/light-sleeper/autumn-text.webp?v=3" alt="Autumn text" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 5) BLAME IT Notes App -->
-    <figure class="slot" id="blame-it-notesapp">
-      <img src="img/light-sleeper/blame-it-notesapp.webp?v=2" alt="Blame It notes app" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 6) Silver Star Overlay -->
-    <figure class="slot" id="silver-star1-1">
-      <img src="img/extra/silver-star1.webp?v=2" alt="silver star" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 7) Vimeo - Light Sleeper Studio -->
-    <figure class="slot slot--video" id="lightsleeper-studio">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1114381114?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title="Light Sleeper Studio">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 8) GIF - Click for Chordz Gif -->
-    <figure class="slot" id="izzymacarthur-withguitar"
-      data-overlay-src="img/light-sleeper/lightsleeper-chords.webp?v=3"
-      data-overlay-alt="Izzy with Guitar">
-      <img src="img/light-sleeper/izzymacarthur-withguitar.gif?v=2" alt="Light Sleeper Chords" loading="lazy" decoding="async" style="cursor:pointer;">
-    </figure>
-
-    <!-- 9) Text - Click4Chordz -->
-    <figure class="slot slot--text" id="click4chordz">
-      <div class="text-box">
-        click<br>
-        4<br>
-        chordz
-      </div>
-    </figure>
-
-    <!-- 10) SOUND (SoundCloud) — Play Light Sleeper -->
-    <figure class="slot slot--sc" id="play-lightsleeper"
-            data-sc-url="https://soundcloud.com/izzy-macarthur/light-sleeper">
-      <img class="sc-trigger"
-           src="img/light-sleeper/listen-to-lightsleeper.gif?v=3"
-           alt="Play Light Sleeper (SoundCloud)">
-      <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
-    </figure>
-
-    <!-- 11) YouTube – Light Sleeper – Behind the Song – Holly Humberstone Deep End Placeholder -->
-    <figure class="slot slot--youtube" id="lightsleeper-behindthesong">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/tie87p1l9YM?si=rP307mgprtgeQVX-"
-          title="Light Sleeper – Behind the Song"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-    
-    <!-- 12) Vimeo – Broken Breathing (16:9) -->
-    <figure class="slot slot--video" id="broken-breathing">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1115700987?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          allowfullscreen
-          title="Broken Breathing">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- ========================= -->
-          <!-- EXIT WOUNDS -->
-    <!-- ========================= -->
-    <!-- 1) YouTube – Exit Wounds: Lyric Video - Placeholder -->
-    <figure class="slot slot--youtube" id="exitwounds-lyricvideo">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/x5HKc36nnYo?si=0EdF-MfX6GVODw4T"
-          title="Exit Wounds - Lyric Video"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-    
-    <!-- 2) Exit Wounds Title  -->
-    <figure class="slot" id="exitwounds-title">
-      <img src="img/exit-wounds/exit-wounds-title.webp?v=2" alt="Exit Wounds Title" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 3) SOUND (SoundCloud) — Play Exit Wounds -->
-    <figure class="slot slot--sc" id="play-exitwounds"
-            data-sc-url="https://soundcloud.com/izzy-macarthur/exit-wounds">
-      <img class="sc-trigger"
-           src="img/play-exitwounds.webp?v=2"
-           alt="Play Exit Wounds (SoundCloud)">
-      <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
-    </figure>
-
-    <!-- 4) Text - Press Play, DJ! -->
-    <figure class="slot slot--text" id="pressplaydj">
-      <div class="text-box">click to press play, dj!</div>
-    </figure>
-
-    <!-- 5) Exit Wounds: About Slot -->
-    <figure class="slot" id="exitwounds-bandages"
-      data-overlay-src="img/exit-wounds/about-exitwounds.webp?v=3"
-      data-overlay-alt="About Exit Wounds">
-      <img src="img/exit-wounds/exit-wounds-bandages.webp?v=1" alt="Exit Wounds Bandages" loading="lazy" decoding="async" style="cursor:pointer;">
-    </figure>
-
-    <!-- 6) Lottie — Crashing Down Animation -->
-    <figure class="slot slot--lottie" id="exitwounds-animation-1">
-      <div class="lot-box">
-        <dotlottie-wc
-          src="Lottie/crashing-down-animation.lottie"
-          autoplay
-          loop
-          speed="1"
-          style="width:100%;height:100%">
-        </dotlottie-wc>
-      </div>
-    </figure>
-
-    <!-- 7) YouTube – Exit Wounds: Behind the Song – Holly Humberstone Placeholder -->
-    <figure class="slot slot--youtube" id="exitwounds-behindthesong">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/tie87p1l9YM?si=rP307mgprtgeQVX-"
-          title="Exit Wounds - Behind the Song"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 8) Exit Wounds Voicememo -->
-    <figure class="slot slot--audio" id="play-exit-wounds-voicememo"
-        data-audio-src="audio/exit-wounds-voicememo.m4a" data-loop="false">
-      <img class="audio-trigger"
-           src="img/exit-wounds/exit-wounds-voicememo.webp?v=1"
-           alt="Play Exit Wounds Voice Memo">
-      <audio preload="auto" playsinline>
-        <source src="audio/exit-wounds-voicememo.m4a" type="audio/mp4">
-      </audio>
-    </figure>
-    
-    <!-- 9) Exit Wounds – Click Me Arrow -->
-    <figure class="slot" id="click-me-arrow">
-      <img src="img/exit-wounds/click-me-arrow.webp?v=2" alt="exit wounds click me arrow" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 10) Text - Click Me -->
-    <figure class="slot slot--text" id="click-me-text">
-      <div class="text-box">click me</div>
-    </figure>
-
-    <!-- 11) Text - Subscribe to Substack -->
-    <figure class="slot slot--text" id="subscribe-substack-text">
-      <div class="text-box">
-        if you don't think<br>
-        it's, like, totally lame,<br>
-        you should subscribe
-      </div>
-    </figure>
-
-    <!-- 12) Substack Subscribe Button -->
-    <figure class="slot" id="subscribe-button">
-      <a href="https://izzymacarthur.substack.com/embed"
-         target="_blank" rel="noopener noreferrer">
-        <img src="img/exit-wounds/subscribe-button.webp?v=2"
-             alt="Substack Subscribe Button">
-      </a>
-    </figure>
-    
-    <!-- 13) Subscribe Arrow  -->
-    <figure class="slot" id="subscribe-arrow">
-      <img src="img/exit-wounds/subscribe-arrow.webp?v=1" alt="subscribe arrow" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 14) Text - Read More About Exit Wounds -->
-    <figure class="slot slot--text" id="read-susbstack-text">
-      <div class="text-box">
-        READ MORE ABOUT EXIT WOUNDS<br>
-        ON MY SUBSTACK "10 THINGS I'M<br>
-        THINKING ABOUT"!
-      </div>
-    </figure>
-
-    <!-- 15) Arrow Pointing to Exit Wounds Flier -->
-    <figure class="slot" id="substack-point-arrow">
-      <img src="img/exit-wounds/10things-substack-arrow.webp?v=1" alt="substack point arrow" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 16) Exit Wounds Substack Flier -->
-    <figure class="slot" id="exitwounds-substackflier">
-      <a href="https://izzymacarthur.substack.com/p/with-no-exit-wounds"
-         target="_blank" rel="noopener noreferrer">
-        <img src="img/exit-wounds/exit-wounds-substack-flier.webp?v=1"
-             alt="With No Exit Wounds — read on Substack">
-      </a>
-    </figure>
-
-    <!-- ========================= -->
-          <!-- LANDMINES -->
-    <!-- ========================= -->
-    <!-- #) Lottie — Glitter Truck -->
-    <figure class="slot slot--lottie" id="glitter-truck">
-      <div class="lot-box">
-        <dotlottie-wc
-          src="Lottie/glitter-truck.lottie"
-          autoplay
-          loop
-          speed="1"
-          style="width:100%;height:100%">
-        </dotlottie-wc>
-      </div>
-    </figure>
-    
-    <!-- #) Vimeo – Landmines BTS (16:9) -->
-    <figure class="slot slot--video" id="landmines-bts-clip">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1114719211?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          allowfullscreen
-          title="landmines-bts-clip">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- #) Vimeo – Landmines Voicememo -->
-    <figure class="slot slot--video" id="landmines-voicememo">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1114741947?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          allowfullscreen
-          title="landmines-voicememo">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- #) Kat Stratford Driver Gif -->
-    <figure class="slot" id="katstratford-car">
-      <img src="img/kat-stratford-car.gif?v=1" alt="kat stratford car" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) October Lane -->
-    <figure class="slot" id="october-lane">
-      <img src="img/october-lane.webp?v=2" alt="October Lane Street Sign" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- #) Landmines License  -->
-    <figure class="slot" id="landmines-license">
-      <img src="img/landmines/landmines-license.webp?v=2" alt="Landmines License" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) Vimeo (portrait 1080×1920) - Landmines from Session -->
-    <figure class="slot slot--video" id="landmines-reaction">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1121306084?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title="Light Sleeper Studio">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- #) Text - Click Me -->
-    <figure class="slot slot--text" id="landmines-reaction-text">
-      <div class="text-box">
-        watching you guys<br>
-        react to landmines's<br>
-        release meant so<br>
-        much to me (thank <br>
-        you brooke & ava<br>
-        for letting me use<br>
-        this video)<br>
-      </div>
-    </figure>
-
-    <!-- #) Landmines Title  -->
-    <figure class="slot" id="landmines-title">
-      <img src="img/landmines/landmines-title.gif?v=3" alt="landmines title" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) YouTube – Landmines Lyric Video -->
-    <figure class="slot slot--youtube" id="landmines-lyricvideo">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/1ZjReUQ6WTU?si=6G7zcN05vVEXl2in"
-          title="Landmines – lyric video"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- #) Landmines (opens overlay to show landmines-about.png) -->
-    <figure class="slot" id="landmines-about"
-      data-overlay-src="img/landmines/about-landmines.webp?v=1"
-      data-overlay-alt="About Landmines">
-      <img src="img/landmines/about-landmines-letter.webp?v=2" alt="Landmines Letter" loading="lazy" decoding="async" style="cursor:pointer;">
-    </figure>
-
-    <!-- #) YouTube – Landmines Behind The Song – Holly Humberstone Placeholder (overkill behind the song) -->
-    <figure class="slot slot--youtube" id="landmines-behindthesong">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/wsd-014U_b0?si=rwZPeSIiuASurx8m"
-          title="Landmines – Behind the Song"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- #) Enchanted Bridge -->
-    <figure class="slot" id="enchanted-bridge">
-      <img src="img/enchanted-bridge.webp?v=4" alt="Enchanted Screenshot" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) Vimeo (portrait 1080×1920) - Landmines from Session -->
-    <figure class="slot slot--video" id="landmines-og-guitar">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1115330952?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title="Light Sleeper Studio">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- #) Text - landmines in studio -->
-    <figure class="slot slot--text" id="landmines-session-video-text">
-      <div class="text-box">
-        the sick ass acoustic<br>
-        bass guitar in session<br>
-        (izzy @ 19 = not cute)
-      </div>
-    </figure>
+      <!-- ========================= -->
+              <!-- WELCOME -->
+      <!-- ========================= -->
+      <!-- 1) A Special Message From... -->
+      <figure class="slot" id="special-message">
+        <img
+          src="img/welcome/headline-special-message.webp?v=2"
+          alt="A SPECIAL MESSAGE FROM…" />
+      </figure>
+  
+      <!-- 2) Izzy MacArthur -->
+      <figure class="slot" id="izzymacarthur">
+        <img
+          src="img/welcome/scribble-izzy.webp?v=2"
+          alt="Izzy MacArthur" />
+      </figure>
+  
+      <!-- 3) Social Sparkles (decorative, no link) -->
+      <figure class="slot" id="social-sparkles">
+        <img src="img/social-buttons/social-sparkles.webp?v=2"
+           alt="Social Sparkles" loading="lazy" decoding="async">
+       </figure>
+  
+      <!-- 4) Instagram -->
+      <figure class="slot" id="instagram">
+        <a href="https://www.instagram.com/izzyrmac/" target="_blank" rel="noopener noreferrer">
+          <img src="img/social-buttons/instagram.webp?v=2" alt="Instagram" loading="lazy" decoding="async">
+        </a>
+      </figure>
+  
+      <!-- 5) TikTok -->
+      <figure class="slot" id="tiktok">
+        <a href="https://www.tiktok.com/@izzyrmac" target="_blank" rel="noopener noreferrer">
+          <img src="img/social-buttons/tiktok.webp?v=2" alt="TikTok" loading="lazy" decoding="async">
+        </a>
+      </figure>
+  
+      <!-- 6) Twitter -->
+      <figure class="slot" id="twitter">
+        <a href="https://x.com/izzymacarthur" target="_blank" rel="noopener noreferrer">
+          <img src="img/social-buttons/twitter.webp?v=2" alt="Twitter" loading="lazy" decoding="async">
+        </a>
+      </figure>
+  
+      <!-- 7) Discord -->
+      <figure class="slot" id="discord">
+        <a href="https://discord.gg/ThyMfuESqz" target="_blank" rel="noopener noreferrer">
+          <img src="img/social-buttons/discord.webp?v=2" alt="Discord" loading="lazy" decoding="async">
+        </a>
+      </figure>
+  
+      <!-- 8) Spotify -->
+      <figure class="slot" id="spotify">
+        <a href="https://open.spotify.com/artist/0Fs1CZdAsOEh1R93yK4UAE?si=DmfA6Y10Td2h7h4O5gCqBA" target="_blank" rel="noopener noreferrer">
+          <img src="img/social-buttons/spotify.webp?v=2" alt="Spotify" loading="lazy" decoding="async">
+        </a>
+      </figure>
+  
+      <!-- 9) Apple Music -->
+      <figure class="slot" id="apple-music">
+        <a href="https://music.apple.com/us/artist/izzy-macarthur/1741386936" target="_blank" rel="noopener noreferrer">
+          <img src="img/social-buttons/apple-music.webp?v=2" alt="Apple Music" loading="lazy" decoding="async">
+        </a>
+      </figure>
       
-    <!-- #) Landmines Session Voicememo -->
-    <figure class="slot slot--audio" id="landmines-session-voicememos"
-        data-audio-src="audio/landmines-session.mp3" data-loop="false">
-      <img class="audio-trigger"
-           src="img/landmines/landmines-session-voicememos.webp?v=4"
-           alt="Play Landmines Voice Memo">
-      <audio preload="auto" playsinline>
-        <source src="audio/landmines-session.mp3?v=1" type="audio/mpeg">
-      </audio>
-    </figure>
-
-    <!-- #) Vimeo (portrait 1080×1920) - Landmines from Session -->
-    <figure class="slot slot--video" id="vocals-landmines-1">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1115691695?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title="Recording Landmines Vocals">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- #) Text - Click Me -->
-    <figure class="slot slot--text" id="vocals-landmines-1-text">
-      <div class="text-box">
-        i have to admit i was NOT a<br>
-        content queen when writing<br>
-        and recording... i have a LOT<br>
-        of videos at this atrocious angle,<br>
-        but i adore the landmines bgvs,<br>
-        so here they are, extra loud 4 u<br>
-      </div>
-    </figure>
-
-    <!-- ========================= -->
-      <!-- MISERY MISSING COMPANY -->
-    <!-- ========================= --> 
-    <!-- 1) Vimeo – Misery – OG Chorus Voicememo -->
-        <figure class="slot slot--video" id="misery-ogchorus">
-          <div class="video-box">
-            <iframe
-              src="https://player.vimeo.com/video/1115354360?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-              allowfullscreen
-              title="misery-og-chorus-voicememo">
-            </iframe>
-          </div>
-        </figure>
-    
-    <!-- 2) Text - OG Chorus -->
-    <figure class="slot slot--text" id="misery-ogchorus-text">
-      <div class="text-box">
-        when i came up with the<br>
-        first draft of what's now<br>
-        the misery missing company<br>
-        chorus<br>
-      </div>
-    </figure>
-
-    <!-- 3) Misery – Little Miss Misery -->
-    <figure class="slot" id="little-miss-misery">
-      <img src="img/misery/little-miss-misery.webp?v=2" alt="little miss misery" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 4) Misery – Kat Stratford Dancing -->
-    <figure class="slot" id="kat-stratford-dancing">
-      <img src="img/misery/kat-stratford-dancing.webp?v=1" alt="kat stratford dancing" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 5) Misery – Solo cups animation -->
-    <figure class="slot" id="solo-cups">
-      <img src="img/misery/solo-cups.gif?v=1" alt="solo cup animation" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 6) Misery – Light Bulb (opens overlay to show misery-about.png) -->
-    <figure class="slot" id="misery-about"
-      data-overlay-src="img/about-misery.webp?v=1"
-      data-overlay-alt="About Misery Missing Company">
-      <img src="img/misery/misery-about.webp?v=3" alt="About Misery Missing Company" loading="lazy" decoding="async" style="cursor:pointer;">
-    </figure>
-
-    <!-- 8) Misery Title Background -->
-    <figure class="slot" id="misery-title-bg">
-      <img src="img/misery/misery-title-bg.webp?v=2" alt="Misery Title" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 9) Vimeo – Misery – First Draft Voicememo -->
-    <figure class="slot slot--video" id="misery-wants-company">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1115354413?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          allowfullscreen
-          title="Misery first draft">
-        </iframe>
-      </div>
-    </figure>
-    
-    <!-- 10) Text - a first draft of misery -->
-    <figure class="slot slot--text" id="misery-wants-company-text">
-      <div class="text-box">
-        the first version of misery i wrote<br>
-        for my freshman year songwriting class
-      </div>
-    </figure>
-
-    <!-- 11) Vimeo (portrait 1080×1920) - Misery Vocals in Studio -->
-    <figure class="slot slot--video" id="vocals-misery-4">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1115586624?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title="Misery Missing Company Studio">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 12) Text - Misery Vocals in Studio -->
-    <figure class="slot slot--text" id="vocals-misery-4-text">
-      <div class="text-box">
-        doing misery<br>
-        vocals en el<br>
-        studio<br>
-      </div>
-    </figure>
-
-    <!-- 13) Text - Misery with LJ -->
-    <figure class="slot slot--text" id="misery-wlj-text">
-      <div class="text-box">
-        this is my friend lj and i <br>
-        in my freshman dorm when i <br>
-        showed her misery for the<br>
-        first time
-      </div>
-    </figure>
-
-    <!-- 14) Vimeo (portrait 1080×1920) - Misery w Lily -->
-    <figure class="slot slot--video" id="misery-wlj">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1118578559?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title="Misery Missing Company Studio">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 15) SOUND (SoundCloud) — Play Misery -->
-    <figure class="slot slot--sc" id="play-misery"
-            data-sc-url="https://soundcloud.com/izzy-macarthur/misery-missing-company">
-      <img class="sc-trigger"
-           src="img/misery/listen-to-misery.webp?v=2"
-           alt="Play Misery Missing Company (SoundCloud)">
-      <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
-    </figure>
-
-    <!-- 16): YouTube – Misery Visualizer -->
-    <figure class="slot slot--youtube" id="misery-visualizer">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/COb6V_Q4gxQ?si=FzXMNX6JGNyGy2lA"
-          title="Misery Missing Company (Visualizer)"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 17) YouTube – Misery Missing Company Behind the Song -->
-    <figure class="slot slot--youtube" id="misery-behindthesong">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/_MOSQIXigB8?si=K5d65gYgNHqj2BOq"
-          title="Misery Missing Company: Behind the Song"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-    
-    <!-- ========================= -->
-           <!-- SLEEPWALKING -->
-    <!-- ========================= --> 
-    <!-- 1) Smurfette -->
-    <figure class="slot" id="smurfette-1">
-      <img src="img/sleepwalking/smurfette-1.webp?v=1" alt="Smurfette" loading="lazy" decoding="async">
-    </figure>
-
-     <!-- 2) SOUND (SoundCloud) — click image to play/pause -->
-    <figure class="slot slot--sc" id="play-sleepwalking"
-            data-sc-url="https://soundcloud.com/izzy-macarthur/sleepwalking">
-      <img class="sc-trigger"
-           src="img/sleepwalking/play-sleepwalking.webp?v=1"
-           alt="Play Sleepwalking (SoundCloud)">
-      <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
-    </figure>
-
-    <!-- 3) Vimeo – Sleepwalking – Sleepwalking on Radio -->
-    <figure class="slot slot--video" id="sleepwalking-radio">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1116313498?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          allowfullscreen
-          title="Sleepwalking on the Radio">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 4) Text - Sleepwalking Radio Text -->
-    <figure class="slot slot--text" id="sleepwalking-radio-text">
-      <div class="text-box">
-        me in my music tech class when<br>sleepwalking was played on the<br>radio for the first time ever
-      </div>
-    </figure>
-
-    <!-- 5) Sleepwalking – Polaroid -->
-    <figure class="slot" id="sleepwalking-radio-polaroid">
-      <img src="img/sleepwalking/sleepwalking-radio.webp?v=1" alt="Sleepwalking Radio Polaroid" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- 6) SLEEPWALKING – The Star Tarot Card -->
-    <figure class="slot" id="thestar-tarot">
-      <img src="img/sleepwalking/thestar-tarot.webp?v=2" alt="The Star Tarot Card" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 7) LOTTIE — SLEEPWALKING TITLE SLOT -->
-     <figure class="slot" id="sleepwalking-title">
-      <img src="img/sleepwalking/sleepwalking-title.gif?v=2" alt="The Star Tarot Card" loading="lazy" decoding="async">
-    </figure>
-   
-    <!-- 8) YouTube – Sleepwalking: Behind the Song -->
-    <figure class="slot slot--youtube" id="sleepwalking-behindthesong">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/_MOSQIXigB8?si=K5d65gYgNHqj2BOq"
-          title="Misery Missing Company: Behind the Song"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 9) YouTube – Sleepwalking - Visualizer -->
-    <figure class="slot slot--youtube" id="sleepwalking-visualizer">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/hD2rvD9Wbc4?si=XtN3IJfM587HXjKe"
-          title="Sleepwalking Visualizer"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 11) Sleepwalking – The Receipt -->
-    <figure class="slot" id="sleepwalking-receipt">
-      <img src="img/sleepwalking/sleepwalking-receipt.webp?v=1" alt="The Star Tarot Card" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 12) Vimeo (Regular) – Sleepwalking – Listening Party -->
-    <figure class="slot slot--video" id="sleepwalking-listeningparty">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1121321795?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Sleepwalking from the Listening Party">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- ========================= -->
-           <!-- THE EP -->
-    <!-- ========================= --> 
-    <!-- 1): Spotify playlist -->
-    <figure class="slot slot--spotify" id="ep-inspo-sp">
-      <div class="sp-box">
-        <iframe data-testid="embed-iframe"
-          src="https://open.spotify.com/embed/playlist/7btb3TEGUxfPXy4RdNsGXT?utm_source=generator"
-          width="100%" height="352" frameborder="0" allowfullscreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy" title="Spotify playlist">
-        </iframe>
-      </div>
-    </figure>
-    
-    <!-- 2) EP – EP Inspo Playlist -->
-    <figure class="slot" id="ep-inspo">
-      <img src="img/blame/ep-inspo-playlist.webp?v=1" alt="EP Inspo Playlist" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 3) EP – Telephone (opens overlay to show misery-about.png) -->
-    <figure class="slot" id="ep-telephone"
-      data-overlay-src="img/blame/ep-telephone.webp?v=1"
-      data-overlay-alt="About Telephone">
-      <img src="img/ep-telephone.webp?v=2" alt="EP Telephone" loading="lazy" decoding="async" style="cursor:pointer;">
-    </figure>
-
-    <!-- 4) Text - Phoning Friends -->
-    <figure class="slot slot--text" id="ep-phoningfriends">
-      <div class="text-box">
-        phoning all my<br>
-        friends!!!
-      </div>
-    </figure>
-
-    <!-- 5) Text - Click to Read -->
-    <figure class="slot slot--text" id="ep-click-toread">
-      <div class="text-box">
-        click the phone to read<br>
-        what i've gotta say
-      </div>
-    </figure>
-
-    <!-- 6) Vimeo (1080x1920) – EP – Mixing Misery -->
-    <figure class="slot slot--video" id="mixing-misery-1">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1121369250?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Mixing Misery">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 7) Text - Mixing Misery -->
-    <figure class="slot slot--text" id="mixing-misery-1-text">
-      <div class="text-box">
-        mixing misery missing<br>
-        company<br>
-      </div>
-    </figure>
-
-     <!-- 8) Vimeo (1080x1920) – EP – Migos -->
-    <figure class="slot slot--video" id="migos-mairead">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1121369593?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Migos Carpool Karaoke">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 9) EP – EP Title -->
-    <figure class="slot" id="air-quality">
-      <img src="img/blame/air-quality.webp?v=1" alt="EP Title" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 10) Text - Air Quality -->
-    <figure class="slot slot--text" id="air-quality-text">
-      <div class="text-box">
-        there were<br>
-        horrible<br>
-        wildfires in<br>
-        canada when we<br>
-        were recording<br>
-        the vocals, so<br>
-        it felt like it<br>
-        was 5pm all day
-      </div>
-    </figure>
-
-    <!-- 11) Vimeo (1080x1920) – EP – Hannah Montana -->
-    <figure class="slot slot--video" id="hannah-montana">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1114920837?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Hannah Montana">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 12) Text - Migos Carpool Karaoke -->
-    <figure class="slot slot--text" id="migos-text">
-      <div class="text-box">
-        the migos carpool<br>
-        karaoke is my fav, so<br>
-        i make everyone watch<br>
-        it with me
-      </div>
-    </figure>
-
-    <!-- 13) EP – Mix Date Photo -->
-    <figure class="slot" id="ep-mixing-date">
-      <img src="img/blame/ep-mixing-date.webp?v=1" alt="EP Mixing Date Picture" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 14) Text - Hannah Montana -->
-    <figure class="slot slot--text" id="hannah-montana-text">
-      <div class="text-box">
-        some girls were listening to<br>
-        hannah montana in the car,<br>
-        full blast, the night misery<br>
-        was being released – it felt<br>
-        like a good omen
-      </div>
-    </figure>
-
-    <!-- 15) EP – Notebook -->
-    <figure class="slot" id="notebook">
-      <img src="img/notebook.webp?v=1" alt="Notebook" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 16) EP – Vocal Booth -->
-    <figure class="slot" id="ep-vocal-booth">
-      <img src="img/blame/ep-vocal-booth.webp?v=1" alt="In Vocal Booth Selfie" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 17) EP – Vocal Booth 2 -->
-    <figure class="slot" id="ep-vocal-booth-2">
-      <img src="img/blame/ep-vocal-booth-2.webp?v=1" alt="Vocal Booth Setup" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) EP – Title -->
-
-    <!-- #) EP – Spencer Tracklist -->
-    <figure class="slot" id="ep-spencer-tracklist">
-      <img src="img/blame/ep-spencer-text.webp?v=1" alt="Vocal Booth Setup" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) Text - EP Spencer Text -->
-    <figure class="slot slot--text" id="ep-spencer-text">
-      <div class="text-box">
-        me<br>
-        overthinking<br>
-        the<br>
-        tracklist<br>
-        order...
-      </div>
-    </figure>
-
-    <!-- #) Vimeo (1080x1920) – EP – Mixing Misery 6 -->
-    <figure class="slot slot--video" id="mixing-misery-6">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1121979182?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Mixing Misery Video">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- #) EP – Scrabble Board -->
-    <figure class="slot" id="scrabbleboard">
-      <img src="img/blame/scrabble-placeholder.webp?v=1" alt="Scrabble Board Placeholder" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) Vimeo (1080x1920) – EP – Sabrina Carpenter -->
-    <figure class="slot slot--video" id="sabrinacarpenter">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1121728014?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Sabrina Carpenter">
-        </iframe>
-      </div>
-    </figure>
-    
-    <!-- #) Text - EP Sabrina Carpenter Text -->
-    <figure class="slot slot--text" id="sabrinacarpenter-text">
-      <div class="text-box">
-        i went to the sabrina<br>
-        carpenter concert a<br>
-        week after my ep<br>
-        released. if jesus<br>
-        was a carpenter,<br>
-        then i’m a follower<br>
-        of christ.
-      </div>
-    </figure>
-
-    <!-- #) EP – Discord Messages -->
-    <figure class="slot" id="discord-message-1">
-      <img src="img/blame/discord-message-1.webp?v=1" alt="Scrabble Discord Messages" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) EP – Discord Messages -->
-    <figure class="slot" id="discord-message-2">
-      <img src="img/blame/discord-message-2.webp?v=1" alt="Scrabble Discord Messages" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 25) EP – Discord Messages -->
-    <figure class="slot" id="discord-message-3">
-      <img src="img/blame/scrabble-dm.webp?v=1" alt="Scrabble Discord Messages" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 26) Vimeo (1080x1920) – EP – Exit Wounds Zoom -->
-    <figure class="slot slot--video" id="exitwounds-zoom">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1121728035?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Exit Wounds Zoom">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 27) EP – Scrabble Piece -->
-    <figure class="slot" id="scrabble-piece">
-      <img src="img/blame/scrabble-piece.webp?v=1" alt="Scrabble Piece Received" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 28) Vimeo (1080x1920) – EP – EP Zoom -->
-    <figure class="slot slot--video" id="ep-zoom">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1121728059?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”EP Zoom">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 29) Text - EP Zoom Text -->
-    <figure class="slot slot--text" id="zoom-text">
-      <div class="text-box">
-        terrorizing you guys<br>
-        by releasing music<br>
-        is one of my<br>
-        pastimes
-      </div>
-    </figure>
-
-    <!-- 30) Vimeo (1080x1920) – EP – Mixing Sleepwalking-2 -->
-    <figure class="slot slot--video" id="mixing-sleepwalking-2">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1121986020?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Mixing Sleepwalking">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 31) EP – What's an EP Tweet -->
-    <figure class="slot" id="ep-tweet">
-      <img src="img/blame/brooke-tweet.webp?v=1" alt="What's an EP tweet" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 32) EP – Starter Pack -->
-    <figure class="slot" id="starterpack">
-      <img src="img/blame/ig-starterpack.webp?v=1" alt="Instagram Starterpack" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- 33) EP – Cover -->
-    <figure class="slot" id="ep-cover">
-      <img src="img/artwork/ep-cover.webp?v=1" alt="Blame it on a Bad Dream EP Cover Art" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- ========================= -->
-           <!-- THE ARTWORK -->
-    <!-- ========================= --> 
-    <!-- 1) Vimeo – Artwork – Artwork Test Shoot Video -->
-    <figure class="slot slot--video" id="artwork-testshoot-1">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1124622063?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Artwork Testshoot">
-        </iframe>
-      </div>
-    </figure>
-    
-    <!-- 2) Artwork – Artwork Title -->
-    <figure class="slot" id="artwork-title">
-      <img src="img/artwork/artwork-title-placeholder.webp?v=2" alt="The Artwork Heading Title" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 3) Vimeo – Artwork – Artwork Test Shoot Video 5 -->
-    <figure class="slot slot--video" id="artwork-testshoot-5">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1124635021?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Artwork Testshoot 5">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 4) Vimeo – Artwork – Artwork Test Shoot Video 4 -->
-    <figure class="slot slot--video" id="artwork-testshoot-4">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1124634775?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Artwork Testshoot 4">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 5) Vimeo – Artwork – Artwork Test Shoot Video 3 -->
-    <figure class="slot slot--video" id="artwork-testshoot-3">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1124634616?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Artwork Testshoot 3">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 6) Artwork – Shoot Makeup -->
-    <figure class="slot" id="shoot-makeup">
-      <img src="img/artwork/shoot-makeup.webp?v=1" alt="Caitlin Note" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 7) Artwork - Shoot Makeup Text -->
-    <figure class="slot slot--text" id="shoot-makeup-text">
-      <div class="text-box">
-        might have to quit<br>
-        my day job and become<br>
-        a fulltime #beautyguru
-      </div>
-    </figure>
-
-    <!-- 8) Artwork – Caitlin Text 1 -->
-    <figure class="slot" id="caitlin-text-1">
-      <img src="img/artwork/caitlin-text-1.webp?v=1" alt="Caitlin Texts" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 9) Artwork – Kayla Polaroid -->
-    <figure class="slot" id="kayla-polaroid">
-      <img src="img/artwork/kayla-polaroid-collage.gif?v=1" alt="Kayla Polaroid" loading="lazy" decoding="async"
-        loop>
-    </figure>
-
-    <!-- 10) Artwork – TV Photo -->
-    <figure class="slot" id="tv-photo">
-      <img src="img/artwork/tv-photo.webp?v=1" alt="TV Photo" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 11) Artwork – Caitlin Texts -->
-    <figure class="slot" id="caitlin-text-2">
-      <img src="img/artwork/caitlin-text-2.webp?v=1" alt="Caitlin Texts" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 12) Vimeo – Artwork – Shoot BTS 1 -->
-    <figure class="slot slot--video" id="shoot-bts-1">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1125383988?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Artwork Shoot BTS Video">
-        </iframe>
-      </div>
-    </figure>
-    
-    <!-- 13) Artwork – Caitlin Note -->
-    <figure class="slot" id="caitlin-note">
-      <img src="img/artwork/caitlin-note.webp?v=1" alt="Caitlin Note" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 14) Artwork – Caitlin Texts -->
-    <figure class="slot" id="caitlin-text-3">
-      <img src="img/artwork/caitlin-text-3.webp?v=1" alt="Caitlin Texts" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 15) Vimeo – Artwork – Shoot BTS 2 -->
-    <figure class="slot slot--video" id="shoot-bts-2">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1125390103?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Artwork Shoot BTS Video 2">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 16) Artwork – Dorm Mirror -->
-    <figure class="slot" id="dorm-mirror">
-      <img src="img/artwork/dorm-mirror.webp?v=1" alt="Caitlin Texts" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- ========================= -->
-           <!-- THE VIDEOS -->
-    <!-- ========================= --> 
-    <!-- 1) YouTube – Misery Missing Company Behind the Scenes -->
-    <figure class="slot slot--youtube" id="misery-bts">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/xTEO4nrPAxg?si=AETAqKiEoCS8J_hK"
-          title="Misery Missing Company Behind the Scenes"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 2) Videos – Misery Brainstorm -->
-    <figure class="slot" id="buddy-gif">
-      <img src="img/video/buddy-cakeboss.gif?v=1" alt="Cake Boss Gif" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 3) Videos – The Videos Title Camcorder -->
-    <figure class="slot" id="video-title-camcorder">
-      <img src="img/video/video-title-camcorder.webp?v=1" alt="Videos Section Title Camcorder Overlay" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- 4) Videos – Lottie — The Videos Title -->
-    <figure class="slot slot--lottie" id="video-title-gif">
-      <div class="lot-box">
-        <dotlottie-wc
-          src="Lottie/videos-title.lottie"
-          autoplay
-          loop
-          speed="0.5"
-          style="width:100%;height:100%">
-        </dotlottie-wc>
-      </div>
-    </figure>
-
-    <!-- 5) Videos – Misery Brainstorm -->
-    <figure class="slot" id="misery-brainstorm-1">
-      <img src="img/video/misery-brainstorm-1.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 6) Videos – Misery Polaroids -->
-    <figure class="slot" id="misery-polaroids">
-      <img src="img/video/misery-video-polaroids.gif?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 7) Videos – Misery Brainstorm Arrow -->
-    <figure class="slot" id="misery-brainstorm-arrow">
-      <img src="img/video/misery-brainstorm-arrow.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 8) Videos – Misery Brainstorm Text -->
-    <figure class="slot slot--text" id="misery-brainstorm-text">
-      <div class="text-box">
-        brainstorming the<br>
-        misery visualizer<br>
-        (ft. my horrible<br>
-        sketches)
-      </div>
-    </figure>
-
-    <!-- 9) Videos – Editing misery video thought bubble -->
-    <figure class="slot" id="editing-misery-thought">
-      <img src="img/video/editing-misery-thought.webp?v=1" alt="Editing Misery Thought Bubble" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- 10) Videos – Editing misery video -->
-    <figure class="slot" id="editing-misery">
-      <img src="img/video/editing-misery-video.webp?v=1" alt="Editing Misery Video" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 11) Videos – Misery Brainstorm 2 -->
-    <figure class="slot" id="misery-brainstorm-2">
-      <img src="img/video/misery-brainstorm-2.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 12) Videos – The Cake (Misery BTS) -->
-    <figure class="slot slot--video" id="the-cake">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1126857680?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”The Cake BTS Misery Video">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 13) Videos – Cake Boss (Misery BTS) -->
-    <figure class="slot slot--video" id="cake-boss">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1126857359?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Cake Boss BTS Misery Video">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 14) Videos – Happy Easter (Misery BTS) -->
-    <figure class="slot slot--video" id="happy-easter">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1126857557?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Happy Easter BTS Misery Video">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 15) Videos – Dab Video (Misery BTS) -->
-    <figure class="slot slot--video" id="dab-video">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1126857482?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Dab BTS Misery Video">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 16) Videos – Exit Wounds Film Roll -->
-    <figure class="slot" id="exitwounds-film-roll">
-      <img src="img/video/exitwounds-film-roll.webp?v=1" alt="Cake Boss Gif" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 17) Videos – Across Street (Exit Wounds BTS) -->
-    <figure class="slot slot--video" id="across-street">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1126900102?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Across Street BTS Exit Wounds Video">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 18) Videos – Grew Here (Exit Wounds BTS) -->
-    <figure class="slot slot--video" id="grew-here">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1126900118?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Grew Here BTS Exit Wounds Video">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 19) Videos – Mazzy Star (Exit Wounds BTS) -->
-    <figure class="slot slot--video" id="mazzy-star">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1126900146?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Mazzy Star BTS Exit Wounds Video">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 20) Videos – Tis the Damn (Exit Wounds BTS) -->
-    <figure class="slot slot--video" id="tisthedamn">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1126900172?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Tis the Damn BTS Exit Wounds Video">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 21) YouTube – Exit Wounds Behind the Scenes -->
-    <figure class="slot slot--youtube" id="exitwounds-bts">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/eRkpZTy-ko4?si=hMCQpJpDX9rWHZI1"
-          title="Exit Wounds Behind the Scenes"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
+      <!-- 10) Note from Izzy -->
+      <figure class="slot" id="torn-note">
+        <img
+          src="img/welcome/torn-note.webp?v=2"
+          alt="Note from Izzy" />
+        </a>
       </figure>
-
-    <!-- 22) Videos – TV Unboxing (Misery BTS) -->
-    <figure class="slot slot--video" id="tv-unboxing">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1127311928?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Unboxing the TV Misery Video">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 23) Overlay - About Videos -->
-    <figure class="slot" id="videos-about"
-      data-overlay-src="img/about-videos.webp?v=2"
-      data-overlay-alt="About the Videos">
-      <img src="img/videos-about.webp?v=2" alt="About Videos" loading="lazy" decoding="async" style="cursor:pointer;">
-    </figure>
-
-    <!-- 24) Videos – Exit Wounds Subway -->
-    <figure class="slot" id="exitwounds-subway">
-      <img src="img/video/exitwounds-subway.webp?v=1" alt="Exit Wounds Subway Gif" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- 25) Videos – Landmines BTS TikTok -->
-    <figure class="slot slot--video" id="landmines-bts-tiktok">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1127317659?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Landmines BTS TikTok Video">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- 26) YouTube – Landmines Behind the Scenes -->
-    <figure class="slot slot--youtube" id="landmines-bts">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/WxmRGRIXxJ4?si=2pDriRMxTyG-mS6H"
-          title="Landmines Behind the Scenes"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
+  
+      <!-- 11) Tracklist -->
+      <figure class="slot" id="tracklist">
+        <img
+          src="img/welcome/tracklist.webp?v=2"
+          alt="Tracklist" />
       </figure>
-
-    <!-- 27) Videos – Back Truck 2 -->
-    <figure class="slot" id="backtruck-2">
-      <img src="img/video/back-truck2.webp?v=1" alt="Exit Wounds Subway Gif" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 28) Videos – Back Truck 1 -->
-    <figure class="slot" id="backtruck-1">
-      <img src="img/video/back-truck1.webp?v=1" alt="Exit Wounds Subway Gif" loading="lazy" decoding="async">
-    </figure>
-    
-     <!-- 29) Lottie — Glitter Truck -->
-      <figure class="slot slot--lottie" id="glitter-truck-2">
+  
+      <!-- 12) The Scrapbook -->
+      <figure class="slot" id="the-scrapbook">
+        <img
+          src="img/welcome/the-scrapbook.webp?v=1"
+          alt="THE STORY BEHIND:" />
+      </figure>
+  
+      <!-- 13) Lottie — LFG -->
+      <figure class="slot slot--lottie" id="lfg">
+        <div class="lot-box">
+          <dotlottie-wc
+            src="Lottie/lfg.lottie"
+            autoplay
+            loop
+            speed="1"
+            style="width:100%;height:100%">
+           </dotlottie-wc>
+        </div>
+      </figure>
+  
+      <!-- 14) Lottie — Pink Flashing Arrow -->
+      <figure class="slot slot--lottie" id="pink-flashing-arrow">
+        <div class="lot-box">
+          <dotlottie-wc
+            src="Lottie/pink-flashing-arrow.lottie"
+            autoplay
+            loop
+            speed="1"
+            style="width:100%;height:100%">
+           </dotlottie-wc>
+        </div>
+      </figure>
+      
+      <!-- 15) Spotify playlist -->
+      <figure class="slot slot--spotify" id="playlist-ex">
+        <div class="sp-box">
+          <iframe data-testid="embed-iframe"
+            src="https://open.spotify.com/embed/playlist/07REAl6PPjOz2fLhehn0Xr?utm_source=generator"
+            width="100%" height="352" frameborder="0" allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy" title="Spotify playlist">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- ========================= -->
+            <!-- LIGHT SLEEPER -->
+      <!-- ========================= -->
+      <!-- 1) Lottie — Light Sleeper Title -->
+      <figure class="slot slot--lottie" id="lightsleeper-title">
+        <div class="lot-box">
+          <dotlottie-wc
+            src="Lottie/light-sleeper-title.lottie"
+            autoplay
+            loop
+            speed="2"
+            style="width:100%;height:100%">
+          </dotlottie-wc>
+        </div>
+      </figure>
+      
+      <!-- 2) YouTube – Light Sleeper Visualizer -->
+      <figure class="slot slot--youtube" id="lightsleeper-visualizer">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/Hvy3xS_jpAM?rel=0&modestbranding=1&playsinline=1"
+            title="Light Sleeper – Visualizer"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 3) GIF - About Light Sleeper -->
+      <figure class="slot" id="lightsleeper-about"
+        data-overlay-src="img/light-sleeper/lightsleeper-about.webp?v=2"
+        data-overlay-alt="About Light Sleeper">
+        <img src="img/light-sleeper/tv-message-1.webp?v=2" alt="TV message" loading="lazy" decoding="async" style="cursor:pointer;">
+      </figure>
+  
+      <!-- 3) AUTUMN TEXT -->
+      <figure class="slot" id="autumn-text">
+        <img src="img/light-sleeper/autumn-text.webp?v=3" alt="Autumn text" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 5) BLAME IT Notes App -->
+      <figure class="slot" id="blame-it-notesapp">
+        <img src="img/light-sleeper/blame-it-notesapp.webp?v=2" alt="Blame It notes app" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 6) Silver Star Overlay -->
+      <figure class="slot" id="silver-star1-1">
+        <img src="img/extra/silver-star1.webp?v=2" alt="silver star" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 7) Vimeo - Light Sleeper Studio -->
+      <figure class="slot slot--video" id="lightsleeper-studio">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1114381114?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="Light Sleeper Studio">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 8) GIF - Click for Chordz Gif -->
+      <figure class="slot" id="izzymacarthur-withguitar"
+        data-overlay-src="img/light-sleeper/lightsleeper-chords.webp?v=3"
+        data-overlay-alt="Izzy with Guitar">
+        <img src="img/light-sleeper/izzymacarthur-withguitar.gif?v=2" alt="Light Sleeper Chords" loading="lazy" decoding="async" style="cursor:pointer;">
+      </figure>
+  
+      <!-- 9) Text - Click4Chordz -->
+      <figure class="slot slot--text" id="click4chordz">
+        <div class="text-box">
+          click<br>
+          4<br>
+          chordz
+        </div>
+      </figure>
+  
+      <!-- 10) SOUND (SoundCloud) — Play Light Sleeper -->
+      <figure class="slot slot--sc" id="play-lightsleeper"
+              data-sc-url="https://soundcloud.com/izzy-macarthur/light-sleeper">
+        <img class="sc-trigger"
+             src="img/light-sleeper/listen-to-lightsleeper.gif?v=3"
+             alt="Play Light Sleeper (SoundCloud)">
+        <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
+      </figure>
+  
+      <!-- 11) YouTube – Light Sleeper – Behind the Song – Holly Humberstone Deep End Placeholder -->
+      <figure class="slot slot--youtube" id="lightsleeper-behindthesong">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/tie87p1l9YM?si=rP307mgprtgeQVX-"
+            title="Light Sleeper – Behind the Song"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </figure>
+      
+      <!-- 12) Vimeo – Broken Breathing (16:9) -->
+      <figure class="slot slot--video" id="broken-breathing">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1115700987?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowfullscreen
+            title="Broken Breathing">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- ========================= -->
+            <!-- EXIT WOUNDS -->
+      <!-- ========================= -->
+      <!-- 1) YouTube – Exit Wounds: Lyric Video - Placeholder -->
+      <figure class="slot slot--youtube" id="exitwounds-lyricvideo">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/x5HKc36nnYo?si=0EdF-MfX6GVODw4T"
+            title="Exit Wounds - Lyric Video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </figure>
+      
+      <!-- 2) Exit Wounds Title  -->
+      <figure class="slot" id="exitwounds-title">
+        <img src="img/exit-wounds/exit-wounds-title.webp?v=2" alt="Exit Wounds Title" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 3) SOUND (SoundCloud) — Play Exit Wounds -->
+      <figure class="slot slot--sc" id="play-exitwounds"
+              data-sc-url="https://soundcloud.com/izzy-macarthur/exit-wounds">
+        <img class="sc-trigger"
+             src="img/play-exitwounds.webp?v=2"
+             alt="Play Exit Wounds (SoundCloud)">
+        <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
+      </figure>
+  
+      <!-- 4) Text - Press Play, DJ! -->
+      <figure class="slot slot--text" id="pressplaydj">
+        <div class="text-box">click to press play, dj!</div>
+      </figure>
+  
+      <!-- 5) Exit Wounds: About Slot -->
+      <figure class="slot" id="exitwounds-bandages"
+        data-overlay-src="img/exit-wounds/about-exitwounds.webp?v=3"
+        data-overlay-alt="About Exit Wounds">
+        <img src="img/exit-wounds/exit-wounds-bandages.webp?v=1" alt="Exit Wounds Bandages" loading="lazy" decoding="async" style="cursor:pointer;">
+      </figure>
+  
+      <!-- 6) Lottie — Crashing Down Animation -->
+      <figure class="slot slot--lottie" id="exitwounds-animation-1">
+        <div class="lot-box">
+          <dotlottie-wc
+            src="Lottie/crashing-down-animation.lottie"
+            autoplay
+            loop
+            speed="1"
+            style="width:100%;height:100%">
+          </dotlottie-wc>
+        </div>
+      </figure>
+  
+      <!-- 7) YouTube – Exit Wounds: Behind the Song – Holly Humberstone Placeholder -->
+      <figure class="slot slot--youtube" id="exitwounds-behindthesong">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/tie87p1l9YM?si=rP307mgprtgeQVX-"
+            title="Exit Wounds - Behind the Song"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 8) Exit Wounds Voicememo -->
+      <figure class="slot slot--audio" id="play-exit-wounds-voicememo"
+          data-audio-src="audio/exit-wounds-voicememo.m4a" data-loop="false">
+        <img class="audio-trigger"
+             src="img/exit-wounds/exit-wounds-voicememo.webp?v=1"
+             alt="Play Exit Wounds Voice Memo">
+        <audio preload="auto" playsinline>
+          <source src="audio/exit-wounds-voicememo.m4a" type="audio/mp4">
+        </audio>
+      </figure>
+      
+      <!-- 9) Exit Wounds – Click Me Arrow -->
+      <figure class="slot" id="click-me-arrow">
+        <img src="img/exit-wounds/click-me-arrow.webp?v=2" alt="exit wounds click me arrow" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 10) Text - Click Me -->
+      <figure class="slot slot--text" id="click-me-text">
+        <div class="text-box">click me</div>
+      </figure>
+  
+      <!-- 11) Text - Subscribe to Substack -->
+      <figure class="slot slot--text" id="subscribe-substack-text">
+        <div class="text-box">
+          if you don't think<br>
+          it's, like, totally lame,<br>
+          you should subscribe
+        </div>
+      </figure>
+  
+      <!-- 12) Substack Subscribe Button -->
+      <figure class="slot" id="subscribe-button">
+        <a href="https://izzymacarthur.substack.com/embed"
+           target="_blank" rel="noopener noreferrer">
+          <img src="img/exit-wounds/subscribe-button.webp?v=2"
+               alt="Substack Subscribe Button">
+        </a>
+      </figure>
+      
+      <!-- 13) Subscribe Arrow  -->
+      <figure class="slot" id="subscribe-arrow">
+        <img src="img/exit-wounds/subscribe-arrow.webp?v=1" alt="subscribe arrow" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 14) Text - Read More About Exit Wounds -->
+      <figure class="slot slot--text" id="read-susbstack-text">
+        <div class="text-box">
+          READ MORE ABOUT EXIT WOUNDS<br>
+          ON MY SUBSTACK "10 THINGS I'M<br>
+          THINKING ABOUT"!
+        </div>
+      </figure>
+  
+      <!-- 15) Arrow Pointing to Exit Wounds Flier -->
+      <figure class="slot" id="substack-point-arrow">
+        <img src="img/exit-wounds/10things-substack-arrow.webp?v=1" alt="substack point arrow" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 16) Exit Wounds Substack Flier -->
+      <figure class="slot" id="exitwounds-substackflier">
+        <a href="https://izzymacarthur.substack.com/p/with-no-exit-wounds"
+           target="_blank" rel="noopener noreferrer">
+          <img src="img/exit-wounds/exit-wounds-substack-flier.webp?v=1"
+               alt="With No Exit Wounds — read on Substack">
+        </a>
+      </figure>
+  
+      <!-- ========================= -->
+            <!-- LANDMINES -->
+      <!-- ========================= -->
+      <!-- #) Lottie — Glitter Truck -->
+      <figure class="slot slot--lottie" id="glitter-truck">
         <div class="lot-box">
           <dotlottie-wc
             src="Lottie/glitter-truck.lottie"
@@ -1541,379 +419,1504 @@
           </dotlottie-wc>
         </div>
       </figure>
+      
+      <!-- #) Vimeo – Landmines BTS (16:9) -->
+      <figure class="slot slot--video" id="landmines-bts-clip">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1114719211?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowfullscreen
+            title="landmines-bts-clip">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- #) Vimeo – Landmines Voicememo -->
+      <figure class="slot slot--video" id="landmines-voicememo">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1114741947?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowfullscreen
+            title="landmines-voicememo">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- #) Kat Stratford Driver Gif -->
+      <figure class="slot" id="katstratford-car">
+        <img src="img/kat-stratford-car.gif?v=1" alt="kat stratford car" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) October Lane -->
+      <figure class="slot" id="october-lane">
+        <img src="img/october-lane.webp?v=2" alt="October Lane Street Sign" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- #) Landmines License  -->
+      <figure class="slot" id="landmines-license">
+        <img src="img/landmines/landmines-license.webp?v=2" alt="Landmines License" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) Vimeo (portrait 1080×1920) - Landmines from Session -->
+      <figure class="slot slot--video" id="landmines-reaction">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1121306084?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="Light Sleeper Studio">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- #) Text - Click Me -->
+      <figure class="slot slot--text" id="landmines-reaction-text">
+        <div class="text-box">
+          watching you guys<br>
+          react to landmines's<br>
+          release meant so<br>
+          much to me (thank <br>
+          you brooke & ava<br>
+          for letting me use<br>
+          this video)<br>
+        </div>
+      </figure>
+  
+      <!-- #) Landmines Title  -->
+      <figure class="slot" id="landmines-title">
+        <img src="img/landmines/landmines-title.gif?v=3" alt="landmines title" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) YouTube – Landmines Lyric Video -->
+      <figure class="slot slot--youtube" id="landmines-lyricvideo">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/1ZjReUQ6WTU?si=6G7zcN05vVEXl2in"
+            title="Landmines – lyric video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- #) Landmines (opens overlay to show landmines-about.png) -->
+      <figure class="slot" id="landmines-about"
+        data-overlay-src="img/landmines/about-landmines.webp?v=1"
+        data-overlay-alt="About Landmines">
+        <img src="img/landmines/about-landmines-letter.webp?v=2" alt="Landmines Letter" loading="lazy" decoding="async" style="cursor:pointer;">
+      </figure>
+  
+      <!-- #) YouTube – Landmines Behind The Song – Holly Humberstone Placeholder (overkill behind the song) -->
+      <figure class="slot slot--youtube" id="landmines-behindthesong">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/wsd-014U_b0?si=rwZPeSIiuASurx8m"
+            title="Landmines – Behind the Song"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- #) Enchanted Bridge -->
+      <figure class="slot" id="enchanted-bridge">
+        <img src="img/enchanted-bridge.webp?v=4" alt="Enchanted Screenshot" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) Vimeo (portrait 1080×1920) - Landmines from Session -->
+      <figure class="slot slot--video" id="landmines-og-guitar">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1115330952?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="Light Sleeper Studio">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- #) Text - landmines in studio -->
+      <figure class="slot slot--text" id="landmines-session-video-text">
+        <div class="text-box">
+          the sick ass acoustic<br>
+          bass guitar in session<br>
+          (izzy @ 19 = not cute)
+        </div>
+      </figure>
         
-    <!-- ========================= -->
-           <!-- THE MERCH -->
-    <!-- ========================= --> 
-    <!-- 1) Merch – Landmines Matches -->
-    <figure class="slot" id="landmines-matches">
-      <img src="img/matches/landmines-matches.webp?v=1" alt="Landmines Matches" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 2) Merch – Pretty Little Liars Gif -->
-    <figure class="slot" id="pretty-little-liars">
-      <img src="img/matches/pretty-little-liars.gif?v=1" alt="Landmines Matches" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 3) Merch – Pretty Little Liars Text -->
-    <figure class="slot slot--text" id="pretty-little-liars-text">
-      <div class="text-box">
-        anytime i light a match, i feel like<br>
-        i’m committing a crime straight out<br>
-        of pretty little liars
-      </div>
-    </figure>
-    
-     <!-- 4) Merch – Matches & Merch Title -->
-    <figure class="slot" id="m-title">
-      <img src="img/matches/matches-merch.webp?v=1" alt="Matches + Merch Title" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 5) Merch – Merch Title -->
-    <figure class="slot" id="fire-meme">
-      <img src="img/matches/fire-meme.webp?v=1" alt="Framed Fire Meme" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 6) Merch – Candle Lighting -->
-    <figure class="slot slot--video" id="candle-lighting">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1127383216?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Candle Lighting">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- #) URL:OVERLAY – MERCH – MATCHBOOKS -->
-    <figure class="slot" id="about-matchbooks"
-      data-overlay-src="img/landmines/about-landmines.webp?v=1"
-      data-overlay-alt="About Landmines">
-      <img src="img/matchbooks-about.webp?v=3" alt="About the Matches" loading="lazy" decoding="async" style="cursor:pointer;">
-    </figure>
-
-    <!-- 7) Merch – Driver Sticker -->
-    <figure class="slot" id="sticker-1">
-      <img src="img/matches/driver-sticker-glow.webp?v=1" alt="I Know I Can't Be the Driver Sticker" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 8) Merch – Little Miss Misery Sticker -->
-    <figure class="slot" id="sticker-2">
-      <img src="img/matches/little-miss-sticker-glow.webp?v=1" alt="Little Miss Misery Sticker" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 9) Merch – Izzy MacArthur Loves Me Sticker -->
-    <figure class="slot" id="sticker-3">
-      <img src="img/matches/izzyloves-sticker-glow.webp?v=1" alt="Izzy MacArthur Loves Me Sticker" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 10) Merch – Buy Button -->
-    <figure class="slot" id="buy-button">
-      <a href="https://shopizzymacarthur.com"
-         target="_blank" rel="noopener noreferrer">
-        <img src="img/matches/buy-button.webp?v=2"
-             alt="Buy Merch Button">
-      </a>
-    </figure>
-
-    <!-- 11) Merch – Early Posters -->
-    <figure class="slot" id="early-posters">
-      <img src="img/matches/poster-earlyversion.webp?v=1" alt="Early Versions of Posters" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 12) Merch – Early Posters Text -->
-    <figure class="slot slot--text" id="early-posters-text">
-      <div class="text-box">
-        two of the first drafts of the<br>
-        posters before they became what<br>
-        people now have hung up in their<br>
-        houses (absolutely crazytown to<br>
-        think about)
-      </div>
-    </figure>
-
-    <!-- 13) Merch – Posters Arrow -->
-    <figure class="slot" id="poster-arrow">
-      <img src="img/matches/poster-arrow.webp?v=1" alt="Early Versions of Posters" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 14) Merch – Thank You Text -->
-    <figure class="slot slot--text" id="thank-you-text">
-      <div class="text-box">
-        A special thank<br>
-        you must go to my<br>
-        lovely friend xoee<br>
-        for designing<br>
-        these with me <3<br>
-      </div>
-    </figure>
-
-    <!-- 15) Merch – Poster -->
-    <figure class="slot" id="poster">
-      <img src="img/matches/poster.webp?v=1" alt="Final Version of Poster" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 16) GIF - MERCH – SIMS GIF -->
-    <figure class="slot" id="sims">
-      <img src="img/sims.gif?v=1" alt="Sims Gif" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- 17) Merch – Selfie Poster -->
-    <figure class="slot" id="selfie-poster">
-      <img src="img/matches/selfie-poster.webp?v=1" alt="Selfie with Poster" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- ========================= -->
-           <!-- LONDON -->
-    <!-- ========================= --> 
-
-    <!-- 1) IMG - London – London Title -->
-    <figure class="slot" id="london-title">
-      <img src="img/london-title.webp?v=1" alt="London Title" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) IMG - London – Hangout Poster -->
-    <figure class="slot" id="hangout-poster">
-      <img src="img/london/hangout-poster.webp?v=2" alt="London Hangout Poster" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) IMG - London – Camcorder -->
-    <figure class="slot" id="london-camcorder">
-      <img src="img/london/camcorder-london.webp?v=2" alt="Camcorder Overlay" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) VIMEO - London – Sleepwalking Live from London -->
-    <figure class="slot slot--video" id="london-live-1">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1128241635?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Sleepwalking Live from London">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- #) VIMEO - London – Landmines Live from London -->
-    <figure class="slot slot--video" id="london-live-2">
-      <div class="video-box">
-        <iframe
-          src="https://player.vimeo.com/video/1128241519?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          loading="lazy"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowfullscreen
-          title=”Landmines Live from London">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- #) YOUTUBE – London Vlog -->
-    <figure class="slot slot--youtube" id="hangout-vlog">
-      <div class="yt-box">
-        <iframe
-          src="https://www.youtube.com/embed/WPc97iei4Sw"
-          title="London Hangout Vlog"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- #) IMG - London – Hangout Rsvp -->
-    <figure class="slot" id="rsvp-cloud">
-      <img src="img/london/rsvp-hangout.webp?v=1" alt="Future Hangout RSVP" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- #) IMG - London – Hangout RSVP Arrow -->
-    <figure class="slot" id="rsvp-arrow">
-      <img src="img/arrows/swirl-arrow-r.webp?v=1" alt="Swirl Arrow 1" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- #) IMG:URL - London – Hangout RSVP Button -->
-    <figure class="slot" id="rsvp-button">
-      <a href="https://www.fvr.fan/izzymacarthur/hangoutrequests?tag=storyboard"
-         target="_blank" rel="noopener noreferrer">
-        <img src="img/london/rsvp-button.webp?v=1"
-             alt="RSVP Button">
-      </a>
-    </figure>
-
-    <!-- #) IMG - London – Matchbook -->
-
-    <!-- #) IMG:OVERLAY - About London (opens overlay to show about-london.png) -->
-    <figure class="slot" id="london-about"
-      data-overlay-src="img/london/about-london.webp?v=2"
-      data-overlay-alt="About London (from my substack)">
-      <img src="img/london/london-about.webp?v=2" alt="London Composition Book" loading="lazy" decoding="async" style="cursor:pointer;">
-    </figure>
-
-    <!-- #) GIG - One Direction Gif -->
-    <figure class="slot" id="onedirection">
-      <img src="img/london/one-direction.gif?v=1" alt="One Direction Gif" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) TEXT – One Direction Text -->
-    <figure class="slot slot--text" id="onedirection-text">
-      <div class="text-box">
-        (sorry, i had to)<br>
-      </div>
-    </figure>
-
-    <!-- #) IMG - Tweet from Hangout -->
-    <figure class="slot" id="hangout-tweet">
-      <img src="img/london/hangout-tweet.webp?v=1" alt="Tweet from London Hangout" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- #) LOTTIE:OVERLAY - MORE FROM LONDON -->
-    <figure class="slot slot--lottie"
-            id="london-tv"
-            data-overlay-src="img/london/london-about.webp?v=1"
-            data-overlay-alt="More Pics from London overlay">
-      <div class="lot-box">
-        <dotlottie-wc
-          src="Lottie/london-tv-opt.lottie"
-          autoplay
-          loop
-          speed="1"
-          style="width:100%;height:100%">
-        </dotlottie-wc>
-      </div>
-    </figure>
-    
-    <!-- #) IMG - London – Card V1 -->
-    <figure class="slot" id="londoncard-v1">
-      <img src="img/london/london-card-v1.webp?v=1" alt="Version 1 of London Baseball Card Front" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- #) IMG - London – Card Arrow -->
-    <figure class="slot" id="londoncard-arrow-1">
-      <img src="img/arrows/swirl-arrow-r.webp?v=1" alt="Swirl Arrow 1" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- #) TEXT - London – Card Text -->
-    <figure class="slot slot--text" id="londoncard-text">
-      <div class="text-box">
-        london hang<br>
-        trading<br>
-        cards:<br>
-        version one<br>
-        vs.<br>
-        the final version
-      </div>
-    </figure>
-    
-    <!-- #) IMG - London – Card Arrow 2 -->
-    <figure class="slot" id="londoncard-arrow-2">
-      <img src="img/arrows/swirl-arrow-l.webp?v=1" alt="Swirl Arrow 2" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- #) IMG - London – Card Front -->
-    <figure class="slot" id="londoncard-front">
-      <img src="img/london-card-front-2.webp?v=1" alt="London Baseball Card Front" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- #) IMG - London – Card Back -->
-    <figure class="slot" id="londoncard-back">
-      <img src="img/london/london-card-back.webp?v=1" alt="London Baseball Card Back" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- #) IMG - London – Film -->
-    <figure class="slot" id="film-strip">
-      <img src="img/london/film-hangout.jpg?v=1" alt="London Film Strip" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- ========================= -->
-           <!-- WHAT'S NEXT -->
-    <!-- ========================= --> 
-
-    <!-- #) IMG - NEXT - DREAMDOTNET -->
-    <figure class="slot" id="dreamdotnet">
-      <img src="img/dreamdotnet.webp?v=1" alt="dreamdotnet photo" loading="lazy" decoding="async">
-    </figure>
-    
-    <!-- #) VIMEO - NEXT - CHURCH -->
-    <figure class="slot slot--video" id="church-video">
-      <div class="video-box">
-        <iframe         
-          src="https://player.vimeo.com/video/1128846924?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          allowfullscreen
-          title="Church Singing Video">
-        </iframe>
-      </div>
-    </figure>
-
-    <!-- #) IMG - NEXT - VILLAINS -->
-    <figure class="slot" id="villains">
-      <img src="img/villains.webp?v=1" alt="Villain Meme" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) IMG - NEXT - STRAWBERRY -->
-    <figure class="slot" id="strawberry">
-      <img src="img/strawberry.webp?v=1" alt="Strawberry Picture" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) TEXT - NEXT - JOIN MY CULT -->
-
-    <!-- #) IMG:URL - NEXT - JOIN BUTTON -->
-    
-    <!-- #) IMG – NEXT – TITLE -->
-    <figure class="slot" id="next-title">
-      <img src="img/placeholders/next.webp?v=2" alt="The Star Tarot Card" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) IMG - Next – TY NOTE -->
-    <figure class="slot" id="thankyou-note">
-      <img src="img/thankyou-note.webp?v=2" alt="Thank You Note" loading="lazy" decoding="async">
-    </figure>
-
-    <!-- #) IMG - NEXT - SIGN-OFF NOTE -->
-
-    <!-- #) TEXT - NEXT - PRE-SAVE TEXT -->
-
-    <!-- #) IMG:URL - NEXT - PRE-SAVE BUTTON -->
-
-    <!-- #) LOTTIE - NEXT - LOCK LOGO -->
-    <figure class="slot slot--lottie" id="lock-logo">
-      <div class="lot-box">
-        <dotlottie-wc
-          src="Lottie/lfg.lottie"
-          autoplay
-          loop
-          speed="1"
-          style="width:100%;height:100%">
-        </dotlottie-wc>
-      </div>
-    </figure>
-
-    <!-- #) IMG - NEXT - SOCIAL SPARKLES -->
-
-    <!-- #) IMG - NEXT - IG -->
-
-    <!-- #) IMG - NEXT - TIKTOK -->
-
-    <!-- #) IMG - NEXT - TWITTER -->
-
-    <!-- #) IMG - NEXT - DISCORD -->
-
-    <!-- #) IMG - NEXT - SPOTIFY -->
-
-    <!-- #) IMG - NEXT - APPLE MUSIC -->
-    
-    <!-- Add more slots here… -->
-    
+      <!-- #) Landmines Session Voicememo -->
+      <figure class="slot slot--audio" id="landmines-session-voicememos"
+          data-audio-src="audio/landmines-session.mp3" data-loop="false">
+        <img class="audio-trigger"
+             src="img/landmines/landmines-session-voicememos.webp?v=4"
+             alt="Play Landmines Voice Memo">
+        <audio preload="auto" playsinline>
+          <source src="audio/landmines-session.mp3?v=1" type="audio/mpeg">
+        </audio>
+      </figure>
+  
+      <!-- #) Vimeo (portrait 1080×1920) - Landmines from Session -->
+      <figure class="slot slot--video" id="vocals-landmines-1">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1115691695?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="Recording Landmines Vocals">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- #) Text - Click Me -->
+      <figure class="slot slot--text" id="vocals-landmines-1-text">
+        <div class="text-box">
+          i have to admit i was NOT a<br>
+          content queen when writing<br>
+          and recording... i have a LOT<br>
+          of videos at this atrocious angle,<br>
+          but i adore the landmines bgvs,<br>
+          so here they are, extra loud 4 u<br>
+        </div>
+      </figure>
+  
+      <!-- ========================= -->
+        <!-- MISERY MISSING COMPANY -->
+      <!-- ========================= --> 
+      <!-- 1) Vimeo – Misery – OG Chorus Voicememo -->
+          <figure class="slot slot--video" id="misery-ogchorus">
+            <div class="video-box">
+              <iframe
+                src="https://player.vimeo.com/video/1115354360?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowfullscreen
+                title="misery-og-chorus-voicememo">
+              </iframe>
+            </div>
+          </figure>
+      
+      <!-- 2) Text - OG Chorus -->
+      <figure class="slot slot--text" id="misery-ogchorus-text">
+        <div class="text-box">
+          when i came up with the<br>
+          first draft of what's now<br>
+          the misery missing company<br>
+          chorus<br>
+        </div>
+      </figure>
+  
+      <!-- 3) Misery – Little Miss Misery -->
+      <figure class="slot" id="little-miss-misery">
+        <img src="img/misery/little-miss-misery.webp?v=2" alt="little miss misery" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 4) Misery – Kat Stratford Dancing -->
+      <figure class="slot" id="kat-stratford-dancing">
+        <img src="img/misery/kat-stratford-dancing.webp?v=1" alt="kat stratford dancing" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 5) Misery – Solo cups animation -->
+      <figure class="slot" id="solo-cups">
+        <img src="img/misery/solo-cups.gif?v=1" alt="solo cup animation" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 6) Misery – Light Bulb (opens overlay to show misery-about.png) -->
+      <figure class="slot" id="misery-about"
+        data-overlay-src="img/about-misery.webp?v=1"
+        data-overlay-alt="About Misery Missing Company">
+        <img src="img/misery/misery-about.webp?v=3" alt="About Misery Missing Company" loading="lazy" decoding="async" style="cursor:pointer;">
+      </figure>
+  
+      <!-- 8) Misery Title Background -->
+      <figure class="slot" id="misery-title-bg">
+        <img src="img/misery/misery-title-bg.webp?v=2" alt="Misery Title" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 9) Vimeo – Misery – First Draft Voicememo -->
+      <figure class="slot slot--video" id="misery-wants-company">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1115354413?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowfullscreen
+            title="Misery first draft">
+          </iframe>
+        </div>
+      </figure>
+      
+      <!-- 10) Text - a first draft of misery -->
+      <figure class="slot slot--text" id="misery-wants-company-text">
+        <div class="text-box">
+          the first version of misery i wrote<br>
+          for my freshman year songwriting class
+        </div>
+      </figure>
+  
+      <!-- 11) Vimeo (portrait 1080×1920) - Misery Vocals in Studio -->
+      <figure class="slot slot--video" id="vocals-misery-4">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1115586624?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="Misery Missing Company Studio">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 12) Text - Misery Vocals in Studio -->
+      <figure class="slot slot--text" id="vocals-misery-4-text">
+        <div class="text-box">
+          doing misery<br>
+          vocals en el<br>
+          studio<br>
+        </div>
+      </figure>
+  
+      <!-- 13) Text - Misery with LJ -->
+      <figure class="slot slot--text" id="misery-wlj-text">
+        <div class="text-box">
+          this is my friend lj and i <br>
+          in my freshman dorm when i <br>
+          showed her misery for the<br>
+          first time
+        </div>
+      </figure>
+  
+      <!-- 14) Vimeo (portrait 1080×1920) - Misery w Lily -->
+      <figure class="slot slot--video" id="misery-wlj">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1118578559?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="Misery Missing Company Studio">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 15) SOUND (SoundCloud) — Play Misery -->
+      <figure class="slot slot--sc" id="play-misery"
+              data-sc-url="https://soundcloud.com/izzy-macarthur/misery-missing-company">
+        <img class="sc-trigger"
+             src="img/misery/listen-to-misery.webp?v=2"
+             alt="Play Misery Missing Company (SoundCloud)">
+        <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
+      </figure>
+  
+      <!-- 16): YouTube – Misery Visualizer -->
+      <figure class="slot slot--youtube" id="misery-visualizer">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/COb6V_Q4gxQ?si=FzXMNX6JGNyGy2lA"
+            title="Misery Missing Company (Visualizer)"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 17) YouTube – Misery Missing Company Behind the Song -->
+      <figure class="slot slot--youtube" id="misery-behindthesong">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/_MOSQIXigB8?si=K5d65gYgNHqj2BOq"
+            title="Misery Missing Company: Behind the Song"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </figure>
+      
+      <!-- ========================= -->
+             <!-- SLEEPWALKING -->
+      <!-- ========================= --> 
+      <!-- 1) Smurfette -->
+      <figure class="slot" id="smurfette-1">
+        <img src="img/sleepwalking/smurfette-1.webp?v=1" alt="Smurfette" loading="lazy" decoding="async">
+      </figure>
+  
+       <!-- 2) SOUND (SoundCloud) — click image to play/pause -->
+      <figure class="slot slot--sc" id="play-sleepwalking"
+              data-sc-url="https://soundcloud.com/izzy-macarthur/sleepwalking">
+        <img class="sc-trigger"
+             src="img/sleepwalking/play-sleepwalking.webp?v=1"
+             alt="Play Sleepwalking (SoundCloud)">
+        <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
+      </figure>
+  
+      <!-- 3) Vimeo – Sleepwalking – Sleepwalking on Radio -->
+      <figure class="slot slot--video" id="sleepwalking-radio">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1116313498?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowfullscreen
+            title="Sleepwalking on the Radio">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 4) Text - Sleepwalking Radio Text -->
+      <figure class="slot slot--text" id="sleepwalking-radio-text">
+        <div class="text-box">
+          me in my music tech class when<br>sleepwalking was played on the<br>radio for the first time ever
+        </div>
+      </figure>
+  
+      <!-- 5) Sleepwalking – Polaroid -->
+      <figure class="slot" id="sleepwalking-radio-polaroid">
+        <img src="img/sleepwalking/sleepwalking-radio.webp?v=1" alt="Sleepwalking Radio Polaroid" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- 6) SLEEPWALKING – The Star Tarot Card -->
+      <figure class="slot" id="thestar-tarot">
+        <img src="img/sleepwalking/thestar-tarot.webp?v=2" alt="The Star Tarot Card" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 7) LOTTIE — SLEEPWALKING TITLE SLOT -->
+       <figure class="slot" id="sleepwalking-title">
+        <img src="img/sleepwalking/sleepwalking-title.gif?v=2" alt="The Star Tarot Card" loading="lazy" decoding="async">
+      </figure>
+     
+      <!-- 8) YouTube – Sleepwalking: Behind the Song -->
+      <figure class="slot slot--youtube" id="sleepwalking-behindthesong">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/_MOSQIXigB8?si=K5d65gYgNHqj2BOq"
+            title="Misery Missing Company: Behind the Song"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 9) YouTube – Sleepwalking - Visualizer -->
+      <figure class="slot slot--youtube" id="sleepwalking-visualizer">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/hD2rvD9Wbc4?si=XtN3IJfM587HXjKe"
+            title="Sleepwalking Visualizer"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 11) Sleepwalking – The Receipt -->
+      <figure class="slot" id="sleepwalking-receipt">
+        <img src="img/sleepwalking/sleepwalking-receipt.webp?v=1" alt="The Star Tarot Card" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 12) Vimeo (Regular) – Sleepwalking – Listening Party -->
+      <figure class="slot slot--video" id="sleepwalking-listeningparty">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1121321795?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Sleepwalking from the Listening Party">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- ========================= -->
+             <!-- THE EP -->
+      <!-- ========================= --> 
+      <!-- 1): Spotify playlist -->
+      <figure class="slot slot--spotify" id="ep-inspo-sp">
+        <div class="sp-box">
+          <iframe data-testid="embed-iframe"
+            src="https://open.spotify.com/embed/playlist/7btb3TEGUxfPXy4RdNsGXT?utm_source=generator"
+            width="100%" height="352" frameborder="0" allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy" title="Spotify playlist">
+          </iframe>
+        </div>
+      </figure>
+      
+      <!-- 2) EP – EP Inspo Playlist -->
+      <figure class="slot" id="ep-inspo">
+        <img src="img/blame/ep-inspo-playlist.webp?v=1" alt="EP Inspo Playlist" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 3) EP – Telephone (opens overlay to show misery-about.png) -->
+      <figure class="slot" id="ep-telephone"
+        data-overlay-src="img/blame/ep-telephone.webp?v=1"
+        data-overlay-alt="About Telephone">
+        <img src="img/ep-telephone.webp?v=2" alt="EP Telephone" loading="lazy" decoding="async" style="cursor:pointer;">
+      </figure>
+  
+      <!-- 4) Text - Phoning Friends -->
+      <figure class="slot slot--text" id="ep-phoningfriends">
+        <div class="text-box">
+          phoning all my<br>
+          friends!!!
+        </div>
+      </figure>
+  
+      <!-- 5) Text - Click to Read -->
+      <figure class="slot slot--text" id="ep-click-toread">
+        <div class="text-box">
+          click the phone to read<br>
+          what i've gotta say
+        </div>
+      </figure>
+  
+      <!-- 6) Vimeo (1080x1920) – EP – Mixing Misery -->
+      <figure class="slot slot--video" id="mixing-misery-1">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1121369250?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Mixing Misery">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 7) Text - Mixing Misery -->
+      <figure class="slot slot--text" id="mixing-misery-1-text">
+        <div class="text-box">
+          mixing misery missing<br>
+          company<br>
+        </div>
+      </figure>
+  
+       <!-- 8) Vimeo (1080x1920) – EP – Migos -->
+      <figure class="slot slot--video" id="migos-mairead">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1121369593?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Migos Carpool Karaoke">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 9) EP – EP Title -->
+      <figure class="slot" id="air-quality">
+        <img src="img/blame/air-quality.webp?v=1" alt="EP Title" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 10) Text - Air Quality -->
+      <figure class="slot slot--text" id="air-quality-text">
+        <div class="text-box">
+          there were<br>
+          horrible<br>
+          wildfires in<br>
+          canada when we<br>
+          were recording<br>
+          the vocals, so<br>
+          it felt like it<br>
+          was 5pm all day
+        </div>
+      </figure>
+  
+      <!-- 11) Vimeo (1080x1920) – EP – Hannah Montana -->
+      <figure class="slot slot--video" id="hannah-montana">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1114920837?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Hannah Montana">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 12) Text - Migos Carpool Karaoke -->
+      <figure class="slot slot--text" id="migos-text">
+        <div class="text-box">
+          the migos carpool<br>
+          karaoke is my fav, so<br>
+          i make everyone watch<br>
+          it with me
+        </div>
+      </figure>
+  
+      <!-- 13) EP – Mix Date Photo -->
+      <figure class="slot" id="ep-mixing-date">
+        <img src="img/blame/ep-mixing-date.webp?v=1" alt="EP Mixing Date Picture" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 14) Text - Hannah Montana -->
+      <figure class="slot slot--text" id="hannah-montana-text">
+        <div class="text-box">
+          some girls were listening to<br>
+          hannah montana in the car,<br>
+          full blast, the night misery<br>
+          was being released – it felt<br>
+          like a good omen
+        </div>
+      </figure>
+  
+      <!-- 15) EP – Notebook -->
+      <figure class="slot" id="notebook">
+        <img src="img/notebook.webp?v=1" alt="Notebook" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 16) EP – Vocal Booth -->
+      <figure class="slot" id="ep-vocal-booth">
+        <img src="img/blame/ep-vocal-booth.webp?v=1" alt="In Vocal Booth Selfie" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 17) EP – Vocal Booth 2 -->
+      <figure class="slot" id="ep-vocal-booth-2">
+        <img src="img/blame/ep-vocal-booth-2.webp?v=1" alt="Vocal Booth Setup" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) EP – Title -->
+  
+      <!-- #) EP – Spencer Tracklist -->
+      <figure class="slot" id="ep-spencer-tracklist">
+        <img src="img/blame/ep-spencer-text.webp?v=1" alt="Vocal Booth Setup" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) Text - EP Spencer Text -->
+      <figure class="slot slot--text" id="ep-spencer-text">
+        <div class="text-box">
+          me<br>
+          overthinking<br>
+          the<br>
+          tracklist<br>
+          order...
+        </div>
+      </figure>
+  
+      <!-- #) Vimeo (1080x1920) – EP – Mixing Misery 6 -->
+      <figure class="slot slot--video" id="mixing-misery-6">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1121979182?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Mixing Misery Video">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- #) EP – Scrabble Board -->
+      <figure class="slot" id="scrabbleboard">
+        <img src="img/blame/scrabble-placeholder.webp?v=1" alt="Scrabble Board Placeholder" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) Vimeo (1080x1920) – EP – Sabrina Carpenter -->
+      <figure class="slot slot--video" id="sabrinacarpenter">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1121728014?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Sabrina Carpenter">
+          </iframe>
+        </div>
+      </figure>
+      
+      <!-- #) Text - EP Sabrina Carpenter Text -->
+      <figure class="slot slot--text" id="sabrinacarpenter-text">
+        <div class="text-box">
+          i went to the sabrina<br>
+          carpenter concert a<br>
+          week after my ep<br>
+          released. if jesus<br>
+          was a carpenter,<br>
+          then i’m a follower<br>
+          of christ.
+        </div>
+      </figure>
+  
+      <!-- #) EP – Discord Messages -->
+      <figure class="slot" id="discord-message-1">
+        <img src="img/blame/discord-message-1.webp?v=1" alt="Scrabble Discord Messages" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) EP – Discord Messages -->
+      <figure class="slot" id="discord-message-2">
+        <img src="img/blame/discord-message-2.webp?v=1" alt="Scrabble Discord Messages" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 25) EP – Discord Messages -->
+      <figure class="slot" id="discord-message-3">
+        <img src="img/blame/scrabble-dm.webp?v=1" alt="Scrabble Discord Messages" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 26) Vimeo (1080x1920) – EP – Exit Wounds Zoom -->
+      <figure class="slot slot--video" id="exitwounds-zoom">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1121728035?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Exit Wounds Zoom">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 27) EP – Scrabble Piece -->
+      <figure class="slot" id="scrabble-piece">
+        <img src="img/blame/scrabble-piece.webp?v=1" alt="Scrabble Piece Received" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 28) Vimeo (1080x1920) – EP – EP Zoom -->
+      <figure class="slot slot--video" id="ep-zoom">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1121728059?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”EP Zoom">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 29) Text - EP Zoom Text -->
+      <figure class="slot slot--text" id="zoom-text">
+        <div class="text-box">
+          terrorizing you guys<br>
+          by releasing music<br>
+          is one of my<br>
+          pastimes
+        </div>
+      </figure>
+  
+      <!-- 30) Vimeo (1080x1920) – EP – Mixing Sleepwalking-2 -->
+      <figure class="slot slot--video" id="mixing-sleepwalking-2">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1121986020?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Mixing Sleepwalking">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 31) EP – What's an EP Tweet -->
+      <figure class="slot" id="ep-tweet">
+        <img src="img/blame/brooke-tweet.webp?v=1" alt="What's an EP tweet" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 32) EP – Starter Pack -->
+      <figure class="slot" id="starterpack">
+        <img src="img/blame/ig-starterpack.webp?v=1" alt="Instagram Starterpack" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- 33) EP – Cover -->
+      <figure class="slot" id="ep-cover">
+        <img src="img/artwork/ep-cover.webp?v=1" alt="Blame it on a Bad Dream EP Cover Art" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- ========================= -->
+             <!-- THE ARTWORK -->
+      <!-- ========================= --> 
+      <!-- 1) Vimeo – Artwork – Artwork Test Shoot Video -->
+      <figure class="slot slot--video" id="artwork-testshoot-1">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1124622063?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Artwork Testshoot">
+          </iframe>
+        </div>
+      </figure>
+      
+      <!-- 2) Artwork – Artwork Title -->
+      <figure class="slot" id="artwork-title">
+        <img src="img/artwork/artwork-title-placeholder.webp?v=2" alt="The Artwork Heading Title" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 3) Vimeo – Artwork – Artwork Test Shoot Video 5 -->
+      <figure class="slot slot--video" id="artwork-testshoot-5">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1124635021?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Artwork Testshoot 5">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 4) Vimeo – Artwork – Artwork Test Shoot Video 4 -->
+      <figure class="slot slot--video" id="artwork-testshoot-4">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1124634775?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Artwork Testshoot 4">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 5) Vimeo – Artwork – Artwork Test Shoot Video 3 -->
+      <figure class="slot slot--video" id="artwork-testshoot-3">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1124634616?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Artwork Testshoot 3">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 6) Artwork – Shoot Makeup -->
+      <figure class="slot" id="shoot-makeup">
+        <img src="img/artwork/shoot-makeup.webp?v=1" alt="Caitlin Note" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 7) Artwork - Shoot Makeup Text -->
+      <figure class="slot slot--text" id="shoot-makeup-text">
+        <div class="text-box">
+          might have to quit<br>
+          my day job and become<br>
+          a fulltime #beautyguru
+        </div>
+      </figure>
+  
+      <!-- 8) Artwork – Caitlin Text 1 -->
+      <figure class="slot" id="caitlin-text-1">
+        <img src="img/artwork/caitlin-text-1.webp?v=1" alt="Caitlin Texts" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 9) Artwork – Kayla Polaroid -->
+      <figure class="slot" id="kayla-polaroid">
+        <img src="img/artwork/kayla-polaroid-collage.gif?v=1" alt="Kayla Polaroid" loading="lazy" decoding="async"
+          loop>
+      </figure>
+  
+      <!-- 10) Artwork – TV Photo -->
+      <figure class="slot" id="tv-photo">
+        <img src="img/artwork/tv-photo.webp?v=1" alt="TV Photo" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 11) Artwork – Caitlin Texts -->
+      <figure class="slot" id="caitlin-text-2">
+        <img src="img/artwork/caitlin-text-2.webp?v=1" alt="Caitlin Texts" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 12) Vimeo – Artwork – Shoot BTS 1 -->
+      <figure class="slot slot--video" id="shoot-bts-1">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1125383988?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Artwork Shoot BTS Video">
+          </iframe>
+        </div>
+      </figure>
+      
+      <!-- 13) Artwork – Caitlin Note -->
+      <figure class="slot" id="caitlin-note">
+        <img src="img/artwork/caitlin-note.webp?v=1" alt="Caitlin Note" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 14) Artwork – Caitlin Texts -->
+      <figure class="slot" id="caitlin-text-3">
+        <img src="img/artwork/caitlin-text-3.webp?v=1" alt="Caitlin Texts" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 15) Vimeo – Artwork – Shoot BTS 2 -->
+      <figure class="slot slot--video" id="shoot-bts-2">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1125390103?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Artwork Shoot BTS Video 2">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 16) Artwork – Dorm Mirror -->
+      <figure class="slot" id="dorm-mirror">
+        <img src="img/artwork/dorm-mirror.webp?v=1" alt="Caitlin Texts" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- ========================= -->
+             <!-- THE VIDEOS -->
+      <!-- ========================= --> 
+      <!-- 1) YouTube – Misery Missing Company Behind the Scenes -->
+      <figure class="slot slot--youtube" id="misery-bts">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/xTEO4nrPAxg?si=AETAqKiEoCS8J_hK"
+            title="Misery Missing Company Behind the Scenes"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 2) Videos – Misery Brainstorm -->
+      <figure class="slot" id="buddy-gif">
+        <img src="img/video/buddy-cakeboss.gif?v=1" alt="Cake Boss Gif" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 3) Videos – The Videos Title Camcorder -->
+      <figure class="slot" id="video-title-camcorder">
+        <img src="img/video/video-title-camcorder.webp?v=1" alt="Videos Section Title Camcorder Overlay" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- 4) Videos – Lottie — The Videos Title -->
+      <figure class="slot slot--lottie" id="video-title-gif">
+        <div class="lot-box">
+          <dotlottie-wc
+            src="Lottie/videos-title.lottie"
+            autoplay
+            loop
+            speed="0.5"
+            style="width:100%;height:100%">
+          </dotlottie-wc>
+        </div>
+      </figure>
+  
+      <!-- 5) Videos – Misery Brainstorm -->
+      <figure class="slot" id="misery-brainstorm-1">
+        <img src="img/video/misery-brainstorm-1.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 6) Videos – Misery Polaroids -->
+      <figure class="slot" id="misery-polaroids">
+        <img src="img/video/misery-video-polaroids.gif?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 7) Videos – Misery Brainstorm Arrow -->
+      <figure class="slot" id="misery-brainstorm-arrow">
+        <img src="img/video/misery-brainstorm-arrow.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 8) Videos – Misery Brainstorm Text -->
+      <figure class="slot slot--text" id="misery-brainstorm-text">
+        <div class="text-box">
+          brainstorming the<br>
+          misery visualizer<br>
+          (ft. my horrible<br>
+          sketches)
+        </div>
+      </figure>
+  
+      <!-- 9) Videos – Editing misery video thought bubble -->
+      <figure class="slot" id="editing-misery-thought">
+        <img src="img/video/editing-misery-thought.webp?v=1" alt="Editing Misery Thought Bubble" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- 10) Videos – Editing misery video -->
+      <figure class="slot" id="editing-misery">
+        <img src="img/video/editing-misery-video.webp?v=1" alt="Editing Misery Video" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 11) Videos – Misery Brainstorm 2 -->
+      <figure class="slot" id="misery-brainstorm-2">
+        <img src="img/video/misery-brainstorm-2.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 12) Videos – The Cake (Misery BTS) -->
+      <figure class="slot slot--video" id="the-cake">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1126857680?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”The Cake BTS Misery Video">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 13) Videos – Cake Boss (Misery BTS) -->
+      <figure class="slot slot--video" id="cake-boss">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1126857359?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Cake Boss BTS Misery Video">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 14) Videos – Happy Easter (Misery BTS) -->
+      <figure class="slot slot--video" id="happy-easter">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1126857557?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Happy Easter BTS Misery Video">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 15) Videos – Dab Video (Misery BTS) -->
+      <figure class="slot slot--video" id="dab-video">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1126857482?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Dab BTS Misery Video">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 16) Videos – Exit Wounds Film Roll -->
+      <figure class="slot" id="exitwounds-film-roll">
+        <img src="img/video/exitwounds-film-roll.webp?v=1" alt="Cake Boss Gif" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 17) Videos – Across Street (Exit Wounds BTS) -->
+      <figure class="slot slot--video" id="across-street">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1126900102?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Across Street BTS Exit Wounds Video">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 18) Videos – Grew Here (Exit Wounds BTS) -->
+      <figure class="slot slot--video" id="grew-here">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1126900118?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Grew Here BTS Exit Wounds Video">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 19) Videos – Mazzy Star (Exit Wounds BTS) -->
+      <figure class="slot slot--video" id="mazzy-star">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1126900146?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Mazzy Star BTS Exit Wounds Video">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 20) Videos – Tis the Damn (Exit Wounds BTS) -->
+      <figure class="slot slot--video" id="tisthedamn">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1126900172?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Tis the Damn BTS Exit Wounds Video">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 21) YouTube – Exit Wounds Behind the Scenes -->
+      <figure class="slot slot--youtube" id="exitwounds-bts">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/eRkpZTy-ko4?si=hMCQpJpDX9rWHZI1"
+            title="Exit Wounds Behind the Scenes"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        </figure>
+  
+      <!-- 22) Videos – TV Unboxing (Misery BTS) -->
+      <figure class="slot slot--video" id="tv-unboxing">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1127311928?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Unboxing the TV Misery Video">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 23) Overlay - About Videos -->
+      <figure class="slot" id="videos-about"
+        data-overlay-src="img/about-videos.webp?v=2"
+        data-overlay-alt="About the Videos">
+        <img src="img/videos-about.webp?v=2" alt="About Videos" loading="lazy" decoding="async" style="cursor:pointer;">
+      </figure>
+  
+      <!-- 24) Videos – Exit Wounds Subway -->
+      <figure class="slot" id="exitwounds-subway">
+        <img src="img/video/exitwounds-subway.webp?v=1" alt="Exit Wounds Subway Gif" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- 25) Videos – Landmines BTS TikTok -->
+      <figure class="slot slot--video" id="landmines-bts-tiktok">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1127317659?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Landmines BTS TikTok Video">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- 26) YouTube – Landmines Behind the Scenes -->
+      <figure class="slot slot--youtube" id="landmines-bts">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/WxmRGRIXxJ4?si=2pDriRMxTyG-mS6H"
+            title="Landmines Behind the Scenes"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        </figure>
+  
+      <!-- 27) Videos – Back Truck 2 -->
+      <figure class="slot" id="backtruck-2">
+        <img src="img/video/back-truck2.webp?v=1" alt="Exit Wounds Subway Gif" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 28) Videos – Back Truck 1 -->
+      <figure class="slot" id="backtruck-1">
+        <img src="img/video/back-truck1.webp?v=1" alt="Exit Wounds Subway Gif" loading="lazy" decoding="async">
+      </figure>
+      
+       <!-- 29) Lottie — Glitter Truck -->
+        <figure class="slot slot--lottie" id="glitter-truck-2">
+          <div class="lot-box">
+            <dotlottie-wc
+              src="Lottie/glitter-truck.lottie"
+              autoplay
+              loop
+              speed="1"
+              style="width:100%;height:100%">
+            </dotlottie-wc>
+          </div>
+        </figure>
+          
+      <!-- ========================= -->
+             <!-- THE MERCH -->
+      <!-- ========================= --> 
+      <!-- 1) Merch – Landmines Matches -->
+      <figure class="slot" id="landmines-matches">
+        <img src="img/matches/landmines-matches.webp?v=1" alt="Landmines Matches" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 2) Merch – Pretty Little Liars Gif -->
+      <figure class="slot" id="pretty-little-liars">
+        <img src="img/matches/pretty-little-liars.gif?v=1" alt="Landmines Matches" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 3) Merch – Pretty Little Liars Text -->
+      <figure class="slot slot--text" id="pretty-little-liars-text">
+        <div class="text-box">
+          anytime i light a match, i feel like<br>
+          i’m committing a crime straight out<br>
+          of pretty little liars
+        </div>
+      </figure>
+      
+       <!-- 4) Merch – Matches & Merch Title -->
+      <figure class="slot" id="m-title">
+        <img src="img/matches/matches-merch.webp?v=1" alt="Matches + Merch Title" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 5) Merch – Merch Title -->
+      <figure class="slot" id="fire-meme">
+        <img src="img/matches/fire-meme.webp?v=1" alt="Framed Fire Meme" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 6) Merch – Candle Lighting -->
+      <figure class="slot slot--video" id="candle-lighting">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1127383216?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Candle Lighting">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- #) URL:OVERLAY – MERCH – MATCHBOOKS -->
+      <figure class="slot" id="about-matchbooks"
+        data-overlay-src="img/landmines/about-landmines.webp?v=1"
+        data-overlay-alt="About Landmines">
+        <img src="img/matchbooks-about.webp?v=3" alt="About the Matches" loading="lazy" decoding="async" style="cursor:pointer;">
+      </figure>
+  
+      <!-- 7) Merch – Driver Sticker -->
+      <figure class="slot" id="sticker-1">
+        <img src="img/matches/driver-sticker-glow.webp?v=1" alt="I Know I Can't Be the Driver Sticker" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 8) Merch – Little Miss Misery Sticker -->
+      <figure class="slot" id="sticker-2">
+        <img src="img/matches/little-miss-sticker-glow.webp?v=1" alt="Little Miss Misery Sticker" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 9) Merch – Izzy MacArthur Loves Me Sticker -->
+      <figure class="slot" id="sticker-3">
+        <img src="img/matches/izzyloves-sticker-glow.webp?v=1" alt="Izzy MacArthur Loves Me Sticker" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 10) Merch – Buy Button -->
+      <figure class="slot" id="buy-button">
+        <a href="https://shopizzymacarthur.com"
+           target="_blank" rel="noopener noreferrer">
+          <img src="img/matches/buy-button.webp?v=2"
+               alt="Buy Merch Button">
+        </a>
+      </figure>
+  
+      <!-- 11) Merch – Early Posters -->
+      <figure class="slot" id="early-posters">
+        <img src="img/matches/poster-earlyversion.webp?v=1" alt="Early Versions of Posters" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 12) Merch – Early Posters Text -->
+      <figure class="slot slot--text" id="early-posters-text">
+        <div class="text-box">
+          two of the first drafts of the<br>
+          posters before they became what<br>
+          people now have hung up in their<br>
+          houses (absolutely crazytown to<br>
+          think about)
+        </div>
+      </figure>
+  
+      <!-- 13) Merch – Posters Arrow -->
+      <figure class="slot" id="poster-arrow">
+        <img src="img/matches/poster-arrow.webp?v=1" alt="Early Versions of Posters" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 14) Merch – Thank You Text -->
+      <figure class="slot slot--text" id="thank-you-text">
+        <div class="text-box">
+          A special thank<br>
+          you must go to my<br>
+          lovely friend xoee<br>
+          for designing<br>
+          these with me <3<br>
+        </div>
+      </figure>
+  
+      <!-- 15) Merch – Poster -->
+      <figure class="slot" id="poster">
+        <img src="img/matches/poster.webp?v=1" alt="Final Version of Poster" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 16) GIF - MERCH – SIMS GIF -->
+      <figure class="slot" id="sims">
+        <img src="img/sims.gif?v=1" alt="Sims Gif" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- 17) Merch – Selfie Poster -->
+      <figure class="slot" id="selfie-poster">
+        <img src="img/matches/selfie-poster.webp?v=1" alt="Selfie with Poster" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- ========================= -->
+             <!-- LONDON -->
+      <!-- ========================= --> 
+  
+      <!-- 1) IMG - London – London Title -->
+      <figure class="slot" id="london-title">
+        <img src="img/london-title.webp?v=1" alt="London Title" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) IMG - London – Hangout Poster -->
+      <figure class="slot" id="hangout-poster">
+        <img src="img/london/hangout-poster.webp?v=2" alt="London Hangout Poster" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) IMG - London – Camcorder -->
+      <figure class="slot" id="london-camcorder">
+        <img src="img/london/camcorder-london.webp?v=2" alt="Camcorder Overlay" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) VIMEO - London – Sleepwalking Live from London -->
+      <figure class="slot slot--video" id="london-live-1">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1128241635?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Sleepwalking Live from London">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- #) VIMEO - London – Landmines Live from London -->
+      <figure class="slot slot--video" id="london-live-2">
+        <div class="video-box">
+          <iframe
+            src="https://player.vimeo.com/video/1128241519?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            title=”Landmines Live from London">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- #) YOUTUBE – London Vlog -->
+      <figure class="slot slot--youtube" id="hangout-vlog">
+        <div class="yt-box">
+          <iframe
+            src="https://www.youtube.com/embed/WPc97iei4Sw"
+            title="London Hangout Vlog"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- #) IMG - London – Hangout Rsvp -->
+      <figure class="slot" id="rsvp-cloud">
+        <img src="img/london/rsvp-hangout.webp?v=1" alt="Future Hangout RSVP" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- #) IMG - London – Hangout RSVP Arrow -->
+      <figure class="slot" id="rsvp-arrow">
+        <img src="img/arrows/swirl-arrow-r.webp?v=1" alt="Swirl Arrow 1" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- #) IMG:URL - London – Hangout RSVP Button -->
+      <figure class="slot" id="rsvp-button">
+        <a href="https://www.fvr.fan/izzymacarthur/hangoutrequests?tag=storyboard"
+           target="_blank" rel="noopener noreferrer">
+          <img src="img/london/rsvp-button.webp?v=1"
+               alt="RSVP Button">
+        </a>
+      </figure>
+  
+      <!-- #) IMG - London – Matchbook -->
+  
+      <!-- #) IMG:OVERLAY - About London (opens overlay to show about-london.png) -->
+      <figure class="slot" id="london-about"
+        data-overlay-src="img/london/about-london.webp?v=2"
+        data-overlay-alt="About London (from my substack)">
+        <img src="img/london/london-about.webp?v=2" alt="London Composition Book" loading="lazy" decoding="async" style="cursor:pointer;">
+      </figure>
+  
+      <!-- #) GIG - One Direction Gif -->
+      <figure class="slot" id="onedirection">
+        <img src="img/london/one-direction.gif?v=1" alt="One Direction Gif" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) TEXT – One Direction Text -->
+      <figure class="slot slot--text" id="onedirection-text">
+        <div class="text-box">
+          (sorry, i had to)<br>
+        </div>
+      </figure>
+  
+      <!-- #) IMG - Tweet from Hangout -->
+      <figure class="slot" id="hangout-tweet">
+        <img src="img/london/hangout-tweet.webp?v=1" alt="Tweet from London Hangout" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- #) LOTTIE:OVERLAY - MORE FROM LONDON -->
+      <figure class="slot slot--lottie"
+              id="london-tv"
+              data-overlay-src="img/london/london-about.webp?v=1"
+              data-overlay-alt="More Pics from London overlay">
+        <div class="lot-box">
+          <dotlottie-wc
+            src="Lottie/london-tv-opt.lottie"
+            autoplay
+            loop
+            speed="1"
+            style="width:100%;height:100%">
+          </dotlottie-wc>
+        </div>
+      </figure>
+      
+      <!-- #) IMG - London – Card V1 -->
+      <figure class="slot" id="londoncard-v1">
+        <img src="img/london/london-card-v1.webp?v=1" alt="Version 1 of London Baseball Card Front" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- #) IMG - London – Card Arrow -->
+      <figure class="slot" id="londoncard-arrow-1">
+        <img src="img/arrows/swirl-arrow-r.webp?v=1" alt="Swirl Arrow 1" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- #) TEXT - London – Card Text -->
+      <figure class="slot slot--text" id="londoncard-text">
+        <div class="text-box">
+          london hang<br>
+          trading<br>
+          cards:<br>
+          version one<br>
+          vs.<br>
+          the final version
+        </div>
+      </figure>
+      
+      <!-- #) IMG - London – Card Arrow 2 -->
+      <figure class="slot" id="londoncard-arrow-2">
+        <img src="img/arrows/swirl-arrow-l.webp?v=1" alt="Swirl Arrow 2" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- #) IMG - London – Card Front -->
+      <figure class="slot" id="londoncard-front">
+        <img src="img/london-card-front-2.webp?v=1" alt="London Baseball Card Front" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- #) IMG - London – Card Back -->
+      <figure class="slot" id="londoncard-back">
+        <img src="img/london/london-card-back.webp?v=1" alt="London Baseball Card Back" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- #) IMG - London – Film -->
+      <figure class="slot" id="film-strip">
+        <img src="img/london/film-hangout.jpg?v=1" alt="London Film Strip" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- ========================= -->
+             <!-- WHAT'S NEXT -->
+      <!-- ========================= --> 
+  
+      <!-- #) IMG - NEXT - DREAMDOTNET -->
+      <figure class="slot" id="dreamdotnet">
+        <img src="img/dreamdotnet.webp?v=1" alt="dreamdotnet photo" loading="lazy" decoding="async">
+      </figure>
+      
+      <!-- #) VIMEO - NEXT - CHURCH -->
+      <figure class="slot slot--video" id="church-video">
+        <div class="video-box">
+          <iframe         
+            src="https://player.vimeo.com/video/1128846924?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowfullscreen
+            title="Church Singing Video">
+          </iframe>
+        </div>
+      </figure>
+  
+      <!-- #) IMG - NEXT - VILLAINS -->
+      <figure class="slot" id="villains">
+        <img src="img/villains.webp?v=1" alt="Villain Meme" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) IMG - NEXT - STRAWBERRY -->
+      <figure class="slot" id="strawberry">
+        <img src="img/strawberry.webp?v=1" alt="Strawberry Picture" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) TEXT - NEXT - JOIN MY CULT -->
+  
+      <!-- #) IMG:URL - NEXT - JOIN BUTTON -->
+      
+      <!-- #) IMG – NEXT – TITLE -->
+      <figure class="slot" id="next-title">
+        <img src="img/placeholders/next.webp?v=2" alt="The Star Tarot Card" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) IMG - Next – TY NOTE -->
+      <figure class="slot" id="thankyou-note">
+        <img src="img/thankyou-note.webp?v=2" alt="Thank You Note" loading="lazy" decoding="async">
+      </figure>
+  
+      <!-- #) IMG - NEXT - SIGN-OFF NOTE -->
+  
+      <!-- #) TEXT - NEXT - PRE-SAVE TEXT -->
+  
+      <!-- #) IMG:URL - NEXT - PRE-SAVE BUTTON -->
+  
+      <!-- #) LOTTIE - NEXT - LOCK LOGO -->
+      <figure class="slot slot--lottie" id="lock-logo">
+        <div class="lot-box">
+          <dotlottie-wc
+            src="Lottie/lfg.lottie"
+            autoplay
+            loop
+            speed="1"
+            style="width:100%;height:100%">
+          </dotlottie-wc>
+        </div>
+      </figure>
+  
+      <!-- #) IMG - NEXT - SOCIAL SPARKLES -->
+  
+      <!-- #) IMG - NEXT - IG -->
+  
+      <!-- #) IMG - NEXT - TIKTOK -->
+  
+      <!-- #) IMG - NEXT - TWITTER -->
+  
+      <!-- #) IMG - NEXT - DISCORD -->
+  
+      <!-- #) IMG - NEXT - SPOTIFY -->
+  
+      <!-- #) IMG - NEXT - APPLE MUSIC -->
+      
+      <!-- Add more slots here… -->
+      
+    </div>
   </div>
-</div>
 
-<!-- Reusable overlay (must NOT be inside .hwrap/.rail) -->
-<div id="overlay" aria-hidden="true">
-  <div class="ov-card"><img alt=""></div>
-</div>
+  <!-- Reusable overlay (must NOT be inside .hwrap/.rail) -->
+  <div id="overlay" aria-hidden="true">
+    <div class="ov-card"><img alt=""></div>
+  </div>
 
 <script>
   /* Mouse wheel → horizontal scroll (desktop mice) */
