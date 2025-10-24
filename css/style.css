@@ -321,14 +321,6 @@ html, body {
     pointer-events: auto;
   }
 
-/* TEMPORARY DEBUG — outlines clickable slots, remove when satisfied */
-  .slot[data-overlay-src],
-  .slot--sc,
-  .slot--audio,
-  .slot a {
-    outline: 1px dashed rgba(255,255,255,0.15);
-  }
-
 /* ========= BEHAVIOR: OPENING OVERLAY FLOAT EFFECT (inside overlay scroll) ========= */
   #overlay .ov-card {
     overflow-y: auto;
@@ -721,4 +713,22 @@ html, body {
   #discord-2{ --left:2509svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
   #spotify-2{ --left:2515svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
   #apple-music-2{ --left:2521svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
+
+/* ======== TEMPORARY: DEBUG SLOT VISUALIZATION ======== */
+/* TEMPORARY ONLY: outline each slot's box so we can see its footprint */
+  .slot {
+    outline: 2px dashed rgba(255, 0, 0, 0.6); /* red dashed box for every slot */
+    outline-offset: 0.5svh;                   /* pull the outline slightly off the slot */
+  }
   
+/* Optional: also outline internal content boxes for clarity */
+  .slot--text .text-box,
+  .slot--spotify .sp-box,
+  .slot--audio,
+  .slot--lottie,
+  .slot--image img,
+  .slot--youtube iframe,
+  .slot--vimeo iframe {
+    outline: 2px solid rgba(0, 200, 255, 0.6); /* cyan inner box to compare content area */
+    outline-offset: 0.5svh;
+  }
