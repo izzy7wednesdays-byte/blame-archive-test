@@ -1,5 +1,4 @@
 /* ========= MAIN INITIALIZATION ========= */
-/* All page behavior runs inside DOMContentLoaded */
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ===== 1. Overlay image/audio trigger setup ===== */
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     io.observe(slot);
   });
 
-  /* ===== 4. Optional: Vimeo / YouTube / Lottie lazy activation ===== */
+  /* ===== 4. Vimeo / YouTube / Lottie lazy activation ===== */
   document.querySelectorAll("iframe[data-src], dotlottie-wc[data-src]").forEach(el => {
     const io = new IntersectionObserver((entries, obs) => {
       entries.forEach(e => {
@@ -65,28 +64,18 @@ document.addEventListener("DOMContentLoaded", () => {
     io.observe(el);
   });
 
-});
-
-<script>
-  /* Mouse wheel → horizontal scroll (desktop mice) */
+  /* ===== 5. Mouse wheel → horizontal scroll ===== */
   const wrap = document.getElementById('hwrap');
-  wrap.addEventListener('wheel', (e) => {
+  wrap?.addEventListener('wheel', (e) => {
     if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
       wrap.scrollLeft += e.deltaY;
       e.preventDefault();
     }
   }, { passive: false });
-</script>
 
-<!-- SoundCloud API -->
-<script src="https://w.soundcloud.com/player/api.js"></script>
-
-<!-- SoundCloud initializer (READY-safe + pointer events + cross-pause) -->
-<script>
-(() => {
+  /* ===== 6. SoundCloud initializer ===== */
   function initSoundCloud() {
     window.__scWidgets = [];
-
     document.querySelectorAll('.slot--sc').forEach((slot) => {
       const scUrl   = (slot.dataset.scUrl || '').trim();
       const iframe  = slot.querySelector('.sc-iframe');
@@ -108,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const setPlaying = (on) => slot.classList.toggle('is-playing', !!on);
       widget.bind(SC.Widget.Events.PLAY, () => {
         setPlaying(true);
-        // Pause any HTML <audio> voice-memos
         document.querySelectorAll('.slot--audio audio').forEach(a => a.pause());
       });
       const notPlaying = () => setPlaying(false);
@@ -126,8 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (window.PointerEvent) {
         trigger.addEventListener('pointerup', (e) => {
-          e.preventDefault(); e.stopPropagation();
-          toggle();
+          e.preventDefault(); e.stopPropagation(); toggle();
         }, { passive: false });
       } else {
         let ignoreNextClick = false;
@@ -138,31 +125,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }, { passive: false });
         trigger.addEventListener('click', (e) => {
           if (ignoreNextClick) { e.preventDefault(); return; }
-          e.preventDefault(); e.stopPropagation();
-          toggle();
+          e.preventDefault(); e.stopPropagation(); toggle();
         }, { passive: false });
       }
     });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initSoundCloud);
-  } else {
+  if (typeof SC !== "undefined") {
     initSoundCloud();
+  } else {
+    const scScript = document.createElement("script");
+    scScript.src = "https://w.soundcloud.com/player/api.js";
+    scScript.onload = initSoundCloud;
+    document.body.appendChild(scScript);
   }
-})();
-</script>
 
-<!-- Audio-Image initializer  -->
-<script>
-(() => {
+  /* ===== 7. Audio-Image initializer ===== */
   function initImageAudio(){
     document.querySelectorAll('.slot--audio').forEach((slot) => {
       const audio   = slot.querySelector('audio');
       const trigger = slot.querySelector('img.audio-trigger, .audio-trigger');
       if (!audio || !trigger) return;
 
-      // If a data-audio-src is given, prefer it
       const srcAttr = (slot.dataset.audioSrc || '').trim();
       if (srcAttr) audio.src = srcAttr;
 
@@ -178,9 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       audio.addEventListener('play', () => {
-        // Pause other HTML <audio> players
         document.querySelectorAll('.slot--audio audio').forEach((a) => { if (a !== audio) a.pause(); });
-        // Pause SoundCloud if it’s playing
         if (window.__scWidgets && Array.isArray(window.__scWidgets)) {
           window.__scWidgets.forEach(w => { try { w.pause(); } catch(e){} });
         }
@@ -212,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
       audio.addEventListener('error', () => {
         const err = audio.error;
         console.warn('[VoiceMemo] <audio> error', {
-          code: err && err.code, // 1 aborted, 2 network, 3 decode, 4 src unsupported
+          code: err && err.code,
           currentSrc: audio.currentSrc || srcAttr
         });
       });
@@ -220,137 +202,84 @@ document.addEventListener("DOMContentLoaded", () => {
       updateUI();
     });
   }
+  initImageAudio();
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initImageAudio);
-  } else {
-    initImageAudio();
-  }
-})();
-</script>
-
-<script>
-(() => {
-  const overlay = document.getElementById('overlay');
-  const ovCard  = overlay.querySelector('.ov-card');
-  const ovImg   = overlay.querySelector('img');
-
-  // Fade control helpers
-  const openOverlay = (src, alt, w, h, p) => {
-    ovImg.src = src;
-    ovImg.alt = alt || '';
-    if (w) ovCard.style.setProperty('--ov-max-w', w); else ovCard.style.removeProperty('--ov-max-w');
-    if (h) ovCard.style.setProperty('--ov-max-h', h); else ovCard.style.removeProperty('--ov-max-h');
-    if (p) ovCard.style.setProperty('--ov-pad', p); else ovCard.style.removeProperty('--ov-pad');
-    overlay.classList.add('is-open');
-  };
-
-  const closeOverlay = () => {
-    overlay.classList.remove('is-open');
-    setTimeout(() => { ovImg.src = ''; }, 350); // clear after fade-out
-  };
-
-  // Attach open behavior to any slot that declares data-overlay-src
-  document.querySelectorAll('.rail .slot[data-overlay-src]').forEach(slot => {
-    const img = slot.querySelector('img');
-    if (!img) return;
-    img.addEventListener('click', e => {
-      e.stopPropagation();
-      openOverlay(
-        slot.dataset.overlaySrc,
-        slot.dataset.overlayAlt || img.alt,
-        slot.dataset.ovW,
-        slot.dataset.ovH,
-        slot.dataset.ovPad
-      );
-    });
-  });
-
-  // Close on click-outside or ESC
-  overlay.addEventListener('click', e => { if (e.target === overlay) closeOverlay(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOverlay(); });
-})();
-</script>
-
-  // FLOAT SCRIPT: GROW on HOVER for ALL CLICKABLE/LINKED slots
-  <script>
-  (() => {
-    const ovCard = document.querySelector('#overlay .ov-card');
-    const ovImg  = ovCard?.querySelector('img');
-    if (!ovCard || !ovImg) return;
-  
-    let scrollTimer;
-    ovCard.addEventListener('scroll', () => {
-      const maxShift = 15;
-      const progress = ovCard.scrollTop / (ovCard.scrollHeight - ovCard.clientHeight);
-      const shift = (progress - 0.5) * maxShift;
-      ovCard.style.setProperty('--scroll-shift', `${shift}px`);
-      ovCard.classList.add('is-scrolling');
-  
-      clearTimeout(scrollTimer);
-      scrollTimer = setTimeout(() => ovCard.classList.remove('is-scrolling'), 150);
-    });
-  })();
-  </script>
-
-  <script>
-  /* ===== Clickable Lottie slots ===== */
-  document.querySelectorAll('.slot--lottie[data-link]').forEach(slot => {
-    slot.style.cursor = 'pointer';
-    slot.addEventListener('click', e => {
-      const url = slot.getAttribute('data-link');
-      if (url) window.open(url, '_blank', 'noopener,noreferrer');
-    });
-  });
-  </script>
-    
-  <script>
-  /* ===== Lottie overlay trigger ===== */
+  /* ===== 8. Overlay controls (open/close images) ===== */
   (() => {
     const overlay = document.getElementById('overlay');
     const ovCard  = overlay.querySelector('.ov-card');
     const ovImg   = overlay.querySelector('img');
-  
+
+    const openOverlay = (src, alt, w, h, p) => {
+      ovImg.src = src;
+      ovImg.alt = alt || '';
+      if (w) ovCard.style.setProperty('--ov-max-w', w); else ovCard.style.removeProperty('--ov-max-w');
+      if (h) ovCard.style.setProperty('--ov-max-h', h); else ovCard.style.removeProperty('--ov-max-h');
+      if (p) ovCard.style.setProperty('--ov-pad', p); else ovCard.style.removeProperty('--ov-pad');
+      overlay.classList.add('is-open');
+    };
+
+    const closeOverlay = () => {
+      overlay.classList.remove('is-open');
+      setTimeout(() => { ovImg.src = ''; }, 350);
+    };
+
+    document.querySelectorAll('.rail .slot[data-overlay-src]').forEach(slot => {
+      const img = slot.querySelector('img');
+      if (!img) return;
+      img.addEventListener('click', e => {
+        e.stopPropagation();
+        openOverlay(
+          slot.dataset.overlaySrc,
+          slot.dataset.overlayAlt || img.alt,
+          slot.dataset.ovW,
+          slot.dataset.ovH,
+          slot.dataset.ovPad
+        );
+      });
+    });
+
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeOverlay(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOverlay(); });
+  })();
+
+  /* ===== 9. Lottie controls ===== */
+  document.querySelectorAll('.slot--lottie[data-link]').forEach(slot => {
+    slot.style.cursor = 'pointer';
+    slot.addEventListener('click', () => {
+      const url = slot.getAttribute('data-link');
+      if (url) window.open(url, '_blank', 'noopener,noreferrer');
+    });
+  });
+
+  /* ===== 10. Lottie overlay trigger ===== */
+  (() => {
+    const overlay = document.getElementById('overlay');
+    const ovImg   = overlay.querySelector('img');
     document.querySelectorAll('.slot--lottie[data-overlay-src]').forEach(slot => {
       const lottie = slot.querySelector('dotlottie-wc');
       if (!lottie) return;
-  
-      // Make it visually clickable
       lottie.style.cursor = 'pointer';
-  
-      // Open overlay on click
-      lottie.addEventListener('click', e => {
-        e.stopPropagation();
+      lottie.addEventListener('click', () => {
         const src = slot.getAttribute('data-overlay-src');
         const alt = slot.getAttribute('data-overlay-alt') || '';
-  
         ovImg.src = src;
         ovImg.alt = alt;
-  
         overlay.classList.add('is-open');
       });
     });
-  
-    // Overlay close behavior (reuse existing system)
-    overlay.addEventListener('click', e => {
-      if (e.target === overlay) overlay.classList.remove('is-open');
-    });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') overlay.classList.remove('is-open');
-    });
+    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('is-open'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.classList.remove('is-open'); });
   })();
-  </script>
 
-  <!-- Step 4 — Lottie visibility optimization -->
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const players = document.querySelectorAll('dotlottie-wc');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(({ isIntersecting, target }) => {
-        if (isIntersecting) target.play?.();
-        else target.pause?.();
-      });
-    }, { threshold: 0.01 });
-    players.forEach(p => io.observe(p));
-  });
-  </script>
+  /* ===== 11. Lottie visibility optimization ===== */
+  const players = document.querySelectorAll('dotlottie-wc');
+  const ioLottie = new IntersectionObserver((entries) => {
+    entries.forEach(({ isIntersecting, target }) => {
+      if (isIntersecting) target.play?.();
+      else target.pause?.();
+    });
+  }, { threshold: 0.01 });
+  players.forEach(p => ioLottie.observe(p));
+
+});
