@@ -40,12 +40,7 @@
   .lazy-blur {
     filter: blur(12px);
     transition: filter 0.8s ease, opacity 0.8s ease;
-    opacity: 0.5;
-  }
-  
-  .lazy-loaded {
-    filter: blur(0);
-    opacity: 1;
+    opacity: 1;                  /* ← no global dim */
   }
 
   /* ========= HORIZONTAL SCROLLER (same height as band) ========= */
@@ -2823,13 +2818,13 @@
 })();
 </script>
 
-  // FLOAT SCRIPT: GROW on HOVER for ALL CLICKABLE/LINKED slots
-  <script>
+<!-- FLOAT SCRIPT: GROW on HOVER for ALL CLICKABLE/LINKED slots -->
+<script>
   (() => {
     const ovCard = document.querySelector('#overlay .ov-card');
     const ovImg  = ovCard?.querySelector('img');
     if (!ovCard || !ovImg) return;
-  
+
     let scrollTimer;
     ovCard.addEventListener('scroll', () => {
       const maxShift = 15;
@@ -2837,12 +2832,12 @@
       const shift = (progress - 0.5) * maxShift;
       ovCard.style.setProperty('--scroll-shift', `${shift}px`);
       ovCard.classList.add('is-scrolling');
-  
+
       clearTimeout(scrollTimer);
       scrollTimer = setTimeout(() => ovCard.classList.remove('is-scrolling'), 150);
     });
   })();
-  </script>
+</script>
 
   <script>
   /* ===== Clickable Lottie slots ===== */
@@ -2905,91 +2900,112 @@
         players.forEach(p => io.observe(p));
       });
       </script>
-    
-  <!-- UNIVERSAL LAZY-LOADER -->
+  
+  <!-- UNIVERSAL LAZY-LOADER (fixed) -->
   <script>
   document.addEventListener("DOMContentLoaded", () => {
     const lazyEls = document.querySelectorAll(
       "dotlottie-wc[data-src], iframe[data-src], img[data-src], video[data-src], audio[data-src]"
     );
   
-    // Apply blur placeholder
+    // Add blur state up front
     lazyEls.forEach(el => el.classList.add("lazy-blur"));
   
-    const reveal = el => {
+    const reveal = (el) => {
       el.classList.remove("lazy-blur");
       el.classList.add("lazy-loaded");
     };
   
+    // Observe inside the horizontal scroller
     const rootEl = document.getElementById("hwrap") || null;
   
-    const observer = new IntersectionObserver((entries, obs) => {
+    const io = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        const el = entry.target;
+  
+        const el  = entry.target;
         const src = el.getAttribute("data-src");
-        if (!src) return;
+        if (!src) { obs.unobserve(el); return; }
   
         switch (el.tagName) {
-          case "DOTLOTTIE-WC":
-          case "IFRAME":
+          case "DOTLOTTIE-WC": {
+            // dotlottie-wc doesn't reliably fire a native "load", use "ready"
             if (!el.hasAttribute("src")) el.setAttribute("src", src);
-            el.addEventListener("load", () => reveal(el), { once: true });
+            const done = () => reveal(el);
+            el.addEventListener("ready", done, { once: true });
+            // safety reveal if "ready" never arrives (network quirks)
+            setTimeout(done, 3000);
             break;
+          }
   
-          case "IMG":
+          case "IFRAME": {
+            if (!el.hasAttribute("src")) el.setAttribute("src", src);
+            const done = () => reveal(el);
+            el.addEventListener("load", done, { once: true });
+            // safety reveal (YouTube/Vimeo can sandbox load events)
+            setTimeout(done, 4000);
+            break;
+          }
+  
+          case "IMG": {
+            const done = () => reveal(el);
+            el.addEventListener("load", done, { once: true });
             el.src = src;
-            el.addEventListener("load", () => reveal(el), { once: true });
             break;
+          }
   
-          case "VIDEO":
-            const vsrc = document.createElement("source");
-            vsrc.src = src;
-            vsrc.type = el.dataset.type || "video/mp4";
-            el.appendChild(vsrc);
+          case "VIDEO": {
+            // Support <video data-src="..."> with implicit <source>
+            const type = el.dataset.type || "video/mp4";
+            const s = document.createElement("source");
+            s.src = src; s.type = type;
+            el.appendChild(s);
             el.load();
             el.addEventListener("loadeddata", () => reveal(el), { once: true });
             break;
+          }
   
-          case "AUDIO":
-            const asrc = document.createElement("source");
-            asrc.src = src;
-            asrc.type = el.dataset.type || "audio/mp4";
-            el.appendChild(asrc);
-            el.load();
+          case "AUDIO": {
+            // Support <audio><source data-src=""></audio> OR audio[data-src]
+            const type = el.dataset.type || "audio/mp4";
+            if (!el.querySelector("source")) {
+              const s = document.createElement("source");
+              s.src = src; s.type = type;
+              el.appendChild(s);
+            } else {
+              el.querySelectorAll("source").forEach(sc => {
+                if (sc.hasAttribute("data-src")) sc.src = sc.getAttribute("data-src");
+              });
+            }
+            el.load?.();
             el.addEventListener("canplaythrough", () => reveal(el), { once: true });
+            // fallback
+            setTimeout(() => reveal(el), 3000);
             break;
+          }
         }
   
         obs.unobserve(el);
       });
-    }, {
-      root: rootEl,
-      rootMargin: "300svh",
-      threshold: 0.01
-    });
+    }, { root: rootEl, rootMargin: "300svh 50vw 300svh 50vw", threshold: 0.01 });
   
-    lazyEls.forEach(el => observer.observe(el));
+    lazyEls.forEach(el => io.observe(el));
   });
   
-  // --- Safety fallback: ensure anything visible still loads ---
+  // Final safety: if anything visible remains blurred after full load, reveal it.
   window.addEventListener("load", () => {
-    document.querySelectorAll("[data-src]").forEach(el => {
-      const src = el.getAttribute("data-src");
-      if (!src) return;
-  
-      const rect = el.getBoundingClientRect();
-      const inView = rect.top < window.innerHeight && rect.bottom > 0;
-      if (inView && !el.getAttribute("src")) {
-        if (el.tagName === "DOTLOTTIE-WC" || el.tagName === "IFRAME") {
-          el.setAttribute("src", src);
-        } else if (el.tagName === "IMG") {
-          el.src = src;
-        }
+    document.querySelectorAll("[data-src].lazy-blur").forEach(el => {
+      const r = el.getBoundingClientRect();
+      const visible = r.top < innerHeight && r.bottom > 0;
+      const hasSrc  = el.tagName === "IMG"    ? !!el.getAttribute("src")
+                   : el.tagName === "IFRAME" ? !!el.getAttribute("src")
+                   : true;
+      if (visible && hasSrc) {
+        el.classList.remove("lazy-blur");
+        el.classList.add("lazy-loaded");
       }
     });
   });
   </script>
-
   </body>
 </html>
