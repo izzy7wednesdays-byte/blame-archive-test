@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/fonts.css">
 
 <style>
-  /* ========= V141 — ADDING JSON FILE READER ========= */
+  /* ========= V142 — REMOVED LAZY LOADING ========= */
   
   /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -708,7 +708,7 @@
   #dreamdotnet{ --left:2417svh; --scale:.25; --y:72svh; --x:0svh; --rot:0.0deg; --z:44; pointer-events:none; }
   #church-video{ --left:2420svh; --scale:.30; --ar:336/299; --y:38svh; --x:0svh; --rot:0deg; --z:46; }
   #villains{ --left:2424svh; --scale:.30; --y:2svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
-  #strawberry{ --left:2456svh; --scale:.20; --y:38svh; --x:0svh; --rot:5deg; --z:46; }
+  #strawberry{ --left:2455svh; --scale:.20; --y:30svh; --x:0svh; --rot:5deg; --z:46; }
   #thankyou-note{ --left:2480svh; --scale:.58; --y:40svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none; }
   #next-title{ --left:2440svh; --scale:.05; --y:30svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
   #lock-logo{ --left:2440svh; --scale:.58; --y:20svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
@@ -816,7 +816,7 @@
     <figure class="slot slot--lottie" id="lfg">
       <div class="lot-box">
         <dotlottie-wc
-          data-src="Lottie/lfg.lottie"
+          src="Lottie/lfg.lottie"
           autoplay
           loop
           speed="1"
@@ -829,7 +829,7 @@
     <figure class="slot slot--lottie" id="pink-flashing-arrow">
       <div class="lot-box">
         <dotlottie-wc
-          data-src="Lottie/pink-flashing-arrow.lottie"
+          src="Lottie/pink-flashing-arrow.lottie"
           autoplay
           loop
           speed="1"
@@ -857,7 +857,7 @@
     <figure class="slot slot--lottie" id="lightsleeper-title">
       <div class="lot-box">
         <dotlottie-wc
-          data-src="Lottie/light-sleeper-title.lottie"
+          src="Lottie/light-sleeper-title.lottie"
           autoplay
           loop
           speed="2"
@@ -870,7 +870,7 @@
     <figure class="slot slot--youtube" id="lightsleeper-visualizer">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/Hvy3xS_jpAM?rel=0&modestbranding=1&playsinline=1"
+          src="https://www.youtube.com/embed/Hvy3xS_jpAM?rel=0&modestbranding=1&playsinline=1"
           title="Light Sleeper – Visualizer"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -905,7 +905,7 @@
     <figure class="slot slot--video" id="lightsleeper-studio">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1114381114?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1114381114?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -943,7 +943,7 @@
     <figure class="slot slot--youtube" id="lightsleeper-behindthesong">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/tie87p1l9YM?si=rP307mgprtgeQVX-"
+          src="https://www.youtube.com/embed/tie87p1l9YM?si=rP307mgprtgeQVX-"
           title="Light Sleeper – Behind the Song"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -956,7 +956,7 @@
     <figure class="slot slot--video" id="broken-breathing">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1115700987?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1115700987?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           allowfullscreen
@@ -972,7 +972,7 @@
     <figure class="slot slot--youtube" id="exitwounds-lyricvideo">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/x5HKc36nnYo?si=0EdF-MfX6GVODw4T"
+          src="https://www.youtube.com/embed/x5HKc36nnYo?si=0EdF-MfX6GVODw4T"
           title="Exit Wounds - Lyric Video"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1011,7 +1011,7 @@
     <figure class="slot slot--lottie" id="exitwounds-animation-1">
       <div class="lot-box">
         <dotlottie-wc
-          data-src="Lottie/crashing-down-animation.lottie"
+          src="Lottie/crashing-down-animation.lottie"
           autoplay
           loop
           speed="1"
@@ -1024,7 +1024,7 @@
     <figure class="slot slot--youtube" id="exitwounds-behindthesong">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/tie87p1l9YM?si=rP307mgprtgeQVX-"
+          src="https://www.youtube.com/embed/tie87p1l9YM?si=rP307mgprtgeQVX-"
           title="Exit Wounds - Behind the Song"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1040,7 +1040,7 @@
            src="img/exit-wounds/exit-wounds-voicememo.webp?v=1"
            alt="Play Exit Wounds Voice Memo">
       <audio preload="auto" playsinline>
-        <source data-src="audio/exit-wounds-voicememo.m4a" type="audio/mp4">
+        <source src="audio/exit-wounds-voicememo.m4a" type="audio/mp4">
       </audio>
     </figure>
     
@@ -1107,7 +1107,7 @@
     <figure class="slot slot--lottie" id="glitter-truck">
       <div class="lot-box">
         <dotlottie-wc
-          data-src="Lottie/glitter-truck.lottie"
+          src="Lottie/glitter-truck.lottie"
           autoplay
           loop
           speed="1"
@@ -1120,7 +1120,7 @@
     <figure class="slot slot--video" id="landmines-bts-clip">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1114719211?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1114719211?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           allowfullscreen
@@ -1133,7 +1133,7 @@
     <figure class="slot slot--video" id="landmines-voicememo">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1114741947?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1114741947?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           allowfullscreen
@@ -1161,7 +1161,7 @@
     <figure class="slot slot--video" id="landmines-reaction">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1121306084?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1121306084?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1192,7 +1192,7 @@
     <figure class="slot slot--youtube" id="landmines-lyricvideo">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/1ZjReUQ6WTU?si=6G7zcN05vVEXl2in"
+          src="https://www.youtube.com/embed/1ZjReUQ6WTU?si=6G7zcN05vVEXl2in"
           title="Landmines – lyric video"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1212,7 +1212,7 @@
     <figure class="slot slot--youtube" id="landmines-behindthesong">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/wsd-014U_b0?si=rwZPeSIiuASurx8m"
+          src="https://www.youtube.com/embed/wsd-014U_b0?si=rwZPeSIiuASurx8m"
           title="Landmines – Behind the Song"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1230,7 +1230,7 @@
     <figure class="slot slot--video" id="landmines-og-guitar">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1115330952?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1115330952?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1255,7 +1255,7 @@
            src="img/landmines/landmines-session-voicememos.webp?v=4"
            alt="Play Landmines Voice Memo">
       <audio preload="auto" playsinline>
-        <source data-src="audio/landmines-session.mp3?v=1" type="audio/mpeg">
+        <source src="audio/landmines-session.mp3?v=1" type="audio/mpeg">
       </audio>
     </figure>
 
@@ -1263,7 +1263,7 @@
     <figure class="slot slot--video" id="vocals-landmines-1">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1115691695?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1115691695?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1291,7 +1291,7 @@
         <figure class="slot slot--video" id="misery-ogchorus">
           <div class="video-box">
             <iframe
-              data-src="https://player.vimeo.com/video/1115354360?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+              src="https://player.vimeo.com/video/1115354360?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
               frameborder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
               allowfullscreen
@@ -1341,7 +1341,7 @@
     <figure class="slot slot--video" id="misery-wants-company">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1115354413?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1115354413?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           allowfullscreen
@@ -1362,7 +1362,7 @@
     <figure class="slot slot--video" id="vocals-misery-4">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1115586624?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1115586624?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1394,7 +1394,7 @@
     <figure class="slot slot--video" id="misery-wlj">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1118578559?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1118578559?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1416,7 +1416,7 @@
     <figure class="slot slot--youtube" id="misery-visualizer">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/COb6V_Q4gxQ?si=FzXMNX6JGNyGy2lA"
+          src="https://www.youtube.com/embed/COb6V_Q4gxQ?si=FzXMNX6JGNyGy2lA"
           title="Misery Missing Company (Visualizer)"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1429,7 +1429,7 @@
     <figure class="slot slot--youtube" id="misery-behindthesong">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/_MOSQIXigB8?si=K5d65gYgNHqj2BOq"
+          src="https://www.youtube.com/embed/_MOSQIXigB8?si=K5d65gYgNHqj2BOq"
           title="Misery Missing Company: Behind the Song"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1459,7 +1459,7 @@
     <figure class="slot slot--video" id="sleepwalking-radio">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1116313498?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1116313498?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           allowfullscreen
@@ -1494,7 +1494,7 @@
     <figure class="slot slot--youtube" id="sleepwalking-behindthesong">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/_MOSQIXigB8?si=K5d65gYgNHqj2BOq"
+          src="https://www.youtube.com/embed/_MOSQIXigB8?si=K5d65gYgNHqj2BOq"
           title="Misery Missing Company: Behind the Song"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1507,7 +1507,7 @@
     <figure class="slot slot--youtube" id="sleepwalking-visualizer">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/hD2rvD9Wbc4?si=XtN3IJfM587HXjKe"
+          src="https://www.youtube.com/embed/hD2rvD9Wbc4?si=XtN3IJfM587HXjKe"
           title="Sleepwalking Visualizer"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1525,7 +1525,7 @@
     <figure class="slot slot--video" id="sleepwalking-listeningparty">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1121321795?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1121321795?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1581,7 +1581,7 @@
     <figure class="slot slot--video" id="mixing-misery-1">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1121369250?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1121369250?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1602,7 +1602,7 @@
     <figure class="slot slot--video" id="migos-mairead">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1121369593?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1121369593?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1634,7 +1634,7 @@
     <figure class="slot slot--video" id="hannah-montana">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1114920837?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1114920837?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1706,7 +1706,7 @@
     <figure class="slot slot--video" id="mixing-misery-6">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1121979182?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1121979182?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1724,7 +1724,7 @@
     <figure class="slot slot--video" id="sabrinacarpenter">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1121728014?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1121728014?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1765,7 +1765,7 @@
     <figure class="slot slot--video" id="exitwounds-zoom">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1121728035?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1121728035?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1783,7 +1783,7 @@
     <figure class="slot slot--video" id="ep-zoom">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1121728059?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1121728059?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1806,7 +1806,7 @@
     <figure class="slot slot--video" id="mixing-sleepwalking-2">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1121986020?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1121986020?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1837,7 +1837,7 @@
     <figure class="slot slot--video" id="artwork-testshoot-1">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1124622063?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1124622063?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1855,7 +1855,7 @@
     <figure class="slot slot--video" id="artwork-testshoot-5">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1124635021?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1124635021?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1868,7 +1868,7 @@
     <figure class="slot slot--video" id="artwork-testshoot-4">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1124634775?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1124634775?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1881,7 +1881,7 @@
     <figure class="slot slot--video" id="artwork-testshoot-3">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1124634616?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1124634616?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1929,7 +1929,7 @@
     <figure class="slot slot--video" id="shoot-bts-1">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1125383988?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1125383988?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1952,7 +1952,7 @@
     <figure class="slot slot--video" id="shoot-bts-2">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1125390103?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1125390103?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -1973,7 +1973,7 @@
     <figure class="slot slot--youtube" id="misery-bts">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/xTEO4nrPAxg?si=AETAqKiEoCS8J_hK"
+          src="https://www.youtube.com/embed/xTEO4nrPAxg?si=AETAqKiEoCS8J_hK"
           title="Misery Missing Company Behind the Scenes"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1996,7 +1996,7 @@
     <figure class="slot slot--lottie" id="video-title-gif">
       <div class="lot-box">
         <dotlottie-wc
-          data-src="Lottie/videos-title.lottie"
+          src="Lottie/videos-title.lottie"
           autoplay
           loop
           speed="0.5"
@@ -2049,7 +2049,7 @@
     <figure class="slot slot--video" id="the-cake">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1126857680?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1126857680?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -2062,7 +2062,7 @@
     <figure class="slot slot--video" id="cake-boss">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1126857359?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1126857359?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -2075,7 +2075,7 @@
     <figure class="slot slot--video" id="happy-easter">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1126857557?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1126857557?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -2088,7 +2088,7 @@
     <figure class="slot slot--video" id="dab-video">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1126857482?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1126857482?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -2106,7 +2106,7 @@
     <figure class="slot slot--video" id="across-street">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1126900102?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1126900102?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -2119,7 +2119,7 @@
     <figure class="slot slot--video" id="grew-here">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1126900118?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1126900118?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -2132,7 +2132,7 @@
     <figure class="slot slot--video" id="mazzy-star">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1126900146?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1126900146?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -2145,7 +2145,7 @@
     <figure class="slot slot--video" id="tisthedamn">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1126900172?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1126900172?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -2158,7 +2158,7 @@
     <figure class="slot slot--youtube" id="exitwounds-bts">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/eRkpZTy-ko4?si=hMCQpJpDX9rWHZI1"
+          src="https://www.youtube.com/embed/eRkpZTy-ko4?si=hMCQpJpDX9rWHZI1"
           title="Exit Wounds Behind the Scenes"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -2171,7 +2171,7 @@
     <figure class="slot slot--video" id="tv-unboxing">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1127311928?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1127311928?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -2196,7 +2196,7 @@
     <figure class="slot slot--video" id="landmines-bts-tiktok">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1127317659?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1127317659?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -2209,7 +2209,7 @@
     <figure class="slot slot--youtube" id="landmines-bts">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/WxmRGRIXxJ4?si=2pDriRMxTyG-mS6H"
+          src="https://www.youtube.com/embed/WxmRGRIXxJ4?si=2pDriRMxTyG-mS6H"
           title="Landmines Behind the Scenes"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -2232,7 +2232,7 @@
       <figure class="slot slot--lottie" id="glitter-truck-2">
         <div class="lot-box">
           <dotlottie-wc
-            data-src="Lottie/glitter-truck.lottie"
+            src="Lottie/glitter-truck.lottie"
             autoplay
             loop
             speed="1"
@@ -2277,7 +2277,7 @@
     <figure class="slot slot--video" id="candle-lighting">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1127383216?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1127383216?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -2387,7 +2387,7 @@
     <figure class="slot slot--video" id="london-live-1">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1128241635?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1128241635?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -2400,7 +2400,7 @@
     <figure class="slot slot--video" id="london-live-2">
       <div class="video-box">
         <iframe
-          data-src="https://player.vimeo.com/video/1128241519?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1128241519?title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           loading="lazy"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
           allowfullscreen
@@ -2413,7 +2413,7 @@
     <figure class="slot slot--youtube" id="hangout-vlog">
       <div class="yt-box">
         <iframe
-          data-src="https://www.youtube.com/embed/WPc97iei4Sw"
+          src="https://www.youtube.com/embed/WPc97iei4Sw"
           title="London Hangout Vlog"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -2474,7 +2474,7 @@
             data-overlay-alt="More Pics from London overlay">
       <div class="lot-box">
         <dotlottie-wc
-          data-src="Lottie/london-tv-opt.lottie"
+          src="Lottie/london-tv-opt.lottie"
           autoplay
           loop
           speed="1"
@@ -2538,7 +2538,7 @@
     <figure class="slot slot--video" id="church-video">
       <div class="video-box">
         <iframe         
-          data-src="https://player.vimeo.com/video/1128846924?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+          src="https://player.vimeo.com/video/1128846924?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           allowfullscreen
@@ -2581,7 +2581,7 @@
     <figure class="slot slot--lottie" id="lock-logo">
       <div class="lot-box">
         <dotlottie-wc
-          data-src="Lottie/flicker-logo.lottie"
+          src="Lottie/lfg.lottie"
           autoplay
           loop
           speed="1"
@@ -2888,86 +2888,17 @@
   })();
   </script>
 
-  <!-- Lottie visibility optimization -->
+  <!-- Step 4 — Lottie visibility optimization -->
   <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const players = document.querySelectorAll('dotlottie-wc');
-        const io = new IntersectionObserver((entries) => {
-          entries.forEach(({ isIntersecting, target }) => {
-            if (isIntersecting) target.play?.();
-            else target.pause?.();
-          });
-        }, { threshold: 0.01 });
-        players.forEach(p => io.observe(p));
+  document.addEventListener('DOMContentLoaded', () => {
+    const players = document.querySelectorAll('dotlottie-wc');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(({ isIntersecting, target }) => {
+        if (isIntersecting) target.play?.();
+        else target.pause?.();
       });
-      </script>
-    
-      <!-- Lazy Load -->
-  <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Collect all lazy elements
-        const lazyLotties = document.querySelectorAll("dotlottie-wc[data-src]");
-        const lazyFrames  = document.querySelectorAll("iframe[data-src]");
-        const lazyAudio   = document.querySelectorAll("audio[data-src]");
-        const lazyVideo   = document.querySelectorAll("video[data-src]");
-        
-        // Shared fade-in effect
-        const fadeIn = el => {
-          el.style.opacity = 0;
-          el.style.transition = "opacity 0.8s ease";
-          requestAnimationFrame(() => {
-            el.style.opacity = 1;
-          });
-        };
-      
-        // Core observer
-        const observer = new IntersectionObserver((entries, obs) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const el = entry.target;
-              const src = el.getAttribute("data-src");
-  
-          // Lottie / iFrame
-          if (el.tagName === "DOTLOTTIE-WC" || el.tagName === "IFRAME") {
-            if (src && !el.hasAttribute("src")) {
-              el.setAttribute("src", src);
-              fadeIn(el);
-            }
-          }
-  
-          // Audio
-          if (el.tagName === "AUDIO" && src) {
-            const source = document.createElement("source");
-            source.src = src;
-            source.type = el.dataset.type || "audio/mp4";
-            el.appendChild(source);
-            el.load();
-            fadeIn(el);
-          }
-  
-          // Video
-          if (el.tagName === "VIDEO" && src) {
-            const source = document.createElement("source");
-            source.src = src;
-            source.type = el.dataset.type || "video/mp4";
-            el.appendChild(source);
-            el.load();
-            fadeIn(el);
-          }
-  
-          obs.unobserve(el);
-        }
-      });
-    }, {
-      root: document.getElementById("hwrap") || null, // your scroll container
-      rootMargin: "300svh", // start loading early
-      threshold: 0.01
-    });
-  
-    // Observe all sets
-    [...lazyLotties, ...lazyFrames, ...lazyAudio, ...lazyVideo].forEach(el => {
-      observer.observe(el);
-    });
+    }, { threshold: 0.01 });
+    players.forEach(p => io.observe(p));
   });
   </script>
 </body>
