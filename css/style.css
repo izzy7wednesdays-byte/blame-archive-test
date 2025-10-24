@@ -72,8 +72,15 @@ html, body {
     object-fit: contain;
   }
 
-/* MEDIA: SPOTIFY PLAYLIST SLOT */
-  .slot--spotify .sp-box{
+/* MEDIA: SPOTIFY PLAYLIST */
+  .slot--spotify {
+    pointer-events: auto; /* enable interactivity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slot--spotify .sp-box {
     --sp-shrink: 0.675;
     --sp-ratio: 0.889;
     --sp-min: 220px;
@@ -81,16 +88,25 @@ html, body {
     --h: calc(var(--band-h) * var(--scale) * var(--sp-shrink));
     width: clamp(var(--sp-min), calc(var(--h) * var(--sp-ratio)), var(--sp-max));
     height: var(--h);
-    display:block;
-    overflow:hidden;
-    border-radius:12px;
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
     background: none;
   }
-  .slot--spotify iframe{ width:100%; height:100%; border:0; border-radius:0px; }
-  #playlist-ex #ep-inspo .sp-box{
+  
+  .slot--spotify iframe {
+    pointer-events: auto; /* allow clicks inside iframe */
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+  }
+  
+  /* Special sizing overrides for specific playlists (if any) */
+  #playlist-ex #ep-inspo .sp-box {
     height: auto;
     /* aspect-ratio: 685 / 302; /* ≈ 2.268:1 */ */
-  } 
+  }
 
 /* MEDIA: YOUTUBE SLOT */
   .slot--youtube .yt-box{
@@ -697,12 +713,12 @@ html, body {
   #strawberry{ --left:2455svh; --scale:.20; --y:30svh; --x:0svh; --rot:5deg; --z:46; }
   #thankyou-note{ --left:2480svh; --scale:.58; --y:40svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none; }
   #next-title{ --left:2440svh; --scale:.05; --y:30svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
-  #lock-logo{ --left:2480svh; --scale:.65; --y:30svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
-  #social-sparkles-2{ --left:2480svh; --scale:.15; --y:50svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
-  #instagram-2{ --left:2491svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
-  #tiktok-2{ --left:2497svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
-  #twitter-2{ --left:2503svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
-  #discord-2{ --left:2509svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
-  #spotify-2{ --left:2515svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
-  #apple-music-2{ --left:2521svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #lock-logo{ --left:2550svh; --scale:1; --y:30svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #social-sparkles-2{ --left:2480svh; --scale:.15; --y:20svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
+  #instagram-2{ --left:2491svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
+  #tiktok-2{ --left:2497svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
+  #twitter-2{ --left:2503svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
+  #discord-2{ --left:2509svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
+  #spotify-2{ --left:2515svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
+  #apple-music-2{ --left:2521svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
   
