@@ -1,1 +1,701 @@
+<style>
+  /* ========= V142 — REMOVED LAZY LOADING ========= */
+  
+  /* ========= GLOBAL CONTROLS ========= */
+  :root{
+    /* Band is exactly the viewport height (stable vs browser chrome) */
+    --band-h: 100svh;
 
+    /* Horizontal canvas width grows with viewport height (not width) */
+    --rail-w: 2600svh; /* increase as you add slots */
+
+    --bg: #0d161d;
+    --fg: #e7f1ff;
+  }
+
+  *{ box-sizing:border-box }
+  html,body{
+    margin:0;
+    height:100svh;  /* keep document sized to viewport height */
+    background:var(--bg); color:var(--fg);
+    overflow:hidden;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* ========= HORIZONTAL SCROLLER (same height as band) ========= */
+  .hwrap{
+    height: 100svh;
+    overflow-x:auto; overflow-y:hidden;
+    white-space:nowrap;
+    scroll-behavior:smooth;
+    scrollbar-width:thin;
+    display:grid; align-items:center; /* if you ever make band shorter */
+  }
+  .hwrap::-webkit-scrollbar{ height:8px }
+  .hwrap::-webkit-scrollbar-thumb{ background:#2c2c32; border-radius:8px }
+
+  /* ========= RAIL (ABSOLUTE LAYOUT + GROUP NUDGE) ========= */
+  .rail{
+    position: relative;
+    height: var(--band-h);
+    width: max(100%, var(--rail-w));
+    padding: 0;            /* let the first slot hug the left */
+    --group-left: -25svh;  /* ← move whole collage left/right here */
+  }
+
+  /* ========= SLOT CONTROL PANEL ========= */
+  .slot{
+    --left: 0svh;
+    --scale: 1;
+    --y: 0svh;
+    --x: 0svh;
+    --rot: 0deg;
+    --z: 1;
+
+    position: absolute;
+    left: calc(var(--left) + var(--group-left));
+    bottom: 0;
+    display: flex; align-items: flex-end;
+    height: var(--band-h);
+    transform: translate(var(--x), calc(-1 * var(--y))) rotate(var(--rot));
+    transform-origin: center bottom;
+    z-index: var(--z);
+    color: inherit; text-decoration: none;
+  }
+
+  /* Images scale with band height *and* per-slot --scale */
+  .slot img{
+    height: calc(var(--band-h) * var(--scale));
+    width: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  /* MEDIA: SPOTIFY PLAYLIST SLOT */
+  .slot--spotify .sp-box{
+    --sp-shrink: 0.675;
+    --sp-ratio: 0.889;
+    --sp-min: 220px;
+    --sp-max: 520px;
+    --h: calc(var(--band-h) * var(--scale) * var(--sp-shrink));
+    width: clamp(var(--sp-min), calc(var(--h) * var(--sp-ratio)), var(--sp-max));
+    height: var(--h);
+    display:block;
+    overflow:hidden;
+    border-radius:12px;
+    background: none;
+  }
+  .slot--spotify iframe{ width:100%; height:100%; border:0; border-radius:0px; }
+  #playlist-ex #ep-inspo .sp-box{
+    height: auto;
+    /* aspect-ratio: 685 / 302; /* ≈ 2.268:1 */ */
+  } 
+
+  /* MEDIA: YOUTUBE SLOT */
+  .slot--youtube .yt-box{
+    --yt-shrink: 0.85;
+    --ratio: 16/9;
+    --h: calc(var(--band-h) * var(--scale) * var(--yt-shrink));
+    width: clamp(300px, calc(var(--h) * var(--ratio)), 960px);
+    height: var(--h);
+    display:block;
+    overflow:hidden;
+    border-radius:12px;
+    background:#000;
+  }
+  .slot--youtube iframe{ width:100%; height:100%; border:0; border-radius:12px; }
+
+  /* MEDIA: LOTTIE SLOT */
+  .slot--lottie .lot-box{
+    --lot-shrink: 0.85;
+    --ratio: 1.8;
+    --lot-min: 220px;
+    --lot-max: 960px;
+    --h: calc(var(--band-h) * var(--scale) * var(--lot-shrink));
+    width: clamp(var(--lot-min), calc(var(--h) * var(--ratio)), var(--lot-max));
+    height: var(--h);
+    display:block;
+    overflow:hidden;
+    border-radius:12px;
+    background: transparent;
+  }
+  .slot--lottie dotlottie-wc{
+    width:100%;
+    height:100%;
+    display:block;
+  }
+  
+  /* MEDIA: VIMEO VIDEO SLOT */
+  .slot--video .video-box{
+    --h: calc(var(--band-h) * var(--scale));
+    height: var(--h);
+    width: calc(var(--h) * var(--ar, 16/9));
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+  }
+  .slot--video iframe{ width: 100%; height: 100%; display:block; border:0; }
+
+
+  /* MEDIA: GIF SLOT */
+  .slot--gif .gif-box{
+    --h: calc(var(--band-h) * var(--scale));
+    height: var(--h);
+    width: calc(var(--h) * var(--ar, 1));
+    display:block;
+    overflow:hidden;
+    border-radius:12px;
+    background:#0000;
+  }
+  .slot--gif img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+  /* MEDIA: SOUNDCLOUD (IMAGE-CONTROLLED) SLOT */
+  .slot--sc .sc-iframe{
+    position:absolute;
+    left:-9999px; top:auto; width:1px; height:1px; opacity:0; pointer-events:none;
+    border:0;
+  }
+  .slot--sc .sc-trigger{
+    height: calc(var(--band-h) * var(--scale));
+    width: auto; display:block; object-fit: contain;
+    cursor: pointer;
+  }
+
+  /* MEDIA: AUDIO (IMAGE-CONTROLLED) SLOT */
+  .slot--audio .audio-trigger{
+    height: calc(var(--band-h) * var(--scale));
+    width: auto; display:block; object-fit: contain;
+    cursor: pointer; user-select: none;
+  }
+  .slot--audio audio{
+    position:absolute; left:-9999px; top:auto;
+    width:1px; height:1px; opacity:0; pointer-events:none; border:0;
+  }
+  .slot--audio.is-playing .audio-trigger{
+    outline: 2px dashed;
+    outline-color: #4C58E9;
+    outline-offset: 6px;
+  }
+  
+/* ===== OVERLAY: BASE ===== */
+  #overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.75);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s ease, visibility .35s ease;
+  }
+  #overlay.is-open {
+    display: flex !important;
+    opacity: 1;
+    visibility: visible;
+  }
+
+/* ===== MEDIA: OVERLAY CARD (Scrollable & Height-locked) ===== */
+  #overlay .ov-card {
+    --ov-max-w: min(72vw, 1100px);
+    --ov-max-h: 72svh;
+    --ov-pad:   1svh;
+  
+    display: block;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scroll-behavior: auto; /* normal feel, not “sticky” */
+  
+    max-width:  var(--ov-max-w);
+    max-height: var(--ov-max-h);
+    padding:    var(--ov-pad);
+    margin: 0 auto;
+  
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  #overlay .ov-card::-webkit-scrollbar {
+    width: 6px;
+ }
+  #overlay .ov-card::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+    border-radius: 3px;
+  }
+  
+  /* ===== Inner image should fit and stay contained ===== */
+    /* Corrected: only affects overlay image, not all slots */
+  #overlay .ov-card > img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+  /* ===== BEHAVIOR: GROW-ON-HOVER for clickable slots ===== */
+  .slot[data-overlay-src] img {
+    transition: transform .25s ease, filter .25s ease;
+  }
+  .slot[data-overlay-src] img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.08);
+    cursor: pointer;
+  }
+  
+  #overlay .ov-card img {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity .35s ease, transform .35s ease;
+  }
+  #overlay.is-open .ov-card img {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  
+
+  /* ========= INTERACTIVE MEDIA HIT ZONE FIX ========= */
+  /* Ensure all clickable media fills its slot area for consistent hit zones */
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    pointer-events: auto;
+  }
+  
+  .slot[data-overlay-src] img,
+  .slot--sc .sc-trigger,
+  .slot--audio .audio-trigger,
+  .slot a img {
+    display: block;
+    height: calc(var(--band-h) * var(--scale));
+    width: auto;
+    object-fit: contain;
+  }
+
+    /* ========= FINAL CLICK ZONE CORRECTION ========= */
+  /* Make clickable media fill slot area exactly (without changing scale) */
+  .slot[data-overlay-src] img,
+  .slot--sc .sc-trigger,
+  .slot--audio .audio-trigger,
+  .slot a img {
+    position: relative;
+    pointer-events: auto;
+  }
+  
+  /* Ensure rotated / transformed slots remain fully clickable */
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    position: absolute;
+    pointer-events: auto;
+    transform-style: preserve-3d;
+  }
+
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    display: inline-flex;
+    align-items: flex-end;
+    pointer-events: auto;
+  }
+
+    /* TEMP DEBUG — outlines clickable slots, remove when satisfied */
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    outline: 1px dashed rgba(255,255,255,0.15);
+  }
+
+
+  /* ========= BEHAVIOR: OPENING OVERLAY FLOAT EFFECT (inside overlay scroll) ========= */
+  #overlay .ov-card {
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+  }
+  #overlay .ov-card img {
+    will-change: transform;
+    transition: transform .3s ease-out;
+  }
+  
+  /* When the user scrolls inside the overlay, JS will add .is-scrolling */
+  #overlay .ov-card.is-scrolling img {
+    transform: none;
+  }
+
+/* ========= GROW-ON-HOVER for ALL interactive media ========= */
+  /* Base state for all clickable media */
+  .slot[data-overlay-src] img,
+  .slot--sc .sc-trigger,
+  .slot--audio .audio-trigger,
+  .slot a img {
+    transition: transform .45s cubic-bezier(0.25, 1, 0.5, 1),
+                filter .45s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    transform-origin: center center;
+  }
+  
+  /* Hover behavior (gentle growth + brightness) */
+  .slot[data-overlay-src] img:hover,
+  .slot--sc .sc-trigger:hover,
+  .slot--audio .audio-trigger:hover,
+  .slot a img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.08);
+  }
+
+  .slot--lottie[data-overlay-src] dotlottie-wc:hover {
+    transform: scale(1.05);
+    filter: brightness(1.08);
+    transition: transform .35s cubic-bezier(0.25,1,0.5,1),
+                filter .35s cubic-bezier(0.25,1,0.5,1);
+    cursor: pointer;
+  }
+
+  /* ========= TEXT SLOT (plain, non-clickable) ========= */
+  /* TEXT SLOT */
+  .slot--text .text-box{
+    /* core type */
+    font-family: var(--ff, "Thinker"), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: var(--fw, 400);
+    font-style: var(--fstyle, normal);
+    font-stretch: var(--fstr, normal);
+    font-size: clamp(14px, calc(var(--band-h) * var(--scale) * var(--fs-mul, .11)), 120px);
+    line-height: var(--lh, 1.08);
+    letter-spacing: var(--ls, .01em);
+    word-spacing: var(--ws, 0);
+    color: var(--text-color, var(--fg));
+  
+    /* text behavior */
+    text-align: var(--ta, left);
+    text-transform: var(--tt, none);
+    white-space: var(--ws-mode, normal);
+    text-wrap: var(--wrap, pretty);           /* or 'balance' */
+    hyphens: var(--hy, manual);
+    overflow-wrap: anywhere;
+    max-width: min(90svh, var(--ch, 28ch));
+  
+    /* decoration / effects */
+    text-decoration: var(--dec, none);
+    text-underline-offset: var(--uoff, .15em);
+    text-decoration-thickness: var(--uthick, auto);
+    text-shadow: var(--shadow, none);
+    -webkit-text-stroke: var(--stroke, 0) var(--stroke-color, transparent);
+  
+    /* optional gradient text */
+    background: var(--bgc, transparent);
+    -webkit-background-clip: var(--bgclip, initial);
+            background-clip: var(--bgclip, initial);
+  
+    /* opentype / variable font controls */
+    font-variant-ligatures: var(--liga, normal);
+    font-feature-settings: var(--features, normal);
+    font-variation-settings: var(--axes, normal);
+  
+    /* box (usually keep plain for “text only”) */
+    padding: var(--pad, 0);
+    border-radius: var(--br, 0);
+  }
+
+    /* ===== Remove drop-shadows globally ===== */
+  .slot img,
+  .slot--spotify .sp-box,
+  .slot--youtube .yt-box,
+  .slot--tiktok .tiktok-box,
+  .slot--lottie .lot-box,
+  .slot--video .video-box,
+  .slot--gif .gif-box, .slot--text .text-box {
+    filter: none !important;
+  }
+
+  /* ========= NON-CLICKABLE SLOT SAFEGUARD ========= */
+  /* Decorative or text-only slots ignore pointer events so they don’t block clicks */
+  .slot:not([data-overlay-src]):not(.slot--sc):not(.slot--audio):not(:has(a)):not(.slot--youtube):not(.slot--video) {
+    pointer-events: none;
+  }
+  
+  /* ===== YouTube + Vimeo clickability + debug outline ONLY (zero layout changes) ===== */
+  .slot--youtube,
+  .slot--video {                /* your Vimeo slots use .slot--video */
+    pointer-events: auto !important;
+    outline: 1px dashed rgba(255,255,255,0.15);
+  }
+  
+  .slot--youtube iframe,
+  .slot--video iframe {
+    pointer-events: auto !important; /* allow play/pause/fullscreen */
+  }
+  
+  /* ========= PER-SLOT CUSTOMIZATION (svh units) ========= */
+  
+  /* ========= WELCOME SECTION ========= */
+  #special-message{ --left:-26svh; --scale:1.12; --y:20svh; --x:0svh; --rot:0deg; --z:1; }
+  #izzymacarthur{ --left:18svh; --scale:.15; --y:65svh; --x:8svh; --rot:0deg; --z:2; }
+  #tracklist{ --left:91svh; --scale:.42; --y:59svh; --x:15svh; --rot:8deg; --z:2; pointer-events:none;  }
+  #social-sparkles{ --left:17svh; --scale:.15; --y:50svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
+  #instagram{ --left:28svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #tiktok{ --left:34svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #twitter{ --left:40svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #discord{ --left:46svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #spotify{ --left:52svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #apple-music{ --left:58svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #torn-note{ --left:11svh; --scale:.68; --y:-9svh; --x:-2svh; --rot:0deg; --z:3; pointer-events: none; }
+  #the-scrapbook{ --left:65svh; --scale:.5; --y:15svh; --x:0svh; --rot:0deg; --z:4;pointer-events: none; }
+  #lfg{ --left:97svh; --scale:.1; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
+  #pink-flashing-arrow{ --left:123svh; --scale:.09; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
+  #playlist-ex{ --left:160svh; --scale:.63; --y:52svh; --x:0svh; --rot:0deg; --z:30; }
+  /* ========= LIGHT SLEEPER SECTION ========= */
+  #lightsleeper-title{ --left:170svh; --scale:.35; --y:30svh; --x:-4svh; --rot:-10deg; --z:4; pointer-events: none; }
+  #lightsleeper-visualizer{ --left:145svh; --scale:.38; --y:0svh; --x:10svh; --rot:0deg; --z:3; }
+  #lightsleeper-about{ --left:206svh; --scale:.4; --y:59svh; --x:0svh; --rot:-10deg; --z:20; pointer-events:auto;  }
+  #autumn-text{ --left:220svh; --scale:.3; --y:25svh; --x:0svh; --rot:2deg; --z:0; }
+  #blame-it-notesapp{ --left:215svh; --scale:.20; --y:0svh; --x:0svh; --rot:-2deg; --z:4; }
+  #silver-star1-1{ --left:245svh; --scale:.18; --y:5svh; --x:0svh; --rot:20deg; --z:60;pointer-events:none; }
+  #lightsleeper-studio{ --left:246svh; --scale:.40; --ar:9/16; --y:57svh; --x:0svh; --rot:0deg; --z:41;  }
+  #izzymacarthur-withguitar{ --left:271svh; --scale:.3; --y:66svh; --x:0svh; --rot:0deg; --z:41;}
+  #click4chordz{ --left:287svh; --scale:.08; --y:88svh; --x:0svh; --rot:0deg; --z:42; pointer-events:none;
+                 --ff: "Thinker"; --ta: center; --fw: 400; --fs-mul: .17; --text-color: #4C58E9;}
+  #play-lightsleeper{ --left:268svh; --scale:.25; --y:34svh; --x:0svh; --rot:0deg; --z:40; }
+  #lightsleeper-behindthesong{ /*Holly Humberstone (deep end behind the song) */ --left:298svh; --scale:.38; --y:65svh; --x:0svh; --rot:0deg; --z:22;}
+  #broken-breathing{ --left: 263svh; --scale:.28; --y: 0svh; --x: 1svh; --rot: 0deg; --z: 10; }
+  /* ========= EXIT WOUNDS SECTION ========= */
+  #exitwounds-lyricvideo{ /* V4 placeholder */ --left: 300svh; --scale: .38; --y: 31svh; --x: 0svh; --rot: 0deg; --z: 21; } 
+  #exitwounds-title{ --left:328svh; --scale:.31; --y: 0svh; --x:0svh; --rot:-14deg; --z:1; pointer-events:none;   }
+  #play-exitwounds{ --left:364svh; --scale:.25; --y:67svh; --x:0svh; --rot:-13deg; --z:11; }
+  #pressplaydj{ --left: 365svh; --scale: .18; --y: 63svh; --x: 0svh; --rot: -14deg; --z: 10; pointer-events:none;
+                --ff: "Thinker"; --fw: 400; --fs-mul: .17; --text-color: #4C58E9;} 
+  #exitwounds-bandages{ --left:365svh; --scale:.25; --y:30svh; --x:0svh; --rot:4deg; --z:9;}
+  #exitwounds-animation-1{ --left:393svh; --scale:.35; --y:56svh; --x:0svh; --rot:0deg; --z:2; pointer-events:none; }
+  #exitwounds-behindthesong{ /* Holly Humberstone (faatw) placeholder */--left:390svh; --scale:.38; --y:26svh; --x:0svh; --rot:0deg; --z:8; }
+  #play-exit-wounds-voicememo{ --left:390svh; --scale:.23; --y:1svh; --x:0svh; --rot:0deg; --z:7; }
+  #click-me-arrow{ --left:411svh; --scale:.04; --y:11svh; --x:0svh; --rot:-4deg; --z:6; pointer-events:none; }
+  #click-me-text{--left: 412svh; --scale: .20; --y: 16svh; --x: 0svh; --rot: 1deg; --z: 8;
+                 --fw: 400; --fs-mul: .15; --text-color: #4C58E9; }
+  #subscribe-substack-text{ --left: 444svh; --scale: .13; --y: 14svh; --x: 0svh; --rot: -10deg; --z: 8;
+                            --ff: "Manic"; --fw: 400; --fs-mul: .21; --ta: center; --tt: lowercase; --text-color: #4C58E9; }
+  #subscribe-button{ --left:465svh; --scale:.11; --y:--1svh; --x:0svh; --rot:2deg; --z:20; }
+  #subscribe-arrow{ --left:457svh; --scale:.04!important; --y:9svh; --x:0svh; --rot:13deg;--z:20; pointer-events:none;  }
+  #read-susbstack-text{ --left: 409svh; --scale: .21; --y: 78svh; --x: 0svh; --rot: 9deg; --z: 8; pointer-events:none;
+                        --ff: "Manic"; --ta: center;  --fw: 400; --fs-mul: .15;  --tt: uppercase; --text-color: #4C58E9; }
+  #substack-point-arrow{ --left:433svh; --scale:.10; --y:65svh; --x:0svh; --rot:-2deg; --z:4; pointer-events:none; }
+  #exitwounds-substackflier{ --left:452svh; --scale:.77; --y:28svh; --x:0svh; --rot:15deg; --z:3; }
+  /* ========= LANDMINES SECTION ========= */
+  #glitter-truck{ --left:494svh; --scale:.48; --y:-18svh; --x:0svh; --rot:0deg; --z:7; pointer-events:none;}
+  #landmines-bts-clip{ --left:532svh; --scale:.3; --ar:16/9; --y:65svh; --x:0svh; --rot:0deg; --z:40; }
+  #landmines-voicememo{ --left:523svh; --scale:.26; --y:37svh; --x:5svh; --rot:0deg; --z:30; }
+  #katstratford-car{ --left:519svh; --scale:.21; --y:13svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
+  #october-lane{ --left:566svh; --scale:.25; --y:-4svh; --x:0svh; --rot:0deg; --z:38; pointer-events:none;}
+  #landmines-license{ --left:590svh; --scale:.29; --y:65svh; --x:0svh; --rot:-8deg; --z:40;pointer-events:none;}
+  #landmines-reaction-text{ --left:640svh; --scale:.25; --y:75svh; --x:2svh; --rot:0deg; --z:16; pointer-events:none;
+                            --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --text-color: #4C58E9;}
+  #landmines-reaction{ --left:670svh; --scale:.42; --ar:9/16; --y:55svh; --x:0svh; --rot:0deg; --z:42; }
+  #landmines-title{ --left:578svh; --scale:.17; --y:38svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;  }
+  #landmines-lyricvideo{ --left:590svh; --scale:.38; --y:3svh; --x:10svh; --rot:0deg; --z:19;}
+  #landmines-about{ --left:633svh; --scale:.17; --y:56svh; --x:10svh; --rot:-5deg; --z:30; }
+  #landmines-behindthesong{ /* Holly Humberstone (overkill behind the song) */ --left:676svh; --scale:.38; --y:21svh; --x:10svh; --rot:0deg; --z:38; }
+  #enchanted-bridge{ --left:692svh; --scale:.17; --y:2svh; --x:0svh; --rot:0deg; --z:20; }
+  #landmines-og-guitar{ --left:650svh; --scale:.38; --ar:9/16; --y:9svh; --x:10svh; --rot:0deg; --z:25; }
+  #landmines-session-video-text{ --left:650svh; --scale:.2; --y:1svh; --x:10svh; --rot:0deg; --z:38; pointer-events:none;
+                                 --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9;}
+  #landmines-session-voicememos{ --left:685svh; --scale:.28; --y:62svh; --x:10svh; --rot:7deg; --z:39; }
+  #vocals-landmines-1{ --left:568svh; --scale:.35; --ar:9/16; --y:0svh; --x:10svh; --rot:0deg; --z:38; }
+  #vocals-landmines-1-text{ --left:550svh; --scale:.2; --y:21svh; --x:10svh; --rot:0deg; --z:38; pointer-events:none;
+                            --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: left;  --tt: uppercase; --text-color: #4C58E9;}
+  /* ========= MISERY SECTION ========= */
+  #misery-ogchorus{ --left:720svh; --scale:.24; --y:71svh; --x:2svh; --rot:0deg; --z:40; }
+  #misery-ogchorus-text{ --left:733svh; --scale:.22; --y:59svh; --x:0svh; --rot:0deg; --z:40;
+                          --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9;}
+  #little-miss-misery{ --left:738svh; --scale:.23; --y:31svh; --x:10svh; --rot:4deg; --z:39; pointer-events:none; }
+  #kat-stratford-dancing{ --left:737svh; --scale:.23; --y:1svh; --x:11svh; --rot:0deg; --z:39; }
+  #solo-cups{ --left:760svh; --scale:.1; --y:0svh; --x:0svh; --rot:5deg; --z:39; }
+  #misery-about{ --left:757svh; --scale:.44; --y:55svh; --x:10svh; --rot:0deg; --z:41; }
+  #misery-title-bg{ --left:772svh; --scale:.75; --y:-5svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none !important; }
+  #misery-wants-company{ --left:814svh; --scale:.20; --y:76svh; --x:0svh; --rot:0deg; --z:40; }
+  #misery-wants-company-text{ --left:814svh; --scale:.12; --y:72svh; --x:0svh; --rot:0deg; --z:41; pointer-events:none;
+                              --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center; --tt: uppercase; --text-color: #4C58E9; }
+  #vocals-misery-4{ --left:854svh; --scale:.36; --ar:9/16; --y:61svh; --x:0svh; --rot:0deg; --z:72; }
+  #vocals-misery-4-text{  --left:845svh; --scale:.2; --y:87svh; --x:10svh; --rot:0deg; --z:73; pointer-events:none;
+                          --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: left; --tt: lowercase; --text-color: #4C58E9; }
+  #misery-wlj-text{  --left:875svh; --scale:.2; --y:88svh; --x:0svh; --rot:0deg; --z:73; pointer-events:none;
+                          --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: left; --tt: uppercase; --text-color: #4C58E9; }
+  #misery-wlj{ --left:878svh; --scale:.34; --ar:9/16; --y:52svh; --x:0svh; --rot:0deg; --z:72; }
+  #play-misery{ --left:865svh; --scale:.22; --y:31svh; --x:0svh; --rot:-10deg; --z:71; }
+  #misery-visualizer{ --left:853svh; --scale:.38; --y:0svh; --x:8svh; --rot:0deg; --z:39; }
+  #misery-behindthesong{ /* Holly Humberstone (faatw behind the song) */ --left:898svh; --scale:.38; --y:62svh; --x:10svh; --rot:0deg; --z:70; }
+  /* ========= SLEEPWALKING SECTION ========= */
+  #smurfette-1{--left:884svh; --scale:.25; --y:33svh; --x:10svh; --rot:0deg; --z:70; pointer-events:none; }
+  #play-sleepwalking{--left:907svh; --scale:.2; --y:37svh; --x:10svh; --rot:10deg; --z:50;}
+  #sleepwalking-radio{ --left:920svh; --scale:.22; --y:7svh; --x:1svh; --rot:0deg; --z:40; }
+  #sleepwalking-radio-text{--left:920svh; --scale:.2; --y:0svh; --x:1svh; --rot:0deg; --z:42; pointer-events:none;
+                          --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4C58E9;}
+  #sleepwalking-radio-polaroid{ --left:954svh; --scale:.22; --y:16svh; --x:1svh; --rot:-10deg; --z:40; pointer-events:none; }
+  #thestar-tarot{ --left:963svh; --scale:.38; --y:60svh; --x:10svh; --rot:-9deg; --z:70; pointer-events:none; }
+  #sleepwalking-title{ --left:945svh; --scale:.185; --y:39svh; --x:10svh; --rot:0deg; --z:100; pointer-events:none; }
+  #sleepwalking-behindthesong{ /* Holly Humberstone (faatw behind the song) */ --left:970svh; --scale:.38; --y:0svh; --x:0svh; --rot:0deg; --z:70; }
+  #sleepwalking-visualizer{ --left:1000svh; --scale:.38; --y:63svh; --x:0svh; --rot:0deg; --z:71; }
+  #sleepwalking-receipt{ --left:1040svh; --scale:.35; --y:30svh; --x:0svh; --rot:15deg; --z:70; pointer-events: none; }
+  #sleepwalking-listeningparty{ --left:1029svh; --scale:.33; --ar:4/3; --y:0svh; --x:0svh; --rot:0deg; --z:50; }
+
+  /* ========= EP SECTION ========= */
+  #ep-inspo-sp{ --left:1073svh; --scale:.54; --y:-16svh; --x:0svh; --rot:0deg; --z:30; }
+  #ep-inspo{ --left:1060svh; --scale:.53; --y:48svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #ep-telephone{ --left:1069svh; --scale:.17; --y:27svh; --x:0svh; --rot:-8deg; --z:72; }
+  #ep-phoningfriends{ --left:1075svh; --scale:.27; --y:21svh; --x:0svh; --rot:-8deg; --z:30; pointer-events:none;
+                      --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4C58E9;}
+  #ep-click-toread{ --left:1071svh; --scale:.24; --y:45svh; --x:0svh; --rot:7.5deg; --z:30; pointer-events:none;
+                    --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4C58E9;}
+  #mixing-misery-1{ --left:1107svh; --scale:.41; --ar:9/16; --y:7svh; --x:0svh; --rot:0deg; --z:30; }
+  #mixing-misery-1-text{ --left:1107svh; --scale:.14; --y:2svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
+                       --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: lowercase; --text-color: #4C58E9;}
+  #migos-mairead{ --left:1129svh; --scale:.5; --ar:9/16; --y:47svh; --x:0svh; --rot:0deg; --z:30; }
+  #air-quality{ --left:1132svh; --scale:.45; --y:1svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
+  #air-quality-text{ --left:1139svh; --scale:.19; --y:1svh; --x:0svh; --rot:0deg; --z:31; pointer-events:none;
+                     --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: lowercase; --text-color: #D9EBFF; pointer-events: none;}
+  #hannah-montana{ --left:1160svh; --scale:.40; --ar:9/16; --y:58svh; --x:0svh; --rot:0deg; --z:30;}
+  #migos-text{ --left:1158svh; --scale:.21; --y:47svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
+               --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4C58E9;}
+  #ep-mixing-date{ --left:1159svh; --scale:.40; --y:5svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
+  #hannah-montana-text{ --left:1185svh; --scale:.21; --y:81svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
+                       --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: lowercase; --text-color: #4C58E9;}
+  #notebook{ --left:1185svh; --scale:.35; --y:42svh; --x:0svh; --rot:5deg; --z:29; pointer-events:none; }
+  #ep-vocal-booth{ --left:1192svh; --scale:.22; --y:38svh; --x:0svh; --rot:-15deg; --z:30; pointer-events:none; }
+  #ep-vocal-booth-2{ --left:1200svh; --scale:.22; --y:49svh; --x:0svh; --rot:100deg; --z:31; pointer-events:none; }
+  #ep-spencer-tracklist{ --left:1224svh; --scale:.41; --y:55svh; --x:0svh; --rot:0deg; --z:28; pointer-events:none; }
+  #ep-spencer-text{ --left:1225svh; --scale:.22; --y:76svh; --x:0svh; --rot:0deg; --z:32; pointer-events:none;
+                    --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9;}
+  #mixing-misery-6{ --left:1233svh; --scale:.36; --ar:9/16; --y:16svh; --x:0svh; --rot:0deg; --z:31; }
+  #scrabbleboard{--left:1258svh; --scale:.5; --y:46svh; --x:0svh; --rot:-5deg; --z:32; pointer-events:none;}
+  #sabrinacarpenter{ --left:1283svh; --scale:.42; --ar:9/16; --y:1svh; --x:0svh; --rot:0deg; --z:32; }
+  #sabrinacarpenter-text{--left:1255svh; --scale:.2; --y:20svh; --x:0svh; --rot:0deg; --z:32; pointer-events:none;
+                        --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center; --tt: uppercase; --text-color: #4C58E9;}
+  #discord-message-1{ --left:1306svh; --scale:.21; --y:70svh; --x:0svh; --rot:2deg; --z:32; pointer-events:none; }
+  #discord-message-2{ --left:1307svh; --scale:.11; --y:59svh; --x:0svh; --rot:-2deg; --z:33; pointer-events:none; }
+  #discord-message-3{ --left:1306svh; --scale:.10; --y:50svh; --x:0svh; --rot:1deg; --z:32; pointer-events:none; }
+  #exitwounds-zoom{ --left:1308svh; --scale:.45; --ar:9/16; --y:3svh; --x:0svh; --rot:0deg; --z:32; }
+  #scrabble-piece{--left:1334svh; --scale:.14; --y:57svh; --x:0svh; --rot:0deg; --z:35; pointer-events:none }
+  #ep-zoom{ --left:1336svh; --scale:.45; --ar:9/16; --y:11svh; --x:0svh; --rot:0deg; --z:32; }
+  #zoom-text{ --left:1336svh; --scale:.22; --y:0svh; --x:0svh; --rot:0deg; --z:32; pointer-events:none;
+              --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9;}
+  #mixing-sleepwalking-2{ --left:1358svh; --scale:.44; --ar:9/16; --y:52svh; --x:0svh; --rot:0deg; --z:32; }
+  #ep-tweet{ --left:1353svh; --scale:.48; --y:2svh; --x:10svh; --rot:0deg; --z:40; pointer-events:none; }
+  #starterpack{ --left:1375svh; --scale:.39; --y:56svh; --x:10svh; --rot:0deg; --z:40; pointer-events:none; }
+  #ep-cover{ --left:1381svh; --scale:.54; --y:0svh; --x:10svh; --rot:0deg; --z:40; pointer-events:none; }
+  /* ========= ARTWORK SECTION ========= */
+  #artwork-testshoot-1{ --left:1425svh; --scale:.28; --ar:4/3; --y:66svh; --x:0svh; --rot:0deg; --z:49; }
+  #artwork-title{ --left:1414svh; --scale:.2; --y:46svh; --x:10svh; --rot:0deg; --z:41; }
+  #artwork-testshoot-5{ --left:1464svh; --scale:.27; --ar:109/60; --y:68svh; --x:0svh; --rot:0deg; --z:46; }
+  #artwork-testshoot-4{ --left:1466svh; --scale:.22; --ar:109/60; --y:44svh; --x:0svh; --rot:0deg; --z:45; }
+  #artwork-testshoot-3{ --left:1447svh; --scale:.20; --ar:109/60; --y:1svh; --x:0svh; --rot:0deg; --z:44; }
+  #shoot-makeup{ --left:1473svh; --scale:.18; --y:10svh; --x:0svh; --rot:90.0deg; --z:39; pointer-events:none; }
+  #shoot-makeup-text{ --left:1497svh; --scale:.18; --y:15svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
+                    --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #e1effa; }
+  #caitlin-text-1{ --left:1515svh; --scale:.34; --y:64svh; --x:0svh; --rot:1.5deg; --z:39; pointer-events:none; }
+  #kayla-polaroid{ --left:1508svh; --scale:.19; --y:43svh; --x:0svh; --rot:0.0deg; --z:42; pointer-events:none; }
+  #tv-photo{ --left:1502svh; --scale:.19; --y:23svh; --x:0svh; --rot:0.0deg; --z:42; pointer-events:none; }
+  #caitlin-text-2{ --left:1534svh; --scale:.34; --y:42svh; --x:0svh; --rot:0.0deg; --z:37; }
+  #shoot-bts-1{ --left:1529svh; --scale:.22; --ar:109/60; --y:18svh; --x:0svh; --rot:0.0deg; --z:38; }
+  #caitlin-note{ --left:1546svh; --scale:.2; --y:77svh!important; --x:0svh; --rot:0.0deg; --z:41; pointer-events:none; }
+  #caitlin-text-3{ --left:1566svh; --scale:.35; --y:45svh; --x:0svh; --rot:-5.0deg; --z:40; pointer-events:none; }
+  #shoot-bts-2{ --left:1571svh; --scale:.38; --ar:9/16; --y:5svh; --x:0svh; --rot:0deg; --z:48; }
+  #dorm-mirror{ --left:1587svh; --scale:.35; --y:42svh; --x:0svh; --rot:0.0deg; --z:40; pointer-events:none; }
+  /* ========= VIDEO SECTION ========= */
+  #misery-bts{ --left:1612svh; --scale:.38; --y:62svh; --x:0svh; --rot:0deg; --z:39; }
+  #buddy-gif{ --left:1612svh; --scale:.15; --y:45svh; --x:0svh; --rot:0.0deg; --z:53; pointer-events:none; }
+  #video-title-camcorder{ --left:1585svh; --scale:.54; --y:-14svh; --x:10svh; --rot:0deg; --z:41; pointer-events:none; }
+  #video-title-gif{ --left:1587svh; --scale:.20; --y:10svh; --x:10svh; --rot:-3deg; --z:40; pointer-events:none; }
+  #misery-brainstorm-1{ --left:1638svh; --scale:.25; --y:35svh; --x:0svh; --rot:-2deg; --z:54; pointer-events: none; }
+  #misery-polaroids{ --left:1642svh; --scale:.38; --y:-4svh; --x:0svh; --rot:0deg; --z:43; pointer-events: none; }
+  #misery-brainstorm-arrow{ --left:1668svh; --scale:.16; --y:42svh; --x:0svh; --rot:0deg; --z:43; pointer-events: none; }
+  #misery-brainstorm-text{ --left:1668svh; --scale:.19; --y:38svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
+                           --ff: "Thinker";--fw: 400;--fs-mul: .1;--ta: center; --tt: lowercase; --text-color: #e1effa;}
+  #editing-misery-thought{ --left:1662svh; --scale:.20; --y:75svh; --x:0svh; --rot:2deg; --z:41; pointer-events:none; }
+  #editing-misery{ --left:1665svh; --scale:.25; --y:80svh; --x:0svh; --rot:90deg; --z:40; pointer-events:none; }
+  #misery-brainstorm-2{ --left:1687svh; --scale:.28; --y:34svh; --x:0svh; --rot:0deg; --z:43; pointer-events: none; }
+  #the-cake{ --left:1680svh; --scale:.27; --ar:16/9; --y:1svh; --x:0svh; --rot:0.0deg; --z:48; }
+  #cake-boss{ --left:1709svh; --scale:.27; --ar:16/9; --y:36svh; --x:0svh; --rot:0.0deg; --z:50; }
+  #happy-easter{ --left:1708svh; --scale:.27; --ar:16/9; --y:67svh; --x:0svh; --rot:0.0deg; --z:51; }
+  #dab-video{ --left:1730svh; --scale:.27; --ar:16/9; --y:5svh; --x:0svh; --rot:0.0deg; --z:49; }
+  #exitwounds-film-roll{ --left:1840svh; --scale:1; --y:76svh; --x:0svh; --rot:-90deg; --z:56; pointer-events:none; }
+  #across-street{ --left:1780svh; --scale:.26; --ar:287/480; --y:64svh; --x:0svh; --rot:0.0deg; --z:52; }
+  #grew-here{ --left:1796svh; --scale:.26; --ar:407/482; --y:64svh; --x:0svh; --rot:0.0deg; --z:53; }
+  #mazzy-star{ --left:1818svh; --scale:.26; --ar:407/482; --y:64svh; --x:0svh; --rot:0.0deg; --z:54; }
+  #tisthedamn{ --left:1840svh;--scale:.26; --ar:357/481; --y:64svh;--x:0svh; --rot:0.0deg; --z:55; }
+  #exitwounds-bts{ --left:1859svh; --scale:.4; --y:60svh; --x:0svh; --rot:0deg; --z:57; }
+  #tv-unboxing{ --left:1780svh; --scale:.56; --ar:9/16; --y:2svh; --x:0svh; --rot:0.0deg; --z:49; }
+  #videos-about{ --left:1805svh; --scale:.20; --y:33svh; --x:0svh; --rot:-2.0deg; --z:50; }
+  #exitwounds-subway{ --left:1801svh; --scale:.29; --y:18svh; --x:0svh; --rot:87.0deg; --z:49; pointer-events:none; }
+  #landmines-bts-tiktok{--left: 1853svh;--scale:0.5;--ar:9/16; --y: 3svh;--x: 0svh; --rot: -1deg;--z: 54; }
+  #landmines-bts{ --left:1877svh; --scale:.4; --y:13svh; --x:0svh; --rot:0deg; --z:53; }
+  #backtruck-2{ --left:1932svh; --scale:.29; --y:27svh; --x:0svh; --rot:2deg; --z:56; pointer-events:none;}
+  #backtruck-1{ --left:1935svh; --scale:.29; --y:3svh; --x:0svh; --rot:4deg; --z:55; pointer-events:none; }
+  #glitter-truck-2{ --left:1864svh; --scale:.6; --y:-22svh; --x:0svh; --rot:0deg; --z:57; pointer-events:none;}
+
+  /* ========= MERCH SECTION ========= */
+  #landmines-matches{ --left:1923svh; --scale:.35; --y:60svh; --x:0svh; --rot:-2.5deg; --z:60; pointer-events:none;  }
+  #pretty-little-liars{ --left:1990svh; --scale:.22; --y:73svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none;  }
+  #pretty-little-liars-text{ --left:1990svh; --scale:.22; --y:65svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
+                             --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9; }
+  #m-title{ --left:1960svh; --scale:.13; --y:48svh; --x:0svh; --rot:-3deg; --z:61; pointer-events:none; }
+  #fire-meme{ --left:1950svh; --scale:.26; --y:16svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none; }
+  #candle-lighting{ --left:1983svh; --scale:.40; --ar:9/16; --y:-1svh; --x:0svh; --rot:0deg; --z:60; }
+  #about-matchbooks{ --left:2032svh; --scale:.2; --y:73svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none;}
+  #sticker-1{ --left:2069svh; --scale:.24; --y:73svh; --x:0svh; --rot:-5deg; --z:60; pointer-events:none;  }
+  #sticker-2{ --left:2100svh; --scale:.24; --y:73svh; --x:0svh; --rot:7deg; --z:60; pointer-events:none;  }
+  #sticker-3{ --left:2072svh; --scale:.24; --y:49svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none;  }
+  #buy-button{ --left:2096svh; --scale:.17; --y:50svh; --x:0svh; --rot:5deg; --z:60; }
+  #early-posters{ --left:2004svh; --scale:.45;--y:-2svh; --x:0svh; --rot:0deg; --z:59; pointer-events:none; }
+  #early-posters-text{ --left:2032svh; --scale:.2; --y:35svh; --x:0svh; --rot:-4deg; --z:60; pointer-events:none;
+                       --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9; }
+  #poster-arrow{ --left:2052svh; --scale:.10;--y:28svh; --x:0svh; --rot:19deg; --z:60; pointer-events:none;}
+  #thank-you-text{ --left:2053svh; --scale:.2;--y:7svh; --x:0svh; --rot:-.5deg; --z:60; pointer-events:none;
+                   --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9; }
+  #poster{ --left:2074svh; --scale:.45;--y:2svh; --x:0svh; --rot:-3deg; --z:61; pointer-events:none; }
+  #sims{ --left:2111svh; --scale:.10; --y:35svh; --x:0svh; --rot:0deg; --z:61; pointer-events:none; }
+  #selfie-poster{ --left:2104svh; --scale:.35; --y:1svh; --x:0svh; --rot:2deg; --z:60; pointer-events:none; }
+  
+  /* ========= LONDON SECTION ========= */
+  #london-title{ --left:2120svh; --scale:.25; --y:37svh; --x:10svh; --rot:-90deg; --z:40; pointer-events:none; }
+  #hangout-poster{ --left:2159svh; --scale:.71; --y:32svh; --x:0svh; --rot:1deg; --z:44; pointer-events:none; }
+  #london-camcorder{ --left:2149svh; --scale:.26; --y:16svh; --x:0svh; --rot:90.0deg; --z:42; pointer-events:none; }
+  #london-live-1{ --left:2177svh; --scale:.30; --ar:9/16; --y:2svh; --x:0svh; --rot:-2.0deg; --z:41; }
+  #london-live-2{ --left:2198svh; --scale:.38; --ar:9/16; --y:2svh; --x:0svh; --rot:0.0deg; --z:43; }
+  #hangout-vlog{ --left:2214svh; --scale:.35; --y:64svh; --x:0svh; --rot:0deg; --z:57; }
+  #rsvp-cloud{ --left:2216svh; --scale:.15; --y:47svh; --x:0svh; --rot:-15deg; --z:44; pointer-events:none; }
+  #rsvp-arrow{ --left:2224svh; --scale:.04; --y:42svh; --x:0svh; --rot:2deg; --z:44; pointer-events:none; }
+  #rsvp-button{ --left:2238svh; --scale:.13; --y:43svh; --x:0svh; --rot:0deg; --z:57; }
+  #london-about{ --left:2278svh; --scale:.57; --y:41svh; --x:0svh; --rot:-8deg; --z:45; }
+  #onedirection{ --left:2280svh; --scale:.18; --y:12svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
+  #onedirection-text{ --left:2280svh; --scale:.1; --y:9svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none;
+                      --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
+  #hangout-tweet{ --left:2324svh; --scale:.375; --y:49svh; --x:0svh; --rot:0deg; --z:46; pointer-events:none; }
+  #london-tv{ --left:2340svh; --scale:.435; --y:61svh; --x:0svh; --rot:0deg; --z:46; }
+  #londoncard-v1{ --left:2319svh; --scale:.35; --y:4svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
+  #londoncard-arrow-1{ --left:2346svh; --scale:.04; --y:3svh; --x:0svh; --rot:-63deg; --z:46; pointer-events:none; }
+  #londoncard-text{ --left:2348svh; --scale:.20; --y:13svh; --x:0svh; --rot:0deg; --z:46; pointer-events:none;
+                    --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
+  #londoncard-arrow-2{ --left:2355svh; --scale:.04; --y:33svh; --x:0svh; --rot:170deg; --z:46; pointer-events:none; }
+  #londoncard-front{ --left:2368.5svh; --scale:.35; --y:28svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
+  #londoncard-back{ --left:2379svh; --scale:.26; --y:0.0svh; --x:3svh; --rot:0deg; --z:45; pointer-events:none; }
+  #film-strip{ --left:2399svh; --scale:.74; --y:25svh; --x:0svh; --rot:-5.0deg; --z:44; pointer-events:none; }
+  /* ========= WHAT'S NEXT SECTION ========= */
+  #dreamdotnet{ --left:2417svh; --scale:.25; --y:72svh; --x:0svh; --rot:0.0deg; --z:44; pointer-events:none; }
+  #church-video{ --left:2420svh; --scale:.30; --ar:336/299; --y:38svh; --x:0svh; --rot:0deg; --z:46; }
+  #villains{ --left:2424svh; --scale:.30; --y:2svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
+  #strawberry{ --left:2455svh; --scale:.20; --y:30svh; --x:0svh; --rot:5deg; --z:46; }
+  #thankyou-note{ --left:2480svh; --scale:.58; --y:40svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none; }
+  #next-title{ --left:2440svh; --scale:.05; --y:30svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
+  #lock-logo{ --left:2440svh; --scale:.58; --y:20svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+</style>
