@@ -1,3 +1,10 @@
+/* ========= BASE / INITIAL PAINT ========= */
+html, body {
+  background: #0f0f12;  /* same deep background color as your site */
+  color: #e0e0e0;       /* ensures text renders instantly */
+  min-height: 100%;     /* prevents flash of unstyled white background */
+}
+
 <style>
   /* ========= V142 — REMOVED LAZY LOADING ========= */
   
