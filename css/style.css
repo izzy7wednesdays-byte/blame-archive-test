@@ -711,10 +711,10 @@ html, body {
   #dreamdotnet{ --left:2417svh; --scale:.25; --y:72svh; --x:0svh; --rot:0.0deg; --z:44; pointer-events:none; }
   #church-video{ --left:2420svh; --scale:.30; --ar:336/299; --y:38svh; --x:0svh; --rot:0deg; --z:46; }
   #villains{ --left:2424svh; --scale:.30; --y:2svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
-  #strawberry{ --left:2455svh; --scale:.20; --y:30svh; --x:0svh; --rot:5deg; --z:46; }
+  #strawberry{ --left:2456svh; --scale:.21; --y:35svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
   #thankyou-note{ --left:2480svh; --scale:.58; --y:40svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none; }
   #next-title{ --left:2440svh; --scale:.05; --y:30svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
-  #lock-logo{ --left:2550svh; --scale:1; --y:30svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #lock-logo{ --left:2547svh; --scale:.9; --y:25svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
   #social-sparkles-2{ --left:2480svh; --scale:.15; --y:20svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
   #instagram-2{ --left:2491svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
   #tiktok-2{ --left:2497svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
