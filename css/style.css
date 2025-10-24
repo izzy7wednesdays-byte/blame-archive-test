@@ -465,7 +465,7 @@ html, body {
   #the-scrapbook{ --left:65svh; --scale:.5; --y:15svh; --x:0svh; --rot:0deg; --z:4;pointer-events: none; }
   #lfg{ --left:97svh; --scale:.1; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
   #pink-flashing-arrow{ --left:123svh; --scale:.09; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
-  #playlist-ex{ --left:160svh; --scale:.65; --sp-ratio:1; --y:60svh; --x:0svh; --rot:0deg; --z:30; }
+  #playlist-ex{ --left:160svh; --scale:.65; --sp-ratio:1; --y:57svh; --x:0svh; --rot:0deg; --z:30; }
 
 /* ========= LIGHT SLEEPER SECTION ========= */
   #lightsleeper-title{ --left:170svh; --scale:.35; --y:30svh; --x:-4svh; --rot:-10deg; --z:4; pointer-events: none; }
@@ -564,7 +564,7 @@ html, body {
   #sleepwalking-listeningparty{ --left:1029svh; --scale:.33; --ar:4/3; --y:0svh; --x:0svh; --rot:0deg; --z:50; }
 
 /* ========= EP SECTION ========= */
-  #ep-inspo-sp{ --left:1074svh; --scale:.54; --y:-25svh; --x:0svh; --rot:0deg; --z:30; }
+  #ep-inspo-sp{ --left:1075svh; --scale:.54; --y:-20svh; --x:0svh; --rot:0deg; --z:30; }
   #ep-inspo{ --left:1060svh; --scale:.53; --y:48svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
   #ep-telephone{ --left:1069svh; --scale:.17; --y:27svh; --x:0svh; --rot:-8deg; --z:72; }
   #ep-phoningfriends{ --left:1075svh; --scale:.27; --y:21svh; --x:0svh; --rot:-8deg; --z:30; pointer-events:none;
@@ -714,7 +714,7 @@ html, body {
   #strawberry{ --left:2456svh; --scale:.21; --y:35svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
   #thankyou-note{ --left:2480svh; --scale:.58; --y:40svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none; }
   #next-title{ --left:2440svh; --scale:.05; --y:30svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
-  #lock-logo{ --left:2547svh; --scale:.9; --y:25svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #lock-logo{ --left:2540svh; --scale:.9; --y:20svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
   #social-sparkles-2{ --left:2480svh; --scale:.15; --y:20svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
   #instagram-2{ --left:2491svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
   #tiktok-2{ --left:2497svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
