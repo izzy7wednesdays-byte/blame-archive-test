@@ -5,12 +5,12 @@ html, body {
   min-height: 100%;     /* prevents flash of unstyled white background */
 }
 
-  /* ========= V142 — REMOVED LAZY LOADING ========= */
+/* ========= V142 — REMOVED LAZY LOADING ========= */
   
-  /* ========= GLOBAL CONTROLS ========= */
+/* ========= GLOBAL CONTROLS ========= */
   :root{
     --band-h: 100svh;
-    --rail-w: 2600svh;
+    --rail-w: 2700svh;
     --bg: #0d161d;
     --fg: #e7f1ff;
   }
@@ -24,7 +24,7 @@ html, body {
     -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
   }
 
-  /* ========= HORIZONTAL SCROLLER (same height as band) ========= */
+/* ========= HORIZONTAL SCROLLER (same height as band) ========= */
   .hwrap{
     height: 100svh;
     overflow-x:auto; overflow-y:hidden;
@@ -36,7 +36,7 @@ html, body {
   .hwrap::-webkit-scrollbar{ height:8px }
   .hwrap::-webkit-scrollbar-thumb{ background:#2c2c32; border-radius:8px }
 
-  /* ========= RAIL (ABSOLUTE LAYOUT + GROUP NUDGE) ========= */
+/* ========= RAIL (ABSOLUTE LAYOUT + GROUP NUDGE) ========= */
   .rail{
     position: relative;
     height: var(--band-h);
@@ -44,8 +44,7 @@ html, body {
     padding: 0;           
     --group-left: -25svh;
   }
-
-  /* ========= SLOT CONTROL PANEL ========= */
+/* ========= SLOT CONTROL PANEL ========= */
   .slot{
     --left: 0svh;
     --scale: 1;
@@ -65,7 +64,7 @@ html, body {
     color: inherit; text-decoration: none;
   }
 
-  /* Images scale with band height *and* per-slot --scale */
+/* Images scale with band height *and* per-slot --scale */
   .slot img{
     height: calc(var(--band-h) * var(--scale));
     width: auto;
@@ -73,7 +72,7 @@ html, body {
     object-fit: contain;
   }
 
-  /* MEDIA: SPOTIFY PLAYLIST SLOT */
+/* MEDIA: SPOTIFY PLAYLIST SLOT */
   .slot--spotify .sp-box{
     --sp-shrink: 0.675;
     --sp-ratio: 0.889;
@@ -93,7 +92,7 @@ html, body {
     /* aspect-ratio: 685 / 302; /* ≈ 2.268:1 */ */
   } 
 
-  /* MEDIA: YOUTUBE SLOT */
+/* MEDIA: YOUTUBE SLOT */
   .slot--youtube .yt-box{
     --yt-shrink: 0.85;
     --ratio: 16/9;
@@ -107,7 +106,7 @@ html, body {
   }
   .slot--youtube iframe{ width:100%; height:100%; border:0; border-radius:12px; }
 
-  /* MEDIA: LOTTIE SLOT */
+/* MEDIA: LOTTIE SLOT */
   .slot--lottie .lot-box{
     --lot-shrink: 0.85;
     --ratio: 1.8;
@@ -140,7 +139,7 @@ html, body {
   .slot--video iframe{ width: 100%; height: 100%; display:block; border:0; }
 
 
-  /* MEDIA: GIF SLOT */
+/* MEDIA: GIF SLOT */
   .slot--gif .gif-box{
     --h: calc(var(--band-h) * var(--scale));
     height: var(--h);
@@ -152,7 +151,7 @@ html, body {
   }
   .slot--gif img{ width:100%; height:100%; object-fit:cover; display:block; }
 
-  /* MEDIA: SOUNDCLOUD (IMAGE-CONTROLLED) SLOT */
+/* MEDIA: SOUNDCLOUD (IMAGE-CONTROLLED) SLOT */
   .slot--sc .sc-iframe{
     position:absolute;
     left:-9999px; top:auto; width:1px; height:1px; opacity:0; pointer-events:none;
@@ -164,7 +163,7 @@ html, body {
     cursor: pointer;
   }
 
-  /* MEDIA: AUDIO (IMAGE-CONTROLLED) SLOT */
+/* MEDIA: AUDIO (IMAGE-CONTROLLED) SLOT */
   .slot--audio .audio-trigger{
     height: calc(var(--band-h) * var(--scale));
     width: auto; display:block; object-fit: contain;
@@ -229,7 +228,7 @@ html, body {
     border-radius: 3px;
   }
   
-  /* ===== Inner image should fit and stay contained ===== */
+/* ===== Inner image should fit and stay contained ===== */
   #overlay .ov-card > img {
     width: auto;
     height: auto;
@@ -241,7 +240,7 @@ html, body {
     border-radius: 12px;
   }
 
-  /* ===== BEHAVIOR: GROW-ON-HOVER for clickable slots ===== */
+/* ===== BEHAVIOR: GROW-ON-HOVER for clickable slots ===== */
   .slot[data-overlay-src] img {
     transition: transform .25s ease, filter .25s ease;
   }
@@ -261,7 +260,7 @@ html, body {
     transform: scale(1);
   }
 
-  /* ========= INTERACTIVE MEDIA HIT ZONE FIX ========= */
+/* ========= INTERACTIVE MEDIA HIT ZONE FIX ========= */
   .slot[data-overlay-src],
   .slot--sc,
   .slot--audio,
@@ -279,7 +278,7 @@ html, body {
     object-fit: contain;
   }
 
-  /* ========= FINAL CLICK ZONE CORRECTION ========= */
+/* ========= FINAL CLICK ZONE CORRECTION ========= */
   .slot[data-overlay-src] img,
   .slot--sc .sc-trigger,
   .slot--audio .audio-trigger,
@@ -306,7 +305,7 @@ html, body {
     pointer-events: auto;
   }
 
-  /* TEMPORARY DEBUG — outlines clickable slots, remove when satisfied */
+/* TEMPORARY DEBUG — outlines clickable slots, remove when satisfied */
   .slot[data-overlay-src],
   .slot--sc,
   .slot--audio,
@@ -314,8 +313,7 @@ html, body {
     outline: 1px dashed rgba(255,255,255,0.15);
   }
 
-
-  /* ========= BEHAVIOR: OPENING OVERLAY FLOAT EFFECT (inside overlay scroll) ========= */
+/* ========= BEHAVIOR: OPENING OVERLAY FLOAT EFFECT (inside overlay scroll) ========= */
   #overlay .ov-card {
     overflow-y: auto;
     overflow-x: hidden;
@@ -359,8 +357,8 @@ html, body {
     cursor: pointer;
   }
 
-  /* ========= TEXT SLOT (plain, non-clickable) ========= */
-  /* TEXT SLOT */
+/* ========= TEXT SLOT (plain, non-clickable) ========= */
+/* TEXT SLOT */
   .slot--text .text-box{
     /* core type */
     font-family: var(--ff, "Thinker"), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -403,7 +401,7 @@ html, body {
     border-radius: var(--br, 0);
   }
 
-    /* ===== Remove Global Drop Shadow ===== */
+/* ===== Remove Global Drop Shadow ===== */
   .slot img,
   .slot--spotify .sp-box,
   .slot--youtube .yt-box,
@@ -414,12 +412,12 @@ html, body {
     filter: none !important;
   }
 
-  /* ========= NON-CLICKABLE SLOT SAFEGUARD ========= */
+/* ========= NON-CLICKABLE SLOT SAFEGUARD ========= */
   .slot:not([data-overlay-src]):not(.slot--sc):not(.slot--audio):not(:has(a)):not(.slot--youtube):not(.slot--video) {
     pointer-events: none;
   }
   
-  /* ===== YouTube + Vimeo clickability + debug outline ONLY ===== */
+/* ===== YouTube + Vimeo clickability + debug outline ONLY ===== */
   .slot--youtube,
   .slot--video,
   .slot--spotify, {
@@ -433,9 +431,9 @@ html, body {
     pointer-events: auto !important; /* allow play/pause/fullscreen */
   }
   
-  /* ========= PER-SLOT CUSTOMIZATION (svh units) ========= */
+/* ========= PER-SLOT CUSTOMIZATION (svh units) ========= */
   
-  /* ========= WELCOME SECTION ========= */
+/* ========= WELCOME SECTION ========= */
   #special-message{ --left:-26svh; --scale:1.12; --y:20svh; --x:0svh; --rot:0deg; --z:1; }
   #izzymacarthur{ --left:18svh; --scale:.15; --y:65svh; --x:8svh; --rot:0deg; --z:2; }
   #tracklist{ --left:91svh; --scale:.42; --y:59svh; --x:15svh; --rot:8deg; --z:2; pointer-events:none;  }
@@ -451,7 +449,8 @@ html, body {
   #lfg{ --left:97svh; --scale:.1; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
   #pink-flashing-arrow{ --left:123svh; --scale:.09; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
   #playlist-ex{ --left:160svh; --scale:.63; --y:52svh; --x:0svh; --rot:0deg; --z:30; }
-  /* ========= LIGHT SLEEPER SECTION ========= */
+
+/* ========= LIGHT SLEEPER SECTION ========= */
   #lightsleeper-title{ --left:170svh; --scale:.35; --y:30svh; --x:-4svh; --rot:-10deg; --z:4; pointer-events: none; }
   #lightsleeper-visualizer{ --left:145svh; --scale:.38; --y:0svh; --x:10svh; --rot:0deg; --z:3; }
   #lightsleeper-about{ --left:206svh; --scale:.4; --y:59svh; --x:0svh; --rot:-10deg; --z:20; pointer-events:auto;  }
@@ -465,7 +464,8 @@ html, body {
   #play-lightsleeper{ --left:268svh; --scale:.25; --y:34svh; --x:0svh; --rot:0deg; --z:40; }
   #lightsleeper-behindthesong{ /*Holly Humberstone (deep end behind the song) */ --left:298svh; --scale:.38; --y:65svh; --x:0svh; --rot:0deg; --z:22;}
   #broken-breathing{ --left: 263svh; --scale:.28; --y: 0svh; --x: 1svh; --rot: 0deg; --z: 10; }
-  /* ========= EXIT WOUNDS SECTION ========= */
+
+/* ========= EXIT WOUNDS SECTION ========= */
   #exitwounds-lyricvideo{ /* V4 placeholder */ --left: 300svh; --scale: .38; --y: 31svh; --x: 0svh; --rot: 0deg; --z: 21; } 
   #exitwounds-title{ --left:328svh; --scale:.31; --y: 0svh; --x:0svh; --rot:-14deg; --z:1; pointer-events:none;   }
   #play-exitwounds{ --left:364svh; --scale:.25; --y:67svh; --x:0svh; --rot:-13deg; --z:11; }
@@ -486,7 +486,8 @@ html, body {
                         --ff: "Manic"; --ta: center;  --fw: 400; --fs-mul: .15;  --tt: uppercase; --text-color: #4C58E9; }
   #substack-point-arrow{ --left:433svh; --scale:.10; --y:65svh; --x:0svh; --rot:-2deg; --z:4; pointer-events:none; }
   #exitwounds-substackflier{ --left:452svh; --scale:.77; --y:28svh; --x:0svh; --rot:15deg; --z:3; }
-  /* ========= LANDMINES SECTION ========= */
+
+/* ========= LANDMINES SECTION ========= */
   #glitter-truck{ --left:494svh; --scale:.48; --y:-18svh; --x:0svh; --rot:0deg; --z:7; pointer-events:none;}
   #landmines-bts-clip{ --left:532svh; --scale:.3; --ar:16/9; --y:65svh; --x:0svh; --rot:0deg; --z:40; }
   #landmines-voicememo{ --left:523svh; --scale:.26; --y:37svh; --x:5svh; --rot:0deg; --z:30; }
@@ -508,7 +509,8 @@ html, body {
   #vocals-landmines-1{ --left:568svh; --scale:.35; --ar:9/16; --y:0svh; --x:10svh; --rot:0deg; --z:38; }
   #vocals-landmines-1-text{ --left:550svh; --scale:.2; --y:21svh; --x:10svh; --rot:0deg; --z:38; pointer-events:none;
                             --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: left;  --tt: uppercase; --text-color: #4C58E9;}
-  /* ========= MISERY SECTION ========= */
+
+/* ========= MISERY SECTION ========= */
   #misery-ogchorus{ --left:720svh; --scale:.24; --y:71svh; --x:2svh; --rot:0deg; --z:40; }
   #misery-ogchorus-text{ --left:733svh; --scale:.22; --y:59svh; --x:0svh; --rot:0deg; --z:40;
                           --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9;}
@@ -529,7 +531,8 @@ html, body {
   #play-misery{ --left:865svh; --scale:.22; --y:31svh; --x:0svh; --rot:-10deg; --z:71; }
   #misery-visualizer{ --left:853svh; --scale:.38; --y:0svh; --x:8svh; --rot:0deg; --z:39; }
   #misery-behindthesong{ /* Holly Humberstone (faatw behind the song) */ --left:898svh; --scale:.38; --y:62svh; --x:10svh; --rot:0deg; --z:70; }
-  /* ========= SLEEPWALKING SECTION ========= */
+
+/* ========= SLEEPWALKING SECTION ========= */
   #smurfette-1{--left:884svh; --scale:.25; --y:33svh; --x:10svh; --rot:0deg; --z:70; pointer-events:none; }
   #play-sleepwalking{--left:907svh; --scale:.2; --y:37svh; --x:10svh; --rot:10deg; --z:50;}
   #sleepwalking-radio{ --left:920svh; --scale:.22; --y:7svh; --x:1svh; --rot:0deg; --z:40; }
@@ -543,7 +546,7 @@ html, body {
   #sleepwalking-receipt{ --left:1040svh; --scale:.35; --y:30svh; --x:0svh; --rot:15deg; --z:70; pointer-events: none; }
   #sleepwalking-listeningparty{ --left:1029svh; --scale:.33; --ar:4/3; --y:0svh; --x:0svh; --rot:0deg; --z:50; }
 
-  /* ========= EP SECTION ========= */
+/* ========= EP SECTION ========= */
   #ep-inspo-sp{ --left:1073svh; --scale:.54; --y:-16svh; --x:0svh; --rot:0deg; --z:30; }
   #ep-inspo{ --left:1060svh; --scale:.53; --y:48svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
   #ep-telephone{ --left:1069svh; --scale:.17; --y:27svh; --x:0svh; --rot:-8deg; --z:72; }
@@ -587,7 +590,8 @@ html, body {
   #ep-tweet{ --left:1353svh; --scale:.48; --y:2svh; --x:10svh; --rot:0deg; --z:40; pointer-events:none; }
   #starterpack{ --left:1375svh; --scale:.39; --y:56svh; --x:10svh; --rot:0deg; --z:40; pointer-events:none; }
   #ep-cover{ --left:1381svh; --scale:.54; --y:0svh; --x:10svh; --rot:0deg; --z:40; pointer-events:none; }
-  /* ========= ARTWORK SECTION ========= */
+
+/* ========= ARTWORK SECTION ========= */
   #artwork-testshoot-1{ --left:1425svh; --scale:.28; --ar:4/3; --y:66svh; --x:0svh; --rot:0deg; --z:49; }
   #artwork-title{ --left:1414svh; --scale:.2; --y:46svh; --x:10svh; --rot:0deg; --z:41; }
   #artwork-testshoot-5{ --left:1464svh; --scale:.27; --ar:109/60; --y:68svh; --x:0svh; --rot:0deg; --z:46; }
@@ -605,7 +609,8 @@ html, body {
   #caitlin-text-3{ --left:1566svh; --scale:.35; --y:45svh; --x:0svh; --rot:-5.0deg; --z:40; pointer-events:none; }
   #shoot-bts-2{ --left:1571svh; --scale:.38; --ar:9/16; --y:5svh; --x:0svh; --rot:0deg; --z:48; }
   #dorm-mirror{ --left:1587svh; --scale:.35; --y:42svh; --x:0svh; --rot:0.0deg; --z:40; pointer-events:none; }
-  /* ========= VIDEO SECTION ========= */
+
+/* ========= VIDEO SECTION ========= */
   #misery-bts{ --left:1612svh; --scale:.38; --y:62svh; --x:0svh; --rot:0deg; --z:39; }
   #buddy-gif{ --left:1612svh; --scale:.15; --y:45svh; --x:0svh; --rot:0.0deg; --z:53; pointer-events:none; }
   #video-title-camcorder{ --left:1585svh; --scale:.54; --y:-14svh; --x:10svh; --rot:0deg; --z:41; pointer-events:none; }
@@ -637,7 +642,7 @@ html, body {
   #backtruck-1{ --left:1935svh; --scale:.29; --y:3svh; --x:0svh; --rot:4deg; --z:55; pointer-events:none; }
   #glitter-truck-2{ --left:1864svh; --scale:.6; --y:-22svh; --x:0svh; --rot:0deg; --z:57; pointer-events:none;}
 
-  /* ========= MERCH SECTION ========= */
+/* ========= MERCH SECTION ========= */
   #landmines-matches{ --left:1923svh; --scale:.35; --y:60svh; --x:0svh; --rot:-2.5deg; --z:60; pointer-events:none;  }
   #pretty-little-liars{ --left:1990svh; --scale:.22; --y:73svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none;  }
   #pretty-little-liars-text{ --left:1990svh; --scale:.22; --y:65svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
@@ -660,7 +665,7 @@ html, body {
   #sims{ --left:2111svh; --scale:.10; --y:35svh; --x:0svh; --rot:0deg; --z:61; pointer-events:none; }
   #selfie-poster{ --left:2104svh; --scale:.35; --y:1svh; --x:0svh; --rot:2deg; --z:60; pointer-events:none; }
   
-  /* ========= LONDON SECTION ========= */
+/* ========= LONDON SECTION ========= */
   #london-title{ --left:2120svh; --scale:.25; --y:37svh; --x:10svh; --rot:-90deg; --z:40; pointer-events:none; }
   #hangout-poster{ --left:2159svh; --scale:.71; --y:32svh; --x:0svh; --rot:1deg; --z:44; pointer-events:none; }
   #london-camcorder{ --left:2149svh; --scale:.26; --y:16svh; --x:0svh; --rot:90.0deg; --z:42; pointer-events:none; }
@@ -684,11 +689,20 @@ html, body {
   #londoncard-front{ --left:2368.5svh; --scale:.35; --y:28svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #londoncard-back{ --left:2379svh; --scale:.26; --y:0.0svh; --x:3svh; --rot:0deg; --z:45; pointer-events:none; }
   #film-strip{ --left:2399svh; --scale:.74; --y:25svh; --x:0svh; --rot:-5.0deg; --z:44; pointer-events:none; }
-  /* ========= WHAT'S NEXT SECTION ========= */
+
+/* ========= WHAT'S NEXT SECTION ========= */
   #dreamdotnet{ --left:2417svh; --scale:.25; --y:72svh; --x:0svh; --rot:0.0deg; --z:44; pointer-events:none; }
   #church-video{ --left:2420svh; --scale:.30; --ar:336/299; --y:38svh; --x:0svh; --rot:0deg; --z:46; }
   #villains{ --left:2424svh; --scale:.30; --y:2svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #strawberry{ --left:2455svh; --scale:.20; --y:30svh; --x:0svh; --rot:5deg; --z:46; }
   #thankyou-note{ --left:2480svh; --scale:.58; --y:40svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none; }
   #next-title{ --left:2440svh; --scale:.05; --y:30svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
-  #lock-logo{ --left:2440svh; --scale:.58; --y:20svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #lock-logo{ --left:2480svh; --scale:.65; --y:30svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #social-sparkles-2{ --left:2480svh; --scale:.15; --y:50svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
+  #instagram-2{ --left:2491svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #tiktok-2{ --left:2497svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #twitter-2{ --left:2503svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #discord-2{ --left:2509svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #spotify-2{ --left:2515svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #apple-music-2{ --left:2521svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  
