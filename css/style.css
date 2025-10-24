@@ -5,7 +5,7 @@ html, body {
   min-height: 100%;     /* prevents flash of unstyled white background */
 }
 
-/* ========= V142 — REMOVED LAZY LOADING ========= */
+/* ========= V143 — REMOVED LAZY LOADING ========= */
   
 /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -81,11 +81,13 @@ html, body {
   }
   
   .slot--spotify .sp-box {
-    --sp-shrink: 0.675;
-    --sp-ratio: 0.889;
+    --sp-ratio: 0.889; /* height-to-width ratio of Spotify embed */
     --sp-min: 220px;
     --sp-max: 520px;
-    --h: calc(var(--band-h) * var(--scale) * var(--sp-shrink));
+  
+    /* make the visible playlist fill the entire slot */
+    --h: calc(var(--band-h) * var(--scale));
+    
     width: clamp(var(--sp-min), calc(var(--h) * var(--sp-ratio)), var(--sp-max));
     height: var(--h);
     display: block;
