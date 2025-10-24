@@ -381,7 +381,7 @@ html, body {
     font-weight: var(--fw, 400);
     font-style: var(--fstyle, normal);
     font-stretch: var(--fstr, normal);
-    font-size: clamp(14px, calc(var(--band-h) * var(--scale) * var(--fs-mul, .11)), 120px);
+    font-size: calc(var(--band-h) * var(--scale) * var(--fs-mul, .11));
     line-height: var(--lh, 1.08);
     letter-spacing: var(--ls, .01em);
     word-spacing: var(--ws, 0);
