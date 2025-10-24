@@ -72,33 +72,43 @@ html, body {
     object-fit: contain;
   }
 
-/* MEDIA: SPOTIFY PLAYLIST */
+/* MEDIA: SPOTIFY PLAYLIST SLOT */
   .slot--spotify {
-    pointer-events: auto;
+    /* Base slot behavior */
+    pointer-events: auto;                /* clickable player */
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end;               /* sit flush with bottom like other slots */
     justify-content: center;
-    height: calc(var(--band-h) * var(--scale) * 0.675);
+  
+    /* Height matches actual playlist box */
+    --sp-shrink: 0.675;                  /* visual reduction factor */
+    height: calc(var(--band-h) * var(--scale) * var(--sp-shrink));
   }
   
+  /* Internal Spotify player box */
   .slot--spotify .sp-box {
-    --sp-shrink: 0.675;
-    --sp-default-ratio: 0.889;
+    /* Variables controlling proportional size */
+    --sp-shrink: 0.675;                  /* keep consistent with outer slot */
+    --sp-default-ratio: 0.889;           /* default aspect ratio if not overridden */
     --sp-min: 220px;
     --sp-max: 520px;
   
-    /* allow per-slot override: if --sp-ratio is defined in that slot, use it; otherwise use default */
+    /* Allow per-slot ratio override */
     --this-ratio: var(--sp-ratio, var(--sp-default-ratio));
   
+    /* Scaled height/width logic */
     --h: calc(var(--band-h) * var(--scale) * var(--sp-shrink));
     width: clamp(var(--sp-min), calc(var(--h) * var(--this-ratio)), var(--sp-max));
     height: var(--h);
+  
+    /* Presentation */
     display: block;
     overflow: hidden;
     border-radius: 12px;
     background: none;
   }
   
+  /* Iframe fills the box and remains interactive */
   .slot--spotify iframe {
     pointer-events: auto;
     width: 100%;
@@ -455,7 +465,7 @@ html, body {
   #the-scrapbook{ --left:65svh; --scale:.5; --y:15svh; --x:0svh; --rot:0deg; --z:4;pointer-events: none; }
   #lfg{ --left:97svh; --scale:.1; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
   #pink-flashing-arrow{ --left:123svh; --scale:.09; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
-  #playlist-ex{ --left:160svh; --scale:.63; --y:40svh; --x:0svh; --rot:0deg; --z:30; }
+  #playlist-ex{ --left:160svh; --scale:.63; --sp-ratio:1; --y:40svh; --x:0svh; --rot:0deg; --z:30; }
 
 /* ========= LIGHT SLEEPER SECTION ========= */
   #lightsleeper-title{ --left:170svh; --scale:.35; --y:30svh; --x:-4svh; --rot:-10deg; --z:4; pointer-events: none; }
