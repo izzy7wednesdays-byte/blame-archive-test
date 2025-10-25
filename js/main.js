@@ -1,13 +1,12 @@
-/* ==================================================== */
-    /* --------- V3.0 - FIXING VOICE MEMO --------- */
-/* ==================================================== */
-  
 /* ========= MAIN INITIALIZATION ========= */
+/* ==================================================== */
+/* --------- V3.1 - FIXED VOICE MEMO TOGGLE ----------- */
+/* ==================================================== */
+
 document.addEventListener("DOMContentLoaded", () => {
 
+  /* ===== 1. Horizontal scroll wheel behavior ===== */
   const hwrap = document.getElementById("hwrap");
-
-  /* Horizontal scroll wheel behavior */
   if (hwrap) {
     hwrap.addEventListener("wheel", e => {
       if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { passive: false });
   }
 
-  /* ===== SOUNDCLOUD IMAGE-CONTROLLED PLAYER ===== */
+  /* ===== 2. SoundCloud image-controlled player ===== */
   function initSoundCloud() {
     if (typeof SC === "undefined" || !SC.Widget) {
       console.warn("SoundCloud API not ready yet — retrying...");
@@ -49,56 +48,89 @@ document.addEventListener("DOMContentLoaded", () => {
         widget.isPaused(paused => paused ? widget.play() : widget.pause());
       };
 
-      trigger.addEventListener("click", e => {
-        e.preventDefault();
-        e.stopPropagation();
-        toggle();
-      });
-      trigger.addEventListener("pointerup", e => {
-        e.preventDefault();
-        e.stopPropagation();
-        toggle();
-      });
+      ["click", "pointerup"].forEach(evt =>
+        trigger.addEventListener(evt, e => {
+          e.preventDefault();
+          e.stopPropagation();
+          toggle();
+        }, { passive: false })
+      );
     });
   }
-
   initSoundCloud();
 
-  /* ===== IMAGE-CONTROLLED AUDIO ===== */
+  /* ===== 3. Voice Memo (image-controlled audio) ===== */
   document.querySelectorAll(".slot--audio").forEach(slot => {
-    const audio = slot.querySelector("audio");
+    const audio   = slot.querySelector("audio");
     const trigger = slot.querySelector(".audio-trigger");
     if (!audio || !trigger) return;
 
-    const src = slot.dataset.audioSrc;
-    if (src) audio.src = src;
+    const srcAttr = slot.dataset.audioSrc?.trim();
+    if (srcAttr && !audio.src.includes(srcAttr)) {
+      audio.src = srcAttr;
+    }
 
-    const toggle = () => {
-      if (audio.paused) {
-        // pause all others
-        document.querySelectorAll(".slot--audio audio").forEach(a => {
-          if (a !== audio) a.pause();
-        });
-        audio.play().catch(err => console.warn("Audio play failed:", err));
-      } else audio.pause();
+    audio.preload = "auto";
+    audio.setAttribute("playsinline", "");
+
+    const updateUI = () => {
+      const isPlaying = !audio.paused && !audio.ended;
+      slot.classList.toggle("is-playing", isPlaying);
+      trigger.setAttribute("aria-pressed", isPlaying ? "true" : "false");
     };
 
-    trigger.addEventListener("click", e => {
-      e.preventDefault();
-      e.stopPropagation();
-      toggle();
+    const stopOthers = () => {
+      document.querySelectorAll(".slot--audio audio").forEach(a => {
+        if (a !== audio) a.pause();
+      });
+      if (window.__scWidgets) {
+        window.__scWidgets.forEach(w => {
+          try { w.pause(); } catch (e) {}
+        });
+      }
+    };
+
+    const toggle = () => {
+      // ensure metadata is loaded
+      if (audio.readyState < 2) audio.load();
+
+      if (audio.paused || audio.ended) {
+        stopOthers();
+        const playPromise = audio.play();
+        if (playPromise && typeof playPromise.then === "function") {
+          playPromise
+            .then(() => updateUI())
+            .catch(err => console.warn("[Audio] play() failed:", err));
+        }
+      } else {
+        audio.pause();
+        updateUI();
+      }
+    };
+
+    ["click", "pointerup"].forEach(evt =>
+      trigger.addEventListener(evt, e => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggle();
+      }, { passive: false })
+    );
+
+    ["play", "pause", "ended"].forEach(ev =>
+      audio.addEventListener(ev, updateUI)
+    );
+
+    audio.addEventListener("error", e => {
+      console.warn("[Audio] error:", audio.error, audio.currentSrc);
     });
-    trigger.addEventListener("pointerup", e => {
-      e.preventDefault();
-      e.stopPropagation();
-      toggle();
-    });
+
+    updateUI();
   });
 
-  /* ===== OVERLAY CLICK-TO-OPEN ===== */
+  /* ===== 4. Overlay click-to-open ===== */
   const overlay = document.getElementById("overlay");
-  const ovCard = overlay?.querySelector(".ov-card");
-  const ovImg = overlay?.querySelector("img");
+  const ovCard  = overlay?.querySelector(".ov-card");
+  const ovImg   = overlay?.querySelector("img");
 
   if (overlay && ovCard && ovImg) {
     function openOverlay(src, alt) {
@@ -110,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function closeOverlay() {
       overlay.classList.remove("is-open");
-      setTimeout(() => ovImg.removeAttribute("src"), 350);
+      setTimeout(() => ovImg.removeAttribute("src"), 180);
     }
 
     document.querySelectorAll(".slot[data-overlay-src]").forEach(slot => {
@@ -132,4 +164,5 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.warn("Overlay element not found");
   }
+
 });
