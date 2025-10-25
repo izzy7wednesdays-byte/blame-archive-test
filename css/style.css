@@ -714,14 +714,14 @@ html, body {
   #strawberry{ --left:2456svh; --scale:.21; --y:35svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
   #thankyou-note{ --left:2480svh; --scale:.58; --y:40svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none; }
   #next-title{ --left:2440svh; --scale:.05; --y:30svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
-  #lock-logo{ --left:2540svh; --scale:.9; --y:20svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
-  #social-sparkles-2{ --left:2480svh; --scale:.15; --y:20svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
-  #instagram-2{ --left:2491svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
-  #tiktok-2{ --left:2497svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
-  #twitter-2{ --left:2503svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
-  #discord-2{ --left:2509svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
-  #spotify-2{ --left:2515svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
-  #apple-music-2{ --left:2521svh; --scale:.05; --y:25svh; --x:8svh; --rot:0deg; --z:2; }
+  #lock-logo{ --left:2535svh; --scale:.85; --y:20svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #social-sparkles-2{ --left:2480svh; --scale:.15; --y:10svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
+  #instagram-2{ --left:2491svh; --scale:.05; --y:15svh; --x:8svh; --rot:0deg; --z:2; }
+  #tiktok-2{ --left:2497svh; --scale:.05; --y:15svh; --x:8svh; --rot:0deg; --z:2; }
+  #twitter-2{ --left:2503svh; --scale:.05; --y:15svh; --x:8svh; --rot:0deg; --z:2; }
+  #discord-2{ --left:2509svh; --scale:.05; --y:15svh; --x:8svh; --rot:0deg; --z:2; }
+  #spotify-2{ --left:2515svh; --scale:.05; --y:15svh; --x:8svh; --rot:0deg; --z:2; }
+  #apple-music-2{ --left:2521svh; --scale:.05; --y:15svh; --x:8svh; --rot:0deg; --z:2; }
 
 /* ======== TEMPORARY: DEBUG SLOT VISUALIZATION ======== */
 /* TEMPORARY ONLY: outline each slot's box so we can see its footprint */
