@@ -24,6 +24,10 @@
   <!-- #) Lottie web component -->
   <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"></script>
 </head>
+
+        <!-- ================================================= -->
+              <!-- V3 - FIXING OVERLAY + SOUNDCLOUD ISSUES -->
+        <!-- ================================================= -->
   
 <body>
   <div class="hwrap" id="hwrap">
@@ -1943,8 +1947,12 @@
   <div id="overlay" aria-hidden="true">
     <div class="ov-card"><img alt=""></div>
   </div>
+
+  <!-- Soundcloud Bundle -->
+  <script src="https://w.soundcloud.com/player/api.js"></script>
   
   <!-- Main JS bundle -->
-  <script defer src="js/main.js?v=1.2"></script>
+  <script src="js/main.js?v=2.0" defer></script>
+  
 </body>
 </html>
