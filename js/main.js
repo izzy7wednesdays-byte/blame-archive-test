@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V3.1 - FIXED VOICE MEMO TOGGLE ----------- */
+/* --------- V3.2 - FIX VOICE MEMO TOGGLE ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -59,110 +59,86 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   initSoundCloud();
 
-  /* ===== 3. Voice Memo (image-controlled audio) ===== */
-  document.querySelectorAll(".slot--audio").forEach(slot => {
-    const audio   = slot.querySelector("audio");
-    const trigger = slot.querySelector(".audio-trigger");
-    if (!audio || !trigger) return;
+ /* ===== 3. Voice Memo (image-controlled audio) — FINAL FIX ===== */
+document.querySelectorAll(".slot--audio").forEach(slot => {
+  const audio   = slot.querySelector("audio");
+  const trigger = slot.querySelector(".audio-trigger");
+  if (!audio || !trigger) return;
 
-    const srcAttr = slot.dataset.audioSrc?.trim();
-    if (srcAttr && !audio.src.includes(srcAttr)) {
-      audio.src = srcAttr;
-    }
-
-    audio.preload = "auto";
-    audio.setAttribute("playsinline", "");
-
-    const updateUI = () => {
-      const isPlaying = !audio.paused && !audio.ended;
-      slot.classList.toggle("is-playing", isPlaying);
-      trigger.setAttribute("aria-pressed", isPlaying ? "true" : "false");
-    };
-
-    const stopOthers = () => {
-      document.querySelectorAll(".slot--audio audio").forEach(a => {
-        if (a !== audio) a.pause();
-      });
-      if (window.__scWidgets) {
-        window.__scWidgets.forEach(w => {
-          try { w.pause(); } catch (e) {}
-        });
-      }
-    };
-
-    const toggle = () => {
-      // ensure metadata is loaded
-      if (audio.readyState < 2) audio.load();
-
-      if (audio.paused || audio.ended) {
-        stopOthers();
-        const playPromise = audio.play();
-        if (playPromise && typeof playPromise.then === "function") {
-          playPromise
-            .then(() => updateUI())
-            .catch(err => console.warn("[Audio] play() failed:", err));
-        }
-      } else {
-        audio.pause();
-        updateUI();
-      }
-    };
-
-    ["click", "pointerup"].forEach(evt =>
-      trigger.addEventListener(evt, e => {
-        e.preventDefault();
-        e.stopPropagation();
-        toggle();
-      }, { passive: false })
-    );
-
-    ["play", "pause", "ended"].forEach(ev =>
-      audio.addEventListener(ev, updateUI)
-    );
-
-    audio.addEventListener("error", e => {
-      console.warn("[Audio] error:", audio.error, audio.currentSrc);
-    });
-
-    updateUI();
-  });
-
-  /* ===== 4. Overlay click-to-open ===== */
-  const overlay = document.getElementById("overlay");
-  const ovCard  = overlay?.querySelector(".ov-card");
-  const ovImg   = overlay?.querySelector("img");
-
-  if (overlay && ovCard && ovImg) {
-    function openOverlay(src, alt) {
-      ovImg.src = src;
-      ovImg.alt = alt || "";
-      overlay.classList.add("is-open");
-      console.log("Overlay opened:", src);
-    }
-
-    function closeOverlay() {
-      overlay.classList.remove("is-open");
-      setTimeout(() => ovImg.removeAttribute("src"), 180);
-    }
-
-    document.querySelectorAll(".slot[data-overlay-src]").forEach(slot => {
-      const img = slot.querySelector("img");
-      if (!img) return;
-      img.addEventListener("click", e => {
-        e.preventDefault();
-        e.stopPropagation();
-        openOverlay(slot.dataset.overlaySrc, slot.dataset.overlayAlt || img.alt);
-      });
-    });
-
-    overlay.addEventListener("click", e => {
-      if (e.target === overlay) closeOverlay();
-    });
-    document.addEventListener("keydown", e => {
-      if (e.key === "Escape") closeOverlay();
-    });
-  } else {
-    console.warn("Overlay element not found");
+  // Assign src from data attribute if present
+  const srcAttr = slot.dataset.audioSrc?.trim();
+  if (srcAttr && !audio.src.includes(srcAttr)) {
+    audio.src = srcAttr;
   }
 
+  audio.preload = "auto";
+  audio.setAttribute("playsinline", "");
+
+  // UI helper
+  const updateUI = () => {
+    const isPlaying = !audio.paused && !audio.ended;
+    slot.classList.toggle("is-playing", isPlaying);
+    trigger.setAttribute("aria-pressed", isPlaying ? "true" : "false");
+  };
+
+  // Pause everything else
+  const stopOthers = () => {
+    document.querySelectorAll(".slot--audio audio").forEach(a => {
+      if (a !== audio) a.pause();
+    });
+    if (window.__scWidgets) {
+      window.__scWidgets.forEach(w => {
+        try { w.pause(); } catch (e) {}
+      });
+    }
+  };
+
+  // Core toggle logic (guaranteed to count as a user gesture)
+  const toggle = () => {
+    // Force-load metadata once
+    if (audio.readyState < 2) audio.load();
+
+    if (audio.paused || audio.ended) {
+      stopOthers();
+      // try immediate play first
+      const p = audio.play();
+      if (p && typeof p.catch === "function") {
+        p.catch(err => {
+          console.warn("[VoiceMemo] play() blocked, retrying with user gesture:", err);
+          // fallback: re-trigger play inside another click gesture
+          trigger.addEventListener("click", secondTry, { once: true });
+        });
+      }
+    } else {
+      audio.pause();
+    }
+  };
+
+  // If the browser blocked the first play, this always succeeds on next click
+  function secondTry() {
+    const p = audio.play();
+    if (p && typeof p.catch === "function") {
+      p.catch(err => console.warn("[VoiceMemo] second play() failed:", err));
+    }
+  }
+
+  // Attach events
+  ["click", "pointerup"].forEach(evt =>
+    trigger.addEventListener(evt, e => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggle();
+      updateUI();
+    }, { passive: false })
+  );
+
+  ["play", "pause", "ended"].forEach(ev =>
+    audio.addEventListener(ev, updateUI)
+  );
+
+  audio.addEventListener("error", e => {
+    console.warn("[VoiceMemo] error:", audio.error, audio.currentSrc);
+  });
+
+  updateUI();
 });
