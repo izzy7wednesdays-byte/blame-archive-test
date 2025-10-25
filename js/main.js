@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V3.2 - FIX VOICE MEMO TOGGLE ----------- */
+/* --------- V3.3 - FIX VOICE MEMO TOGGLE ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   initSoundCloud();
 
- /* ===== 3. Voice Memo (image-controlled audio) — FINAL FIX ===== */
+/* ===== 3. Voice Memo (image-controlled audio) — FINAL FIX ===== */
 document.querySelectorAll(".slot--audio").forEach(slot => {
   const audio   = slot.querySelector("audio");
   const trigger = slot.querySelector(".audio-trigger");
@@ -141,4 +141,44 @@ document.querySelectorAll(".slot--audio").forEach(slot => {
   });
 
   updateUI();
+});
+
+
+/* ===== 4. OVERLAY CLICK-TO-OPEN ===== */
+  const overlay = document.getElementById("overlay");
+  const ovCard = overlay?.querySelector(".ov-card");
+  const ovImg = overlay?.querySelector("img");
+
+  if (overlay && ovCard && ovImg) {
+    function openOverlay(src, alt) {
+      ovImg.src = src;
+      ovImg.alt = alt || "";
+      overlay.classList.add("is-open");
+      console.log("Overlay opened:", src);
+    }
+
+    function closeOverlay() {
+      overlay.classList.remove("is-open");
+      setTimeout(() => ovImg.removeAttribute("src"), 350);
+    }
+
+    document.querySelectorAll(".slot[data-overlay-src]").forEach(slot => {
+      const img = slot.querySelector("img");
+      if (!img) return;
+      img.addEventListener("click", e => {
+        e.preventDefault();
+        e.stopPropagation();
+        openOverlay(slot.dataset.overlaySrc, slot.dataset.overlayAlt || img.alt);
+      });
+    });
+
+    overlay.addEventListener("click", e => {
+      if (e.target === overlay) closeOverlay();
+    });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") closeOverlay();
+    });
+  } else {
+    console.warn("Overlay element not found");
+  }
 });
