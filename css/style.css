@@ -5,7 +5,7 @@ html, body {
   min-height: 100%;     /* prevents flash of unstyled white background */
 }
 
-/* ========= V143 — REMOVED LAZY LOADING ========= */
+/* ========= V144 — ADJUSTING OVERLAY SPEED ========= */
   
 /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -215,7 +215,7 @@ html, body {
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .35s ease, visibility .35s ease;
+    transition: opacity .18s ease, visibility .18s ease;
   }
   #overlay.is-open {
     display: flex !important;
