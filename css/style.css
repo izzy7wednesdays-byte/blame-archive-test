@@ -737,12 +737,12 @@ html, body {
   #church-video{ --left:2419svh; --scale:.30; --ar:336/299; --y:38svh; --x:0svh; --rot:0deg; --z:46; }
   #villains{ --left:2421svh; --scale:.30; --y:2svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #strawberry{ --left:2475svh; --scale:.21; --y:75svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
-  #join-postcard{ --left:2452svh; --scale:.37; --y:8svh; --x:0svh; --rot:8deg; --z:46; }
+  #next-title{ --left:2456svh; --scale:.3; --y:45svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
+  #join-postcard{ --left:2452svh; --scale:.37; --y:6svh; --x:0svh; --rot:8deg; --z:46; }
   #thankyou-note{ --left:2514svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none;}
   #presave-text{ --left:2580svh; --scale:.1; --y:60svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
                  --ff: "Thinker"; --fw: 400; --fs-mul: .2; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
   #sign-off{ --left:2580svh; --scale:.15; --y:10svh; --x:0svh; --rot:5deg; --z:71; pointer-events:none; }
-  #next-title{ --left:2455svh; --scale:.2; --y:40svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
   #lock-logo{ --left:2610svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
   #social-sparkles-2{ --left:2615svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
   #instagram-2{ --left:2626svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
