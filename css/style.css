@@ -451,9 +451,14 @@ html, body {
 
 /* ======== TEMPORARY: DEBUG SLOT VISUALIZATION ======== */
 /* TEMPORARY ONLY: outline each slot's box so we can see its footprint */
-  .slot {
+  .slot--text,
+  .slot--spotify,
+  .slot--audio,
+  .slot--lottie,
+  .slot--youtube,
+  .slot--vimeo {
     outline: 2px dashed rgba(255, 0, 0, 0.6); /* red dashed box for every slot */
-    outline-offset: 0.5svh;                   /* pull the outline slightly off the slot */
+    outline-offset: 0svh;                   /* pull the outline slightly off the slot */
   }
   
 /* Optional: also outline internal content boxes for clarity */
