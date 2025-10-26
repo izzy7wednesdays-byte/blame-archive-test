@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V3.4 - FINAL VOICE MEMO FIX -------------- */
+/* --------- V4.0 - CLICK PLAY / CLICK PAUSE ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -19,11 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ===== 2. SoundCloud image-controlled player ===== */
   function initSoundCloud() {
     if (typeof SC === "undefined" || !SC.Widget) {
-      console.warn("SoundCloud API not ready yet — retrying...");
+      // SC not ready yet. Try again.
       setTimeout(initSoundCloud, 300);
       return;
     }
 
+    // store all widgets so we can pause them from elsewhere
     window.__scWidgets = [];
 
     document.querySelectorAll(".slot--sc").forEach(slot => {
@@ -32,121 +33,135 @@ document.addEventListener("DOMContentLoaded", () => {
       const trigger = slot.querySelector(".sc-trigger");
       if (!url || !iframe || !trigger) return;
 
+      // build SoundCloud iframe URL
       iframe.src =
         "https://w.soundcloud.com/player/?url=" +
         encodeURIComponent(url) +
         "&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false";
 
+      // create widget
       const widget = SC.Widget(iframe);
       window.__scWidgets.push(widget);
 
-      widget.bind(SC.Widget.Events.READY, () => {
-        console.log("SoundCloud widget ready:", url);
+      // toggle play/pause on click
+      trigger.addEventListener("click", e => {
+        e.preventDefault();
+        e.stopPropagation();
+        widget.isPaused(paused => {
+          if (paused) {
+            // pause all other SC widgets and any HTML audio before playing this one
+            pauseAllHtmlAudio();
+            pauseAllScExcept(widget);
+            widget.play();
+          } else {
+            widget.pause();
+          }
+        });
       });
-
-      const toggleSC = () => {
-        widget.isPaused(paused => paused ? widget.play() : widget.pause());
-      };
-
-      ["click", "pointerup"].forEach(evt =>
-        trigger.addEventListener(evt, e => {
-          e.preventDefault();
-          e.stopPropagation();
-          toggleSC();
-        }, { passive: false })
-      );
     });
   }
   initSoundCloud();
 
-  /* ===== 3. Voice Memo (image-controlled audio) ===== */
+  // helper: pause all SC widgets except one
+  function pauseAllScExcept(activeWidget) {
+    if (!window.__scWidgets) return;
+    window.__scWidgets.forEach(w => {
+      if (w !== activeWidget) {
+        try { w.pause(); } catch(e) {}
+      }
+    });
+  }
+
+  // helper: pause ALL SC widgets
+  function pauseAllSc() {
+    if (!window.__scWidgets) return;
+    window.__scWidgets.forEach(w => {
+      try { w.pause(); } catch(e) {}
+    });
+  }
+
+  // helper: pause ALL <audio> voice memos
+  function pauseAllHtmlAudio(exceptAudio) {
+    document.querySelectorAll(".slot--audio audio").forEach(a => {
+      if (a !== exceptAudio) {
+        a.pause();
+      }
+    });
+  }
+
+  /* ===== 3. Voice Memo (image-controlled audio) =====
+     This matches the exact HTML you have:
+     <figure class="slot slot--audio" ... data-audio-src="assets/audio/...">
+       <img class="audio-trigger" ...>
+       <audio preload="auto" playsinline></audio>
+     </figure>
+
+     Goal:
+       - First click: play THAT memo, pausing all others (and pausing all SoundCloud widgets).
+       - Second click: pause THAT memo.
+  */
   document.querySelectorAll(".slot--audio").forEach(slot => {
     const audio   = slot.querySelector("audio");
     const trigger = slot.querySelector(".audio-trigger");
     if (!audio || !trigger) return;
 
-    // ALWAYS force the src from data-audio-src (no matter what)
-    const srcAttr = (slot.dataset.audioSrc || "").trim();
-    if (srcAttr) {
-      audio.src = srcAttr; // important: overwrite anything browser cached
+    // Force src from data-audio-src in index-13.html
+    // Example from your file:
+    //   data-audio-src="assets/audio/exit-wounds-voicememo.m4a"
+    //   data-audio-src="assets/audio/landmines-session.mp3"
+    const fileFromDataAttr = (slot.dataset.audioSrc || "").trim();
+    if (fileFromDataAttr) {
+      audio.src = fileFromDataAttr;
     }
 
-    // Prep audio element
+    // Make sure the browser treats this as lightweight, inline media
     audio.preload = "auto";
     audio.setAttribute("playsinline", "");
 
-    // helper: reflect UI state
-    const updateUI = () => {
-      const playing = !audio.paused && !audio.ended;
-      slot.classList.toggle("is-playing", playing);
-      trigger.setAttribute("aria-pressed", playing ? "true" : "false");
-    };
+    // reflect playing / paused visual state
+    function syncUI() {
+      const isPlaying = !audio.paused && !audio.ended;
+      slot.classList.toggle("is-playing", isPlaying);
+      trigger.setAttribute("aria-pressed", isPlaying ? "true" : "false");
+    }
 
-    // pause all OTHER audio + SoundCloud before playing this one
-    const stopOthers = () => {
-      document.querySelectorAll(".slot--audio audio").forEach(a => {
-        if (a !== audio) {
-          a.pause();
-        }
-      });
-      if (window.__scWidgets) {
-        window.__scWidgets.forEach(w => {
-          try { w.pause(); } catch(e) {}
-        });
-      }
-    };
+    // click handler = the ONLY gesture we rely on
+    trigger.addEventListener("click", e => {
+      e.preventDefault();
+      e.stopPropagation();
 
-    // click handler logic
-    const handleToggle = () => {
-      // make sure metadata is loaded before we try to play
-      if (audio.readyState < 2) {
-        audio.load();
-      }
-
-      if (audio.paused || audio.ended) {
-        // we are about to PLAY
-        stopOthers();
-
-        const attempt = audio.play();
-        if (attempt && typeof attempt.catch === "function") {
-          attempt.catch(err => {
-            console.warn("[VoiceMemo] play() blocked, retrying next click:", err);
-            // if autoplay policy blocks on first click, arm a one-time retry
-            trigger.addEventListener("click", retryPlay, { once: true });
-          });
-        }
-      } else {
-        // we are currently playing -> PAUSE
+      // If currently playing -> pause this memo only.
+      if (!audio.paused && !audio.ended) {
         audio.pause();
+        syncUI();
+        return;
       }
 
-      updateUI();
-    };
+      // Otherwise: we are about to play THIS memo.
+      // First pause all other voice memos and all SoundCloud widgets.
+      pauseAllHtmlAudio(audio);
+      pauseAllSc();
 
-    // if autoplay policy blocked first play attempt, try again immediately on next click
-    const retryPlay = () => {
-      const attempt = audio.play();
-      if (attempt && typeof attempt.catch === "function") {
-        attempt.catch(err => {
-          console.warn("[VoiceMemo] retryPlay() failed:", err);
+      // Now actually play THIS audio in the SAME user gesture.
+      // This satisfies Chrome/Safari's user-interaction policy.
+      const playAttempt = audio.play();
+
+      // nothing async/extra here that would cause policy confusion
+      if (playAttempt && typeof playAttempt.catch === "function") {
+        playAttempt.catch(err => {
+          console.warn("[VoiceMemo] play() was blocked:", err);
+          // If this ever logs, it means the browser still refused.
+          // But we don't schedule weird retries that fire in a different event.
         });
       }
-      updateUI();
-    };
 
-    // bind both pointer and click (covers desktop and mobile)
-    ["click", "pointerup"].forEach(evt => {
-      trigger.addEventListener(evt, e => {
-        e.preventDefault();
-        e.stopPropagation();
-        handleToggle();
-      }, { passive: false });
+      syncUI();
     });
 
-    // keep UI in sync with real playback state
-    ["play", "pause", "ended"].forEach(ev => {
-      audio.addEventListener(ev, updateUI);
-    });
+    // keep UI updated if audio ends or pauses from outside
+    audio.addEventListener("play",  syncUI);
+    audio.addEventListener("pause", syncUI);
+    audio.addEventListener("ended", syncUI);
 
     audio.addEventListener("error", () => {
       console.warn("[VoiceMemo] audio error", {
@@ -155,28 +170,32 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    updateUI();
+    // initialize UI state
+    syncUI();
   });
 
   /* ===== 4. Overlay click-to-open ===== */
   const overlay = document.getElementById("overlay");
-  const ovCard  = overlay?.querySelector(".ov-card");
-  const ovImg   = overlay?.querySelector("img");
+  const ovCard  = overlay ? overlay.querySelector(".ov-card") : null;
+  const ovImg   = overlay && ovCard ? ovCard.querySelector("img") : null;
 
   if (overlay && ovCard && ovImg) {
+
     function openOverlay(src, alt) {
       ovImg.src = src;
       ovImg.alt = alt || "";
       overlay.classList.add("is-open");
-      console.log("Overlay opened:", src);
     }
 
     function closeOverlay() {
       overlay.classList.remove("is-open");
-      // shorter timeout for snappier close
-      setTimeout(() => ovImg.removeAttribute("src"), 180);
+      setTimeout(() => {
+        ovImg.removeAttribute("src");
+        ovImg.removeAttribute("alt");
+      }, 180);
     }
 
+    // Every .slot with data-overlay-src in index-13.html
     document.querySelectorAll(".slot[data-overlay-src]").forEach(s => {
       const img = s.querySelector("img");
       if (!img) return;
@@ -190,11 +209,18 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+    // click outside card to close
     overlay.addEventListener("click", e => {
-      if (e.target === overlay) closeOverlay();
+      if (e.target === overlay) {
+        closeOverlay();
+      }
     });
+
+    // ESC key closes
     document.addEventListener("keydown", e => {
-      if (e.key === "Escape") closeOverlay();
+      if (e.key === "Escape") {
+        closeOverlay();
+      }
     });
   } else {
     console.warn("Overlay element not found");
