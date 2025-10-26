@@ -175,98 +175,42 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ===== 3.5 Vimeo single-play controller + click-to-toggle ===== */
-  (function initVimeoAll() {
-    // make sure Vimeo API is loaded
+  /* ===== 3.5 Vimeo single-play controller ===== */
+  (function initVimeoPlayers() {
+    // Make sure Vimeo API is available
     if (typeof Vimeo === "undefined" || !Vimeo.Player) {
       console.warn("Vimeo API not ready — retrying...");
-      setTimeout(initVimeoAll, 300);
+      setTimeout(initVimeoPlayers, 300);
       return;
     }
   
-    // We'll keep two things:
-    // 1. window.__vimeoPlayers = [player, ...]  (list for mass-pause)
-    // 2. vimeoMap: iframeElement -> player
+    // Keep a list of all Vimeo players
     window.__vimeoPlayers = [];
-    const vimeoMap = new Map();
   
-    // helper to pause all Vimeo players except maybe one
-    function pauseOtherVimeo(active) {
-      window.__vimeoPlayers.forEach(p => {
-        if (p !== active) {
-          try { p.pause(); } catch(e) {}
-        }
-      });
-    }
-  
-    // helper to pause all SoundCloud + voice memos
-    function pauseNonVimeo() {
-      // pause SoundCloud
-      if (window.__scWidgets) {
-        window.__scWidgets.forEach(w => {
-          try { w.pause(); } catch(e) {}
-        });
-      }
-      // pause voice memos
-      document.querySelectorAll(".slot--audio audio").forEach(a => {
-        a.pause();
-      });
-    }
-  
-    // For every Vimeo slot on the page…
-    document.querySelectorAll(".slot--vimeo").forEach(slot => {
-      const iframe = slot.querySelector("iframe.vimeo-iframe");
-      if (!iframe) return;
-  
-      // Create / reuse Vimeo.Player
+    // Create a player object for every Vimeo iframe on the page
+    document.querySelectorAll(".slot--vimeo iframe.vimeo-iframe").forEach(iframe => {
       const player = new Vimeo.Player(iframe);
       window.__vimeoPlayers.push(player);
-      vimeoMap.set(iframe, player);
   
-      // When this player starts playing (for any reason, even native controls),
-      // pause everything else.
+      // Whenever this player starts playing:
       player.on("play", () => {
-        pauseOtherVimeo(player);
-        pauseNonVimeo();
-      });
-  
-      // --- CLICK-TO-TOGGLE LOGIC --- //
-      let shim = slot.querySelector(".vimeo-click-shim");
-      if (!shim) {
-        shim = document.createElement("div");
-        shim.className = "vimeo-click-shim";
-        // minimal inline styles so we don't depend on CSS edits
-        shim.style.position = "absolute";
-        shim.style.inset = "0";              // top:0; right:0; bottom:0; left:0;
-        shim.style.cursor = "pointer";
-        shim.style.background = "rgba(0,0,0,0)"; // fully transparent
-        shim.style.zIndex = "5";
-        // Ensure slot is positioned so absolute overlay works
-        const cs = getComputedStyle(slot);
-        if (cs.position === "static") {
-          slot.style.position = "relative";
-        }
-        slot.appendChild(shim);
-      }
-  
-      // Now we can safely listen for click on the shim instead of the iframe.
-      shim.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-  
-        player.getPaused().then(paused => {
-          if (paused) {
-            // we're about to play THIS video
-            pauseOtherVimeo(player);
-            pauseNonVimeo();
-            player.play().catch(err => {
-              console.warn("[Vimeo] play() failed:", err);
-            });
-          } else {
-            // we're currently playing -> pause it
-            player.pause().catch(err => {
-              console.warn("[Vimeo] pause() failed:", err);
-            });
+        // 1. Pause all other Vimeo players
+        window.__vimeoPlayers.forEach(other => {
+          if (other !== player) {
+            try { other.pause(); } catch (err) {}
           }
+        });
+  
+        // 2. Pause all SoundCloud widgets
+        if (window.__scWidgets) {
+          window.__scWidgets.forEach(w => {
+            try { w.pause(); } catch (err) {}
+          });
+        }
+  
+        // 3. Pause all voice memo <audio>
+        document.querySelectorAll(".slot--audio audio").forEach(a => {
+          try { a.pause(); } catch (err) {}
         });
       });
     });
