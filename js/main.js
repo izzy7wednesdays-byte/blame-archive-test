@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V5.0 - VIMEO CONTROLLER ----------- */
+/* --------- V5.1 - VIMEO CONTROLLER ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -211,6 +211,34 @@ document.addEventListener("DOMContentLoaded", () => {
   
   initVimeo();
 
+  /* ===== 4.5) Vimeo Single Play ===== */
+    document.querySelectorAll(".slot--vimeo").forEach(slot => {
+    const iframe = slot.querySelector("iframe.vimeo-iframe");
+    if (!iframe) return;
+    const player = window.__vimeoPlayers.find(p => p.element === iframe);
+    if (!player) return;
+  
+    slot.style.cursor = "pointer";
+    slot.addEventListener("click", e => {
+      e.preventDefault();
+      e.stopPropagation();
+      player.getPaused().then(paused => {
+        if (paused) {
+          // pause everything else first
+          window.__vimeoPlayers.forEach(other => {
+            if (other !== player) try { other.pause(); } catch(e) {}
+          });
+          if (window.__scWidgets) {
+            window.__scWidgets.forEach(w => { try { w.pause(); } catch(e) {} });
+          }
+          document.querySelectorAll(".slot--audio audio").forEach(a => a.pause());
+          player.play();
+        } else {
+          player.pause();
+        }
+      });
+    });
+  });
 
   /* ===== 5. Overlay click-to-open ===== */
   const overlay = document.getElementById("overlay");
