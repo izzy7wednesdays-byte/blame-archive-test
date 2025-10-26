@@ -502,7 +502,7 @@ html, body {
   #lightsleeper-studio{ --left:246svh; --scale:.40; --ar:9/16; --y:57svh; --x:0svh; --rot:0deg; --z:41;  }
   #izzymacarthur-withguitar{ --left:271svh; --scale:.3; --y:66svh; --x:0svh; --rot:0deg; --z:41;}
   #click4chordz{ --left:287svh; --scale:.08; --y:88svh; --x:0svh; --rot:0deg; --z:42; pointer-events:none;
-                 --ff: "Thinker"; --ta: center; --fw: 400; --fs-mul: .17; --text-color: #4C58E9;}
+                 --ff: "Thinker"; --ta: center; --fw: 400; --fs-mul: .18; --text-color: #4C58E9;}
   #play-lightsleeper{ --left:268svh; --scale:.25; --y:34svh; --x:0svh; --rot:0deg; --z:40; }
   #lightsleeper-behindthesong{ /*Holly Humberstone (deep end behind the song) */ --left:298svh; --scale:.38; --y:65svh; --x:0svh; --rot:0deg; --z:22;}
   #broken-breathing{ --left: 263svh; --scale:.28; --y: 0svh; --x: 1svh; --rot: 0deg; --z: 10; }
@@ -737,19 +737,19 @@ html, body {
   #church-video{ --left:2419svh; --scale:.30; --ar:336/299; --y:38svh; --x:0svh; --rot:0deg; --z:46; }
   #villains{ --left:2421svh; --scale:.30; --y:2svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #strawberry{ --left:2475svh; --scale:.21; --y:75svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
-  #join-postcard{ --left:2455svh; --scale:.37; --y:10svh; --x:0svh; --rot:10deg; --z:46; }
-  #thankyou-note{ --left:2513svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none;}
-  #presave-text{ --left:2540svh; --scale:.1; --y:30svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
+  #join-postcard{ --left:2454svh; --scale:.37; --y:10svh; --x:0svh; --rot:10deg; --z:46; }
+  #thankyou-note{ --left:2514svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none;}
+  #presave-text{ --left:2580svh; --scale:.1; --y:60svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
                  --ff: "Thinker"; --fw: 400; --fs-mul: .2; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
-  #sign-off{ --left:2520svh; --scale:.2; --y:5svh; --x:0svh; --rot:5deg; --z:71; pointer-events:none; }
+  #sign-off{ --left:2580svh; --scale:.15; --y:10svh; --x:0svh; --rot:5deg; --z:71; pointer-events:none; }
   #next-title{ --left:2440svh; --scale:.05; --y:30svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
-  #lock-logo{ --left:2600svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
-  #social-sparkles-2{ --left:2605svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
-  #instagram-2{ --left:2616svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #tiktok-2{ --left:2622svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #twitter-2{ --left:2628svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #discord-2{ --left:2634svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #spotify-2{ --left:2640svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #apple-music-2{ --left:2646svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #esc{ --left:2690svh; --scale:.2; --y:50svh; --x:8svh; --rot:0deg; --z:2; }
+  #lock-logo{ --left:2610svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #social-sparkles-2{ --left:2615svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
+  #instagram-2{ --left:2626svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #tiktok-2{ --left:2632svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #twitter-2{ --left:2638svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #discord-2{ --left:2644svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #spotify-2{ --left:2650svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #apple-music-2{ --left:2656svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #esc{ --left:2695svh; --scale:.2; --y:50svh; --x:8svh; --rot:0deg; --z:2; }
 
