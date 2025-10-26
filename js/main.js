@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V4.0 - CLICK PLAY / CLICK PAUSE ----------- */
+/* --------- V5.0 - VIMEO CONTROLLER ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ===== 3. Voice Memo (image-controlled audio) =====
+  /* ===== 3. Voice Memo (image-controlled audio) ===== 
      This matches the exact HTML you have:
      <figure class="slot slot--audio" ... data-audio-src="assets/audio/...">
        <img class="audio-trigger" ...>
@@ -174,7 +174,45 @@ document.addEventListener("DOMContentLoaded", () => {
     syncUI();
   });
 
-  /* ===== 4. Overlay click-to-open ===== */
+  /* ===== 4. Vimeo single-play controller ===== */
+  function initVimeo() {
+    if (typeof Vimeo === "undefined" || !Vimeo.Player) {
+      console.warn("Vimeo API not ready — retrying...");
+      setTimeout(initVimeo, 300);
+      return;
+    }
+  
+    // store all player objects
+    window.__vimeoPlayers = [];
+  
+    // initialize each .slot--vimeo
+    document.querySelectorAll(".slot--vimeo iframe").forEach(iframe => {
+      const player = new Vimeo.Player(iframe);
+      window.__vimeoPlayers.push(player);
+  
+      // when this player starts playing, pause all others
+      player.on("play", () => {
+        window.__vimeoPlayers.forEach(other => {
+          if (other !== player) {
+            try { other.pause(); } catch (err) {}
+          }
+        });
+  
+        // also pause SoundCloud + HTML audio for full mutual exclusivity
+        if (window.__scWidgets) {
+          window.__scWidgets.forEach(w => {
+            try { w.pause(); } catch (err) {}
+          });
+        }
+        document.querySelectorAll(".slot--audio audio").forEach(a => a.pause());
+      });
+    });
+  }
+  
+  initVimeo();
+
+
+  /* ===== 5. Overlay click-to-open ===== */
   const overlay = document.getElementById("overlay");
   const ovCard  = overlay ? overlay.querySelector(".ov-card") : null;
   const ovImg   = overlay && ovCard ? ovCard.querySelector("img") : null;
