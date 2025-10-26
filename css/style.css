@@ -448,6 +448,25 @@ html, body {
   .slot--spotify iframe, {
     pointer-events: auto !important; /* allow play/pause/fullscreen */
   }
+
+/* ======== TEMPORARY: DEBUG SLOT VISUALIZATION ======== */
+/* TEMPORARY ONLY: outline each slot's box so we can see its footprint */
+  .slot {
+    outline: 2px dashed rgba(255, 0, 0, 0.6); /* red dashed box for every slot */
+    outline-offset: 0.5svh;                   /* pull the outline slightly off the slot */
+  }
+  
+/* Optional: also outline internal content boxes for clarity */
+  .slot--text .text-box,
+  .slot--spotify .sp-box,
+  .slot--audio,
+  .slot--lottie,
+  .slot--image img,
+  .slot--youtube iframe,
+  .slot--vimeo iframe {
+    outline: 2px solid rgba(0, 200, 255, 0.6); /* cyan inner box to compare content area */
+    outline-offset: 0.5svh;
+  }
   
 /* ========= PER-SLOT CUSTOMIZATION (svh units) ========= */
   
@@ -713,32 +732,13 @@ html, body {
   #church-video{ --left:2420svh; --scale:.30; --ar:336/299; --y:38svh; --x:0svh; --rot:0deg; --z:46; }
   #villains{ --left:2424svh; --scale:.30; --y:2svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #strawberry{ --left:2458svh; --scale:.21; --y:40svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
-  #thankyou-note{ --left:2480svh; --scale:.9; --y:10svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none; }
+  #thankyou-note{ --left:2483svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none; }
   #next-title{ --left:2440svh; --scale:.05; --y:30svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
   #lock-logo{ --left:2565svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
   #social-sparkles-2{ --left:2570svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
-  #instagram-2{ --left:2581svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; }
-  #tiktok-2{ --left:2587svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; }
-  #twitter-2{ --left:2593svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; }
-  #discord-2{ --left:2599svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; }
-  #spotify-2{ --left:2605svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; }
-  #apple-music-2{ --left:2611svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; }
-
-/* ======== TEMPORARY: DEBUG SLOT VISUALIZATION ======== */
-/* TEMPORARY ONLY: outline each slot's box so we can see its footprint */
-  .slot {
-    outline: 2px dashed rgba(255, 0, 0, 0.6); /* red dashed box for every slot */
-    outline-offset: 0.5svh;                   /* pull the outline slightly off the slot */
-  }
-  
-/* Optional: also outline internal content boxes for clarity */
-  .slot--text .text-box,
-  .slot--spotify .sp-box,
-  .slot--audio,
-  .slot--lottie,
-  .slot--image img,
-  .slot--youtube iframe,
-  .slot--vimeo iframe {
-    outline: 2px solid rgba(0, 200, 255, 0.6); /* cyan inner box to compare content area */
-    outline-offset: 0.5svh;
-  }
+  #instagram-2{ --left:2581svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #tiktok-2{ --left:2587svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #twitter-2{ --left:2593svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #discord-2{ --left:2599svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #spotify-2{ --left:2605svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #apple-music-2{ --left:2611svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
