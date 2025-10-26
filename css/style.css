@@ -736,14 +736,15 @@ html, body {
   #dreamdotnet{ --left:2417svh; --scale:.25; --y:72svh; --x:0svh; --rot:0.0deg; --z:44; pointer-events:none; }
   #church-video{ --left:2420svh; --scale:.30; --ar:336/299; --y:38svh; --x:0svh; --rot:0deg; --z:46; }
   #villains{ --left:2424svh; --scale:.30; --y:2svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
-  #strawberry{ --left:2458svh; --scale:.21; --y:40svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
-  #thankyou-note{ --left:2483svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none; }
+  #strawberry{ --left:2468svh; --scale:.21; --y:80svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
+  #join-postcard{ --left:2458svh; --scale:.21; --y:10svh; --x:0svh; --rot:-3deg; --z:46; }
+  #thankyou-note{ --left:2493svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none; }
   #next-title{ --left:2440svh; --scale:.05; --y:30svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
-  #lock-logo{ --left:2565svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
-  #social-sparkles-2{ --left:2570svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
-  #instagram-2{ --left:2581svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #tiktok-2{ --left:2587svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #twitter-2{ --left:2593svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #discord-2{ --left:2599svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #spotify-2{ --left:2605svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #apple-music-2{ --left:2611svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #lock-logo{ --left:2585svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #social-sparkles-2{ --left:2590svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
+  #instagram-2{ --left:2601svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #tiktok-2{ --left:2607svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #twitter-2{ --left:2613svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #discord-2{ --left:2619svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #spotify-2{ --left:2625svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #apple-music-2{ --left:2631svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
