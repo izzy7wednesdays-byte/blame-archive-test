@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V5.1 - VIMEO CONTROLLER ----------- */
+/* --------- V5.2 - VIMEO CONTROLLER ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -174,71 +174,103 @@ document.addEventListener("DOMContentLoaded", () => {
     syncUI();
   });
 
-  /* ===== 4. Vimeo single-play controller ===== */
-  function initVimeo() {
+  /* ===== 3.5 Vimeo single-play controller + click-to-toggle ===== */
+  (function initVimeoAll() {
+    // make sure Vimeo API is loaded
     if (typeof Vimeo === "undefined" || !Vimeo.Player) {
       console.warn("Vimeo API not ready — retrying...");
-      setTimeout(initVimeo, 300);
+      setTimeout(initVimeoAll, 300);
       return;
     }
   
-    // store all player objects
+    // We'll keep two things:
+    // 1. window.__vimeoPlayers = [player, ...]  (list for mass-pause)
+    // 2. vimeoMap: iframeElement -> player
     window.__vimeoPlayers = [];
+    const vimeoMap = new Map();
   
-    // initialize each .slot--vimeo
-    document.querySelectorAll(".slot--vimeo iframe").forEach(iframe => {
+    // helper to pause all Vimeo players except maybe one
+    function pauseOtherVimeo(active) {
+      window.__vimeoPlayers.forEach(p => {
+        if (p !== active) {
+          try { p.pause(); } catch(e) {}
+        }
+      });
+    }
+  
+    // helper to pause all SoundCloud + voice memos
+    function pauseNonVimeo() {
+      // pause SoundCloud
+      if (window.__scWidgets) {
+        window.__scWidgets.forEach(w => {
+          try { w.pause(); } catch(e) {}
+        });
+      }
+      // pause voice memos
+      document.querySelectorAll(".slot--audio audio").forEach(a => {
+        a.pause();
+      });
+    }
+  
+    // For every Vimeo slot on the page…
+    document.querySelectorAll(".slot--vimeo").forEach(slot => {
+      const iframe = slot.querySelector("iframe.vimeo-iframe");
+      if (!iframe) return;
+  
+      // Create / reuse Vimeo.Player
       const player = new Vimeo.Player(iframe);
       window.__vimeoPlayers.push(player);
+      vimeoMap.set(iframe, player);
   
-      // when this player starts playing, pause all others
+      // When this player starts playing (for any reason, even native controls),
+      // pause everything else.
       player.on("play", () => {
-        window.__vimeoPlayers.forEach(other => {
-          if (other !== player) {
-            try { other.pause(); } catch (err) {}
+        pauseOtherVimeo(player);
+        pauseNonVimeo();
+      });
+  
+      // --- CLICK-TO-TOGGLE LOGIC --- //
+      let shim = slot.querySelector(".vimeo-click-shim");
+      if (!shim) {
+        shim = document.createElement("div");
+        shim.className = "vimeo-click-shim";
+        // minimal inline styles so we don't depend on CSS edits
+        shim.style.position = "absolute";
+        shim.style.inset = "0";              // top:0; right:0; bottom:0; left:0;
+        shim.style.cursor = "pointer";
+        shim.style.background = "rgba(0,0,0,0)"; // fully transparent
+        shim.style.zIndex = "5";
+        // Ensure slot is positioned so absolute overlay works
+        const cs = getComputedStyle(slot);
+        if (cs.position === "static") {
+          slot.style.position = "relative";
+        }
+        slot.appendChild(shim);
+      }
+  
+      // Now we can safely listen for click on the shim instead of the iframe.
+      shim.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+  
+        player.getPaused().then(paused => {
+          if (paused) {
+            // we're about to play THIS video
+            pauseOtherVimeo(player);
+            pauseNonVimeo();
+            player.play().catch(err => {
+              console.warn("[Vimeo] play() failed:", err);
+            });
+          } else {
+            // we're currently playing -> pause it
+            player.pause().catch(err => {
+              console.warn("[Vimeo] pause() failed:", err);
+            });
           }
         });
-  
-        // also pause SoundCloud + HTML audio for full mutual exclusivity
-        if (window.__scWidgets) {
-          window.__scWidgets.forEach(w => {
-            try { w.pause(); } catch (err) {}
-          });
-        }
-        document.querySelectorAll(".slot--audio audio").forEach(a => a.pause());
       });
     });
-  }
-  
-  initVimeo();
-
-  /* ===== 4.5) Vimeo Single Play ===== */
-    document.querySelectorAll(".slot--vimeo").forEach(slot => {
-    const iframe = slot.querySelector("iframe.vimeo-iframe");
-    if (!iframe) return;
-    const player = window.__vimeoPlayers.find(p => p.element === iframe);
-    if (!player) return;
-  
-    slot.style.cursor = "pointer";
-    slot.addEventListener("click", e => {
-      e.preventDefault();
-      e.stopPropagation();
-      player.getPaused().then(paused => {
-        if (paused) {
-          // pause everything else first
-          window.__vimeoPlayers.forEach(other => {
-            if (other !== player) try { other.pause(); } catch(e) {}
-          });
-          if (window.__scWidgets) {
-            window.__scWidgets.forEach(w => { try { w.pause(); } catch(e) {} });
-          }
-          document.querySelectorAll(".slot--audio audio").forEach(a => a.pause());
-          player.play();
-        } else {
-          player.pause();
-        }
-      });
-    });
-  });
+  })();
 
   /* ===== 5. Overlay click-to-open ===== */
   const overlay = document.getElementById("overlay");
