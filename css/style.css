@@ -437,7 +437,8 @@ html, body {
 /* ===== YouTube + Vimeo clickability + debug outline ONLY ===== */
   .slot--youtube,
   .slot--video,
-  .slot--spotify, {
+  .slot--spotify,
+  .slot--audio, {
     pointer-events: auto !important;
     outline: 1px dashed rgba(255,255,255,0.15);
   }
@@ -715,13 +716,13 @@ html, body {
   #thankyou-note{ --left:2480svh; --scale:.58; --y:40svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none; }
   #next-title{ --left:2440svh; --scale:.05; --y:30svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
   #lock-logo{ --left:2520svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
-  #social-sparkles-2{ --left:2500svh; --scale:.15; --y:8svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
-  #instagram-2{ --left:2511svh; --scale:.05; --y:13svh; --x:8svh; --rot:0deg; --z:2; }
-  #tiktok-2{ --left:2517svh; --scale:.05; --y:13svh; --x:8svh; --rot:0deg; --z:2; }
-  #twitter-2{ --left:2523svh; --scale:.05; --y:13svh; --x:8svh; --rot:0deg; --z:2; }
-  #discord-2{ --left:2529svh; --scale:.05; --y:13svh; --x:8svh; --rot:0deg; --z:2; }
-  #spotify-2{ --left:2535svh; --scale:.05; --y:13svh; --x:8svh; --rot:0deg; --z:2; }
-  #apple-music-2{ --left:2541svh; --scale:.05; --y:13svh; --x:8svh; --rot:0deg; --z:2; }
+  #social-sparkles-2{ --left:2550svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
+  #instagram-2{ --left:2561svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; }
+  #tiktok-2{ --left:2567svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; }
+  #twitter-2{ --left:2573svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; }
+  #discord-2{ --left:2579svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; }
+  #spotify-2{ --left:2585svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; }
+  #apple-music-2{ --left:2591svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; }
 
 /* ======== TEMPORARY: DEBUG SLOT VISUALIZATION ======== */
 /* TEMPORARY ONLY: outline each slot's box so we can see its footprint */
