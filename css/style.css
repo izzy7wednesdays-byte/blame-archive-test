@@ -5,7 +5,7 @@ html, body {
   min-height: 100%;     /* prevents flash of unstyled white background */
 }
 
-/* ========= V145 — CHANGE HOW SPOTIFY, YOUTUBE, & LOTTIE SLOTS SCALE ========= */
+/* ========= V145.1 — CHANGE HOW SPOTIFY, YOUTUBE, & LOTTIE SLOTS SCALE ========= */
   
 /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -77,18 +77,19 @@ html, body {
   .slot--spotify {
     pointer-events: auto;
     display: flex;
+    /* IMPORTANT: keep the box sitting on the bottom like before */
     align-items: flex-end;
     justify-content: center;
   
-    /* Controls how tall the playlist appears relative to a standard slot */
+    /* visually shrink vs a normal slot */
     --sp-shrink: 0.675;
   
-    /* Maintain full band height for positioning consistency */
+    /* keep the slot's overall box tied to band height */
     height: var(--band-h);
   }
   
   .slot--spotify .sp-box {
-    /* Height scales off viewport height × slot scale × shrink factor */
+    /* scale with viewport height and this slot's --scale */
     --sp-shrink: 0.675;
     --h: calc(var(--band-h) * var(--scale) * var(--sp-shrink));
   
@@ -111,69 +112,67 @@ html, body {
 
 /* MEDIA: YOUTUBE SLOT */
 /* ========== YOUTUBE SLOT ========== */
-.slot--youtube {
-  pointer-events: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slot--youtube .yt-box {
-  /* Ratio and shrink factor determine size */
-  --ratio: 16/9;
-  --yt-shrink: 0.85;
-
-  /* Height scales directly with viewport height and per-slot scale */
-  --h: calc(var(--band-h) * var(--scale) * var(--yt-shrink));
-
-  height: var(--h);
-  width: calc(var(--h) * var(--ratio));
-
-  display: block;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #000;
-}
-
-.slot--youtube iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 12px;
-  display: block;
-}
+  .slot--youtube {
+    pointer-events: auto;
+    display: flex;
+    /* IMPORTANT: anchor video box to the bottom, not middle */
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .slot--youtube .yt-box {
+    /* YouTube box sizing matches Vimeo logic, no pixel clamps */
+    --ratio: 16/9;
+    --yt-shrink: 0.85;
+    --h: calc(var(--band-h) * var(--scale) * var(--yt-shrink));
+  
+    height: var(--h);
+    width: calc(var(--h) * var(--ratio));
+  
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+  }
+  
+  .slot--youtube iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px;
+    display: block;
+  }
 
 /* MEDIA: LOTTIE SLOT */
 /* ========== LOTTIE SLOT ========== */
-.slot--lottie {
-  pointer-events: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slot--lottie .lot-box {
-  /* Ratio controls width:height, shrink keeps it visually smaller */
-  --lot-shrink: 0.85;
-  --ratio: 1.8;
-
-  /* Height scales directly with viewport height and per-slot scale */
-  --h: calc(var(--band-h) * var(--scale) * var(--lot-shrink));
-
-  height: var(--h);
-  width: calc(var(--h) * var(--ratio));
-
-  display: block;
-  overflow: hidden;
-  border-radius: 12px;
-  background: transparent;
-}
-
-.slot--lottie dotlottie-wc {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
+  .slot--lottie {
+    pointer-events: auto;
+    display: flex;
+    /* IMPORTANT: keep animation sitting on the bottom edge */
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .slot--lottie .lot-box {
+    /* Lottie box scales with viewport height, same pattern as others */
+    --lot-shrink: 0.85;
+    --ratio: 1.8;
+    --h: calc(var(--band-h) * var(--scale) * var(--lot-shrink));
+  
+    height: var(--h);
+    width: calc(var(--h) * var(--ratio));
+  
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    background: transparent;
+  }
+  
+  .slot--lottie dotlottie-wc {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
   
   /* MEDIA: VIMEO VIDEO SLOT */
   .slot--video .video-box{
