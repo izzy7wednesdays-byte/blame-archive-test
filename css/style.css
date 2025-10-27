@@ -5,7 +5,7 @@ html, body {
   min-height: 100%;     /* prevents flash of unstyled white background */
 }
 
-/* ========= V145.1 — CHANGE HOW SPOTIFY, YOUTUBE, & LOTTIE SLOTS SCALE ========= */
+/* ========= V145.2 — ADJUSTING SPOTIFY PLAYLIST SCALE ========= */
   
 /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -73,38 +73,41 @@ html, body {
   }
 
 /* MEDIA: SPOTIFY PLAYLIST SLOT */
-/* ========== SPOTIFY PLAYLIST SLOT ========== */
+/* ========== SPOTIFY PLAYLIST SLOT (FINAL FIXED) ========== */
   .slot--spotify {
     pointer-events: auto;
     display: flex;
-    /* IMPORTANT: keep the box sitting on the bottom like before */
-    align-items: flex-end;
+    align-items: flex-end;   /* stay anchored to bottom edge */
     justify-content: center;
-  
-    /* visually shrink vs a normal slot */
-    --sp-shrink: 0.675;
-  
-    /* keep the slot's overall box tied to band height */
-    height: var(--band-h);
+    height: var(--band-h);   /* keep band reference */
   }
   
   .slot--spotify .sp-box {
-    /* scale with viewport height and this slot's --scale */
+    /* unified scaling: same math as Vimeo or YouTube */
     --sp-shrink: 0.675;
     --h: calc(var(--band-h) * var(--scale) * var(--sp-shrink));
   
-    height: var(--h);
-    width: auto;
-  
+    position: relative;
     display: block;
     overflow: hidden;
     border-radius: 12px;
-    background: none;
+    background: #121212;
+  
+    height: var(--h);
+    width: calc(var(--h) * 1.0); /* roughly square-ish, adjust if too narrow */
+    max-height: none !important;
+    max-width: none !important;
   }
   
   .slot--spotify iframe {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    /* force iframe to fill the .sp-box, ignoring Spotify’s fixed px height */
+    width: 100% !important;
+    height: 100% !important;
+  
     border: 0;
     border-radius: 12px;
     display: block;
