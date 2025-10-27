@@ -561,8 +561,8 @@ html, body {
   #solo-cups{ --left:760svh; --scale:.1; --y:0svh; --x:0svh; --rot:5deg; --z:39; }
   #misery-about{ --left:757svh; --scale:.44; --y:55svh; --x:10svh; --rot:0deg; --z:41; }
   #misery-title-bg{ --left:772svh; --scale:.75; --y:-5svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none !important; }
-  #misery-wants-company{ --left:814svh; --scale:.20; --y:76svh; --x:0svh; --rot:0deg; --z:40; }
-  #misery-wants-company-text{ --left:814svh; --scale:.12; --y:72svh; --x:0svh; --rot:0deg; --z:41; pointer-events:none;
+  #misery-wants-company{ --left:814svh; --scale:.21; --y:75svh; --x:0svh; --rot:0deg; --z:40; }
+  #misery-wants-company-text{ --left:811svh; --scale:.11; --y:70svh; --x:0svh; --rot:0deg; --z:41; pointer-events:none;
                               --ff: "Manic"; --fw: 400; --fs-mul: .2; --ta: center; --tt: uppercase; --text-color: #4C58E9; }
   #vocals-misery-4{ --left:854svh; --scale:.36; --ar:9/16; --y:61svh; --x:0svh; --rot:0deg; --z:72; }
   #vocals-misery-4-text{  --left:845svh; --scale:.2; --y:87svh; --x:10svh; --rot:0deg; --z:73; pointer-events:none;
