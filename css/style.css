@@ -666,7 +666,7 @@ html, body {
   #notebook{ --left:1185svh; --scale:.35; --y:42svh; --x:0svh; --rot:5deg; --z:29; pointer-events:none; }
   #ep-vocal-booth{ --left:1192svh; --scale:.22; --y:38svh; --x:0svh; --rot:-15deg; --z:30; pointer-events:none; }
   #ep-vocal-booth-2{ --left:1200svh; --scale:.22; --y:49svh; --x:0svh; --rot:100deg; --z:31; pointer-events:none; }
-  #ep-title{ --left:1190svh; --scale:.3; --y:-0svh; --x:0svh; --rot:0deg; --z:1000; pointer-events:none;}
+  #ep-title{ --left:1190svh; --scale:.3; --y:0svh; --x:0svh; --rot:0deg; --z:10; pointer-events:none;}
   #ep-spencer-tracklist{ --left:1224svh; --scale:.41; --y:55svh; --x:0svh; --rot:0deg; --z:28; pointer-events:none; }
   #ep-spencer-text{ --left:1225svh; --scale:.22; --y:76svh; --x:0svh; --rot:0deg; --z:32; pointer-events:none;
                     --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9;}
@@ -793,8 +793,8 @@ html, body {
   #villains{ --left:2421svh; --scale:.30; --y:2svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #strawberry{ --left:2475svh; --scale:.21; --y:75svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
   #next-title{ --left:2455svh; --scale:.28; --y:40svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
-  #join-postcard{ --left:2452svh; --scale:.37; --y:6svh; --x:0svh; --rot:8deg; --z:46; }
-  #presave-text{ --left:2514svh; --scale:.2; --y:60svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
+  #join-postcard{ --left:2452svh; --scale:.37; --y:4svh; --x:0svh; --rot:8deg; --z:46; }
+  #presave-text{ --left:2514svh; --scale:.15; --y:60svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
                  --ff: "Thinker"; --fw: 400; --fs-mul: .2; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
   #sign-off{ --left:2514svh; --scale:.15; --y:10svh; --x:0svh; --rot:5deg; --z:71; pointer-events:none; }
   #thankyou-note{ --left:2560svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none;}
