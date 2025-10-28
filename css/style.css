@@ -598,11 +598,11 @@ html, body {
   #landmines-about{ --left:633svh; --scale:.17; --y:56svh; --x:10svh; --rot:-5deg; --z:30; }
   #landmines-behindthesong{ /* Holly Humberstone (overkill behind the song) */ --left:676svh; --scale:.38; --y:21svh; --x:10svh; --rot:0deg; --z:38; }
   #play-landmines{ --left:687svh; --scale:.17; --y:2svh; --x:0svh; --rot:0deg; --z:20; }
-  #enchanted-bridge{ --left:700svh; --scale:.17; --y:2svh; --x:0svh; --rot:0deg; --z:20; pointer-events:none; }
+  #enchanted-bridge{ --left:704svh; --scale:.17; --y:2svh; --x:0svh; --rot:0deg; --z:20; pointer-events:none; }
   #landmines-og-guitar{ --left:650svh; --scale:.38; --ar:9/16; --y:9svh; --x:10svh; --rot:0deg; --z:25; }
   #landmines-session-video-text{ --left:650svh; --scale:.2; --y:1svh; --x:10svh; --rot:0deg; --z:38; pointer-events:none;
                                  --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9;}
-  #landmines-session-voicememos{ --left:685svh; --scale:.28; --y:62svh; --x:10svh; --rot:7deg; --z:39; }
+  #landmines-session-voicememos{ --left:685svh; --scale:.28; --y:64svh; --x:10svh; --rot:7deg; --z:39; }
   #vocals-landmines-1{ --left:568svh; --scale:.35; --ar:9/16; --y:0svh; --x:10svh; --rot:0deg; --z:38; }
   #vocals-landmines-1-text{ --left:550svh; --scale:.2; --y:21svh; --x:10svh; --rot:0deg; --z:38; pointer-events:none;
                             --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: left;  --tt: uppercase; --text-color: #4C58E9;}
@@ -612,7 +612,7 @@ html, body {
   #misery-ogchorus-text{ --left:733svh; --scale:.22; --y:59svh; --x:0svh; --rot:0deg; --z:40;
                           --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9;}
   #little-miss-misery{ --left:738svh; --scale:.23; --y:31svh; --x:10svh; --rot:4deg; --z:39; pointer-events:none; }
-  #kat-stratford-dancing{ --left:737svh; --scale:.23; --y:1svh; --x:11svh; --rot:0deg; --z:39; }
+  #kat-stratford-dancing{ --left:739svh; --scale:.23; --y:1svh; --x:11svh; --rot:0deg; --z:39; }
   #solo-cups{ --left:760svh; --scale:.1; --y:0svh; --x:0svh; --rot:5deg; --z:39; }
   #misery-about{ --left:757svh; --scale:.44; --y:55svh; --x:10svh; --rot:0deg; --z:41; }
   #misery-title-bg{ --left:772svh; --scale:.75; --y:-5svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none !important; }
