@@ -174,7 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
     syncUI();
   });
 
-  /* ===== 3.5 Vimeo single-play controller + click-to-toggle ===== */
   /* ===== 3.5 Vimeo single-play controller ===== */
   (function initVimeoPlayers() {
     // Make sure Vimeo API is available
@@ -213,6 +212,42 @@ document.addEventListener("DOMContentLoaded", () => {
           try { a.pause(); } catch (err) {}
         });
       });
+    });
+  })();
+
+/* ===== 4. Local loop video init (custom <video>) ===== */
+  (function initLoopVideos() {
+    document.querySelectorAll(".slot--loopvideo").forEach(slot => {
+      const vid = slot.querySelector(".loopvideo-el");
+      if (!vid) return;
+
+      // read per-slot custom controls from inline style vars
+      // default playback rate = 1, default loop = true
+      const style = getComputedStyle(slot);
+
+      // playback speed from --playback (string -> number)
+      const rateStr = style.getPropertyValue("--playback").trim();
+      if (rateStr) {
+        const rateNum = parseFloat(rateStr);
+        if (!Number.isNaN(rateNum) && rateNum > 0) {
+          vid.playbackRate = rateNum;
+        }
+      }
+
+      // loop flag from --do-loop (1 means loop)
+      const loopFlag = style.getPropertyValue("--do-loop").trim();
+      vid.loop = (loopFlag === "1" || loopFlag === "true");
+
+      // try to autoplay silently
+      // browsers allow autoplay if video is muted and playsinline
+      const playAttempt = vid.play();
+      if (playAttempt && typeof playAttempt.catch === "function") {
+        playAttempt.catch(err => {
+          // If autoplay is blocked, it will just sit paused
+          // We will not schedule async retries (per your browser policy constraints).
+          console.warn("[LoopVideo] autoplay blocked", err);
+        });
+      }
     });
   })();
 
