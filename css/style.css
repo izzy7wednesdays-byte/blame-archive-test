@@ -667,7 +667,7 @@ html, body {
   #notebook{ --left:1185svh; --scale:.35; --y:42svh; --x:0svh; --rot:5deg; --z:29; pointer-events:none; }
   #ep-vocal-booth{ --left:1192svh; --scale:.22; --y:38svh; --x:0svh; --rot:-15deg; --z:30; pointer-events:none; }
   #ep-vocal-booth-2{ --left:1200svh; --scale:.22; --y:49svh; --x:0svh; --rot:100deg; --z:31; pointer-events:none; }
-  #ep-title{ --left:1180svh; --scale:.55; --y:-3svh; --x:0svh; --rot:0deg; --z:100; pointer-events:none;}
+  #ep-title{ --left:1176svh; --scale:.55; --y:-6svh; --x:0svh; --rot:0deg; --z:100; pointer-events:none;}
   #ep-spencer-tracklist{ --left:1224svh; --scale:.41; --y:55svh; --x:0svh; --rot:0deg; --z:28; pointer-events:none; }
   #ep-spencer-text{ --left:1225svh; --scale:.22; --y:76svh; --x:0svh; --rot:0deg; --z:32; pointer-events:none;
                     --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9;}
@@ -730,7 +730,7 @@ html, body {
   #grew-here{ --left:1796svh; --scale:.26; --ar:407/482; --y:64svh; --x:0svh; --rot:0.0deg; --z:53; }
   #mazzy-star{ --left:1818svh; --scale:.26; --ar:407/482; --y:64svh; --x:0svh; --rot:0.0deg; --z:54; }
   #tisthedamn{ --left:1840svh;--scale:.26; --ar:357/481; --y:64svh;--x:0svh; --rot:0.0deg; --z:55; }
-  #dvd-video{ --left:1800svh; --scale:.1; --y:30svh; --x:0svh; --rot:0deg; --z:1000; pointer-events:none; }
+  #dvd-video{ --left:1760svh; --scale:.15; --y:40svh; --x:0svh; --rot:0deg; --z:1000; pointer-events:none; }
   #exitwounds-bts{ --left:1859svh; --scale:.4; --y:60svh; --x:0svh; --rot:0deg; --z:57; }
   #tv-unboxing{ --left:1785svh; --scale:.56; --ar:9/16; --y:2svh; --x:0svh; --rot:0.0deg; --z:49; }
   #videos-about{ --left:1805svh; --scale:.20; --y:34svh; --x:0svh; --rot:-2.0deg; --z:50; }
