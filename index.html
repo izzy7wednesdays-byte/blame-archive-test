@@ -990,15 +990,17 @@
       </figure>
   
       <!-- #) EP – Title -->
-      <figure class="slot slot--lottie" id="ep-title">
-        <div class="lot-box">
-          <dotlottie-wc
-            src="Lottie/ep-title.lottie"
-            autoplay
-            loop
-            speed="0.5"
-            style="width:100%;height:100%">
-           </dotlottie-wc>
+      <!-- LOOPING VIDEO SLOT -->
+      <figure class="slot slot--loopvideo" id="ep-title"
+              style="--scale:.38; --ar:16/9; --playback:0.75; --do-loop:1;">
+        <div class="loopvideo-box">
+          <video
+            class="loopvideo-el"
+            src="assets/video/ep-title.webm"
+            playsinline
+            muted
+            preload="auto"
+          ></video>
         </div>
       </figure>
   
