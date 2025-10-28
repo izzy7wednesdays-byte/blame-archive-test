@@ -794,10 +794,10 @@ html, body {
   #strawberry{ --left:2475svh; --scale:.21; --y:75svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
   #next-title{ --left:2455svh; --scale:.28; --y:40svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
   #join-postcard{ --left:2452svh; --scale:.37; --y:4svh; --x:0svh; --rot:8deg; --z:46; }
-  #presave-text{ --left:2511svh; --scale:.15; --y:64svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
+  #presave-text{ --left:2509svh; --scale:.15; --y:66svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
                  --ff: "Thinker"; --fw: 400; --fs-mul: .2; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
-  #presave-button{ --left:2516svh; --scale:.28; --y:15svh; --x:0svh; --rot:5deg; --z:71;}
-  #thankyou-note{ --left:2560svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none;}
+  #presave-button{ --left:2517svh; --scale:.28; --y:18svh; --x:0svh; --rot:5deg; --z:71;}
+  #thankyou-note{ --left:2558svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none;}
   #lock-logo{ --left:2610svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
   #social-sparkles-2{ --left:2615svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
   #instagram-2{ --left:2626svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
