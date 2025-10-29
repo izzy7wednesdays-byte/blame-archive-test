@@ -615,7 +615,7 @@ html, body {
   #kat-stratford-dancing{ --left:739svh; --scale:.23; --y:1svh; --x:11svh; --rot:0deg; --z:39; }
   #solo-cups{ --left:760svh; --scale:.1; --y:0svh; --x:0svh; --rot:5deg; --z:39; }
   #misery-about{ --left:757svh; --scale:.44; --y:55svh; --x:10svh; --rot:0deg; --z:41; }
-  #misery-title-bg{ --left:772svh; --scale:.75; --y:-5svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none !important; }
+  #misery-title{ --left:772svh; --scale:.75; --y:-5svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none !important; }
   #misery-wants-company{ --left:814svh; --scale:.22; --y:75svh; --x:0svh; --rot:0deg; --z:40; }
   #misery-wants-company-text{ --left:809svh; --scale:.2; --y:69svh; --x:0svh; --rot:0deg; --z:41; pointer-events:none;
                               --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4CA8E9; }
