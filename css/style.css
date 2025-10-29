@@ -616,7 +616,7 @@ html, body {
   #solo-cups{ --left:760svh; --scale:.1; --y:0svh; --x:0svh; --rot:5deg; --z:39; }
   #misery-about{ --left:757svh; --scale:.44; --y:55svh; --x:10svh; --rot:0deg; --z:41; }
   #misery-title{ --left:772svh; --scale:.75; --y:-5svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none !important; }
-  #misery-wants-company{ --left:814svh; --scale:.22; --y:75svh; --x:0svh; --rot:0deg; --z:40; }
+  #misery-wants-company{ --left:812svh; --scale:.22; --y:75svh; --x:0svh; --rot:0deg; --z:40; }
   #misery-wants-company-text{ --left:809svh; --scale:.2; --y:69svh; --x:0svh; --rot:0deg; --z:41; pointer-events:none;
                               --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4CA8E9; }
   #vocals-misery-4{ --left:854svh; --scale:.36; --ar:9/16; --y:61svh; --x:0svh; --rot:0deg; --z:72; }
@@ -777,7 +777,7 @@ html, body {
   #london-about{ --left:2278svh; --scale:.57; --y:41svh; --x:0svh; --rot:-8deg; --z:45; }
   #onedirection{ --left:2280svh; --scale:.18; --y:12svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #onedirection-text{ --left:2280svh; --scale:.1; --y:9svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none;
-                      --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
+                      --ff: "Thinker"; --fw: 400; --fs-mul: .13; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
   #hangout-tweet{ --left:2324svh; --scale:.375; --y:49svh; --x:0svh; --rot:0deg; --z:46; pointer-events:none; }
   #london-tv{ --left:2340svh; --scale:.435; --y:61svh; --x:0svh; --rot:0deg; --z:46; }
   #londoncard-v1{ --left:2319svh; --scale:.35; --y:4svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
@@ -796,9 +796,9 @@ html, body {
   #strawberry{ --left:2475svh; --scale:.21; --y:75svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
   #next-title{ --left:2455svh; --scale:.28; --y:40svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
   #join-postcard{ --left:2452svh; --scale:.37; --y:4svh; --x:0svh; --rot:8deg; --z:46; }
-  #presave-text{ --left:2503svh; --scale:.15; --y:68svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
+  #presave-text{ --left:2501svh; --scale:.14; --y:69svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
                  --ff: "Thinker"; --fw: 400; --fs-mul: .2; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
-  #presave-button{ --left:2515svh; --scale:.28; --y:25svh; --x:0svh; --rot:5deg; --z:71;}
+  #presave-button{ --left:2515svh; --scale:.28; --y:30svh; --x:0svh; --rot:5deg; --z:71;}
   #thankyou-note{ --left:2553svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none;}
   #lock-logo{ --left:2610svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
   #social-sparkles-2{ --left:2615svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
