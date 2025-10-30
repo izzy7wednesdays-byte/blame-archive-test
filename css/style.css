@@ -694,6 +694,7 @@ html, body {
   #artwork-title{ --left:1414svh; --scale:.2; --y:46svh; --x:10svh; --rot:0deg; --z:41; }
   #artwork-testshoot-5{ --left:1464svh; --scale:.27; --ar:109/60; --y:68svh; --x:0svh; --rot:0deg; --z:46; }
   #artwork-testshoot-4{ --left:1466svh; --scale:.22; --ar:109/60; --y:44svh; --x:0svh; --rot:0deg; --z:45; }
+  #about-artwork{ --left:1414svh; --scale:.15; --y:10svh; --x:0svh; --rot:0.0deg; --z:50; pointer-events:none; }
   #artwork-testshoot-3{ --left:1447svh; --scale:.20; --ar:109/60; --y:1svh; --x:0svh; --rot:0deg; --z:44; }
   #shoot-makeup{ --left:1473svh; --scale:.18; --y:10svh; --x:0svh; --rot:90.0deg; --z:39; pointer-events:none; }
   #shoot-makeup-text{ --left:1497svh; --scale:.18; --y:15svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
