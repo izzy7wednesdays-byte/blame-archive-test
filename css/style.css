@@ -595,7 +595,7 @@ html, body {
   #landmines-reaction{ --left:670svh; --scale:.42; --ar:9/16; --y:55svh; --x:0svh; --rot:0deg; --z:42; }
   #landmines-title{ --left:578svh; --scale:.17; --y:38svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;  }
   #landmines-lyricvideo{ --left:590svh; --scale:.38; --y:3svh; --x:10svh; --rot:0deg; --z:19;}
-  #landmines-about{ --left:633svh; --scale:.17; --y:56svh; --x:10svh; --rot:-5deg; --z:30; }
+  #landmines-about{ --left:635svh; --scale:.3; --y:56svh; --x:10svh; --rot:-5deg; --z:30; }
   #landmines-behindthesong{ /* Holly Humberstone (overkill behind the song) */ --left:676svh; --scale:.38; --y:21svh; --x:10svh; --rot:0deg; --z:38; }
   #play-landmines{ --left:685svh; --scale:.17; --y:2svh; --x:0svh; --rot:0deg; --z:20; }
   #enchanted-bridge{ --left:704svh; --scale:.17; --y:2svh; --x:0svh; --rot:0deg; --z:20; pointer-events:none; }
@@ -694,7 +694,7 @@ html, body {
   #artwork-title{ --left:1414svh; --scale:.2; --y:46svh; --x:10svh; --rot:0deg; --z:41; }
   #artwork-testshoot-5{ --left:1464svh; --scale:.27; --ar:109/60; --y:68svh; --x:0svh; --rot:0deg; --z:46; }
   #artwork-testshoot-4{ --left:1466svh; --scale:.22; --ar:109/60; --y:44svh; --x:0svh; --rot:0deg; --z:45; }
-  #about-artwork{ --left:1445svh; --scale:.4; --y:0svh; --x:0svh; --rot:0.0deg; --z:50; pointer-events:none; }
+  #about-artwork{ --left:1445svh; --scale:.38; --y:0svh; --x:0svh; --rot:0.0deg; --z:50; pointer-events:none; }
   #artwork-testshoot-3{ --left:1510svh; --scale:.20; --ar:109/60; --y:-1svh; --x:0svh; --rot:0deg; --z:44; }
   #shoot-makeup{ --left:1500svh; --scale:.18; --y:9svh; --x:0svh; --rot:90.0deg; --z:39; pointer-events:none; }
   #shoot-makeup-text{ --left:1515svh; --scale:.18; --y:13svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
@@ -703,7 +703,7 @@ html, body {
   #kayla-polaroid{ --left:1508svh; --scale:.19; --y:43svh; --x:0svh; --rot:0.0deg; --z:42; pointer-events:none; }
   #tv-photo{ --left:1502svh; --scale:.19; --y:23svh; --x:0svh; --rot:0.0deg; --z:42; pointer-events:none; }
   #caitlin-text-2{ --left:1534svh; --scale:.34; --y:42svh; --x:0svh; --rot:0.0deg; --z:37; }
-  #shoot-bts-1{ --left:1529svh; --scale:.22; --ar:109/60; --y:18svh; --x:0svh; --rot:0.0deg; --z:38; }
+  #shoot-bts-1{ --left:1529svh; --scale:.22; --ar:109/60; --y:19svh; --x:0svh; --rot:0.0deg; --z:45; }
   #caitlin-note{ --left:1546svh; --scale:.2; --y:77svh!important; --x:0svh; --rot:0.0deg; --z:41; pointer-events:none; }
   #caitlin-text-3{ --left:1566svh; --scale:.35; --y:45svh; --x:0svh; --rot:-5.0deg; --z:40; pointer-events:none; }
   #shoot-bts-2{ --left:1571svh; --scale:.38; --ar:9/16; --y:5svh; --x:0svh; --rot:0deg; --z:48; }
@@ -734,7 +734,7 @@ html, body {
   #dvd-video{ --left:1758svh; --scale:.15; --y:38svh; --x:0svh; --rot:0deg; --z:1000; pointer-events:none; }
   #exitwounds-bts{ --left:1859svh; --scale:.4; --y:60svh; --x:0svh; --rot:0deg; --z:57; }
   #tv-unboxing{ --left:1785svh; --scale:.56; --ar:9/16; --y:2svh; --x:0svh; --rot:0.0deg; --z:49; }
-  #videos-about{ --left:1805svh; --scale:.20; --y:34svh; --x:0svh; --rot:-2.0deg; --z:50; }
+  #videos-about{ --left:1805svh; --scale:.25; --y:34svh; --x:0svh; --rot:-2.0deg; --z:50; }
   #exitwounds-subway{ --left:1801svh; --scale:.29; --y:18svh; --x:0svh; --rot:87.0deg; --z:49; pointer-events:none; }
   #landmines-bts-tiktok{--left: 1853svh;--scale:0.5;--ar:9/16; --y: 3svh;--x: 0svh; --rot: -1deg;--z: 54; }
   #landmines-bts{ --left:1877svh; --scale:.4; --y:13svh; --x:0svh; --rot:0deg; --z:53; }
