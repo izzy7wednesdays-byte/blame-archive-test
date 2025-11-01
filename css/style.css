@@ -590,12 +590,12 @@ html, body {
   #katstratford-car{ --left:519svh; --scale:.21; --y:13svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
   #october-lane{ --left:566svh; --scale:.25; --y:-4svh; --x:0svh; --rot:0deg; --z:38; pointer-events:none;}
   #landmines-license{ --left:590svh; --scale:.29; --y:65svh; --x:0svh; --rot:-8deg; --z:40;pointer-events:none;}
-  #landmines-reaction-text{ --left:640svh; --scale:.25; --y:75svh; --x:2svh; --rot:0deg; --z:16; pointer-events:none;
+  #landmines-reaction-text{ --left:640svh; --scale:.25; --y:76svh; --x:2svh; --rot:0deg; --z:16; pointer-events:none;
                             --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --text-color: #4CA8E9;}
   #landmines-reaction{ --left:670svh; --scale:.42; --ar:9/16; --y:55svh; --x:0svh; --rot:0deg; --z:42; }
   #landmines-title{ --left:578svh; --scale:.17; --y:38svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;  }
   #landmines-lyricvideo{ --left:590svh; --scale:.38; --y:3svh; --x:10svh; --rot:0deg; --z:19;}
-  #landmines-about{ --left:643svh; --scale:.29; --y:48svh; --x:10svh; --rot:-25deg; --z:30; }
+  #landmines-about{ --left:643svh; --scale:.3; --y:46svh; --x:10svh; --rot:-25deg; --z:30; }
   #landmines-behindthesong{ /* Holly Humberstone (overkill behind the song) */ --left:676svh; --scale:.38; --y:21svh; --x:10svh; --rot:0deg; --z:38; }
   #play-landmines{ --left:685svh; --scale:.17; --y:2svh; --x:0svh; --rot:0deg; --z:20; }
   #enchanted-bridge{ --left:704svh; --scale:.17; --y:2svh; --x:0svh; --rot:0deg; --z:20; pointer-events:none; }
