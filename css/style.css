@@ -574,10 +574,10 @@ html, body {
   #click-me-arrow{ --left:411svh; --scale:.04; --y:11svh; --x:0svh; --rot:-4deg; --z:6; pointer-events:none; }
   #click-me-text{--left: 412svh; --scale: .20; --y: 16svh; --x: 0svh; --rot: 1deg; --z: 8;
                  --fw: 400; --fs-mul: .15; --text-color: #4CA8E9; }
-  #subscribe-substack-text{ --left:460svh; --scale:0.13; --y:2svh; --x:0svh; --rot:-10deg; --z:8;
+  #subscribe-substack-text{ --left:460svh; --scale:0.12; --y:1svh; --x:0svh; --rot:-10deg; --z:8;
                             --ff: "Manic"; --fw:400; --fs-mul:0.21; --ta:center; --tt:uppercase;--text-color: #4CA8E9; }
-  #subscribe-button{ --left:440svh; --scale:.11; --y:10svh; --x:0svh; --rot:2deg; --z:20; }
-  #subscribe-arrow{ --left:457svh; --scale:.04!important; --y:9svh; --x:0svh; --rot:193deg;--z:20; pointer-events:none;  }
+  #subscribe-button{ --left:433svh; --scale:.13; --y:10svh; --x:0svh; --rot:2deg; --z:20; }
+  #subscribe-arrow{ --left:457svh; --scale:.03; --y:12svh; --x:0svh; --rot:192deg;--z:20; pointer-events:none;  }
   #read-susbstack-text{ --left: 409svh; --scale: .21; --y: 78svh; --x: 0svh; --rot: 9deg; --z: 8; pointer-events:none;
                         --ff: "Manic"; --ta: center;  --fw: 400; --fs-mul: .15;  --tt: uppercase; --text-color: #4CA8E9; }
   #substack-point-arrow{ --left:433svh; --scale:.10; --y:65svh; --x:0svh; --rot:-2deg; --z:4; pointer-events:none; }
@@ -646,10 +646,10 @@ html, body {
 /* ========= EP SECTION ========= */
   #ep-inspo-sp{ --left:1075svh; --scale:.54; --y:-19svh; --x:0svh; --rot:0deg; --z:30; }
   #ep-inspo{ --left:1060svh; --scale:.53; --y:48svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
-  #ep-telephone{ --left:1075svh; --scale:.17; --y:27svh; --x:0svh; --rot:-8deg; --z:72; }
-  #ep-phoningfriends{ --left:1081svh; --scale:.27; --y:21svh; --x:0svh; --rot:-8deg; --z:30; pointer-events:none;
+  #ep-telephone{ --left:1076svh; --scale:.17; --y:27svh; --x:0svh; --rot:-8deg; --z:72; }
+  #ep-phoningfriends{ --left:1082svh; --scale:.27; --y:21svh; --x:0svh; --rot:-8deg; --z:30; pointer-events:none;
                       --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4CA8E9;}
-  #ep-click-toread{ --left:1076svh; --scale:.24; --y:45svh; --x:0svh; --rot:7.5deg; --z:30; pointer-events:none;
+  #ep-click-toread{ --left:1077svh; --scale:.24; --y:45svh; --x:0svh; --rot:7.5deg; --z:30; pointer-events:none;
                     --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4CA8E9;}
   #mixing-misery-1{ --left:1114svh; --scale:.41; --ar:9/16; --y:7svh; --x:0svh; --rot:0deg; --z:30; }
   #mixing-misery-1-text{ --left:1114svh; --scale:.11; --y:2svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
@@ -695,10 +695,10 @@ html, body {
   #artwork-testshoot-5{ --left:1464svh; --scale:.27; --ar:109/60; --y:68svh; --x:0svh; --rot:0deg; --z:46; }
   #artwork-testshoot-4{ --left:1466svh; --scale:.22; --ar:109/60; --y:44svh; --x:0svh; --rot:0deg; --z:45; }
   #about-artwork{ --left:1447svh; --scale:.34; --y:2svh; --x:0svh; --rot:0.0deg; --z:50; pointer-events:none; }
-  #artwork-testshoot-3{ --left:1503svh; --scale:.20; --ar:109/60; --y:-1svh; --x:0svh; --rot:0deg; --z:44; }
+  #artwork-testshoot-3{ --left:1502svh; --scale:.20; --ar:109/60; --y:-1svh; --x:0svh; --rot:0deg; --z:44; }
   #shoot-makeup{ --left:1528svh; --scale:.18; --y:7svh; --x:0svh; --rot:90.0deg; --z:39; pointer-events:none; }
-  #shoot-makeup-text{ --left:1530svh; --scale:.18; --y:13svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
-                    --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #e1effa; }
+  #shoot-makeup-text{ --left:1533svh; --scale:.18; --y:13svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
+                    --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9; }
   #caitlin-text-1{ --left:1515svh; --scale:.34; --y:64svh; --x:0svh; --rot:1.5deg; --z:39; pointer-events:none; }
   #kayla-polaroid{ --left:1508svh; --scale:.19; --y:43svh; --x:0svh; --rot:0.0deg; --z:42; pointer-events:none; }
   #tv-photo{ --left:1502svh; --scale:.19; --y:23svh; --x:0svh; --rot:0.0deg; --z:42; pointer-events:none; }
