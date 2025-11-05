@@ -562,13 +562,13 @@ html, body {
   #broken-breathing{ --left: 263svh; --scale:.28; --y: 0svh; --x: 1svh; --rot: 0deg; --z: 10; }
 
 /* ========= EXIT WOUNDS SECTION ========= */
-  #exitwounds-lyricvideo{ /* V4 placeholder */ --left: 300svh; --scale: .38; --y: 31svh; --x: 0svh; --rot: 0deg; --z: 21; } 
+  #exitwounds-lyricvideo{ /* V4 placeholder */ --left: 300svh; --scale: .38; --y: 51svh; --x: 0svh; --rot: 0deg; --z: 21; } 
   #exitwounds-title{ --left:328svh; --scale:.31; --y: 0svh; --x:0svh; --rot:-14deg; --z:1; pointer-events:none;   }
   #play-exitwounds{ --left:364svh; --scale:.25; --y:67svh; --x:0svh; --rot:-13deg; --z:11; }
   #pressplaydj{ --left: 365svh; --scale: .18; --y: 63svh; --x: 0svh; --rot: -14deg; --z: 10; pointer-events:none;
                 --ff: "Thinker"; --fw: 400; --fs-mul: .17; --text-color: #4CA8E9;} 
   #exitwounds-bandages{ --left:365svh; --scale:.25; --y:30svh; --x:0svh; --rot:4deg; --z:9;}
-  #exitwounds-animation-1{ --left:393svh; --scale:.35; --y:56svh; --x:0svh; --rot:0deg; --z:2; pointer-events:none; }
+  #exitwounds-animation-1{ --left:393svh; --scale:.35; --y:40svh; --x:0svh; --rot:0deg; --z:2; pointer-events:none; }
   #exitwounds-behindthesong{ /* Holly Humberstone (faatw) placeholder */--left:390svh; --scale:.38; --y:26svh; --x:0svh; --rot:0deg; --z:8; }
   #play-exitwounds-voicememo{ --left:390svh; --scale:.23; --y:1svh; --x:0svh; --rot:0deg; --z:7; }
   #click-me-arrow{ --left:411svh; --scale:.04; --y:11svh; --x:0svh; --rot:-4deg; --z:6; pointer-events:none; }
@@ -602,14 +602,14 @@ html, body {
   #landmines-og-guitar{ --left:650svh; --scale:.38; --ar:9/16; --y:9svh; --x:10svh; --rot:0deg; --z:25; }
   #landmines-session-video-text{ --left:650svh; --scale:.2; --y:1svh; --x:10svh; --rot:0deg; --z:38; pointer-events:none;
                                  --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4CA8E9;}
-  #landmines-session-voicememos{ --left:685svh; --scale:.28; --y:64svh; --x:10svh; --rot:7deg; --z:39; }
+  #landmines-session-voicememos{ --left:685svh; --scale:.32; --y:44svh; --x:10svh; --rot:7deg; --z:39; }
   #vocals-landmines-1{ --left:568svh; --scale:.35; --ar:9/16; --y:0svh; --x:10svh; --rot:0deg; --z:38; }
   #vocals-landmines-1-text{ --left:550svh; --scale:.2; --y:21svh; --x:10svh; --rot:0deg; --z:38; pointer-events:none;
                             --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: left;  --tt: uppercase; --text-color: #4C58E9;}
 
 /* ========= MISERY SECTION ========= */
-  #misery-ogchorus{ --left:721svh; --scale:.24; --y:71svh; --x:2svh; --rot:0deg; --z:40; }
-  #misery-ogchorus-text{ --left:733svh; --scale:.22; --y:59svh; --x:0svh; --rot:0deg; --z:40;
+  #misery-ogchorus{ --left:700svh; --scale:.28; --y:71svh; --x:2svh; --rot:0deg; --z:40; }
+  #misery-ogchorus-text{ --left:715svh; --scale:.22; --y:59svh; --x:0svh; --rot:0deg; --z:40;
                           --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4CA8E9;}
   #little-miss-misery{ --left:738svh; --scale:.23; --y:31svh; --x:10svh; --rot:4deg; --z:39; pointer-events:none; }
   #kat-stratford-dancing{ --left:736svh; --scale:.23; --y:1svh; --x:11svh; --rot:0deg; --z:39; }
@@ -636,7 +636,7 @@ html, body {
   #sleepwalking-radio-text{--left:923svh; --scale:.2; --y:0svh; --x:1svh; --rot:0deg; --z:42; pointer-events:none;
                           --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4CA8E9;}
   #sleepwalking-radio-polaroid{ --left:954svh; --scale:.22; --y:16svh; --x:1svh; --rot:-10deg; --z:40; pointer-events:none; }
-  #thestar-tarot{ --left:963svh; --scale:.38; --y:60svh; --x:10svh; --rot:-9deg; --z:70; pointer-events:none; }
+  #thestar-tarot{ --left:903svh; --scale:.38; --y:60svh; --x:10svh; --rot:-9deg; --z:70; pointer-events:none; }
   #sleepwalking-title{ --left:942svh; --scale:.185; --y:39svh; --x:10svh; --rot:0deg; --z:100; pointer-events:none; }
   #sleepwalking-behindthesong{ /* Holly Humberstone (faatw behind the song) */ --left:970svh; --scale:.38; --y:0svh; --x:0svh; --rot:0deg; --z:70; }
   #sleepwalking-visualizer{ --left:1000svh; --scale:.38; --y:63svh; --x:0svh; --rot:0deg; --z:71; }
