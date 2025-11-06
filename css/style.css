@@ -544,10 +544,10 @@ html, body {
   #the-scrapbook{ --left:65svh; --scale:.5; --y:15svh; --x:0svh; --rot:0deg; --z:4;pointer-events: none; }
   #lfg{ --left:97svh; --scale:.1; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
   #pink-flashing-arrow{ --left:123svh; --scale:.09; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
-  #playlist-ex{ --left:160svh; --scale:.61; --y:53svh; --x:0svh; --rot:0deg; --z:30; }
+  #playlist-ex{ --left:160svh; --scale:.61; --y:49svh; --x:0svh; --rot:0deg; --z:30; }
 
 /* ========= LIGHT SLEEPER SECTION ========= */
-  #lightsleeper-title{ --left:167svh; --scale:.44; --y:29svh; --x:-4svh; --rot:-10deg; --z:4; pointer-events: none; }
+  #lightsleeper-title{ --left:163svh; --scale:.44; --y:29svh; --x:-4svh; --rot:-10deg; --z:4; pointer-events: none; }
   #lightsleeper-visualizer{ --left:145svh; --scale:.38; --y:0svh; --x:10svh; --rot:0deg; --z:3; }
   #lightsleeper-about{ --left:210svh; --scale:.4; --y:59svh; --x:0svh; --rot:-10deg; --z:20; pointer-events:auto;  }
   #autumn-text{ --left:220svh; --scale:.3; --y:25svh; --x:0svh; --rot:2deg; --z:0; }
@@ -563,21 +563,21 @@ html, body {
 
 /* ========= EXIT WOUNDS SECTION ========= */
   #exitwounds-lyricvideo{ /* V4 placeholder */ --left:298svh; --scale: .38; --y:63svh; --x: 0svh; --rot: 0deg; --z: 21; } 
-  #exitwounds-title{ --left:324svh; --scale:.33; --y: 0svh; --x:0svh; --rot:-12deg; --z:1; pointer-events:none;   }
+  #exitwounds-title{ --left:322svh; --scale:.33; --y: 0svh; --x:0svh; --rot:-12deg; --z:1; pointer-events:none;   }
   #play-exitwounds{ --left:362svh; --scale:.25; --y:69svh; --x:0svh; --rot:13deg; --z:11; }
-  #pressplaydj{ --left: 361svh; --scale: .18; --y:63svh; --x: 0svh; --rot: 13deg; --z: 12; pointer-events:none;
+  #pressplaydj{ --left: 360svh; --scale: .18; --y:63svh; --x: 0svh; --rot: 13deg; --z: 12; pointer-events:none;
                 --ff: "Thinker"; --fw: 400; --fs-mul: .17; --text-color: #4CA8E9;} 
-  #exitwounds-bandages{ --left:365svh; --scale:.30; --y:28svh; --x:-8svh; --rot:4deg; --z:9;}
+  #exitwounds-bandages{ --left:364svh; --scale:.30; --y:30svh; --x:-8svh; --rot:4deg; --z:9;}
   #exitwounds-animation-1{ --left:387svh; --scale:.40; --y:23svh; --x:0svh; --rot:0deg; --z:2; pointer-events:none; }
-  #subscribe-button{ --left:398svh; --scale:.15; --y:57svh; --x:0svh; --rot:-6deg; --z:20; }
+  #subscribe-button{ --left:399svh; --scale:.15; --y:57svh; --x:0svh; --rot:-6deg; --z:20; }
   #subscribe-arrow{ --left:418svh; --scale:.05; --y:58svh; --x:0svh; --rot:192deg;--z:20; pointer-events:none;  }
-  #subscribe-substack-text{ --left:425svh; --scale:0.12; --y:44svh; --x:0svh; --rot:-10deg; --z:8;
+  #subscribe-substack-text{ --left:427svh; --scale:0.12; --y:45svh; --x:0svh; --rot:-10deg; --z:8;
                             --ff: "Manic"; --fw:400; --fs-mul:0.21; --ta:center; --tt:uppercase;--text-color: #4CA8E9; }
   #play-exitwounds-voicememo{ --left:392svh; --scale:.23; --y:1svh; --x:0svh; --rot:0deg; --z:7; }
   #click-me-arrow{ --left:413svh; --scale:.04; --y:11svh; --x:0svh; --rot:-4deg; --z:6; pointer-events:none; }
   #click-me-text{--left: 414svh; --scale: .20; --y: 16svh; --x: 0svh; --rot: 1deg; --z: 8;
                  --fw: 400; --fs-mul: .15; --text-color: #4CA8E9; }
-  #dancing-boombox{ --left:436svh; --scale:.40; --y:-2svh; --x:0svh; --rot:0deg; --z:20; pointer-events:none; }
+  #dancing-boombox{ --left:436svh; --scale:.38; --y:-3svh; --x:0svh; --rot:0deg; --z:20; pointer-events:none; }
   #read-susbstack-text{ --left: 409svh; --scale: .21; --y: 78svh; --x: 0svh; --rot: 9deg; --z: 8; pointer-events:none;
                         --ff: "Manic"; --ta: center;  --fw: 400; --fs-mul: .15;  --tt: uppercase; --text-color: #4CA8E9; }
   #substack-point-arrow{ --left:433svh; --scale:.10; --y:65svh; --x:0svh; --rot:-2deg; --z:4; pointer-events:none; }
@@ -613,7 +613,7 @@ html, body {
   #little-miss-misery{ --left:722svh; --scale:.23; --y:26svh; --x:10svh; --rot:4deg; --z:39; pointer-events:none; }
   #kat-stratford-dancing{ --left:738svh; --scale:.23; --y:1svh; --x:11svh; --rot:0deg; --z:39; }
   #solo-cups{ --left:759svh; --scale:.1; --y:0svh; --x:0svh; --rot:5deg; --z:71; }
-  #misery-about{ --left:739svh; --scale:.56; --y:44svh; --x:10svh; --rot:0deg; --z:41; }
+  #misery-about{ --left:739svh; --scale:.56; --y:43svh; --x:10svh; --rot:0deg; --z:41; }
   #misery-title{ --left:769svh; --scale:.75; --y:-6svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none !important; }
   #misery-wants-company{ --left:800svh; --scale:.22; --y:75svh; --x:0svh; --rot:0deg; --z:40; }
   #misery-wants-company-text{ --left:798svh; --scale:.2; --y:69svh; --x:0svh; --rot:0deg; --z:41; pointer-events:none;
@@ -637,14 +637,14 @@ html, body {
   #sleepwalking-radio-polaroid{ --left:954svh; --scale:.22; --y:16svh; --x:1svh; --rot:-10deg; --z:40; pointer-events:none; }
   #thestar-tarot{ --left:903svh; --scale:.38; --y:60svh; --x:10svh; --rot:-9deg; --z:70; pointer-events:none; }
   #sleepwalking-title{ --left:942svh; --scale:.20; --y:39svh; --x:10svh; --rot:0deg; --z:100; pointer-events:none; }
-  #sleepwalking-visualizer{ --left:947svh; --scale:.38; --y:63svh; --x:0svh; --rot:0deg; --z:71; }
+  #sleepwalking-visualizer{ --left:946svh; --scale:.38; --y:63svh; --x:0svh; --rot:0deg; --z:71; }
   #about-sleepwalking{ --left:1010svh; --scale:0.35; --y:66svh; --x:0svh; --rot:-13deg; --z:71; }
-  #sleepwalking-receipt{ --left:1015svh; --scale:.50; --y:-8svh; --x:0svh; --rot:15deg; --z:70; pointer-events: none; }
+  #sleepwalking-receipt{ --left:1010svh; --scale:.50; --y:-8svh; --x:0svh; --rot:15deg; --z:70; pointer-events: none; }
   #sleepwalking-listeningparty{ --left:970svh; --scale:.35; --ar:4/3; --y:0svh; --x:0svh; --rot:0deg; --z:50; }
 
 /* ========= EP SECTION ========= */
-  #ep-inspo-sp{ --left:1075svh; --scale:.54; --y:-19svh; --x:0svh; --rot:0deg; --z:30; }
-  #ep-inspo{ --left:1057svh; --scale:.56; --y:48svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #ep-inspo-sp{ --left:1070svh; --scale:.54; --y:-19svh; --x:0svh; --rot:0deg; --z:30; }
+  #ep-inspo{ --left:1057svh; --scale:.57; --y:48svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
   #ep-telephone{ --left:1076svh; --scale:.17; --y:27svh; --x:0svh; --rot:-8deg; --z:72; }
   #ep-phoningfriends{ --left:1082svh; --scale:.27; --y:21svh; --x:0svh; --rot:-8deg; --z:30; pointer-events:none;
                       --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4CA8E9;}
