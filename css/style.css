@@ -567,10 +567,10 @@ html, body {
   #play-exitwounds{ --left:362svh; --scale:.25; --y:69svh; --x:0svh; --rot:13deg; --z:11; }
   #pressplaydj{ --left: 360svh; --scale: .18; --y:63svh; --x: 0svh; --rot: 13deg; --z: 12; pointer-events:none;
                 --ff: "Thinker"; --fw: 400; --fs-mul: .17; --text-color: #4CA8E9;} 
-  #exitwounds-bandages{ --left:364svh; --scale:.30; --y:30svh; --x:-8svh; --rot:4deg; --z:9;}
+  #exitwounds-bandages{ --left:365svh; --scale:.30; --y:26svh; --x:-8svh; --rot:4deg; --z:9;}
   #exitwounds-animation-1{ --left:387svh; --scale:.40; --y:23svh; --x:0svh; --rot:0deg; --z:2; pointer-events:none; }
   #subscribe-button{ --left:399svh; --scale:.15; --y:57svh; --x:0svh; --rot:-6deg; --z:20; }
-  #subscribe-arrow{ --left:418svh; --scale:.05; --y:58svh; --x:0svh; --rot:192deg;--z:20; pointer-events:none;  }
+  #subscribe-arrow{ --left:418svh; --scale:.05; --y:59svh; --x:0svh; --rot:192deg;--z:20; pointer-events:none;  }
   #subscribe-substack-text{ --left:427svh; --scale:0.12; --y:45svh; --x:0svh; --rot:-10deg; --z:8;
                             --ff: "Manic"; --fw:400; --fs-mul:0.21; --ta:center; --tt:uppercase;--text-color: #4CA8E9; }
   #play-exitwounds-voicememo{ --left:392svh; --scale:.23; --y:1svh; --x:0svh; --rot:0deg; --z:7; }
