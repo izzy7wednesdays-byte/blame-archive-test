@@ -329,7 +329,7 @@ html, body {
     left: 3%;      /* distance from left edge of overlay image/card */
   
     /* SIZE — this line controls how big the X is */
-    width: 2.5svh;     /* X is 5% of the overlay card’s width */
+    width: 2svh;     /* X is 5% of the overlay card’s width */
     height: auto;
   
     cursor: pointer;
