@@ -327,7 +327,7 @@ html, body {
     left: 3%;      /* distance from left edge of overlay image */
   
     /* Size scales with the overlay image width */
-    width: 2%;     /* X is 6% of overlay image width */
+    width: 0.5%;
     height: auto;
   
     cursor: pointer;
