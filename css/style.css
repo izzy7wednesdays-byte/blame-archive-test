@@ -327,7 +327,7 @@ html, body {
     left: 3%;
   
     /* Force scaling to work properly */
-    width: 2.5svh !important;
+    width: 2.7svh !important;
     max-width: none !important;
     height: auto !important;
   
