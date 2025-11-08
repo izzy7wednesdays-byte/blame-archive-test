@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V5.2 - VIMEO CONTROLLER ----------- */
+/* --------- V5.3 - ADJUSTING X BUTTON ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })();
 
   /* ===== 5. Overlay click-to-open ===== */
-  /* ===== 5. Overlay click-to-open ===== */
+ /* ===== 5. Overlay click-to-open ===== */
   const overlay = document.getElementById("overlay");
   const ovCard  = overlay ? overlay.querySelector(".ov-card") : null;
   const ovImg   = overlay ? overlay.querySelector("#overlay-img") : null;
@@ -260,9 +260,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (overlay && ovCard && ovImg) {
 
-    function openOverlay(src, alt) {
+    function openOverlay(src, alt, slot) {
       ovImg.src = src;
       ovImg.alt = alt || "";
+
+      // Copy per-overlay X-button tuning from the slot (if provided)
+      if (slot) {
+        const vars = ["--ov-x-top", "--ov-x-left", "--ov-x-size"];
+        const slotStyles = getComputedStyle(slot);
+        vars.forEach(name => {
+          const value = slotStyles.getPropertyValue(name).trim();
+          if (value) {
+            ovCard.style.setProperty(name, value);
+          } else {
+            // If this slot didn't define it, remove to fall back to default
+            ovCard.style.removeProperty(name);
+          }
+        });
+      }
+
       overlay.classList.add("is-open");
     }
 
@@ -271,6 +287,10 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         ovImg.removeAttribute("src");
         ovImg.removeAttribute("alt");
+        // Optional: clear custom vars so next overlay uses its own values cleanly
+        ["--ov-x-top", "--ov-x-left", "--ov-x-size"].forEach(name => {
+          ovCard.style.removeProperty(name);
+        });
       }, 180);
     }
 
@@ -294,7 +314,8 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
 
-        openOverlay(src, alt);
+        // Pass the slot so we can read its custom variables
+        openOverlay(src, alt, s);
       });
     });
 
