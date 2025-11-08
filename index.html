@@ -26,7 +26,7 @@
 </head>
 
         <!-- ================================================= -->
-              <!-- V4 - FIXING VOICE MEMO ISSES - LINE 345 -->
+              <!-- V5 - ADDING CHANGE IN X -->
         <!-- ================================================= -->
   
 <body>
@@ -1963,9 +1963,19 @@
     </div>
   </div>
 
-  <!-- Reusable overlay (must NOT be inside .hwrap/.rail) -->
+<!-- Reusable overlay (must NOT be inside .hwrap/.rail) -->
   <div id="overlay" aria-hidden="true">
-    <div class="ov-card"><img alt=""></div>
+    <div class="ov-card">
+      <!-- Close "X" button image -->
+      <img
+        class="overlay-close"
+        src="assets/ui/x.webp"
+        alt="Close overlay"
+      >
+
+      <!-- Main overlay image -->
+      <img id="overlay-img" alt="">
+    </div>
   </div>
 
   <!-- Soundcloud Bundle -->
