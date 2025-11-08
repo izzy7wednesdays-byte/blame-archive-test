@@ -5,7 +5,7 @@ html, body {
   min-height: 100%;     /* prevents flash of unstyled white background */
 }
 
-/* ========= V146 — ADDING X BUTTON TO OVERLAY ========= */
+/* ========= V146.1 — ADDING X BUTTON TO OVERLAY ========= */
   
 /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -319,12 +319,15 @@ html, body {
     border-radius: 12px;
   }
 
-/* ===== Overlay "X" close button ===== */
+/* ===== Overlay "X" close button, per-overlay tunable ===== */
   #overlay .overlay-close {
     position: absolute;
-    top: calc(var(--ov-pad) * 0.4);
-    left: calc(var(--ov-pad) * 0.4);
-    width: min(4svh, 40px);  /* scales with viewport height, capped at 40px */
+  
+    /* These three are now driven by CSS variables, with sensible defaults */
+    top: var(--ov-x-top,  calc(var(--ov-pad) * 0.4));
+    left: var(--ov-x-left, calc(var(--ov-pad) * 0.4));
+    width: var(--ov-x-size, min(4svh, 40px));
+  
     height: auto;
     cursor: pointer;
     z-index: 20;
