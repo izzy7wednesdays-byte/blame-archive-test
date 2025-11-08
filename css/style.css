@@ -484,7 +484,13 @@ html, body {
   }
 
 /* ========= NON-CLICKABLE SLOT SAFEGUARD ========= */
-  .slot:not([data-overlay-src]):not(.slot--sc):not(.slot--audio):not(:has(a)):not(.slot--youtube):not(.slot--video) {
+  .slot:not([data-overlay-src])
+       :not(.slot--sc)
+       :not(.slot--audio)
+       :not(:has(a))
+       :not(.slot--youtube)
+       :not(.slot--video)
+       :not(.slot--spotify) {
     pointer-events: none;
   }
   
@@ -492,14 +498,14 @@ html, body {
   .slot--youtube,
   .slot--video,
   .slot--spotify,
-  .slot--audio, {
+  .slot--audio {
     pointer-events: auto !important;
     outline: 1px dashed rgba(255,255,255,0.15);
   }
   
   .slot--youtube iframe,
   .slot--video iframe,
-  .slot--spotify iframe, {
+  .slot--spotify iframe {
     pointer-events: auto !important; /* allow play/pause/fullscreen */
   }
 
