@@ -327,11 +327,11 @@ html, body {
     left: 3%;      /* distance from left edge of overlay image */
   
     /* Size scales with the overlay image width */
-    width: 4%;     /* X is 6% of overlay image width */
+    width: 2%;     /* X is 6% of overlay image width */
     height: auto;
   
     cursor: pointer;
-    z-index: 20;
+    z-index: 200;
     user-select: none;
     -webkit-user-drag: none;
     transition: transform .18s ease, filter .18s ease;
