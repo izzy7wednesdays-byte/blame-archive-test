@@ -272,17 +272,27 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 180);
     }
 
-    // Every .slot with data-overlay-src in index-13.html
+       // Every .slot with data-overlay-src in index.html
     document.querySelectorAll(".slot[data-overlay-src]").forEach(s => {
-      const img = s.querySelector("img");
-      if (!img) return;
-      img.addEventListener("click", e => {
+      // Prefer an <img> or <dotlottie-wc> inside the slot; fallback to the slot itself
+      const clickable = s.querySelector("img, dotlottie-wc") || s;
+
+      clickable.addEventListener("click", e => {
         e.preventDefault();
         e.stopPropagation();
-        openOverlay(
-          s.dataset.overlaySrc,
-          s.dataset.overlayAlt || img.alt
-        );
+
+        const src = s.dataset.overlaySrc;
+        const alt =
+          s.dataset.overlayAlt ||
+          clickable.getAttribute?.("alt") ||
+          "";
+
+        if (!src) {
+          console.warn("[Overlay] Missing data-overlay-src on", s);
+          return;
+        }
+
+        openOverlay(src, alt);
       });
     });
 
