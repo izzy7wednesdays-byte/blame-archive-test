@@ -252,9 +252,11 @@ document.addEventListener("DOMContentLoaded", () => {
   })();
 
   /* ===== 5. Overlay click-to-open ===== */
+  /* ===== 5. Overlay click-to-open ===== */
   const overlay = document.getElementById("overlay");
   const ovCard  = overlay ? overlay.querySelector(".ov-card") : null;
-  const ovImg   = overlay && ovCard ? ovCard.querySelector("img") : null;
+  const ovImg   = overlay ? overlay.querySelector("#overlay-img") : null;
+  const ovClose = overlay ? overlay.querySelector(".overlay-close") : null;
 
   if (overlay && ovCard && ovImg) {
 
@@ -272,9 +274,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 180);
     }
 
-       // Every .slot with data-overlay-src in index.html
+    // Every .slot with data-overlay-src in index.html
     document.querySelectorAll(".slot[data-overlay-src]").forEach(s => {
-      // Prefer an <img> or <dotlottie-wc> inside the slot; fallback to the slot itself
+      // Works for both <img> and <dotlottie-wc> overlay triggers
       const clickable = s.querySelector("img, dotlottie-wc") || s;
 
       clickable.addEventListener("click", e => {
@@ -296,7 +298,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // click outside card to close
+    // Close overlay when clicking the X image
+    if (ovClose) {
+      ovClose.addEventListener("click", e => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeOverlay();
+      });
+    }
+
+    // click on dark backdrop (not on the card) closes
     overlay.addEventListener("click", e => {
       if (e.target === overlay) {
         closeOverlay();
