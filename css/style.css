@@ -319,23 +319,24 @@ html, body {
     border-radius: 12px;
   }
 
-/* ===== Overlay "X" close button, per-overlay tunable ===== */
+/* ===== Overlay "X" close button (uniform across all overlays) ===== */
   #overlay .overlay-close {
     position: absolute;
+    
+    top: 3%;       /* distance from top edge of overlay image */
+    left: 4%;      /* distance from left edge of overlay image */
   
-    /* These three are now driven by CSS variables, with sensible defaults */
-    top: var(--ov-x-top,  calc(var(--ov-pad) * 0.4));
-    left: var(--ov-x-left, calc(var(--ov-pad) * 0.4));
-    width: var(--ov-x-size, min(4svh, 40px));
-  
+    /* Size scales with the overlay image width */
+    width: 6%;     /* X is 6% of overlay image width */
     height: auto;
+  
     cursor: pointer;
     z-index: 20;
     user-select: none;
     -webkit-user-drag: none;
     transition: transform .18s ease, filter .18s ease;
   }
-
+  
   #overlay .overlay-close:hover {
     transform: scale(1.05);
     filter: brightness(1.1);
