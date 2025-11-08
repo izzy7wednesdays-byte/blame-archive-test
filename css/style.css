@@ -5,7 +5,7 @@ html, body {
   min-height: 100%;     /* prevents flash of unstyled white background */
 }
 
-/* ========= V145.2 — ADJUSTING SPOTIFY PLAYLIST SCALE ========= */
+/* ========= V146 — ADDING X BUTTON TO OVERLAY ========= */
   
 /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -317,6 +317,25 @@ html, body {
     display: block;
     margin: 0 auto;
     border-radius: 12px;
+  }
+
+/* ===== Overlay "X" close button ===== */
+  #overlay .overlay-close {
+    position: absolute;
+    top: calc(var(--ov-pad) * 0.4);
+    left: calc(var(--ov-pad) * 0.4);
+    width: min(4svh, 40px);  /* scales with viewport height, capped at 40px */
+    height: auto;
+    cursor: pointer;
+    z-index: 20;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: transform .18s ease, filter .18s ease;
+  }
+
+  #overlay .overlay-close:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
   }
 
 /* ===== BEHAVIOR: GROW-ON-HOVER for clickable slots ===== */
