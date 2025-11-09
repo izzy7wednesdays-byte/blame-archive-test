@@ -670,16 +670,16 @@ html, body {
   #thestar-tarot{ --left:903svh; --scale:.38; --y:60svh; --x:10svh; --rot:-9deg; --z:70; pointer-events:none; }
   #sleepwalking-title{ --left:942svh; --scale:.20; --y:39svh; --x:10svh; --rot:0deg; --z:100; pointer-events:none; }
   #sleepwalking-visualizer{ --left:944svh; --scale:.38; --y:63svh; --x:0svh; --rot:0deg; --z:71; }
-  #about-sleepwalking{ --left:1012svh; --scale:0.35; --y:64svh; --x:0svh; --rot:-13deg; --z:71; }
-  #sleepwalking-receipt{ --left:1006svh; --scale:.50; --y:-13svh; --x:0svh; --rot:10deg; --z:70; pointer-events: none; }
+  #about-sleepwalking{ --left:1012svh; --scale:0.35; --y:1svh; --x:0svh; --rot:13deg; --z:71; }
+  #sleepwalking-receipt{ --left:1030svh; --scale:.50; --y:-13svh; --x:0svh; --rot:10deg; --z:70; pointer-events: none; }
   #sleepwalking-listeningparty{ --left:970svh; --scale:.35; --ar:4/3; --y:0svh; --x:0svh; --rot:0deg; --z:50; }
 
 /* ========= EP SECTION ========= */
-  #ep-inspo-sp{ --left:1035svh; --scale:.56; --y:10svh; --x:0svh; --rot:0deg; --z:30; }
-  #ep-inspo{ --left:1051svh; --scale:.63; --y:44svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
-  #ep-telephone{ --left:1079svh; --scale:.23; --y:21svh; --x:0svh; --rot:8deg; --z:72; }
-  #ep-phoningfriends{ --left:1084svh; --scale:.27; --y:10svh; --x:0svh; --rot:-deg; --z:30; pointer-events:none;
-                      --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4CA8E9;}
+  #ep-inspo-sp{ --left:1065svh; --scale:.56; --y:40svh; --x:0svh; --rot:0deg; --z:30; }
+  #ep-inspo{ --left:1012svh; --scale:.63; --y:44svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #ep-telephone{ --left:1079svh; --scale:.23; --y:12svh; --x:0svh; --rot:8deg; --z:72; }
+  #ep-phoningfriends{ --left:1084svh; --scale:.27; --y:10svh; --x:0svh; --rot:8deg; --z:30; pointer-events:none;
+                      --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center; --tt: uppercase; --text-color: #4CA8E9;}
   #ep-click-toread{ --left:1078svh; --scale:.24; --y:42svh; --x:0svh; --rot:7.5deg; --z:30; pointer-events:none;
                     --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4CA8E9;}
   #mixing-misery-1{ --left:1114svh; --scale:.41; --ar:9/16; --y:7svh; --x:0svh; --rot:0deg; --z:30; }
