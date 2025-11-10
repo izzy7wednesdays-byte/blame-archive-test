@@ -592,7 +592,7 @@ html, body {
   #pressplaydj{ --left: 360svh; --scale: .18; --y:63svh; --x: 0svh; --rot: 13deg; --z: 12; pointer-events:none;
                 --ff: "Thinker"; --fw: 400; --fs-mul: .17; --text-color: #4CA8E9;} 
   #missed-calls{ --left:367svh; --scale:.30; --y:26svh; --x:-8svh; --rot:4deg; --z:9;pointer-events:none}
-  #about-exitwounds{ --left:385svh; --scale:.30; --y:38svh; --x:8svh; --rot:-6deg; --z:9;}
+  #about-exitwounds{ --left:390svh; --scale:.30; --y:41svh; --x:8svh; --rot:-6deg; --z:9;}
   #exitwounds-animation-1{ --left:387svh; --scale:.40; --y:23svh; --x:0svh; --rot:0deg; --z:2; pointer-events:none; }
   #play-exitwounds-voicememo{ --left:392svh; --scale:.23; --y:1svh; --x:0svh; --rot:0deg; --z:7; }
   #click-me-text{--left: 414svh; --scale: .20; --y: 16svh; --x: 0svh; --rot: 1deg; --z: 8;
