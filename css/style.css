@@ -805,10 +805,10 @@ html, body {
   #london-live-2{ --left:2198svh; --scale:.38; --ar:9/16; --y:2svh; --x:0svh; --rot:0.0deg; --z:43; }
   #hangout-vlog{ --left:2214svh; --scale:.35; --y:64svh; --x:0svh; --rot:0deg; --z:57; }
   #rsvp-cloud{ --left:2216svh; --scale:.15; --y:47svh; --x:0svh; --rot:-15deg; --z:44; pointer-events:none; }
-  #rsvp-arrow{ --left:2224svh; --scale:.04; --y:42svh; --x:0svh; --rot:2deg; --z:44; pointer-events:none; }
+  #rsvp-arrow{ --left:2224svh; --scale:.04; --y:42svh; --x:0svh; --rot:-1deg; --z:44; pointer-events:none; }
   #rsvp-button{ --left:2238svh; --scale:.13; --y:43svh; --x:0svh; --rot:0deg; --z:57; }
-  #london-matches{ --left:2222svh; --scale:.44; --y:0svh; --x:0svh; --rot:0deg; --z:50; pointer-events:none; }
-  #london-about{ --left:2278svh; --scale:.59; --y:41svh; --x:0svh; --rot:-8deg; --z:45; }
+  #london-matches{ --left:2222svh; --scale:.44; --y:-2svh; --x:0svh; --rot:0deg; --z:50; pointer-events:none; }
+  #london-about{ --left:2278svh; --scale:.59; --y:40svh; --x:0svh; --rot:-8deg; --z:45; }
   #onedirection{ --left:2280svh; --scale:.18; --y:12svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #onedirection-text{ --left:2280svh; --scale:.15; --y:9svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none;
                       --ff: "Thinker"; --fw: 400; --fs-mul:.13; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
