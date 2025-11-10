@@ -601,7 +601,7 @@ html, body {
   #read-susbstack-text{ --left: 409svh; --scale: .21; --y: 80svh; --x: 0svh; --rot: 9deg; --z: 8; pointer-events:none;
                         --ff: "Manic"; --ta: center;  --fw: 400; --fs-mul: .15;  --tt: uppercase; --text-color: #4CA8E9; }
   #substack-point-arrow{ --left:433svh; --scale:.10; --y:67svh; --x:0svh; --rot:7deg; --z:4; pointer-events:none; }
-  #scorpio-constellation{ --left:428svh; --scale:.25; --y:42svh; --x:0svh; --rot:0deg; --z:4; pointer-events:none; }
+  #scorpio-constellation{ --left:430svh; --scale:.25; --y:41svh; --x:0svh; --rot:0deg; --z:4; pointer-events:none; }
   #subscribe-substack-text{ --left:420svh; --scale:0.12; --y:1svh; --x:0svh; --rot:0deg; --z:8; pointer-events:none;
                             --ff: "Manic"; --fw:400; --fs-mul:0.21; --ta:center; --tt:uppercase;--text-color: #4CA8E9; }
   #subscribe-arrow{ --left:452svh; --scale:.04; --y:10svh; --x:0svh; --rot:-60deg;--z:20; pointer-events:none;  }
@@ -650,7 +650,7 @@ html, body {
   #misery-wlj-text{  --left:875svh; --scale:.2; --y:88svh; --x:0svh; --rot:0deg; --z:73; pointer-events:none;
                           --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center; --tt: uppercase; --text-color: #4CA8E9; }
   #misery-wlj{ --left:878svh; --scale:.35; --ar:9/16; --y:52svh; --x:0svh; --rot:0deg; --z:72; }
-  #star-trio-1{ --left:878svh; --scale:.34; --y:67svh; --x:0svh; --rot:-170deg; --z:73; pointer-events:none; }
+  #star-trio-1{ --left:883svh; --scale:.34; --y:67svh; --x:0svh; --rot:-160deg; --z:73; pointer-events:none; }
   #misery-visualizer{ --left:853svh; --scale:.38; --y:0svh; --x:8svh; --rot:0deg; --z:39; }
 
 /* ========= SLEEPWALKING SECTION ========= */
@@ -669,9 +669,9 @@ html, body {
 
 /* ========= EP SECTION ========= */
   #ep-inspo{ --left:1007svh; --scale:.63; --y:44svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
-  #top-spotify-sparkles{ --left:10086svh; --scale:.63; --y:70svh; --x:0svh; --rot:0deg; --z:31; pointer-events:none; }
+  #top-spotify-sparkles{ --left:1086svh; --scale:.63; --y:70svh; --x:0svh; --rot:0deg; --z:31; pointer-events:none; }
   #ep-inspo-sp{ --left:1086svh; --scale:.6; --y:47svh; --x:0svh; --rot:0deg; --z:30; }
-  #bottom-spotify-sparkles{ --left:10086svh; --scale:.63; --y:55svh; --x:0svh; --rot:0deg; --z:31; pointer-events:none; }
+  #bottom-spotify-sparkles{ --left:1086svh; --scale:.63; --y:55svh; --x:0svh; --rot:0deg; --z:31; pointer-events:none; }
   #ep-click-toread{ --left:1078svh; --scale:.25; --y:38svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
                     --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center!important; --tt: uppercase; --text-color: #4CA8E9;}
   #ep-telephone{ --left:1077svh; --scale:.26; --y:11svh; --x:0svh; --rot:0deg; --z:72; }
@@ -730,7 +730,7 @@ html, body {
   #caitlin-text-2{ --left:1534svh; --scale:.34; --y:43svh; --x:0svh; --rot:0.0deg; --z:37; }
   #shoot-bts-1{ --left:1529svh; --scale:.22; --ar:109/60; --y:20svh; --x:0svh; --rot:0.0deg; --z:45; }
   #shoot-makeup{ --left:1528svh; --scale:.18; --y:7svh; --x:0svh; --rot:90.0deg; --z:39; pointer-events:none; }
-  #shoot-makeup-text{ --left:1555svh; --scale:.18; --y:1svh; --x:0svh; --rot:0.0deg; --z:40; pointer-events:none;
+  #shoot-makeup-text{ --left:1557svh; --scale:.19; --y:1svh; --x:0svh; --rot:0.0deg; --z:40; pointer-events:none;
                     --ff: "Thinker"; --fw: 410; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4C58E9; }
   #caitlin-text-3{ --left:1566svh; --scale:.35; --y:45svh; --x:0svh; --rot:-5.0deg; --z:40; pointer-events:none; }
   #shoot-bts-2{ --left:1571svh; --scale:.38; --ar:9/16; --y:5svh; --x:0svh; --rot:0deg; --z:48; }
