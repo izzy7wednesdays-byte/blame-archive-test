@@ -821,7 +821,7 @@ html, body {
   #church-video{ --left:2419svh; --scale:.30; --ar:336/299; --y:38svh; --x:0svh; --rot:0deg; --z:46; }
   #villains{ --left:2421svh; --scale:.30; --y:2svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #strawberry{ --left:2473svh; --scale:.21; --y:75svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
-  #next-title{ --left:2455svh; --scale:.28; --y:40svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
+  #next-title{ --left:2456svh; --scale:.30; --y:40svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
   #join-postcard{ --left:2455svh; --scale:.37; --y:2svh; --x:0svh; --rot:8deg; --z:46; }
   #presave-text{ --left:2496svh; --scale:.14; --y:71svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
                  --ff: "Thinker"; --fw: 400; --fs-mul: .2; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
