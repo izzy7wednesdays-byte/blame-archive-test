@@ -591,8 +591,8 @@ html, body {
   #play-exitwounds{ --left:362svh; --scale:.25; --y:69svh; --x:0svh; --rot:13deg; --z:11; }
   #pressplaydj{ --left: 360svh; --scale: .18; --y:63svh; --x: 0svh; --rot: 13deg; --z: 12; pointer-events:none;
                 --ff: "Thinker"; --fw: 400; --fs-mul: .17; --text-color: #4CA8E9;} 
-  #missed-calls{ --left:367svh; --scale:.30; --y:26svh; --x:-8svh; --rot:4deg; --z:9;pointer-events:none}
-  #about-exitwounds{ --left:390svh; --scale:.30; --y:41svh; --x:8svh; --rot:-6deg; --z:9;}
+  #missed-calls{ --left:367svh; --scale:.35; --y:26svh; --x:-6svh; --rot:4deg; --z:9;pointer-events:none}
+  #about-exitwounds{ --left:394svh; --scale:.30; --y:44svh; --x:8svh; --rot:-6deg; --z:9;}
   #exitwounds-animation-1{ --left:387svh; --scale:.40; --y:23svh; --x:0svh; --rot:0deg; --z:2; pointer-events:none; }
   #play-exitwounds-voicememo{ --left:392svh; --scale:.23; --y:1svh; --x:0svh; --rot:0deg; --z:7; }
   #click-me-text{--left: 414svh; --scale: .20; --y: 16svh; --x: 0svh; --rot: 1deg; --z: 8;
@@ -601,10 +601,10 @@ html, body {
   #read-susbstack-text{ --left: 409svh; --scale: .21; --y: 80svh; --x: 0svh; --rot: 9deg; --z: 8; pointer-events:none;
                         --ff: "Manic"; --ta: center;  --fw: 400; --fs-mul: .15;  --tt: uppercase; --text-color: #4CA8E9; }
   #substack-point-arrow{ --left:433svh; --scale:.10; --y:67svh; --x:0svh; --rot:-2deg; --z:4; pointer-events:none; }
-  #subscribe-substack-text{ --left:420svh; --scale:0.12; --y:2svh; --x:0svh; --rot:0deg; --z:8; pointer-events:none;
+  #subscribe-substack-text{ --left:420svh; --scale:0.12; --y:1svh; --x:0svh; --rot:0deg; --z:8; pointer-events:none;
                             --ff: "Manic"; --fw:400; --fs-mul:0.21; --ta:center; --tt:uppercase;--text-color: #4CA8E9; }
-  #subscribe-arrow{ --left:430svh; --scale:.05; --y:5svh; --x:0svh; --rot:-16deg;--z:20; pointer-events:none;  }
-  #subscribe-button{ --left:442svh; --scale:.14; --y:9svh; --x:0svh; --rot:6deg; --z:20; }
+  #subscribe-arrow{ --left:440svh; --scale:.05; --y:8svh; --x:0svh; --rot:-13deg;--z:20; pointer-events:none;  }
+  #subscribe-button{ --left:450svh; --scale:.14; --y:9svh; --x:0svh; --rot:6deg; --z:20; }
   #exitwounds-substackflier{ --left:452svh; --scale:.75; --y:30svh; --x:0svh; --rot:14deg; --z:3; }
 
 /* ========= LANDMINES SECTION ========= */
@@ -649,7 +649,7 @@ html, body {
   #misery-wlj-text{  --left:875svh; --scale:.2; --y:88svh; --x:0svh; --rot:0deg; --z:73; pointer-events:none;
                           --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center; --tt: uppercase; --text-color: #4CA8E9; }
   #misery-wlj{ --left:878svh; --scale:.35; --ar:9/16; --y:52svh; --x:0svh; --rot:0deg; --z:72; }
-  #star-trio-1{ --left:878svh; --scale:.30; --y:33svh; --x:0svh; --rot:-190deg; --z:71; pointer-events:none; }
+  #star-trio-1{ --left:878svh; --scale:.30; --y:46svh; --x:0svh; --rot:-185deg; --z:71; pointer-events:none; }
   #misery-visualizer{ --left:853svh; --scale:.38; --y:0svh; --x:8svh; --rot:0deg; --z:39; }
 
 /* ========= SLEEPWALKING SECTION ========= */
