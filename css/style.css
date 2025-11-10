@@ -601,9 +601,10 @@ html, body {
   #read-susbstack-text{ --left: 409svh; --scale: .21; --y: 80svh; --x: 0svh; --rot: 9deg; --z: 8; pointer-events:none;
                         --ff: "Manic"; --ta: center;  --fw: 400; --fs-mul: .15;  --tt: uppercase; --text-color: #4CA8E9; }
   #substack-point-arrow{ --left:433svh; --scale:.10; --y:67svh; --x:0svh; --rot:7deg; --z:4; pointer-events:none; }
+  #scorpio-constellation{ --left:433svh; --scale:.15; --y:50svh; --x:0svh; --rot:0deg; --z:4; pointer-events:none; }
   #subscribe-substack-text{ --left:420svh; --scale:0.12; --y:1svh; --x:0svh; --rot:0deg; --z:8; pointer-events:none;
                             --ff: "Manic"; --fw:400; --fs-mul:0.21; --ta:center; --tt:uppercase;--text-color: #4CA8E9; }
-  #subscribe-arrow{ --left:450svh; --scale:.05; --y:9svh; --x:0svh; --rot:-70deg;--z:20; pointer-events:none;  }
+  #subscribe-arrow{ --left:450svh; --scale:.05; --y:9svh; --x:0svh; --rot:-65deg;--z:20; pointer-events:none;  }
   #subscribe-button{ --left:459svh; --scale:.14; --y:10svh; --x:0svh; --rot:6deg; --z:20; }
   #exitwounds-substackflier{ --left:453svh; --scale:.76; --y:30svh; --x:0svh; --rot:14deg; --z:3; }
 
