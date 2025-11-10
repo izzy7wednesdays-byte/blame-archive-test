@@ -591,21 +591,21 @@ html, body {
   #play-exitwounds{ --left:362svh; --scale:.25; --y:69svh; --x:0svh; --rot:13deg; --z:11; }
   #pressplaydj{ --left: 360svh; --scale: .18; --y:63svh; --x: 0svh; --rot: 13deg; --z: 12; pointer-events:none;
                 --ff: "Thinker"; --fw: 400; --fs-mul: .17; --text-color: #4CA8E9;} 
+  #missed-calls{ --left:367svh; --scale:.30; --y:26svh; --x:-8svh; --rot:4deg; --z:9;pointer-events:none}
   #about-exitwounds{ --left:367svh; --scale:.30; --y:26svh; --x:-8svh; --rot:4deg; --z:9;}
   #exitwounds-animation-1{ --left:387svh; --scale:.40; --y:23svh; --x:0svh; --rot:0deg; --z:2; pointer-events:none; }
-  #subscribe-button{ --left:399svh; --scale:.14; --y:57svh; --x:0svh; --rot:-6deg; --z:20; }
-  #subscribe-arrow{ --left:418svh; --scale:.05; --y:59svh; --x:0svh; --rot:192deg;--z:20; pointer-events:none;  }
-  #subscribe-substack-text{ --left:426svh; --scale:0.12; --y:45svh; --x:0svh; --rot:-10deg; --z:8;
-                            --ff: "Manic"; --fw:400; --fs-mul:0.21; --ta:center; --tt:uppercase;--text-color: #4CA8E9; }
   #play-exitwounds-voicememo{ --left:392svh; --scale:.23; --y:1svh; --x:0svh; --rot:0deg; --z:7; }
-  #click-me-arrow{ --left:413svh; --scale:.04; --y:11svh; --x:0svh; --rot:-4deg; --z:6; pointer-events:none; }
   #click-me-text{--left: 414svh; --scale: .20; --y: 16svh; --x: 0svh; --rot: 1deg; --z: 8;
                  --fw: 400; --fs-mul: .15; --text-color: #4CA8E9; }
-  #dancing-boombox{ --left:435svh; --scale:.38; --y:-2svh; --x:0svh; --rot:0deg; --z:20; pointer-events:none; }
+  #click-me-arrow{ --left:413svh; --scale:.04; --y:11svh; --x:0svh; --rot:-4deg; --z:6; pointer-events:none; }
   #read-susbstack-text{ --left: 409svh; --scale: .21; --y: 78svh; --x: 0svh; --rot: 9deg; --z: 8; pointer-events:none;
                         --ff: "Manic"; --ta: center;  --fw: 400; --fs-mul: .15;  --tt: uppercase; --text-color: #4CA8E9; }
   #substack-point-arrow{ --left:433svh; --scale:.10; --y:65svh; --x:0svh; --rot:-2deg; --z:4; pointer-events:none; }
-  #exitwounds-substackflier{ --left:452svh; --scale:.77; --y:28svh; --x:0svh; --rot:15deg; --z:3; }
+  #subscribe-substack-text{ --left:420svh; --scale:0.12; --y:2svh; --x:0svh; --rot:-10deg; --z:8; pointer-events:none;
+                            --ff: "Manic"; --fw:400; --fs-mul:0.21; --ta:center; --tt:uppercase;--text-color: #4CA8E9; }
+  #subscribe-arrow{ --left:423svh; --scale:.05; --y:5svh; --x:0svh; --rot:-192deg;--z:20; pointer-events:none;  }
+  #subscribe-button{ --left:435svh; --scale:.14; --y:12svh; --x:0svh; --rot:-6deg; --z:20; }
+  #exitwounds-substackflier{ --left:452svh; --scale:.75; --y:28svh; --x:0svh; --rot:15deg; --z:3; }
 
 /* ========= LANDMINES SECTION ========= */
   #glitter-truck{ --left:494svh; --scale:.48; --y:-18svh; --x:0svh; --rot:0deg; --z:7; pointer-events:none;}
