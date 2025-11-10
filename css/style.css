@@ -603,8 +603,8 @@ html, body {
   #substack-point-arrow{ --left:433svh; --scale:.10; --y:67svh; --x:0svh; --rot:7deg; --z:4; pointer-events:none; }
   #subscribe-substack-text{ --left:420svh; --scale:0.12; --y:1svh; --x:0svh; --rot:0deg; --z:8; pointer-events:none;
                             --ff: "Manic"; --fw:400; --fs-mul:0.21; --ta:center; --tt:uppercase;--text-color: #4CA8E9; }
-  #subscribe-arrow{ --left:450svh; --scale:.05; --y:9svh; --x:0svh; --rot:-90deg;--z:20; pointer-events:none;  }
-  #subscribe-button{ --left:456svh; --scale:.14; --y:10svh; --x:0svh; --rot:6deg; --z:20; }
+  #subscribe-arrow{ --left:450svh; --scale:.05; --y:9svh; --x:0svh; --rot:-70deg;--z:20; pointer-events:none;  }
+  #subscribe-button{ --left:459svh; --scale:.14; --y:10svh; --x:0svh; --rot:6deg; --z:20; }
   #exitwounds-substackflier{ --left:453svh; --scale:.76; --y:30svh; --x:0svh; --rot:14deg; --z:3; }
 
 /* ========= LANDMINES SECTION ========= */
