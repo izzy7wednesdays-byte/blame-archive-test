@@ -826,6 +826,7 @@ html, body {
   #presave-text{ --left:2496svh; --scale:.14; --y:71svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
                  --ff: "Thinker"; --fw: 400; --fs-mul: .2; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
   #presave-button{ --left:2512svh; --scale:.30; --y:35svh; --x:0svh; --rot:5deg; --z:71;}
+  #im-stamp{ --left:2512svh; --scale:.30; --y:2svh; --x:0svh; --rot:5deg; --z:70; pointer-events:none;}
   #thankyou-note{ --left:2551svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none;}
   #lock-logo{ --left:2610svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
   #social-sparkles-2{ --left:2615svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
