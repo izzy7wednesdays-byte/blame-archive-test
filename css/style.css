@@ -671,7 +671,7 @@ html, body {
   #ep-inspo{ --left:1007svh; --scale:.63; --y:44svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
   #top-spotify-sparkles{ --left:10086svh; --scale:.63; --y:70svh; --x:0svh; --rot:0deg; --z:31; pointer-events:none; }
   #ep-inspo-sp{ --left:1086svh; --scale:.6; --y:47svh; --x:0svh; --rot:0deg; --z:30; }
-  #top-spotify-sparkles{ --left:10086svh; --scale:.63; --y:55svh; --x:0svh; --rot:0deg; --z:31; pointer-events:none; }
+  #bottom-spotify-sparkles{ --left:10086svh; --scale:.63; --y:55svh; --x:0svh; --rot:0deg; --z:31; pointer-events:none; }
   #ep-click-toread{ --left:1078svh; --scale:.25; --y:38svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
                     --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center!important; --tt: uppercase; --text-color: #4CA8E9;}
   #ep-telephone{ --left:1077svh; --scale:.26; --y:11svh; --x:0svh; --rot:0deg; --z:72; }
