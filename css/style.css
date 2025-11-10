@@ -674,8 +674,8 @@ html, body {
                       --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center; --tt: uppercase; --text-color: #4CA8E9;}
   #ep-click-toread{ --left:1078svh; --scale:.25; --y:38svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
                     --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center!important; --tt: uppercase; --text-color: #4CA8E9;}
-  #mixing-misery-1{ --left:1114svh; --scale:.41; --ar:9/16; --y:4svh; --x:0svh; --rot:0deg; --z:30; }
-  #mixing-misery-1-text{ --left:1114svh; --scale:.11; --y:2svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
+  #mixing-misery-1{ --left:1115svh; --scale:.41; --ar:9/16; --y:4svh; --x:0svh; --rot:0deg; --z:30; }
+  #mixing-misery-1-text{ --left:1114svh; --scale:.11; --y:1svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
                        --ff: "Thinker"; --fw: 400; --fs-mul: .2; --ta: center !important; --tt: lowercase; --text-color: #4CA8E9;}
   #migos-mairead{ --left:1129svh; --scale:.5; --ar:9/16; --y:47svh; --x:0svh; --rot:0deg; --z:30; }
   #air-quality{ --left:1139svh; --scale:.45; --y:1svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
