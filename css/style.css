@@ -569,14 +569,14 @@ html, body {
   #lfg{ --left:97svh; --scale:.1; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
   #pink-flashing-arrow{ --left:123svh; --scale:.09; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
 /* ========= LIGHT SLEEPER SECTION ========= */
-  #broken-cd{ --left:140svh; --scale:.29; --y:78svh; --x:0svh; --rot:86deg; --z:29;pointer-events:none; }
+  #broken-cd{ --left:143svh; --scale:.29; --y:78svh; --x:0svh; --rot:82deg; --z:29;pointer-events:none; }
   #playlist-ex{ --left:162svh; --scale:.62; --y:25svh; --x:0svh; --rot:-8deg; --z:30; }
-  #blue-star-1{ --left:175svh; --scale:.05; --y:85svh; --x:0svh; --rot:86deg; --z:20;pointer-events:none; }
-  #blue-star-2{ --left:180svh; --scale:.08; --y:95svh; --x:0svh; --rot:86deg; --z:20;pointer-events:none; }
-  #silver-star1-3{ --left:195svh; --scale:.17; --y:72svh; --x:0svh; --rot:86deg; --z:20;pointer-events:none; }
-  #lightsleeper-title{ --left:159svh; --scale:.42; --y:24svh; --x:-4svh; --rot:-8deg; --z:4; pointer-events: none; }
+  #blue-star-1{ --left:180svh; --scale:.08; --y:85svh; --x:0svh; --rot:86deg; --z:20;pointer-events:none; }
+  #blue-star-2{ --left:185svh; --scale:.13; --y:95svh; --x:0svh; --rot:86deg; --z:20;pointer-events:none; }
+  #silver-star1-3{ --left:195svh; --scale:.17; --y:60svh; --x:0svh; --rot:86deg; --z:20;pointer-events:none; }
+  #lightsleeper-title{ --left:159svh; --scale:.42; --y:22svh; --x:-4svh; --rot:-5deg; --z:4; pointer-events: none; }
   #lightsleeper-visualizer{ --left:145svh; --scale:.38; --y:0svh; --x:10svh; --rot:0deg; --z:3; }
-  #lightsleeper-about{ --left:209svh; --scale:.4; --y:58svh; --x:0svh; --rot:-10deg; --z:20; pointer-events:auto;  }
+  #lightsleeper-about{ --left:210svh; --scale:.4; --y:58svh; --x:0svh; --rot:-10deg; --z:20; pointer-events:auto;  }
   #autumn-text{ --left:220svh; --scale:.3; --y:25svh; --x:0svh; --rot:2deg; --z:0; }
   #blame-it-notesapp{ --left:215svh; --scale:.20; --y:0svh; --x:0svh; --rot:-2deg; --z:4; }
   #lightsleeper-studio{ --left:247svh; --scale:.40; --ar:9/16; --y:57svh; --x:0svh; --rot:0deg; --z:41;  }
