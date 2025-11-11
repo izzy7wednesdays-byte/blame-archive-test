@@ -569,8 +569,8 @@ html, body {
   #lfg{ --left:97svh; --scale:.1; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
   #pink-flashing-arrow{ --left:123svh; --scale:.09; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
 /* ========= LIGHT SLEEPER SECTION ========= */
-  #broken-cd{ --left:140svh; --scale:.35; --y:70svh; --x:0svh; --rot:90deg; --z:29;pointer-events:none; }
-  #playlist-ex{ --left:160svh; --scale:.62; --y:29svh; --x:0svh; --rot:0deg; --z:30; }
+  #broken-cd{ --left:140svh; --scale:.33; --y:76svh; --x:0svh; --rot:86deg; --z:29;pointer-events:none; }
+  #playlist-ex{ --left:160svh; --scale:.62; --y:29svh; --x:0svh; --rot:-4deg; --z:30; }
   #lightsleeper-title{ --left:159svh; --scale:.42; --y:24svh; --x:-4svh; --rot:-8deg; --z:4; pointer-events: none; }
   #lightsleeper-visualizer{ --left:145svh; --scale:.38; --y:0svh; --x:10svh; --rot:0deg; --z:3; }
   #lightsleeper-about{ --left:208svh; --scale:.4; --y:58svh; --x:0svh; --rot:-10deg; --z:20; pointer-events:auto;  }
@@ -586,7 +586,8 @@ html, body {
   #lightsleeper-voicememo{ --left: 310svh; --scale: .34; --y:29svh; --x: 0svh; --rot:-6deg; --z: 9; } 
 
 /* ========= EXIT WOUNDS SECTION ========= */
-  #exitwounds-lyricvideo{ /* V4 placeholder */ --left:298svh; --scale: .38; --y:63svh; --x: 0svh; --rot: 0deg; --z: 21; } 
+  #exitwounds-lyricvideo{ /* V4 placeholder */ --left:298svh; --scale: .38; --y:63svh; --x: 0svh; --rot: 0deg; --z: 21; }
+  #star-trio-2{ --left:340svh; --scale:.34; --y:29svh; --x:0svh; --rot:160deg; --z:73; pointer-events:none; }
   #exitwounds-title{ --left:322svh; --scale:.33; --y: 0svh; --x:0svh; --rot:-12deg; --z:1; pointer-events:none;   }
   #play-exitwounds{ --left:362svh; --scale:.25; --y:69svh; --x:0svh; --rot:13deg; --z:11; }
   #pressplaydj{ --left: 360svh; --scale: .18; --y:63svh; --x: 0svh; --rot: 13deg; --z: 12; pointer-events:none;
