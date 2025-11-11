@@ -590,7 +590,7 @@ html, body {
 
 /* ========= EXIT WOUNDS SECTION ========= */
   #exitwounds-lyricvideo{ /* V4 placeholder */ --left:298svh; --scale: .38; --y:63svh; --x: 0svh; --rot: 0deg; --z: 21; }
-  #star-trio-2{ --left:336svh; --scale:.28; --y:50svh; --x:0svh; --rot:-160deg; --z:10; pointer-events:none; }
+  #star-trio-2{ --left:340svh; --scale:.28; --y:59svh; --x:0svh; --rot:-160deg; --z:10; pointer-events:none; }
   #exitwounds-title{ --left:322svh; --scale:.33; --y: 0svh; --x:0svh; --rot:-12deg; --z:1; pointer-events:none;   }
   #play-exitwounds{ --left:362svh; --scale:.25; --y:69svh; --x:0svh; --rot:13deg; --z:11; }
   #pressplaydj{ --left: 360svh; --scale: .18; --y:63svh; --x: 0svh; --rot: 13deg; --z: 12; pointer-events:none;
