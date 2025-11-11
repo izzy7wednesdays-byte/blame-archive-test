@@ -598,10 +598,10 @@ html, body {
   #click-me-text{--left: 414svh; --scale: .20; --y: 16svh; --x: 0svh; --rot: 1deg; --z: 8;
                  --fw: 400; --fs-mul: .15; --text-color: #4CA8E9; }
   #click-me-arrow{ --left:413svh; --scale:.04; --y:11svh; --x:0svh; --rot:-4deg; --z:6; pointer-events:none; }
-  #read-susbstack-text{ --left: 409svh; --scale: .21; --y: 80svh; --x: 0svh; --rot: 9deg; --z: 8; pointer-events:none;
+  #read-susbstack-text{ --left: 409svh; --scale: .21; --y: 80svh; --x: 0svh; --rot:7deg; --z: 8; pointer-events:none;
                         --ff: "Manic"; --ta: center;  --fw: 400; --fs-mul: .15;  --tt: uppercase; --text-color: #4CA8E9; }
   #substack-point-arrow{ --left:433svh; --scale:.10; --y:67svh; --x:0svh; --rot:7deg; --z:4; pointer-events:none; }
-  #scorpio-constellation{ --left:430svh; --scale:.25; --y:41svh; --x:0svh; --rot:0deg; --z:4; pointer-events:none; }
+  #scorpio-constellation{ --left:428svh; --scale:.25; --y:40svh; --x:0svh; --rot:0deg; --z:4; pointer-events:none; }
   #subscribe-substack-text{ --left:420svh; --scale:0.12; --y:1svh; --x:0svh; --rot:0deg; --z:8; pointer-events:none;
                             --ff: "Manic"; --fw:400; --fs-mul:0.21; --ta:center; --tt:uppercase;--text-color: #4CA8E9; }
   #subscribe-arrow{ --left:452svh; --scale:.04; --y:10svh; --x:0svh; --rot:-60deg;--z:20; pointer-events:none;  }
@@ -650,7 +650,7 @@ html, body {
   #misery-wlj-text{  --left:875svh; --scale:.2; --y:88svh; --x:0svh; --rot:0deg; --z:73; pointer-events:none;
                           --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center; --tt: uppercase; --text-color: #4CA8E9; }
   #misery-wlj{ --left:878svh; --scale:.35; --ar:9/16; --y:52svh; --x:0svh; --rot:0deg; --z:72; }
-  #star-trio-1{ --left:883svh; --scale:.34; --y:67svh; --x:0svh; --rot:-160deg; --z:73; pointer-events:none; }
+  #star-trio-1{ --left:886svh; --scale:.34; --y:69svh; --x:0svh; --rot:-160deg; --z:73; pointer-events:none; }
   #misery-visualizer{ --left:853svh; --scale:.38; --y:0svh; --x:8svh; --rot:0deg; --z:39; }
 
 /* ========= SLEEPWALKING SECTION ========= */
@@ -669,9 +669,9 @@ html, body {
 
 /* ========= EP SECTION ========= */
   #ep-inspo{ --left:1007svh; --scale:.63; --y:44svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
-  #top-spotify-sparkles{ --left:1086svh; --scale:.63; --y:70svh; --x:0svh; --rot:0deg; --z:31; pointer-events:none; }
+  #top-spotify-sparkles{ --left:1086svh; --scale:.43; --y:70svh; --x:0svh; --rot:90deg; --z:31; pointer-events:none; }
   #ep-inspo-sp{ --left:1086svh; --scale:.6; --y:47svh; --x:0svh; --rot:0deg; --z:30; }
-  #bottom-spotify-sparkles{ --left:1086svh; --scale:.63; --y:55svh; --x:0svh; --rot:0deg; --z:31; pointer-events:none; }
+  #bottom-spotify-sparkles{ --left:1086svh; --scale:.43; --y:55svh; --x:0svh; --rot:90deg; --z:31; pointer-events:none; }
   #ep-click-toread{ --left:1078svh; --scale:.25; --y:38svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
                     --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center!important; --tt: uppercase; --text-color: #4CA8E9;}
   #ep-telephone{ --left:1077svh; --scale:.26; --y:11svh; --x:0svh; --rot:0deg; --z:72; }
@@ -828,15 +828,15 @@ html, body {
   #presave-text{ --left:2496svh; --scale:.14; --y:71svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
                  --ff: "Thinker"; --fw: 400; --fs-mul: .2; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
   #presave-button{ --left:2512svh; --scale:.30; --y:35svh; --x:0svh; --rot:5deg; --z:71;}
-  #im-stamp{ --left:2515svh; --scale:.25; --y:2svh; --x:0svh; --rot:5deg; --z:70; pointer-events:none;}
+  #im-stamp{ --left:2520svh; --scale:.25; --y:2svh; --x:0svh; --rot:-5deg; --z:70; pointer-events:none;}
   #thankyou-note{ --left:2551svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none;}
-  #lock-logo{ --left:2610svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
-  #social-sparkles-2{ --left:2615svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
-  #instagram-2{ --left:2626svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #tiktok-2{ --left:2632svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #twitter-2{ --left:2638svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #discord-2{ --left:2644svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #spotify-2{ --left:2650svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
-  #apple-music-2{ --left:2656svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #lock-logo{ --left:2615svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #social-sparkles-2{ --left:2620svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
+  #instagram-2{ --left:2631svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #tiktok-2{ --left:2637svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #twitter-2{ --left:2642svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #discord-2{ --left:2649svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #spotify-2{ --left:2654svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #apple-music-2{ --left:2660svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
   #esc{ --left:2695svh; --scale:.2; --y:50svh; --x:8svh; --rot:0deg; --z:2; }
 
