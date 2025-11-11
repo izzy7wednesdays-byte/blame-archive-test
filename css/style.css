@@ -568,10 +568,10 @@ html, body {
   #the-scrapbook{ --left:65svh; --scale:.5; --y:12svh; --x:0svh; --rot:0deg; --z:4;pointer-events: none; }
   #lfg{ --left:97svh; --scale:.1; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
   #pink-flashing-arrow{ --left:123svh; --scale:.09; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
-  #playlist-ex{ --left:160svh; --scale:.62; --y:47svh; --x:0svh; --rot:0deg; --z:30; }
-
 /* ========= LIGHT SLEEPER SECTION ========= */
-  #lightsleeper-title{ --left:158svh; --scale:.44; --y:27svh; --x:-4svh; --rot:-8deg; --z:4; pointer-events: none; }
+  #broken-cd{ --left:160svh; --scale:.62; --y:65svh; --x:0svh; --rot:90deg; --z:29;pointer-events:none; }
+  #playlist-ex{ --left:160svh; --scale:.62; --y:35svh; --x:0svh; --rot:0deg; --z:30; }
+  #lightsleeper-title{ --left:159svh; --scale:.42; --y:24svh; --x:-4svh; --rot:-8deg; --z:4; pointer-events: none; }
   #lightsleeper-visualizer{ --left:145svh; --scale:.38; --y:0svh; --x:10svh; --rot:0deg; --z:3; }
   #lightsleeper-about{ --left:208svh; --scale:.4; --y:58svh; --x:0svh; --rot:-10deg; --z:20; pointer-events:auto;  }
   #autumn-text{ --left:220svh; --scale:.3; --y:25svh; --x:0svh; --rot:2deg; --z:0; }
@@ -591,7 +591,7 @@ html, body {
   #play-exitwounds{ --left:362svh; --scale:.25; --y:69svh; --x:0svh; --rot:13deg; --z:11; }
   #pressplaydj{ --left: 360svh; --scale: .18; --y:63svh; --x: 0svh; --rot: 13deg; --z: 12; pointer-events:none;
                 --ff: "Thinker"; --fw: 400; --fs-mul: .17; --text-color: #4CA8E9;} 
-  #missed-calls{ --left:365svh; --scale:.35; --y:26svh; --x:-6svh; --rot:4deg; --z:9;pointer-events:none}
+  #missed-calls{ --left:365svh; --scale:.35; --y:26svh; --x:-6svh; --rot:10deg; --z:9;pointer-events:none}
   #about-exitwounds{ --left:397svh; --scale:.31; --y:45svh; --x:8svh; --rot:-6deg; --z:9;}
   #exitwounds-animation-1{ --left:387svh; --scale:.40; --y:23svh; --x:0svh; --rot:0deg; --z:2; pointer-events:none; }
   #play-exitwounds-voicememo{ --left:392svh; --scale:.23; --y:1svh; --x:0svh; --rot:0deg; --z:7; }
