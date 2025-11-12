@@ -854,18 +854,18 @@ html, body {
                       --ff: "Thinker"; --fw: 400; --fs-mul:.13; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
   #silver-star3-15{ --left:2310svh; --scale:.05; --y:0svh; --x:0svh; --rot:-10deg; --z:405; pointer-events:none; }
   #silver-star3-16{ --left:2320svh; --scale:.08; --y:94svh; --x:0svh; --rot:-8deg; --z:405; pointer-events:none; }
-  #glow-star-10{ --left:2340svh; --scale:.07; --y:90svh; --x:0svh; --rot:8deg; --z:405; pointer-events:none; }
+  #glow-star-10{ --left:2340svh; --scale:.10; --y:90svh; --x:0svh; --rot:8deg; --z:405; pointer-events:none; }
   #hangout-tweet{ --left:2324svh; --scale:.375; --y:49svh; --x:0svh; --rot:0deg; --z:46; pointer-events:none; }
   #londoncard-v1{ --left:2319svh; --scale:.35; --y:4svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
-  #glow-star-11{--left:2339svh; --scale:.11; --y:30svh; --x:0svh; --rot:10deg; --z:500; pointer-events:none; }
-  #glow-star-12{--left:2347svh; --scale:.09; --y:45svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
+  #glow-star-11{--left:2349svh; --scale:.11; --y:30svh; --x:0svh; --rot:10deg; --z:500; pointer-events:none; }
+  #glow-star-12{--left:2352svh; --scale:.09; --y:46svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
   #londoncard-arrow-1{ --left:2346svh; --scale:.04; --y:3svh; --x:0svh; --rot:-63deg; --z:46; pointer-events:none; }
   #londoncard-text{ --left:2348svh; --scale:.20; --y:13svh; --x:0svh; --rot:0deg; --z:46; pointer-events:none;
                     --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
-  #blue-star-19{--left:2354svh; --scale:.09; --y:3svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
+  #blue-star-19{--left:2356svh; --scale:.09; --y:0svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
   #londoncard-arrow-2{ --left:2355svh; --scale:.04; --y:33svh; --x:0svh; --rot:170deg; --z:46; pointer-events:none; }
-  #silver-star3-17{--left:2364svh; --scale:.12; --y:15svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
-  #blue-star-20{--left:2360svh; --scale:.08; --y:7svh; --x:0svh; --rot:-15deg; --z:500; pointer-events:none; }
+  #silver-star3-17{--left:2369svh; --scale:.12; --y:15svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
+  #blue-star-20{--left:2363svh; --scale:.07; --y:7svh; --x:0svh; --rot:-15deg; --z:500; pointer-events:none; }
   #london-tv{ --left:2340svh; --scale:.435; --y:61svh; --x:0svh; --rot:0deg; --z:47; }
   #londoncard-front{ --left:2368.5svh; --scale:.35; --y:28svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #film-strip{ --left:2399svh; --scale:.74; --y:25svh; --x:0svh; --rot:-5.0deg; --z:44; pointer-events:none; }
@@ -876,12 +876,14 @@ html, body {
   #church-video{ --left:2419svh; --scale:.30; --ar:336/299; --y:38svh; --x:0svh; --rot:0deg; --z:46; }
   #villains{ --left:2421svh; --scale:.30; --y:2svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #strawberry{ --left:2473svh; --scale:.21; --y:75svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
+  #glow-star-13{}
   #next-title{ --left:2456svh; --scale:.30; --y:40svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
   #join-postcard{ --left:2455svh; --scale:.37; --y:2svh; --x:0svh; --rot:8deg; --z:46; }
   #presave-text{ --left:2496svh; --scale:.14; --y:71svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
                  --ff: "Thinker"; --fw: 400; --fs-mul: .2; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
-  #presave-button{ --left:2512svh; --scale:.30; --y:35svh; --x:0svh; --rot:5deg; --z:71;}
-  #im-stamp{ --left:2520svh; --scale:.25; --y:2svh; --x:0svh; --rot:-5deg; --z:70; pointer-events:none;}
+  #presave-button{ --left:2512svh; --scale:.30; --y:37svh; --x:0svh; --rot:5deg; --z:71;}
+  #glow-star-14{}
+  #im-stamp{ --left:2525svh; --scale:.25; --y:2svh; --x:0svh; --rot:-5deg; --z:70; pointer-events:none;}
   #thankyou-note{ --left:2551svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none;}
   #lock-logo{ --left:2615svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
   #social-sparkles-2{ --left:2620svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
