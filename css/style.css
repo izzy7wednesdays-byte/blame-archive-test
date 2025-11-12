@@ -832,7 +832,7 @@ html, body {
   #selfie-poster{ --left:2104svh; --scale:.35; --y:1svh; --x:0svh; --rot:2deg; --z:60; pointer-events:none; }
   
 /* ========= LONDON SECTION ========= */
-  #glow-star-7{ --left:2143svh; --scale:.12; --y:80svh; --x:10svh; --rot:-75deg; --z:400; pointer-events:none; }
+  #glow-star-7{ --left:2146svh; --scale:.12; --y:80svh; --x:10svh; --rot:70deg; --z:400; pointer-events:none; }
   #london-title{ --left:2120svh; --scale:.25; --y:37svh; --x:10svh; --rot:-90deg; --z:40; pointer-events:none; }
   #glow-star-8{ --left:2159svh; --scale:.10; --y:92svh; --x:0svh; --rot:1deg; --z:440; pointer-events:none; }
   #hangout-poster{ --left:2159svh; --scale:.71; --y:32svh; --x:0svh; --rot:1deg; --z:44; pointer-events:none; }
@@ -841,7 +841,7 @@ html, body {
   #london-live-2{ --left:2198svh; --scale:.38; --ar:9/16; --y:2svh; --x:0svh; --rot:0.0deg; --z:43; }
   #hangout-vlog{ --left:2214svh; --scale:.35; --y:64svh; --x:0svh; --rot:0deg; --z:57; }
   #rsvp-cloud{ --left:2216svh; --scale:.15; --y:47svh; --x:0svh; --rot:-15deg; --z:44; pointer-events:none; }
-  #glow-star-9{{ --left:2224svh; --scale:.05; --y:-3svh; --x:0svh; --rot:-1deg; --z:440; pointer-events:none; }
+  #glow-star-9{ --left:2224svh; --scale:.05; --y:-3svh; --x:0svh; --rot:-1deg; --z:440; pointer-events:none; }
   #rsvp-arrow{ --left:2224svh; --scale:.04; --y:42svh; --x:0svh; --rot:-1deg; --z:44; pointer-events:none; }
   #rsvp-button{ --left:2238svh; --scale:.13; --y:43svh; --x:0svh; --rot:0deg; --z:57; }
   #blue-star-17{ --left:2222svh; --scale:.06; --y:24svh; --x:0svh; --rot:0deg; --z:500; pointer-events:none; }
