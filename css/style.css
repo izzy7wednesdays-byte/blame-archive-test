@@ -808,9 +808,9 @@ html, body {
   #backtruck-1{ --left:1935svh; --scale:.29; --y:3svh; --x:0svh; --rot:4deg; --z:55; pointer-events:none; }
 /* ========= MERCH SECTION ========= */
   #landmines-matches{ --left:1923svh; --scale:.35; --y:60svh; --x:0svh; --rot:-2.5deg; --z:60; pointer-events:none;  }
-  #blue-star-16{ --left:1923svh; --scale:.11; --y:57svh; --x:0svh; --rot:-40.0deg; --z:400; pointer-events:none; }
+  #blue-star-16{ --left:1924svh; --scale:.11; --y:57svh; --x:0svh; --rot:-40.0deg; --z:400; pointer-events:none; }
   #fire-meme{ --left:1950svh; --scale:.26; --y:16svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none; }
-  #silver-star3-13{ --left:1964svh; --scale:.10; --y:3svh; --x:0svh; --rot:15deg; --z:60; pointer-events:none; }
+  #silver-star3-13{ --left:1964svh; --scale:.13; --y:3svh; --x:0svh; --rot:15deg; --z:60; pointer-events:none; }
   #pretty-little-liars{ --left:1990svh; --scale:.22; --y:73svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none;  }
   #pretty-little-liars-text{ --left:1990svh; --scale:.22; --y:65svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
                              --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4CA8E9; }
@@ -832,7 +832,7 @@ html, body {
   #selfie-poster{ --left:2104svh; --scale:.35; --y:1svh; --x:0svh; --rot:2deg; --z:60; pointer-events:none; }
   
 /* ========= LONDON SECTION ========= */
-  #glow-star-7{ --left:2120svh; --scale:.12; --y:80svh; --x:10svh; --rot:-90deg; --z:400; pointer-events:none; }
+  #glow-star-7{ --left:2135svh; --scale:.12; --y:80svh; --x:10svh; --rot:-75deg; --z:400; pointer-events:none; }
   #london-title{ --left:2120svh; --scale:.25; --y:37svh; --x:10svh; --rot:-90deg; --z:40; pointer-events:none; }
   #glow-star-8{ --left:2159svh; --scale:.10; --y:92svh; --x:0svh; --rot:1deg; --z:440; pointer-events:none; }
   #hangout-poster{ --left:2159svh; --scale:.71; --y:32svh; --x:0svh; --rot:1deg; --z:44; pointer-events:none; }
