@@ -762,13 +762,13 @@ html, body {
 /* ========= VIDEO SECTION ========= */
   #misery-bts{ --left:1612svh; --scale:.38; --y:62svh; --x:0svh; --rot:0deg; --z:39; }
   #buddy-gif{ --left:1612svh; --scale:.15; --y:45svh; --x:0svh; --rot:0.0deg; --z:53; pointer-events:none; }
-  #silver-star3-9{ --left:1587svh; --scale:.09; --y:35svh; --x:0svh; --rot:-15.0deg; --z:400; pointer-events:none; }
-  #blue-star-11{ --left:1585svh; --scale:.03; --y:25svh; --x:0svh; --rot:-20.0deg; --z:400; pointer-events:none; }
-  #glow-star-1{ --left:1597svh; --scale:.07; --y:30svh; --x:0svh; --rot:15.0deg; --z:400; pointer-events:none; }
+  #silver-star3-9{ --left:1593svh; --scale:.09; --y:35svh; --x:0svh; --rot:-15.0deg; --z:400; pointer-events:none; }
+  #blue-star-11{ --left:1595svh; --scale:.03; --y:35svh; --x:0svh; --rot:-20.0deg; --z:400; pointer-events:none; }
+  #glow-star-1{ --left:1600svh; --scale:.07; --y:30svh; --x:0svh; --rot:15.0deg; --z:400; pointer-events:none; }
   #silver-star3-10{ --left:1600svh; --scale:.02; --y:45svh; --x:0svh; --rot:-20.0deg; --z:400; pointer-events:none; }
-  #blue-star-12{ --left:1600svh; --scale:.1; --y:20svh; --x:0svh; --rot:-15.0deg; --z:400; pointer-events:none; }
+  #blue-star-12{ --left:1610svh; --scale:.1; --y:24svh; --x:0svh; --rot:-15.0deg; --z:400; pointer-events:none; }
   #silver-star3-11{ --left:1610svh; --scale:.06; --y:40svh; --x:0svh; --rot:15.0deg; --z:400; pointer-events:none; }
-  #glow-star-2{ --left:1615svh; --scale:.04; --y:35svh; --x:0svh; --rot:15.0deg; --z:400; pointer-events:none; }
+  #glow-star-2{ --left:1625svh; --scale:.04; --y:37svh; --x:0svh; --rot:15.0deg; --z:400; pointer-events:none; }
   #video-title-camcorder{ --left:1585svh; --scale:.54; --y:-14svh; --x:10svh; --rot:0deg; --z:41; pointer-events:none; }
   #video-title-gif{ --left:1587svh; --scale:.20; --y:10svh; --x:10svh; --rot:-3deg; --z:40; pointer-events:none; }
   #misery-brainstorm-1{ --left:1638svh; --scale:.25; --y:35svh; --x:0svh; --rot:-2deg; --z:54; pointer-events: none; }
