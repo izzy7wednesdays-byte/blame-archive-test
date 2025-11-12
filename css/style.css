@@ -419,7 +419,7 @@ html, body {
     transform: none;
   }
 
-/* ========= GROW-ON-HOVER for ALL interactive media ========= */
+/* ========= GROW-ON-HOVER ========= */
   .slot[data-overlay-src] img,
   .slot--sc .sc-trigger,
   .slot--audio .audio-trigger,
@@ -447,7 +447,7 @@ html, body {
     cursor: pointer;
   }
 
-/* ========= TEXT SLOT (plain, non-clickable) ========= */
+/* ========= TEXT SLOT ========= */
 /* TEXT SLOT */
   .slot--text .text-box{
     /* core type */
@@ -481,12 +481,12 @@ html, body {
     -webkit-background-clip: var(--bgclip, initial);
             background-clip: var(--bgclip, initial);
   
-    /* opentype / variable font controls */
+    /* opentype */
     font-variant-ligatures: var(--liga, normal);
     font-feature-settings: var(--features, normal);
     font-variation-settings: var(--axes, normal);
   
-    /* box (usually keep plain for “text only”) */
+    /* box */
     padding: var(--pad, 0);
     border-radius: var(--br, 0);
   }
@@ -646,9 +646,9 @@ html, body {
 
 /* ========= MISERY SECTION ========= */
   #misery-ogchorus{ --left:695svh; --scale:.28; --y:70svh; --x:2svh; --rot:0deg; --z:40; }
+  #silver-star3-5{ --left:696svh; --scale:.09; --y:59svh; --x:0svh; --rot:10deg; --z:410; pointer-events:none;}
   #misery-ogchorus-text{ --left:715svh; --scale:.22; --y:59svh; --x:0svh; --rot:0deg; --z:40; pointer-events:none;
                           --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4CA8E9;}
-  #silver-star3-5{ --left:696svh; --scale:.09; --y:59svh; --x:0svh; --rot:10deg; --z:410; pointer-events:none;}
   #little-miss-misery{ --left:721svh; --scale:.23; --y:27svh; --x:10svh; --rot:4deg; --z:39; pointer-events:none; }
   #about-misery{ --left:739svh; --scale:.56; --y:43svh; --x:10svh; --rot:0deg; --z:41; }
   #silver-star3-6{ --left:759svh; --scale:.08; --y:29svh; --x:0svh; --rot:-5deg; --z:43; pointer-events:none; }
