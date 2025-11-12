@@ -857,15 +857,15 @@ html, body {
   #glow-star-10{ --left:2300svh; --scale:.07; --y:94svh; --x:0svh; --rot:8deg; --z:405; pointer-events:none; }
   #hangout-tweet{ --left:2324svh; --scale:.375; --y:49svh; --x:0svh; --rot:0deg; --z:46; pointer-events:none; }
   #londoncard-v1{ --left:2319svh; --scale:.35; --y:4svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
-  #glow-star-11{--left:2319svh; --scale:.11; --y:98svh; --x:0svh; --rot:10deg; --z:500; pointer-events:none; }
-  #glow-star-12{--left:2328svh; --scale:.09; --y:95svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
+  #glow-star-11{--left:2319svh; --scale:.11; --y:20svh; --x:0svh; --rot:10deg; --z:500; pointer-events:none; }
+  #glow-star-12{--left:2328svh; --scale:.09; --y:35svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
   #londoncard-arrow-1{ --left:2346svh; --scale:.04; --y:3svh; --x:0svh; --rot:-63deg; --z:46; pointer-events:none; }
   #londoncard-text{ --left:2348svh; --scale:.20; --y:13svh; --x:0svh; --rot:0deg; --z:46; pointer-events:none;
                     --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
-  #blue-star-19{}
+  #blue-star-19{--left:2324svh; --scale:.09; --y:5svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
   #londoncard-arrow-2{ --left:2355svh; --scale:.04; --y:33svh; --x:0svh; --rot:170deg; --z:46; pointer-events:none; }
-  #silver-star3-17{}
-  #blue-star-20{}
+  #silver-star3-17{--left:2334svh; --scale:.12; --y:15svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
+  #blue-star-20{--left:2330svh; --scale:.09; --y:7svh; --x:0svh; --rot:-15deg; --z:500; pointer-events:none; }
   #london-tv{ --left:2340svh; --scale:.435; --y:61svh; --x:0svh; --rot:0deg; --z:47; }
   #londoncard-front{ --left:2368.5svh; --scale:.35; --y:28svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
   #film-strip{ --left:2399svh; --scale:.74; --y:25svh; --x:0svh; --rot:-5.0deg; --z:44; pointer-events:none; }
