@@ -639,7 +639,7 @@ html, body {
                                  --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4CA8E9;}
   #landmines-reaction{ --left:670svh; --scale:.42; --ar:9/16; --y:55svh; --x:0svh; --rot:0deg; --z:42; }
   #blue-star-6{ --left:678svh; --scale:.04; --y:49svh; --x:0svh; --rot:4deg; --z:420; pointer-events:none }
-  #blue-star-7{ --left:683svh; --scale:.07; --y:29svh; --x:0svh; --rot:-15deg!important; --z:420; pointer-events:none }
+  #blue-star-7{ --left:685svh; --scale:.07; --y:29svh; --x:0svh; --rot:-30deg!important; --z:420; pointer-events:none }
   #play-landmines{ --left:686svh; --scale:.28; --y:1svh; --x:0svh; --rot:0deg; --z:19; }
   #landmines-session-voicememos{ --left:685svh; --scale:.31; --y:27svh; --x:10svh; --rot:7deg; --z:21; }
   #enchanted-bridge{ --left:707svh; --scale:.17; --y:2svh; --x:0svh; --rot:0deg; --z:18; pointer-events:none; }
@@ -755,8 +755,8 @@ html, body {
                     --ff: "Thinker"; --fw: 410; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #e1effa; }
   #caitlin-text-3{ --left:1566svh; --scale:.35; --y:45svh; --x:0svh; --rot:-5.0deg; --z:40; pointer-events:none; }
   #shoot-bts-2{ --left:1571svh; --scale:.38; --ar:9/16; --y:5svh; --x:0svh; --rot:0deg; --z:48; }
-  #star-trio-3{ --left:1585svh; --scale:.10; --y:76svh; --x:10svh; --rot:185deg; --z:410; pointer-events:none; }
-  #star-trio-4{ --left:1593svh; --scale:.15; --y:87svh; --x:10svh; --rot:60deg; --z:410; pointer-events:none; }
+  #star-trio-3{ --left:1585svh; --scale:.10; --y:80svh; --x:10svh; --rot:5deg; --z:410; pointer-events:none; }
+  #star-trio-4{ --left:1592svh; --scale:.15; --y:85svh; --x:10svh; --rot:-120deg; --z:410; pointer-events:none; }
   #dorm-mirror{ --left:1587svh; --scale:.35; --y:42svh; --x:0svh; --rot:0.0deg; --z:40; pointer-events:none; }
 
 /* ========= VIDEO SECTION ========= */
