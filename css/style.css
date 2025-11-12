@@ -756,7 +756,7 @@ html, body {
   #caitlin-text-3{ --left:1566svh; --scale:.35; --y:45svh; --x:0svh; --rot:-5.0deg; --z:40; pointer-events:none; }
   #shoot-bts-2{ --left:1571svh; --scale:.38; --ar:9/16; --y:5svh; --x:0svh; --rot:0deg; --z:48; }
   #star-trio-3{ --left:1584svh; --scale:.10; --y:79svh; --x:10svh; --rot:12deg; --z:410; pointer-events:none; }
-  #star-trio-4{ --left:1599svh; --scale:.15; --y:97svh; --x:10svh; --rot:-160deg; --z:410; pointer-events:none; }
+  #star-trio-4{ --left:1600svh; --scale:.15; --y:97svh; --x:10svh; --rot:-160deg; --z:410; pointer-events:none; }
   #dorm-mirror{ --left:1587svh; --scale:.35; --y:42svh; --x:0svh; --rot:0.0deg; --z:40; pointer-events:none; }
 
 /* ========= VIDEO SECTION ========= */
@@ -778,7 +778,7 @@ html, body {
   #happy-easter{ --left:1708svh; --scale:.27; --ar:16/9; --y:67svh; --x:0svh; --rot:0.0deg; --z:51; }
   #dab-video{ --left:1732svh; --scale:.27; --ar:16/9; --y:5svh; --x:0svh; --rot:0.0deg; --z:49; }
   #exitwounds-film-roll{ --left:1840svh; --scale:1; --y:76svh; --x:0svh; --rot:-90deg; --z:56; pointer-events:none; }
-  #dvd-video{ --left:1758svh; --scale:.15; --y:38svh; --x:0svh; --rot:0deg; --z:1000; pointer-events:none; }
+  #dvd-video{ --left:1760svh; --scale:.18; --y:36svh; --x:0svh; --rot:0deg; --z:10; pointer-events:none; }
   #across-street{ --left:1780svh; --scale:.26; --ar:287/480; --y:64svh; --x:0svh; --rot:0.0deg; --z:52; }
   #grew-here{ --left:1796svh; --scale:.26; --ar:407/482; --y:64svh; --x:0svh; --rot:0.0deg; --z:53; }
   #mazzy-star{ --left:1818svh; --scale:.26; --ar:407/482; --y:64svh; --x:0svh; --rot:0.0deg; --z:54; }
