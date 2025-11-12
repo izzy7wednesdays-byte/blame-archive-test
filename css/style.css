@@ -611,6 +611,10 @@ html, body {
   #subscribe-arrow{ --left:452svh; --scale:.04; --y:10svh; --x:0svh; --rot:-59deg;--z:20; pointer-events:none;  }
   #subscribe-button{ --left:459svh; --scale:.14; --y:10svh; --x:0svh; --rot:6deg; --z:20; }
   #exitwounds-substackflier{ --left:453svh; --scale:.76; --y:30svh; --x:0svh; --rot:14deg; --z:3; }
+  #silver-star3-1{ --left:454svh; --scale:.07; --y:1svh; --x:0svh; --rot:-59deg;--z:20; pointer-events:none; }
+  #blue-star-3{ --left:459svh; --scale:.04; --y:4svh; --x:0svh; --rot:6deg; --z:20; pointer-events:none; }
+  #silver-star3-2{ --left:462svh; --scale:.06; --y:6svh; --x:0svh; --rot:12deg; --z:20; pointer-events:none; }
+  #silver-star3-3{ --left:465svh; --scale:.08; --y:10svh; --x:0svh; --rot:48deg; --z:20; pointer-events:none; }
 
 /* ========= LANDMINES SECTION ========= */
   #glitter-truck{ --left:494svh; --scale:.48; --y:-18svh; --x:0svh; --rot:0deg; --z:7; pointer-events:none;}
