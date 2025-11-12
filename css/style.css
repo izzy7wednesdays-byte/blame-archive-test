@@ -755,8 +755,8 @@ html, body {
                     --ff: "Thinker"; --fw: 410; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #e1effa; }
   #caitlin-text-3{ --left:1566svh; --scale:.35; --y:45svh; --x:0svh; --rot:-5.0deg; --z:40; pointer-events:none; }
   #shoot-bts-2{ --left:1571svh; --scale:.38; --ar:9/16; --y:5svh; --x:0svh; --rot:0deg; --z:48; }
-  #star-trio-3{ --left:1585svh; --scale:.10; --y:80svh; --x:10svh; --rot:5deg; --z:410; pointer-events:none; }
-  #star-trio-4{ --left:1592svh; --scale:.15; --y:85svh; --x:10svh; --rot:-120deg; --z:410; pointer-events:none; }
+  #star-trio-3{ --left:1584svh; --scale:.10; --y:79svh; --x:10svh; --rot:9deg; --z:410; pointer-events:none; }
+  #star-trio-4{ --left:1595svh; --scale:.15; --y:88svh; --x:10svh; --rot:-140deg; --z:410; pointer-events:none; }
   #dorm-mirror{ --left:1587svh; --scale:.35; --y:42svh; --x:0svh; --rot:0.0deg; --z:40; pointer-events:none; }
 
 /* ========= VIDEO SECTION ========= */
