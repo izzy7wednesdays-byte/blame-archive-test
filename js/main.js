@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V7.7 - Fixing Overlay Code  ----------- */
+/* --------- V7.8 - Fixing Overlay Code  ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -345,7 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 
-  /* ===== 5. Overlay click-to-open ===== */
+/* ===== 5. Overlay click-to-open (delegated) ===== */
   const overlay = document.getElementById("overlay");
   const ovCard  = overlay ? overlay.querySelector(".ov-card") : null;
   const ovImg   = overlay ? overlay.querySelector("#overlay-img") : null;
@@ -386,27 +386,32 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 180);
     }
 
-    // Any slot with data-overlay-src becomes a clickable overlay trigger
-    document.querySelectorAll(".slot[data-overlay-src]").forEach(slot => {
-      const clickable = slot.querySelector("img, dotlottie-wc") || slot;
+    // === Delegated click handler for ANY overlay slot ===
+    // Works for:
+    // - <figure class="slot" data-overlay-src="..."><img ...></figure>
+    // - <figure class="slot slot--lottie" data-overlay-src="..."><div><dotlottie-wc></dotlottie-wc></div></figure>
+    document.addEventListener("click", (e) => {
+      const slot = e.target.closest(".slot[data-overlay-src]");
+      if (!slot) return;
 
-      clickable.addEventListener("click", e => {
-        e.preventDefault();
-        e.stopPropagation();
+      // We clicked somewhere inside an overlay-enabled slot
+      e.preventDefault();
+      e.stopPropagation();
 
-        const src = slot.dataset.overlaySrc;
-        const alt =
-          slot.dataset.overlayAlt ||
-          clickable.getAttribute?.("alt") ||
-          "";
+      const src = slot.dataset.overlaySrc;
+      if (!src) {
+        console.warn("[Overlay] Missing data-overlay-src on", slot);
+        return;
+      }
 
-        if (!src) {
-          console.warn("[Overlay] Missing data-overlay-src on", slot);
-          return;
-        }
+      // Prefer explicit overlay alt, then inner img alt if present
+      const innerImg = slot.querySelector("img");
+      const alt =
+        slot.dataset.overlayAlt ||
+        (innerImg ? innerImg.alt : "") ||
+        "";
 
-        openOverlay(src, alt, slot);
-      });
+      openOverlay(src, alt, slot);
     });
 
     // X button closes overlay
@@ -436,4 +441,4 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("Overlay element not found");
   }
 
-  });
+});
