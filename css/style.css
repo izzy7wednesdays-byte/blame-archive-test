@@ -571,16 +571,16 @@ html, body {
 /* ========= LIGHT SLEEPER SECTION ========= */
   #broken-cd{ --left:143svh; --scale:.29; --y:78svh; --x:0svh; --rot:85deg; --z:29;pointer-events:none; }
   #playlist-ex{ --left:162svh; --scale:.62; --y:25svh; --x:0svh; --rot:-5deg; --z:30; }
-  #blue-star-1{ --left:183svh; --scale:.06; --y:85svh; --x:0svh; --rot:4deg; --z:2;pointer-events:none; }
-  #blue-star-2{ --left:185svh; --scale:.13; --y:95svh; --x:0svh; --rot:4deg; --z:2;pointer-events:none; }
-  #silver-star1-1{ --left:187svh; --scale:.17; --y:73svh; --x:0svh; --rot:4deg; --z:2;pointer-events:none; }
+  #blue-star-1{ --left:183svh; --scale:.06; --y:85svh; --x:0svh; --rot:80deg; --z:20;pointer-events:none; }
+  #blue-star-2{ --left:185svh; --scale:.13; --y:95svh; --x:0svh; --rot:86deg; --z:20;pointer-events:none; }
+  #silver-star1-1{ --left:187svh; --scale:.17; --y:73svh; --x:0svh; --rot:83deg; --z:20;pointer-events:none; }
   #lightsleeper-title{ --left:159svh; --scale:.42; --y:22svh; --x:-4svh; --rot:-5deg; --z:4; pointer-events: none; }
   #lightsleeper-visualizer{ --left:145svh; --scale:.38; --y:0svh; --x:10svh; --rot:0deg; --z:3; }
   #lightsleeper-about{ --left:210svh; --scale:.4; --y:58svh; --x:0svh; --rot:-10deg; --z:20; pointer-events:auto;  }
   #autumn-text{ --left:220svh; --scale:.3; --y:22svh; --x:0svh; --rot:2deg; --z:0; }
   #blame-it-notesapp{ --left:215svh; --scale:.20; --y:0svh; --x:0svh; --rot:-2deg; --z:4; }
   #lightsleeper-studio{ --left:247svh; --scale:.40; --ar:9/16; --y:57svh; --x:0svh; --rot:0deg; --z:41;  }
-  #silver-star1-2{ --left:245svh; --scale:.18; --y:5svh; --x:0svh; --rot:20deg; --z:11;pointer-events:none; }
+  #silver-star1-2{ --left:245svh; --scale:.18; --y:5svh; --x:0svh; --rot:20deg; --z:60;pointer-events:none; }
   #izzymacarthur-withguitar{ --left:272svh; --scale:.3; --y:66svh; --x:0svh; --rot:0deg; --z:41;}
   #click4chordz{ --left:288svh; --scale:.11; --y:88svh; --x:0svh; --rot:0deg; --z:42; pointer-events:none;
                  --ff: "Manic"; --ta: center; --fw: 400; --fs-mul: .18; --tt: uppercase; --text-color: #4C58E9;}
@@ -589,8 +589,8 @@ html, body {
   #lightsleeper-voicememo{ --left: 310svh; --scale: .34; --y:29svh; --x: 0svh; --rot:-6deg; --z: 9; } 
 
 /* ========= EXIT WOUNDS SECTION ========= */
-  #exitwounds-lyricvideo{ /* V4 placeholder */ --left:298svh; --scale: .38; --y:63svh; --x: 0svh; --rot: 0deg; --z:10; }
-  #star-trio-1{ --left:346svh; --scale:.28; --y:61svh; --x:0svh; --rot:-160deg; --z:4; pointer-events:none; }
+  #exitwounds-lyricvideo{ /* V4 placeholder */ --left:298svh; --scale: .38; --y:63svh; --x: 0svh; --rot: 0deg; --z: 21; }
+  #star-trio-1{ --left:346svh; --scale:.28; --y:61svh; --x:0svh; --rot:-160deg; --z:10; pointer-events:none; }
   #exitwounds-title{ --left:322svh; --scale:.33; --y: 0svh; --x:0svh; --rot:-12deg; --z:1; pointer-events:none;   }
   #play-exitwounds{ --left:362svh; --scale:.25; --y:69svh; --x:0svh; --rot:13deg; --z:11; }
   #pressplaydj{ --left: 360svh; --scale: .18; --y:63svh; --x: 0svh; --rot: 13deg; --z: 12; pointer-events:none;
@@ -611,17 +611,17 @@ html, body {
   #subscribe-arrow{ --left:452svh; --scale:.04; --y:10svh; --x:0svh; --rot:-59deg;--z:20; pointer-events:none;  }
   #subscribe-button{ --left:459svh; --scale:.14; --y:10svh; --x:0svh; --rot:6deg; --z:20; }
   #exitwounds-substackflier{ --left:453svh; --scale:.76; --y:30svh; --x:0svh; --rot:14deg; --z:3; }
-  #silver-star3-1{ --left:458svh; --scale:.10; --y:-1svh; --x:0svh; --rot:-59deg;--z:2; pointer-events:none; }
-  #blue-star-3{ --left:468svh; --scale:.04; --y:4svh; --x:0svh; --rot:16deg; --z:2; pointer-events:none; }
-  #silver-star3-2{ --left:478svh; --scale:.06; --y:1svh; --x:0svh; --rot:12deg; --z:2; pointer-events:none; }
-  #silver-star3-3{ --left:489svh; --scale:.08; --y:8svh; --x:0svh; --rot:48deg; --z:2; pointer-events:none; }
+  #silver-star3-1{ --left:458svh; --scale:.10; --y:-1svh; --x:0svh; --rot:-59deg;--z:20; pointer-events:none; }
+  #blue-star-3{ --left:468svh; --scale:.04; --y:4svh; --x:0svh; --rot:16deg; --z:20; pointer-events:none; }
+  #silver-star3-2{ --left:478svh; --scale:.06; --y:1svh; --x:0svh; --rot:12deg; --z:20; pointer-events:none; }
+  #silver-star3-3{ --left:489svh; --scale:.08; --y:8svh; --x:0svh; --rot:48deg; --z:20; pointer-events:none; }
 
 /* ========= LANDMINES SECTION ========= */
   #glitter-truck{ --left:494svh; --scale:.48; --y:-18svh; --x:0svh; --rot:0deg; --z:7; pointer-events:none;}
-  #landmines-bts-clip{ --left:532svh; --scale:.3; --ar:16/9; --y:65svh; --x:0svh; --rot:0deg; --z:20; }
-  #landmines-voicememo{ --left:523svh; --scale:.26; --y:37svh; --x:5svh; --rot:0deg; --z:19; }
-  #blue-star-4{ --left:517svh; --scale:.04; --y:41svh; --x:5svh; --rot:6deg; --z:3; }
-  #katstratford-car{ --left:519svh; --scale:.21; --y:13svh; --x:0svh; --rot:0deg; --z:10; pointer-events:none; }
+  #landmines-bts-clip{ --left:532svh; --scale:.3; --ar:16/9; --y:65svh; --x:0svh; --rot:0deg; --z:40; }
+  #landmines-voicememo{ --left:523svh; --scale:.26; --y:37svh; --x:5svh; --rot:0deg; --z:30; }
+  #blue-star-4{ --left:517svh; --scale:.04; --y:41svh; --x:5svh; --rot:6deg; --z:31; }
+  #katstratford-car{ --left:519svh; --scale:.21; --y:13svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
   #vocals-landmines-1{ --left:568svh; --scale:.35; --ar:9/16; --y:0svh; --x:10svh; --rot:0deg; --z:37; }
   #vocals-landmines-1-text{ --left:550svh; --scale:.2; --y:21svh; --x:10svh; --rot:0deg; --z:38; pointer-events:none;
                             --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: left;  --tt: uppercase; --text-color: #4C58E9;}
