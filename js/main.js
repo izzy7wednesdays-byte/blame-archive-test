@@ -39,6 +39,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { passive: false });
   }
 
+    /* ===== 1.3 Lazy-load Lotties (targeted, opt-in only) ===== */
+  (function initLazyLotties() {
+    if (!("IntersectionObserver" in window)) {
+      // Older browsers: just let them load normally
+      return;
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const el = entry.target;
+        const src = el.getAttribute("data-lottie-src");
+        if (src) {
+          el.setAttribute("src", src);
+          el.removeAttribute("data-lottie-src");
+        }
+
+        io.unobserve(el);
+      });
+    }, {
+      root: null,
+      rootMargin: "100% 0px 100% 0px",
+      threshold: 0.01
+    });
+
+    // Only Lotties that *explicitly* opt-in via data-lottie-src are observed
+    document.querySelectorAll("dotlottie-wc[data-lottie-src]").forEach(el => io.observe(el));
+  })();
+
+
   /* ===== 2. SoundCloud image-controlled player (Option B: single hidden iframe) ===== */
   (function initSCController() {
     const SC_SCRIPT_SRC = 'https://w.soundcloud.com/player/api.js';
