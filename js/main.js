@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V8.0 - Separate clicks  ----------- */
+/* --------- V8.1 - Separate clicks  ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -348,99 +348,129 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 
-/* ===== 5. Overlay click-to-open (delegated) ===== */
+/* ===== 5. Overlay click-to-open ===== */
+
+(function initOverlay() {
+  // Grab core overlay elements
   const overlay = document.getElementById("overlay");
-  const ovCard  = overlay ? overlay.querySelector(".ov-card") : null;
-  const ovImg   = overlay ? overlay.querySelector("#overlay-img") : null;
-  const ovClose = overlay ? overlay.querySelector(".overlay-close") : null;
-
-  if (overlay && ovCard && ovImg) {
-
-    function openOverlay(src, alt, slot) {
-      ovImg.src = src;
-      ovImg.alt = alt || "";
-
-      // Copy slot-specific overlay position variables if present
-      if (slot) {
-        const vars = ["--ov-x-top", "--ov-x-left", "--ov-x-size"];
-        const slotStyles = getComputedStyle(slot);
-        vars.forEach(name => {
-          const value = slotStyles.getPropertyValue(name).trim();
-          if (value) {
-            ovCard.style.setProperty(name, value);
-          } else {
-            ovCard.style.removeProperty(name);
-          }
-        });
-      }
-
-      overlay.classList.add("is-open");
-    }
-
-    function closeOverlay() {
-      overlay.classList.remove("is-open");
-      // Let fade-out finish before clearing src/vars
-      setTimeout(() => {
-        ovImg.removeAttribute("src");
-        ovImg.removeAttribute("alt");
-        ["--ov-x-top", "--ov-x-left", "--ov-x-size"].forEach(name => {
-          ovCard.style.removeProperty(name);
-        });
-      }, 180);
-    }
-
-    // === Direct click handlers for EACH overlay slot ===
-    // This avoids any interference from other delegated listeners.
-    document.querySelectorAll(".slot[data-overlay-src]").forEach(slot => {
-      // Optional: enforce pointer cursor at the figure level
-      slot.style.cursor = "pointer";
-
-      slot.addEventListener("click", e => {
-        e.preventDefault();
-        e.stopPropagation();
-
-        const src = slot.dataset.overlaySrc;
-        if (!src) {
-          console.warn("[Overlay] Missing data-overlay-src on", slot);
-          return;
-        }
-
-        // Prefer explicit overlay alt, then inner img alt if present
-        const innerImg = slot.querySelector("img");
-        const alt =
-          slot.dataset.overlayAlt ||
-          (innerImg ? innerImg.alt : "") ||
-          "";
-
-        openOverlay(src, alt, slot);
-      });
-    });
-
-    // X button closes overlay
-    if (ovClose) {
-      ovClose.addEventListener("click", e => {
-        e.preventDefault();
-        e.stopPropagation();
-        closeOverlay();
-      });
-    }
-
-    // Clicking the dark backdrop closes overlay (but not clicks on the card)
-    overlay.addEventListener("click", e => {
-      if (e.target === overlay) {
-        closeOverlay();
-      }
-    });
-
-    // ESC key closes overlay
-    document.addEventListener("keydown", e => {
-      if (e.key === "Escape") {
-        closeOverlay();
-      }
-    });
-
-  } else {
-    console.warn("Overlay element not found");
+  if (!overlay) {
+    console.warn("[Overlay] #overlay element not found in DOM");
+    return;
   }
+
+  const ovCard  = overlay.querySelector(".ov-card");
+  const ovImg   = overlay.querySelector("#overlay-img");
+  const ovClose = overlay.querySelector(".overlay-close");
+
+  if (!ovCard || !ovImg) {
+    console.warn("[Overlay] Missing .ov-card or #overlay-img inside #overlay");
+    return;
+  }
+
+  console.log("[Overlay] Init OK: overlay elements wired");
+
+  // Open overlay with given image + alt, optionally using slot CSS vars
+  function openOverlay(src, alt, slot) {
+    if (!src) {
+      console.warn("[Overlay] openOverlay called without src");
+      return;
+    }
+
+    ovImg.src = src;
+    ovImg.alt = alt || "";
+
+    // Copy any overlay positioning vars from the slot to the card
+    if (slot) {
+      const vars = ["--ov-x-top", "--ov-x-left", "--ov-x-size"];
+      const slotStyles = getComputedStyle(slot);
+      vars.forEach(name => {
+        const value = slotStyles.getPropertyValue(name).trim();
+        if (value) {
+          ovCard.style.setProperty(name, value);
+        } else {
+          ovCard.style.removeProperty(name);
+        }
+      });
+    }
+
+    overlay.classList.add("is-open");
+    overlay.setAttribute("aria-hidden", "false");
+    // Optional: lock body scroll if you want
+    // document.body.classList.add("overlay-open");
+  }
+
+  // Close overlay and clean up
+  function closeOverlay() {
+    overlay.classList.remove("is-open");
+    overlay.setAttribute("aria-hidden", "true");
+    // document.body.classList.remove("overlay-open");
+
+    // Let any fade-out animation run before clearing
+    setTimeout(() => {
+      ovImg.removeAttribute("src");
+      ovImg.removeAttribute("alt");
+      ["--ov-x-top", "--ov-x-left", "--ov-x-size"].forEach(name => {
+        ovCard.style.removeProperty(name);
+      });
+    }, 180);
+  }
+
+  // Attach click handlers to every overlay-enabled slot
+  const overlaySlots = document.querySelectorAll(".slot[data-overlay-src]");
+  if (!overlaySlots.length) {
+    console.warn("[Overlay] No .slot[data-overlay-src] elements found");
+  }
+
+  overlaySlots.forEach(slot => {
+    // Make sure the whole slot feels clickable
+    slot.style.cursor = "pointer";
+
+    slot.addEventListener("click", (e) => {
+      // Don't let inner elements (if any) hijack the event
+      e.preventDefault();
+      e.stopPropagation();
+
+      const src = slot.getAttribute("data-overlay-src");
+      if (!src) {
+        console.warn("[Overlay] Slot missing data-overlay-src:", slot);
+        return;
+      }
+
+      // Prefer explicit overlay alt, then inner img alt, then empty string
+      const innerImg = slot.querySelector("img");
+      const alt =
+        slot.getAttribute("data-overlay-alt") ||
+        (innerImg ? innerImg.getAttribute("alt") || "" : "");
+
+      openOverlay(src, alt, slot);
+    });
+  });
+
+  // X button closes overlay
+  if (ovClose) {
+    ovClose.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeOverlay();
+    });
+  } else {
+    console.warn("[Overlay] .overlay-close not found inside #overlay");
+  }
+
+  // Clicking the dark backdrop closes overlay (but not clicks on the card)
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      closeOverlay();
+    }
+  });
+
+  // ESC key closes overlay
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" || e.key === "Esc" || e.keyCode === 27) {
+      closeOverlay();
+    }
+  });
+
+})();
 
 });
