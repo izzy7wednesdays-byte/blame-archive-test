@@ -524,7 +524,7 @@ html, body {
   #lfg{ --left:97svh; --scale:.1; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
   #pink-flashing-arrow{ --left:123svh; --scale:.09; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
 /* ========= LIGHT SLEEPER SECTION ========= */
-  #broken-cd{ --left:145svh; --scale:.33; --y:70svh; --x:0svh; --rot:85deg; --z:29;pointer-events:none; }
+  #broken-cd{ --left:143svh; --scale:.35; --y:67svh; --x:0svh; --rot:85deg; --z:29;pointer-events:none; }
   #playlist-ex{ --left:162svh; --scale:.62; --y:25svh; --x:0svh; --rot:-5deg; --z:30; }
   #blue-star-1{ --left:183svh; --scale:.06; --y:85svh; --x:0svh; --rot:80deg; --z:20;pointer-events:none; }
   #blue-star-2{ --left:185svh; --scale:.13; --y:95svh; --x:0svh; --rot:86deg; --z:20;pointer-events:none; }
