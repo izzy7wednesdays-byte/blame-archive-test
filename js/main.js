@@ -1,9 +1,32 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V7.1 - OPTIMIZING SC PT. 2 ----------- */
+/* --------- V7.2 - SC toggle + Vimeo pause ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* ===== Shared helpers (SC + HTML audio + Vimeo) ===== */
+
+  // Pause all <audio> elements in .slot--audio, except optional one
+  function pauseAllHtmlAudio(exceptAudio) {
+    document.querySelectorAll(".slot--audio audio").forEach(a => {
+      if (a !== exceptAudio) {
+        try { a.pause(); } catch (e) {}
+      }
+    });
+  }
+
+  // Pause the single shared SC widget + any legacy widgets
+  function pauseAllSc() {
+    if (window.__scSingleWidget) {
+      try { window.__scSingleWidget.pause(); } catch (e) {}
+    }
+    if (Array.isArray(window.__scWidgets)) {
+      window.__scWidgets.forEach(w => {
+        try { w.pause(); } catch (e) {}
+      });
+    }
+  }
 
   /* ===== 1. Horizontal scroll wheel behavior ===== */
   const hwrap = document.getElementById("hwrap");
@@ -16,160 +39,106 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { passive: false });
   }
 
-  /* ===== 2. SoundCloud image-controlled player ===== */
-/* ===== 2. SoundCloud image-controlled player (Option B: single hidden iframe) ===== */
-(function initSCController() {
-  const SC_SCRIPT_SRC = 'https://w.soundcloud.com/player/api.js';
-  const iframe = document.getElementById('sc-player-iframe');
-  if (!iframe) {
-    console.warn('[SC] Missing hidden #sc-player-iframe (index.html step not applied?)');
-    return;
-  }
-
-  // Lazy-load SC script once
-  function loadSC() {
-    if (window.__scWidgetScriptLoaded) return Promise.resolve();
-    return new Promise((res, rej) => {
-      const s = document.createElement('script');
-      s.src = SC_SCRIPT_SRC;
-      s.async = true;
-      s.onload = () => { window.__scWidgetScriptLoaded = true; res(); };
-      s.onerror = rej;
-      document.head.appendChild(s);
-    });
-  }
-
-  // Shared widget state
-  let widget = null;          // SC.Widget instance (created once)
-  let initialized = false;    // iframe has been pointed at SC at least once
-  let currentUrl = null;      // currently loaded track
-  let busy = false;           // debounce fast double taps
-
-  async function ensureWidget(firstUrl) {
-    await loadSC();
-    if (!initialized) {
-      // First point to the player shell (no autoplay on init)
-      iframe.src = `https://w.soundcloud.com/player/?url=${encodeURIComponent(firstUrl)}&auto_play=false&show_teaser=false`;
-      widget = window.SC.Widget(iframe);
-
-      // Expose a tiny handle so Vimeo can pause it
-      window.__scSingleWidget = widget;
-
-      // Optional: basic diagnostics
-      widget.bind(window.SC.Widget.Events.ERROR, e => console.warn('[SC] widget error:', e));
-      initialized = true;
-    }
-    return widget;
-  }
-
-  function pauseAllHtmlAudio(exceptAudio) {
-    document.querySelectorAll(".slot--audio audio").forEach(a => {
-      if (a !== exceptAudio) { try { a.pause(); } catch(e){} }
-    });
-  }
-
-  // Our global SC pause used elsewhere
-  function pauseAllSc() {
-    try { if (widget) widget.pause(); } catch(e) {}
-    // Keep compatibility with old code that loops __scWidgets
-    if (Array.isArray(window.__scWidgets)) {
-      window.__scWidgets.forEach(w => { try { w.pause(); } catch(e){} });
-    }
-  }
-  window.pauseAllSc = pauseAllSc;   // expose so other modules can call if needed
-
-  // Click behavior on any .sc-trigger inside .slot--sc
-  document.addEventListener('click', async (e) => {
-    const trigger = e.target.closest('.sc-trigger');
-    if (!trigger) return;
-
-    const slot = trigger.closest('.slot--sc');
-    if (!slot) return;
-
-    const trackUrl = (slot.dataset.scUrl || '').trim();
-    if (!trackUrl || busy) return;
-
-    e.preventDefault();
-    e.stopPropagation();
-
-    busy = true;
-    try {
-      // Single-source audio UX: pause HTML <audio> and any other SC/Vimeo players
-      pauseAllHtmlAudio();
-      pauseAllSc();
-      if (Array.isArray(window.__vimeoPlayers)) {
-        window.__vimeoPlayers.forEach(p => { try { p.pause(); } catch(e){} });
-      }
-
-      const w = await ensureWidget(trackUrl);
-
-      if (currentUrl && trackUrl === currentUrl) {
-        // Toggle state for same track
-        try {
-          w.isPaused((paused) => {
-            if (paused) { w.play(); } else { w.pause(); }
-          });
-        } catch {
-          w.play();
-        }
-      } else {
-        // Switch to new track and play
-        currentUrl = trackUrl;
-        w.load(trackUrl, { auto_play: true, show_teaser: false });
-      }
-    } finally {
-      setTimeout(() => { busy = false; }, 200);
-    }
-  }, { passive: false });
-
-})();
-
-  // UPDATED: SC pause helpers that work with the single shared widget
-  function pauseAllScExcept(activeWidget) {
-    // If we’re using the new single shared widget
-    if (window.__scSingleWidget && window.__scSingleWidget !== activeWidget) {
-      try { window.__scSingleWidget.pause(); } catch(e){}
+  /* ===== 2. SoundCloud image-controlled player (Option B: single hidden iframe) ===== */
+  (function initSCController() {
+    const SC_SCRIPT_SRC = 'https://w.soundcloud.com/player/api.js';
+    const iframe = document.getElementById('sc-player-iframe');
+    if (!iframe) {
+      console.warn('[SC] Missing hidden #sc-player-iframe (index.html step not applied?)');
+      return;
     }
 
-    // Backwards compatibility if __scWidgets is still used anywhere
-    if (Array.isArray(window.__scWidgets)) {
-      window.__scWidgets.forEach(w => {
-        if (w !== activeWidget) {
-          try { w.pause(); } catch(e) {}
-        }
+    // Lazy-load SC script once
+    function loadSC() {
+      if (window.__scWidgetScriptLoaded) return Promise.resolve();
+      return new Promise((res, rej) => {
+        const s = document.createElement('script');
+        s.src = SC_SCRIPT_SRC;
+        s.async = true;
+        s.onload = () => { window.__scWidgetScriptLoaded = true; res(); };
+        s.onerror = rej;
+        document.head.appendChild(s);
       });
     }
-  }
 
-  function pauseAllSc() {
-    // Pause the single shared widget if present
-    if (window.__scSingleWidget) {
-      try { window.__scSingleWidget.pause(); } catch(e){}
+    // Shared widget state
+    let widget = null;          // SC.Widget instance (created once)
+    let initialized = false;    // iframe has been pointed at SC at least once
+    let currentUrl = null;      // currently loaded track
+    let busy = false;           // debounce fast double taps
+
+    async function ensureWidget(firstUrl) {
+      await loadSC();
+      if (!initialized) {
+        // First point to the player shell (no autoplay on init)
+        iframe.src =
+          `https://w.soundcloud.com/player/?url=${encodeURIComponent(firstUrl)}&auto_play=false&show_teaser=false`;
+        widget = window.SC.Widget(iframe);
+
+        // Expose a tiny handle so Vimeo can pause it
+        window.__scSingleWidget = widget;
+
+        // Optional: basic diagnostics
+        widget.bind(window.SC.Widget.Events.ERROR, e => console.warn('[SC] widget error:', e));
+        initialized = true;
+      }
+      return widget;
     }
 
-    // Backwards compatibility with any old code that still uses __scWidgets
-    if (Array.isArray(window.__scWidgets)) {
-      window.__scWidgets.forEach(w => {
-        try { w.pause(); } catch(e) {}
-      });
-    }
-  }
+    // Click behavior on any .sc-trigger inside .slot--sc
+    document.addEventListener('click', async (e) => {
+      const trigger = e.target.closest('.sc-trigger');
+      if (!trigger) return;
 
-  function pauseAllHtmlAudio(exceptAudio) {
-    document.querySelectorAll(".slot--audio audio").forEach(a => {
-      if (a !== exceptAudio) {
-        a.pause();
+      const slot = trigger.closest('.slot--sc');
+      if (!slot) return;
+
+      const trackUrl = (slot.dataset.scUrl || '').trim();
+      if (!trackUrl || busy) return;
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      busy = true;
+      try {
+        const w = await ensureWidget(trackUrl);
+
+        if (currentUrl && trackUrl === currentUrl) {
+          // === Same track: *toggle* the current state ===
+          try {
+            w.isPaused((paused) => {
+              if (paused) {
+                // Was paused → about to play: pause other audio + videos
+                pauseAllHtmlAudio();
+                if (Array.isArray(window.__vimeoPlayers)) {
+                  window.__vimeoPlayers.forEach(p => { try { p.pause(); } catch (e) {} });
+                }
+                w.play();
+              } else {
+                // Was playing → pause on second click
+                w.pause();
+              }
+            });
+          } catch (err) {
+            console.warn("[SC] isPaused() failed, falling back to play()", err);
+            w.play();
+          }
+        } else {
+          // === New track: switch + play, while stopping other audio ===
+          pauseAllHtmlAudio();
+          if (Array.isArray(window.__vimeoPlayers)) {
+            window.__vimeoPlayers.forEach(p => { try { p.pause(); } catch (e) {} });
+          }
+
+          currentUrl = trackUrl;
+          w.load(trackUrl, { auto_play: true, show_teaser: false });
+        }
+      } finally {
+        setTimeout(() => { busy = false; }, 200);
       }
-    });
-  }
-  
-  function pauseAllHtmlAudio(exceptAudio) {
-    document.querySelectorAll(".slot--audio audio").forEach(a => {
-      if (a !== exceptAudio) {
-        a.pause();
-      }
-    });
-  }
+    }, { passive: false });
+
+  })();
 
   /* ===== 3. Voice Memo (image-controlled audio) ===== */
   document.querySelectorAll(".slot--audio").forEach(slot => {
@@ -195,12 +164,14 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       e.stopPropagation();
 
+      // If this one is currently playing → pause on click #2
       if (!audio.paused && !audio.ended) {
         audio.pause();
         syncUI();
         return;
       }
 
+      // Otherwise pause all other audio + SC and play this one
       pauseAllHtmlAudio(audio);
       pauseAllSc();
 
@@ -229,50 +200,52 @@ document.addEventListener("DOMContentLoaded", () => {
     syncUI();
   });
 
-/* ===== 3.5 Vimeo single-play controller ===== */
-(function initVimeoPlayers() {
-  if (typeof Vimeo === "undefined" || !Vimeo.Player) {
-    console.warn("Vimeo API not ready — retrying...");
-    setTimeout(initVimeoPlayers, 300);
-    return;
-  }
+  /* ===== 3.5 Vimeo single-play controller ===== */
+  (function initVimeoPlayers() {
+    if (typeof Vimeo === "undefined" || !Vimeo.Player) {
+      console.warn("Vimeo API not ready — retrying...");
+      setTimeout(initVimeoPlayers, 300);
+      return;
+    }
 
-  // Keep a list of all Vimeo players so we can pause others
-  window.__vimeoPlayers = [];
+    // Keep a list of all Vimeo players so we can pause others
+    window.__vimeoPlayers = [];
 
-  document.querySelectorAll(".slot--vimeo iframe.vimeo-iframe").forEach(iframe => {
-    const player = new Vimeo.Player(iframe);
-    window.__vimeoPlayers.push(player);
+    // IMPORTANT: match your actual HTML structure:
+    // <figure class="slot slot--video">
+    //   <div class="video-box"><iframe ...></iframe></div>
+    // </figure>
+    document.querySelectorAll(".slot--video iframe").forEach(iframe => {
+      const player = new Vimeo.Player(iframe);
+      window.__vimeoPlayers.push(player);
 
-    player.on("play", () => {
-      // 1) Pause all *other* Vimeo players
-      window.__vimeoPlayers.forEach(other => {
-        if (other !== player) {
-          try { other.pause(); } catch (err) {}
-        }
-      });
-
-      // 2) Pause the single shared SoundCloud widget (Option B)
-      if (window.__scSingleWidget) {
-        try { window.__scSingleWidget.pause(); } catch (err) {}
-      }
-
-      // 3) Backwards compat: pause any legacy array of SC widgets if present
-      if (window.__scWidgets) {
-        window.__scWidgets.forEach(w => {
-          try { w.pause(); } catch (err) {}
+      player.on("play", () => {
+        // 1) Pause all *other* Vimeo players
+        window.__vimeoPlayers.forEach(other => {
+          if (other !== player) {
+            try { other.pause(); } catch (err) {}
+          }
         });
-      }
 
-      // 4) Pause any HTML <audio> elements (voice memos, etc.)
-      document.querySelectorAll(".slot--audio audio").forEach(a => {
-        try { a.pause(); } catch (err) {}
+        // 2) Pause the single shared SoundCloud widget (Option B)
+        if (window.__scSingleWidget) {
+          try { window.__scSingleWidget.pause(); } catch (err) {}
+        }
+
+        // 3) Backwards compat: pause any legacy array of SC widgets if present
+        if (window.__scWidgets) {
+          window.__scWidgets.forEach(w => {
+            try { w.pause(); } catch (err) {}
+          });
+        }
+
+        // 4) Pause any HTML <audio> elements (voice memos, etc.)
+        pauseAllHtmlAudio();
       });
     });
-  });
-})();
+  })();
 
-/* ===== 4. Local loop video init (custom <video>) ===== */
+  /* ===== 4. Local loop video init (custom <video>) ===== */
   (function initLoopVideos() {
     document.querySelectorAll(".slot--loopvideo").forEach(slot => {
       const vid = slot.querySelector(".loopvideo-el");
