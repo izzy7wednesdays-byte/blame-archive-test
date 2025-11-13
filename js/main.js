@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V7.9 - Fixing Overlay Code Line 165 added  ----------- */
+/* --------- V8.0 - Separate clicks  ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -389,32 +389,31 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 180);
     }
 
-    // === Delegated click handler for ANY overlay slot ===
-    // Works for:
-    // - <figure class="slot" data-overlay-src="..."><img ...></figure>
-    // - <figure class="slot slot--lottie" data-overlay-src="..."><div><dotlottie-wc></dotlottie-wc></div></figure>
-    document.addEventListener("click", (e) => {
-      const slot = e.target.closest(".slot[data-overlay-src]");
-      if (!slot) return;
+    // === Direct click handlers for EACH overlay slot ===
+    // This avoids any interference from other delegated listeners.
+    document.querySelectorAll(".slot[data-overlay-src]").forEach(slot => {
+      // Optional: enforce pointer cursor at the figure level
+      slot.style.cursor = "pointer";
 
-      // We clicked somewhere inside an overlay-enabled slot
-      e.preventDefault();
-      e.stopPropagation();
+      slot.addEventListener("click", e => {
+        e.preventDefault();
+        e.stopPropagation();
 
-      const src = slot.dataset.overlaySrc;
-      if (!src) {
-        console.warn("[Overlay] Missing data-overlay-src on", slot);
-        return;
-      }
+        const src = slot.dataset.overlaySrc;
+        if (!src) {
+          console.warn("[Overlay] Missing data-overlay-src on", slot);
+          return;
+        }
 
-      // Prefer explicit overlay alt, then inner img alt if present
-      const innerImg = slot.querySelector("img");
-      const alt =
-        slot.dataset.overlayAlt ||
-        (innerImg ? innerImg.alt : "") ||
-        "";
+        // Prefer explicit overlay alt, then inner img alt if present
+        const innerImg = slot.querySelector("img");
+        const alt =
+          slot.dataset.overlayAlt ||
+          (innerImg ? innerImg.alt : "") ||
+          "";
 
-      openOverlay(src, alt, slot);
+        openOverlay(src, alt, slot);
+      });
     });
 
     // X button closes overlay
