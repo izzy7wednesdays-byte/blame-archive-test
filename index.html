@@ -26,7 +26,7 @@
 </head>
 
         <!-- ================================================= -->
-              <!-- V6 - OPTIMIZING SOUNDCLOUD -->
+              <!-- V6.1 - OPTIMIZING SOUNDCLOUD -->
         <!-- ================================================= -->
   
 <body>
@@ -2304,8 +2304,14 @@
     </div>
   </div>
 
-  <!-- Soundcloud Bundle -->
-  <script src="https://w.soundcloud.com/player/api.js"></script>
+<!-- Single shared SoundCloud player (hidden) -->
+<div id="sc-shared-player" hidden aria-hidden="true">
+  <iframe id="sc-player-iframe"
+          allow="autoplay"
+          loading="lazy"
+          decoding="async"
+          style="width:0;height:0;border:0;position:absolute;left:-9999px;top:auto;"></iframe>
+</div>
 
   <!-- Vimeo API Bundle -->
   <script src="https://player.vimeo.com/api/player.js"></script>
