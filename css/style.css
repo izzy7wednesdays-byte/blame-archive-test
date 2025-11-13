@@ -5,7 +5,7 @@ html, body {
   min-height: 100%;
 }
 
-/* ========= V146.1 — ADDING X BUTTON TO OVERLAY ========= */
+/* ========= V146.2 — FIXING OVERLAY - LINE 446 ========= */
   
 /* ========= GLOBAL CONTROLS ========= */
   :root{
@@ -463,14 +463,10 @@ html, body {
   }
 
 /* ========= NON-CLICKABLE SLOT SAFEGUARD ========= */
-  .slot:not([data-overlay-src])
-       :not(.slot--sc)
-       :not(.slot--audio)
-       :not(:has(a))
-       :not(.slot--youtube)
-       :not(.slot--video) {
-    pointer-events: none;
-  }
+/* Disable pointer-events ONLY on entire slots that are truly non-clickable */
+.slot:not([data-overlay-src]):not(.slot--sc):not(.slot--audio):not(.slot--youtube):not(.slot--video):not(:has(a)) {
+  pointer-events: none;
+}
   
 /* ===== Clickability Exempt ===== */
   .slot--youtube,
