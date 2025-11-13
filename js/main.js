@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V8.1 - Separate clicks  ----------- */
+/* --------- V8.2 - Replace Vimeo Function  ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -276,9 +276,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ===== 3.5 Vimeo single-play controller ===== */
-  (function initVimeoPlayers() {
+/* ===== 3.5 Vimeo single-play controller ===== */
+(function initVimeoPlayers() {
+  try {
     if (typeof Vimeo === "undefined" || !Vimeo.Player) {
-      console.warn("Vimeo API not ready — retrying...");
+      console.warn("[Vimeo] API not ready — retrying...");
       setTimeout(initVimeoPlayers, 300);
       return;
     }
@@ -286,12 +288,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // Keep a list of all Vimeo players so we can pause others
     window.__vimeoPlayers = [];
 
-    // IMPORTANT: match your actual HTML structure:
-    // <figure class="slot slot--video">
-    //   <div class="video-box"><iframe ...></iframe></div>
-    // </figure>
     document.querySelectorAll(".slot--video iframe").forEach(iframe => {
-      const player = new Vimeo.Player(iframe);
+      // Only touch real Vimeo embeds
+      const src =
+        iframe.getAttribute("src") ||
+        iframe.getAttribute("data-lazy-src") ||
+        "";
+
+      if (!src.includes("player.vimeo.com")) {
+        // Not a Vimeo embed → skip it
+        return;
+      }
+
+      let player;
+      try {
+        player = new Vimeo.Player(iframe);
+      } catch (err) {
+        console.warn("[Vimeo] Skipping non-Vimeo iframe", iframe, err);
+        return;
+      }
+
       window.__vimeoPlayers.push(player);
 
       player.on("play", () => {
@@ -318,7 +334,10 @@ document.addEventListener("DOMContentLoaded", () => {
         pauseAllHtmlAudio();
       });
     });
-  })();
+  } catch (err) {
+    console.error("[Vimeo] initVimeoPlayers crashed:", err);
+  }
+})();
 
   /* ===== 4. Local loop video init (custom <video>) ===== */
   (function initLoopVideos() {
