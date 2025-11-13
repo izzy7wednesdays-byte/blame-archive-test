@@ -71,45 +71,6 @@ html, body {
     object-fit: contain;
   }
 
-/* MEDIA: SPOTIFY PLAYLIST SLOT */
-/* ========== SPOTIFY PLAYLIST SLOT (FINAL FIXED) ========== */
-  .slot--spotify {
-    pointer-events: auto;
-    display: flex;
-    align-items: flex-end; 
-    justify-content: center;
-    height: var(--band-h);  
-  }
-  
-  .slot--spotify .sp-box {
-    --sp-shrink: 0.675;
-    --h: calc(var(--band-h) * var(--scale) * var(--sp-shrink));
-  
-    position: relative;
-    display: block;
-    overflow: hidden;
-    border-radius: 12px;
-    background: transparent;
-  
-    height: var(--h);
-    width: calc(var(--h) * 1.0); 
-    max-height: none !important;
-    max-width: none !important;
-  }
-  
-  .slot--spotify iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-  
-    width: 100% !important;
-    height: 100% !important;
-  
-    border: 0;
-    border-radius: 12px;
-    display: block;
-  }
-
 /* MEDIA: VIDEO SLOT */
 .slot--loopvideo {
   pointer-events: auto;
@@ -493,7 +454,6 @@ html, body {
 
 /* ===== Remove Global Drop Shadow ===== */
   .slot img,
-  .slot--spotify .sp-box,
   .slot--youtube .yt-box,
   .slot--tiktok .tiktok-box,
   .slot--lottie .lot-box,
@@ -508,29 +468,25 @@ html, body {
        :not(.slot--audio)
        :not(:has(a))
        :not(.slot--youtube)
-       :not(.slot--video)
-       :not(.slot--spotify) {
+       :not(.slot--video) {
     pointer-events: none;
   }
   
 /* ===== Clickability Exempt ===== */
   .slot--youtube,
   .slot--video,
-  .slot--spotify,
   .slot--audio {
     pointer-events: auto !important;
   }
   
   .slot--youtube iframe,
-  .slot--video iframe,
-  .slot--spotify iframe {
+  .slot--video iframe {
     pointer-events: auto !important;
   }
 
 /* ======== TEMPORARY: DEBUG SLOT VISUALIZATION ======== */
 /* TEMPORARY ONLY: outline each slot's box so we can see its footprint */
   /* .slot--text,
-  .slot--spotify,
   .slot--audio,
   .slot--lottie,
   .slot--youtube,
@@ -541,7 +497,6 @@ html, body {
   
 /* Optional: also outline internal content boxes for clarity */
 /*  .slot--text .text-box,
-  .slot--spotify .sp-box,
   .slot--audio,
   .slot--lottie,
   .slot--image img,
