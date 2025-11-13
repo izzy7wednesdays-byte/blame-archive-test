@@ -23,7 +23,7 @@
 </head>
 
         <!-- ================================================= -->
-              <!-- V6.3 - LAZY LOTTIE LOAD -->
+              <!-- V6.4 - LAZY ADDED EXIT WOUNDS LOAD -->
         <!-- ================================================= -->
   
 <body>
@@ -282,7 +282,7 @@
       <figure class="slot slot--youtube" id="exitwounds-lyricvideo">
         <div class="yt-box">
           <iframe
-            src="https://www.youtube.com/embed/x5HKc36nnYo?si=0EdF-MfX6GVODw4T"
+            data-lazy-src="https://www.youtube.com/embed/x5HKc36nnYo?si=0EdF-MfX6GVODw4T"
             title="Exit Wounds - Lyric Video"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -293,23 +293,15 @@
 
       <!-- 2) IMG - Star Trio  -->
       <figure class="slot" id="star-trio-1">
-        <img src="assets/img/star-trio.webp?v=2" alt="Star Trio" loading="lazy" decoding="async">
+        <img data-lazy-src="assets/img/star-trio.webp?v=2" alt="Star Trio" loading="lazy" decoding="async">
       </figure>
       
       <!-- 3) IMG - Exit Wounds Title  -->
       <figure class="slot" id="exitwounds-title">
-        <img src="assets/img/exit-wounds-title.webp?v=2" alt="Exit Wounds Title" loading="lazy" decoding="async">
+        <img data-lazy-src="assets/img/exit-wounds-title.webp?v=2" alt="Exit Wounds Title" loading="lazy" decoding="async">
       </figure>
   
-      <!-- 4) SOUNDCLOUD — Play Exit Wounds 
-      <figure class="slot slot--sc" id="play-exitwounds"
-              data-sc-url="https://soundcloud.com/izzy-macarthur/exit-wounds">
-        <img class="sc-trigger"
-             src="assets/img/play-exitwounds.webp?v=2"
-             alt="Play Exit Wounds (SoundCloud)">
-        <iframe class="sc-iframe" title="SoundCloud player" allow="autoplay"></iframe>
-      </figure> -->
-
+      <!-- 4) SOUNDCLOUD — Play Exit Wounds -->
       <figure class="slot slot--sc" id="play-exitwounds"
               data-sc-url="https://soundcloud.com/izzy-macarthur/exit-wounds">
         <img class="sc-trigger"
@@ -324,14 +316,14 @@
 
       <!-- 6) IMG - Missed Calls Graphic  -->
       <figure class="slot" id="missed-calls">
-        <img src="assets/img/missed-calls.webp?v=1" alt="Missed Calls" loading="lazy" decoding="async">
+        <img data-lazy-src="assets/img/missed-calls.webp?v=1" alt="Missed Calls" loading="lazy" decoding="async">
       </figure>
 
       <!-- 7) IMG:OVERLAY - Exit Wounds: About Slot -->
       <figure class="slot" id="about-exitwounds"
         data-overlay-src="assets/img/about-exitwounds.webp?v=3"
         data-overlay-alt="About Exit Wounds">
-        <img src="assets/img/exit-wounds-bandages.webp?v=1" alt="Exit Wounds Bandages" loading="lazy" decoding="async" style="cursor:pointer;">
+        <img data-lazy-src="assets/img/exit-wounds-bandages.webp?v=1" alt="Exit Wounds Bandages" loading="lazy" decoding="async" style="cursor:pointer;">
       </figure>
   
       <!-- 8) LOTTIE — Crashing Down Animation -->
@@ -351,7 +343,7 @@
       <figure class="slot slot--audio" id="play-exitwounds-voicememo"
               data-audio-src="assets/audio/exit-wounds-voicememo.m4a" data-loop="false">
         <img class="audio-trigger"
-             src="assets/img/exit-wounds-voicememo.webp?v=1"
+             data-lazy-src="assets/img/exit-wounds-voicememo.webp?v=1"
              alt="Play Exit Wounds Voicememo">
         <audio preload="auto" playsinline></audio>
       </figure>
@@ -363,7 +355,7 @@
       
       <!-- 11) IMG - Exit Wounds – Click Me Arrow -->
       <figure class="slot" id="click-me-arrow">
-        <img src="assets/img/manic-3l-4CA8E9.webp?v=2" alt="exit wounds click me arrow" loading="lazy" decoding="async">
+        <img data-lazy-src="assets/img/manic-3l-4CA8E9.webp?v=2" alt="exit wounds click me arrow" loading="lazy" decoding="async">
       </figure>
 
       <!-- 12) TEXT - Read More About Exit Wounds -->
@@ -377,12 +369,12 @@
 
       <!-- 13) IMG - Arrow Pointing to Exit Wounds Flier -->
       <figure class="slot" id="substack-point-arrow">
-        <img src="assets/img/swirl-3B-4CA8E9.webp?v=1" alt="substack point arrow" loading="lazy" decoding="async">
+        <img data-lazy-src="assets/img/swirl-3B-4CA8E9.webp?v=1" alt="substack point arrow" loading="lazy" decoding="async">
       </figure>
 
       <!-- 14) IMG - Scorpio Constellation -->
       <figure class="slot" id="scorpio-constellation">
-        <img src="assets/img/scorpio-constellation.webp?v=1" alt="Scorpio Constellation" loading="lazy" decoding="async">
+        <img data-lazy-src="assets/img/scorpio-constellation.webp?v=1" alt="Scorpio Constellation" loading="lazy" decoding="async">
       </figure>      
    
       <!-- 15) TEXT - Subscribe to Substack -->
@@ -396,45 +388,45 @@
             
       <!-- 16) IMG - Subscribe Arrow  -->
       <figure class="slot" id="subscribe-arrow">
-        <img src="assets/img/manic-3-4CA8E9.webp?v=2" alt="subscribe arrow" loading="lazy" decoding="async">
+        <img data-lazy-src="assets/img/manic-3-4CA8E9.webp?v=2" alt="subscribe arrow" loading="lazy" decoding="async">
       </figure>
   
       <!-- 17) IMG:URL - Substack Subscribe Button -->
       <figure class="slot" id="subscribe-button">
         <a href="https://izzymacarthur.substack.com/embed"
            target="_blank" rel="noopener noreferrer">
-          <img src="assets/img/subscribe-button.webp?v=2"
+          <img data-lazy-src="assets/img/subscribe-button.webp?v=2"
                alt="Substack Subscribe Button">
         </a>
       </figure>
   
-      <!-- 18) IMG - Exit Wounds Substack Flier -->
+      <!-- 18) IMG:URL - Exit Wounds Substack Flier -->
       <figure class="slot" id="exitwounds-substackflier">
         <a href="https://izzymacarthur.substack.com/p/with-no-exit-wounds"
            target="_blank" rel="noopener noreferrer">
-          <img src="assets/img/exit-wounds-substack-flier.webp?v=1"
+          <img data-lazy-src="assets/img/exit-wounds-substack-flier.webp?v=1"
                alt="With No Exit Wounds — read on Substack">
         </a>
       </figure>
 
       <!-- 19) IMG - Silver Star 3-1  -->
       <figure class="slot" id="silver-star3-1">
-        <img src="assets/img/silver-star3.webp?v=2" alt="Silver Star 3-1" loading="lazy" decoding="async">
+        <img data-lazy-src="assets/img/silver-star3.webp?v=2" alt="Silver Star 3-1" loading="lazy" decoding="async">
       </figure>
 
       <!-- 20) IMG - Blue Star 3  -->
       <figure class="slot" id="blue-star-3">
-        <img src="assets/img/blue-star.webp?v=2" alt="Blue Star 3" loading="lazy" decoding="async">
+        <img data-lazy-src="assets/img/blue-star.webp?v=2" alt="Blue Star 3" loading="lazy" decoding="async">
       </figure>
 
       <!-- 21) IMG - Silver Star 3-2  -->
-      <figure class="slot" id="silver-star3-2">
+      <figure data-lazy-class="slot" id="silver-star3-2">
         <img src="assets/img/silver-star3.webp?v=2" alt="Silver Star 3-2" loading="lazy" decoding="async">
       </figure>
 
        <!-- 22) IMG - Silver Star 3-3  -->
       <figure class="slot" id="silver-star3-3">
-        <img src="assets/img/silver-star3.webp?v=2" alt="Silver Star 3-3" loading="lazy" decoding="async">
+        <img data-lazy-src="assets/img/silver-star3.webp?v=2" alt="Silver Star 3-3" loading="lazy" decoding="async">
       </figure>
 
 
