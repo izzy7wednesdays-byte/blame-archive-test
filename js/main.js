@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V7.5 - Lazy Load in selected frames  ----------- */
+/* --------- V7.6 - Fixing Overlay Code  ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -357,6 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ovImg.src = src;
       ovImg.alt = alt || "";
 
+      // Copy slot-specific overlay position variables if present
       if (slot) {
         const vars = ["--ov-x-top", "--ov-x-left", "--ov-x-size"];
         const slotStyles = getComputedStyle(slot);
@@ -375,6 +376,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function closeOverlay() {
       overlay.classList.remove("is-open");
+      // Let fade-out finish before clearing src/vars
       setTimeout(() => {
         ovImg.removeAttribute("src");
         ovImg.removeAttribute("alt");
@@ -384,28 +386,30 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 180);
     }
 
-    document.querySelectorAll(".slot[data-overlay-src]").forEach(s => {
-      const clickable = s.querySelector("img, dotlottie-wc") || s;
+    // Any slot with data-overlay-src becomes a clickable overlay trigger
+    document.querySelectorAll(".slot[data-overlay-src]").forEach(slot => {
+      const clickable = slot.querySelector("img, dotlottie-wc") || slot;
 
       clickable.addEventListener("click", e => {
         e.preventDefault();
         e.stopPropagation();
 
-        const src = s.dataset.overlaySrc;
+        const src = slot.dataset.overlaySrc;
         const alt =
-          s.dataset.overlayAlt ||
+          slot.dataset.overlayAlt ||
           clickable.getAttribute?.("alt") ||
           "";
 
         if (!src) {
-          console.warn("[Overlay] Missing data-overlay-src on", s);
+          console.warn("[Overlay] Missing data-overlay-src on", slot);
           return;
         }
 
-        openOverlay(src, alt, s);
+        openOverlay(src, alt, slot);
       });
     });
 
+    // X button closes overlay
     if (ovClose) {
       ovClose.addEventListener("click", e => {
         e.preventDefault();
@@ -414,19 +418,20 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
+    // Clicking the dark backdrop closes overlay (but not clicks on the card)
     overlay.addEventListener("click", e => {
       if (e.target === overlay) {
         closeOverlay();
       }
     });
 
+    // ESC key closes overlay
     document.addEventListener("keydown", e => {
       if (e.key === "Escape") {
         closeOverlay();
       }
     });
+
   } else {
     console.warn("Overlay element not found");
   }
-
-});
