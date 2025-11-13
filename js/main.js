@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V7.8 - Fixing Overlay Code  ----------- */
+/* --------- V7.9 - Fixing Overlay Code Line 165 added  ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -161,6 +161,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener('click', async (e) => {
       const trigger = e.target.closest('.sc-trigger');
       if (!trigger) return;
+
+      // NEW: if this click is NOT inside a SoundCloud slot, ignore it completely
+      if (!e.target.closest('.slot--sc')) return;
 
       const slot = trigger.closest('.slot--sc');
       if (!slot) return;
