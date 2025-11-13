@@ -531,7 +531,7 @@ html, body {
   #silver-star1-1{ --left:187svh; --scale:.17; --y:73svh; --x:0svh; --rot:83deg; --z:20;pointer-events:none; }
   #lightsleeper-title{ --left:159svh; --scale:.42; --y:26svh; --x:-4svh; --rot:-5deg; --z:4; pointer-events: none; }
   #lightsleeper-visualizer{ --left:145svh; --scale:.38; --y:0svh; --x:10svh; --rot:0deg; --z:3; }
-  #lightsleeper-about{ --left:210svh; --scale:.4; --y:58svh; --x:0svh; --rot:-10deg; --z:20; pointer-events:auto;  }
+  #lightsleeper-about{ --left:210svh; --scale:.4; --y:58svh; --x:0svh; --rot:-10deg; --z:30; pointer-events:auto;  }
   #autumn-text{ --left:220svh; --scale:.3; --y:22svh; --x:0svh; --rot:2deg; --z:0; }
   #blame-it-notesapp{ --left:215svh; --scale:.20; --y:0svh; --x:0svh; --rot:-2deg; --z:4; }
   #lightsleeper-studio{ --left:247svh; --scale:.40; --ar:9/16; --y:57svh; --x:0svh; --rot:0deg; --z:41;  }
