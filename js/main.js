@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V7.0 - OPTIMIZING SC PT. 1 ----------- */
+/* --------- V7.1 - OPTIMIZING SC PT. 2 ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -124,22 +124,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
 })();
 
+  // UPDATED: SC pause helpers that work with the single shared widget
   function pauseAllScExcept(activeWidget) {
-    if (!window.__scWidgets) return;
-    window.__scWidgets.forEach(w => {
-      if (w !== activeWidget) {
-        try { w.pause(); } catch(e) {}
-      }
-    });
+    // If we’re using the new single shared widget
+    if (window.__scSingleWidget && window.__scSingleWidget !== activeWidget) {
+      try { window.__scSingleWidget.pause(); } catch(e){}
+    }
+
+    // Backwards compatibility if __scWidgets is still used anywhere
+    if (Array.isArray(window.__scWidgets)) {
+      window.__scWidgets.forEach(w => {
+        if (w !== activeWidget) {
+          try { w.pause(); } catch(e) {}
+        }
+      });
+    }
   }
 
   function pauseAllSc() {
-    if (!window.__scWidgets) return;
-    window.__scWidgets.forEach(w => {
-      try { w.pause(); } catch(e) {}
-    });
+    // Pause the single shared widget if present
+    if (window.__scSingleWidget) {
+      try { window.__scSingleWidget.pause(); } catch(e){}
+    }
+
+    // Backwards compatibility with any old code that still uses __scWidgets
+    if (Array.isArray(window.__scWidgets)) {
+      window.__scWidgets.forEach(w => {
+        try { w.pause(); } catch(e) {}
+      });
+    }
   }
 
+  function pauseAllHtmlAudio(exceptAudio) {
+    document.querySelectorAll(".slot--audio audio").forEach(a => {
+      if (a !== exceptAudio) {
+        a.pause();
+      }
+    });
+  }
+  
   function pauseAllHtmlAudio(exceptAudio) {
     document.querySelectorAll(".slot--audio audio").forEach(a => {
       if (a !== exceptAudio) {
@@ -206,39 +229,48 @@ document.addEventListener("DOMContentLoaded", () => {
     syncUI();
   });
 
-  /* ===== 3.5 Vimeo single-play controller ===== */
-  (function initVimeoPlayers() {
-    if (typeof Vimeo === "undefined" || !Vimeo.Player) {
-      console.warn("Vimeo API not ready — retrying...");
-      setTimeout(initVimeoPlayers, 300);
-      return;
-    }
-  
-    window.__vimeoPlayers = [];
-  
-    document.querySelectorAll(".slot--vimeo iframe.vimeo-iframe").forEach(iframe => {
-      const player = new Vimeo.Player(iframe);
-      window.__vimeoPlayers.push(player);
-  
-      player.on("play", () => {
-        window.__vimeoPlayers.forEach(other => {
-          if (other !== player) {
-            try { other.pause(); } catch (err) {}
-          }
-        });
-  
-        if (window.__scWidgets) {
-          window.__scWidgets.forEach(w => {
-            try { w.pause(); } catch (err) {}
-          });
+/* ===== 3.5 Vimeo single-play controller ===== */
+(function initVimeoPlayers() {
+  if (typeof Vimeo === "undefined" || !Vimeo.Player) {
+    console.warn("Vimeo API not ready — retrying...");
+    setTimeout(initVimeoPlayers, 300);
+    return;
+  }
+
+  // Keep a list of all Vimeo players so we can pause others
+  window.__vimeoPlayers = [];
+
+  document.querySelectorAll(".slot--vimeo iframe.vimeo-iframe").forEach(iframe => {
+    const player = new Vimeo.Player(iframe);
+    window.__vimeoPlayers.push(player);
+
+    player.on("play", () => {
+      // 1) Pause all *other* Vimeo players
+      window.__vimeoPlayers.forEach(other => {
+        if (other !== player) {
+          try { other.pause(); } catch (err) {}
         }
-  
-        document.querySelectorAll(".slot--audio audio").forEach(a => {
-          try { a.pause(); } catch (err) {}
+      });
+
+      // 2) Pause the single shared SoundCloud widget (Option B)
+      if (window.__scSingleWidget) {
+        try { window.__scSingleWidget.pause(); } catch (err) {}
+      }
+
+      // 3) Backwards compat: pause any legacy array of SC widgets if present
+      if (window.__scWidgets) {
+        window.__scWidgets.forEach(w => {
+          try { w.pause(); } catch (err) {}
         });
+      }
+
+      // 4) Pause any HTML <audio> elements (voice memos, etc.)
+      document.querySelectorAll(".slot--audio audio").forEach(a => {
+        try { a.pause(); } catch (err) {}
       });
     });
-  })();
+  });
+})();
 
 /* ===== 4. Local loop video init (custom <video>) ===== */
   (function initLoopVideos() {
