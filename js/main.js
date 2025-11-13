@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V7.3 - Lazy Load in ----------- */
+/* --------- V7.4 - Lazy Lottie Load in ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,12 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { passive: false });
   }
 
-    /* ===== 1.3 Lazy-load Lotties (targeted, opt-in only) ===== */
+   /* ===== 1.2 Lazy-load Lotties (opt-in only) ===== */
   (function initLazyLotties() {
-    if (!("IntersectionObserver" in window)) {
-      // Older browsers: just let them load normally
-      return;
-    }
+    // If the browser is too old, just let Lotties load normally.
+    if (!("IntersectionObserver" in window)) return;
 
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -53,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const el = entry.target;
         const src = el.getAttribute("data-lottie-src");
         if (src) {
+          // When near the viewport, actually load the Lottie file.
           el.setAttribute("src", src);
           el.removeAttribute("data-lottie-src");
         }
@@ -61,14 +60,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }, {
       root: null,
-      rootMargin: "100% 0px 100% 0px",
+      rootMargin: "100% 0px 100% 0px", // start ~1 viewport away
       threshold: 0.01
     });
 
-    // Only Lotties that *explicitly* opt-in via data-lottie-src are observed
+    // Only Lotties that *explicitly* opt in via data-lottie-src are observed.
     document.querySelectorAll("dotlottie-wc[data-lottie-src]").forEach(el => io.observe(el));
   })();
-
 
   /* ===== 2. SoundCloud image-controlled player (Option B: single hidden iframe) ===== */
   (function initSCController() {
