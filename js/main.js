@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V7.6 - Fixing Overlay Code  ----------- */
+/* --------- V7.7 - Fixing Overlay Code  ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -435,3 +435,5 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.warn("Overlay element not found");
   }
+
+  });
