@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V7.4 - Lazy Lottie Load in ----------- */
+/* --------- V7.5 - Lazy Load in selected frames  ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -66,6 +66,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Only Lotties that *explicitly* opt in via data-lottie-src are observed.
     document.querySelectorAll("dotlottie-wc[data-lottie-src]").forEach(el => io.observe(el));
+  })();
+
+    /* ===== 1.3 Lazy-load external frames (opt-in only) ===== */
+  (function initLazyFrames() {
+    // If the browser is too old, let everything load normally.
+    if (!("IntersectionObserver" in window)) return;
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+
+        // Handle iframes (YouTube / Vimeo)
+        if (el.tagName === "IFRAME") {
+          const src = el.getAttribute("data-lazy-src");
+          if (src) {
+            el.setAttribute("src", src);
+            el.removeAttribute("data-lazy-src");
+          }
+        }
+
+        // OPTIONAL: handle images/GIFs if you opt them in later
+        if (el.tagName === "IMG") {
+          const src = el.getAttribute("data-lazy-src");
+          if (src) {
+            el.setAttribute("src", src);
+            el.removeAttribute("data-lazy-src");
+          }
+        }
+
+        io.unobserve(el);
+      });
+    }, {
+      root: null,
+      rootMargin: "100% 0px 100% 0px", // start loading ~1 viewport away
+      threshold: 0.01
+    });
+
+    // Only iframes you explicitly mark with data-lazy-src are observed
+    document.querySelectorAll("iframe[data-lazy-src]").forEach(el => io.observe(el));
+
+    // OPTIONAL: only images you mark with data-lazy-src will be handled
+    document.querySelectorAll("img[data-lazy-src]").forEach(el => io.observe(el));
   })();
 
   /* ===== 2. SoundCloud image-controlled player (Option B: single hidden iframe) ===== */
