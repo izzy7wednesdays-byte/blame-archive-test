@@ -4,29 +4,27 @@
 @font-face{
   font-family: "Thinker";
   src: url("../assets/fonts/thinker/Thinker.woff2") format("woff2"), url("../assets/fonts/thinker/Thinker.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+  font-weight: 400; font-style: normal; font-display: swap; text-transform: uppercase;
 }
 
 /* Manic families — treat alternates as separate families */
 @font-face{
   font-family: "Manic";
-  src: url("../assets/fonts/manic/manic-regular.woff2") format("woff2");
-  font-weight: 400; font-style: normal; font-display: swap;
+  src: url("../assets/fonts/manic/manic-regular.woff2") format("woff2"), url("../assets/fonts/manic/manic-regular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap; text-transform: lowercase;
 }
 @font-face{
   font-family: "Manic Alt 1";
-  src: url("../assets/fonts/manic/manic-alt1.woff2") format("woff2");
+  src: url("../assets/fonts/manic/manic-alt1.woff2") format("woff2"), url("../assets/fonts/manic/manic-alt1.otf") format("opentype");
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face{
   font-family: "Manic Alt 2";
-  src: url("../assets/fonts/manic/manic-alt2.woff2") format("woff2");
+  src: url("../assets/fonts/manic/manic-alt2.woff2") format("woff2"), url("../assets/fonts/manic/manic-alt2.otf") format("opentype");
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face{
   font-family: "Manic Alt 3";
-  src: url("../assets/fonts/manic/manic-alt3.woff2") format("woff2");
+  src: url("../assets/fonts/manic/manic-alt3.woff2") format("woff2"), url("../assets/fonts/manic/manic-alt3.otf") format("opentype");
   font-weight: 400; font-style: normal; font-display: swap;
 }
