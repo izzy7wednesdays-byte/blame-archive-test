@@ -561,7 +561,8 @@ html, body {
                             --ff: "Manic"; --fw:400; --fs-mul:0.21; --ta:center; --tt:uppercase;--text-color: #4CA8E9; }
   #subscribe-arrow{ --left:452svh; --scale:.04; --y:10svh; --x:0svh; --rot:-59deg;--z:20; pointer-events:none;  }
   #subscribe-button{ --left:459svh; --scale:.14; --y:10svh; --x:0svh; --rot:6deg; --z:20; }
-  #exitwounds-substackflier{ --left:453svh; --scale:.76; --y:30svh; --x:0svh; --rot:14deg; --z:3; }
+  /*#exitwounds-substackflier{ --left:453svh; --scale:.76; --y:30svh; --x:0svh; --rot:14deg; --z:3; }*/
+  #exitwounds-substackflier-2{ --left:453svh; --scale:.76; --y:30svh; --x:0svh; --rot:14deg; --z:3; }
   #silver-star3-1{ --left:458svh; --scale:.10; --y:-1svh; --x:0svh; --rot:-59deg;--z:20; pointer-events:none; }
   #blue-star-3{ --left:468svh; --scale:.04; --y:4svh; --x:0svh; --rot:16deg; --z:20; pointer-events:none; }
   #silver-star3-2{ --left:478svh; --scale:.06; --y:1svh; --x:0svh; --rot:12deg; --z:20; pointer-events:none; }
