@@ -405,34 +405,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("img[data-gif-src]").forEach(img => io.observe(img));
   })();
 
-
-  /* ===== 4. Local loop video init (custom <video>) ===== */
-  (function initLoopVideos() {
-    document.querySelectorAll(".slot--loopvideo").forEach(slot => {
-      const vid = slot.querySelector(".loopvideo-el");
-      if (!vid) return;
-
-      const style = getComputedStyle(slot);
-      const rateStr = style.getPropertyValue("--playback").trim();
-      if (rateStr) {
-        const rateNum = parseFloat(rateStr);
-        if (!Number.isNaN(rateNum) && rateNum > 0) {
-          vid.playbackRate = rateNum;
-        }
-      }
-
-      const loopFlag = style.getPropertyValue("--do-loop").trim();
-      vid.loop = (loopFlag === "1" || loopFlag === "true");
-
-      const playAttempt = vid.play();
-      if (playAttempt && typeof playAttempt.catch === "function") {
-        playAttempt.catch(err => {
-          console.warn("[LoopVideo] autoplay blocked", err);
-        });
-      }
-    });
-  })();
-
 /* ===== 5. Overlay click-to-open ===== */
 
 (function initOverlay() {
