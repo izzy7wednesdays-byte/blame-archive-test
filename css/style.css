@@ -504,7 +504,7 @@ html, body {
   #izzymacarthur-withguitar{ --left:272svh; --scale:.3; --y:66svh; --x:0svh; --rot:0deg; --z:41;}
   #click4chordz{ --left:288svh; --scale:.11; --y:88svh; --x:0svh; --rot:0deg; --z:42; pointer-events:none;
                  --ff: "Manic"; --ta: center; --fw: 400; --fs-mul: .18; --tt: uppercase; --text-color: #4C58E9;}
-  #play-lightsleeper{ --left:268svh; --scale:.3; --y:32svh; --x:0svh; --rot:0deg; --z:40; }
+  #play-lightsleeper{ --left:268svh; --scale:.5; --y:32svh; --x:0svh; --rot:0deg; --z:400; }
   #broken-breathing{ --left: 263svh; --scale:.28; --y: 0svh; --x: 1svh; --rot: 0deg; --z: 10; }
   #lightsleeper-voicememo{ --left: 310svh; --scale: .34; --y:29svh; --x: 0svh; --rot:-6deg; --z: 9; } 
 
