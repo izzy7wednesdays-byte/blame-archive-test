@@ -1,5 +1,3 @@
-// scss/abstract/_mixins.scss
-
 // Media Query Manager
 /*
 xs:     0 - 576px
@@ -15,28 +13,22 @@ xxxl:   1600+
   @if $breakpoint == xs {
     @media (max-width: 36em) { @content; }      // 576px
   }
-
   @if $breakpoint == sm {
     @media (max-width: 48em) { @content; }      // 768px
   }
-
   @if $breakpoint == md {
     @media (max-width: 62em) { @content; }      // 992px
   }
-
   @if $breakpoint == lg {
     @media (max-width: 75em) { @content; }      // 1200px
   }
-
   @if $breakpoint == xl {
     @media (max-width: 90em) { @content; }      // 1439px
   }
-
   @if $breakpoint == xxl {
     @media (min-width: 90em) { @content; }      // 1440px+
   }
-
   @if $breakpoint == xxxl {
-    @media (min-width: 100em) { @content; }     // 1600px+
+    @media (min-width: 100em) { @content; }     // 1600+
   }
 }
