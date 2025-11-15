@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lottieElements.forEach(el => io.observe(el));
   })();
 
-/* ===== 1.4 Lottie offscreen pause/resume ===== */
+/* ===== 1.4 Lottie offscreen pause/resume =====
   (function initLottieVisibility() {
     if (!("IntersectionObserver" in window)) return;
 
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Observe ALL Lotties, lazy or not
     document.querySelectorAll("dotlottie-wc").forEach(el => io.observe(el));
-  })();
+  })();  */
 
     /* ===== 1.3 Lazy-load external frames (opt-in only) ===== */
   (function initLazyFrames() {
