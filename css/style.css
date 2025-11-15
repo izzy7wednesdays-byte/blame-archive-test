@@ -368,7 +368,7 @@ html, body {
   .slot--lottie[data-overlay-src] dotlottie-wc:hover,
   #play-lightsleeper:hover dotlottie-wc {
     transform: scale(1.05);
-    filter: brightness(1.08);
+    filter: brightness(1.15);
   }
 
 /* ========= TEXT SLOT ========= */
