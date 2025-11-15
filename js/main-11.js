@@ -1,6 +1,6 @@
 /* ========= MAIN INITIALIZATION ========= */
 /* ==================================================== */
-/* --------- V10.0 GIF/WebP animation offscreen swap  ----------- */
+/* --------- V11.0 GIF/WebP animation offscreen swap  ----------- */
 /* ==================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -372,6 +372,32 @@ document.addEventListener("DOMContentLoaded", () => {
   } catch (err) {
     console.error("[Vimeo] initVimeoPlayers crashed:", err);
   }
+})();
+  
+/* ===== LOTTIE PLACEHOLDERS: London TV + Play Light Sleeper ===== */
+(function initHeavyLottiePlaceholders() {
+  if (!("IntersectionObserver" in window)) return;
+
+  const ids = ["london-tv", "play-lightsleeper"];
+  const slots = ids
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+
+  if (!slots.length) return;
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const slot = entry.target;
+      const visible = entry.isIntersecting && entry.intersectionRatio > 0.1;
+      slot.classList.toggle("is-lottie-active", visible);
+    });
+  }, {
+    root: null,
+    rootMargin: "0px 0px 0px 0px",
+    threshold: 0.1
+  });
+
+  slots.forEach(slot => io.observe(slot));
 })();
 
 /* ===== 4.2 GIF/WebP animation offscreen swap ===== */
