@@ -128,38 +128,8 @@ html, body {
     height: 100%;
     display: block;
   }
-
-/* ===== LOTTIE PLACEHOLDER SWAP (London TV + Play Light Sleeper) ===== */
-
-/* Generic placeholder element */
-.slot.slot--lottie .lottie-placeholder {
-  display: block;
-}
-
-.slot.slot--lottie .lot-box {
-  /* existing size rules already defined above */
-}
-
-/* ========== LONDON TV ========== */
-/* Default (off-screen): show placeholder, hide Lottie */
-#london-tv .lot-box {
-  display: none;
-}
-
-#london-tv .lottie-placeholder {
-  display: block;
-}
-
-/* When the slot is in-view (JS adds .is-lottie-active) → show Lottie, hide placeholder */
-#london-tv.is-lottie-active .lot-box {
-  display: block;
-}
-
-#london-tv.is-lottie-active .lottie-placeholder {
-  display: none;
-}
   
-/* MEDIA: VIMEO VIDEO SLOT */
+  /* MEDIA: VIMEO VIDEO SLOT */
   .slot--video .video-box{
     --h: calc(var(--band-h) * var(--scale));
     height: var(--h);
