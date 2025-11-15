@@ -1,26 +1,24 @@
-// scss/archive.scss  ← ENTRYPOINT for YOUR build
+// 1) abstract
+@import "_abstract/mixins";
+@import "_abstract/variables";
+@import "_abstract/animations";
 
-// 1) abstract tools
-@import "_abstract/_mixins";
-@import "_abstract/_variables";
-@import "_abstract/_animations";
-
-// 2) base layers
-@import "_base/_base";
-@import "_base/_typography";
-@import "_base/_spacing";
-@import "_base/_utilities";
+// 2) base
+@import "_base/base";
+@import "_base/typography";
+@import "_base/spacing";
+@import "_base/utilities";
 
 // 3) components
-@import "_components/_buttons";
-@import "_components/_footer";
-@import "_components/_form";
-@import "_components/_header";
-@import "_components/_main";
-@import "_components/_modal";
-@import "_components/_sleepy";
-@import "_components/_slider";
-@import "_components/_social";
+@import "_components/buttons";
+@import "_components/footer";
+@import "_components/form";
+@import "_components/header";
+@import "_components/main";
+@import "_components/modal";
+@import "_components/sleepy";
+@import "_components/slider";
+@import "_components/social";
 
 // 4) vendors
-@import "_vendors/_bit";
+@import "_vendors/bit";
