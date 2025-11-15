@@ -498,7 +498,7 @@ html, body {
   #izzymacarthur-withguitar{ --left:272svh; --scale:.3; --y:66svh; --x:0svh; --rot:0deg; --z:41;}
   #click4chordz{ --left:288svh; --scale:.11; --y:88svh; --x:0svh; --rot:0deg; --z:42; pointer-events:none;
                  --ff: "Manic"; --ta: center; --fw: 400; --fs-mul: .18; --tt: uppercase; --text-color: #4C58E9;}
-  #play-lightsleeper{ --left:265svh; --scale:.35; --y:32svh; --x:0svh; --rot:0deg; --z:40; }
+  #play-lightsleeper{ --left:262svh; --scale:.35; --y:32svh; --x:0svh; --rot:0deg; --z:40; }
   #play-lightsleeper dotlottie-wc {
     pointer-events: none;  /* let clicks fall through to .sc-trigger */
   }
