@@ -268,17 +268,8 @@ html, body {
     filter: brightness(1.1);
   }
 
-/* ===== BEHAVIOR: GROW-ON-HOVER ===== */
-  .slot[data-overlay-src] img {
-    transition: transform .25s ease, filter .25s ease;
-  }
-  .slot[data-overlay-src] img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.08);
-    cursor: pointer;
-  }
-  
-  #overlay .ov-card img {
+/* ===== OVERLAY IMAGE ===== */
+#overlay .ov-card img {
     opacity: 0;
     transform: scale(0.98);
     transition: opacity .35s ease, transform .35s ease;
@@ -350,10 +341,19 @@ html, body {
   }
 
 /* ========= GROW-ON-HOVER ========= */
+  /* Elements that should "grow" on hover:
+     - overlay images
+     - soundcloud trigger images/buttons
+     - audio trigger images
+     - linked images
+     - overlay Lotties
+     - the play-lightsleeper Lottie (SoundCloud) */
   .slot[data-overlay-src] img,
   .slot--sc .sc-trigger,
   .slot--audio .audio-trigger,
-  .slot a img {
+  .slot a img,
+  .slot--lottie[data-overlay-src] dotlottie-wc,
+  #play-lightsleeper dotlottie-wc {
     transition: transform .45s cubic-bezier(0.25, 1, 0.5, 1),
                 filter .45s cubic-bezier(0.25, 1, 0.5, 1);
     cursor: pointer;
@@ -364,17 +364,11 @@ html, body {
   .slot[data-overlay-src] img:hover,
   .slot--sc .sc-trigger:hover,
   .slot--audio .audio-trigger:hover,
-  .slot a img:hover {
+  .slot a img:hover,
+  .slot--lottie[data-overlay-src] dotlottie-wc:hover,
+  #play-lightsleeper:hover dotlottie-wc {
     transform: scale(1.05);
     filter: brightness(1.08);
-  }
-
-  .slot--lottie[data-overlay-src] dotlottie-wc:hover {
-    transform: scale(1.05);
-    filter: brightness(1.08);
-    transition: transform .35s cubic-bezier(0.25,1,0.5,1),
-                filter .35s cubic-bezier(0.25,1,0.5,1);
-    cursor: pointer;
   }
 
 /* ========= TEXT SLOT ========= */
