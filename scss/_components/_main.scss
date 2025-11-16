@@ -83,7 +83,7 @@
   --z: 2;
   
   @include respond(xs) {
-    --left: 24svh;
+    --left: 22svh;
     --scale: .04;
     --y: 14svh;
     --x: 8svh;
@@ -193,10 +193,10 @@
   
   @include respond(xs) {
     --left:43svh; 
-    --scale:.3; 
+    --scale:.35; 
     --y:70svh; 
     --x:15svh; 
-    --rot:8deg; 
+    --rot:10deg; 
     --z:4;
     pointer-events: none;
   }
