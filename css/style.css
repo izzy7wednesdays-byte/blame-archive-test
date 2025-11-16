@@ -3414,9 +3414,6 @@ html, body {
   --z:2;
 }
 
-body.desktop {
-  /* ========= WELCOME SECTION (from IDs to classes) ========= */
-}
 body.desktop .special-message {
   --left: -26svh;
   --scale: 1.12;
