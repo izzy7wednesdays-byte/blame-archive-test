@@ -132,4 +132,24 @@
     @include respond(xs) { }
   }
 
+  &.lfg { 
+    --left:97svh; 
+    --scale:.1; 
+    --y:5svh; 
+    --x:0svh; 
+    --rot:0deg; 
+    --z:5;
+    pointer-events: none;
+  }
+  
+  &.pink-arrow { 
+    --left:123svh; 
+    --scale:.09; 
+    --y:5svh; 
+    --x:0svh; 
+    --rot:0deg; 
+    --z:5;
+    pointer-events: none;
+  }
+
 }
