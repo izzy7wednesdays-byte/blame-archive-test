@@ -226,16 +226,16 @@
    .the-scrapbook {
     --left:65svh; 
     --scale:.5; 
-    --y:40svh; 
+    --y:12svh; 
     --x:0svh; 
     --rot:0deg; 
     --z:4;
     pointer-events: none;
 
      @include respond(xs) {
-      --left:15svh; 
+      --left:20svh; 
       --scale:.32; 
-      --y:12svh; 
+      --y:40svh; 
       --x:0svh; 
       --rot:0deg; 
       --z:4;
