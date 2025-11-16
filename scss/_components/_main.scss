@@ -36,6 +36,15 @@
     --z: 2;
   
     @include respond(xs) { 
+      display: none;
+    }
+  }
+
+  .mobile-izzymacarthur {
+    display: none!important;
+    
+    @include respond(xs) {
+      display: flex!important;
       --left: 15svh;
       --scale: .08;
       --y: 60svh;
