@@ -214,9 +214,9 @@
   @include respond(xs) {
     --left:60svh; 
     --scale:.3; 
-    --y:10svh; 
+    --y:1svh; 
     --x:15svh; 
-    --rot:8deg; 
+    --rot:-8deg; 
     --z:4;
     pointer-events: none;
   }
@@ -283,24 +283,25 @@
   }
 
   // ========= LIGHT SLEEPER SECTION (slot classes) =========
-   .broken-cd { 
-    --left:143svh; 
-    --scale:.35; 
-    --y:67svh;
+.broken-cd { 
+  --left:143svh; 
+  --scale:.35; 
+  --y:67svh;
+  --x:0svh; 
+  --rot:85deg; 
+  --z:29;
+  pointer-events:none;
+  
+  @include respond(xs) {
+    --left:100svh; 
+    --scale:.30; 
+    --y:60svh; 
     --x:0svh; 
-    --rot:85deg; 
+    --rot:0deg; 
     --z:29;
-    pointer-events:none;
+    pointer-events: none;
   }
-
-   .playlist-ex { 
-     --left:162svh; 
-     --scale:.62; 
-     --y:25svh; 
-     --x:0svh; 
-     --rot:-5deg; 
-     --z:30;
-  }
+}
 
    .blue-star-1 { 
     --left:183svh; 
