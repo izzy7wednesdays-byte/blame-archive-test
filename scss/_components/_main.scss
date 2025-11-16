@@ -3,10 +3,10 @@
   &.special-message {
     --left: -20svh;
     --scale: 1.12;
-    --y: 10svh;
+    --y: 20svh;
     --x: 0svh;
     --rot: 0deg;
-    --z: 10;
+    --z: 1;
   
     @include respond(xs) {
       display:none;
