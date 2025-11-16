@@ -255,11 +255,59 @@
     --rot:2deg;
     --z:0;
   }
-//  #blame-it-notesapp{ --left:215svh; --scale:.20; --y:0svh; --x:0svh; --rot:-2deg; --z:4; }
-//  #lightsleeper-studio{ --left:247svh; --scale:.40; --ar:9/16; --y:57svh; --x:0svh; --rot:0deg; --z:41;  }
-//  #silver-star1-2{ --left:245svh; --scale:.18; --y:5svh; --x:0svh; --rot:20deg; --z:60;pointer-events:none; }
-//  #izzymacarthur-withguitar{ --left:272svh; --scale:.3; --y:66svh; --x:0svh; --rot:0deg; --z:41;}
-//  #click4chordz{ --left:288svh; --scale:.11; --y:88svh; --x:0svh; --rot:0deg; --z:42; pointer-events:none;
-//                 --ff: "Manic"; --ta: center; --fw: 400; --fs-mul: .18; --tt: uppercase; --text-color: #4C58E9;}
+
+  .blame-it-notesapp{ 
+    --left:215svh;
+    --scale:.20;
+    --y:0svh;
+    --x:0svh;
+    --rot:-2deg;
+    --z:4;
+  }
+
+  .lightsleeper-studio{ 
+    --left:247svh;
+    --scale:.40;
+    --ar:9/16;
+    --y:57svh;
+    --x:0svh; 
+    --rot:0deg;
+    --z:41;
+  }
+  
+  .silver-star1-2{
+    --left:245svh;
+    --scale:.18;
+    --y:5svh;
+    --x:0svh;
+    --rot:20deg;
+    --z:60;
+    pointer-events:none;
+  }
+
+  .chords-gif{ 
+    --left:272svh; 
+    --scale:.3; 
+    --y:66svh;
+    --x:0svh; 
+    --rot:0deg;
+    --z:41;
+  }
+
+  .click4chordz{ 
+    --left:288svh;
+    --scale:.11;
+    --y:88svh;
+    --x:0svh; 
+    --rot:0deg; 
+    --z:42; 
+    pointer-events:none;
+    --ff: "Manic"; 
+    --ta: center; 
+    --fw: 400; 
+    --fs-mul: .18; 
+    --tt: uppercase;
+    --text-color: #4C58E9;
+}
 
 
