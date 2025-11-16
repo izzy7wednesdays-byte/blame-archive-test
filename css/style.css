@@ -3516,7 +3516,7 @@ html, body {
   --z: 3;
   pointer-events: none;
 }
-.slot.the-tracklist {
+.slot.tracklist {
   --left:91svh;
   --scale:.42;
   --y:57svh;
