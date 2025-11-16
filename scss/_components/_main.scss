@@ -46,15 +46,23 @@
   }
   
    .social-sparkles {
-    --left: 10svh;
-    --scale: .10;
+    --left: 17svh;
+    --scale: .15;
     --y: 50svh;
     --x: 8svh;
-    --rot: 90deg;
+    --rot: 0deg;
     --z: 2;
     pointer-events: none;
   
-    @include respond(xs) { }
+    @include respond(xs) { 
+      --left: 10svh;
+      --scale: .10;
+      --y: 50svh;
+      --x: 8svh;
+      --rot: 90deg;
+      --z: 2;
+      pointer-events: none;
+     }
   }
   
    .instagram {
