@@ -3475,7 +3475,7 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
-.slot .twitter {
+.slot.twitter {
   --left: 40svh;
   --scale: .05;
   --y: 55svh;
