@@ -1,8 +1,128 @@
 // scss/_components/_main.scss
-// Per-slot layout will go here later.
 
 body {
   &.desktop {
-    // .slot-name blocks later
+
+    /* ========= WELCOME SECTION (from IDs to classes) ========= */
+
+    .special-message {
+      --left: -26svh;
+      --scale: 1.12;
+      --y: 20svh;
+      --x: 0svh;
+      --rot: 0deg;
+      --z: 1;
+
+      @include respond(xs) {
+        // mobile-specific tweaks later
+        // e.g. --scale: 0.9; --y: 30svh;
+      }
+    }
+
+    .izzymacarthur {
+      --left: 18svh;
+      --scale: .15;
+      --y: 65svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+
+      @include respond(xs) {
+        // mobile overrides later
+      }
+    }
+
+    .social-sparkles {
+      --left: 17svh;
+      --scale: .15;
+      --y: 50svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+      pointer-events: none;
+
+      @include respond(xs) {
+        // mobile overrides later
+      }
+    }
+
+    .instagram {
+      --left: 28svh;
+      --scale: .05;
+      --y: 55svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+
+      @include respond(xs) {}
+    }
+
+    .tiktok {
+      --left: 34svh;
+      --scale: .05;
+      --y: 55svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+
+      @include respond(xs) {}
+    }
+
+    .twitter {
+      --left: 40svh;
+      --scale: .05;
+      --y: 55svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+
+      @include respond(xs) {}
+    }
+
+    .discord {
+      --left: 46svh;
+      --scale: .05;
+      --y: 55svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+
+      @include respond(xs) {}
+    }
+
+    .spotify {
+      --left: 52svh;
+      --scale: .05;
+      --y: 55svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+
+      @include respond(xs) {}
+    }
+
+    .apple-music {
+      --left: 58svh;
+      --scale: .05;
+      --y: 55svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+
+      @include respond(xs) {}
+    }
+
+    .torn-note {
+      --left: 11svh;
+      --scale: .68;
+      --y: -9svh;
+      --x: -2svh;
+      --rot: 0deg;
+      --z: 3;
+      pointer-events: none;
+
+      @include respond(xs) {}
+    }
+
   }
 }
