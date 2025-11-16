@@ -3415,7 +3415,7 @@ html, body {
 }
 
 .slot.special-message {
-  --left: -20svh;
+  --left: -26svh;
   --scale: 1.12;
   --y: 20svh;
   --x: 0svh;
