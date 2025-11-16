@@ -16,14 +16,14 @@
     display: none!important;
     
     @include respond(xs) {
+      display: flex!important;
       position: absolute;
-      --left: 20svh;
+      --left: 200svh;
       --scale: 1;
       --y: 0svh;
       --x: 0svh;
       --rot: 0deg;
-      --z: 100;
-      display: flex;
+      --z: 1;
     }
   }
   
@@ -140,7 +140,15 @@
     --z: 3;
     pointer-events: none;
   
-    @include respond(xs) { }
+    @include respond(xs) {
+      --left: 11svh;
+      --scale: .4;
+      --y: -9svh;
+      --x: -2svh;
+      --rot: 0deg;
+      --z: 3;
+      pointer-events: none;
+     }
   }
 
    .tracklist {
