@@ -3516,6 +3516,24 @@ html, body {
   --z: 3;
   pointer-events: none;
 }
+.slot.the-tracklist {
+  --left:91svh;
+  --scale:.42;
+  --y:57svh;
+  --x:15svh;
+  --rot:8deg;
+  --z:2;
+  pointer-events: none;
+}
+.slot.the-scrapbook {
+  --left:65svh;
+  --scale:.5;
+  --y:12svh;
+  --x:0svh;
+  --rot:0deg;
+  --z:4;
+  pointer-events: none;
+}
 .slot.lfg {
   outline: 5px solid magenta;
   background: rgba(255, 0, 255, 0.2);
