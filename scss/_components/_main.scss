@@ -343,8 +343,17 @@
     pointer-events:none;
   }
 
-  .lightsleeper-title { 
-    --left:159svh;
+.lightsleeper-title { 
+  --left:159svh;
+  --scale:.42; 
+  --y:26svh; 
+  --x:-4svh; 
+  --rot:-5deg;
+  --z:4; 
+  pointer-events: none;
+
+  @include respond(xs) {
+    --left:115svh; 
     --scale:.42; 
     --y:26svh; 
     --x:-4svh; 
@@ -352,6 +361,7 @@
     --z:4; 
     pointer-events: none;
   }
+}
 
   .lightsleeper-visualizer {
     --left:145svh;
