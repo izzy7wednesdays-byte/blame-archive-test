@@ -320,19 +320,23 @@
     --z:40;
   }
 
-  .play-lightsleeper.dotlottie-wc {
-    pointer-events: none;
+  .play-lightsleeper{
+    &.dotlottie-wc {
+      pointer-events: none;
+    }
   }
 
-  .play-lightsleeper.sc-trigger {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    padding: 0;
-    background: transparent;
-    cursor: pointer;
+  .play-lightsleeper{
+    &.sc-trigger {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      cursor: pointer;
+    }
   }
 
   .broken-breathing {
