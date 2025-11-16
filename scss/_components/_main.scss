@@ -18,8 +18,8 @@
     @include respond(xs) {
       display: flex!important;
       position: absolute;
-      --left: 20svh;
-      --scale: 1;
+      --left: 10svh;
+      --scale: .8;
       --y: 0svh;
       --x: 0svh;
       --rot: 0deg;
