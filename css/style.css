@@ -3414,7 +3414,7 @@ html, body {
   --z:2;
 }
 
-.special-message {
+.slot.special-message {
   --left: -26svh;
   --scale: 1.12;
   --y: 20svh;
@@ -3422,7 +3422,7 @@ html, body {
   --rot: 0deg;
   --z: 1;
 }
-.izzymacarthur {
+.slot.izzymacarthur {
   --left: 18svh;
   --scale: .15;
   --y: 65svh;
@@ -3430,7 +3430,7 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
-.social-sparkles {
+.slot.social-sparkles {
   --left: 17svh;
   --scale: .15;
   --y: 50svh;
@@ -3439,7 +3439,7 @@ html, body {
   --z: 2;
   pointer-events: none;
 }
-.instagram {
+.slot.instagram {
   --left: 28svh;
   --scale: .05;
   --y: 55svh;
@@ -3447,7 +3447,7 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
-.tiktok {
+.slot.tiktok {
   --left: 34svh;
   --scale: .05;
   --y: 55svh;
@@ -3455,7 +3455,7 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
-.twitter {
+.slot .twitter {
   --left: 40svh;
   --scale: .05;
   --y: 55svh;
@@ -3463,7 +3463,7 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
-.discord {
+.slot.discord {
   --left: 46svh;
   --scale: .05;
   --y: 55svh;
@@ -3471,7 +3471,7 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
-.spotify {
+.slot.spotify {
   --left: 52svh;
   --scale: .05;
   --y: 55svh;
@@ -3479,7 +3479,7 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
-.apple-music {
+.slot.apple-music {
   --left: 58svh;
   --scale: .05;
   --y: 55svh;
@@ -3487,7 +3487,7 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
-.torn-note {
+.slot.torn-note {
   --left: 11svh;
   --scale: .68;
   --y: -9svh;
