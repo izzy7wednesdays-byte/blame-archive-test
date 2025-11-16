@@ -3414,7 +3414,7 @@ html, body {
   --z:2;
 }
 
-body.desktop .special-message {
+.special-message {
   --left: -26svh;
   --scale: 1.12;
   --y: 20svh;
@@ -3422,7 +3422,7 @@ body.desktop .special-message {
   --rot: 0deg;
   --z: 1;
 }
-body.desktop .izzymacarthur {
+.izzymacarthur {
   --left: 18svh;
   --scale: .15;
   --y: 65svh;
@@ -3430,7 +3430,7 @@ body.desktop .izzymacarthur {
   --rot: 0deg;
   --z: 2;
 }
-body.desktop .social-sparkles {
+.social-sparkles {
   --left: 17svh;
   --scale: .15;
   --y: 50svh;
@@ -3439,7 +3439,7 @@ body.desktop .social-sparkles {
   --z: 2;
   pointer-events: none;
 }
-body.desktop .instagram {
+.instagram {
   --left: 28svh;
   --scale: .05;
   --y: 55svh;
@@ -3447,7 +3447,7 @@ body.desktop .instagram {
   --rot: 0deg;
   --z: 2;
 }
-body.desktop .tiktok {
+.tiktok {
   --left: 34svh;
   --scale: .05;
   --y: 55svh;
@@ -3455,7 +3455,7 @@ body.desktop .tiktok {
   --rot: 0deg;
   --z: 2;
 }
-body.desktop .twitter {
+.twitter {
   --left: 40svh;
   --scale: .05;
   --y: 55svh;
@@ -3463,7 +3463,7 @@ body.desktop .twitter {
   --rot: 0deg;
   --z: 2;
 }
-body.desktop .discord {
+.discord {
   --left: 46svh;
   --scale: .05;
   --y: 55svh;
@@ -3471,7 +3471,7 @@ body.desktop .discord {
   --rot: 0deg;
   --z: 2;
 }
-body.desktop .spotify {
+.spotify {
   --left: 52svh;
   --scale: .05;
   --y: 55svh;
@@ -3479,7 +3479,7 @@ body.desktop .spotify {
   --rot: 0deg;
   --z: 2;
 }
-body.desktop .apple-music {
+.apple-music {
   --left: 58svh;
   --scale: .05;
   --y: 55svh;
@@ -3487,7 +3487,7 @@ body.desktop .apple-music {
   --rot: 0deg;
   --z: 2;
 }
-body.desktop .torn-note {
+.torn-note {
   --left: 11svh;
   --scale: .68;
   --y: -9svh;
