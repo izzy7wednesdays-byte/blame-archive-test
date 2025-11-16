@@ -4,12 +4,12 @@
     outline: 5px solid magenta;   // DEBUG
     background: rgba(255, 0, 255, 0.2); // DEBUG
     
-    --left: -26svh;
+    --left: 200svh;
     --scale: 1.12;
-    --y: 20svh;
+    --y: 5svh;
     --x: 0svh;
     --rot: 0deg;
-    --z: 1;
+    --z: 100;
   
     @include respond(xs) {
       // mobile-specific tweaks later
