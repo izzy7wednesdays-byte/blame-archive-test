@@ -2,7 +2,7 @@
   .special-message {
     --left: -26svh;
     --scale: 1.12;
-    --y: 20svh;
+    --y: 23svh;
     --x: 0svh;
     --rot: 0deg;
     --z: 1;
@@ -46,7 +46,7 @@
     @include respond(xs) {
       display: flex!important;
       --left: 15svh;
-      --scale: .10;
+      --scale: .14;
       --y: 63svh;
       --x: 8svh;
       --rot: 0deg;
@@ -169,6 +169,16 @@
     --rot:8deg; 
     --z:2; 
     pointer-events:none;
+     
+    @include respond(xs) {
+      --left:15svh; 
+      --scale:.3; 
+      --y:12svh; 
+      --x:0svh; 
+      --rot:0deg; 
+      --z:4;
+      pointer-events: none;
+     }
   }
 
    .the-scrapbook {
