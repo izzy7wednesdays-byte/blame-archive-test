@@ -65,7 +65,7 @@
     
     @include respond(xs) { 
       --left: 15svh;
-      --scale: .13;
+      --scale: .10;
       --y: 10svh;
       --x: 8svh;
       --rot: 0deg;
@@ -84,7 +84,7 @@
   
   @include respond(xs) {
     --left: 28svh;
-    --scale: .03;
+    --scale: .04;
     --y: 13svh;
     --x: 8svh;
     --rot: 0deg;
@@ -102,7 +102,7 @@
   
   @include respond(xs) {
     --left: 34svh;
-    --scale: .03;
+    --scale: .04;
     --y: 13svh;
     --x: 8svh;
     --rot: 0deg;
@@ -120,7 +120,7 @@
   
   @include respond(xs) {
     --left: 40svh;
-    --scale: .03;
+    --scale: .04;
     --y: 13svh;
     --x: 8svh;
     --rot: 0deg;
@@ -138,7 +138,7 @@
   
   @include respond(xs) {
     --left: 46svh;
-    --scale: .03;
+    --scale: .04;
     --y: 13svh;
     --x: 8svh;
     --rot: 0deg;
@@ -156,7 +156,7 @@
   
   @include respond(xs) {
     --left: 52svh;
-    --scale: .03;
+    --scale: .04;
     --y: 13svh;
     --x: 8svh;
     --rot: 0deg;
@@ -174,7 +174,7 @@
   
   @include respond(xs) { 
     --left: 58svh;
-    --scale: .03;
+    --scale: .04;
     --y: 13svh;
     --x: 8svh;
     --rot: 0deg;
@@ -233,7 +233,7 @@
   pointer-events: none;
   
   @include respond(xs) {
-    --left:20svh; 
+    --left:18svh; 
     --scale:.32; 
     --y:30svh; 
     --x:0svh; 
