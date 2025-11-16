@@ -13,6 +13,7 @@
   }
   
   .special-message-mobile {
+    outline: magenta;
     display: none !important;
     
     @include respond(xs) {
