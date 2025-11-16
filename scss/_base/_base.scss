@@ -468,8 +468,6 @@ html, body {
 /* ========= PER-SLOT CUSTOMIZATION (svh units) ========= */
   
 /* ========= WELCOME SECTION ========= */
-  #special-message{ --left:-26svh; --scale:1.12; --y:20svh; --x:0svh; --rot:0deg; --z:1; }
-  #izzymacarthur{ --left:18svh; --scale:.15; --y:65svh; --x:8svh; --rot:0deg; --z:2; }
   #social-sparkles{ --left:17svh; --scale:.15; --y:50svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
   #instagram{ --left:28svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
   #tiktok{ --left:34svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
@@ -477,11 +475,6 @@ html, body {
   #discord{ --left:46svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
   #spotify{ --left:52svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
   #apple-music{ --left:58svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
-  #torn-note{ --left:11svh; --scale:.68; --y:-9svh; --x:-2svh; --rot:0deg; --z:3; pointer-events: none; }
-  #tracklist{ --left:91svh; --scale:.42; --y:57svh; --x:15svh; --rot:8deg; --z:2; pointer-events:none;  }
-  #the-scrapbook{ --left:65svh; --scale:.5; --y:12svh; --x:0svh; --rot:0deg; --z:4;pointer-events: none; }
-  #lfg{ --left:97svh; --scale:.1; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
-  #pink-flashing-arrow{ --left:123svh; --scale:.09; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
 /* ========= LIGHT SLEEPER SECTION ========= */
   #broken-cd{ --left:143svh; --scale:.35; --y:67svh; --x:0svh; --rot:85deg; --z:29;pointer-events:none; }
   #playlist-ex{ --left:162svh; --scale:.62; --y:25svh; --x:0svh; --rot:-5deg; --z:30; }
