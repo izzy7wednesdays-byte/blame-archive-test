@@ -119,7 +119,7 @@
   --z: 2;
   
   @include respond(xs) {
-    --left: 32svh;
+    --left: 34svh;
     --scale: .037;
     --y: 18.75svh;
     --x: 6.5svh;
@@ -137,7 +137,7 @@
   --z: 2;
   
   @include respond(xs) {
-    --left: 36svh;
+    --left: 40svh;
     --scale: .037;
     --y: 17.25svh;
     --x: 6.5svh;
@@ -155,7 +155,7 @@
   --z: 2;
   
   @include respond(xs) {
-    --left: 40svh;
+    --left: 46svh;
     --scale: .037;
     --y: 18.75svh;
     --x: 6.5svh;
@@ -173,7 +173,7 @@
   --z: 2;
   
   @include respond(xs) { 
-    --left: 44svh;
+    --left: 52svh;
     --scale: .037;
     --y: 17.25svh;
     --x: 6.5svh;
