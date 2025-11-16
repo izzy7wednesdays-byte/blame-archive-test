@@ -130,6 +130,8 @@
   }
 
   &.lfg { 
+    outline: 5px solid magenta;   // DEBUG
+    background: rgba(255, 0, 255, 0.2); // DEBUG
     --left:97svh; 
     --scale:.1; 
     --y:5svh; 
@@ -140,6 +142,8 @@
   }
   
   &.pink-arrow { 
+    outline: 5px solid magenta;   // DEBUG
+    background: rgba(255, 0, 255, 0.2); // DEBUG
     --left:123svh; 
     --scale:.09; 
     --y:5svh; 
