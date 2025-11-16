@@ -293,25 +293,35 @@
   pointer-events:none;
   
   @include respond(xs) {
-    --left:100svh; 
+    --left:95svh; 
     --scale:.30; 
     --y:60svh; 
     --x:0svh; 
-    --rot:0deg; 
+    --rot:85deg; 
     --z:29;
     pointer-events: none;
   }
 }
 
-   .blue-star-1 { 
-    --left:183svh; 
-    --scale:.06; 
+.blue-star-1 { 
+  --left:183svh; 
+  --scale:.06; 
+  --y:85svh;
+  --x:0svh;
+  --rot:80deg;
+  --z:20;
+  pointer-events:none;
+  
+  @include respond(xs) {
+    --left:100svh; 
+    --scale:.03; 
     --y:85svh;
     --x:0svh;
     --rot:80deg;
-     --z:20;
-     pointer-events:none;
+    --z:20;
+    pointer-events:none;
   }
+}
 
    .blue-star-2 {
     --left:185svh;
