@@ -45,6 +45,25 @@ html, body {
     --group-left: -25svh;
   }
 /* ========= SLOT CONTROL PANEL ========= */
+  .slot{
+    --left: 0svh;
+    --scale: 1;
+    --y: 0svh;
+    --x: 0svh;
+    --rot: 0deg;
+    --z: 1;
+
+    position: absolute;
+    left: calc(var(--left) + var(--group-left));
+    bottom: 0;
+    display: flex; align-items: flex-end;
+    height: var(--band-h);
+    transform: translate(var(--x), calc(-1 * var(--y))) rotate(var(--rot));
+    transform-origin: center bottom;
+    z-index: var(--z);
+    color: inherit; text-decoration: none;
+  }
+
   .slot img{
     height: calc(var(--band-h) * var(--scale));
     width: auto;
