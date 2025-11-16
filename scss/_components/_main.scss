@@ -244,8 +244,8 @@
 
 .lfg { 
   --left:97svh; 
-  --scale:.15; 
-  --y:12svh; 
+  --scale:.1; 
+  --y:5svh; 
   --x:0svh; 
   --rot:0deg; 
   --z:4;
@@ -293,7 +293,7 @@
   pointer-events:none;
   
   @include respond(xs) {
-    --left:95svh; 
+    --left:80svh; 
     --scale:.30; 
     --y:70svh; 
     --x:0svh; 
@@ -313,9 +313,9 @@
   pointer-events:none;
   
   @include respond(xs) {
-    --left:100svh; 
-    --scale:.03; 
-    --y:85svh;
+    --left:115svh; 
+    --scale:.04; 
+    --y:90svh;
     --x:0svh;
     --rot:80deg;
     --z:20;
