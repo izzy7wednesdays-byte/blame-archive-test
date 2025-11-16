@@ -83,9 +83,9 @@
   --z: 2;
   
   @include respond(xs) {
-    --left: 21svh;
+    --left: 20svh;
     --scale: .037;
-    --y: 17svh;
+    --y: 18.5svh;
     --x: 8svh;
     --rot: 0deg;
     --z: 2;
@@ -103,7 +103,7 @@
   @include respond(xs) {
     --left: 25svh;
     --scale: .037;
-    --y: 12svh;
+    --y: 17.5svh;
     --x: 8svh;
     --rot: 0deg;
     --z: 2;
