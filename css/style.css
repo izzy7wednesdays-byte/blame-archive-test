@@ -3415,14 +3415,12 @@ html, body {
 }
 
 .slot.special-message {
-  outline: 5px solid magenta;
-  background: rgba(255, 0, 255, 0.2);
-  --left: 200svh;
+  --left: -20svh;
   --scale: 1.12;
-  --y: 5svh;
+  --y: 10svh;
   --x: 0svh;
   --rot: 0deg;
-  --z: 100;
+  --z: 10;
 }
 @media (max-width: 36em) {
   .slot.special-message {
@@ -3516,6 +3514,28 @@ html, body {
   --x: -2svh;
   --rot: 0deg;
   --z: 3;
+  pointer-events: none;
+}
+.slot.lfg {
+  outline: 5px solid magenta;
+  background: rgba(255, 0, 255, 0.2);
+  --left:97svh;
+  --scale:.1;
+  --y:5svh;
+  --x:0svh;
+  --rot:0deg;
+  --z:5;
+  pointer-events: none;
+}
+.slot.pink-arrow {
+  outline: 5px solid magenta;
+  background: rgba(255, 0, 255, 0.2);
+  --left:123svh;
+  --scale:.09;
+  --y:5svh;
+  --x:0svh;
+  --rot:0deg;
+  --z:5;
   pointer-events: none;
 }
 
