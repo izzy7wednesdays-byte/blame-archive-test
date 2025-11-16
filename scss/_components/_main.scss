@@ -1,117 +1,119 @@
 // ========= WELCOME SECTION (slot classes) =========
-
-.special-message {
-  --left: -26svh;
-  --scale: 1.12;
-  --y: 20svh;
-  --x: 0svh;
-  --rot: 0deg;
-  --z: 1;
-
-  @include respond(xs) {
-    // mobile-specific tweaks later
-    // --scale: 0.9;
-    // --y: 30svh;
+.slot {
+  &.special-message {
+    --left: -26svh;
+    --scale: 1.12;
+    --y: 20svh;
+    --x: 0svh;
+    --rot: 0deg;
+    --z: 1;
+  
+    @include respond(xs) {
+      // mobile-specific tweaks later
+      // --scale: 0.9;
+      // --y: 30svh;
+    }
   }
-}
+  
+  &.izzymacarthur {
+    --left: 18svh;
+    --scale: .15;
+    --y: 65svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+  
+    @include respond(xs) { }
+  }
+  
+  &.social-sparkles {
+    --left: 17svh;
+    --scale: .15;
+    --y: 50svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+    pointer-events: none;
+  
+    @include respond(xs) { }
+  }
+  
+  &.instagram {
+    --left: 28svh;
+    --scale: .05;
+    --y: 55svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+  
+    @include respond(xs) { }
+  }
+  
+  &.tiktok {
+    --left: 34svh;
+    --scale: .05;
+    --y: 55svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+  
+    @include respond(xs) { }
+  }
+  
+  .twitter {
+    --left: 40svh;
+    --scale: .05;
+    --y: 55svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+  
+    @include respond(xs) { }
+  }
+  
+  &.discord {
+    --left: 46svh;
+    --scale: .05;
+    --y: 55svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+  
+    @include respond(xs) { }
+  }
+  
+  &.spotify {
+    --left: 52svh;
+    --scale: .05;
+    --y: 55svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+  
+    @include respond(xs) { }
+  }
+  
+  &.apple-music {
+    --left: 58svh;
+    --scale: .05;
+    --y: 55svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+  
+    @include respond(xs) { }
+  }
+  
+  &.torn-note {
+    --left: 11svh;
+    --scale: .68;
+    --y: -9svh;
+    --x: -2svh;
+    --rot: 0deg;
+    --z: 3;
+    pointer-events: none;
+  
+    @include respond(xs) { }
+  }
 
-.izzymacarthur {
-  --left: 18svh;
-  --scale: .15;
-  --y: 65svh;
-  --x: 8svh;
-  --rot: 0deg;
-  --z: 2;
-
-  @include respond(xs) { }
-}
-
-.social-sparkles {
-  --left: 17svh;
-  --scale: .15;
-  --y: 50svh;
-  --x: 8svh;
-  --rot: 0deg;
-  --z: 2;
-  pointer-events: none;
-
-  @include respond(xs) { }
-}
-
-.instagram {
-  --left: 28svh;
-  --scale: .05;
-  --y: 55svh;
-  --x: 8svh;
-  --rot: 0deg;
-  --z: 2;
-
-  @include respond(xs) { }
-}
-
-.tiktok {
-  --left: 34svh;
-  --scale: .05;
-  --y: 55svh;
-  --x: 8svh;
-  --rot: 0deg;
-  --z: 2;
-
-  @include respond(xs) { }
-}
-
-.twitter {
-  --left: 40svh;
-  --scale: .05;
-  --y: 55svh;
-  --x: 8svh;
-  --rot: 0deg;
-  --z: 2;
-
-  @include respond(xs) { }
-}
-
-.discord {
-  --left: 46svh;
-  --scale: .05;
-  --y: 55svh;
-  --x: 8svh;
-  --rot: 0deg;
-  --z: 2;
-
-  @include respond(xs) { }
-}
-
-.spotify {
-  --left: 52svh;
-  --scale: .05;
-  --y: 55svh;
-  --x: 8svh;
-  --rot: 0deg;
-  --z: 2;
-
-  @include respond(xs) { }
-}
-
-.apple-music {
-  --left: 58svh;
-  --scale: .05;
-  --y: 55svh;
-  --x: 8svh;
-  --rot: 0deg;
-  --z: 2;
-
-  @include respond(xs) { }
-}
-
-.torn-note {
-  --left: 11svh;
-  --scale: .68;
-  --y: -9svh;
-  --x: -2svh;
-  --rot: 0deg;
-  --z: 3;
-  pointer-events: none;
-
-  @include respond(xs) { }
 }
