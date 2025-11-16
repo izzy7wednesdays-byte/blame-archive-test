@@ -1,7 +1,5 @@
 // ========= WELCOME SECTION (slot classes) =========
-.slot {
-    
-  &.special-message {
+  .special-message {
     --left: -26svh;
     --scale: 1.12;
     --y: 20svh;
@@ -14,7 +12,7 @@
     }
   }
   
-  &.special-message-mobile {
+  .special-message-mobile {
     display: none;
     
     @include respond(xs) {
@@ -29,7 +27,7 @@
     }
   }
   
-  &.izzymacarthur {
+  .izzymacarthur {
     --left: 18svh;
     --scale: .15;
     --y: 65svh;
@@ -40,7 +38,7 @@
     @include respond(xs) { }
   }
   
-  &.social-sparkles {
+   .social-sparkles {
     --left: 17svh;
     --scale: .15;
     --y: 50svh;
@@ -52,7 +50,7 @@
     @include respond(xs) { }
   }
   
-  &.instagram {
+   .instagram {
     --left: 28svh;
     --scale: .05;
     --y: 55svh;
@@ -63,7 +61,7 @@
     @include respond(xs) { }
   }
   
-  &.tiktok {
+   .tiktok {
     --left: 34svh;
     --scale: .05;
     --y: 55svh;
@@ -74,7 +72,7 @@
     @include respond(xs) { }
   }
   
-  &.twitter {
+   .twitter {
     --left: 40svh;
     --scale: .05;
     --y: 55svh;
@@ -85,7 +83,7 @@
     @include respond(xs) { }
   }
   
-  &.discord {
+   .discord {
     --left: 46svh;
     --scale: .05;
     --y: 55svh;
@@ -96,7 +94,7 @@
     @include respond(xs) { }
   }
   
-  &.spotify {
+   .spotify {
     --left: 52svh;
     --scale: .05;
     --y: 55svh;
@@ -107,7 +105,7 @@
     @include respond(xs) { }
   }
   
-  &.apple-music {
+   .apple-music {
     --left: 58svh;
     --scale: .05;
     --y: 55svh;
@@ -118,7 +116,7 @@
     @include respond(xs) { }
   }
   
-  &.torn-note {
+   .torn-note {
     --left: 11svh;
     --scale: .68;
     --y: -9svh;
@@ -130,7 +128,7 @@
     @include respond(xs) { }
   }
 
-  &.tracklist {
+   .tracklist {
     --left:91svh; 
     --scale:.42; 
     --y:57svh; 
@@ -140,7 +138,7 @@
     pointer-events:none;
   }
 
-  &.the-scrapbook {
+   .the-scrapbook {
     --left:65svh; 
     --scale:.5; 
     --y:12svh; 
@@ -150,7 +148,7 @@
     pointer-events: none;
   }
 
-  &.lfg { 
+   .lfg { 
     --left:97svh; 
     --scale:.1; 
     --y:5svh; 
@@ -160,7 +158,7 @@
     pointer-events: none;
   }
   
-  &.pink-arrow { 
+   .pink-arrow { 
     --left:123svh; 
     --scale:.09; 
     --y:5svh; 
@@ -187,5 +185,4 @@
 //  #click4chordz{ --left:288svh; --scale:.11; --y:88svh; --x:0svh; --rot:0deg; --z:42; pointer-events:none;
 //                 --ff: "Manic"; --ta: center; --fw: 400; --fs-mul: .18; --tt: uppercase; --text-color: #4C58E9;}
 
-  
-}
+
