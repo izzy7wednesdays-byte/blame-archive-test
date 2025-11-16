@@ -56,6 +56,7 @@ html, body {
     position: absolute;
     left: calc(var(--left) + var(--group-left));
     bottom: 0;
+    align-items: flex-end;
     height: var(--band-h);
     transform: translate(var(--x), calc(-1 * var(--y))) rotate(var(--rot));
     transform-origin: center bottom;
