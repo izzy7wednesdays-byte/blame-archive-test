@@ -2,7 +2,7 @@
 .special-message {
   --left: -26svh;
   --scale: 1.12;
-  --y: 23svh;
+  --y: 21svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 1;
@@ -243,12 +243,12 @@
 }
 
 .lfg { 
-  --left:9svh; 
-  --scale:.1; 
-  --y:5svh; 
+  --left:97svh; 
+  --scale:.15; 
+  --y:12svh; 
   --x:0svh; 
   --rot:0deg; 
-  --z:5;
+  --z:4;
   pointer-events: none;
   
   @include respond(xs) {
@@ -295,7 +295,7 @@
   @include respond(xs) {
     --left:95svh; 
     --scale:.30; 
-    --y:60svh; 
+    --y:70svh; 
     --x:0svh; 
     --rot:85deg; 
     --z:29;
