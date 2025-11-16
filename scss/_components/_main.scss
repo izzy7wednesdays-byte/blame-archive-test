@@ -119,10 +119,10 @@
   --z: 2;
   
   @include respond(xs) {
-    --left: 40svh;
-    --scale: .04;
-    --y: 13svh;
-    --x: 8svh;
+    --left: 29svh;
+    --scale: .037;
+    --y: 18.75svh;
+    --x: 6.5svh;
     --rot: 0deg;
     --z: 2;
   }
