@@ -64,9 +64,9 @@
     pointer-events: none;
     
     @include respond(xs) { 
-      --left: 13svh;
+      --left: 12svh;
       --scale: .13;
-      --y: 10svh;
+      --y: 13svh;
       --x: 8svh;
       --rot: 0deg;
       --z: 2;
