@@ -1,15 +1,12 @@
 // ========= WELCOME SECTION (slot classes) =========
 .slot {
   &.special-message {
-    outline: 5px solid magenta;   // DEBUG
-    background: rgba(255, 0, 255, 0.2); // DEBUG
-    
-    --left: 200svh;
+    --left: -20svh;
     --scale: 1.12;
-    --y: 5svh;
+    --y: 10svh;
     --x: 0svh;
     --rot: 0deg;
-    --z: 100;
+    --z: 10;
   
     @include respond(xs) {
       display:none;
