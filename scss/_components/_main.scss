@@ -13,8 +13,7 @@
   }
   
   .special-message-mobile {
-    outline: magenta;
-    display: none !important;
+    display: none;
     
     @include respond(xs) {
       position: absolute;
