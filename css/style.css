@@ -3234,7 +3234,7 @@ html, body {
 .special-message {
   --left: -26svh;
   --scale: 1.12;
-  --y: 20svh;
+  --y: 23svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 1;
@@ -3250,14 +3250,14 @@ html, body {
 }
 @media (max-width: 36em) {
   .special-message-mobile {
+    display: flex !important;
     position: absolute;
-    --left: 20svh;
-    --scale: 1.12;
-    --y: 5svh;
+    --left: 12svh;
+    --scale: .8;
+    --y: 20svh;
     --x: 0svh;
     --rot: 0deg;
     --z: 1;
-    display: flex;
   }
 }
 
@@ -3269,6 +3269,27 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
+@media (max-width: 36em) {
+  .izzymacarthur {
+    display: none;
+  }
+}
+
+.mobile-izzymacarthur {
+  display: none !important;
+}
+@media (max-width: 36em) {
+  .mobile-izzymacarthur {
+    display: flex !important;
+    --left: 13svh;
+    --scale: .12;
+    --y: 63svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+  }
+}
+
 .social-sparkles {
   --left: 17svh;
   --scale: .15;
@@ -3278,6 +3299,18 @@ html, body {
   --z: 2;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .social-sparkles {
+    --left: 11.5svh;
+    --scale: .13;
+    --y: 13svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+    pointer-events: none;
+  }
+}
+
 .instagram {
   --left: 28svh;
   --scale: .05;
@@ -3286,6 +3319,17 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
+@media (max-width: 36em) {
+  .instagram {
+    --left: 22svh;
+    --scale: .037;
+    --y: 18.75svh;
+    --x: 6.5svh;
+    --rot: 0deg;
+    --z: 2;
+  }
+}
+
 .tiktok {
   --left: 34svh;
   --scale: .05;
@@ -3294,6 +3338,17 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
+@media (max-width: 36em) {
+  .tiktok {
+    --left: 27.5svh;
+    --scale: .037;
+    --y: 17.25svh;
+    --x: 6.5svh;
+    --rot: 0deg;
+    --z: 2;
+  }
+}
+
 .twitter {
   --left: 40svh;
   --scale: .05;
@@ -3302,6 +3357,17 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
+@media (max-width: 36em) {
+  .twitter {
+    --left: 33svh;
+    --scale: .037;
+    --y: 18.75svh;
+    --x: 6.5svh;
+    --rot: 0deg;
+    --z: 2;
+  }
+}
+
 .discord {
   --left: 46svh;
   --scale: .05;
@@ -3310,6 +3376,17 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
+@media (max-width: 36em) {
+  .discord {
+    --left: 38.5svh;
+    --scale: .037;
+    --y: 17.25svh;
+    --x: 6.5svh;
+    --rot: 0deg;
+    --z: 2;
+  }
+}
+
 .spotify {
   --left: 52svh;
   --scale: .05;
@@ -3318,6 +3395,17 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
+@media (max-width: 36em) {
+  .spotify {
+    --left: 44svh;
+    --scale: .037;
+    --y: 18.75svh;
+    --x: 6.5svh;
+    --rot: 0deg;
+    --z: 2;
+  }
+}
+
 .apple-music {
   --left: 58svh;
   --scale: .05;
@@ -3326,6 +3414,17 @@ html, body {
   --rot: 0deg;
   --z: 2;
 }
+@media (max-width: 36em) {
+  .apple-music {
+    --left: 49.5svh;
+    --scale: .037;
+    --y: 17.25svh;
+    --x: 6.5svh;
+    --rot: 0deg;
+    --z: 2;
+  }
+}
+
 .torn-note {
   --left: 11svh;
   --scale: .68;
@@ -3335,6 +3434,18 @@ html, body {
   --z: 3;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .torn-note {
+    --left:39svh;
+    --scale:.38;
+    --y:65svh;
+    --x:15svh;
+    --rot:10deg;
+    --z:4;
+    pointer-events: none;
+  }
+}
+
 .tracklist {
   --left:91svh;
   --scale:.42;
@@ -3343,6 +3454,17 @@ html, body {
   --rot:8deg;
   --z:2;
   pointer-events: none;
+}
+@media (max-width: 36em) {
+  .tracklist {
+    --left:60svh;
+    --scale:.3;
+    --y:1svh;
+    --x:15svh;
+    --rot:-8deg;
+    --z:4;
+    pointer-events: none;
+  }
 }
 
 .the-scrapbook {
@@ -3354,15 +3476,37 @@ html, body {
   --z:4;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .the-scrapbook {
+    --left:18svh;
+    --scale:.32;
+    --y:26svh;
+    --x:0svh;
+    --rot:0deg;
+    --z:4;
+    pointer-events: none;
+  }
+}
 
 .lfg {
-  --left:97svh;
+  --left:9svh;
   --scale:.1;
   --y:5svh;
   --x:0svh;
   --rot:0deg;
   --z:5;
   pointer-events: none;
+}
+@media (max-width: 36em) {
+  .lfg {
+    --left:25svh;
+    --scale:.1;
+    --y:3svh;
+    --x:0svh;
+    --rot:0deg;
+    --z:4;
+    pointer-events: none;
+  }
 }
 
 .pink-arrow {
@@ -3374,6 +3518,17 @@ html, body {
   --z:5;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .pink-arrow {
+    --left:50svh;
+    --scale:.08;
+    --y:3svh;
+    --x:0svh;
+    --rot:0deg;
+    --z:4;
+    pointer-events: none;
+  }
+}
 
 .broken-cd {
   --left:143svh;
@@ -3384,14 +3539,16 @@ html, body {
   --z:29;
   pointer-events: none;
 }
-
-.playlist-ex {
-  --left:162svh;
-  --scale:.62;
-  --y:25svh;
-  --x:0svh;
-  --rot:-5deg;
-  --z:30;
+@media (max-width: 36em) {
+  .broken-cd {
+    --left:100svh;
+    --scale:.30;
+    --y:60svh;
+    --x:0svh;
+    --rot:0deg;
+    --z:29;
+    pointer-events: none;
+  }
 }
 
 .blue-star-1 {
