@@ -1,60 +1,60 @@
 // ========= WELCOME SECTION (slot classes) =========
-  .special-message {
-    --left: -26svh;
-    --scale: 1.12;
-    --y: 23svh;
+.special-message {
+  --left: -26svh;
+  --scale: 1.12;
+  --y: 23svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 1;
+  
+  @include respond(xs) {
+    display:none;
+  }
+}
+  
+.special-message-mobile {
+  display: none!important;
+    
+  @include respond(xs) {
+    display: flex!important;
+    position: absolute;
+    --left: 12svh;
+    --scale: .8;
+    --y: 20svh;
     --x: 0svh;
     --rot: 0deg;
     --z: 1;
-  
-    @include respond(xs) {
-      display:none;
-    }
   }
+}
   
-  .special-message-mobile {
-    display: none!important;
-    
-    @include respond(xs) {
-      display: flex!important;
-      position: absolute;
-      --left: 12svh;
-      --scale: .8;
-      --y: 20svh;
-      --x: 0svh;
-      --rot: 0deg;
-      --z: 1;
-    }
+.izzymacarthur {
+  --left: 18svh;
+  --scale: .15;
+  --y: 60svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+
+  @include respond(xs) { 
+    display: none;
   }
-  
-  .izzymacarthur {
-    --left: 18svh;
-    --scale: .15;
-    --y: 60svh;
+}
+
+.mobile-izzymacarthur {
+  display: none!important;
+
+  @include respond(xs) {
+    display: flex!important;
+    --left: 13svh;
+    --scale: .12;
+    --y: 63svh;
     --x: 8svh;
     --rot: 0deg;
     --z: 2;
-  
-    @include respond(xs) { 
-      display: none;
-    }
   }
+}
 
-  .mobile-izzymacarthur {
-    display: none!important;
-    
-    @include respond(xs) {
-      display: flex!important;
-      --left: 13svh;
-      --scale: .12;
-      --y: 60svh;
-      --x: 8svh;
-      --rot: 0deg;
-      --z: 2;
-    }
-  }
-  
-   .social-sparkles {
+  .social-sparkles {
     --left: 17svh;
     --scale: .15;
     --y: 50svh;
@@ -62,7 +62,7 @@
     --rot: 0deg;
     --z: 2;
     pointer-events: none;
-  
+    
     @include respond(xs) { 
       --left: 15svh;
       --scale: .10;
@@ -71,189 +71,199 @@
       --rot: 0deg;
       --z: 2;
       pointer-events: none;
-     }
-  }
-  
-   .instagram {
-    --left: 28svh;
-    --scale: .05;
-    --y: 55svh;
-    --x: 8svh;
-    --rot: 0deg;
-    --z: 2;
-  
-    @include respond(xs) {
-      --left: 28svh;
-      --scale: .03;
-      --y: 55svh;
-      --x: 8svh;
-      --rot: 0deg;
-      --z: 2;
-     }
-  }
-  
-   .tiktok {
-    --left: 34svh;
-    --scale: .05;
-    --y: 55svh;
-    --x: 8svh;
-    --rot: 0deg;
-    --z: 2;
-  
-    @include respond(xs) {
-      --left: 34svh;
-      --scale: .03;
-      --y: 55svh;
-      --x: 8svh;
-      --rot: 0deg;
-      --z: 2;
-     }
-  }
-  
-   .twitter {
-    --left: 40svh;
-    --scale: .05;
-    --y: 55svh;
-    --x: 8svh;
-    --rot: 0deg;
-    --z: 2;
-  
-    @include respond(xs) {
-      --left: 40svh;
-      --scale: .03;
-      --y: 55svh;
-      --x: 8svh;
-      --rot: 0deg;
-      --z: 2;
-     }
-  }
-  
-   .discord {
-    --left: 46svh;
-    --scale: .05;
-    --y: 55svh;
-    --x: 8svh;
-    --rot: 0deg;
-    --z: 2;
-  
-    @include respond(xs) {
-      --left: 46svh;
-      --scale: .03;
-      --y: 55svh;
-      --x: 8svh;
-      --rot: 0deg;
-      --z: 2;
-     }
     }
+  }
   
-   .spotify {
+.instagram {
+  --left: 28svh;
+  --scale: .05;
+  --y: 55svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  
+  @include respond(xs) {
+    --left: 28svh;
+    --scale: .03;
+    --y: 13svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+  }
+}
+  
+.tiktok {
+  --left: 34svh;
+  --scale: .05;
+  --y: 55svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  
+  @include respond(xs) {
+    --left: 34svh;
+    --scale: .03;
+    --y: 13svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+  }
+}
+  
+.twitter {
+  --left: 40svh;
+  --scale: .05;
+  --y: 55svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  
+  @include respond(xs) {
+    --left: 40svh;
+    --scale: .03;
+    --y: 13svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+  }
+}
+  
+.discord {
+  --left: 46svh;
+  --scale: .05;
+  --y: 55svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  
+  @include respond(xs) {
+    --left: 46svh;
+    --scale: .03;
+    --y: 13svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+  }
+}
+  
+.spotify {
+  --left: 52svh;
+  --scale: .05;
+  --y: 55svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  
+  @include respond(xs) {
     --left: 52svh;
-    --scale: .05;
-    --y: 55svh;
+    --scale: .03;
+    --y: 13svh;
     --x: 8svh;
     --rot: 0deg;
     --z: 2;
-  
-    @include respond(xs) {
-      --left: 52svh;
-      --scale: .03;
-      --y: 55svh;
-      --x: 8svh;
-      --rot: 0deg;
-      --z: 2;
-     }
   }
+}
   
-   .apple-music {
+.apple-music {
+  --left: 58svh;
+  --scale: .05;
+  --y: 55svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  
+  @include respond(xs) { 
     --left: 58svh;
-    --scale: .05;
-    --y: 55svh;
+    --scale: .03;
+    --y: 13svh;
     --x: 8svh;
     --rot: 0deg;
     --z: 2;
-  
-    @include respond(xs) { 
-      --left: 58svh;
-      --scale: .03;
-      --y: 55svh;
-      --x: 8svh;
-      --rot: 0deg;
-      --z: 2;
-     }
   }
+}
+
+.torn-note {
+  --left: 11svh;
+  --scale: .68;
+  --y: -9svh;
+  --x: -2svh;
+  --rot: 0deg;
+  --z: 3;
+  pointer-events: none;
   
-   .torn-note {
+  @include respond(xs) {
+    display:none;
     --left: 11svh;
-    --scale: .68;
+    --scale: .45;
     --y: -9svh;
     --x: -2svh;
     --rot: 0deg;
     --z: 3;
     pointer-events: none;
-  
-    @include respond(xs) {
-      display:none;
-      --left: 11svh;
-      --scale: .45;
-      --y: -9svh;
-      --x: -2svh;
-      --rot: 0deg;
-      --z: 3;
-      pointer-events: none;
-     }
   }
+}
 
-   .tracklist {
-    --left:91svh; 
-    --scale:.42; 
-    --y:57svh; 
+.tracklist {
+  --left:91svh; 
+  --scale:.42; 
+  --y:57svh; 
+  --x:15svh; 
+  --rot:8deg; 
+  --z:2; 
+  pointer-events:none;
+  
+  @include respond(xs) {
+    --left:43svh; 
+    --scale:.3; 
+    --y:70svh; 
     --x:15svh; 
     --rot:8deg; 
-    --z:2; 
-    pointer-events:none;
-     
-    @include respond(xs) {
-      --left:43svh; 
-      --scale:.3; 
-      --y:70svh; 
-      --x:15svh; 
-      --rot:8deg; 
-      --z:4;
-      pointer-events: none;
-     }
+    --z:4;
+    pointer-events: none;
   }
+}
 
-   .the-scrapbook {
-    --left:65svh; 
-    --scale:.5; 
-    --y:12svh; 
+.the-scrapbook {
+  --left:65svh; 
+  --scale:.5; 
+  --y:12svh; 
+  --x:0svh; 
+  --rot:0deg; 
+  --z:4;
+  pointer-events: none;
+  
+  @include respond(xs) {
+    --left:20svh; 
+    --scale:.32; 
+    --y:30svh; 
     --x:0svh; 
     --rot:0deg; 
     --z:4;
     pointer-events: none;
-
-     @include respond(xs) {
-      --left:20svh; 
-      --scale:.32; 
-      --y:40svh; 
-      --x:0svh; 
-      --rot:0deg; 
-      --z:4;
-      pointer-events: none;
-     }
   }
+}
 
-   .lfg { 
-    --left:97svh; 
-    --scale:.1; 
-    --y:5svh; 
+.lfg { 
+  --left:9svh; 
+  --scale:.1; 
+  --y:5svh; 
+  --x:0svh; 
+  --rot:0deg; 
+  --z:5;
+  pointer-events: none;
+  
+  @include respond(xs) {
+    --left:20svh; 
+    --scale:.20; 
+    --y:30svh; 
     --x:0svh; 
     --rot:0deg; 
-    --z:5;
+    --z:4;
     pointer-events: none;
   }
+}
   
-   .pink-arrow { 
+  .pink-arrow { 
     --left:123svh; 
     --scale:.09; 
     --y:5svh; 
@@ -261,6 +271,16 @@
     --rot:0deg; 
     --z:5;
     pointer-events: none;
+    
+    @include respond(xs) {
+      --left:20svh; 
+      --scale:.20; 
+      --y:30svh; 
+      --x:0svh; 
+      --rot:0deg; 
+      --z:4;
+      pointer-events: none;
+    }
   }
 
   // ========= LIGHT SLEEPER SECTION (slot classes) =========
