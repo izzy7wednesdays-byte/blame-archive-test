@@ -12,9 +12,22 @@
     --z: 100;
   
     @include respond(xs) {
-      // mobile-specific tweaks later
-      // --scale: 0.9;
-      // --y: 30svh;
+      display:none;
+    }
+  }
+  
+  &.special-message-mobile {
+    display:none;
+    
+    @include respond(xs) {
+      display: flex;
+      position: absolute;
+      --left: 200svh;
+      --scale: 1.12;
+      --y: 5svh;
+      --x: 0svh;
+      --rot: 0deg;
+      --z: 100;
     }
   }
   
