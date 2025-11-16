@@ -3415,12 +3415,34 @@ html, body {
 }
 
 .slot.special-message {
-  --left: -26svh;
+  outline: 5px solid magenta;
+  background: rgba(255, 0, 255, 0.2);
+  --left: 200svh;
   --scale: 1.12;
-  --y: 20svh;
+  --y: 5svh;
   --x: 0svh;
   --rot: 0deg;
-  --z: 1;
+  --z: 100;
+}
+@media (max-width: 36em) {
+  .slot.special-message {
+    display: none;
+  }
+}
+.slot.special-message-mobile {
+  display: none;
+}
+@media (max-width: 36em) {
+  .slot.special-message-mobile {
+    display: flex;
+    position: absolute;
+    --left: 200svh;
+    --scale: 1.12;
+    --y: 5svh;
+    --x: 0svh;
+    --rot: 0deg;
+    --z: 100;
+  }
 }
 .slot.izzymacarthur {
   --left: 18svh;
