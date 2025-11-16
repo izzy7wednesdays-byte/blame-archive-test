@@ -1,5 +1,22 @@
 // ========= WELCOME SECTION (slot classes) =========
 .slot {
+    --left: 0svh;
+    --scale: 1;
+    --y: 0svh;
+    --x: 0svh;
+    --rot: 0deg;
+    --z: 1;
+    position: absolute;
+    left: calc(var(--left) + var(--group-left));
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    height: var(--band-h);
+    transform: translate(var(--x), calc(-1 * var(--y))) rotate(var(--rot));
+    transform-origin: center bottom;
+    z-index: var(--z);
+    color: inherit; text-decoration: none;
+  
   &.special-message {
     --left: -26svh;
     --scale: 1.12;
