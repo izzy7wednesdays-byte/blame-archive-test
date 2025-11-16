@@ -73,7 +73,7 @@
     @include respond(xs) { }
   }
   
-  .twitter {
+  &.twitter {
     --left: 40svh;
     --scale: .05;
     --y: 55svh;
