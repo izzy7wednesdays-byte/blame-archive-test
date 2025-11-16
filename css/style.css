@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ========= BASE / INITIAL PAINT ========= */
 html, body {
   background: #0f0f12;
@@ -7,488 +6,454 @@ html, body {
 }
 
 /* ========= V146.2 — FIXING OVERLAY - LINE 446 ========= */
+  
 /* ========= GLOBAL CONTROLS ========= */
-:root {
-  --band-h: 100svh;
-  --rail-w: 2775svh;
-  --bg: #0d161d;
-  --fg: #e7f1ff;
-}
+  :root{
+    --band-h: 100svh;
+    --rail-w: 2775svh;
+    --bg: #0d161d;
+    --fg: #e7f1ff;
+  }
 
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  height: 100svh;
-  background: var(--bg);
-  color: var(--fg);
-  overflow: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  *{ box-sizing:border-box }
+  html,body{
+    margin:0;
+    height:100svh; 
+    background:var(--bg); color:var(--fg);
+    overflow:hidden;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
 
 /* ========= HORIZONTAL SCROLLER (same height as band) ========= */
-.hwrap {
-  height: 100svh;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  display: grid;
-  align-items: center;
-}
-
-.hwrap::-webkit-scrollbar {
-  height: 8px;
-}
-
-.hwrap::-webkit-scrollbar-thumb {
-  background: #2c2c32;
-  border-radius: 8px;
-}
+  .hwrap{
+    height: 100svh;
+    overflow-x:auto; overflow-y:hidden;
+    white-space:nowrap;
+    scroll-behavior:smooth;
+    scrollbar-width:thin;
+    display:grid; align-items:center;
+  }
+  .hwrap::-webkit-scrollbar{ height:8px }
+  .hwrap::-webkit-scrollbar-thumb{ background:#2c2c32; border-radius:8px }
 
 /* ========= RAIL (ABSOLUTE LAYOUT + GROUP NUDGE) ========= */
-.rail {
-  position: relative;
-  height: var(--band-h);
-  width: max(100%, var(--rail-w));
-  padding: 0;
-  --group-left: -25svh;
-}
-
+  .rail{
+    position: relative;
+    height: var(--band-h);
+    width: max(100%, var(--rail-w));
+    padding: 0;           
+    --group-left: -25svh;
+  }
 /* ========= SLOT CONTROL PANEL ========= */
-.slot {
-  --left: 0svh;
-  --scale: 1;
-  --y: 0svh;
-  --x: 0svh;
-  --rot: 0deg;
-  --z: 1;
-  position: absolute;
-  left: calc(var(--left) + var(--group-left));
-  bottom: 0;
-  display: flex;
-  align-items: flex-end;
-  height: var(--band-h);
-  transform: translate(var(--x), calc(-1 * var(--y))) rotate(var(--rot));
-  transform-origin: center bottom;
-  z-index: var(--z);
-  color: inherit;
-  text-decoration: none;
-}
+  .slot{
+    --left: 0svh;
+    --scale: 1;
+    --y: 0svh;
+    --x: 0svh;
+    --rot: 0deg;
+    --z: 1;
 
-.slot img {
-  height: calc(var(--band-h) * var(--scale));
-  width: auto;
-  display: block;
-  object-fit: contain;
-}
+    position: absolute;
+    left: calc(var(--left) + var(--group-left));
+    bottom: 0;
+    display: flex; align-items: flex-end;
+    height: var(--band-h);
+    transform: translate(var(--x), calc(-1 * var(--y))) rotate(var(--rot));
+    transform-origin: center bottom;
+    z-index: var(--z);
+    color: inherit; text-decoration: none;
+  }
+
+  .slot img{
+    height: calc(var(--band-h) * var(--scale));
+    width: auto;
+    display: block;
+    object-fit: contain;
+  }
 
 /* MEDIA: YOUTUBE SLOT */
-.slot--youtube {
-  pointer-events: auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.slot--youtube .yt-box {
-  --ratio: 16/9;
-  --yt-shrink: 0.85;
-  --h: calc(var(--band-h) * var(--scale) * var(--yt-shrink));
-  height: var(--h);
-  width: calc(var(--h) * var(--ratio));
-  display: block;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #000;
-}
-
-.slot--youtube iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 12px;
-  display: block;
-}
+  .slot--youtube {
+    pointer-events: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .slot--youtube .yt-box {
+    --ratio: 16/9;
+    --yt-shrink: 0.85;
+    --h: calc(var(--band-h) * var(--scale) * var(--yt-shrink));
+  
+    height: var(--h);
+    width: calc(var(--h) * var(--ratio));
+  
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+  }
+  
+  .slot--youtube iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px;
+    display: block;
+  }
 
 /* MEDIA: LOTTIE SLOT */
-.slot--lottie {
-  pointer-events: auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
+  .slot--lottie {
+    pointer-events: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .slot--lottie .lot-box {
+    --lot-shrink: 0.85;
+    --ratio: 1.8;
+    --h: calc(var(--band-h) * var(--scale) * var(--lot-shrink));
+  
+    height: var(--h);
+    width: calc(var(--h) * var(--ratio));
+  
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    background: transparent;
+  }
+  
+  .slot--lottie dotlottie-wc {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  /* MEDIA: VIMEO VIDEO SLOT */
+  .slot--video .video-box{
+    --h: calc(var(--band-h) * var(--scale));
+    height: var(--h);
+    width: calc(var(--h) * var(--ar, 16/9));
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+  }
+  .slot--video iframe{ width: 100%; height: 100%; display:block; border:0; }
 
-.slot--lottie .lot-box {
-  --lot-shrink: 0.85;
-  --ratio: 1.8;
-  --h: calc(var(--band-h) * var(--scale) * var(--lot-shrink));
-  height: var(--h);
-  width: calc(var(--h) * var(--ratio));
-  display: block;
-  overflow: hidden;
-  border-radius: 12px;
-  background: transparent;
-}
-
-.slot--lottie dotlottie-wc {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-/* MEDIA: VIMEO VIDEO SLOT */
-.slot--video .video-box {
-  --h: calc(var(--band-h) * var(--scale));
-  height: var(--h);
-  width: calc(var(--h) * var(--ar, 16/9));
-  display: block;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #000;
-}
-
-.slot--video iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: 0;
-}
 
 /* MEDIA: GIF SLOT */
-.slot--gif .gif-box {
-  --h: calc(var(--band-h) * var(--scale));
-  height: var(--h);
-  width: calc(var(--h) * var(--ar, 1));
-  display: block;
-  overflow: hidden;
-  border-radius: 12px;
-  background: rgba(0, 0, 0, 0);
-}
-
-.slot--gif img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+  .slot--gif .gif-box{
+    --h: calc(var(--band-h) * var(--scale));
+    height: var(--h);
+    width: calc(var(--h) * var(--ar, 1));
+    display:block;
+    overflow:hidden;
+    border-radius:12px;
+    background:#0000;
+  }
+  .slot--gif img{ width:100%; height:100%; object-fit:cover; display:block; }
 
 /* MEDIA: SOUNDCLOUD SLOT */
-.slot--sc .sc-iframe {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-  border: 0;
-}
-
-.slot--sc .sc-trigger {
-  height: calc(var(--band-h) * var(--scale));
-  width: auto;
-  display: block;
-  object-fit: contain;
-  cursor: pointer;
-}
+  .slot--sc .sc-iframe{
+    position:absolute;
+    left:-9999px; top:auto; width:1px; height:1px; opacity:0; pointer-events:none;
+    border:0;
+  }
+  .slot--sc .sc-trigger{
+    height: calc(var(--band-h) * var(--scale));
+    width: auto; display:block; object-fit: contain;
+    cursor: pointer;
+  }
 
 /* MEDIA: AUDIO (IMAGE-CONTROLLED) SLOT */
-.slot--audio .audio-trigger {
-  height: calc(var(--band-h) * var(--scale));
-  width: auto;
-  display: block;
-  object-fit: contain;
-  cursor: pointer;
-  user-select: none;
-}
-
-.slot--audio audio {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-  border: 0;
-}
-
-.slot--audio.is-playing .audio-trigger {
-  outline: 2px dashed;
-  outline-color: #4CA8E9;
-  outline-offset: 6px;
-}
-
+  .slot--audio .audio-trigger{
+    height: calc(var(--band-h) * var(--scale));
+    width: auto; display:block; object-fit: contain;
+    cursor: pointer; user-select: none;
+  }
+  .slot--audio audio{
+    position:absolute; left:-9999px; top:auto;
+    width:1px; height:1px; opacity:0; pointer-events:none; border:0;
+  }
+  .slot--audio.is-playing .audio-trigger{
+    outline: 2px dashed;
+    outline-color: #4CA8E9;
+    outline-offset: 6px;
+  }
+  
 /* ===== OVERLAY: BASE ===== */
-#overlay {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.75);
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.18s ease, visibility 0.18s ease;
-}
-
-#overlay.is-open {
-  display: flex !important;
-  opacity: 1;
-  visibility: visible;
-}
+  #overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.75);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .18s ease, visibility .18s ease;
+  }
+  #overlay.is-open {
+    display: flex !important;
+    opacity: 1;
+    visibility: visible;
+  }
 
 /* ===== MEDIA: OVERLAY CARD (Scrollable & Height-locked) ===== */
-#overlay .ov-card {
-  --ov-max-w: min(72vw, 1100px);
-  --ov-max-h: 72svh;
-  --ov-pad: 1svh;
-  display: block;
-  position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
-  overscroll-behavior: contain;
-  scroll-behavior: auto; /* normal feel, not “sticky” */
-  max-width: var(--ov-max-w);
-  max-height: var(--ov-max-h);
-  padding: var(--ov-pad);
-  margin: 0 auto;
-  background: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-#overlay .ov-card::-webkit-scrollbar {
-  width: 6px;
-}
-
-#overlay .ov-card::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 3px;
-}
-
+  #overlay .ov-card {
+    --ov-max-w: min(72vw, 1100px);
+    --ov-max-h: 72svh;
+    --ov-pad:   1svh;
+  
+    display: block;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scroll-behavior: auto; /* normal feel, not “sticky” */
+  
+    max-width:  var(--ov-max-w);
+    max-height: var(--ov-max-h);
+    padding:    var(--ov-pad);
+    margin: 0 auto;
+  
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  #overlay .ov-card::-webkit-scrollbar {
+    width: 6px;
+ }
+  #overlay .ov-card::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+    border-radius: 3px;
+  }
+  
 /* ===== Inner image should fit and stay contained ===== */
-#overlay .ov-card > img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: none;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-  border-radius: 12px;
-}
+  #overlay .ov-card > img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+  }
 
 /* ===== Overlay "X" close button ===== */
-#overlay .overlay-close {
-  position: absolute;
-  top: 3%;
-  left: 3%;
-  /* Force scaling to work properly */
-  width: 2.7svh !important;
-  max-width: none !important;
-  height: auto !important;
-  cursor: pointer;
-  z-index: 200;
-  user-select: none;
-  -webkit-user-drag: none;
-  transition: transform 0.18s ease, filter 0.18s ease;
-  display: block;
-  object-fit: contain;
-}
-
-#overlay .overlay-close:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-}
+  #overlay .overlay-close {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+  
+    /* Force scaling to work properly */
+    width: 2.7svh !important;
+    max-width: none !important;
+    height: auto !important;
+  
+    cursor: pointer;
+    z-index: 200;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: transform .18s ease, filter .18s ease;
+    display: block;
+    object-fit: contain;
+  }
+  
+  #overlay .overlay-close:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
 
 /* ===== OVERLAY IMAGE ===== */
 #overlay .ov-card img {
-  opacity: 0;
-  transform: scale(0.98);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-#overlay.is-open .ov-card img {
-  opacity: 1;
-  transform: scale(1);
-}
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity .35s ease, transform .35s ease;
+  }
+  #overlay.is-open .ov-card img {
+    opacity: 1;
+    transform: scale(1);
+  }
 
 /* ========= INTERACTIVE MEDIA HIT ZONE FIX ========= */
-.slot[data-overlay-src],
-.slot--sc,
-.slot--audio,
-.slot a {
-  pointer-events: auto;
-}
-
-.slot[data-overlay-src] img,
-.slot--sc .sc-trigger,
-.slot--audio .audio-trigger,
-.slot a img {
-  display: block;
-  height: calc(var(--band-h) * var(--scale));
-  width: auto;
-  object-fit: contain;
-}
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    pointer-events: auto;
+  }
+  
+  .slot[data-overlay-src] img,
+  .slot--sc .sc-trigger,
+  .slot--audio .audio-trigger,
+  .slot a img {
+    display: block;
+    height: calc(var(--band-h) * var(--scale));
+    width: auto;
+    object-fit: contain;
+  }
 
 /* ========= FINAL CLICK ZONE CORRECTION ========= */
-.slot[data-overlay-src] img,
-.slot--sc .sc-trigger,
-.slot--audio .audio-trigger,
-.slot a img {
-  position: relative;
-  pointer-events: auto;
-}
+  .slot[data-overlay-src] img,
+  .slot--sc .sc-trigger,
+  .slot--audio .audio-trigger,
+  .slot a img {
+    position: relative;
+    pointer-events: auto;
+  }
 
-.slot[data-overlay-src],
-.slot--sc,
-.slot--audio,
-.slot a {
-  position: absolute;
-  pointer-events: auto;
-  transform-style: preserve-3d;
-}
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    position: absolute;
+    pointer-events: auto;
+    transform-style: preserve-3d;
+  }
 
-.slot[data-overlay-src],
-.slot--sc,
-.slot--audio,
-.slot a {
-  display: inline-flex;
-  align-items: flex-end;
-  pointer-events: auto;
-}
+  .slot[data-overlay-src],
+  .slot--sc,
+  .slot--audio,
+  .slot a {
+    display: inline-flex;
+    align-items: flex-end;
+    pointer-events: auto;
+  }
 
 /* ========= BEHAVIOR: OPENING OVERLAY FLOAT EFFECT (inside overlay scroll) ========= */
-#overlay .ov-card {
-  overflow-y: auto;
-  overflow-x: hidden;
-  overscroll-behavior: contain;
-  scroll-behavior: smooth;
-}
-
-#overlay .ov-card img {
-  will-change: transform;
-  transition: transform 0.3s ease-out;
-}
-
-#overlay .ov-card.is-scrolling img {
-  transform: none;
-}
+  #overlay .ov-card {
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+  }
+  #overlay .ov-card img {
+    will-change: transform;
+    transition: transform .3s ease-out;
+  }
+  
+  #overlay .ov-card.is-scrolling img {
+    transform: none;
+  }
 
 /* ========= GROW-ON-HOVER ========= */
-/* Elements that should "grow" on hover:
-   - overlay images
-   - soundcloud trigger images/buttons
-   - audio trigger images
-   - linked images
-   - overlay Lotties
-   - the play-lightsleeper Lottie (SoundCloud) */
-.slot[data-overlay-src] img,
-.slot--sc .sc-trigger,
-.slot--audio .audio-trigger,
-.slot a img,
-.slot--lottie[data-overlay-src] dotlottie-wc,
-#play-lightsleeper dotlottie-wc {
-  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), filter 0.45s cubic-bezier(0.25, 1, 0.5, 1);
-  cursor: pointer;
-  transform-origin: center center;
-}
-
-/* Hover behavior */
-.slot[data-overlay-src] img:hover,
-.slot--sc .sc-trigger:hover,
-.slot--audio .audio-trigger:hover,
-.slot a img:hover,
-.slot--lottie[data-overlay-src] dotlottie-wc:hover,
-#play-lightsleeper:hover dotlottie-wc {
-  transform: scale(1.05);
-  filter: brightness(1.15);
-}
+  /* Elements that should "grow" on hover:
+     - overlay images
+     - soundcloud trigger images/buttons
+     - audio trigger images
+     - linked images
+     - overlay Lotties
+     - the play-lightsleeper Lottie (SoundCloud) */
+  .slot[data-overlay-src] img,
+  .slot--sc .sc-trigger,
+  .slot--audio .audio-trigger,
+  .slot a img,
+  .slot--lottie[data-overlay-src] dotlottie-wc,
+  #play-lightsleeper dotlottie-wc {
+    transition: transform .45s cubic-bezier(0.25, 1, 0.5, 1),
+                filter .45s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    transform-origin: center center;
+  }
+  
+  /* Hover behavior */
+  .slot[data-overlay-src] img:hover,
+  .slot--sc .sc-trigger:hover,
+  .slot--audio .audio-trigger:hover,
+  .slot a img:hover,
+  .slot--lottie[data-overlay-src] dotlottie-wc:hover,
+  #play-lightsleeper:hover dotlottie-wc {
+    transform: scale(1.05);
+    filter: brightness(1.15);
+  }
 
 /* ========= TEXT SLOT ========= */
 /* TEXT SLOT */
-.slot--text .text-box {
-  /* core type */
-  font-family: var(--ff, "Thinker"), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-weight: var(--fw, 400);
-  font-style: var(--fstyle, normal);
-  font-stretch: var(--fstr, normal);
-  font-size: calc(var(--band-h) * var(--scale) * var(--fs-mul, 0.11));
-  line-height: var(--lh, 1.08);
-  letter-spacing: var(--ls, 0.01em);
-  word-spacing: var(--ws, 0);
-  color: var(--text-color, var(--fg));
-  /* text behavior */
-  text-align: var(--ta, left);
-  text-transform: var(--tt, none);
-  white-space: var(--ws-mode, normal);
-  text-wrap: var(--wrap, pretty);
-  hyphens: var(--hy, manual);
-  overflow-wrap: anywhere;
-  max-width: min(90svh, var(--ch, 28ch));
-  /* decoration / effects */
-  text-decoration: var(--dec, none);
-  text-underline-offset: var(--uoff, 0.15em);
-  text-decoration-thickness: var(--uthick, auto);
-  text-shadow: var(--shadow, none);
-  -webkit-text-stroke: var(--stroke, 0) var(--stroke-color, transparent);
-  background: var(--bgc, transparent);
-  -webkit-background-clip: var(--bgclip, initial);
-  background-clip: var(--bgclip, initial);
-  /* opentype */
-  font-variant-ligatures: var(--liga, normal);
-  font-feature-settings: var(--features, normal);
-  font-variation-settings: var(--axes, normal);
-  /* box */
-  padding: var(--pad, 0);
-  border-radius: var(--br, 0);
-}
+  .slot--text .text-box{
+    /* core type */
+    font-family: var(--ff, "Thinker"), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: var(--fw, 400);
+    font-style: var(--fstyle, normal);
+    font-stretch: var(--fstr, normal);
+    font-size: calc(var(--band-h) * var(--scale) * var(--fs-mul, .11));
+    line-height: var(--lh, 1.08);
+    letter-spacing: var(--ls, .01em);
+    word-spacing: var(--ws, 0);
+    color: var(--text-color, var(--fg));
+  
+    /* text behavior */
+    text-align: var(--ta, left);
+    text-transform: var(--tt, none);
+    white-space: var(--ws-mode, normal);
+    text-wrap: var(--wrap, pretty);
+    hyphens: var(--hy, manual);
+    overflow-wrap: anywhere;
+    max-width: min(90svh, var(--ch, 28ch));
+  
+    /* decoration / effects */
+    text-decoration: var(--dec, none);
+    text-underline-offset: var(--uoff, .15em);
+    text-decoration-thickness: var(--uthick, auto);
+    text-shadow: var(--shadow, none);
+    -webkit-text-stroke: var(--stroke, 0) var(--stroke-color, transparent);
+  
+    background: var(--bgc, transparent);
+    -webkit-background-clip: var(--bgclip, initial);
+            background-clip: var(--bgclip, initial);
+  
+    /* opentype */
+    font-variant-ligatures: var(--liga, normal);
+    font-feature-settings: var(--features, normal);
+    font-variation-settings: var(--axes, normal);
+  
+    /* box */
+    padding: var(--pad, 0);
+    border-radius: var(--br, 0);
+  }
 
 /* ===== Remove Global Drop Shadow ===== */
-.slot img,
-.slot--youtube .yt-box,
-.slot--tiktok .tiktok-box,
-.slot--lottie .lot-box,
-.slot--video .video-box,
-.slot--gif .gif-box, .slot--text .text-box {
-  filter: none !important;
-}
+  .slot img,
+  .slot--youtube .yt-box,
+  .slot--tiktok .tiktok-box,
+  .slot--lottie .lot-box,
+  .slot--video .video-box,
+  .slot--gif .gif-box, .slot--text .text-box {
+    filter: none !important;
+  }
 
 /* ========= NON-CLICKABLE SLOT SAFEGUARD ========= */
 /* Disable pointer-events ONLY on entire slots that are truly non-clickable */
 .slot:not([data-overlay-src]):not(.slot--sc):not(.slot--audio):not(.slot--youtube):not(.slot--video):not(:has(a)) {
   pointer-events: none;
 }
-
+  
 /* ===== Clickability Exempt ===== */
-.slot--youtube,
-.slot--video,
-.slot--audio {
-  pointer-events: auto !important;
-}
-
-.slot--youtube iframe,
-.slot--video iframe {
-  pointer-events: auto !important;
-}
+  .slot--youtube,
+  .slot--video,
+  .slot--audio {
+    pointer-events: auto !important;
+  }
+  
+  .slot--youtube iframe,
+  .slot--video iframe {
+    pointer-events: auto !important;
+  }
 
 /* ======== TEMPORARY: DEBUG SLOT VISUALIZATION ======== */
 /* TEMPORARY ONLY: outline each slot's box so we can see its footprint */
-/* .slot--text,
-.slot--audio,
-.slot--lottie,
-.slot--youtube,
-.slot--vimeo {
-  outline: 2px dashed rgba(255, 0, 0, 0.6);
-  outline-offset: 0svh; 
-} */
+  /* .slot--text,
+  .slot--audio,
+  .slot--lottie,
+  .slot--youtube,
+  .slot--vimeo {
+    outline: 2px dashed rgba(255, 0, 0, 0.6);
+    outline-offset: 0svh; 
+  } */
+  
 /* Optional: also outline internal content boxes for clarity */
 /*  .slot--text .text-box,
   .slot--audio,
@@ -499,3042 +464,359 @@ html, body {
     outline: 2px solid rgba(0, 200, 255, 0.6);
     outline-offset: 0.5svh;
   } */
+  
 /* ========= PER-SLOT CUSTOMIZATION (svh units) ========= */
+  
 /* ========= WELCOME SECTION ========= */
-#special-message {
-  --left:-26svh;
-  --scale:1.12;
-  --y:20svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:1;
-}
-
-#izzymacarthur {
-  --left:18svh;
-  --scale:.15;
-  --y:65svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-}
-
-#social-sparkles {
-  --left:17svh;
-  --scale:.15;
-  --y:50svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-  pointer-events: none;
-}
-
-#instagram {
-  --left:28svh;
-  --scale:.05;
-  --y:55svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-}
-
-#tiktok {
-  --left:34svh;
-  --scale:.05;
-  --y:55svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-}
-
-#twitter {
-  --left:40svh;
-  --scale:.05;
-  --y:55svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-}
-
-#discord {
-  --left:46svh;
-  --scale:.05;
-  --y:55svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-}
-
-#spotify {
-  --left:52svh;
-  --scale:.05;
-  --y:55svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-}
-
-#apple-music {
-  --left:58svh;
-  --scale:.05;
-  --y:55svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-}
-
-#torn-note {
-  --left:11svh;
-  --scale:.68;
-  --y:-9svh;
-  --x:-2svh;
-  --rot:0deg;
-  --z:3;
-  pointer-events: none;
-}
-
-#tracklist {
-  --left:91svh;
-  --scale:.42;
-  --y:57svh;
-  --x:15svh;
-  --rot:8deg;
-  --z:2;
-  pointer-events: none;
-}
-
-#the-scrapbook {
-  --left:65svh;
-  --scale:.5;
-  --y:12svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#lfg {
-  --left:97svh;
-  --scale:.1;
-  --y:5svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:5;
-  pointer-events: none;
-}
-
-#pink-arrow {
-  --left:123svh;
-  --scale:.09;
-  --y:5svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:5;
-  pointer-events: none;
-}
-
+  #special-message{ --left:-26svh; --scale:1.12; --y:20svh; --x:0svh; --rot:0deg; --z:1; }
+  #izzymacarthur{ --left:18svh; --scale:.15; --y:65svh; --x:8svh; --rot:0deg; --z:2; }
+  #social-sparkles{ --left:17svh; --scale:.15; --y:50svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
+  #instagram{ --left:28svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #tiktok{ --left:34svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #twitter{ --left:40svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #discord{ --left:46svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #spotify{ --left:52svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #apple-music{ --left:58svh; --scale:.05; --y:55svh; --x:8svh; --rot:0deg; --z:2; }
+  #torn-note{ --left:11svh; --scale:.68; --y:-9svh; --x:-2svh; --rot:0deg; --z:3; pointer-events: none; }
+  #tracklist{ --left:91svh; --scale:.42; --y:57svh; --x:15svh; --rot:8deg; --z:2; pointer-events:none;  }
+  #the-scrapbook{ --left:65svh; --scale:.5; --y:12svh; --x:0svh; --rot:0deg; --z:4;pointer-events: none; }
+  #lfg{ --left:97svh; --scale:.1; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
+  #pink-arrow{ --left:123svh; --scale:.09; --y:5svh; --x:0svh; --rot:0deg; --z:5;pointer-events: none; }
 /* ========= LIGHT SLEEPER SECTION ========= */
-#broken-cd {
-  --left:143svh;
-  --scale:.35;
-  --y:67svh;
-  --x:0svh;
-  --rot:85deg;
-  --z:29;
-  pointer-events: none;
-}
-
-#playlist-ex {
-  --left:162svh;
-  --scale:.62;
-  --y:25svh;
-  --x:0svh;
-  --rot:-5deg;
-  --z:30;
-}
-
-#blue-star-1 {
-  --left:183svh;
-  --scale:.06;
-  --y:85svh;
-  --x:0svh;
-  --rot:80deg;
-  --z:20;
-  pointer-events: none;
-}
-
-#blue-star-2 {
-  --left:185svh;
-  --scale:.13;
-  --y:95svh;
-  --x:0svh;
-  --rot:86deg;
-  --z:20;
-  pointer-events: none;
-}
-
-#silver-star1-1 {
-  --left:187svh;
-  --scale:.17;
-  --y:73svh;
-  --x:0svh;
-  --rot:83deg;
-  --z:20;
-  pointer-events: none;
-}
-
-#lightsleeper-title {
-  --left:159svh;
-  --scale:.42;
-  --y:26svh;
-  --x:-4svh;
-  --rot:-5deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#lightsleeper-visualizer {
-  --left:145svh;
-  --scale:.38;
-  --y:0svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:3;
-}
-
-#lightsleeper-about {
-  --left:210svh;
-  --scale:.4;
-  --y:58svh;
-  --x:0svh;
-  --rot:-10deg;
-  --z:30;
-  pointer-events: auto;
-}
-
-#autumn-text {
-  --left:220svh;
-  --scale:.3;
-  --y:22svh;
-  --x:0svh;
-  --rot:2deg;
-  --z:0;
-}
-
-#blame-it-notesapp {
-  --left:215svh;
-  --scale:.20;
-  --y:0svh;
-  --x:0svh;
-  --rot:-2deg;
-  --z:4;
-}
-
-#lightsleeper-studio {
-  --left:247svh;
-  --scale:.40;
-  --ar:9/16;
-  --y:57svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:41;
-}
-
-#silver-star1-2 {
-  --left:245svh;
-  --scale:.18;
-  --y:5svh;
-  --x:0svh;
-  --rot:20deg;
-  --z:60;
-  pointer-events: none;
-}
-
-#izzymacarthur-withguitar {
-  --left:272svh;
-  --scale:.3;
-  --y:66svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:41;
-}
-
-#click4chordz {
-  --left:288svh;
-  --scale:.11;
-  --y:88svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:42;
-  pointer-events: none;
-  --ff: "Manic";
-  --ta: center;
-  --fw: 400;
-  --fs-mul: .18;
-  --tt: uppercase;
-  --text-color: #4C58E9;
-}
-
-#play-lightsleeper {
-  --left:262svh;
-  --scale:.35;
-  --y:32svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:40;
-}
-
-#play-lightsleeper dotlottie-wc {
-  pointer-events: none; /* let clicks fall through to .sc-trigger */
-}
-
-#play-lightsleeper .sc-trigger {
-  position: absolute;
-  inset: 0; /* stretch to full slot area */
-  width: 100%;
-  height: 100%;
-  border: 0;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
-}
-
-#broken-breathing {
-  --left: 263svh;
-  --scale:.28;
-  --y: 0svh;
-  --x: 1svh;
-  --rot: 0deg;
-  --z: 10;
-}
-
-#lightsleeper-voicememo {
-  --left: 310svh;
-  --scale: .34;
-  --y:29svh;
-  --x: 0svh;
-  --rot:-6deg;
-  --z: 9;
-}
+  #broken-cd{ --left:143svh; --scale:.35; --y:67svh; --x:0svh; --rot:85deg; --z:29;pointer-events:none; }
+  #playlist-ex{ --left:162svh; --scale:.62; --y:25svh; --x:0svh; --rot:-5deg; --z:30; }
+  #blue-star-1{ --left:183svh; --scale:.06; --y:85svh; --x:0svh; --rot:80deg; --z:20;pointer-events:none; }
+  #blue-star-2{ --left:185svh; --scale:.13; --y:95svh; --x:0svh; --rot:86deg; --z:20;pointer-events:none; }
+  #silver-star1-1{ --left:187svh; --scale:.17; --y:73svh; --x:0svh; --rot:83deg; --z:20;pointer-events:none; }
+  #lightsleeper-title{ --left:159svh; --scale:.42; --y:26svh; --x:-4svh; --rot:-5deg; --z:4; pointer-events: none; }
+  #lightsleeper-visualizer{ --left:145svh; --scale:.38; --y:0svh; --x:10svh; --rot:0deg; --z:3; }
+  #lightsleeper-about{ --left:210svh; --scale:.4; --y:58svh; --x:0svh; --rot:-10deg; --z:30; pointer-events:auto;  }
+  #autumn-text{ --left:220svh; --scale:.3; --y:22svh; --x:0svh; --rot:2deg; --z:0; }
+  #blame-it-notesapp{ --left:215svh; --scale:.20; --y:0svh; --x:0svh; --rot:-2deg; --z:4; }
+  #lightsleeper-studio{ --left:247svh; --scale:.40; --ar:9/16; --y:57svh; --x:0svh; --rot:0deg; --z:41;  }
+  #silver-star1-2{ --left:245svh; --scale:.18; --y:5svh; --x:0svh; --rot:20deg; --z:60;pointer-events:none; }
+  #izzymacarthur-withguitar{ --left:272svh; --scale:.3; --y:66svh; --x:0svh; --rot:0deg; --z:41;}
+  #click4chordz{ --left:288svh; --scale:.11; --y:88svh; --x:0svh; --rot:0deg; --z:42; pointer-events:none;
+                 --ff: "Manic"; --ta: center; --fw: 400; --fs-mul: .18; --tt: uppercase; --text-color: #4C58E9;}
+  #play-lightsleeper{ --left:262svh; --scale:.35; --y:32svh; --x:0svh; --rot:0deg; --z:40; }
+  #play-lightsleeper dotlottie-wc {
+    pointer-events: none;  /* let clicks fall through to .sc-trigger */
+  }
+  #play-lightsleeper .sc-trigger {
+    position: absolute;
+    inset: 0;              /* stretch to full slot area */
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  #broken-breathing{ --left: 263svh; --scale:.28; --y: 0svh; --x: 1svh; --rot: 0deg; --z: 10; }
+  #lightsleeper-voicememo{ --left: 310svh; --scale: .34; --y:29svh; --x: 0svh; --rot:-6deg; --z: 9; } 
 
 /* ========= EXIT WOUNDS SECTION ========= */
-#exitwounds-lyricvideo { /* V4 placeholder */
-  --left:298svh;
-  --scale: .38;
-  --y:63svh;
-  --x: 0svh;
-  --rot: 0deg;
-  --z: 21;
-}
-
-#star-trio-1 {
-  --left:346svh;
-  --scale:.28;
-  --y:61svh;
-  --x:0svh;
-  --rot:-160deg;
-  --z:10;
-  pointer-events: none;
-}
-
-#exitwounds-title {
-  --left:322svh;
-  --scale:.33;
-  --y: 0svh;
-  --x:0svh;
-  --rot:-12deg;
-  --z:1;
-  pointer-events: none;
-}
-
-#play-exitwounds {
-  --left:362svh;
-  --scale:.25;
-  --y:69svh;
-  --x:0svh;
-  --rot:13deg;
-  --z:11;
-}
-
-#pressplaydj {
-  --left: 360svh;
-  --scale: .18;
-  --y:63svh;
-  --x: 0svh;
-  --rot: 13deg;
-  --z: 12;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .17;
-  --text-color: #4CA8E9;
-}
-
-#missed-calls {
-  --left:365svh;
-  --scale:.35;
-  --y:24svh;
-  --x:-6svh;
-  --rot:10deg;
-  --z:9;
-  pointer-events: none;
-}
-
-#about-exitwounds {
-  --left:397svh;
-  --scale:.31;
-  --y:45svh;
-  --x:8svh;
-  --rot:-6deg;
-  --z:9;
-}
-
-#exitwounds-animation-1 {
-  --left:387svh;
-  --scale:.40;
-  --y:23svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:2;
-  pointer-events: none;
-}
-
-#play-exitwounds-voicememo {
-  --left:392svh;
-  --scale:.23;
-  --y:1svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:7;
-}
-
-#click-me-text {
-  --left: 414svh;
-  --scale: .20;
-  --y: 16svh;
-  --x: 0svh;
-  --rot: 1deg;
-  --z: 8;
-  --fw: 400;
-  --fs-mul: .15;
-  --text-color: #4CA8E9;
-}
-
-#click-me-arrow {
-  --left:413svh;
-  --scale:.04;
-  --y:11svh;
-  --x:0svh;
-  --rot:-4deg;
-  --z:6;
-  pointer-events: none;
-}
-
-#read-susbstack-text {
-  --left: 409svh;
-  --scale: .21;
-  --y: 80svh;
-  --x: 0svh;
-  --rot:7deg;
-  --z: 8;
-  pointer-events: none;
-  --ff: "Manic";
-  --ta: center;
-  --fw: 400;
-  --fs-mul: .15;
-  --tt: uppercase;
-  --text-color: #4CA8E9;
-}
-
-#substack-point-arrow {
-  --left:433svh;
-  --scale:.10;
-  --y:67svh;
-  --x:0svh;
-  --rot:7deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#scorpio-constellation {
-  --left:428svh;
-  --scale:.25;
-  --y:40svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#subscribe-substack-text {
-  --left:420svh;
-  --scale:0.12;
-  --y:1svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:8;
-  pointer-events: none;
-  --ff: "Manic";
-  --fw:400;
-  --fs-mul:0.21;
-  --ta:center;
-  --tt:uppercase;
-  --text-color: #4CA8E9;
-}
-
-#subscribe-arrow {
-  --left:452svh;
-  --scale:.04;
-  --y:10svh;
-  --x:0svh;
-  --rot:-59deg;
-  --z:20;
-  pointer-events: none;
-}
-
-#subscribe-button {
-  --left:459svh;
-  --scale:.14;
-  --y:10svh;
-  --x:0svh;
-  --rot:6deg;
-  --z:20;
-}
-
-#exitwounds-substackflier-2 {
-  --left:453svh;
-  --scale:.76;
-  --y:30svh;
-  --x:0svh;
-  --rot:14deg;
-  --z:3;
-}
-
-#silver-star3-1 {
-  --left:458svh;
-  --scale:.10;
-  --y:-1svh;
-  --x:0svh;
-  --rot:-59deg;
-  --z:20;
-  pointer-events: none;
-}
-
-#blue-star-3 {
-  --left:468svh;
-  --scale:.04;
-  --y:4svh;
-  --x:0svh;
-  --rot:16deg;
-  --z:20;
-  pointer-events: none;
-}
-
-#silver-star3-2 {
-  --left:478svh;
-  --scale:.06;
-  --y:1svh;
-  --x:0svh;
-  --rot:12deg;
-  --z:20;
-  pointer-events: none;
-}
-
-#silver-star3-3 {
-  --left:489svh;
-  --scale:.08;
-  --y:8svh;
-  --x:0svh;
-  --rot:48deg;
-  --z:20;
-  pointer-events: none;
-}
+  #exitwounds-lyricvideo{ /* V4 placeholder */ --left:298svh; --scale: .38; --y:63svh; --x: 0svh; --rot: 0deg; --z: 21; }
+  #star-trio-1{ --left:346svh; --scale:.28; --y:61svh; --x:0svh; --rot:-160deg; --z:10; pointer-events:none; }
+  #exitwounds-title{ --left:322svh; --scale:.33; --y: 0svh; --x:0svh; --rot:-12deg; --z:1; pointer-events:none;   }
+  #play-exitwounds{ --left:362svh; --scale:.25; --y:69svh; --x:0svh; --rot:13deg; --z:11; }
+  #pressplaydj{ --left: 360svh; --scale: .18; --y:63svh; --x: 0svh; --rot: 13deg; --z: 12; pointer-events:none;
+                --ff: "Thinker"; --fw: 400; --fs-mul: .17; --text-color: #4CA8E9;} 
+  #missed-calls{ --left:365svh; --scale:.35; --y:24svh; --x:-6svh; --rot:10deg; --z:9;pointer-events:none}
+  #about-exitwounds{ --left:397svh; --scale:.31; --y:45svh; --x:8svh; --rot:-6deg; --z:9;}
+  #exitwounds-animation-1{ --left:387svh; --scale:.40; --y:23svh; --x:0svh; --rot:0deg; --z:2; pointer-events:none; }
+  #play-exitwounds-voicememo{ --left:392svh; --scale:.23; --y:1svh; --x:0svh; --rot:0deg; --z:7; }
+  #click-me-text{--left: 414svh; --scale: .20; --y: 16svh; --x: 0svh; --rot: 1deg; --z: 8;
+                 --fw: 400; --fs-mul: .15; --text-color: #4CA8E9; }
+  #click-me-arrow{ --left:413svh; --scale:.04; --y:11svh; --x:0svh; --rot:-4deg; --z:6; pointer-events:none; }
+  #read-susbstack-text{ --left: 409svh; --scale: .21; --y: 80svh; --x: 0svh; --rot:7deg; --z: 8; pointer-events:none;
+                        --ff: "Manic"; --ta: center;  --fw: 400; --fs-mul: .15;  --tt: uppercase; --text-color: #4CA8E9; }
+  #substack-point-arrow{ --left:433svh; --scale:.10; --y:67svh; --x:0svh; --rot:7deg; --z:4; pointer-events:none; }
+  #scorpio-constellation{ --left:428svh; --scale:.25; --y:40svh; --x:0svh; --rot:0deg; --z:4; pointer-events:none; }
+  #subscribe-substack-text{ --left:420svh; --scale:0.12; --y:1svh; --x:0svh; --rot:0deg; --z:8; pointer-events:none;
+                            --ff: "Manic"; --fw:400; --fs-mul:0.21; --ta:center; --tt:uppercase;--text-color: #4CA8E9; }
+  #subscribe-arrow{ --left:452svh; --scale:.04; --y:10svh; --x:0svh; --rot:-59deg;--z:20; pointer-events:none;  }
+  #subscribe-button{ --left:459svh; --scale:.14; --y:10svh; --x:0svh; --rot:6deg; --z:20; }
+  #exitwounds-substackflier-2{ --left:453svh; --scale:.76; --y:30svh; --x:0svh; --rot:14deg; --z:3; }
+  #silver-star3-1{ --left:458svh; --scale:.10; --y:-1svh; --x:0svh; --rot:-59deg;--z:20; pointer-events:none; }
+  #blue-star-3{ --left:468svh; --scale:.04; --y:4svh; --x:0svh; --rot:16deg; --z:20; pointer-events:none; }
+  #silver-star3-2{ --left:478svh; --scale:.06; --y:1svh; --x:0svh; --rot:12deg; --z:20; pointer-events:none; }
+  #silver-star3-3{ --left:489svh; --scale:.08; --y:8svh; --x:0svh; --rot:48deg; --z:20; pointer-events:none; }
 
 /* ========= LANDMINES SECTION ========= */
-#glitter-truck {
-  --left:494svh;
-  --scale:.48;
-  --y:-18svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:7;
-  pointer-events: none;
-}
-
-#landmines-bts-clip {
-  --left:532svh;
-  --scale:.3;
-  --ar:16/9;
-  --y:65svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:40;
-}
-
-#landmines-voicememo {
-  --left:523svh;
-  --scale:.26;
-  --y:37svh;
-  --x:5svh;
-  --rot:0deg;
-  --z:30;
-}
-
-#blue-star-4 {
-  --left:517svh;
-  --scale:.04;
-  --y:41svh;
-  --x:5svh;
-  --rot:6deg;
-  --z:31;
-}
-
-#katstratford-car {
-  --left:519svh;
-  --scale:.21;
-  --y:13svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:30;
-  pointer-events: none;
-}
-
-#vocals-landmines-1 {
-  --left:568svh;
-  --scale:.35;
-  --ar:9/16;
-  --y:0svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:37;
-}
-
-#vocals-landmines-1-text {
-  --left:550svh;
-  --scale:.2;
-  --y:21svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:38;
-  pointer-events: none;
-  --ff: "Manic";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: left;
-  --tt: uppercase;
-  --text-color: #4C58E9;
-}
-
-#october-lane {
-  --left:566svh;
-  --scale:.25;
-  --y:-4svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:38;
-  pointer-events: none;
-}
-
-#landmines-license {
-  --left:590svh;
-  --scale:.29;
-  --y:65svh;
-  --x:0svh;
-  --rot:-8deg;
-  --z:40;
-  pointer-events: none;
-}
-
-#silver-star3-4 {
-  --left:580svh;
-  --scale:.06;
-  --y:57svh;
-  --x:0svh;
-  --rot:9deg;
-  --z:41;
-  pointer-events: none;
-}
-
-#blue-star-5 {
-  --left:638svh;
-  --scale:.07;
-  --y:60svh;
-  --x:0svh;
-  --rot:-5deg;
-  --z:420;
-  pointer-events: none;
-}
-
-#landmines-title {
-  --left:578svh;
-  --scale:.17;
-  --y:38svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:30;
-  pointer-events: none;
-}
-
-#landmines-lyricvideo {
-  --left:590svh;
-  --scale:.38;
-  --y:3svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:19;
-}
-
-#landmines-reaction-text {
-  --left:640svh;
-  --scale:.25;
-  --y:76svh;
-  --x:2svh;
-  --rot:0deg;
-  --z:16;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center;
-  --text-color: #4CA8E9;
-}
-
-#landmines-about {
-  --left:643svh;
-  --scale:.3;
-  --y:46svh;
-  --x:10svh;
-  --rot:-25deg;
-  --z:30;
-}
-
-#landmines-og-guitar {
-  --left:650svh;
-  --scale:.38;
-  --ar:9/16;
-  --y:9svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:25;
-}
-
-#landmines-session-video-text {
-  --left:650svh;
-  --scale:.2;
-  --y:1svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:38;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center;
-  --tt: lowercase;
-  --text-color: #4CA8E9;
-}
-
-#landmines-reaction {
-  --left:670svh;
-  --scale:.42;
-  --ar:9/16;
-  --y:55svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:42;
-}
-
-#blue-star-6 {
-  --left:678svh;
-  --scale:.04;
-  --y:49svh;
-  --x:0svh;
-  --rot:4deg;
-  --z:420;
-  pointer-events: none;
-}
-
-#blue-star-7 {
-  --left:685svh;
-  --scale:.07;
-  --y:29svh;
-  --x:0svh;
-  --rot:-30deg!important;
-  --z:420;
-  pointer-events: none;
-}
-
-#play-landmines {
-  --left:686svh;
-  --scale:.28;
-  --y:1svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:19;
-}
-
-#landmines-session-voicememos {
-  --left:685svh;
-  --scale:.31;
-  --y:27svh;
-  --x:10svh;
-  --rot:7deg;
-  --z:21;
-}
-
-#enchanted-bridge {
-  --left:707svh;
-  --scale:.17;
-  --y:2svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:18;
-  pointer-events: none;
-}
+  #glitter-truck{ --left:494svh; --scale:.48; --y:-18svh; --x:0svh; --rot:0deg; --z:7; pointer-events:none;}
+  #landmines-bts-clip{ --left:532svh; --scale:.3; --ar:16/9; --y:65svh; --x:0svh; --rot:0deg; --z:40; }
+  #landmines-voicememo{ --left:523svh; --scale:.26; --y:37svh; --x:5svh; --rot:0deg; --z:30; }
+  #blue-star-4{ --left:517svh; --scale:.04; --y:41svh; --x:5svh; --rot:6deg; --z:31; }
+  #katstratford-car{ --left:519svh; --scale:.21; --y:13svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
+  #vocals-landmines-1{ --left:568svh; --scale:.35; --ar:9/16; --y:0svh; --x:10svh; --rot:0deg; --z:37; }
+  #vocals-landmines-1-text{ --left:550svh; --scale:.2; --y:21svh; --x:10svh; --rot:0deg; --z:38; pointer-events:none;
+                            --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: left;  --tt: uppercase; --text-color: #4C58E9;}
+  #october-lane{ --left:566svh; --scale:.25; --y:-4svh; --x:0svh; --rot:0deg; --z:38; pointer-events:none;}
+  #landmines-license{ --left:590svh; --scale:.29; --y:65svh; --x:0svh; --rot:-8deg; --z:40;pointer-events:none;}
+  #silver-star3-4{ --left:580svh; --scale:.06; --y:57svh; --x:0svh; --rot:9deg; --z:41; pointer-events:none;}
+  #blue-star-5{ --left:638svh; --scale:.07; --y:60svh; --x:0svh; --rot:-5deg; --z:420; pointer-events:none }
+  #landmines-title{ --left:578svh; --scale:.17; --y:38svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;  }
+  #landmines-lyricvideo{ --left:590svh; --scale:.38; --y:3svh; --x:10svh; --rot:0deg; --z:19;}
+  #landmines-reaction-text{ --left:640svh; --scale:.25; --y:76svh; --x:2svh; --rot:0deg; --z:16; pointer-events:none;
+                            --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --text-color: #4CA8E9;}
+  #landmines-about{ --left:643svh; --scale:.3; --y:46svh; --x:10svh; --rot:-25deg; --z:30; }
+  #landmines-og-guitar{ --left:650svh; --scale:.38; --ar:9/16; --y:9svh; --x:10svh; --rot:0deg; --z:25; }
+  #landmines-session-video-text{ --left:650svh; --scale:.2; --y:1svh; --x:10svh; --rot:0deg; --z:38; pointer-events:none;
+                                 --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4CA8E9;}
+  #landmines-reaction{ --left:670svh; --scale:.42; --ar:9/16; --y:55svh; --x:0svh; --rot:0deg; --z:42; }
+  #blue-star-6{ --left:678svh; --scale:.04; --y:49svh; --x:0svh; --rot:4deg; --z:420; pointer-events:none }
+  #blue-star-7{ --left:685svh; --scale:.07; --y:29svh; --x:0svh; --rot:-30deg!important; --z:420; pointer-events:none }
+  #play-landmines{ --left:686svh; --scale:.28; --y:1svh; --x:0svh; --rot:0deg; --z:19; }
+  #landmines-session-voicememos{ --left:685svh; --scale:.31; --y:27svh; --x:10svh; --rot:7deg; --z:21; }
+  #enchanted-bridge{ --left:707svh; --scale:.17; --y:2svh; --x:0svh; --rot:0deg; --z:18; pointer-events:none; }
 
 /* ========= MISERY SECTION ========= */
-#misery-ogchorus {
-  --left:695svh;
-  --scale:.28;
-  --y:70svh;
-  --x:2svh;
-  --rot:0deg;
-  --z:40;
-}
-
-#silver-star3-5 {
-  --left:696svh;
-  --scale:.09;
-  --y:59svh;
-  --x:0svh;
-  --rot:10deg;
-  --z:410;
-  pointer-events: none;
-}
-
-#misery-ogchorus-text {
-  --left:715svh;
-  --scale:.22;
-  --y:59svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:40;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center;
-  --tt: lowercase;
-  --text-color: #4CA8E9;
-}
-
-#little-miss-misery {
-  --left:721svh;
-  --scale:.23;
-  --y:27svh;
-  --x:10svh;
-  --rot:4deg;
-  --z:39;
-  pointer-events: none;
-}
-
-#about-misery {
-  --left:739svh;
-  --scale:.56;
-  --y:43svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:41;
-}
-
-#silver-star3-6 {
-  --left:759svh;
-  --scale:.08;
-  --y:29svh;
-  --x:0svh;
-  --rot:-5deg;
-  --z:43;
-  pointer-events: none;
-}
-
-#kat-stratford-dancing {
-  --left:738svh;
-  --scale:.23;
-  --y:1svh;
-  --x:11svh;
-  --rot:0deg;
-  --z:39;
-  pointer-events: none;
-}
-
-#solo-cups {
-  --left:759svh;
-  --scale:.1;
-  --y:0svh;
-  --x:0svh;
-  --rot:5deg;
-  --z:43;
-  pointer-events: none;
-}
-
-#misery-wants-company {
-  --left:800svh;
-  --scale:.22;
-  --y:75svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:40;
-}
-
-#misery-wants-company-text {
-  --left:798svh;
-  --scale:.2;
-  --y:69svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:41;
-  pointer-events: none;
-  --ff: "Manic";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center !important;
-  --tt: uppercase;
-  --text-color: #4CA8E9;
-}
-
-#misery-title {
-  --left:769svh;
-  --scale:.75;
-  --y:-6svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:42;
-  pointer-events: none;
-}
-
-#vocals-misery-4 {
-  --left:849svh;
-  --scale:.36;
-  --ar:9/16;
-  --y:61svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:72;
-}
-
-#vocals-misery-4-text {
-  --left:840svh;
-  --scale:.2;
-  --y:87svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:73;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: left;
-  --tt: lowercase;
-  --text-color: #4C58E9;
-}
-
-#play-misery {
-  --left:861svh;
-  --scale:.22;
-  --y:33svh;
-  --x:0svh;
-  --rot:-10deg;
-  --z:71;
-}
-
-#misery-wlj-text {
-  --left:875svh;
-  --scale:.2;
-  --y:88svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:73;
-  pointer-events: none;
-  --ff: "Manic";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center;
-  --tt: uppercase;
-  --text-color: #4CA8E9;
-}
-
-#misery-wlj {
-  --left:878svh;
-  --scale:.35;
-  --ar:9/16;
-  --y:52svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:72;
-}
-
-#star-trio-2 {
-  --left:886svh;
-  --scale:.34;
-  --y:69svh;
-  --x:0svh;
-  --rot:-160deg;
-  --z:73;
-  pointer-events: none;
-}
-
-#misery-visualizer {
-  --left:853svh;
-  --scale:.38;
-  --y:0svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:39;
-}
+  #misery-ogchorus{ --left:695svh; --scale:.28; --y:70svh; --x:2svh; --rot:0deg; --z:40; }
+  #silver-star3-5{ --left:696svh; --scale:.09; --y:59svh; --x:0svh; --rot:10deg; --z:410; pointer-events:none;}
+  #misery-ogchorus-text{ --left:715svh; --scale:.22; --y:59svh; --x:0svh; --rot:0deg; --z:40; pointer-events:none;
+                          --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4CA8E9;}
+  #little-miss-misery{ --left:721svh; --scale:.23; --y:27svh; --x:10svh; --rot:4deg; --z:39; pointer-events:none; }
+  #about-misery{ --left:739svh; --scale:.56; --y:43svh; --x:10svh; --rot:0deg; --z:41; }
+  #silver-star3-6{ --left:759svh; --scale:.08; --y:29svh; --x:0svh; --rot:-5deg; --z:43; pointer-events:none; }
+  #kat-stratford-dancing{ --left:738svh; --scale:.23; --y:1svh; --x:11svh; --rot:0deg; --z:39; pointer-events:none; }
+  #solo-cups{ --left:759svh; --scale:.1; --y:0svh; --x:0svh; --rot:5deg; --z:43; pointer-events:none; }
+  #misery-wants-company{ --left:800svh; --scale:.22; --y:75svh; --x:0svh; --rot:0deg; --z:40; }
+  #misery-wants-company-text{ --left:798svh; --scale:.2; --y:69svh; --x:0svh; --rot:0deg; --z:41; pointer-events:none;
+                              --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4CA8E9; }
+  #misery-title{ --left:769svh; --scale:.75; --y:-6svh; --x:0svh; --rot:0deg; --z:42; pointer-events:none; }
+  #vocals-misery-4{ --left:849svh; --scale:.36; --ar:9/16; --y:61svh; --x:0svh; --rot:0deg; --z:72; }
+  #vocals-misery-4-text{  --left:840svh; --scale:.2; --y:87svh; --x:10svh; --rot:0deg; --z:73; pointer-events:none;
+                          --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: left; --tt: lowercase; --text-color: #4C58E9; }
+  #play-misery{ --left:861svh; --scale:.22; --y:33svh; --x:0svh; --rot:-10deg; --z:71; }
+  #misery-wlj-text{  --left:875svh; --scale:.2; --y:88svh; --x:0svh; --rot:0deg; --z:73; pointer-events:none;
+                          --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center; --tt: uppercase; --text-color: #4CA8E9; }
+  #misery-wlj{ --left:878svh; --scale:.35; --ar:9/16; --y:52svh; --x:0svh; --rot:0deg; --z:72; }
+  #star-trio-2{ --left:886svh; --scale:.34; --y:69svh; --x:0svh; --rot:-160deg; --z:73; pointer-events:none; }
+  #misery-visualizer{ --left:853svh; --scale:.38; --y:0svh; --x:8svh; --rot:0deg; --z:39; }
 
 /* ========= SLEEPWALKING SECTION ========= */
-#smurfette-1 {
-  --left:884svh;
-  --scale:.25;
-  --y:30svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:70;
-  pointer-events: none;
-}
-
-#thestar-tarot {
-  --left:903svh;
-  --scale:.38;
-  --y:60svh;
-  --x:10svh;
-  --rot:-9deg;
-  --z:70;
-  pointer-events: none;
-}
-
-#play-sleepwalking {
-  --left:905svh;
-  --scale:.2;
-  --y:34svh;
-  --x:10svh;
-  --rot:10deg;
-  --z:50;
-}
-
-#sleepwalking-radio {
-  --left:920svh;
-  --scale:.22;
-  --y:7svh;
-  --x:1svh;
-  --rot:0deg;
-  --z:40;
-}
-
-#sleepwalking-radio-text {
-  --left:923svh;
-  --scale:.2;
-  --y:0svh;
-  --x:1svh;
-  --rot:0deg;
-  --z:42;
-  pointer-events: none;
-  --ff: "Manic";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center !important;
-  --tt: uppercase;
-  --text-color: #4CA8E9;
-}
-
-#sleepwalking-radio-polaroid {
-  --left:954svh;
-  --scale:.22;
-  --y:14svh;
-  --x:1svh;
-  --rot:-10deg;
-  --z:40;
-  pointer-events: none;
-}
-
-#sleepwalking-visualizer {
-  --left:944svh;
-  --scale:.38;
-  --y:63svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:71;
-}
-
-#sleepwalking-title {
-  --left:938svh;
-  --scale:.18;
-  --y:39svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:100;
-  pointer-events: none;
-}
-
-#sleepwalking-listeningparty {
-  --left:970svh;
-  --scale:.35;
-  --ar:4/3;
-  --y:0svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:50;
-}
-
-#blue-star-8 {
-  --left:1008svh;
-  --scale:0.04;
-  --y:35svh;
-  --x:0svh;
-  --rot:-7deg;
-  --z:710;
-}
-
-#about-sleepwalking {
-  --left:1009svh;
-  --scale:0.35;
-  --y:1svh;
-  --x:0svh;
-  --rot:7deg;
-  --z:71;
-  pointer-events: none;
-}
-
-#sleepwalking-receipt {
-  --left:1051svh;
-  --scale:.50;
-  --y:1svh;
-  --x:0svh;
-  --rot:-10deg;
-  --z:70;
-  pointer-events: none;
-}
+  #smurfette-1{--left:884svh; --scale:.25; --y:30svh; --x:10svh; --rot:0deg; --z:70; pointer-events:none; }
+  #thestar-tarot{ --left:903svh; --scale:.38; --y:60svh; --x:10svh; --rot:-9deg; --z:70; pointer-events:none; }
+  #play-sleepwalking{--left:905svh; --scale:.2; --y:34svh; --x:10svh; --rot:10deg; --z:50;}
+  #sleepwalking-radio{ --left:920svh; --scale:.22; --y:7svh; --x:1svh; --rot:0deg; --z:40; }
+  #sleepwalking-radio-text{--left:923svh; --scale:.2; --y:0svh; --x:1svh; --rot:0deg; --z:42; pointer-events:none;
+                          --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4CA8E9;}
+  #sleepwalking-radio-polaroid{ --left:954svh; --scale:.22; --y:14svh; --x:1svh; --rot:-10deg; --z:40; pointer-events:none; }
+  #sleepwalking-visualizer{ --left:944svh; --scale:.38; --y:63svh; --x:0svh; --rot:0deg; --z:71; }
+  #sleepwalking-title{ --left:938svh; --scale:.18; --y:39svh; --x:10svh; --rot:0deg; --z:100; pointer-events:none; }
+  #sleepwalking-listeningparty{ --left:970svh; --scale:.35; --ar:4/3; --y:0svh; --x:0svh; --rot:0deg; --z:50; }
+  #blue-star-8{ --left:1008svh; --scale:0.04; --y:35svh; --x:0svh; --rot:-7deg; --z:710; }
+  #about-sleepwalking{ --left:1009svh; --scale:0.35; --y:1svh; --x:0svh; --rot:7deg; --z:71; pointer-events: none; }
+  #sleepwalking-receipt{ --left:1051svh; --scale:.50; --y:1svh; --x:0svh; --rot:-10deg; --z:70; pointer-events: none; }
 
 /* ========= EP SECTION ========= */
-#ep-inspo {
-  --left:1007svh;
-  --scale:.63;
-  --y:46svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:71;
-  pointer-events: none;
-}
-
-#silver-star1-3 {
-  --left:1020svh;
-  --scale:.15;
-  --y:48svh;
-  --x:0svh;
-  --rot:-20deg;
-  --z:710;
-  pointer-events: none;
-}
-
-#blue-star-9 {
-  --left:1027svh;
-  --scale:.06;
-  --y:40svh;
-  --x:0svh;
-  --rot:15deg;
-  --z:710;
-  pointer-events: none;
-}
-
-#silver-star3-7 {
-  --left:1037svh;
-  --scale:0.08;
-  --y:45svh;
-  --x:0svh;
-  --rot:10deg;
-  --z:710;
-  pointer-events: none;
-}
-
-#top-spotify-sparkles {
-  --left:1075svh;
-  --scale:.36;
-  --y:83svh;
-  --x:0svh;
-  --rot:75deg;
-  --z:32;
-  pointer-events: none;
-}
-
-#ep-inspo-sp {
-  --left:1089svh;
-  --scale:.35;
-  --y:53svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:81;
-}
-
-#bottom-spotify-sparkles {
-  --left:1070svh;
-  --scale:.37;
-  --y:53svh;
-  --x:0svh;
-  --rot:80deg;
-  --z:32;
-  pointer-events: none;
-}
-
-#ep-click-toread {
-  --left:1078svh;
-  --scale:.25;
-  --y:38svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:30;
-  pointer-events: none;
-  --ff: "Manic";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center!important;
-  --tt: uppercase;
-  --text-color: #4CA8E9;
-}
-
-#ep-telephone {
-  --left:1077svh;
-  --scale:.26;
-  --y:11svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:72;
-}
-
-#ep-phoningfriends {
-  --left:1085svh;
-  --scale:.25;
-  --y:4svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:30;
-  pointer-events: none;
-  --ff: "Manic";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center;
-  --tt: uppercase;
-  --text-color: #4CA8E9;
-}
-
-#mixing-misery-1 {
-  --left:1115svh;
-  --scale:.41;
-  --ar:9/16;
-  --y:5svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:30;
-}
-
-#mixing-misery-1-text {
-  --left:1114svh;
-  --scale:.11;
-  --y:0svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:30;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .2;
-  --ta: center !important;
-  --tt: lowercase;
-  --text-color: #4CA8E9;
-}
-
-#migos-mairead {
-  --left:1129svh;
-  --scale:.5;
-  --ar:9/16;
-  --y:47svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:33;
-}
-
-#air-quality {
-  --left:1139svh;
-  --scale:.45;
-  --y:1svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:30;
-  pointer-events: none;
-}
-
-#air-quality-text {
-  --left:1145svh;
-  --scale:.19;
-  --y:1svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:31;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center !important;
-  --tt: lowercase;
-  --text-color: #D9EBFF;
-  pointer-events: none;
-}
-
-#hannah-montana {
-  --left:1160svh;
-  --scale:.40;
-  --ar:9/16;
-  --y:58svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:30;
-}
-
-#migos-text {
-  --left:1158svh;
-  --scale:.21;
-  --y:47svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:30;
-  pointer-events: none;
-  --ff: "Manic";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center !important;
-  --tt: uppercase;
-  --text-color: #4CA8E9;
-}
-
-#ep-mixing-date {
-  --left:1164svh;
-  --scale:.40;
-  --y:5svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:30;
-  pointer-events: none;
-}
-
-#hannah-montana-text {
-  --left:1185svh;
-  --scale:.21;
-  --y:81svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:30;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center !important;
-  --tt: lowercase;
-  --text-color: #4CA8E9;
-}
-
-#notebook {
-  --left:1185svh;
-  --scale:.35;
-  --y:42svh;
-  --x:0svh;
-  --rot:5deg;
-  --z:29;
-  pointer-events: none;
-}
-
-#ep-vocal-booth {
-  --left:1192svh;
-  --scale:.22;
-  --y:38svh;
-  --x:0svh;
-  --rot:-15deg;
-  --z:30;
-  pointer-events: none;
-}
-
-#ep-vocal-booth-2 {
-  --left:1200svh;
-  --scale:.22;
-  --y:49svh;
-  --x:0svh;
-  --rot:100deg;
-  --z:31;
-  pointer-events: none;
-}
-
-#ep-title {
-  --left:1176svh;
-  --scale:.53;
-  --y:-7svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:100;
-  pointer-events: none;
-}
-
-#ep-spencer-tracklist {
-  --left:1224svh;
-  --scale:.41;
-  --y:55svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:28;
-  pointer-events: none;
-}
-
-#ep-spencer-text {
-  --left:1225svh;
-  --scale:.22;
-  --y:76svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:32;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center;
-  --tt: lowercase;
-  --text-color: #4CA8E9;
-}
-
-#mixing-misery-6 {
-  --left:1233svh;
-  --scale:.36;
-  --ar:9/16;
-  --y:17svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:31;
-}
-
-#scrabbleboard {
-  --left:1258svh;
-  --scale:.5;
-  --y:46svh;
-  --x:0svh;
-  --rot:-5deg;
-  --z:32;
-  pointer-events: none;
-}
-
-#sabrinacarpenter-text {
-  --left:1256svh;
-  --scale:.2;
-  --y:20svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:33;
-  pointer-events: none;
-  --ff: "Manic";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center;
-  --tt: uppercase;
-  --text-color: #4CA8E9;
-}
-
-#sabrinacarpenter {
-  --left:1283svh;
-  --scale:.42;
-  --ar:9/16;
-  --y:1svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:32;
-}
-
-#blue-star-10 {
-  --left:1312svh;
-  --scale:.07;
-  --y:93svh;
-  --x:0svh;
-  --rot:8deg;
-  --z:320;
-  pointer-events: none;
-}
-
-#discord-message-1 {
-  --left:1306svh;
-  --scale:.21;
-  --y:70svh;
-  --x:0svh;
-  --rot:2deg;
-  --z:32;
-  pointer-events: none;
-}
-
-#discord-message-2 {
-  --left:1307svh;
-  --scale:.11;
-  --y:59svh;
-  --x:0svh;
-  --rot:-2deg;
-  --z:33;
-  pointer-events: none;
-}
-
-#discord-message-3 {
-  --left:1306svh;
-  --scale:.10;
-  --y:50svh;
-  --x:0svh;
-  --rot:1deg;
-  --z:32;
-  pointer-events: none;
-}
-
-#exitwounds-zoom {
-  --left:1308svh;
-  --scale:.45;
-  --ar:9/16;
-  --y:3svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:32;
-}
-
-#silver-star1-4 {
-  --left:1339svh;
-  --scale:.27;
-  --y:75svh;
-  --x:0svh;
-  --rot:18deg;
-  --z:36;
-  pointer-events: none;
-}
-
-#scrabble-piece {
-  --left:1334svh;
-  --scale:.14;
-  --y:57svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:35;
-  pointer-events: none;
-}
-
-#ep-zoom {
-  --left:1336svh;
-  --scale:.45;
-  --ar:9/16;
-  --y:11svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:32;
-}
-
-#zoom-text {
-  --left:1336svh;
-  --scale:.22;
-  --y:0svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:32;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center;
-  --tt: lowercase;
-  --text-color: #4CA8E9;
-}
-
-#mixing-sleepwalking-2 {
-  --left:1358svh;
-  --scale:.44;
-  --ar:9/16;
-  --y:52svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:32;
-}
-
-#ep-tweet {
-  --left:1353svh;
-  --scale:.48;
-  --y:2svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:40;
-  pointer-events: none;
-}
-
-#starterpack {
-  --left:1375svh;
-  --scale:.39;
-  --y:56svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:40;
-  pointer-events: none;
-}
-
-#ep-cover {
-  --left:1381svh;
-  --scale:.54;
-  --y:0svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:40;
-  pointer-events: none;
-}
+  #ep-inspo{ --left:1007svh; --scale:.63; --y:46svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #silver-star1-3{ --left:1020svh; --scale:.15; --y:48svh; --x:0svh; --rot:-20deg; --z:710; pointer-events:none; }
+  #blue-star-9{ --left:1027svh; --scale:.06; --y:40svh; --x:0svh; --rot:15deg; --z:710; pointer-events:none; }
+  #silver-star3-7{ --left:1037svh; --scale:0.08; --y:45svh; --x:0svh; --rot:10deg; --z:710; pointer-events: none; }
+  #top-spotify-sparkles{ --left:1075svh; --scale:.36; --y:83svh; --x:0svh; --rot:75deg; --z:32; pointer-events:none; }
+  #ep-inspo-sp{ --left:1089svh; --scale:.35; --y:53svh; --x:0svh; --rot:0deg; --z:81; }
+  #bottom-spotify-sparkles{ --left:1070svh; --scale:.37; --y:53svh; --x:0svh; --rot:80deg; --z:32; pointer-events:none; }
+  #ep-click-toread{ --left:1078svh; --scale:.25; --y:38svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
+                    --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center!important; --tt: uppercase; --text-color: #4CA8E9;}
+  #ep-telephone{ --left:1077svh; --scale:.26; --y:11svh; --x:0svh; --rot:0deg; --z:72; }
+  #ep-phoningfriends{ --left:1085svh; --scale:.25; --y:4svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
+                      --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center; --tt: uppercase; --text-color: #4CA8E9;}
+  #mixing-misery-1{ --left:1115svh; --scale:.41; --ar:9/16; --y:5svh; --x:0svh; --rot:0deg; --z:30; }
+  #mixing-misery-1-text{ --left:1114svh; --scale:.11; --y:0svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
+                       --ff: "Thinker"; --fw: 400; --fs-mul: .2; --ta: center !important; --tt: lowercase; --text-color: #4CA8E9;}
+  #migos-mairead{ --left:1129svh; --scale:.5; --ar:9/16; --y:47svh; --x:0svh; --rot:0deg; --z:33; }
+  #air-quality{ --left:1139svh; --scale:.45; --y:1svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
+  #air-quality-text{ --left:1145svh; --scale:.19; --y:1svh; --x:0svh; --rot:0deg; --z:31; pointer-events:none;
+                     --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: lowercase; --text-color: #D9EBFF; pointer-events: none;}
+  #hannah-montana{ --left:1160svh; --scale:.40; --ar:9/16; --y:58svh; --x:0svh; --rot:0deg; --z:30;}
+  #migos-text{ --left:1158svh; --scale:.21; --y:47svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
+               --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: uppercase; --text-color: #4CA8E9;}
+  #ep-mixing-date{ --left:1164svh; --scale:.40; --y:5svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none; }
+  #hannah-montana-text{ --left:1185svh; --scale:.21; --y:81svh; --x:0svh; --rot:0deg; --z:30; pointer-events:none;
+                       --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center !important; --tt: lowercase; --text-color: #4CA8E9;}
+  #notebook{ --left:1185svh; --scale:.35; --y:42svh; --x:0svh; --rot:5deg; --z:29; pointer-events:none; }
+  #ep-vocal-booth{ --left:1192svh; --scale:.22; --y:38svh; --x:0svh; --rot:-15deg; --z:30; pointer-events:none; }
+  #ep-vocal-booth-2{ --left:1200svh; --scale:.22; --y:49svh; --x:0svh; --rot:100deg; --z:31; pointer-events:none; }
+  #ep-title{ --left:1176svh; --scale:.53; --y:-7svh; --x:0svh; --rot:0deg; --z:100; pointer-events:none;}
+  #ep-spencer-tracklist{ --left:1224svh; --scale:.41; --y:55svh; --x:0svh; --rot:0deg; --z:28; pointer-events:none; }
+  #ep-spencer-text{ --left:1225svh; --scale:.22; --y:76svh; --x:0svh; --rot:0deg; --z:32; pointer-events:none;
+                    --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4CA8E9;}
+  #mixing-misery-6{ --left:1233svh; --scale:.36; --ar:9/16; --y:17svh; --x:0svh; --rot:0deg; --z:31; }
+  #scrabbleboard{--left:1258svh; --scale:.5; --y:46svh; --x:0svh; --rot:-5deg; --z:32; pointer-events:none;}
+  #sabrinacarpenter-text{--left:1256svh; --scale:.2; --y:20svh; --x:0svh; --rot:0deg; --z:33; pointer-events:none;
+                        --ff: "Manic"; --fw: 400; --fs-mul: .1; --ta: center; --tt: uppercase; --text-color: #4CA8E9;}
+  #sabrinacarpenter{ --left:1283svh; --scale:.42; --ar:9/16; --y:1svh; --x:0svh; --rot:0deg; --z:32; }
+  #blue-star-10{ --left:1312svh; --scale:.07; --y:93svh; --x:0svh; --rot:8deg; --z:320; pointer-events:none; }
+  #discord-message-1{ --left:1306svh; --scale:.21; --y:70svh; --x:0svh; --rot:2deg; --z:32; pointer-events:none; }
+  #discord-message-2{ --left:1307svh; --scale:.11; --y:59svh; --x:0svh; --rot:-2deg; --z:33; pointer-events:none; }
+  #discord-message-3{ --left:1306svh; --scale:.10; --y:50svh; --x:0svh; --rot:1deg; --z:32; pointer-events:none; }
+  #exitwounds-zoom{ --left:1308svh; --scale:.45; --ar:9/16; --y:3svh; --x:0svh; --rot:0deg; --z:32; }
+  #silver-star1-4{--left:1339svh; --scale:.27; --y:75svh; --x:0svh; --rot:18deg; --z:36; pointer-events:none }
+  #scrabble-piece{--left:1334svh; --scale:.14; --y:57svh; --x:0svh; --rot:0deg; --z:35; pointer-events:none }
+  #ep-zoom{ --left:1336svh; --scale:.45; --ar:9/16; --y:11svh; --x:0svh; --rot:0deg; --z:32; }
+  #zoom-text{ --left:1336svh; --scale:.22; --y:0svh; --x:0svh; --rot:0deg; --z:32; pointer-events:none;
+              --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4CA8E9;}
+  #mixing-sleepwalking-2{ --left:1358svh; --scale:.44; --ar:9/16; --y:52svh; --x:0svh; --rot:0deg; --z:32; }
+  #ep-tweet{ --left:1353svh; --scale:.48; --y:2svh; --x:10svh; --rot:0deg; --z:40; pointer-events:none; }
+  #starterpack{ --left:1375svh; --scale:.39; --y:56svh; --x:10svh; --rot:0deg; --z:40; pointer-events:none; }
+  #ep-cover{ --left:1381svh; --scale:.54; --y:0svh; --x:10svh; --rot:0deg; --z:40; pointer-events:none; }
 
 /* ========= ARTWORK SECTION ========= */
-#artwork-testshoot-1 {
-  --left:1425svh;
-  --scale:.28;
-  --ar:4/3;
-  --y:66svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:49;
-}
-
-#artwork-title {
-  --left:1414svh;
-  --scale:.2;
-  --y:46svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:41;
-}
-
-#silver-star3-8 {
-  --left:1454svh;
-  --scale:.08;
-  --y:41svh;
-  --x:0svh;
-  --rot:8deg;
-  --z:500;
-  pointer-events: none;
-}
-
-#artwork-testshoot-5 {
-  --left:1464svh;
-  --scale:.27;
-  --ar:109/60;
-  --y:68svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:46;
-}
-
-#artwork-testshoot-4 {
-  --left:1466svh;
-  --scale:.22;
-  --ar:109/60;
-  --y:44svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:45;
-}
-
-#about-artwork {
-  --left:1447svh;
-  --scale:.34;
-  --y:2svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:50;
-  pointer-events: none;
-}
-
-#caitlin-text-1 {
-  --left:1515svh;
-  --scale:.34;
-  --y:64svh;
-  --x:0svh;
-  --rot:1.5deg;
-  --z:39;
-  pointer-events: none;
-}
-
-#kayla-polaroid {
-  --left:1508svh;
-  --scale:.19;
-  --y:43svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:42;
-  pointer-events: none;
-}
-
-#tv-photo {
-  --left:1502svh;
-  --scale:.19;
-  --y:22svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:42;
-  pointer-events: none;
-}
-
-#artwork-testshoot-3 {
-  --left:1502svh;
-  --scale:.20;
-  --ar:109/60;
-  --y:-1svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:44;
-}
-
-#caitlin-note {
-  --left:1546svh;
-  --scale:.2;
-  --y:77svh!important;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:41;
-  pointer-events: none;
-}
-
-#caitlin-text-2 {
-  --left:1534svh;
-  --scale:.34;
-  --y:43svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:37;
-}
-
-#shoot-bts-1 {
-  --left:1529svh;
-  --scale:.22;
-  --ar:109/60;
-  --y:20svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:45;
-}
-
-#shoot-makeup {
-  --left:1528svh;
-  --scale:.18;
-  --y:7svh;
-  --x:0svh;
-  --rot:90.0deg;
-  --z:39;
-  pointer-events: none;
-}
-
-#shoot-makeup-text {
-  --left:1558svh;
-  --scale:.19;
-  --y:2svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:40;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 410;
-  --fs-mul: .1;
-  --ta: center;
-  --tt: lowercase;
-  --text-color: #e1effa;
-}
-
-#caitlin-text-3 {
-  --left:1566svh;
-  --scale:.35;
-  --y:45svh;
-  --x:0svh;
-  --rot:-5.0deg;
-  --z:40;
-  pointer-events: none;
-}
-
-#shoot-bts-2 {
-  --left:1571svh;
-  --scale:.38;
-  --ar:9/16;
-  --y:5svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:48;
-}
-
-#star-trio-3 {
-  --left:1584svh;
-  --scale:.10;
-  --y:79svh;
-  --x:10svh;
-  --rot:12deg;
-  --z:410;
-  pointer-events: none;
-}
-
-#star-trio-4 {
-  --left:1600svh;
-  --scale:.15;
-  --y:97svh;
-  --x:10svh;
-  --rot:-160deg;
-  --z:410;
-  pointer-events: none;
-}
-
-#dorm-mirror {
-  --left:1587svh;
-  --scale:.35;
-  --y:42svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:40;
-  pointer-events: none;
-}
+  #artwork-testshoot-1{ --left:1425svh; --scale:.28; --ar:4/3; --y:66svh; --x:0svh; --rot:0deg; --z:49; }
+  #artwork-title{ --left:1414svh; --scale:.2; --y:46svh; --x:10svh; --rot:0deg; --z:41; }
+  #silver-star3-8{ --left:1454svh; --scale:.08; --y:41svh; --x:0svh; --rot:8deg; --z:500; pointer-events:none; }
+  #artwork-testshoot-5{ --left:1464svh; --scale:.27; --ar:109/60; --y:68svh; --x:0svh; --rot:0deg; --z:46; }
+  #artwork-testshoot-4{ --left:1466svh; --scale:.22; --ar:109/60; --y:44svh; --x:0svh; --rot:0deg; --z:45; }
+  #about-artwork{ --left:1447svh; --scale:.34; --y:2svh; --x:0svh; --rot:0.0deg; --z:50; pointer-events:none; }
+  #caitlin-text-1{ --left:1515svh; --scale:.34; --y:64svh; --x:0svh; --rot:1.5deg; --z:39; pointer-events:none; }
+  #kayla-polaroid{ --left:1508svh; --scale:.19; --y:43svh; --x:0svh; --rot:0.0deg; --z:42; pointer-events:none; }
+  #tv-photo{ --left:1502svh; --scale:.19; --y:22svh; --x:0svh; --rot:0.0deg; --z:42; pointer-events:none; }
+  #artwork-testshoot-3{ --left:1502svh; --scale:.20; --ar:109/60; --y:-1svh; --x:0svh; --rot:0deg; --z:44; }
+  #caitlin-note{ --left:1546svh; --scale:.2; --y:77svh!important; --x:0svh; --rot:0.0deg; --z:41; pointer-events:none; }
+  #caitlin-text-2{ --left:1534svh; --scale:.34; --y:43svh; --x:0svh; --rot:0.0deg; --z:37; }
+  #shoot-bts-1{ --left:1529svh; --scale:.22; --ar:109/60; --y:20svh; --x:0svh; --rot:0.0deg; --z:45; }
+  #shoot-makeup{ --left:1528svh; --scale:.18; --y:7svh; --x:0svh; --rot:90.0deg; --z:39; pointer-events:none; }
+  #shoot-makeup-text{ --left:1558svh; --scale:.19; --y:2svh; --x:0svh; --rot:0.0deg; --z:40; pointer-events:none;
+                    --ff: "Thinker"; --fw: 410; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #e1effa; }
+  #caitlin-text-3{ --left:1566svh; --scale:.35; --y:45svh; --x:0svh; --rot:-5.0deg; --z:40; pointer-events:none; }
+  #shoot-bts-2{ --left:1571svh; --scale:.38; --ar:9/16; --y:5svh; --x:0svh; --rot:0deg; --z:48; }
+  #star-trio-3{ --left:1584svh; --scale:.10; --y:79svh; --x:10svh; --rot:12deg; --z:410; pointer-events:none; }
+  #star-trio-4{ --left:1600svh; --scale:.15; --y:97svh; --x:10svh; --rot:-160deg; --z:410; pointer-events:none; }
+  #dorm-mirror{ --left:1587svh; --scale:.35; --y:42svh; --x:0svh; --rot:0.0deg; --z:40; pointer-events:none; }
 
 /* ========= VIDEO SECTION ========= */
-#misery-bts {
-  --left:1612svh;
-  --scale:.38;
-  --y:62svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:39;
-}
-
-#buddy-gif {
-  --left:1612svh;
-  --scale:.15;
-  --y:45svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:53;
-  pointer-events: none;
-}
-
-#silver-star3-9 {
-  --left:1594svh;
-  --scale:.08;
-  --y:36svh;
-  --x:0svh;
-  --rot:-25.0deg;
-  --z:400;
-  pointer-events: none;
-}
-
-#blue-star-11 {
-  --left:1594svh;
-  --scale:.03;
-  --y:30svh;
-  --x:0svh;
-  --rot:-20.0deg;
-  --z:400;
-  pointer-events: none;
-}
-
-#glow-star-1 {
-  --left:1602svh;
-  --scale:.07;
-  --y:31svh;
-  --x:0svh;
-  --rot:15.0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#silver-star3-10 {
-  --left:1610svh;
-  --scale:.03;
-  --y:42svh;
-  --x:0svh;
-  --rot:-20.0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#blue-star-12 {
-  --left:1613svh;
-  --scale:.12;
-  --y:26svh;
-  --x:0svh;
-  --rot:-15.0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#silver-star3-11 {
-  --left:1623svh;
-  --scale:.06;
-  --y:36svh;
-  --x:0svh;
-  --rot:20.0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#glow-star-2 {
-  --left:1632svh;
-  --scale:.04;
-  --y:39svh;
-  --x:0svh;
-  --rot:15.0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#video-title-camcorder {
-  --left:1585svh;
-  --scale:.54;
-  --y:-14svh;
-  --x:10svh;
-  --rot:0deg;
-  --z:41;
-  pointer-events: none;
-}
-
-#video-title-gif {
-  --left:1587svh;
-  --scale:.20;
-  --y:10svh;
-  --x:10svh;
-  --rot:-3deg;
-  --z:40;
-  pointer-events: none;
-}
-
-#glow-star-3 {
-  --left:1594svh;
-  --scale:.03;
-  --y:6svh;
-  --x:0svh;
-  --rot:-30.0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#blue-star-13 {
-  --left:1592svh;
-  --scale:.08;
-  --y:-4svh;
-  --x:0svh;
-  --rot:-20.0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#glow-star-4 {
-  --left:1602svh;
-  --scale:.13;
-  --y:-6svh;
-  --x:0svh;
-  --rot:15.0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#blue-star-14 {
-  --left:1618svh;
-  --scale:.03;
-  --y:3svh;
-  --x:0svh;
-  --rot:-20.0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#silver-star3-12 {
-  --left:1624svh;
-  --scale:.03;
-  --y:4svh;
-  --x:0svh;
-  --rot:-20.0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#blue-star-15 {
-  --left:1623svh;
-  --scale:.06;
-  --y:-3svh;
-  --x:0svh;
-  --rot:-40.0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#glow-star-5 {
-  --left:1629svh;
-  --scale:.03;
-  --y:-1svh;
-  --x:0svh;
-  --rot:-20.0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#misery-brainstorm-1 {
-  --left:1638svh;
-  --scale:.25;
-  --y:35svh;
-  --x:0svh;
-  --rot:-2deg;
-  --z:54;
-  pointer-events: none;
-}
-
-#misery-polaroids {
-  --left:1642svh;
-  --scale:.38;
-  --y:-4svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:43;
-  pointer-events: none;
-}
-
-#glow-star-6 {
-  --left:1672svh;
-  --scale:.11;
-  --y:65svh;
-  --x:0svh;
-  --rot:-10.0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#editing-misery-thought {
-  --left:1662svh;
-  --scale:.20;
-  --y:75svh;
-  --x:0svh;
-  --rot:2deg;
-  --z:41;
-  pointer-events: none;
-}
-
-#misery-brainstorm-arrow {
-  --left:1668svh;
-  --scale:.16;
-  --y:42svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:43;
-  pointer-events: none;
-}
-
-#misery-brainstorm-text {
-  --left:1668svh;
-  --scale:.19;
-  --y:38svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:39;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center;
-  --tt: lowercase;
-  --text-color: #e1effa;
-}
-
-#editing-misery {
-  --left:1665svh;
-  --scale:.25;
-  --y:80svh;
-  --x:0svh;
-  --rot:90deg;
-  --z:40;
-  pointer-events: none;
-}
-
-#misery-brainstorm-2 {
-  --left:1687svh;
-  --scale:.28;
-  --y:34svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:43;
-  pointer-events: none;
-}
-
-#the-cake {
-  --left:1680svh;
-  --scale:.27;
-  --ar:16/9;
-  --y:1svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:48;
-}
-
-#cake-boss {
-  --left:1709svh;
-  --scale:.27;
-  --ar:16/9;
-  --y:36svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:50;
-}
-
-#happy-easter {
-  --left:1708svh;
-  --scale:.27;
-  --ar:16/9;
-  --y:67svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:51;
-}
-
-#dab-video {
-  --left:1732svh;
-  --scale:.27;
-  --ar:16/9;
-  --y:5svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:49;
-}
-
-#exitwounds-film-roll {
-  --left:1840svh;
-  --scale:1;
-  --y:76svh;
-  --x:0svh;
-  --rot:-90deg;
-  --z:56;
-  pointer-events: none;
-}
-
-#dvd-video {
-  --left:1760svh;
-  --scale:.18;
-  --y:36svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:10;
-  pointer-events: none;
-}
-
-#across-street {
-  --left:1780svh;
-  --scale:.26;
-  --ar:287/480;
-  --y:64svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:52;
-}
-
-#grew-here {
-  --left:1796svh;
-  --scale:.26;
-  --ar:407/482;
-  --y:64svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:53;
-}
-
-#mazzy-star {
-  --left:1818svh;
-  --scale:.26;
-  --ar:407/482;
-  --y:64svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:54;
-}
-
-#tisthedamn {
-  --left:1840svh;
-  --scale:.26;
-  --ar:357/481;
-  --y:64svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:55;
-}
-
-#tv-unboxing {
-  --left:1785svh;
-  --scale:.56;
-  --ar:9/16;
-  --y:2svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:49;
-}
-
-#videos-about {
-  --left:1805svh;
-  --scale:.25;
-  --y:34svh;
-  --x:0svh;
-  --rot:-2.0deg;
-  --z:50;
-}
-
-#exitwounds-subway {
-  --left:1801svh;
-  --scale:.29;
-  --y:18svh;
-  --x:0svh;
-  --rot:87.0deg;
-  --z:49;
-  pointer-events: none;
-}
-
-#exitwounds-bts {
-  --left:1859svh;
-  --scale:.4;
-  --y:60svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:57;
-}
-
-#landmines-bts-tiktok {
-  --left: 1853svh;
-  --scale:0.5;
-  --ar:9/16;
-  --y: 3svh;
-  --x: 0svh;
-  --rot: -1deg;
-  --z: 54;
-}
-
-#landmines-bts {
-  --left:1877svh;
-  --scale:.4;
-  --y:13svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:53;
-}
-
-#glitter-truck-2 {
-  --left:1864svh;
-  --scale:.6;
-  --y:-22svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:57;
-  pointer-events: none;
-}
-
-#backtruck-2 {
-  --left:1932svh;
-  --scale:.29;
-  --y:27svh;
-  --x:0svh;
-  --rot:2deg;
-  --z:56;
-  pointer-events: none;
-}
-
-#backtruck-1 {
-  --left:1935svh;
-  --scale:.29;
-  --y:3svh;
-  --x:0svh;
-  --rot:4deg;
-  --z:55;
-  pointer-events: none;
-}
-
+  #misery-bts{ --left:1612svh; --scale:.38; --y:62svh; --x:0svh; --rot:0deg; --z:39; }
+  #buddy-gif{ --left:1612svh; --scale:.15; --y:45svh; --x:0svh; --rot:0.0deg; --z:53; pointer-events:none; }
+  #silver-star3-9{ --left:1594svh; --scale:.08; --y:36svh; --x:0svh; --rot:-25.0deg; --z:400; pointer-events:none; }
+  #blue-star-11{ --left:1594svh; --scale:.03; --y:30svh; --x:0svh; --rot:-20.0deg; --z:400; pointer-events:none; }
+  #glow-star-1{ --left:1602svh; --scale:.07; --y:31svh; --x:0svh; --rot:15.0deg; --z:4; pointer-events:none; }
+  #silver-star3-10{ --left:1610svh; --scale:.03; --y:42svh; --x:0svh; --rot:-20.0deg; --z:4; pointer-events:none; }
+  #blue-star-12{ --left:1613svh; --scale:.12; --y:26svh; --x:0svh; --rot:-15.0deg; --z:4; pointer-events:none; }
+  #silver-star3-11{ --left:1623svh; --scale:.06; --y:36svh; --x:0svh; --rot:20.0deg; --z:4; pointer-events:none; }
+  #glow-star-2{ --left:1632svh; --scale:.04; --y:39svh; --x:0svh; --rot:15.0deg; --z:4; pointer-events:none; }
+  #video-title-camcorder{ --left:1585svh; --scale:.54; --y:-14svh; --x:10svh; --rot:0deg; --z:41; pointer-events:none; }
+  #video-title-gif{ --left:1587svh; --scale:.20; --y:10svh; --x:10svh; --rot:-3deg; --z:40; pointer-events:none; }
+  #glow-star-3{ --left:1594svh; --scale:.03; --y:6svh; --x:0svh; --rot:-30.0deg; --z:4; pointer-events:none; }
+  #blue-star-13{ --left:1592svh; --scale:.08; --y:-4svh; --x:0svh; --rot:-20.0deg; --z:4; pointer-events:none; }
+  #glow-star-4{ --left:1602svh; --scale:.13; --y:-6svh; --x:0svh; --rot:15.0deg; --z:4; pointer-events:none; }
+  #blue-star-14{ --left:1618svh; --scale:.03; --y:3svh; --x:0svh; --rot:-20.0deg; --z:4; pointer-events:none; }
+  #silver-star3-12{ --left:1624svh; --scale:.03; --y:4svh; --x:0svh; --rot:-20.0deg; --z:4; pointer-events:none; }
+  #blue-star-15{ --left:1623svh; --scale:.06; --y:-3svh; --x:0svh; --rot:-40.0deg; --z:4; pointer-events:none; }
+  #glow-star-5{ --left:1629svh; --scale:.03; --y:-1svh; --x:0svh; --rot:-20.0deg; --z:4; pointer-events:none; }
+  #misery-brainstorm-1{ --left:1638svh; --scale:.25; --y:35svh; --x:0svh; --rot:-2deg; --z:54; pointer-events: none; }
+  #misery-polaroids{ --left:1642svh; --scale:.38; --y:-4svh; --x:0svh; --rot:0deg; --z:43; pointer-events: none; }
+  #glow-star-6{ --left:1672svh; --scale:.11; --y:65svh; --x:0svh; --rot:-10.0deg; --z:4; pointer-events:none; }
+  #editing-misery-thought{ --left:1662svh; --scale:.20; --y:75svh; --x:0svh; --rot:2deg; --z:41; pointer-events:none; }
+  #misery-brainstorm-arrow{ --left:1668svh; --scale:.16; --y:42svh; --x:0svh; --rot:0deg; --z:43; pointer-events: none; }
+  #misery-brainstorm-text{ --left:1668svh; --scale:.19; --y:38svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
+                           --ff: "Thinker";--fw: 400;--fs-mul: .1;--ta: center; --tt: lowercase; --text-color: #e1effa;}
+  #editing-misery{ --left:1665svh; --scale:.25; --y:80svh; --x:0svh; --rot:90deg; --z:40; pointer-events:none; }
+  #misery-brainstorm-2{ --left:1687svh; --scale:.28; --y:34svh; --x:0svh; --rot:0deg; --z:43; pointer-events: none; }
+  #the-cake{ --left:1680svh; --scale:.27; --ar:16/9; --y:1svh; --x:0svh; --rot:0.0deg; --z:48; }
+  #cake-boss{ --left:1709svh; --scale:.27; --ar:16/9; --y:36svh; --x:0svh; --rot:0.0deg; --z:50; }
+  #happy-easter{ --left:1708svh; --scale:.27; --ar:16/9; --y:67svh; --x:0svh; --rot:0.0deg; --z:51; }
+  #dab-video{ --left:1732svh; --scale:.27; --ar:16/9; --y:5svh; --x:0svh; --rot:0.0deg; --z:49; }
+  #exitwounds-film-roll{ --left:1840svh; --scale:1; --y:76svh; --x:0svh; --rot:-90deg; --z:56; pointer-events:none; }
+  #dvd-video{ --left:1760svh; --scale:.18; --y:36svh; --x:0svh; --rot:0deg; --z:10; pointer-events:none; }
+  #across-street{ --left:1780svh; --scale:.26; --ar:287/480; --y:64svh; --x:0svh; --rot:0.0deg; --z:52; }
+  #grew-here{ --left:1796svh; --scale:.26; --ar:407/482; --y:64svh; --x:0svh; --rot:0.0deg; --z:53; }
+  #mazzy-star{ --left:1818svh; --scale:.26; --ar:407/482; --y:64svh; --x:0svh; --rot:0.0deg; --z:54; }
+  #tisthedamn{ --left:1840svh;--scale:.26; --ar:357/481; --y:64svh;--x:0svh; --rot:0.0deg; --z:55; }
+  #tv-unboxing{ --left:1785svh; --scale:.56; --ar:9/16; --y:2svh; --x:0svh; --rot:0.0deg; --z:49; }
+  #videos-about{ --left:1805svh; --scale:.25; --y:34svh; --x:0svh; --rot:-2.0deg; --z:50; }
+  #exitwounds-subway{ --left:1801svh; --scale:.29; --y:18svh; --x:0svh; --rot:87.0deg; --z:49; pointer-events:none; }
+  #exitwounds-bts{ --left:1859svh; --scale:.4; --y:60svh; --x:0svh; --rot:0deg; --z:57; }
+  #landmines-bts-tiktok{--left: 1853svh;--scale:0.5;--ar:9/16; --y: 3svh;--x: 0svh; --rot: -1deg;--z: 54; }
+  #landmines-bts{ --left:1877svh; --scale:.4; --y:13svh; --x:0svh; --rot:0deg; --z:53; }
+  #glitter-truck-2{ --left:1864svh; --scale:.6; --y:-22svh; --x:0svh; --rot:0deg; --z:57; pointer-events:none;}
+  #backtruck-2{ --left:1932svh; --scale:.29; --y:27svh; --x:0svh; --rot:2deg; --z:56; pointer-events:none;}
+  #backtruck-1{ --left:1935svh; --scale:.29; --y:3svh; --x:0svh; --rot:4deg; --z:55; pointer-events:none; }
 /* ========= MERCH SECTION ========= */
-#landmines-matches {
-  --left:1923svh;
-  --scale:.35;
-  --y:60svh;
-  --x:0svh;
-  --rot:-2.5deg;
-  --z:60;
-  pointer-events: none;
-}
-
-#blue-star-16 {
-  --left:1924svh;
-  --scale:.11;
-  --y:57svh;
-  --x:0svh;
-  --rot:-40.0deg;
-  --z:400;
-  pointer-events: none;
-}
-
-#fire-meme {
-  --left:1950svh;
-  --scale:.26;
-  --y:16svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:60;
-  pointer-events: none;
-}
-
-#silver-star3-13 {
-  --left:1964svh;
-  --scale:.13;
-  --y:3svh;
-  --x:0svh;
-  --rot:15deg;
-  --z:60;
-  pointer-events: none;
-}
-
-#pretty-little-liars {
-  --left:1990svh;
-  --scale:.22;
-  --y:73svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:60;
-  pointer-events: none;
-}
-
-#pretty-little-liars-text {
-  --left:1990svh;
-  --scale:.22;
-  --y:65svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:39;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center;
-  --tt: lowercase;
-  --text-color: #4CA8E9;
-}
-
-#m-title {
-  --left:1960svh;
-  --scale:.13;
-  --y:48svh;
-  --x:0svh;
-  --rot:-3deg;
-  --z:61;
-  pointer-events: none;
-}
-
-#candle-lighting {
-  --left:1983svh;
-  --scale:.40;
-  --ar:9/16;
-  --y:-1svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:60;
-}
-
-#early-posters {
-  --left:2004svh;
-  --scale:.45;
-  --y:-2svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:59;
-  pointer-events: none;
-}
-
-#early-posters-text {
-  --left:2032svh;
-  --scale:.2;
-  --y:35svh;
-  --x:0svh;
-  --rot:-4deg;
-  --z:60;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center;
-  --tt: lowercase;
-  --text-color: #4CA8E9;
-}
-
-#poster-arrow {
-  --left:2052svh;
-  --scale:.10;
-  --y:28svh;
-  --x:0svh;
-  --rot:19deg;
-  --z:60;
-  pointer-events: none;
-}
-
-#thank-you-text {
-  --left:2053svh;
-  --scale:.2;
-  --y:7svh;
-  --x:0svh;
-  --rot:-.5deg;
-  --z:60;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center;
-  --tt: lowercase;
-  --text-color: #4CA8E9;
-}
-
-#about-matchbooks {
-  --left:2032svh;
-  --scale:.2;
-  --y:73svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:60;
-  pointer-events: none;
-}
-
-#sticker-1 {
-  --left:2074svh;
-  --scale:.24;
-  --y:73svh;
-  --x:0svh;
-  --rot:-5deg;
-  --z:60;
-  pointer-events: none;
-}
-
-#sticker-3 {
-  --left:2072svh;
-  --scale:.24;
-  --y:49svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:60;
-  pointer-events: none;
-}
-
-#poster {
-  --left:2074svh;
-  --scale:.45;
-  --y:2svh;
-  --x:0svh;
-  --rot:-3deg;
-  --z:61;
-}
-
-#sticker-2 {
-  --left:2105svh;
-  --scale:.24;
-  --y:73svh;
-  --x:0svh;
-  --rot:7deg;
-  --z:60;
-  pointer-events: none;
-}
-
-#buy-button {
-  --left:2096svh;
-  --scale:.17;
-  --y:50svh;
-  --x:0svh;
-  --rot:5deg;
-  --z:60;
-}
-
-#sims {
-  --left:2111svh;
-  --scale:.10;
-  --y:35svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:61;
-  pointer-events: none;
-}
-
-#selfie-poster {
-  --left:2104svh;
-  --scale:.35;
-  --y:1svh;
-  --x:0svh;
-  --rot:2deg;
-  --z:60;
-  pointer-events: none;
-}
-
+  #landmines-matches{ --left:1923svh; --scale:.35; --y:60svh; --x:0svh; --rot:-2.5deg; --z:60; pointer-events:none;  }
+  #blue-star-16{ --left:1924svh; --scale:.11; --y:57svh; --x:0svh; --rot:-40.0deg; --z:400; pointer-events:none; }
+  #fire-meme{ --left:1950svh; --scale:.26; --y:16svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none; }
+  #silver-star3-13{ --left:1964svh; --scale:.13; --y:3svh; --x:0svh; --rot:15deg; --z:60; pointer-events:none; }
+  #pretty-little-liars{ --left:1990svh; --scale:.22; --y:73svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none;  }
+  #pretty-little-liars-text{ --left:1990svh; --scale:.22; --y:65svh; --x:0svh; --rot:0.0deg; --z:39; pointer-events:none;
+                             --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4CA8E9; }
+  #m-title{ --left:1960svh; --scale:.13; --y:48svh; --x:0svh; --rot:-3deg; --z:61; pointer-events:none; }
+  #candle-lighting{ --left:1983svh; --scale:.40; --ar:9/16; --y:-1svh; --x:0svh; --rot:0deg; --z:60; }
+  #early-posters{ --left:2004svh; --scale:.45;--y:-2svh; --x:0svh; --rot:0deg; --z:59; pointer-events:none; }
+  #early-posters-text{ --left:2032svh; --scale:.2; --y:35svh; --x:0svh; --rot:-4deg; --z:60; pointer-events:none;
+                       --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4CA8E9; }
+  #poster-arrow{ --left:2052svh; --scale:.10;--y:28svh; --x:0svh; --rot:19deg; --z:60; pointer-events:none;}
+  #thank-you-text{ --left:2053svh; --scale:.2;--y:7svh; --x:0svh; --rot:-.5deg; --z:60; pointer-events:none;
+                   --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #4CA8E9; }
+  #about-matchbooks{ --left:2032svh; --scale:.2; --y:73svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none;}
+  #sticker-1{ --left:2074svh; --scale:.24; --y:73svh; --x:0svh; --rot:-5deg; --z:60; pointer-events:none;  }
+  #sticker-3{ --left:2072svh; --scale:.24; --y:49svh; --x:0svh; --rot:0deg; --z:60; pointer-events:none;  }
+  #poster{ --left:2074svh; --scale:.45;--y:2svh; --x:0svh; --rot:-3deg; --z:61; }
+  #sticker-2{ --left:2105svh; --scale:.24; --y:73svh; --x:0svh; --rot:7deg; --z:60; pointer-events:none;  }
+  #buy-button{ --left:2096svh; --scale:.17; --y:50svh; --x:0svh; --rot:5deg; --z:60; }
+  #sims{ --left:2111svh; --scale:.10; --y:35svh; --x:0svh; --rot:0deg; --z:61; pointer-events:none; }
+  #selfie-poster{ --left:2104svh; --scale:.35; --y:1svh; --x:0svh; --rot:2deg; --z:60; pointer-events:none; }
+  
 /* ========= LONDON SECTION ========= */
-#glow-star-7 {
-  --left:2136svh;
-  --scale:.12;
-  --y:80svh;
-  --x:10svh;
-  --rot:70deg;
-  --z:400;
-  pointer-events: none;
-}
-
-#london-title {
-  --left:2120svh;
-  --scale:.25;
-  --y:37svh;
-  --x:10svh;
-  --rot:-94deg;
-  --z:40;
-  pointer-events: none;
-}
-
-#glow-star-8 {
-  --left:2159svh;
-  --scale:.10;
-  --y:92svh;
-  --x:0svh;
-  --rot:1deg;
-  --z:440;
-  pointer-events: none;
-}
-
-#hangout-poster {
-  --left:2159svh;
-  --scale:.71;
-  --y:32svh;
-  --x:0svh;
-  --rot:1deg;
-  --z:44;
-  pointer-events: none;
-}
-
-#london-camcorder {
-  --left:2149svh;
-  --scale:.26;
-  --y:16svh;
-  --x:0svh;
-  --rot:90.0deg;
-  --z:42;
-  pointer-events: none;
-}
-
-#london-live-1 {
-  --left:2177svh;
-  --scale:.30;
-  --ar:9/16;
-  --y:2svh;
-  --x:0svh;
-  --rot:-2.0deg;
-  --z:41;
-}
-
-#london-live-2 {
-  --left:2198svh;
-  --scale:.38;
-  --ar:9/16;
-  --y:2svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:43;
-}
-
-#hangout-vlog {
-  --left:2214svh;
-  --scale:.35;
-  --y:64svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:57;
-}
-
-#rsvp-cloud {
-  --left:2216svh;
-  --scale:.15;
-  --y:47svh;
-  --x:0svh;
-  --rot:-15deg;
-  --z:44;
-  pointer-events: none;
-}
-
-#glow-star-9 {
-  --left:2222svh;
-  --scale:.09;
-  --y:-3svh;
-  --x:0svh;
-  --rot:-1deg;
-  --z:440;
-  pointer-events: none;
-}
-
-#rsvp-arrow {
-  --left:2224svh;
-  --scale:.04;
-  --y:42svh;
-  --x:0svh;
-  --rot:-2deg;
-  --z:44;
-  pointer-events: none;
-}
-
-#rsvp-button {
-  --left:2238svh;
-  --scale:.13;
-  --y:43svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:57;
-}
-
-#blue-star-17 {
-  --left:2245svh;
-  --scale:.06;
-  --y:27svh;
-  --x:0svh;
-  --rot:-10deg;
-  --z:500;
-  pointer-events: none;
-}
-
-#london-matches {
-  --left:2222svh;
-  --scale:.44;
-  --y:-2svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:50;
-  pointer-events: none;
-}
-
-#silver-star3-14 {
-  --left:2266svh;
-  --scale:.11;
-  --y:4svh;
-  --x:0svh;
-  --rot:10deg;
-  --z:500;
-  pointer-events: none;
-}
-
-#london-about {
-  --left:2278svh;
-  --scale:.59;
-  --y:40svh;
-  --x:0svh;
-  --rot:-8deg;
-  --z:45;
-}
-
-#blue-star-18 {
-  --left:2300svh;
-  --scale:.06;
-  --y:32svh;
-  --x:0svh;
-  --rot:-8deg;
-  --z:405;
-  pointer-events: none;
-}
-
-#onedirection {
-  --left:2280svh;
-  --scale:.18;
-  --y:12svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:45;
-  pointer-events: none;
-}
-
-#onedirection-text {
-  --left:2280svh;
-  --scale:.15;
-  --y:9svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:45;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul:.13;
-  --ta: center;
-  --tt: lowercase;
-  --text-color: #E1EFFA;
-}
-
-#silver-star3-15 {
-  --left:2310svh;
-  --scale:.05;
-  --y:0svh;
-  --x:0svh;
-  --rot:-10deg;
-  --z:405;
-  pointer-events: none;
-}
-
-#silver-star3-16 {
-  --left:2320svh;
-  --scale:.08;
-  --y:94svh;
-  --x:0svh;
-  --rot:-8deg;
-  --z:405;
-  pointer-events: none;
-}
-
-#glow-star-10 {
-  --left:2340svh;
-  --scale:.11;
-  --y:90svh;
-  --x:0svh;
-  --rot:8deg;
-  --z:405;
-  pointer-events: none;
-}
-
-#hangout-tweet {
-  --left:2324svh;
-  --scale:.375;
-  --y:49svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:46;
-  pointer-events: none;
-}
-
-#londoncard-v1 {
-  --left:2319svh;
-  --scale:.35;
-  --y:4svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:45;
-  pointer-events: none;
-}
-
-#glow-star-11 {
-  --left:2346svh;
-  --scale:.11;
-  --y:30svh;
-  --x:0svh;
-  --rot:10deg;
-  --z:500;
-  pointer-events: none;
-}
-
-#glow-star-12 {
-  --left:2357svh;
-  --scale:.09;
-  --y:46svh;
-  --x:0svh;
-  --rot:-10deg;
-  --z:500;
-  pointer-events: none;
-}
-
-#londoncard-arrow-1 {
-  --left:2346svh;
-  --scale:.04;
-  --y:3svh;
-  --x:0svh;
-  --rot:-63deg;
-  --z:46;
-  pointer-events: none;
-}
-
-#londoncard-text {
-  --left:2348svh;
-  --scale:.20;
-  --y:13svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:46;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .1;
-  --ta: center;
-  --tt: lowercase;
-  --text-color: #E1EFFA;
-}
-
-#blue-star-19 {
-  --left:2354svh;
-  --scale:.07;
-  --y:-1svh;
-  --x:0svh;
-  --rot:-10deg;
-  --z:500;
-  pointer-events: none;
-}
-
-#londoncard-arrow-2 {
-  --left:2355svh;
-  --scale:.04;
-  --y:33svh;
-  --x:0svh;
-  --rot:170deg;
-  --z:46;
-  pointer-events: none;
-}
-
-#silver-star3-17 {
-  --left:2369svh;
-  --scale:.12;
-  --y:15svh;
-  --x:0svh;
-  --rot:-10deg;
-  --z:500;
-  pointer-events: none;
-}
-
-#blue-star-20 {
-  --left:2368svh;
-  --scale:.07;
-  --y:4svh;
-  --x:0svh;
-  --rot:-15deg;
-  --z:500;
-  pointer-events: none;
-}
-
-#london-tv {
-  --left:2340svh;
-  --scale:.435;
-  --y:61svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:47;
-}
-
-#londoncard-front {
-  --left:2368.5svh;
-  --scale:.35;
-  --y:28svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:45;
-  pointer-events: none;
-}
-
-#film-strip {
-  --left:2399svh;
-  --scale:.74;
-  --y:25svh;
-  --x:0svh;
-  --rot:-5.0deg;
-  --z:44;
-  pointer-events: none;
-}
-
-#londoncard-back {
-  --left:2379svh;
-  --scale:.26;
-  --y:0.0svh;
-  --x:3svh;
-  --rot:0deg;
-  --z:45;
-  pointer-events: none;
-}
+  #glow-star-7{ --left:2136svh; --scale:.12; --y:80svh; --x:10svh; --rot:70deg; --z:400; pointer-events:none; }
+  #london-title{ --left:2120svh; --scale:.25; --y:37svh; --x:10svh; --rot:-94deg; --z:40; pointer-events:none; }
+  #glow-star-8{ --left:2159svh; --scale:.10; --y:92svh; --x:0svh; --rot:1deg; --z:440; pointer-events:none; }
+  #hangout-poster{ --left:2159svh; --scale:.71; --y:32svh; --x:0svh; --rot:1deg; --z:44; pointer-events:none; }
+  #london-camcorder{ --left:2149svh; --scale:.26; --y:16svh; --x:0svh; --rot:90.0deg; --z:42; pointer-events:none; }
+  #london-live-1{ --left:2177svh; --scale:.30; --ar:9/16; --y:2svh; --x:0svh; --rot:-2.0deg; --z:41; }
+  #london-live-2{ --left:2198svh; --scale:.38; --ar:9/16; --y:2svh; --x:0svh; --rot:0.0deg; --z:43; }
+  #hangout-vlog{ --left:2214svh; --scale:.35; --y:64svh; --x:0svh; --rot:0deg; --z:57; }
+  #rsvp-cloud{ --left:2216svh; --scale:.15; --y:47svh; --x:0svh; --rot:-15deg; --z:44; pointer-events:none; }
+  #glow-star-9{ --left:2222svh; --scale:.09; --y:-3svh; --x:0svh; --rot:-1deg; --z:440; pointer-events:none; }
+  #rsvp-arrow{ --left:2224svh; --scale:.04; --y:42svh; --x:0svh; --rot:-2deg; --z:44; pointer-events:none; }
+  #rsvp-button{ --left:2238svh; --scale:.13; --y:43svh; --x:0svh; --rot:0deg; --z:57; }
+  #blue-star-17{ --left:2245svh; --scale:.06; --y:27svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
+  #london-matches{ --left:2222svh; --scale:.44; --y:-2svh; --x:0svh; --rot:0deg; --z:50; pointer-events:none; }
+  #silver-star3-14{ --left:2266svh; --scale:.11; --y:4svh; --x:0svh; --rot:10deg; --z:500; pointer-events:none; }
+  #london-about{ --left:2278svh; --scale:.59; --y:40svh; --x:0svh; --rot:-8deg; --z:45; }
+  #blue-star-18{ --left:2300svh; --scale:.06; --y:32svh; --x:0svh; --rot:-8deg; --z:405; pointer-events:none; }
+  #onedirection{ --left:2280svh; --scale:.18; --y:12svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
+  #onedirection-text{ --left:2280svh; --scale:.15; --y:9svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none;
+                      --ff: "Thinker"; --fw: 400; --fs-mul:.13; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
+  #silver-star3-15{ --left:2310svh; --scale:.05; --y:0svh; --x:0svh; --rot:-10deg; --z:405; pointer-events:none; }
+  #silver-star3-16{ --left:2320svh; --scale:.08; --y:94svh; --x:0svh; --rot:-8deg; --z:405; pointer-events:none; }
+  #glow-star-10{ --left:2340svh; --scale:.11; --y:90svh; --x:0svh; --rot:8deg; --z:405; pointer-events:none; }
+  #hangout-tweet{ --left:2324svh; --scale:.375; --y:49svh; --x:0svh; --rot:0deg; --z:46; pointer-events:none; }
+  #londoncard-v1{ --left:2319svh; --scale:.35; --y:4svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
+  #glow-star-11{--left:2346svh; --scale:.11; --y:30svh; --x:0svh; --rot:10deg; --z:500; pointer-events:none; }
+  #glow-star-12{--left:2357svh; --scale:.09; --y:46svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
+  #londoncard-arrow-1{ --left:2346svh; --scale:.04; --y:3svh; --x:0svh; --rot:-63deg; --z:46; pointer-events:none; }
+  #londoncard-text{ --left:2348svh; --scale:.20; --y:13svh; --x:0svh; --rot:0deg; --z:46; pointer-events:none;
+                    --ff: "Thinker"; --fw: 400; --fs-mul: .1; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
+  #blue-star-19{--left:2354svh; --scale:.07; --y:-1svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
+  #londoncard-arrow-2{ --left:2355svh; --scale:.04; --y:33svh; --x:0svh; --rot:170deg; --z:46; pointer-events:none; }
+  #silver-star3-17{--left:2369svh; --scale:.12; --y:15svh; --x:0svh; --rot:-10deg; --z:500; pointer-events:none; }
+  #blue-star-20{--left:2368svh; --scale:.07; --y:4svh; --x:0svh; --rot:-15deg; --z:500; pointer-events:none; }
+  #london-tv{ --left:2340svh; --scale:.435; --y:61svh; --x:0svh; --rot:0deg; --z:47; }
+  #londoncard-front{ --left:2368.5svh; --scale:.35; --y:28svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
+  #film-strip{ --left:2399svh; --scale:.74; --y:25svh; --x:0svh; --rot:-5.0deg; --z:44; pointer-events:none; }
+  #londoncard-back{ --left:2379svh; --scale:.26; --y:0.0svh; --x:3svh; --rot:0deg; --z:45; pointer-events:none; }
 
 /* ========= WHAT'S NEXT SECTION ========= */
-#dreamdotnet {
-  --left:2415svh;
-  --scale:.25;
-  --y:72svh;
-  --x:0svh;
-  --rot:0.0deg;
-  --z:44;
-  pointer-events: none;
-}
-
-#church-video {
-  --left:2419svh;
-  --scale:.30;
-  --ar:336/299;
-  --y:38svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:46;
-}
-
-#villains {
-  --left:2421svh;
-  --scale:.30;
-  --y:2svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:45;
-  pointer-events: none;
-}
-
-#strawberry {
-  --left:2473svh;
-  --scale:.21;
-  --y:75svh;
-  --x:0svh;
-  --rot:5deg;
-  --z:46;
-  pointer-events: none;
-}
-
-#glow-star-13 {
-  --left:2478svh;
-  --scale:.13;
-  --y:61svh;
-  --x:0svh;
-  --rot:5deg;
-  --z:46;
-  pointer-events: none;
-}
-
-#next-title {
-  --left:2456svh;
-  --scale:.30;
-  --y:40svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:70;
-  pointer-events: none;
-}
-
-#join-postcard {
-  --left:2455svh;
-  --scale:.37;
-  --y:2svh;
-  --x:0svh;
-  --rot:8deg;
-  --z:46;
-}
-
-#presave-text {
-  --left:2496svh;
-  --scale:.14;
-  --y:71svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:71;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .2;
-  --ta: center;
-  --tt: lowercase;
-  --text-color: #E1EFFA;
-}
-
-#presave-button {
-  --left:2512svh;
-  --scale:.30;
-  --y:37svh;
-  --x:0svh;
-  --rot:5deg;
-  --z:71;
-}
-
-#im-stamp {
-  --left:2525svh;
-  --scale:.25;
-  --y:2svh;
-  --x:0svh;
-  --rot:-5deg;
-  --z:70;
-  pointer-events: none;
-}
-
-#thankyou-note {
-  --left:2551svh;
-  --scale:.9;
-  --y:5svh;
-  --x:0svh;
-  --rot:-5deg;
-  --z:71;
-  pointer-events: none;
-}
-
-#lock-logo {
-  --left:2615svh;
-  --scale:.85;
-  --y:13svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:71;
-  pointer-events: none;
-}
-
-#social-sparkles-2 {
-  --left:2620svh;
-  --scale:.15;
-  --y:4svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-  pointer-events: none;
-}
-
-#instagram-2 {
-  --left:2631svh;
-  --scale:.05;
-  --y:9svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-  outline: none;
-}
-
-#tiktok-2 {
-  --left:2637svh;
-  --scale:.05;
-  --y:9svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-  outline: none;
-}
-
-#twitter-2 {
-  --left:2642svh;
-  --scale:.05;
-  --y:9svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-  outline: none;
-}
-
-#discord-2 {
-  --left:2649svh;
-  --scale:.05;
-  --y:9svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-  outline: none;
-}
-
-#spotify-2 {
-  --left:2654svh;
-  --scale:.05;
-  --y:9svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-  outline: none;
-}
-
-#apple-music-2 {
-  --left:2660svh;
-  --scale:.05;
-  --y:9svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-  outline: none;
-}
-
-#back-button {
-  --left:2685svh;
-  --scale:.2;
-  --y:40svh;
-  --x:8svh;
-  --rot:0deg;
-  --z:2;
-}
-
-/*# sourceMappingURL=style.css.map */
+  #dreamdotnet{ --left:2415svh; --scale:.25; --y:72svh; --x:0svh; --rot:0.0deg; --z:44; pointer-events:none; }
+  #church-video{ --left:2419svh; --scale:.30; --ar:336/299; --y:38svh; --x:0svh; --rot:0deg; --z:46; }
+  #villains{ --left:2421svh; --scale:.30; --y:2svh; --x:0svh; --rot:0deg; --z:45; pointer-events:none; }
+  #strawberry{ --left:2473svh; --scale:.21; --y:75svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
+  #glow-star-13{--left:2478svh; --scale:.13; --y:61svh; --x:0svh; --rot:5deg; --z:46; pointer-events:none; }
+  #next-title{ --left:2456svh; --scale:.30; --y:40svh; --x:0svh; --rot:0deg; --z:70; pointer-events:none; }
+  #join-postcard{ --left:2455svh; --scale:.37; --y:2svh; --x:0svh; --rot:8deg; --z:46; }
+  #presave-text{ --left:2496svh; --scale:.14; --y:71svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none;
+                 --ff: "Thinker"; --fw: 400; --fs-mul: .2; --ta: center; --tt: lowercase; --text-color: #E1EFFA; }
+  #presave-button{ --left:2512svh; --scale:.30; --y:37svh; --x:0svh; --rot:5deg; --z:71;}
+  #im-stamp{ --left:2525svh; --scale:.25; --y:2svh; --x:0svh; --rot:-5deg; --z:70; pointer-events:none;}
+  #thankyou-note{ --left:2551svh; --scale:.9; --y:5svh; --x:0svh; --rot:-5deg; --z:71; pointer-events:none;}
+  #lock-logo{ --left:2615svh; --scale:.85; --y:13svh; --x:0svh; --rot:0deg; --z:71; pointer-events:none; }
+  #social-sparkles-2{ --left:2620svh; --scale:.15; --y:4svh; --x:8svh; --rot:0deg; --z:2; pointer-events: none }
+  #instagram-2{ --left:2631svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #tiktok-2{ --left:2637svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #twitter-2{ --left:2642svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #discord-2{ --left:2649svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #spotify-2{ --left:2654svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #apple-music-2{ --left:2660svh; --scale:.05; --y:9svh; --x:8svh; --rot:0deg; --z:2; outline:none; }
+  #back-button{ --left:2685svh; --scale:.2; --y:40svh; --x:8svh; --rot:0deg; --z:2; }

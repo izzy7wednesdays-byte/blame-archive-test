@@ -1,26 +1,12 @@
 // scss/archive.scss
+// Single entry for your styles. All CSS comes from here.
 
-// 1) abstract (only if these files exist – otherwise comment them out)
-//@import "_abstract/mixins";
-// @import "_abstract/variables";
-// @import "_abstract/animations";
+// 1) tools
+@import "_abstract/mixins";
 
-// 2) base (THIS is the important one right now)
+// 2) base (this is your old CSS)
 @import "_base/base";
-// @import "_base/typography";
-// @import "_base/spacing";
-// @import "_base/utilities";
+@import "_base/typography";
 
-// 3) components (for now, TURN THESE OFF until we’re ready)
-/// @import "_components/buttons";
-/// @import "_components/footer";
-/// @import "_components/form";
-/// @import "_components/header";
-/// @import "_components/main";
-/// @import "_components/modal";
-/// @import "_components/sleepy";
-/// @import "_components/slider";
-/// @import "_components/social";
-
-// 4) vendors (only if you actually have _vendors/_bit.scss)
-/// @import "_vendors/bit";
+// 3) components (we'll fill _main.scss later)
+@import "_components/main";
