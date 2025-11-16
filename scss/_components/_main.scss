@@ -320,14 +320,14 @@
     --z:40;
   }
 
-  .play-lightsleeper{
-    &.dotlottie-wc {
+  .dotlottie-wc {
+    &.play-lightsleeper{
       pointer-events: none;
     }
   }
 
-  .play-lightsleeper{
-    &.sc-trigger {
+  .sc-trigger{
+    &.play-lightsleeper {
       position: absolute;
       inset: 0;
       width: 100%;
