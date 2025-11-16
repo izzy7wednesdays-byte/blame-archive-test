@@ -1,24 +1,26 @@
-// 1) abstract
-@import "_abstract/mixins";
-@import "_abstract/variables";
-@import "_abstract/animations";
+// scss/archive.scss
 
-// 2) base
+// 1) abstract (only if these files exist – otherwise comment them out)
+//@import "_abstract/mixins";
+// @import "_abstract/variables";
+// @import "_abstract/animations";
+
+// 2) base (THIS is the important one right now)
 @import "_base/base";
-@import "_base/typography";
-@import "_base/spacing";
-@import "_base/utilities";
+// @import "_base/typography";
+// @import "_base/spacing";
+// @import "_base/utilities";
 
-// 3) components
-//@import "_components/buttons";
-//@import "_components/footer";
-//@import "_components/form";
-//@import "_components/header";
-//@import "_components/main";
-//@import "_components/modal";
-//@import "_components/sleepy";
-//@import "_components/slider";
-//@import "_components/social";
+// 3) components (for now, TURN THESE OFF until we’re ready)
+/// @import "_components/buttons";
+/// @import "_components/footer";
+/// @import "_components/form";
+/// @import "_components/header";
+/// @import "_components/main";
+/// @import "_components/modal";
+/// @import "_components/sleepy";
+/// @import "_components/slider";
+/// @import "_components/social";
 
-// 4) vendors
-@import "_vendors/bit";
+// 4) vendors (only if you actually have _vendors/_bit.scss)
+/// @import "_vendors/bit";

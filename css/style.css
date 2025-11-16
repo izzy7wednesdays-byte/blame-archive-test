@@ -1,13 +1,4 @@
 @charset "UTF-8";
-/*
-xs:     0 - 576px
-sm:     576 - 768px
-md:     768 - 992px
-lg:     992 - 1200px
-xl:     1200 - 1400px
-xxl:    1400+
-xxxl:   1600+
-*/
 /* ========= BASE / INITIAL PAINT ========= */
 html, body {
   background: #0f0f12;
@@ -510,6 +501,24 @@ html, body {
   } */
 /* ========= PER-SLOT CUSTOMIZATION (svh units) ========= */
 /* ========= WELCOME SECTION ========= */
+#special-message {
+  --left:-26svh;
+  --scale:1.12;
+  --y:20svh;
+  --x:0svh;
+  --rot:0deg;
+  --z:1;
+}
+
+#izzymacarthur {
+  --left:18svh;
+  --scale:.15;
+  --y:65svh;
+  --x:8svh;
+  --rot:0deg;
+  --z:2;
+}
+
 #social-sparkles {
   --left:17svh;
   --scale:.15;
@@ -572,6 +581,56 @@ html, body {
   --x:8svh;
   --rot:0deg;
   --z:2;
+}
+
+#torn-note {
+  --left:11svh;
+  --scale:.68;
+  --y:-9svh;
+  --x:-2svh;
+  --rot:0deg;
+  --z:3;
+  pointer-events: none;
+}
+
+#tracklist {
+  --left:91svh;
+  --scale:.42;
+  --y:57svh;
+  --x:15svh;
+  --rot:8deg;
+  --z:2;
+  pointer-events: none;
+}
+
+#the-scrapbook {
+  --left:65svh;
+  --scale:.5;
+  --y:12svh;
+  --x:0svh;
+  --rot:0deg;
+  --z:4;
+  pointer-events: none;
+}
+
+#lfg {
+  --left:97svh;
+  --scale:.1;
+  --y:5svh;
+  --x:0svh;
+  --rot:0deg;
+  --z:5;
+  pointer-events: none;
+}
+
+#pink-arrow {
+  --left:123svh;
+  --scale:.09;
+  --y:5svh;
+  --x:0svh;
+  --rot:0deg;
+  --z:5;
+  pointer-events: none;
 }
 
 /* ========= LIGHT SLEEPER SECTION ========= */
@@ -3477,12 +3536,5 @@ html, body {
   --rot:0deg;
   --z:2;
 }
-
-/* Typography will be migrated here:
- * - @font-face rules
- * - html/body font-family
- * - heading/body styles
- */
-/* placeholder for _bit.scss */
 
 /*# sourceMappingURL=style.css.map */
