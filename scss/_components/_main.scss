@@ -18,7 +18,7 @@
     @include respond(xs) {
       display: flex!important;
       position: absolute;
-      --left: 10svh;
+      --left: 12svh;
       --scale: .8;
       --y: 20svh;
       --x: 0svh;
@@ -45,7 +45,7 @@
     
     @include respond(xs) {
       display: flex!important;
-      --left: 15svh;
+      --left: 13svh;
       --scale: .14;
       --y: 63svh;
       --x: 8svh;
@@ -171,9 +171,9 @@
     pointer-events:none;
      
     @include respond(xs) {
-      --left:15svh; 
+      --left:25svh; 
       --scale:.3; 
-      --y:12svh; 
+      --y:50svh; 
       --x:0svh; 
       --rot:0deg; 
       --z:4;
@@ -192,7 +192,7 @@
 
      @include respond(xs) {
       --left:15svh; 
-      --scale:.3; 
+      --scale:.35; 
       --y:12svh; 
       --x:0svh; 
       --rot:0deg; 
