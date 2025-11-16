@@ -47,7 +47,7 @@
       display: flex!important;
       --left: 13svh;
       --scale: .12;
-      --y: 57svh;
+      --y: 60svh;
       --x: 8svh;
       --rot: 0deg;
       --z: 2;
@@ -64,7 +64,7 @@
     pointer-events: none;
   
     @include respond(xs) { 
-      --left: 10svh;
+      --left: 15svh;
       --scale: .10;
       --y: 10svh;
       --x: 8svh;
@@ -82,7 +82,14 @@
     --rot: 0deg;
     --z: 2;
   
-    @include respond(xs) { }
+    @include respond(xs) {
+      --left: 28svh;
+      --scale: .03;
+      --y: 55svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+     }
   }
   
    .tiktok {
@@ -93,7 +100,14 @@
     --rot: 0deg;
     --z: 2;
   
-    @include respond(xs) { }
+    @include respond(xs) {
+      --left: 34svh;
+      --scale: .03;
+      --y: 55svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+     }
   }
   
    .twitter {
@@ -104,7 +118,14 @@
     --rot: 0deg;
     --z: 2;
   
-    @include respond(xs) { }
+    @include respond(xs) {
+      --left: 40svh;
+      --scale: .03;
+      --y: 55svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+     }
   }
   
    .discord {
@@ -115,8 +136,15 @@
     --rot: 0deg;
     --z: 2;
   
-    @include respond(xs) { }
-  }
+    @include respond(xs) {
+      --left: 46svh;
+      --scale: .03;
+      --y: 55svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+     }
+    }
   
    .spotify {
     --left: 52svh;
@@ -126,7 +154,14 @@
     --rot: 0deg;
     --z: 2;
   
-    @include respond(xs) { }
+    @include respond(xs) {
+      --left: 52svh;
+      --scale: .03;
+      --y: 55svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+     }
   }
   
    .apple-music {
@@ -137,7 +172,14 @@
     --rot: 0deg;
     --z: 2;
   
-    @include respond(xs) { }
+    @include respond(xs) { 
+      --left: 58svh;
+      --scale: .03;
+      --y: 55svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+     }
   }
   
    .torn-note {
@@ -171,7 +213,7 @@
     pointer-events:none;
      
     @include respond(xs) {
-      --left:42svh; 
+      --left:43svh; 
       --scale:.3; 
       --y:70svh; 
       --x:15svh; 
@@ -184,7 +226,7 @@
    .the-scrapbook {
     --left:65svh; 
     --scale:.5; 
-    --y:12svh; 
+    --y:40svh; 
     --x:0svh; 
     --rot:0deg; 
     --z:4;
