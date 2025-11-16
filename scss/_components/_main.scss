@@ -13,7 +13,7 @@
   }
   
   .special-message-mobile {
-    display: none;
+    display: none !important;
     
     @include respond(xs) {
       position: absolute;
