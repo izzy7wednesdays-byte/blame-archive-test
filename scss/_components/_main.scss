@@ -18,11 +18,11 @@
     @include respond(xs) {
       position: absolute;
       --left: 20svh;
-      --scale: 1.12;
-      --y: 5svh;
+      --scale: 1;
+      --y: 0svh;
       --x: 0svh;
       --rot: 0deg;
-      --z: 1;
+      --z: 100;
       display: flex;
     }
   }
@@ -35,15 +35,22 @@
     --rot: 0deg;
     --z: 2;
   
-    @include respond(xs) { }
+    @include respond(xs) { 
+      --left: 15svh;
+      --scale: .08;
+      --y: 60svh;
+      --x: 8svh;
+      --rot: 0deg;
+      --z: 2;
+    }
   }
   
    .social-sparkles {
-    --left: 17svh;
-    --scale: .15;
+    --left: 10svh;
+    --scale: .10;
     --y: 50svh;
     --x: 8svh;
-    --rot: 0deg;
+    --rot: 90deg;
     --z: 2;
     pointer-events: none;
   
