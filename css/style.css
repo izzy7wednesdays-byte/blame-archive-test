@@ -3417,10 +3417,10 @@ html, body {
 .slot.special-message {
   --left: -20svh;
   --scale: 1.12;
-  --y: 10svh;
+  --y: 20svh;
   --x: 0svh;
   --rot: 0deg;
-  --z: 10;
+  --z: 1;
 }
 @media (max-width: 36em) {
   .slot.special-message {
@@ -3432,7 +3432,6 @@ html, body {
 }
 @media (max-width: 36em) {
   .slot.special-message-mobile {
-    display: flex;
     position: absolute;
     --left: 200svh;
     --scale: 1.12;
@@ -3440,6 +3439,7 @@ html, body {
     --x: 0svh;
     --rot: 0deg;
     --z: 100;
+    display: flex;
   }
 }
 .slot.izzymacarthur {
@@ -3535,8 +3535,6 @@ html, body {
   pointer-events: none;
 }
 .slot.lfg {
-  outline: 5px solid magenta;
-  background: rgba(255, 0, 255, 0.2);
   --left:97svh;
   --scale:.1;
   --y:5svh;
@@ -3546,8 +3544,6 @@ html, body {
   pointer-events: none;
 }
 .slot.pink-arrow {
-  outline: 5px solid magenta;
-  background: rgba(255, 0, 255, 0.2);
   --left:123svh;
   --scale:.09;
   --y:5svh;
