@@ -273,7 +273,7 @@
     pointer-events: none;
     
     @include respond(xs) {
-      --left:20svh; 
+      --left:40svh; 
       --scale:.1; 
       --y:3svh; 
       --x:0svh; 
