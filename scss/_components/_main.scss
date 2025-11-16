@@ -171,11 +171,11 @@
     pointer-events:none;
      
     @include respond(xs) {
-      --left:25svh; 
+      --left:50svh; 
       --scale:.3; 
-      --y:50svh; 
-      --x:0svh; 
-      --rot:0deg; 
+      --y:60svh; 
+      --x:15svh; 
+      --rot:8deg; 
       --z:4;
       pointer-events: none;
      }
