@@ -18,12 +18,12 @@
     
     @include respond(xs) {
       position: absolute;
-      --left: 200svh;
+      --left: 20svh;
       --scale: 1.12;
       --y: 5svh;
       --x: 0svh;
       --rot: 0deg;
-      --z: 100;
+      --z: 1;
       display: flex;
     }
   }
