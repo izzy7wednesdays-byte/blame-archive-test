@@ -453,7 +453,7 @@
   pointer-events:none;
   
   @include respond(xs) {
-    --left:160svh;
+    --left:165svh;
   }
 }
 
@@ -522,7 +522,7 @@
 
   @include respond(xs) {
     --left:145svh;
-    --y:71svh;    
+    --y:73svh;    
     --scale: .28;
   }
 }
@@ -553,6 +553,6 @@
   @include respond(xs) {
     --left:150svh;
     --scale:.23;
-    --y:26svh;
+    --y:24svh;
   }
 }
