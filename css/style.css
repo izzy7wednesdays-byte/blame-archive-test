@@ -3234,7 +3234,7 @@ html, body {
 .special-message {
   --left: -26svh;
   --scale: 1.12;
-  --y: 23svh;
+  --y: 21svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 1;
@@ -3253,8 +3253,8 @@ html, body {
     display: flex !important;
     position: absolute;
     --left: 12svh;
-    --scale: .8;
-    --y: 20svh;
+    --scale: .84;
+    --y: 17svh;
     --x: 0svh;
     --rot: 0deg;
     --z: 1;
@@ -3283,7 +3283,7 @@ html, body {
     display: flex !important;
     --left: 13svh;
     --scale: .12;
-    --y: 63svh;
+    --y: 61svh;
     --x: 8svh;
     --rot: 0deg;
     --z: 2;
@@ -3436,8 +3436,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .torn-note {
-    --left:39svh;
-    --scale:.38;
+    --left:41svh;
+    --scale:.4;
     --y:65svh;
     --x:15svh;
     --rot:10deg;
@@ -3489,12 +3489,12 @@ html, body {
 }
 
 .lfg {
-  --left:9svh;
+  --left:97svh;
   --scale:.1;
   --y:5svh;
   --x:0svh;
   --rot:0deg;
-  --z:5;
+  --z:4;
   pointer-events: none;
 }
 @media (max-width: 36em) {
@@ -3541,12 +3541,12 @@ html, body {
 }
 @media (max-width: 36em) {
   .broken-cd {
-    --left:100svh;
-    --scale:.30;
-    --y:60svh;
-    --x:0svh;
-    --rot:0deg;
-    --z:29;
+    --left:63svh;
+    --scale:.32;
+    --y:44svh;
+    --x:-11svh;
+    --rot:85deg;
+    --z:2;
     pointer-events: none;
   }
 }
@@ -3559,6 +3559,17 @@ html, body {
   --rot:80deg;
   --z:20;
   pointer-events: none;
+}
+@media (max-width: 36em) {
+  .blue-star-1 {
+    --left:115svh;
+    --scale:.04;
+    --y:90svh;
+    --x:0svh;
+    --rot:80deg;
+    --z:20;
+    pointer-events: none;
+  }
 }
 
 .blue-star-2 {
@@ -3590,6 +3601,17 @@ html, body {
   --z:4;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .lightsleeper-title {
+    --left:102svh;
+    --scale:.33;
+    --y:72svh;
+    --x:-4svh;
+    --rot:-5deg;
+    --z:4;
+    pointer-events: none;
+  }
+}
 
 .lightsleeper-visualizer {
   --left:145svh;
@@ -3598,6 +3620,12 @@ html, body {
   --x:10svh;
   --rot:0deg;
   --z:3;
+}
+@media (max-width: 36em) {
+  .lightsleeper-visualizer {
+    --left:112svh;
+    --scale: .27;
+  }
 }
 
 .lightsleeper-about {
@@ -3609,6 +3637,13 @@ html, body {
   --z:30;
   pointer-events: auto;
 }
+@media (max-width: 36em) {
+  .lightsleeper-about {
+    --left:103svh;
+    --y:48svh;
+    --scale:.3;
+  }
+}
 
 .autumn-text {
   --left:220svh;
@@ -3618,6 +3653,13 @@ html, body {
   --rot:2deg;
   --z:0;
 }
+@media (max-width: 36em) {
+  .autumn-text {
+    --left:115svh;
+    --y: 25svh;
+    --scale:.28;
+  }
+}
 
 .blame-it-notesapp {
   --left:215svh;
@@ -3626,6 +3668,11 @@ html, body {
   --x:0svh;
   --rot:-2deg;
   --z:4;
+}
+@media (max-width: 36em) {
+  .blame-it-notesapp {
+    --left:125svh;
+  }
 }
 
 .lightsleeper-studio {
@@ -3637,6 +3684,12 @@ html, body {
   --rot:0deg;
   --z:41;
 }
+@media (max-width: 36em) {
+  .lightsleeper-studio {
+    --left:155svh;
+    --scale:.30;
+  }
+}
 
 .silver-star1-2 {
   --left:245svh;
@@ -3647,6 +3700,11 @@ html, body {
   --z:60;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .silver-star1-2 {
+    --left:145svh;
+  }
+}
 
 .chords-gif {
   --left:272svh;
@@ -3655,6 +3713,14 @@ html, body {
   --x:0svh;
   --rot:0deg;
   --z:41;
+}
+@media (max-width: 36em) {
+  .chords-gif {
+    --left:150svh;
+    --scale: .2;
+    --y:77svh;
+    pointer-events: none;
+  }
 }
 
 .click4chordz {
@@ -3671,6 +3737,11 @@ html, body {
   --fs-mul: .18;
   --tt: uppercase;
   --text-color: #4C58E9;
+}
+@media (max-width: 36em) {
+  .click4chordz {
+    display: none;
+  }
 }
 
 .play-lightsleeper {
@@ -3697,6 +3768,12 @@ html, body {
   background: transparent;
   cursor: pointer;
 }
+@media (max-width: 36em) {
+  .play-lightsleeper {
+    --left:115svh;
+    --scale: .3;
+  }
+}
 
 .broken-breathing {
   --left:263svh;
@@ -3706,6 +3783,12 @@ html, body {
   --rot:0deg;
   --z:10;
 }
+@media (max-width: 36em) {
+  .broken-breathing {
+    --left:115svh;
+    --scale: .2;
+  }
+}
 
 .lightsleeper-voicememo {
   --left:310svh;
@@ -3714,6 +3797,12 @@ html, body {
   --x:0svh;
   --rot:-6deg;
   --z:9;
+}
+@media (max-width: 36em) {
+  .lightsleeper-voicememo {
+    --left:135svh;
+    --scale:.25;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
