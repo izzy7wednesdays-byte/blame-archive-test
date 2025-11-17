@@ -19,7 +19,7 @@
     display: flex!important;
     position: absolute;
     --left: 12svh;
-    --scale: .8;
+    --scale: .84;
     --y: 20svh;
     --x: 0svh;
     --rot: 0deg;
@@ -387,7 +387,9 @@
   pointer-events:auto;
   
   @include respond(xs) {
-    --left:115svh;
+    --left:110svh;
+    --y:35svh;
+    --scale:.3;
   }
 }
 
