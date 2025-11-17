@@ -813,7 +813,8 @@
 
   @include respond(xs) {
     --left: 282svh;
-    --scale: .11;
+    --scale: .10;
+    --y:0svh;
   }
 }
 
