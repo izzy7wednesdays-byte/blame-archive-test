@@ -946,7 +946,7 @@
   --z: 40;
 
    @include respond(xs) {
-    --left:385svh;
+    --left:388svh;
   }
 }
 
@@ -959,7 +959,7 @@
   --z: 30;
 
   @include respond(xs) {
-    --left:375svh;
+    --left:378svh;
   }  
 }
 
@@ -969,7 +969,7 @@
   --y: 41svh;
   --x: 5svh;
   --rot: 6deg;
-  --z: 31;
+  --z: 28;
   
    @include respond(xs) {
     --left:369svh;
@@ -1000,7 +1000,7 @@
   --z: 37;
 
   @include respond(xs) {
-    --left:490svh;
+    --left:475svh;
   }    
 }
 
@@ -1049,7 +1049,8 @@
   pointer-events: none;
   
   @include respond(xs) {
-    --left:445svh;
+    --left:442svh;
+    --scale:.26;
   }    
 }
 
@@ -1091,7 +1092,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:: 478svh;
+    --left: 478svh;
+    --scale:.14;
   }     
 }
 
@@ -1104,7 +1106,8 @@
   --z: 19;
 
   @include respond(xs) {
-    --left::490 svh;
+    --left:490 svh;
+    --scale:.27;
   }       
 }
 
