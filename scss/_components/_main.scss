@@ -1000,7 +1000,7 @@
   --z: 37;
 
   @include respond(xs) {
-    --left:455svh;
+    --left:440svh;
   }    
 }
 
@@ -1049,7 +1049,7 @@
   pointer-events: none;
   
   @include respond(xs) {
-    --left:445svh;
+    --left:447svh;
     --scale:.26;
   }    
 }
@@ -1092,7 +1092,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 458svh;
+    --left: 440svh;
     --scale:.14;
   }     
 }
@@ -1127,7 +1127,7 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left: 460svh;
+    --left: 475svh;
     --scale:.20;
   }      
 }
