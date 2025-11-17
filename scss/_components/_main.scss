@@ -611,14 +611,7 @@
   --x: 0svh;
   --rot: 13deg;
   --z: 11;
-
-  .sc-trigger {
-    display: block;
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-  }
-
+  
   @include respond(xs) {
 
   }
