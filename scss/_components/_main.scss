@@ -372,8 +372,8 @@
   --z:3; 
   
   @include respond(xs) {
-    --left:118svh;
-    --y:35svh;
+    --left:120svh;
+    --y:40svh;
     --scale: .27;
   }
 }
@@ -403,7 +403,7 @@
   --z:0;
   
   @include respond(xs) {
-    --left:113svh;
+    --left:111svh;
     --y: 21svh;
     --scale:.28;
   }
@@ -418,7 +418,7 @@
   --z:4;
   
   @include respond(xs) {
-    --left:145svh;
+    --left:150svh;
     --y:10svh;
   }
 }
@@ -548,6 +548,6 @@
 
   @include respond(xs) {
     --left:140svh;
-    --scale:.25;
+    --scale:.23;
   }
 }
