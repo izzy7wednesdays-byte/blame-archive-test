@@ -931,7 +931,7 @@
   pointer-events: none;
   
    @include respond(xs) {
-    --left:301svh;
+    --left:365svh;
   } 
 }
 
@@ -945,7 +945,7 @@
   --z: 40;
 
    @include respond(xs) {
-    --left:380svh;
+    --left:385svh;
   }
 }
 
@@ -971,7 +971,7 @@
   --z: 31;
   
    @include respond(xs) {
-    --left:365svh;
+    --left:368svh;
   }
 }
 
@@ -997,6 +997,10 @@
   --x: 10svh;
   --rot: 0deg;
   --z: 37;
+
+  @include respond(xs) {
+    --left:490svh;
+  }    
 }
 
 .vocals-landmines-1-text {
@@ -1014,6 +1018,10 @@
   --ta: left;
   --tt: uppercase;
   --text-color: #4C58E9;
+
+  @include respond(xs) {
+    display:none;
+  }    
 }
 
 .october-lane {
@@ -1026,7 +1034,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:390svh;
+    --left:400svh;
   }  
 }
 
@@ -1038,6 +1046,10 @@
   --rot: -8deg;
   --z: 40;
   pointer-events: none;
+  
+  @include respond(xs) {
+    --left:500svh;
+  }    
 }
 
 .silver-star3-4 {
@@ -1048,6 +1060,10 @@
   --rot: 9deg;
   --z: 41;
   pointer-events: none;
+  
+  @include respond(xs) {
+    display:hide;
+  }    
 }
 
 .blue-star-5 {
