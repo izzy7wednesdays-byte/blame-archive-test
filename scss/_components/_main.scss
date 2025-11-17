@@ -691,12 +691,6 @@
   --x: 0svh;
   --rot: 0deg;
   --z: 7;
-
-  .audio-trigger {
-    display: block;
-    width: 100%;
-    height: auto;
-    cursor: pointer;
   }
 
   @include respond(xs) {
