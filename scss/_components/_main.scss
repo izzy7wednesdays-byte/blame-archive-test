@@ -462,9 +462,9 @@
   --z:41;
   
   @include respond(xs) {
-    --left:150svh;
+    --left:145svh;
     --scale: .23;
-    --y:70svh;
+    --y:40svh;
     pointer-events:none;
   }
 }
@@ -517,7 +517,8 @@
   }
 
   @include respond(xs) {
-    --left:115svh;
+    --left:150svh;
+    --y:70svh;    
     --scale: .3;
   }
 }
