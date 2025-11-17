@@ -372,7 +372,7 @@
   --z:3; 
   
   @include respond(xs) {
-    --left:115svh;
+    --left:112svh;
     --scale: .27;
   }
 }
@@ -387,8 +387,8 @@
   pointer-events:auto;
   
   @include respond(xs) {
-    --left:110svh;
-    --y:35svh;
+    --left:106svh;
+    --y:40svh;
     --scale:.3;
   }
 }
@@ -456,7 +456,7 @@
   --z:41;
   
   @include respond(xs) {
-    --left:115svh;
+    --left:120svh;
   }
 }
 
@@ -509,6 +509,7 @@
 
   @include respond(xs) {
     --left:115svh;
+    --scale: .3;
   }
 }
 
@@ -522,6 +523,7 @@
 
   @include respond(xs) {
     --left:115svh;
+    --scale: .2;
   }
 }
 
@@ -534,6 +536,7 @@
   --z:9;
 
   @include respond(xs) {
-    --left:115svh;
+    --left:135svh;
+    --scale:.25;
   }
 }
