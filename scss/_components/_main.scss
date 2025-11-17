@@ -354,7 +354,7 @@
 
   @include respond(xs) {
     --left:115svh; 
-    --scale:.42; 
+    --scale:.22; 
     --y:26svh; 
     --x:-4svh; 
     --rot:-5deg;
@@ -363,130 +363,174 @@
   }
 }
 
-  .lightsleeper-visualizer {
-    --left:145svh;
-    --scale:.38;
-    --y:0svh; 
-    --x:10svh;
-    --rot:0deg;
-    --z:3; 
-  }
-
-  .lightsleeper-about { 
-    --left:210svh;
-    --scale:.4;
-    --y:58svh;
-    --x:0svh;
-    --rot:-10deg;
-    --z:30;
-    pointer-events:auto;
-  }
-
-  .autumn-text {
-    --left:220svh;
-    --scale:.3;
-    --y:22svh;
-    --x:0svh;
-    --rot:2deg;
-    --z:0;
-  }
-
-  .blame-it-notesapp { 
-    --left:215svh;
-    --scale:.20;
-    --y:0svh;
-    --x:0svh;
-    --rot:-2deg;
-    --z:4;
-  }
-
-  .lightsleeper-studio { 
-    --left:247svh;
-    --scale:.40;
-    --ar:9/16;
-    --y:57svh;
-    --x:0svh; 
-    --rot:0deg;
-    --z:41;
-  }
+.lightsleeper-visualizer {
+  --left:145svh;
+  --scale:.38;
+  --y:0svh; 
+  --x:10svh;
+  --rot:0deg;
+  --z:3; 
   
-  .silver-star1-2 {
-    --left:245svh;
-    --scale:.18;
-    --y:5svh;
-    --x:0svh;
-    --rot:20deg;
-    --z:60;
-    pointer-events:none;
+  @include respond(xs) {
+    --left:115svh;
   }
-
-  .chords-gif { 
-    --left:272svh; 
-    --scale:.3; 
-    --y:66svh;
-    --x:0svh; 
-    --rot:0deg;
-    --z:41;
-  }
-
-  .click4chordz { 
-    --left:288svh;
-    --scale:.11;
-    --y:88svh;
-    --x:0svh; 
-    --rot:0deg; 
-    --z:42; 
-    pointer-events:none;
-    
-    --ff: "Manic"; 
-    --ta: center; 
-    --fw: 400; 
-    --fs-mul: .18; 
-    --tt: uppercase;
-    --text-color: #4C58E9;
 }
 
-  .play-lightsleeper {
-    --left:262svh;
-    --scale:.35;
-    --y:32svh;
-    --x:0svh;
-    --rot:0deg;
-    --z:40;
-
-    dotlottie-wc {
-      pointer-events: none;
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
+.lightsleeper-about { 
+  --left:210svh;
+  --scale:.4;
+  --y:58svh;
+  --x:0svh;
+  --rot:-10deg;
+  --z:30;
+  pointer-events:auto;
   
-    .sc-trigger{
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-        padding: 0;
-        background: transparent;
-        cursor: pointer;
-    }
+  @include respond(xs) {
+    --left:115svh;
+  }
+}
+
+.autumn-text {
+  --left:220svh;
+  --scale:.3;
+  --y:22svh;
+  --x:0svh;
+  --rot:2deg;
+  --z:0;
+  
+  @include respond(xs) {
+    --left:115svh;
+  }
+}
+
+.blame-it-notesapp { 
+  --left:215svh;
+  --scale:.20;
+  --y:0svh;
+  --x:0svh;
+  --rot:-2deg;
+  --z:4;
+  
+  @include respond(xs) {
+    --left:115svh;
+  }
+}
+
+.lightsleeper-studio { 
+  --left:247svh;
+  --scale:.40;
+  --ar:9/16;
+  --y:57svh;
+  --x:0svh; 
+  --rot:0deg;
+  --z:41;
+  
+  @include respond(xs) {
+    --left:115svh;
+  }
+}
+
+.silver-star1-2 {
+  --left:245svh;
+  --scale:.18;
+  --y:5svh;
+  --x:0svh;
+  --rot:20deg;
+  --z:60;
+  pointer-events:none;
+  
+  @include respond(xs) {
+    --left:115svh;
+  }
+}
+
+.chords-gif { 
+  --left:272svh; 
+  --scale:.3; 
+  --y:66svh;
+  --x:0svh; 
+  --rot:0deg;
+  --z:41;
+  
+  @include respond(xs) {
+    --left:115svh;
+  }
+}
+
+.click4chordz { 
+  --left:288svh;
+  --scale:.11;
+  --y:88svh;
+  --x:0svh; 
+  --rot:0deg; 
+  --z:42; 
+  pointer-events:none;
+  
+  --ff: "Manic"; 
+  --ta: center; 
+  --fw: 400; 
+  --fs-mul: .18; 
+  --tt: uppercase;
+  --text-color: #4C58E9;
+  
+  @include respond(xs) {
+    display:none;
+  }
+}
+
+.play-lightsleeper {
+  --left:262svh;
+  --scale:.35;
+  --y:32svh;
+  --x:0svh;
+  --rot:0deg;
+  --z:40;
+  
+  dotlottie-wc {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .sc-trigger{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
   }
 
-  .broken-breathing {
-    --left:263svh;
-    --scale:.28;
-    --y:0svh;
-    --x:1svh;
-    --rot:0deg;
-    --z:10;
+  @include respond(xs) {
+    --left:115svh;
   }
+}
 
-  .lightsleeper-voicememo {
-    --left:310svh;
-    --scale:.34;
-    --y:29svh;
-    --x:0svh;
-    --rot:-6deg;
-    --z:9;
+.broken-breathing {
+  --left:263svh;
+  --scale:.28;
+  --y:0svh;
+  --x:1svh;
+  --rot:0deg;
+  --z:10;
+
+  @include respond(xs) {
+    --left:115svh;
   }
+}
+
+.lightsleeper-voicememo {
+  --left:310svh;
+  --scale:.34;
+  --y:29svh;
+  --x:0svh;
+  --rot:-6deg;
+  --z:9;
+
+  @include respond(xs) {
+    --left:115svh;
+  }
+}
