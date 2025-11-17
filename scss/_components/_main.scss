@@ -1049,7 +1049,7 @@
   pointer-events: none;
   
   @include respond(xs) {
-    --left:442svh;
+    --left:445svh;
     --scale:.26;
   }    
 }
@@ -1092,7 +1092,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 478svh;
+    --left: 458svh;
     --scale:.14;
   }     
 }
@@ -1106,7 +1106,7 @@
   --z: 19;
 
   @include respond(xs) {
-    --left:490 svh;
+    --left: 490svh;
     --scale:.27;
   }       
 }
