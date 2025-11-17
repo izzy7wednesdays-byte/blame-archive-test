@@ -931,7 +931,7 @@
   pointer-events: none;
   
    @include respond(xs) {
-    --left:401svh;
+    --left:301svh;
   } 
 }
 
@@ -945,7 +945,7 @@
   --z: 40;
 
    @include respond(xs) {
-    --left:401svh;
+    --left:380svh;
   }
 }
 
@@ -958,7 +958,7 @@
   --z: 30;
 
   @include respond(xs) {
-    --left:401svh;
+    --left:375svh;
   }  
 }
 
@@ -971,7 +971,7 @@
   --z: 31;
   
    @include respond(xs) {
-    --left:401svh;
+    --left:365svh;
   }
 }
 
@@ -985,7 +985,7 @@
   pointer-events: none;
   
   @include respond(xs) {
-    --left:401svh;
+    --left:375svh;
   }
 }
 
@@ -1024,6 +1024,10 @@
   --rot: 0deg;
   --z: 38;
   pointer-events: none;
+
+  @include respond(xs) {
+    --left:390svh;
+  }  
 }
 
 .landmines-license {
