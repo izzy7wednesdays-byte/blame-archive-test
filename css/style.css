@@ -3362,6 +3362,7 @@ html, body {
 @media (max-width: 36em) {
   .silver-star1-1 {
     --left:200svh;
+    --scale:.13;
     --y:60svh;
   }
 }
@@ -3615,9 +3616,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .star-trio-1 {
-    --left:230svh;
-    --scale:.20;
-    --y:51svh;
+    --left:200svh;
+    --scale:.18;
+    --y:48svh;
   }
 }
 
@@ -3645,6 +3646,14 @@ html, body {
   --rot: 13deg;
   --z: 11;
 }
+@media (max-width: 36em) {
+  .play-exitwounds {
+    --left: 255svh;
+    --scale: .20;
+    --y: 72svh;
+  }
+}
+
 .pressplaydj {
   --left: 360svh;
   --scale: .18;
@@ -3658,6 +3667,14 @@ html, body {
   --fs-mul: .17;
   --text-color: #4CA8E9;
 }
+@media (max-width: 36em) {
+  .pressplaydj {
+    --left: 254svh;
+    --scale: .13;
+    --y: 68svh;
+  }
+}
+
 .missed-calls {
   --left: 365svh;
   --scale: .35;
@@ -3669,7 +3686,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .missed-calls {
-    --scale:.30;
+    --left: 217svh;
+    --scale:.28;
+    --y: 28svh;
   }
 }
 
@@ -3683,7 +3702,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .about-exitwounds {
+    --left: 237svh;
     --scale:.27;
+    --y: 37svh;
   }
 }
 
@@ -3696,6 +3717,14 @@ html, body {
   --z: 2;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .exitwounds-animation-1 {
+    --left:250svh;
+    --scale: .33;
+    --y: 21svh;
+  }
+}
+
 .play-exitwounds-voicememo {
   --left: 392svh;
   --scale:.23;
@@ -3704,6 +3733,13 @@ html, body {
   --rot: 0deg;
   --z: 7;
 }
+@media (max-width: 36em) {
+  .play-exitwounds-voicememo {
+    --left:255svh;
+    --scale: .18;
+  }
+}
+
 .click-me-text {
   --left: 414svh;
   --scale: .20;
@@ -3715,6 +3751,12 @@ html, body {
   --fs-mul: .15;
   --text-color: #4CA8E9;
 }
+@media (max-width: 36em) {
+  .click-me-text {
+    --left:275svh;
+  }
+}
+
 .click-me-arrow {
   --left: 413svh;
   --scale: .04;
@@ -3724,6 +3766,12 @@ html, body {
   --z: 6;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .click-me-arrow {
+    --left:274svh;
+  }
+}
+
 .read-susbstack-text {
   --left: 409svh;
   --scale: .21;
@@ -3739,6 +3787,14 @@ html, body {
   --tt: uppercase;
   --text-color: #4CA8E9;
 }
+@media (max-width: 36em) {
+  .read-susbstack-text {
+    --left:286svh;
+    --scale:.15;
+    --y:78svh;
+  }
+}
+
 .substack-point-arrow {
   --left: 433svh;
   --scale: .10;
@@ -3748,6 +3804,14 @@ html, body {
   --z: 4;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .substack-point-arrow {
+    --left: 300svh;
+    --scale: .08;
+    --y: 65svh;
+  }
+}
+
 .scorpio-constellation {
   --left: 428svh;
   --scale: .25;
@@ -3757,6 +3821,14 @@ html, body {
   --z: 4;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .scorpio-constellation {
+    --left: 270svh;
+    --scale: .22;
+    --y: 40svh;
+  }
+}
+
 .subscribe-substack-text {
   --left: 420svh;
   --scale: .12;
@@ -3772,6 +3844,13 @@ html, body {
   --tt: uppercase;
   --text-color: #4CA8E9;
 }
+@media (max-width: 36em) {
+  .subscribe-substack-text {
+    --left: 285svh;
+    --scale: .11;
+  }
+}
+
 .subscribe-arrow {
   --left: 452svh;
   --scale: .04;
@@ -3781,6 +3860,13 @@ html, body {
   --z: 20;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .subscribe-arrow {
+    --left: 300svh;
+    --rot: -57deg;
+  }
+}
+
 .subscribe-button {
   --left: 459svh;
   --scale: .14;
@@ -3789,6 +3875,13 @@ html, body {
   --rot: 6deg;
   --z: 20;
 }
+@media (max-width: 36em) {
+  .subscribe-button {
+    --scale: .11;
+    --left: 307svh;
+  }
+}
+
 .exitwounds-substackflier-2 {
   --left: 453svh;
   --scale: .76;
@@ -3797,6 +3890,13 @@ html, body {
   --rot: 14deg;
   --z: 3;
 }
+@media (max-width: 36em) {
+  .exitwounds-substackflier-2 {
+    --left: 320svh;
+    --y: 29svh;
+  }
+}
+
 .silver-star3-1 {
   --left: 458svh;
   --scale: .10;
