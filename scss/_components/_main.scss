@@ -404,7 +404,7 @@
   @include respond(xs) {
     --left:120svh;
     --y: 28svh;
-    --scale:.2;
+    --scale:.25;
   }
 }
 
@@ -459,9 +459,9 @@
   --z:41;
   
   @include respond(xs) {
-    --left:130svh;
+    --left:140svh;
     --scale: .2;
-    --y:80svh;
+    --y:77svh;
     pointer-events:none;
   }
 }
