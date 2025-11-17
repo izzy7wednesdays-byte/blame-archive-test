@@ -373,6 +373,7 @@
   
   @include respond(xs) {
     --left:112svh;
+    --y:30svh;
     --scale: .27;
   }
 }
@@ -432,7 +433,8 @@
   --z:41;
   
   @include respond(xs) {
-    --left:160svh;
+    --left:180svh;
+    --y:57svh;    
     --scale:.33;
   }
 }
@@ -461,8 +463,8 @@
   
   @include respond(xs) {
     --left:150svh;
-    --scale: .2;
-    --y:77svh;
+    --scale: .23;
+    --y:70svh;
     pointer-events:none;
   }
 }
