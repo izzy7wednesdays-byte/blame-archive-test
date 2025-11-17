@@ -20,7 +20,7 @@
     position: absolute;
     --left: 12svh;
     --scale: .84;
-    --y: 20svh;
+    --y: 17svh;
     --x: 0svh;
     --rot: 0deg;
     --z: 1;
@@ -47,7 +47,7 @@
     display: flex!important;
     --left: 13svh;
     --scale: .12;
-    --y: 63svh;
+    --y: 61svh;
     --x: 8svh;
     --rot: 0deg;
     --z: 2;
@@ -387,8 +387,8 @@
   pointer-events:auto;
   
   @include respond(xs) {
-    --left:106svh;
-    --y:40svh;
+    --left:103svh;
+    --y:48svh;
     --scale:.3;
   }
 }
@@ -402,7 +402,7 @@
   --z:0;
   
   @include respond(xs) {
-    --left:115svh;
+    --left:125svh;
   }
 }
 
@@ -415,7 +415,7 @@
   --z:4;
   
   @include respond(xs) {
-    --left:115svh;
+    --left:125svh;
   }
 }
 
@@ -429,7 +429,7 @@
   --z:41;
   
   @include respond(xs) {
-    --left:115svh;
+    --left:135svh;
   }
 }
 
@@ -443,7 +443,7 @@
   pointer-events:none;
   
   @include respond(xs) {
-    --left:115svh;
+    --left:145svh;
   }
 }
 
@@ -457,6 +457,8 @@
   
   @include respond(xs) {
     --left:120svh;
+    --scale: .2;
+    pointer-events:none;
   }
 }
 
