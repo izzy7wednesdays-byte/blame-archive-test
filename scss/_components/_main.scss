@@ -294,11 +294,11 @@
   
   @include respond(xs) {
     --left:60svh; 
-    --scale:.30; 
-    --y:40svh; 
-    --x:0svh; 
+    --scale:.32; 
+    --y:44svh; 
+    --x:-8svh; 
     --rot:85deg; 
-    --z:29;
+    --z:2;
     pointer-events: none;
   }
 }
@@ -353,9 +353,9 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:110svh; 
-    --scale:.22; 
-    --y:80svh; 
+    --left:105svh; 
+    --scale:.27; 
+    --y:75svh; 
     --x:-4svh; 
     --rot:-5deg;
     --z:4; 
