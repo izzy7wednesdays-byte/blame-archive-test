@@ -293,9 +293,9 @@
   pointer-events:none;
   
   @include respond(xs) {
-    --left:80svh; 
+    --left:60svh; 
     --scale:.30; 
-    --y:70svh; 
+    --y:40svh; 
     --x:0svh; 
     --rot:85deg; 
     --z:29;
@@ -323,25 +323,25 @@
   }
 }
 
-   .blue-star-2 {
-    --left:185svh;
-    --scale:.13;
-    --y:95svh;
-    --x:0svh;
-    --rot:86deg; 
-    --z:20;
-    pointer-events:none;
-  }
+.blue-star-2 {
+  --left:185svh;
+  --scale:.13;
+  --y:95svh;
+  --x:0svh;
+  --rot:86deg; 
+  --z:20;
+  pointer-events:none;
+}
 
-  .silver-star1-1 { 
-    --left:187svh;
-    --scale:.17; 
-    --y:73svh;
-    --x:0svh;
-    --rot:83deg;
-    --z:20;
-    pointer-events:none;
-  }
+.silver-star1-1 { 
+  --left:187svh;
+  --scale:.17; 
+  --y:73svh;
+  --x:0svh;
+  --rot:83deg;
+  --z:20;
+  pointer-events:none;
+}
 
 .lightsleeper-title { 
   --left:159svh;
@@ -353,9 +353,9 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:115svh; 
+    --left:110svh; 
     --scale:.22; 
-    --y:26svh; 
+    --y:80svh; 
     --x:-4svh; 
     --rot:-5deg;
     --z:4; 
