@@ -558,3 +558,345 @@
     --y:24svh;
   }
 }
+
+// EXIT WOUNDS
+// ========= EXIT WOUNDS SECTION (slot classes) =========
+
+.exitwounds-lyricvideo {
+  /* V4 placeholder */
+  --left: 298svh;
+  --scale: .38;
+  --y: 63svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 21;
+
+  @include respond(xs) {
+
+  }
+}
+
+.star-trio-1 {
+  --left: 346svh;
+  --scale: .28;
+  --y: 61svh;
+  --x: 0svh;
+  --rot: -160deg;
+  --z: 10;
+  pointer-events: none;
+
+  @include respond(xs) {
+
+  }
+}
+
+.exitwounds-title {
+  --left: 322svh;
+  --scale: .33;
+  --y: 0svh;
+  --x: 0svh;
+  --rot: -12deg;
+  --z: 1;
+  pointer-events: none;
+
+  @include respond(xs) {
+
+  }
+}
+
+.play-exitwounds {
+  --left: 362svh;
+  --scale: .25;
+  --y: 69svh;
+  --x: 0svh;
+  --rot: 13deg;
+  --z: 11;
+
+  .sc-trigger {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  @include respond(xs) {
+
+  }
+}
+
+.pressplaydj {
+  --left: 360svh;
+  --scale: .18;
+  --y: 63svh;
+  --x: 0svh;
+  --rot: 13deg;
+  --z: 12;
+  pointer-events: none;
+
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .17;
+  --text-color: #4CA8E9;
+
+  @include respond(xs) {
+
+  }
+}
+
+.missed-calls {
+  --left: 365svh;
+  --scale: .35;
+  --y: 24svh;
+  --x: -6svh;
+  --rot: 10deg;
+  --z: 9;
+  pointer-events: none;
+
+  @include respond(xs) {
+
+  }
+}
+
+.about-exitwounds {
+  --left: 397svh;
+  --scale: .31;
+  --y: 45svh;
+  --x: 8svh;
+  --rot: -6deg;
+  --z: 9;
+
+  @include respond(xs) {
+
+  }
+}
+
+.exitwounds-animation-1 {
+  --left: 387svh;
+  --scale: .40;
+  --y: 23svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 2;
+  pointer-events: none;
+
+  @include respond(xs) {
+
+  }
+}
+
+.play-exitwounds-voicememo {
+  --left: 392svh;
+  --scale: .23;
+  --y: 1svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 7;
+
+  .audio-trigger {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  @include respond(xs) {
+
+  }
+}
+
+.click-me-text {
+  --left: 414svh;
+  --scale: .20;
+  --y: 16svh;
+  --x: 0svh;
+  --rot: 1deg;
+  --z: 8;
+
+  --fw: 400;
+  --fs-mul: .15;
+  --text-color: #4CA8E9;
+
+  @include respond(xs) {
+
+  }
+}
+
+.click-me-arrow {
+  --left: 413svh;
+  --scale: .04;
+  --y: 11svh;
+  --x: 0svh;
+  --rot: -4deg;
+  --z: 6;
+  pointer-events: none;
+
+  @include respond(xs) {
+
+  }
+}
+
+.read-susbstack-text {
+  --left: 409svh;
+  --scale: .21;
+  --y: 80svh;
+  --x: 0svh;
+  --rot: 7deg;
+  --z: 8;
+  pointer-events: none;
+
+  --ff: "Manic";
+  --ta: center;
+  --fw: 400;
+  --fs-mul: .15;
+  --tt: uppercase;
+  --text-color: #4CA8E9;
+
+  @include respond(xs) {
+
+  }
+}
+
+.substack-point-arrow {
+  --left: 433svh;
+  --scale: .10;
+  --y: 67svh;
+  --x: 0svh;
+  --rot: 7deg;
+  --z: 4;
+  pointer-events: none;
+
+  @include respond(xs) {
+
+  }
+}
+
+.scorpio-constellation {
+  --left: 428svh;
+  --scale: .25;
+  --y: 40svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 4;
+  pointer-events: none;
+
+  @include respond(xs) {
+
+  }
+}
+
+.subscribe-substack-text {
+  --left: 420svh;
+  --scale: .12;
+  --y: 1svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 8;
+  pointer-events: none;
+
+  --ff: "Manic";
+  --fw: 400;
+  --fs-mul: .21;
+  --ta: center;
+  --tt: uppercase;
+  --text-color: #4CA8E9;
+
+  @include respond(xs) {
+
+  }
+}
+
+.subscribe-arrow {
+  --left: 452svh;
+  --scale: .04;
+  --y: 10svh;
+  --x: 0svh;
+  --rot: -59deg;
+  --z: 20;
+  pointer-events: none;
+
+  @include respond(xs) {
+
+  }
+}
+
+.subscribe-button {
+  --left: 459svh;
+  --scale: .14;
+  --y: 10svh;
+  --x: 0svh;
+  --rot: 6deg;
+  --z: 20;
+
+  @include respond(xs) {
+
+  }
+}
+
+.exitwounds-substackflier-2 {
+  --left: 453svh;
+  --scale: .76;
+  --y: 30svh;
+  --x: 0svh;
+  --rot: 14deg;
+  --z: 3;
+
+  @include respond(xs) {
+
+  }
+}
+
+.silver-star3-1 {
+  --left: 458svh;
+  --scale: .10;
+  --y: -1svh;
+  --x: 0svh;
+  --rot: -59deg;
+  --z: 20;
+  pointer-events: none;
+
+  @include respond(xs) {
+
+  }
+}
+
+.blue-star-3 {
+  --left: 468svh;
+  --scale: .04;
+  --y: 4svh;
+  --x: 0svh;
+  --rot: 16deg;
+  --z: 20;
+  pointer-events: none;
+
+  @include respond(xs) {
+
+  }
+}
+
+.silver-star3-2 {
+  --left: 478svh;
+  --scale: .06;
+  --y: 1svh;
+  --x: 0svh;
+  --rot: 12deg;
+  --z: 20;
+  pointer-events: none;
+
+  @include respond(xs) {
+
+  }
+}
+
+.silver-star3-3 {
+  --left: 489svh;
+  --scale: .08;
+  --y: 8svh;
+  --x: 0svh;
+  --rot: 48deg;
+  --z: 20;
+  pointer-events: none;
+
+  @include respond(xs) {
+
+  }
+}
