@@ -772,8 +772,9 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 298svh;
+    --left: 295svh;
     --scale: .08;
+    --rot: 9deg;
     --y: 63svh;
   }
 }
@@ -841,9 +842,9 @@
   --z: 20;
 
   @include respond(xs) {
-    --left: 305svh;
+    --left: 302svh;
     --scale: .11;
-    --y:12svh;
+    --y:14svh;
   }
 }
 
@@ -917,8 +918,7 @@
   }
 }
 
-// LANDMINES SECTION
-// ========= LANDMINES SECTION (slot classes) =========
+// ========= LANDMINES SECTION =========
 
 .glitter-truck {
   --left: 494svh;
@@ -928,6 +928,10 @@
   --rot: 0deg;
   --z: 7;
   pointer-events: none;
+  
+   @include respond(xs) {
+    --left:401svh;
+  } 
 }
 
 .landmines-bts-clip {
@@ -938,6 +942,10 @@
   --x: 0svh;
   --rot: 0deg;
   --z: 40;
+
+   @include respond(xs) {
+    --left:401svh;
+  }
 }
 
 .landmines-voicememo {
@@ -947,6 +955,10 @@
   --x: 5svh;
   --rot: 0deg;
   --z: 30;
+
+  @include respond(xs) {
+    --left:401svh;
+  }  
 }
 
 .blue-star-4 {
@@ -956,6 +968,10 @@
   --x: 5svh;
   --rot: 6deg;
   --z: 31;
+  
+   @include respond(xs) {
+    --left:401svh;
+  }
 }
 
 .katstratford-car {
@@ -966,6 +982,10 @@
   --rot: 0deg;
   --z: 30;
   pointer-events: none;
+  
+  @include respond(xs) {
+    --left:401svh;
+  }
 }
 
 .vocals-landmines-1 {
