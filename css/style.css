@@ -3747,7 +3747,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-bts-clip {
-    --left:385svh;
+    --left:388svh;
   }
 }
 
@@ -3761,7 +3761,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-voicememo {
-    --left:375svh;
+    --left:378svh;
   }
 }
 
@@ -3771,7 +3771,7 @@ html, body {
   --y: 41svh;
   --x: 5svh;
   --rot: 6deg;
-  --z: 31;
+  --z: 28;
 }
 @media (max-width: 36em) {
   .blue-star-4 {
@@ -3805,7 +3805,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .vocals-landmines-1 {
-    --left:490svh;
+    --left:475svh;
   }
 }
 
@@ -3841,7 +3841,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .october-lane {
-    --left:410svh;
+    --left:415svh;
   }
 }
 
@@ -3856,7 +3856,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-license {
-    --left:500svh;
+    --left:442svh;
+    --scale:.26;
   }
 }
 
@@ -3871,7 +3872,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-4 {
-    display: hide;
+    display: none !important;
   }
 }
 
@@ -3884,6 +3885,11 @@ html, body {
   --z: 420;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .blue-star-5 {
+    display: none !important;
+  }
+}
 
 .landmines-title {
   --left: 578svh;
@@ -3894,6 +3900,12 @@ html, body {
   --z: 30;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .landmines-title {
+    --left: 478svh;
+    --scale:.14;
+  }
+}
 
 .landmines-lyricvideo {
   --left: 590svh;
@@ -3902,6 +3914,12 @@ html, body {
   --x: 10svh;
   --rot: 0deg;
   --z: 19;
+}
+@media (max-width: 36em) {
+  .landmines-lyricvideo {
+    --left:490 svh;
+    --scale:.27;
+  }
 }
 
 .landmines-reaction-text {
