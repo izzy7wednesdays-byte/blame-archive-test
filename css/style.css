@@ -3565,8 +3565,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .substack-point-arrow {
-    --left: 298svh;
+    --left: 295svh;
     --scale: .08;
+    --rot: 9deg;
     --y: 63svh;
   }
 }
@@ -3606,7 +3607,8 @@ html, body {
 @media (max-width: 36em) {
   .subscribe-substack-text {
     --left: 282svh;
-    --scale: .11;
+    --scale: .10;
+    --y:0svh;
   }
 }
 
@@ -3637,9 +3639,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .subscribe-button {
-    --left: 305svh;
+    --left: 302svh;
     --scale: .11;
-    --y:12svh;
+    --y:14svh;
   }
 }
 
@@ -3727,6 +3729,12 @@ html, body {
   --z: 7;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .glitter-truck {
+    --left:365svh;
+    --scale:.44;
+  }
+}
 
 .landmines-bts-clip {
   --left: 532svh;
@@ -3737,6 +3745,11 @@ html, body {
   --rot: 0deg;
   --z: 40;
 }
+@media (max-width: 36em) {
+  .landmines-bts-clip {
+    --left:385svh;
+  }
+}
 
 .landmines-voicememo {
   --left: 523svh;
@@ -3746,6 +3759,11 @@ html, body {
   --rot: 0deg;
   --z: 30;
 }
+@media (max-width: 36em) {
+  .landmines-voicememo {
+    --left:375svh;
+  }
+}
 
 .blue-star-4 {
   --left: 517svh;
@@ -3754,6 +3772,11 @@ html, body {
   --x: 5svh;
   --rot: 6deg;
   --z: 31;
+}
+@media (max-width: 36em) {
+  .blue-star-4 {
+    --left:369svh;
+  }
 }
 
 .katstratford-car {
@@ -3765,6 +3788,11 @@ html, body {
   --z: 30;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .katstratford-car {
+    --left:375svh;
+  }
+}
 
 .vocals-landmines-1 {
   --left: 568svh;
@@ -3774,6 +3802,11 @@ html, body {
   --x: 10svh;
   --rot: 0deg;
   --z: 37;
+}
+@media (max-width: 36em) {
+  .vocals-landmines-1 {
+    --left:490svh;
+  }
 }
 
 .vocals-landmines-1-text {
@@ -3791,6 +3824,11 @@ html, body {
   --tt: uppercase;
   --text-color: #4C58E9;
 }
+@media (max-width: 36em) {
+  .vocals-landmines-1-text {
+    display: none;
+  }
+}
 
 .october-lane {
   --left: 566svh;
@@ -3800,6 +3838,11 @@ html, body {
   --rot: 0deg;
   --z: 38;
   pointer-events: none;
+}
+@media (max-width: 36em) {
+  .october-lane {
+    --left:410svh;
+  }
 }
 
 .landmines-license {
@@ -3811,6 +3854,11 @@ html, body {
   --z: 40;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .landmines-license {
+    --left:500svh;
+  }
+}
 
 .silver-star3-4 {
   --left: 580svh;
@@ -3820,6 +3868,11 @@ html, body {
   --rot: 9deg;
   --z: 41;
   pointer-events: none;
+}
+@media (max-width: 36em) {
+  .silver-star3-4 {
+    display: hide;
+  }
 }
 
 .blue-star-5 {
