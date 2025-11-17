@@ -691,12 +691,11 @@
   --x: 0svh;
   --rot: 0deg;
   --z: 7;
-  }
 
   @include respond(xs) {
 
   }
-}
+}  
 
 .click-me-text {
   --left: 414svh;
