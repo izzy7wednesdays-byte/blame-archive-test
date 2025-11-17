@@ -657,7 +657,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 225svh;    
+    --left: 220svh;    
     --scale:.28;
     --y: 26svh;
   }
@@ -703,7 +703,7 @@
   --z: 7;
 
   @include respond(xs) {
-    --left:260svh;
+    --left:255svh;
     --scale: .18;
   }
 }  
@@ -756,9 +756,9 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left:290svh;
+    --left:286svh;
     --scale:.15;
-    --y:79svh;
+    --y:78svh;
   }
 }
 
@@ -788,7 +788,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 328svh;
+    --left: 300svh;
     --scale: .22;
     --y: 40svh;
   }
@@ -811,7 +811,9 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-
+    --left: 300svh;
+    --scale: .12;
+    --y: 40svh;
   }
 }
 
@@ -825,7 +827,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-
+    --left: 300svh;
   }
 }
 
@@ -838,7 +840,7 @@
   --z: 20;
 
   @include respond(xs) {
-
+    --left: 310svh;
   }
 }
 
@@ -851,7 +853,7 @@
   --z: 3;
 
   @include respond(xs) {
-
+    --left: 330svh;
   }
 }
 
