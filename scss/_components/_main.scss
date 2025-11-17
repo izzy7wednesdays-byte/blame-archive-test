@@ -353,9 +353,9 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:105svh; 
-    --scale:.27; 
-    --y:75svh; 
+    --left:100svh; 
+    --scale:.33; 
+    --y:72svh; 
     --x:-4svh; 
     --rot:-5deg;
     --z:4; 
@@ -373,6 +373,7 @@
   
   @include respond(xs) {
     --left:115svh;
+    --scale: .27;
   }
 }
 
