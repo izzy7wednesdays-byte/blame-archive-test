@@ -423,7 +423,7 @@
   
   @include respond(xs) {
     --left:150svh;
-    --y:6svh;
+    --y:2svh;
   }
 }
 
@@ -553,5 +553,6 @@
   @include respond(xs) {
     --left:150svh;
     --scale:.23;
+    --y:26svh;
   }
 }
