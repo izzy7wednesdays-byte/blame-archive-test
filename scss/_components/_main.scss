@@ -572,7 +572,7 @@
   --z: 21;
 
   @include respond(xs) {
-
+    --scale: .27;
   }
 }
 
@@ -600,7 +600,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-
+    --left:180svh;
+    --scale:.20;
   }
 }
 
