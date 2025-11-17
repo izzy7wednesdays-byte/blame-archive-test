@@ -627,11 +627,11 @@
 }
 
 .pressplaydj {
-  --left: 360svh;
-  --scale: .18;
+  --left: 359svh;
+  --scale: .17;
   --y: 63svh;
   --x: 0svh;
-  --rot: 13deg;
+  --rot: 12.5deg;
   --z: 12;
   pointer-events: none;
 
@@ -741,7 +741,7 @@
 
 .read-susbstack-text {
   --left: 409svh;
-  --scale: .21;
+  --scale: .19;
   --y: 80svh;
   --x: 0svh;
   --rot: 7deg;
@@ -796,7 +796,7 @@
 }
 
 .subscribe-substack-text {
-  --left: 420svh;
+  --left: 418svh;
   --scale: .12;
   --y: 1svh;
   --x: 0svh;
@@ -821,9 +821,9 @@
 .subscribe-arrow {
   --left: 452svh;
   --scale: .04;
-  --y: 10svh;
+  --y: 11svh;
   --x: 0svh;
-  --rot: -59deg;
+  --rot: -57deg;
   --z: 20;
   pointer-events: none;
 
@@ -864,7 +864,7 @@
 }
 
 .silver-star3-1 {
-  --left: 458svh;
+  --left: 459svh;
   --scale: .10;
   --y: -1svh;
   --x: 0svh;
@@ -1000,13 +1000,13 @@
   --z: 37;
 
   @include respond(xs) {
-    --left:475svh;
+    --left:455svh;
   }    
 }
 
 .vocals-landmines-1-text {
-  --left: 550svh;
-  --scale: .2;
+  --left: 549svh;
+  --scale: .18;
   --y: 21svh;
   --x: 10svh;
   --rot: 0deg;
@@ -1106,14 +1106,14 @@
   --z: 19;
 
   @include respond(xs) {
-    --left: 490svh;
+    --left: 460svh;
     --scale:.27;
   }       
 }
 
 .landmines-reaction-text {
-  --left: 640svh;
-  --scale: .25;
+  --left: 639svh;
+  --scale: .23;
   --y: 76svh;
   --x: 2svh;
   --rot: 0deg;
@@ -1125,6 +1125,11 @@
   --fs-mul: .1;
   --ta: center;
   --text-color: #4CA8E9;
+
+  @include respond(xs) {
+    --left: 460svh;
+    --scale:.20;
+  }      
 }
 
 .landmines-about {
@@ -1134,6 +1139,11 @@
   --x: 10svh;
   --rot: -25deg;
   --z: 30;
+
+  @include respond(xs) {
+    --left: 460svh;
+    --scale:.27;
+  }      
 }
 
 .landmines-og-guitar {
