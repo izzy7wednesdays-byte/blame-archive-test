@@ -512,238 +512,6 @@ html, body {
 /* ========= WELCOME SECTION ========= */
 /* ========= LIGHT SLEEPER SECTION ========= */
 /* ========= EXIT WOUNDS SECTION ========= */
-#exitwounds-lyricvideo { /* V4 placeholder */
-  --left:298svh;
-  --scale: .38;
-  --y:63svh;
-  --x: 0svh;
-  --rot: 0deg;
-  --z: 21;
-}
-
-#star-trio-1 {
-  --left:346svh;
-  --scale:.28;
-  --y:61svh;
-  --x:0svh;
-  --rot:-160deg;
-  --z:10;
-  pointer-events: none;
-}
-
-#exitwounds-title {
-  --left:322svh;
-  --scale:.33;
-  --y: 0svh;
-  --x:0svh;
-  --rot:-12deg;
-  --z:1;
-  pointer-events: none;
-}
-
-#play-exitwounds {
-  --left:362svh;
-  --scale:.25;
-  --y:69svh;
-  --x:0svh;
-  --rot:13deg;
-  --z:11;
-}
-
-#pressplaydj {
-  --left: 360svh;
-  --scale: .18;
-  --y:63svh;
-  --x: 0svh;
-  --rot: 13deg;
-  --z: 12;
-  pointer-events: none;
-  --ff: "Thinker";
-  --fw: 400;
-  --fs-mul: .17;
-  --text-color: #4CA8E9;
-}
-
-#missed-calls {
-  --left:365svh;
-  --scale:.35;
-  --y:24svh;
-  --x:-6svh;
-  --rot:10deg;
-  --z:9;
-  pointer-events: none;
-}
-
-#about-exitwounds {
-  --left:397svh;
-  --scale:.31;
-  --y:45svh;
-  --x:8svh;
-  --rot:-6deg;
-  --z:9;
-}
-
-#exitwounds-animation-1 {
-  --left:387svh;
-  --scale:.40;
-  --y:23svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:2;
-  pointer-events: none;
-}
-
-#play-exitwounds-voicememo {
-  --left:392svh;
-  --scale:.23;
-  --y:1svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:7;
-}
-
-#click-me-text {
-  --left: 414svh;
-  --scale: .20;
-  --y: 16svh;
-  --x: 0svh;
-  --rot: 1deg;
-  --z: 8;
-  --fw: 400;
-  --fs-mul: .15;
-  --text-color: #4CA8E9;
-}
-
-#click-me-arrow {
-  --left:413svh;
-  --scale:.04;
-  --y:11svh;
-  --x:0svh;
-  --rot:-4deg;
-  --z:6;
-  pointer-events: none;
-}
-
-#read-susbstack-text {
-  --left: 409svh;
-  --scale: .21;
-  --y: 80svh;
-  --x: 0svh;
-  --rot:7deg;
-  --z: 8;
-  pointer-events: none;
-  --ff: "Manic";
-  --ta: center;
-  --fw: 400;
-  --fs-mul: .15;
-  --tt: uppercase;
-  --text-color: #4CA8E9;
-}
-
-#substack-point-arrow {
-  --left:433svh;
-  --scale:.10;
-  --y:67svh;
-  --x:0svh;
-  --rot:7deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#scorpio-constellation {
-  --left:428svh;
-  --scale:.25;
-  --y:40svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:4;
-  pointer-events: none;
-}
-
-#subscribe-substack-text {
-  --left:420svh;
-  --scale:0.12;
-  --y:1svh;
-  --x:0svh;
-  --rot:0deg;
-  --z:8;
-  pointer-events: none;
-  --ff: "Manic";
-  --fw:400;
-  --fs-mul:0.21;
-  --ta:center;
-  --tt:uppercase;
-  --text-color: #4CA8E9;
-}
-
-#subscribe-arrow {
-  --left:452svh;
-  --scale:.04;
-  --y:10svh;
-  --x:0svh;
-  --rot:-59deg;
-  --z:20;
-  pointer-events: none;
-}
-
-#subscribe-button {
-  --left:459svh;
-  --scale:.14;
-  --y:10svh;
-  --x:0svh;
-  --rot:6deg;
-  --z:20;
-}
-
-#exitwounds-substackflier-2 {
-  --left:453svh;
-  --scale:.76;
-  --y:30svh;
-  --x:0svh;
-  --rot:14deg;
-  --z:3;
-}
-
-#silver-star3-1 {
-  --left:458svh;
-  --scale:.10;
-  --y:-1svh;
-  --x:0svh;
-  --rot:-59deg;
-  --z:20;
-  pointer-events: none;
-}
-
-#blue-star-3 {
-  --left:468svh;
-  --scale:.04;
-  --y:4svh;
-  --x:0svh;
-  --rot:16deg;
-  --z:20;
-  pointer-events: none;
-}
-
-#silver-star3-2 {
-  --left:478svh;
-  --scale:.06;
-  --y:1svh;
-  --x:0svh;
-  --rot:12deg;
-  --z:20;
-  pointer-events: none;
-}
-
-#silver-star3-3 {
-  --left:489svh;
-  --scale:.08;
-  --y:8svh;
-  --x:0svh;
-  --rot:48deg;
-  --z:20;
-  pointer-events: none;
-}
-
 /* ========= LANDMINES SECTION ========= */
 #glitter-truck {
   --left:494svh;
@@ -3438,7 +3206,7 @@ html, body {
   .torn-note {
     --left:41svh;
     --scale:.4;
-    --y:65svh;
+    --y:63svh;
     --x:15svh;
     --rot:10deg;
     --z:4;
@@ -3541,7 +3309,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .broken-cd {
-    --left:63svh;
+    --left:66svh;
     --scale:.32;
     --y:44svh;
     --x:-11svh;
@@ -3591,6 +3359,12 @@ html, body {
   --z:20;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .silver-star1-1 {
+    --left:200svh;
+    --y:60svh;
+  }
+}
 
 .lightsleeper-title {
   --left:159svh;
@@ -3623,7 +3397,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .lightsleeper-visualizer {
-    --left:112svh;
+    --left:123svh;
+    --y:50svh;
     --scale: .27;
   }
 }
@@ -3640,7 +3415,7 @@ html, body {
 @media (max-width: 36em) {
   .lightsleeper-about {
     --left:103svh;
-    --y:48svh;
+    --y:49svh;
     --scale:.3;
   }
 }
@@ -3655,8 +3430,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .autumn-text {
-    --left:115svh;
-    --y: 25svh;
+    --left:111svh;
+    --y: 20svh;
     --scale:.28;
   }
 }
@@ -3671,7 +3446,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .blame-it-notesapp {
-    --left:125svh;
+    --left:150svh;
+    --y:2svh;
   }
 }
 
@@ -3686,8 +3462,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .lightsleeper-studio {
-    --left:155svh;
-    --scale:.30;
+    --left:185svh;
+    --y:57svh;
+    --scale:.35;
   }
 }
 
@@ -3702,7 +3479,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star1-2 {
-    --left:145svh;
+    --left:165svh;
+    --scale:15;
+    --y:10svh;
   }
 }
 
@@ -3716,9 +3495,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .chords-gif {
-    --left:150svh;
-    --scale: .2;
-    --y:77svh;
+    --left:177svh;
+    --scale: .23;
+    --y:30svh;
     pointer-events: none;
   }
 }
@@ -3770,8 +3549,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .play-lightsleeper {
-    --left:115svh;
-    --scale: .3;
+    --left:145svh;
+    --y:73svh;
+    --scale: .28;
   }
 }
 
@@ -3786,6 +3566,7 @@ html, body {
 @media (max-width: 36em) {
   .broken-breathing {
     --left:115svh;
+    --y:1svh;
     --scale: .2;
   }
 }
@@ -3800,9 +3581,257 @@ html, body {
 }
 @media (max-width: 36em) {
   .lightsleeper-voicememo {
-    --left:135svh;
+    --left:150svh;
+    --scale:.23;
+    --y:24svh;
+  }
+}
+
+.exitwounds-lyricvideo {
+  /* V4 placeholder */
+  --left: 298svh;
+  --scale: .38;
+  --y: 63svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 21;
+}
+@media (max-width: 36em) {
+  .exitwounds-lyricvideo {
+    --left:210svh;
+    --scale: .27;
+    --y:70svh;
+  }
+}
+
+.star-trio-1 {
+  --left: 346svh;
+  --scale: .28;
+  --y: 61svh;
+  --x: 0svh;
+  --rot: -160deg;
+  --z: 10;
+  pointer-events: none;
+}
+@media (max-width: 36em) {
+  .star-trio-1 {
+    --left:230svh;
+    --scale:.20;
+    --y:51svh;
+  }
+}
+
+.exitwounds-title {
+  --left: 322svh;
+  --scale: .33;
+  --y: 0svh;
+  --x: 0svh;
+  --rot: -12deg;
+  --z: 1;
+  pointer-events: none;
+}
+@media (max-width: 36em) {
+  .exitwounds-title {
+    --left:200svh;
     --scale:.25;
   }
+}
+
+.play-exitwounds {
+  --left: 362svh;
+  --scale: .25;
+  --y: 69svh;
+  --x: 0svh;
+  --rot: 13deg;
+  --z: 11;
+}
+.pressplaydj {
+  --left: 360svh;
+  --scale: .18;
+  --y: 63svh;
+  --x: 0svh;
+  --rot: 13deg;
+  --z: 12;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .17;
+  --text-color: #4CA8E9;
+}
+.missed-calls {
+  --left: 365svh;
+  --scale: .35;
+  --y: 24svh;
+  --x: -6svh;
+  --rot: 10deg;
+  --z: 9;
+  pointer-events: none;
+}
+@media (max-width: 36em) {
+  .missed-calls {
+    --scale:.30;
+  }
+}
+
+.about-exitwounds {
+  --left: 397svh;
+  --scale: .31;
+  --y: 45svh;
+  --x: 8svh;
+  --rot: -6deg;
+  --z: 9;
+}
+@media (max-width: 36em) {
+  .about-exitwounds {
+    --scale:.27;
+  }
+}
+
+.exitwounds-animation-1 {
+  --left: 387svh;
+  --scale: .40;
+  --y: 23svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 2;
+  pointer-events: none;
+}
+.play-exitwounds-voicememo {
+  --left: 392svh;
+  --scale:.23;
+  --y: 1svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 7;
+}
+.click-me-text {
+  --left: 414svh;
+  --scale: .20;
+  --y: 16svh;
+  --x: 0svh;
+  --rot: 1deg;
+  --z: 8;
+  --fw: 400;
+  --fs-mul: .15;
+  --text-color: #4CA8E9;
+}
+.click-me-arrow {
+  --left: 413svh;
+  --scale: .04;
+  --y: 11svh;
+  --x: 0svh;
+  --rot: -4deg;
+  --z: 6;
+  pointer-events: none;
+}
+.read-susbstack-text {
+  --left: 409svh;
+  --scale: .21;
+  --y: 80svh;
+  --x: 0svh;
+  --rot: 7deg;
+  --z: 8;
+  pointer-events: none;
+  --ff: "Manic";
+  --ta: center;
+  --fw: 400;
+  --fs-mul: .15;
+  --tt: uppercase;
+  --text-color: #4CA8E9;
+}
+.substack-point-arrow {
+  --left: 433svh;
+  --scale: .10;
+  --y: 67svh;
+  --x: 0svh;
+  --rot: 7deg;
+  --z: 4;
+  pointer-events: none;
+}
+.scorpio-constellation {
+  --left: 428svh;
+  --scale: .25;
+  --y: 40svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 4;
+  pointer-events: none;
+}
+.subscribe-substack-text {
+  --left: 420svh;
+  --scale: .12;
+  --y: 1svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 8;
+  pointer-events: none;
+  --ff: "Manic";
+  --fw: 400;
+  --fs-mul: .21;
+  --ta: center;
+  --tt: uppercase;
+  --text-color: #4CA8E9;
+}
+.subscribe-arrow {
+  --left: 452svh;
+  --scale: .04;
+  --y: 10svh;
+  --x: 0svh;
+  --rot: -59deg;
+  --z: 20;
+  pointer-events: none;
+}
+.subscribe-button {
+  --left: 459svh;
+  --scale: .14;
+  --y: 10svh;
+  --x: 0svh;
+  --rot: 6deg;
+  --z: 20;
+}
+.exitwounds-substackflier-2 {
+  --left: 453svh;
+  --scale: .76;
+  --y: 30svh;
+  --x: 0svh;
+  --rot: 14deg;
+  --z: 3;
+}
+.silver-star3-1 {
+  --left: 458svh;
+  --scale: .10;
+  --y: -1svh;
+  --x: 0svh;
+  --rot: -59deg;
+  --z: 20;
+  pointer-events: none;
+}
+.blue-star-3 {
+  --left: 468svh;
+  --scale: .04;
+  --y: 4svh;
+  --x: 0svh;
+  --rot: 16deg;
+  --z: 20;
+  pointer-events: none;
+}
+.silver-star3-2 {
+  --left: 478svh;
+  --scale: .06;
+  --y: 1svh;
+  --x: 0svh;
+  --rot: 12deg;
+  --z: 20;
+  pointer-events: none;
+}
+.silver-star3-3 {
+  --left: 489svh;
+  --scale: .08;
+  --y: 8svh;
+  --x: 0svh;
+  --rot: 48deg;
+  --z: 20;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=style.css.map */
