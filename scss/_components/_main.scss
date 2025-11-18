@@ -1180,7 +1180,8 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left: 488svh;
+    --left: 486svh;
+    --scale:.18;
   }  
 }
 
@@ -1194,7 +1195,7 @@
   --z: 42;
 
   @include respond(xs) {
-    --left: 450svh; 
+    --left: 500svh; 
   }
 }
 
@@ -1229,7 +1230,7 @@
   --z: 19;
 
   @include respond(xs) {
-    --left: 510svh; 
+    --left: 520svh; 
   }  
 }
 
@@ -1242,7 +1243,7 @@
   --z: 21;
 
   @include respond(xs) {
-    --left: 530svh; 
+    --left: 540svh; 
   }  
 }
 
