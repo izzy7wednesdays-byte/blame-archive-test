@@ -1000,7 +1000,7 @@
   --z: 37;
 
   @include respond(xs) {
-    --left:425svh;
+    --left:422svh;
   }    
 }
 
@@ -1036,6 +1036,7 @@
 
   @include respond(xs) {
     --left:415svh;
+    --z: 6;    
   }  
 }
 
@@ -1107,7 +1108,7 @@
   --z: 19;
 
   @include respond(xs) {
-    --left: 445svh;
+    --left: 440svh;
     --scale:.27;
   }       
 }
@@ -1128,7 +1129,7 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left: 485svh;
+    --left: 489svh;
     --scale:.20;
   }      
 }
@@ -1142,7 +1143,7 @@
   --z: 30;
 
   @include respond(xs) {
-    --left: 480svh;
+    --left: 485svh;
     --scale:.27;
   }      
 }
@@ -1157,7 +1158,7 @@
   --z: 25;
 
   @include respond(xs) {
-    --left: 480svh;
+    --left: 487svh;
     --scale:.38;
   }       
 }
@@ -1177,6 +1178,10 @@
   --ta: center;
   --tt: lowercase;
   --text-color: #4CA8E9;
+
+  @include respond(xs) {
+    --left: 487svh;
+  }  
 }
 
 .landmines-reaction {
@@ -1187,6 +1192,9 @@
   --x: 0svh;
   --rot: 0deg;
   --z: 42;
+
+  @include respond(xs) {
+    --left: 490svh;  
 }
 
 .blue-star-6 {
