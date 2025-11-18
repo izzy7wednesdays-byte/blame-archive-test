@@ -1000,7 +1000,7 @@
   --z: 37;
 
   @include respond(xs) {
-    --left:440svh;
+    --left:425svh;
   }    
 }
 
@@ -1094,6 +1094,7 @@
   @include respond(xs) {
     --left: 440svh;
     --scale:.14;
+    --y:40svh;
   }     
 }
 
@@ -1106,7 +1107,7 @@
   --z: 19;
 
   @include respond(xs) {
-    --left: 460svh;
+    --left: 445svh;
     --scale:.27;
   }       
 }
@@ -1127,7 +1128,7 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left: 475svh;
+    --left: 485svh;
     --scale:.20;
   }      
 }
@@ -1141,7 +1142,7 @@
   --z: 30;
 
   @include respond(xs) {
-    --left: 460svh;
+    --left: 480svh;
     --scale:.27;
   }      
 }
@@ -1154,6 +1155,11 @@
   --x: 10svh;
   --rot: 0deg;
   --z: 25;
+
+  @include respond(xs) {
+    --left: 480svh;
+    --scale:.38;
+  }       
 }
 
 .landmines-session-video-text {
