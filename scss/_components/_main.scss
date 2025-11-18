@@ -1194,7 +1194,8 @@
   --z: 42;
 
   @include respond(xs) {
-    --left: 490svh;  
+    --left: 490svh; 
+  }
 }
 
 .blue-star-6 {
