@@ -1143,7 +1143,7 @@
   --z: 30;
 
   @include respond(xs) {
-    --left: 490svh;
+    --left: 493svh;
     --scale:.27;
   }      
 }
@@ -1180,7 +1180,7 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left: 515svh;
+    --left: 488svh;
   }  
 }
 
@@ -1194,7 +1194,7 @@
   --z: 42;
 
   @include respond(xs) {
-    --left: 4500svh; 
+    --left: 450svh; 
   }
 }
 
@@ -1227,6 +1227,10 @@
   --x: 0svh;
   --rot: 0deg;
   --z: 19;
+
+  @include respond(xs) {
+    --left: 510svh; 
+  }  
 }
 
 .landmines-session-voicememos {
@@ -1237,7 +1241,9 @@
   --rot: 7deg;
   --z: 21;
 
-  
+  @include respond(xs) {
+    --left: 530svh; 
+  }  
 }
 
 .enchanted-bridge {
@@ -1248,5 +1254,9 @@
   --rot: 0deg;
   --z: 18;
   pointer-events: none;
+
+  @include respond(xs) {
+    --left: 540svh; 
+  }  
 }
 
