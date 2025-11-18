@@ -315,8 +315,7 @@
   @include respond(xs) {
     --left:115svh; 
     --scale:.04; 
-    --y:90svh;
-    --x:0svh;
+    --y:93svh;
     --rot:80deg;
     --z:20;
     pointer-events:none;
@@ -1195,7 +1194,7 @@
   --z: 42;
 
   @include respond(xs) {
-    --left: 515svh; 
+    --left: 518svh; 
   }
 }
 
@@ -1208,7 +1207,9 @@
   --z: 420;
   pointer-events: none;
 
-  
+  @include respond(xs) {
+    --left: 518svh; 
+  }  
 }
 
 .blue-star-7 {
@@ -1219,6 +1220,10 @@
   --rot: -30deg !important;
   --z: 420;
   pointer-events: none;
+
+  @include respond(xs) {
+    --left: 525svh; 
+  }  
 }
 
 .play-landmines {
