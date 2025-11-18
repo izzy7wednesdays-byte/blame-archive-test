@@ -1195,7 +1195,7 @@
   --z: 42;
 
   @include respond(xs) {
-    --left: 500svh; 
+    --left: 515svh; 
   }
 }
 
@@ -1230,7 +1230,7 @@
   --z: 19;
 
   @include respond(xs) {
-    --left: 520svh; 
+    --left: 524svh; 
   }  
 }
 
@@ -1243,7 +1243,7 @@
   --z: 21;
 
   @include respond(xs) {
-    --left: 540svh; 
+    --left: 535svh; 
   }  
 }
 
@@ -1257,7 +1257,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 540svh; 
+    --left: 542svh; 
   }  
 }
 
