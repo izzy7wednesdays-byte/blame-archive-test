@@ -1093,7 +1093,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 440svh;
+    --left: 437svh;
     --scale:.14;
     --y:40svh;
   }     
@@ -1108,7 +1108,7 @@
   --z: 19;
 
   @include respond(xs) {
-    --left: 440svh;
+    --left: 443svh;
     --scale:.27;
   }       
 }
@@ -1143,7 +1143,7 @@
   --z: 30;
 
   @include respond(xs) {
-    --left: 485svh;
+    --left: 490svh;
     --scale:.27;
   }      
 }
@@ -1158,7 +1158,7 @@
   --z: 25;
 
   @include respond(xs) {
-    --left: 487svh;
+    --left: 488svh;
     --scale:.38;
   }       
 }
@@ -1180,7 +1180,7 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left: 487svh;
+    --left: 515svh;
   }  
 }
 
@@ -1194,7 +1194,7 @@
   --z: 42;
 
   @include respond(xs) {
-    --left: 490svh; 
+    --left: 4500svh; 
   }
 }
 
@@ -1206,6 +1206,8 @@
   --rot: 4deg;
   --z: 420;
   pointer-events: none;
+
+  
 }
 
 .blue-star-7 {
@@ -1234,6 +1236,8 @@
   --x: 10svh;
   --rot: 7deg;
   --z: 21;
+
+  
 }
 
 .enchanted-bridge {
