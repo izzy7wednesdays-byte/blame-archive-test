@@ -1266,3 +1266,422 @@
   }  
 }
 
+// ========= MISERY SECTION (slot classes) =========
+
+.misery-ogchorus {
+  --left: 695svh;
+  --scale: .28;
+  --y: 70svh;
+  --x: 2svh;
+  --rot: 0deg;
+  --z: 40;
+
+  @include respond(xs) {
+  }
+}
+
+.silver-star3-5 {
+  --left: 696svh;
+  --scale: .09;
+  --y: 59svh;
+  --x: 0svh;
+  --rot: 10deg;
+  --z: 410;
+  pointer-events: none;
+
+  @include respond(xs) {
+  }
+}
+
+.misery-ogchorus-text {
+  --left: 715svh;
+  --scale: .22;
+  --y: 59svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 40;
+  pointer-events: none;
+
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center;
+  --tt: lowercase;
+  --text-color: #4CA8E9;
+
+  @include respond(xs) {
+  }
+}
+
+.little-miss-misery {
+  --left: 721svh;
+  --scale: .23;
+  --y: 27svh;
+  --x: 10svh;
+  --rot: 4deg;
+  --z: 39;
+  pointer-events: none;
+
+  @include respond(xs) {
+  }
+}
+
+.about-misery {
+  --left: 739svh;
+  --scale: .56;
+  --y: 43svh;
+  --x: 10svh;
+  --rot: 0deg;
+  --z: 41;
+
+  @include respond(xs) {
+  }
+}
+
+.silver-star3-6 {
+  --left: 759svh;
+  --scale: .08;
+  --y: 29svh;
+  --x: 0svh;
+  --rot: -5deg;
+  --z: 43;
+  pointer-events: none;
+
+  @include respond(xs) {
+  }
+}
+
+.kat-stratford-dancing {
+  --left: 738svh;
+  --scale: .23;
+  --y: 1svh;
+  --x: 11svh;
+  --rot: 0deg;
+  --z: 39;
+  pointer-events: none;
+
+  @include respond(xs) {
+  }
+}
+
+.solo-cups {
+  --left: 759svh;
+  --scale: .1;
+  --y: 0svh;
+  --x: 0svh;
+  --rot: 5deg;
+  --z: 43;
+  pointer-events: none;
+
+  @include respond(xs) {
+  }
+}
+
+.misery-wants-company {
+  --left: 800svh;
+  --scale: .22;
+  --y: 75svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 40;
+
+  @include respond(xs) {
+  }
+}
+
+.misery-wants-company-text {
+  --left: 798svh;
+  --scale: .2;
+  --y: 69svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 41;
+  pointer-events: none;
+
+  --ff: "Manic";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center !important;
+  --tt: uppercase;
+  --text-color: #4CA8E9;
+
+  @include respond(xs) {
+  }
+}
+
+.misery-title {
+  --left: 769svh;
+  --scale: .75;
+  --y: -6svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 42;
+  pointer-events: none;
+
+  @include respond(xs) {
+  }
+}
+
+.vocals-misery-4 {
+  --left: 849svh;
+  --scale: .36;
+  --ar: 9/16;
+  --y: 61svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 72;
+
+  @include respond(xs) {
+  }
+}
+
+.vocals-misery-4-text {
+  --left: 840svh;
+  --scale: .2;
+  --y: 87svh;
+  --x: 10svh;
+  --rot: 0deg;
+  --z: 73;
+  pointer-events: none;
+
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: left;
+  --tt: lowercase;
+  --text-color: #4C58E9;
+
+  @include respond(xs) {
+  }
+}
+
+.play-misery {
+  --left: 861svh;
+  --scale: .22;
+  --y: 33svh;
+  --x: 0svh;
+  --rot: -10deg;
+  --z: 71;
+
+  @include respond(xs) {
+  }
+}
+
+.misery-wlj-text {
+  --left: 875svh;
+  --scale: .2;
+  --y: 88svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 73;
+  pointer-events: none;
+
+  --ff: "Manic";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center;
+  --tt: uppercase;
+  --text-color: #4CA8E9;
+
+  @include respond(xs) {
+  }
+}
+
+.misery-wlj {
+  --left: 878svh;
+  --scale: .35;
+  --ar: 9/16;
+  --y: 52svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 72;
+
+  @include respond(xs) {
+  }
+}
+
+.star-trio-2 {
+  --left: 886svh;
+  --scale: .34;
+  --y: 69svh;
+  --x: 0svh;
+  --rot: -160deg;
+  --z: 73;
+  pointer-events: none;
+
+  @include respond(xs) {
+  }
+}
+
+.misery-visualizer {
+  --left: 853svh;
+  --scale: .38;
+  --y: 0svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 39;
+
+  @include respond(xs) {
+  }
+}
+
+// ========= SLEEPWALKING SECTION (slot classes) =========
+
+.smurfette-1 {
+  --left: 884svh;
+  --scale: .25;
+  --y: 30svh;
+  --x: 10svh;
+  --rot: 0deg;
+  --z: 70;
+  pointer-events: none;
+
+  @include respond(xs) {
+  }
+}
+
+.thestar-tarot {
+  --left: 903svh;
+  --scale: .38;
+  --y: 60svh;
+  --x: 10svh;
+  --rot: -9deg;
+  --z: 70;
+  pointer-events: none;
+
+  @include respond(xs) {
+  }
+}
+
+.play-sleepwalking {
+  --left: 905svh;
+  --scale: .2;
+  --y: 34svh;
+  --x: 10svh;
+  --rot: 10deg;
+  --z: 50;
+
+  @include respond(xs) {
+  }
+}
+
+.sleepwalking-radio {
+  --left: 920svh;
+  --scale: .22;
+  --y: 7svh;
+  --x: 1svh;
+  --rot: 0deg;
+  --z: 40;
+
+  @include respond(xs) {
+  }
+}
+
+.sleepwalking-radio-text {
+  --left: 923svh;
+  --scale: .2;
+  --y: 0svh;
+  --x: 1svh;
+  --rot: 0deg;
+  --z: 42;
+  pointer-events: none;
+
+  --ff: "Manic";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center !important;
+  --tt: uppercase;
+  --text-color: #4CA8E9;
+
+  @include respond(xs) {
+  }
+}
+
+.sleepwalking-radio-polaroid {
+  --left: 954svh;
+  --scale: .22;
+  --y: 14svh;
+  --x: 1svh;
+  --rot: -10deg;
+  --z: 40;
+  pointer-events: none;
+
+  @include respond(xs) {
+  }
+}
+
+.sleepwalking-visualizer {
+  --left: 944svh;
+  --scale: .38;
+  --y: 63svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 71;
+
+  @include respond(xs) {
+  }
+}
+
+.sleepwalking-title {
+  --left: 938svh;
+  --scale: .18;
+  --y: 39svh;
+  --x: 10svh;
+  --rot: 0deg;
+  --z: 100;
+  pointer-events: none;
+
+  @include respond(xs) {
+  }
+}
+
+.sleepwalking-listeningparty {
+  --left: 970svh;
+  --scale: .35;
+  --ar: 4/3;
+  --y: 0svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 50;
+
+  @include respond(xs) {
+  }
+}
+
+.blue-star-8 {
+  --left: 1008svh;
+  --scale: .04;
+  --y: 35svh;
+  --x: 0svh;
+  --rot: -7deg;
+  --z: 710;
+
+  @include respond(xs) {
+  }
+}
+
+.about-sleepwalking {
+  --left: 1009svh;
+  --scale: .35;
+  --y: 1svh;
+  --x: 0svh;
+  --rot: 7deg;
+  --z: 71;
+  pointer-events: none;
+
+  @include respond(xs) {
+  }
+}
+
+.sleepwalking-receipt {
+  --left: 1051svh;
+  --scale: .50;
+  --y: 1svh;
+  --x: 0svh;
+  --rot: -10deg;
+  --z: 70;
+  pointer-events: none;
+
+  @include respond(xs) {
+  }
+}
