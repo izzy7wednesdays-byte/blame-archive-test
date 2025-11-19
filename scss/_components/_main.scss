@@ -702,10 +702,6 @@
 }
 
 .exitwounds-animation-mobile {
-  --left:250svh;
-  --scale: .5;
-  --y: 20svh;
-  --rot:0deg;
   display:none;
 
   @include respond(xs) {
@@ -714,7 +710,7 @@
     outline-color: magenta;
     outline-offset: 6px;
     --left:250svh;
-    --scale: .5;
+    --scale: .40;
     --y: 20svh;
     --rot:0deg;
   }
@@ -784,7 +780,7 @@
   @include respond(xs) {
     --left:286svh;
     --scale:.15;
-    --y:78svh;
+    --y:76svh;
   }
 }
 
@@ -1466,7 +1462,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 610svh;   
+    --left: 605svh;   
     --scale:.72;
   }
 }
@@ -1481,7 +1477,7 @@
   --z: 72;
 
   @include respond(xs) {
-    --left:640svh;
+    --left:670svh;
   }
 }
 
@@ -1502,7 +1498,7 @@
   --text-color: #4C58E9;
 
   @include respond(xs) {
-    --left:631svh;    
+    --left:661svh;    
   }
 }
 
@@ -1515,7 +1511,7 @@
   --z: 71;
 
   @include respond(xs) {
-    --left:651svh;      
+    --left:671svh;      
   }
 }
 
@@ -1536,7 +1532,7 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left:670svh;  
+    --left:690svh;  
     --scale:0.18;
   }
 }
@@ -1551,7 +1547,7 @@
   --z: 72;
 
   @include respond(xs) {
-    --left:670svh;  
+    --left:687svh;  
     --scale:0.30;    
   }
 }
