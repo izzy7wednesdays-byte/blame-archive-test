@@ -1277,6 +1277,7 @@
   --z: 40;
 
   @include respond(xs) {
+    outline:magenta;
     --left: 542svh; 
   }
 }
