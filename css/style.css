@@ -1845,8 +1845,11 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-ogchorus {
-    outline: magenta;
     --left: 542svh;
+    --scale:0.25;
+    outline: 2px dashed;
+    outline-color: magenta;
+    outline-offset: 6px;
   }
 }
 
@@ -1895,6 +1898,13 @@ html, body {
   --z: 39;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .little-miss-misery {
+    --left: 568svh;
+    --scale:0.19 ;
+  }
+}
+
 .about-misery {
   --left: 739svh;
   --scale: .56;
@@ -1903,6 +1913,14 @@ html, body {
   --rot: 0deg;
   --z: 41;
 }
+@media (max-width: 36em) {
+  .about-misery {
+    --left: 584svh;
+    --scale:0.50;
+    --y:45svh;
+  }
+}
+
 .silver-star3-6 {
   --left: 759svh;
   --scale: .08;
@@ -1912,6 +1930,12 @@ html, body {
   --z: 43;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .silver-star3-6 {
+    --left: 606svh;
+  }
+}
+
 .kat-stratford-dancing {
   --left: 738svh;
   --scale: .23;
@@ -1921,6 +1945,13 @@ html, body {
   --z: 39;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .kat-stratford-dancing {
+    --left: 580svh;
+    --scale:.19;
+  }
+}
+
 .solo-cups {
   --left: 759svh;
   --scale: .1;
@@ -1930,6 +1961,12 @@ html, body {
   --z: 43;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .solo-cups {
+    --left: 601svh;
+  }
+}
+
 .misery-wants-company {
   --left: 800svh;
   --scale: .22;
@@ -1938,6 +1975,12 @@ html, body {
   --rot: 0deg;
   --z: 40;
 }
+@media (max-width: 36em) {
+  .misery-wants-company {
+    --left: 647svh;
+  }
+}
+
 .misery-wants-company-text {
   --left: 798svh;
   --scale: .2;
@@ -1953,6 +1996,12 @@ html, body {
   --tt: uppercase;
   --text-color: #4CA8E9;
 }
+@media (max-width: 36em) {
+  .misery-wants-company-text {
+    --left: 645svh;
+  }
+}
+
 .misery-title {
   --left: 769svh;
   --scale: .75;
@@ -1962,6 +2011,12 @@ html, body {
   --z: 42;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .misery-title {
+    --left: 614svh;
+  }
+}
+
 .vocals-misery-4 {
   --left: 849svh;
   --scale: .36;
@@ -2144,6 +2199,1738 @@ html, body {
   --rot: -10deg;
   --z: 70;
   pointer-events: none;
+}
+.ep-inspo {
+  --left: 1007svh;
+  --scale: .63;
+  --y: 46svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 71;
+  pointer-events: none;
+}
+.silver-star1-3 {
+  --left: 1020svh;
+  --scale: .15;
+  --y: 48svh;
+  --x: 0svh;
+  --rot: -20deg;
+  --z: 710;
+  pointer-events: none;
+}
+.blue-star-9 {
+  --left: 1027svh;
+  --scale: .06;
+  --y: 40svh;
+  --x: 0svh;
+  --rot: 15deg;
+  --z: 710;
+  pointer-events: none;
+}
+.silver-star3-7 {
+  --left: 1037svh;
+  --scale: .08;
+  --y: 45svh;
+  --x: 0svh;
+  --rot: 10deg;
+  --z: 710;
+  pointer-events: none;
+}
+.top-spotify-sparkles {
+  --left: 1075svh;
+  --scale: .36;
+  --y: 83svh;
+  --x: 0svh;
+  --rot: 75deg;
+  --z: 32;
+  pointer-events: none;
+}
+.ep-inspo-sp {
+  --left: 1089svh;
+  --scale: .35;
+  --y: 53svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 81;
+}
+.bottom-spotify-sparkles {
+  --left: 1070svh;
+  --scale: .37;
+  --y: 53svh;
+  --x: 0svh;
+  --rot: 80deg;
+  --z: 32;
+  pointer-events: none;
+}
+.ep-click-toread {
+  --left: 1078svh;
+  --scale: .25;
+  --y: 38svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 30;
+  pointer-events: none;
+  --ff: "Manic";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center !important;
+  --tt: uppercase;
+  --text-color: #4CA8E9;
+}
+.ep-telephone {
+  --left: 1077svh;
+  --scale: .26;
+  --y: 11svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 72;
+}
+.ep-phoningfriends {
+  --left: 1085svh;
+  --scale: .25;
+  --y: 4svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 30;
+  pointer-events: none;
+  --ff: "Manic";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center;
+  --tt: uppercase;
+  --text-color: #4CA8E9;
+}
+.mixing-misery-1 {
+  --left: 1115svh;
+  --scale: .41;
+  --ar: 9/16;
+  --y: 5svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 30;
+}
+.mixing-misery-1-text {
+  --left: 1114svh;
+  --scale: .11;
+  --y: 0svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 30;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .2;
+  --ta: center !important;
+  --tt: lowercase;
+  --text-color: #4CA8E9;
+}
+.migos-mairead {
+  --left: 1129svh;
+  --scale: .5;
+  --ar: 9/16;
+  --y: 47svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 33;
+}
+.air-quality {
+  --left: 1139svh;
+  --scale: .45;
+  --y: 1svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 30;
+  pointer-events: none;
+}
+.air-quality-text {
+  --left: 1145svh;
+  --scale: .19;
+  --y: 1svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 31;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center !important;
+  --tt: lowercase;
+  --text-color: #D9EBFF;
+}
+.hannah-montana {
+  --left: 1160svh;
+  --scale: .40;
+  --ar: 9/16;
+  --y: 58svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 30;
+}
+.migos-text {
+  --left: 1158svh;
+  --scale: .21;
+  --y: 47svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 30;
+  pointer-events: none;
+  --ff: "Manic";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center !important;
+  --tt: uppercase;
+  --text-color: #4CA8E9;
+}
+.ep-mixing-date {
+  --left: 1164svh;
+  --scale: .40;
+  --y: 5svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 30;
+  pointer-events: none;
+}
+.hannah-montana-text {
+  --left: 1185svh;
+  --scale: .21;
+  --y: 81svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 30;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center !important;
+  --tt: lowercase;
+  --text-color: #4CA8E9;
+}
+.notebook {
+  --left: 1185svh;
+  --scale: .35;
+  --y: 42svh;
+  --x: 0svh;
+  --rot: 5deg;
+  --z: 29;
+  pointer-events: none;
+}
+.ep-vocal-booth {
+  --left: 1192svh;
+  --scale: .22;
+  --y: 38svh;
+  --x: 0svh;
+  --rot: -15deg;
+  --z: 30;
+  pointer-events: none;
+}
+.ep-vocal-booth-2 {
+  --left: 1200svh;
+  --scale: .22;
+  --y: 49svh;
+  --x: 0svh;
+  --rot: 100deg;
+  --z: 31;
+  pointer-events: none;
+}
+.ep-title {
+  --left: 1176svh;
+  --scale: .53;
+  --y: -7svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 100;
+  pointer-events: none;
+}
+.ep-spencer-tracklist {
+  --left: 1224svh;
+  --scale: .41;
+  --y: 55svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 28;
+  pointer-events: none;
+}
+.ep-spencer-text {
+  --left: 1225svh;
+  --scale: .22;
+  --y: 76svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 32;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center;
+  --tt: lowercase;
+  --text-color: #4CA8E9;
+}
+.mixing-misery-6 {
+  --left: 1233svh;
+  --scale: .36;
+  --ar: 9/16;
+  --y: 17svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 31;
+}
+.scrabbleboard {
+  --left: 1258svh;
+  --scale: .5;
+  --y: 46svh;
+  --x: 0svh;
+  --rot: -5deg;
+  --z: 32;
+  pointer-events: none;
+}
+.sabrinacarpenter-text {
+  --left: 1256svh;
+  --scale: .2;
+  --y: 20svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 33;
+  pointer-events: none;
+  --ff: "Manic";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center;
+  --tt: uppercase;
+  --text-color: #4CA8E9;
+}
+.sabrinacarpenter {
+  --left: 1283svh;
+  --scale: .42;
+  --ar: 9/16;
+  --y: 1svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 32;
+}
+.blue-star-10 {
+  --left: 1312svh;
+  --scale: .07;
+  --y: 93svh;
+  --x: 0svh;
+  --rot: 8deg;
+  --z: 320;
+  pointer-events: none;
+}
+.discord-message-1 {
+  --left: 1306svh;
+  --scale: .21;
+  --y: 70svh;
+  --x: 0svh;
+  --rot: 2deg;
+  --z: 32;
+  pointer-events: none;
+}
+.discord-message-2 {
+  --left: 1307svh;
+  --scale: .11;
+  --y: 59svh;
+  --x: 0svh;
+  --rot: -2deg;
+  --z: 33;
+  pointer-events: none;
+}
+.discord-message-3 {
+  --left: 1306svh;
+  --scale: .10;
+  --y: 50svh;
+  --x: 0svh;
+  --rot: 1deg;
+  --z: 32;
+  pointer-events: none;
+}
+.exitwounds-zoom {
+  --left: 1308svh;
+  --scale: .45;
+  --ar: 9/16;
+  --y: 3svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 32;
+}
+.silver-star1-4 {
+  --left: 1339svh;
+  --scale: .27;
+  --y: 75svh;
+  --x: 0svh;
+  --rot: 18deg;
+  --z: 36;
+  pointer-events: none;
+}
+.scrabble-piece {
+  --left: 1334svh;
+  --scale: .14;
+  --y: 57svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 35;
+  pointer-events: none;
+}
+.ep-zoom {
+  --left: 1336svh;
+  --scale: .45;
+  --ar: 9/16;
+  --y: 11svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 32;
+}
+.zoom-text {
+  --left: 1336svh;
+  --scale: .22;
+  --y: 0svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 32;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center;
+  --tt: lowercase;
+  --text-color: #4CA8E9;
+}
+.mixing-sleepwalking-2 {
+  --left: 1358svh;
+  --scale: .44;
+  --ar: 9/16;
+  --y: 52svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 32;
+}
+.ep-tweet {
+  --left: 1353svh;
+  --scale: .48;
+  --y: 2svh;
+  --x: 10svh;
+  --rot: 0deg;
+  --z: 40;
+  pointer-events: none;
+}
+.starterpack {
+  --left: 1375svh;
+  --scale: .39;
+  --y: 56svh;
+  --x: 10svh;
+  --rot: 0deg;
+  --z: 40;
+  pointer-events: none;
+}
+.ep-cover {
+  --left: 1381svh;
+  --scale: .54;
+  --y: 0svh;
+  --x: 10svh;
+  --rot: 0deg;
+  --z: 40;
+  pointer-events: none;
+}
+.artwork-testshoot-1 {
+  --left: 1425svh;
+  --scale: .28;
+  --ar: 4/3;
+  --y: 66svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 49;
+}
+.artwork-title {
+  --left: 1414svh;
+  --scale: .2;
+  --y: 46svh;
+  --x: 10svh;
+  --rot: 0deg;
+  --z: 41;
+}
+.silver-star3-8 {
+  --left: 1454svh;
+  --scale: .08;
+  --y: 41svh;
+  --x: 0svh;
+  --rot: 8deg;
+  --z: 500;
+  pointer-events: none;
+}
+.artwork-testshoot-5 {
+  --left: 1464svh;
+  --scale: .27;
+  --ar: 109/60;
+  --y: 68svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 46;
+}
+.artwork-testshoot-4 {
+  --left: 1466svh;
+  --scale: .22;
+  --ar: 109/60;
+  --y: 44svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 45;
+}
+.about-artwork {
+  --left: 1447svh;
+  --scale: .34;
+  --y: 2svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 50;
+  pointer-events: none;
+}
+.caitlin-text-1 {
+  --left: 1515svh;
+  --scale: .34;
+  --y: 64svh;
+  --x: 0svh;
+  --rot: 1.5deg;
+  --z: 39;
+  pointer-events: none;
+}
+.kayla-polaroid {
+  --left: 1508svh;
+  --scale: .19;
+  --y: 43svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 42;
+  pointer-events: none;
+}
+.tv-photo {
+  --left: 1502svh;
+  --scale: .19;
+  --y: 22svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 42;
+  pointer-events: none;
+}
+.artwork-testshoot-3 {
+  --left: 1502svh;
+  --scale: .20;
+  --ar: 109/60;
+  --y: -1svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 44;
+}
+.caitlin-note {
+  --left: 1546svh;
+  --scale: .2;
+  --y: 77svh !important;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 41;
+  pointer-events: none;
+}
+.caitlin-text-2 {
+  --left: 1534svh;
+  --scale: .34;
+  --y: 43svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 37;
+}
+.shoot-bts-1 {
+  --left: 1529svh;
+  --scale: .22;
+  --ar: 109/60;
+  --y: 20svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 45;
+}
+.shoot-makeup {
+  --left: 1528svh;
+  --scale: .18;
+  --y: 7svh;
+  --x: 0svh;
+  --rot: 90deg;
+  --z: 39;
+  pointer-events: none;
+}
+.shoot-makeup-text {
+  --left: 1558svh;
+  --scale: .19;
+  --y: 2svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 40;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 410;
+  --fs-mul: .1;
+  --ta: center;
+  --tt: lowercase;
+  --text-color: #e1effa;
+}
+.caitlin-text-3 {
+  --left: 1566svh;
+  --scale: .35;
+  --y: 45svh;
+  --x: 0svh;
+  --rot: -5deg;
+  --z: 40;
+  pointer-events: none;
+}
+.shoot-bts-2 {
+  --left: 1571svh;
+  --scale: .38;
+  --ar: 9/16;
+  --y: 5svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 48;
+}
+.star-trio-3 {
+  --left: 1584svh;
+  --scale: .10;
+  --y: 79svh;
+  --x: 10svh;
+  --rot: 12deg;
+  --z: 410;
+  pointer-events: none;
+}
+.star-trio-4 {
+  --left: 1600svh;
+  --scale: .15;
+  --y: 97svh;
+  --x: 10svh;
+  --rot: -160deg;
+  --z: 410;
+  pointer-events: none;
+}
+.dorm-mirror {
+  --left: 1587svh;
+  --scale: .35;
+  --y: 42svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 40;
+  pointer-events: none;
+}
+.misery-bts {
+  --left: 1612svh;
+  --scale: .38;
+  --y: 62svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 39;
+}
+.buddy-gif {
+  --left: 1612svh;
+  --scale: .15;
+  --y: 45svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 53;
+  pointer-events: none;
+}
+.silver-star3-9 {
+  --left: 1594svh;
+  --scale: .08;
+  --y: 36svh;
+  --x: 0svh;
+  --rot: -25deg;
+  --z: 400;
+  pointer-events: none;
+}
+.blue-star-11 {
+  --left: 1594svh;
+  --scale: .03;
+  --y: 30svh;
+  --x: 0svh;
+  --rot: -20deg;
+  --z: 400;
+  pointer-events: none;
+}
+.glow-star-1 {
+  --left: 1602svh;
+  --scale: .07;
+  --y: 31svh;
+  --x: 0svh;
+  --rot: 15deg;
+  --z: 4;
+  pointer-events: none;
+}
+.silver-star3-10 {
+  --left: 1610svh;
+  --scale: .03;
+  --y: 42svh;
+  --x: 0svh;
+  --rot: -20deg;
+  --z: 4;
+  pointer-events: none;
+}
+.blue-star-12 {
+  --left: 1613svh;
+  --scale: .12;
+  --y: 26svh;
+  --x: 0svh;
+  --rot: -15deg;
+  --z: 4;
+  pointer-events: none;
+}
+.silver-star3-11 {
+  --left: 1623svh;
+  --scale: .06;
+  --y: 36svh;
+  --x: 0svh;
+  --rot: 20deg;
+  --z: 4;
+  pointer-events: none;
+}
+.glow-star-2 {
+  --left: 1632svh;
+  --scale: .04;
+  --y: 39svh;
+  --x: 0svh;
+  --rot: 15deg;
+  --z: 4;
+  pointer-events: none;
+}
+.video-title-camcorder {
+  --left: 1585svh;
+  --scale: .54;
+  --y: -14svh;
+  --x: 10svh;
+  --rot: 0deg;
+  --z: 41;
+  pointer-events: none;
+}
+.video-title-gif {
+  --left: 1587svh;
+  --scale: .20;
+  --y: 10svh;
+  --x: 10svh;
+  --rot: -3deg;
+  --z: 40;
+  pointer-events: none;
+}
+.glow-star-3 {
+  --left: 1594svh;
+  --scale: .03;
+  --y: 6svh;
+  --x: 0svh;
+  --rot: -30deg;
+  --z: 4;
+  pointer-events: none;
+}
+.blue-star-13 {
+  --left: 1592svh;
+  --scale: .08;
+  --y: -4svh;
+  --x: 0svh;
+  --rot: -20deg;
+  --z: 4;
+  pointer-events: none;
+}
+.glow-star-4 {
+  --left: 1602svh;
+  --scale: .13;
+  --y: -6svh;
+  --x: 0svh;
+  --rot: 15deg;
+  --z: 4;
+  pointer-events: none;
+}
+.blue-star-14 {
+  --left: 1618svh;
+  --scale: .03;
+  --y: 3svh;
+  --x: 0svh;
+  --rot: -20deg;
+  --z: 4;
+  pointer-events: none;
+}
+.silver-star3-12 {
+  --left: 1624svh;
+  --scale: .03;
+  --y: 4svh;
+  --x: 0svh;
+  --rot: -20deg;
+  --z: 4;
+  pointer-events: none;
+}
+.blue-star-15 {
+  --left: 1623svh;
+  --scale: .06;
+  --y: -3svh;
+  --x: 0svh;
+  --rot: -40deg;
+  --z: 4;
+  pointer-events: none;
+}
+.glow-star-5 {
+  --left: 1629svh;
+  --scale: .03;
+  --y: -1svh;
+  --x: 0svh;
+  --rot: -20deg;
+  --z: 4;
+  pointer-events: none;
+}
+.misery-brainstorm-1 {
+  --left: 1638svh;
+  --scale: .25;
+  --y: 35svh;
+  --x: 0svh;
+  --rot: -2deg;
+  --z: 54;
+  pointer-events: none;
+}
+.misery-polaroids {
+  --left: 1642svh;
+  --scale: .38;
+  --y: -4svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 43;
+  pointer-events: none;
+}
+.glow-star-6 {
+  --left: 1672svh;
+  --scale: .11;
+  --y: 65svh;
+  --x: 0svh;
+  --rot: -10deg;
+  --z: 4;
+  pointer-events: none;
+}
+.editing-misery-thought {
+  --left: 1662svh;
+  --scale: .20;
+  --y: 75svh;
+  --x: 0svh;
+  --rot: 2deg;
+  --z: 41;
+  pointer-events: none;
+}
+.misery-brainstorm-arrow {
+  --left: 1668svh;
+  --scale: .16;
+  --y: 42svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 43;
+  pointer-events: none;
+}
+.misery-brainstorm-text {
+  --left: 1668svh;
+  --scale: .19;
+  --y: 38svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 39;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center;
+  --tt: lowercase;
+  --text-color: #e1effa;
+}
+.editing-misery {
+  --left: 1665svh;
+  --scale: .25;
+  --y: 80svh;
+  --x: 0svh;
+  --rot: 90deg;
+  --z: 40;
+  pointer-events: none;
+}
+.misery-brainstorm-2 {
+  --left: 1687svh;
+  --scale: .28;
+  --y: 34svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 43;
+  pointer-events: none;
+}
+.the-cake {
+  --left: 1680svh;
+  --scale: .27;
+  --ar: 16/9;
+  --y: 1svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 48;
+}
+.cake-boss {
+  --left: 1709svh;
+  --scale: .27;
+  --ar: 16/9;
+  --y: 36svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 50;
+}
+.happy-easter {
+  --left: 1708svh;
+  --scale: .27;
+  --ar: 16/9;
+  --y: 67svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 51;
+}
+.dab-video {
+  --left: 1732svh;
+  --scale: .27;
+  --ar: 16/9;
+  --y: 5svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 49;
+}
+.exitwounds-film-roll {
+  --left: 1840svh;
+  --scale: 1;
+  --y: 76svh;
+  --x: 0svh;
+  --rot: -90deg;
+  --z: 56;
+  pointer-events: none;
+}
+.dvd-video {
+  --left: 1760svh;
+  --scale: .18;
+  --y: 36svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 10;
+  pointer-events: none;
+}
+.across-street {
+  --left: 1780svh;
+  --scale: .26;
+  --ar: 287/480;
+  --y: 64svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 52;
+}
+.grew-here {
+  --left: 1796svh;
+  --scale: .26;
+  --ar: 407/482;
+  --y: 64svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 53;
+}
+.mazzy-star {
+  --left: 1818svh;
+  --scale: .26;
+  --ar: 407/482;
+  --y: 64svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 54;
+}
+.tisthedamn {
+  --left: 1840svh;
+  --scale: .26;
+  --ar: 357/481;
+  --y: 64svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 55;
+}
+.tv-unboxing {
+  --left: 1785svh;
+  --scale: .56;
+  --ar: 9/16;
+  --y: 2svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 49;
+}
+.videos-about {
+  --left: 1805svh;
+  --scale: .25;
+  --y: 34svh;
+  --x: 0svh;
+  --rot: -2deg;
+  --z: 50;
+}
+.exitwounds-subway {
+  --left: 1801svh;
+  --scale: .29;
+  --y: 18svh;
+  --x: 0svh;
+  --rot: 87deg;
+  --z: 49;
+  pointer-events: none;
+}
+.exitwounds-bts {
+  --left: 1859svh;
+  --scale: .4;
+  --y: 60svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 57;
+}
+.landmines-bts-tiktok {
+  --left: 1853svh;
+  --scale: .5;
+  --ar: 9/16;
+  --y: 3svh;
+  --x: 0svh;
+  --rot: -1deg;
+  --z: 54;
+}
+.landmines-bts {
+  --left: 1877svh;
+  --scale: .4;
+  --y: 13svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 53;
+}
+.glitter-truck-2 {
+  --left: 1864svh;
+  --scale: .6;
+  --y: -22svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 57;
+  pointer-events: none;
+}
+.backtruck-2 {
+  --left: 1932svh;
+  --scale: .29;
+  --y: 27svh;
+  --x: 0svh;
+  --rot: 2deg;
+  --z: 56;
+  pointer-events: none;
+}
+.backtruck-1 {
+  --left: 1935svh;
+  --scale: .29;
+  --y: 3svh;
+  --x: 0svh;
+  --rot: 4deg;
+  --z: 55;
+  pointer-events: none;
+}
+.landmines-matches {
+  --left: 1923svh;
+  --scale: .35;
+  --y: 60svh;
+  --x: 0svh;
+  --rot: -2.5deg;
+  --z: 60;
+  pointer-events: none;
+}
+.blue-star-16 {
+  --left: 1924svh;
+  --scale: .11;
+  --y: 57svh;
+  --x: 0svh;
+  --rot: -40deg;
+  --z: 400;
+  pointer-events: none;
+}
+.fire-meme {
+  --left: 1950svh;
+  --scale: .26;
+  --y: 16svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 60;
+  pointer-events: none;
+}
+.silver-star3-13 {
+  --left: 1964svh;
+  --scale: .13;
+  --y: 3svh;
+  --x: 0svh;
+  --rot: 15deg;
+  --z: 60;
+  pointer-events: none;
+}
+.pretty-little-liars {
+  --left: 1990svh;
+  --scale: .22;
+  --y: 73svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 60;
+  pointer-events: none;
+}
+.pretty-little-liars-text {
+  --left: 1990svh;
+  --scale: .22;
+  --y: 65svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 39;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center;
+  --tt: lowercase;
+  --text-color: #4CA8E9;
+}
+.m-title {
+  --left: 1960svh;
+  --scale: .13;
+  --y: 48svh;
+  --x: 0svh;
+  --rot: -3deg;
+  --z: 61;
+  pointer-events: none;
+}
+.candle-lighting {
+  --left: 1983svh;
+  --scale: .40;
+  --ar: 9/16;
+  --y: -1svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 60;
+}
+.early-posters {
+  --left: 2004svh;
+  --scale: .45;
+  --y: -2svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 59;
+  pointer-events: none;
+}
+.early-posters-text {
+  --left: 2032svh;
+  --scale: .2;
+  --y: 35svh;
+  --x: 0svh;
+  --rot: -4deg;
+  --z: 60;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center;
+  --tt: lowercase;
+  --text-color: #4CA8E9;
+}
+.poster-arrow {
+  --left: 2052svh;
+  --scale: .10;
+  --y: 28svh;
+  --x: 0svh;
+  --rot: 19deg;
+  --z: 60;
+  pointer-events: none;
+}
+.thank-you-text {
+  --left: 2053svh;
+  --scale: .2;
+  --y: 7svh;
+  --x: 0svh;
+  --rot: -.5deg;
+  --z: 60;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center;
+  --tt: lowercase;
+  --text-color: #4CA8E9;
+}
+.about-matchbooks {
+  --left: 2032svh;
+  --scale: .2;
+  --y: 73svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 60;
+  pointer-events: none;
+}
+.sticker-1 {
+  --left: 2074svh;
+  --scale: .24;
+  --y: 73svh;
+  --x: 0svh;
+  --rot: -5deg;
+  --z: 60;
+  pointer-events: none;
+}
+.sticker-3 {
+  --left: 2072svh;
+  --scale: .24;
+  --y: 49svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 60;
+  pointer-events: none;
+}
+.poster {
+  --left: 2074svh;
+  --scale: .45;
+  --y: 2svh;
+  --x: 0svh;
+  --rot: -3deg;
+  --z: 61;
+}
+.sticker-2 {
+  --left: 2105svh;
+  --scale: .24;
+  --y: 73svh;
+  --x: 0svh;
+  --rot: 7deg;
+  --z: 60;
+  pointer-events: none;
+}
+.buy-button {
+  --left: 2096svh;
+  --scale: .17;
+  --y: 50svh;
+  --x: 0svh;
+  --rot: 5deg;
+  --z: 60;
+}
+.sims {
+  --left: 2111svh;
+  --scale: .10;
+  --y: 35svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 61;
+  pointer-events: none;
+}
+.selfie-poster {
+  --left: 2104svh;
+  --scale: .35;
+  --y: 1svh;
+  --x: 0svh;
+  --rot: 2deg;
+  --z: 60;
+  pointer-events: none;
+}
+.glow-star-7 {
+  --left: 2136svh;
+  --scale: .12;
+  --y: 80svh;
+  --x: 10svh;
+  --rot: 70deg;
+  --z: 400;
+  pointer-events: none;
+}
+.london-title {
+  --left: 2120svh;
+  --scale: .25;
+  --y: 37svh;
+  --x: 10svh;
+  --rot: -94deg;
+  --z: 40;
+  pointer-events: none;
+}
+.glow-star-8 {
+  --left: 2159svh;
+  --scale: .10;
+  --y: 92svh;
+  --x: 0svh;
+  --rot: 1deg;
+  --z: 440;
+  pointer-events: none;
+}
+.hangout-poster {
+  --left: 2159svh;
+  --scale: .71;
+  --y: 32svh;
+  --x: 0svh;
+  --rot: 1deg;
+  --z: 44;
+  pointer-events: none;
+}
+.london-camcorder {
+  --left: 2149svh;
+  --scale: .26;
+  --y: 16svh;
+  --x: 0svh;
+  --rot: 90deg;
+  --z: 42;
+  pointer-events: none;
+}
+.london-live-1 {
+  --left: 2177svh;
+  --scale: .30;
+  --ar: 9/16;
+  --y: 2svh;
+  --x: 0svh;
+  --rot: -2deg;
+  --z: 41;
+}
+.london-live-2 {
+  --left: 2198svh;
+  --scale: .38;
+  --ar: 9/16;
+  --y: 2svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 43;
+}
+.hangout-vlog {
+  --left: 2214svh;
+  --scale: .35;
+  --y: 64svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 57;
+}
+.rsvp-cloud {
+  --left: 2216svh;
+  --scale: .15;
+  --y: 47svh;
+  --x: 0svh;
+  --rot: -15deg;
+  --z: 44;
+  pointer-events: none;
+}
+.glow-star-9 {
+  --left: 2222svh;
+  --scale: .09;
+  --y: -3svh;
+  --x: 0svh;
+  --rot: -1deg;
+  --z: 440;
+  pointer-events: none;
+}
+.rsvp-arrow {
+  --left: 2224svh;
+  --scale: .04;
+  --y: 42svh;
+  --x: 0svh;
+  --rot: -2deg;
+  --z: 44;
+  pointer-events: none;
+}
+.rsvp-button {
+  --left: 2238svh;
+  --scale: .13;
+  --y: 43svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 57;
+}
+.blue-star-17 {
+  --left: 2245svh;
+  --scale: .06;
+  --y: 27svh;
+  --x: 0svh;
+  --rot: -10deg;
+  --z: 500;
+  pointer-events: none;
+}
+.london-matches {
+  --left: 2222svh;
+  --scale: .44;
+  --y: -2svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 50;
+  pointer-events: none;
+}
+.silver-star3-14 {
+  --left: 2266svh;
+  --scale: .11;
+  --y: 4svh;
+  --x: 0svh;
+  --rot: 10deg;
+  --z: 500;
+  pointer-events: none;
+}
+.london-about {
+  --left: 2278svh;
+  --scale: .59;
+  --y: 40svh;
+  --x: 0svh;
+  --rot: -8deg;
+  --z: 45;
+}
+.blue-star-18 {
+  --left: 2300svh;
+  --scale: .06;
+  --y: 32svh;
+  --x: 0svh;
+  --rot: -8deg;
+  --z: 405;
+  pointer-events: none;
+}
+.onedirection {
+  --left: 2280svh;
+  --scale: .18;
+  --y: 12svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 45;
+  pointer-events: none;
+}
+.onedirection-text {
+  --left: 2280svh;
+  --scale: .15;
+  --y: 9svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 45;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .13;
+  --ta: center;
+  --tt: lowercase;
+  --text-color: #E1EFFA;
+}
+.silver-star3-15 {
+  --left: 2310svh;
+  --scale: .05;
+  --y: 0svh;
+  --x: 0svh;
+  --rot: -10deg;
+  --z: 405;
+  pointer-events: none;
+}
+.silver-star3-16 {
+  --left: 2320svh;
+  --scale: .08;
+  --y: 94svh;
+  --x: 0svh;
+  --rot: -8deg;
+  --z: 405;
+  pointer-events: none;
+}
+.glow-star-10 {
+  --left: 2340svh;
+  --scale: .11;
+  --y: 90svh;
+  --x: 0svh;
+  --rot: 8deg;
+  --z: 405;
+  pointer-events: none;
+}
+.hangout-tweet {
+  --left: 2324svh;
+  --scale: .375;
+  --y: 49svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 46;
+  pointer-events: none;
+}
+.londoncard-v1 {
+  --left: 2319svh;
+  --scale: .35;
+  --y: 4svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 45;
+  pointer-events: none;
+}
+.glow-star-11 {
+  --left: 2346svh;
+  --scale: .11;
+  --y: 30svh;
+  --x: 0svh;
+  --rot: 10deg;
+  --z: 500;
+  pointer-events: none;
+}
+.glow-star-12 {
+  --left: 2357svh;
+  --scale: .09;
+  --y: 46svh;
+  --x: 0svh;
+  --rot: -10deg;
+  --z: 500;
+  pointer-events: none;
+}
+.londoncard-arrow-1 {
+  --left: 2346svh;
+  --scale: .04;
+  --y: 3svh;
+  --x: 0svh;
+  --rot: -63deg;
+  --z: 46;
+  pointer-events: none;
+}
+.londoncard-text {
+  --left: 2348svh;
+  --scale: .20;
+  --y: 13svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 46;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .1;
+  --ta: center;
+  --tt: lowercase;
+  --text-color: #E1EFFA;
+}
+.blue-star-19 {
+  --left: 2354svh;
+  --scale: .07;
+  --y: -1svh;
+  --x: 0svh;
+  --rot: -10deg;
+  --z: 500;
+  pointer-events: none;
+}
+.londoncard-arrow-2 {
+  --left: 2355svh;
+  --scale: .04;
+  --y: 33svh;
+  --x: 0svh;
+  --rot: 170deg;
+  --z: 46;
+  pointer-events: none;
+}
+.silver-star3-17 {
+  --left: 2369svh;
+  --scale: .12;
+  --y: 15svh;
+  --x: 0svh;
+  --rot: -10deg;
+  --z: 500;
+  pointer-events: none;
+}
+.blue-star-20 {
+  --left: 2368svh;
+  --scale: .07;
+  --y: 4svh;
+  --x: 0svh;
+  --rot: -15deg;
+  --z: 500;
+  pointer-events: none;
+}
+.london-tv {
+  --left: 2340svh;
+  --scale: .435;
+  --y: 61svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 47;
+}
+.londoncard-front {
+  --left: 2368.5svh;
+  --scale: .35;
+  --y: 28svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 45;
+  pointer-events: none;
+}
+.film-strip {
+  --left: 2399svh;
+  --scale: .74;
+  --y: 25svh;
+  --x: 0svh;
+  --rot: -5deg;
+  --z: 44;
+  pointer-events: none;
+}
+.londoncard-back {
+  --left: 2379svh;
+  --scale: .26;
+  --y: 0svh;
+  --x: 3svh;
+  --rot: 0deg;
+  --z: 45;
+  pointer-events: none;
+}
+.dreamdotnet {
+  --left: 2415svh;
+  --scale: .25;
+  --y: 72svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 44;
+  pointer-events: none;
+}
+.church-video {
+  --left: 2419svh;
+  --scale: .30;
+  --ar: 336/299;
+  --y: 38svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 46;
+}
+.villains {
+  --left: 2421svh;
+  --scale: .30;
+  --y: 2svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 45;
+  pointer-events: none;
+}
+.strawberry {
+  --left: 2473svh;
+  --scale: .21;
+  --y: 75svh;
+  --x: 0svh;
+  --rot: 5deg;
+  --z: 46;
+  pointer-events: none;
+}
+.glow-star-13 {
+  --left: 2478svh;
+  --scale: .13;
+  --y: 61svh;
+  --x: 0svh;
+  --rot: 5deg;
+  --z: 46;
+  pointer-events: none;
+}
+.next-title {
+  --left: 2456svh;
+  --scale: .30;
+  --y: 40svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 70;
+  pointer-events: none;
+}
+.join-postcard {
+  --left: 2455svh;
+  --scale: .37;
+  --y: 2svh;
+  --x: 0svh;
+  --rot: 8deg;
+  --z: 46;
+}
+.presave-text {
+  --left: 2496svh;
+  --scale: .14;
+  --y: 71svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 71;
+  pointer-events: none;
+  --ff: "Thinker";
+  --fw: 400;
+  --fs-mul: .2;
+  --ta: center;
+  --tt: lowercase;
+  --text-color: #E1EFFA;
+}
+.presave-button {
+  --left: 2512svh;
+  --scale: .30;
+  --y: 37svh;
+  --x: 0svh;
+  --rot: 5deg;
+  --z: 71;
+}
+.im-stamp {
+  --left: 2525svh;
+  --scale: .25;
+  --y: 2svh;
+  --x: 0svh;
+  --rot: -5deg;
+  --z: 70;
+  pointer-events: none;
+}
+.thankyou-note {
+  --left: 2551svh;
+  --scale: .9;
+  --y: 5svh;
+  --x: 0svh;
+  --rot: -5deg;
+  --z: 71;
+  pointer-events: none;
+}
+.lock-logo {
+  --left: 2615svh;
+  --scale: .85;
+  --y: 13svh;
+  --x: 0svh;
+  --rot: 0deg;
+  --z: 71;
+  pointer-events: none;
+}
+.social-sparkles-2 {
+  --left: 2620svh;
+  --scale: .15;
+  --y: 4svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  pointer-events: none;
+}
+.instagram-2 {
+  --left: 2631svh;
+  --scale: .05;
+  --y: 9svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  outline: none;
+}
+.tiktok-2 {
+  --left: 2637svh;
+  --scale: .05;
+  --y: 9svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  outline: none;
+}
+.twitter-2 {
+  --left: 2642svh;
+  --scale: .05;
+  --y: 9svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  outline: none;
+}
+.discord-2 {
+  --left: 2649svh;
+  --scale: .05;
+  --y: 9svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  outline: none;
+}
+.spotify-2 {
+  --left: 2654svh;
+  --scale: .05;
+  --y: 9svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  outline: none;
+}
+.apple-music-2 {
+  --left: 2660svh;
+  --scale: .05;
+  --y: 9svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  outline: none;
+}
+.back-button {
+  --left: 2685svh;
+  --scale: .2;
+  --y: 40svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
