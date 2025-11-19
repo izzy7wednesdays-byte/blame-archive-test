@@ -1277,8 +1277,10 @@
   --z: 40;
 
   @include respond(xs) {
-    outline:magenta;
     --left: 542svh; 
+    outline: 2px dashed;
+    outline-color: magenta;
+    outline-offset: 6px;
   }
 }
 
