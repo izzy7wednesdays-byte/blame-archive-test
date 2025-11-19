@@ -702,6 +702,10 @@
 }
 
 .exitwounds-animation-mobile {
+  --left:250svh;
+  --scale: .5;
+  --y: 20svh;
+  --rot:0deg;
   display:none;
 
   @include respond(xs) {
