@@ -695,9 +695,14 @@
   display:none;
 
   @include respond(xs) {
+    display: flex!important;
+    position: absolute;
+    outline: 2px dashed;
+    outline-color: magenta;
+    outline-offset: 6px;
     --left:250svh;
     --scale: .33;
-    --y: 21svh;
+    --y: 10svh;
   }
 }
 
