@@ -252,13 +252,7 @@
   pointer-events: none;
   
   @include respond(xs) {
-    --left:25svh; 
-    --scale:.1; 
-    --y:3svh; 
-    --x:0svh; 
-    --rot:0deg; 
-    --z:4;
-    pointer-events: none;
+    display:none;
   }
 }
 
