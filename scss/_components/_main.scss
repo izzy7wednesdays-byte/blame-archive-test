@@ -261,6 +261,22 @@
     pointer-events: none;
   }
 }
+
+.lfg-mobile { 
+  display:none;
+  
+  @include respond(xs) {
+    display:flex;
+    position:absolute;
+    --left:25svh; 
+    --scale:.1; 
+    --y:3svh; 
+    --x:0svh; 
+    --rot:0deg; 
+    --z:4;
+    pointer-events: none;
+  }
+}
   
   .pink-arrow { 
     --left:123svh; 
