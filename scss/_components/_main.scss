@@ -701,8 +701,9 @@
     outline-color: magenta;
     outline-offset: 6px;
     --left:250svh;
-    --scale: .33;
-    --y: 10svh;
+    --scale: .5;
+    --y: 20svh;
+    --rot:0deg;
   }
 }
 
@@ -1329,8 +1330,8 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left: 560svh;    
-    --scale:.20;
+    --left: 557svh;    
+    --scale:.19;
   }
 }
 
@@ -1452,7 +1453,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 614svh;   
+    --left: 610svh;   
     --scale:.72;
   }
 }
@@ -1467,7 +1468,7 @@
   --z: 72;
 
   @include respond(xs) {
-    --left:620svh;
+    --left:640svh;
   }
 }
 
@@ -1488,7 +1489,7 @@
   --text-color: #4C58E9;
 
   @include respond(xs) {
-    --left:611svh;    
+    --left:631svh;    
   }
 }
 
@@ -1501,7 +1502,7 @@
   --z: 71;
 
   @include respond(xs) {
-    --left:631svh;      
+    --left:651svh;      
   }
 }
 
@@ -1522,7 +1523,7 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left:640svh;  
+    --left:670svh;  
     --scale:0.18;
   }
 }
@@ -1537,7 +1538,7 @@
   --z: 72;
 
   @include respond(xs) {
-    --left:640svh;  
+    --left:670svh;  
     --scale:0.30;    
   }
 }
@@ -1565,7 +1566,7 @@
   --z: 39;
 
   @include respond(xs) {
-    --left:650svh;  
+    --left:680svh;  
     --scale:0.30;    
   }
 }
