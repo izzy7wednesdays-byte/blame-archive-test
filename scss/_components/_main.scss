@@ -687,6 +687,14 @@
   pointer-events: none;
 
   @include respond(xs) {
+    display:none;
+  }
+}
+
+.exitwounds-animation-mobile {
+  display:none;
+
+  @include respond(xs) {
     --left:250svh;
     --scale: .33;
     --y: 21svh;
