@@ -713,7 +713,7 @@
     outline: 2px dashed;
     outline-color: magenta;
     outline-offset: 6px;
-    --left:250svh;
+    --left:247svh;
     --scale: .37;
     --y: 20svh;
     --rot:0deg;
@@ -1453,6 +1453,7 @@
 
   @include respond(xs) {
     --left: 639svh;
+    --y:67svh;
   }
 }
 
@@ -1481,7 +1482,7 @@
   --z: 72;
 
   @include respond(xs) {
-    --left:699svh;
+    --left:695svh;
   }
 }
 
@@ -1502,7 +1503,7 @@
   --text-color: #4C58E9;
 
   @include respond(xs) {
-    --left:690svh;    
+    --left:686svh;    
   }
 }
 
@@ -1515,8 +1516,8 @@
   --z: 71;
 
   @include respond(xs) {
-    --left:685svh;
-    --y:31svh;
+    --left:690svh;
+    --y:29svh;
   }
 }
 
