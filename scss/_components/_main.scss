@@ -1602,7 +1602,7 @@
 
   @include respond(xs) {
     --left: 705svh;
-    --scale: .18;
+    --scale: .22;
     --y: 30svh;
   }
 }
@@ -1617,7 +1617,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 710svh;
+    --left: 720svh;
     --y: 60svh;    
   }
 }
@@ -1631,7 +1631,7 @@
   --z: 50;
 
   @include respond(xs) {
-    --left: 715svh;
+    --left: 720svh;
   }
 }
 
