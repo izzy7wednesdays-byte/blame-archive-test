@@ -1665,7 +1665,7 @@
   --ta: center !important;
   --tt: uppercase;
   --text-color: #4CA8E9;
-  --text-max-w: 45ch;
+  --text-max-w: 43ch;
 
   @include respond(xs) {
     --left: 740svh;       
@@ -1853,8 +1853,8 @@
   --z: 81;
 
   @include respond(xs) {
-    --left: 925svh;  
-    --scale: .30;
+    --left: 870svh;  
+    --scale: .25;
   }
 }
 
@@ -1868,7 +1868,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 906svh;  
+    --left: 851svh;  
     --scale: .30;
   }
 }
@@ -1885,26 +1885,26 @@
   --ff: "Manic";
   --fw: 400;
   --fs-mul: .1;
-  --ta: center !important;
+  --ta: center;
   --tt: uppercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left:912svh;
-    --scale: .20;    
+    --left: 891svh;
+    --scale: .23;    
   }
 }
 
 .ep-telephone {
   --left: 1077svh;
-  --scale: .26;
+  --scale: .22;
   --y: 11svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 72;
 
   @include respond(xs) {
-    --left:911svh; 
+    --left:890svh; 
   }
 }
 
@@ -1925,7 +1925,7 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left:918svh;
+    --left:897svh;
   }
 }
 
@@ -1939,6 +1939,7 @@
   --z: 30;
 
   @include respond(xs) {
+    --left:907svh;    
   }
 }
 
@@ -1959,6 +1960,7 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
+    --left:906svh;      
   }
 }
 
@@ -1972,6 +1974,7 @@
   --z: 33;
 
   @include respond(xs) {
+    --left:921svh;         
   }
 }
 
