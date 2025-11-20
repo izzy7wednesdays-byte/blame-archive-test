@@ -1,8 +1,8 @@
 /* =========================================
-   MODAL / OVERLAY
+   OVERLAY AS MODAL
    ========================================= */
 
-/* Lock scrolling when any modal/overlay is open */
+/* Lock scrolling when overlay is open (matches reference modal behavior) */
 body.modal-open {
   overflow: hidden;
 }
@@ -27,35 +27,43 @@ body.modal-open {
   }
 }
 
-/* Inner “modal card” */
+/* Modal “window” */
 #overlay .ov-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  align-items: stretch;
+  justify-content: flex-start;
 
-  position: relative;
-  min-height: 15rem;
   max-width: 76rem;
   width: min(76rem, calc(100% - 2rem));
-
+  max-height: 90vh;        /* key: gives us a viewport height cap */
   padding: 0.3rem;
   border-radius: 1.5rem;
 
-  /* Keep this transparent so the image is the hero. */
-  background-color: transparent;
-
+  background-color: transparent; /* or a frame color if you want */
   box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.55);
-  overflow: hidden;
+  overflow: hidden;              /* keeps scroll area clipped to rounded corners */
 }
 
-/* Main overlay image – each overlay gets its own src via JS */
+/* Scrollable content area (image lives inside here) */
+#overlay .ov-scroll {
+  width: 100%;
+  max-height: calc(90vh - 1.5rem); /* slightly less than ov-card max-height */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-radius: 1.2rem;
+
+  /* optional: if you want a background behind the image */
+  /* background-color: #000; */
+}
+
+/* Background image itself */
 #overlay #overlay-img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 12px;
+  max-width: none;
   object-fit: contain;
 
   opacity: 0;
@@ -63,34 +71,30 @@ body.modal-open {
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-/* Animate image in when the overlay opens */
+/* Animate in when overlay opens */
 #overlay.is-open #overlay-img {
   opacity: 1;
   transform: scale(1);
 }
 
-/* “X” close button – using CSS vars for per-overlay adjustments
-   (JS sets --ov-x-top, --ov-x-left, --ov-x-size on .ov-card) */
+/* X button: fixed relative to the top of the card,
+   image scrolls underneath because it's inside .ov-scroll */
 #overlay .overlay-close {
   position: absolute;
   top: var(--ov-x-top, 3%);
   left: var(--ov-x-left, 3%);
   width: var(--ov-x-size, 2.7svh);
-  max-width: none;
   height: auto;
+  max-width: none;
 
-  display: block;
   cursor: pointer;
   -webkit-user-drag: none;
+  z-index: 2; /* above image & scroll area */
+
   transition: transform 0.18s ease, filter 0.18s ease;
 }
 
-/* Hover behavior similar spirit to reference red-circle button */
 #overlay .overlay-close:hover {
   transform: scale(1.05);
   filter: brightness(1.1);
 }
-
-/* If you want a literal red circle like the reference modal button,
-   you can wrap the X image in a button and style that as the circle,
-   or add a ::before pseudo-element here. For now we keep it simple. */
