@@ -535,8 +535,8 @@
   .play-lightsleeper-mobile {display: none;}
 
   @include respond(xs) {
-    --left:150svh;
-    --y:73svh;    
+    --left:152svh;
+    --y:7tsvh;    
     --scale: .20;
 
     .play-lightsleeper-desktop { display: none; }
