@@ -2062,7 +2062,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:947svh;
+    --left:950svh;
+    --y: 2svh;
   }
 }
 
