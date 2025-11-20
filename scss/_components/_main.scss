@@ -1600,6 +1600,9 @@
   pointer-events: none;
 
   @include respond(xs) {
+    --left: 705svh;
+    --scale: .18;
+    --y: 30svh;
   }
 }
 
@@ -1613,6 +1616,8 @@
   pointer-events: none;
 
   @include respond(xs) {
+    --left: 710svh;
+    --y: 60svh;    
   }
 }
 
@@ -1625,6 +1630,7 @@
   --z: 50;
 
   @include respond(xs) {
+    --left: 715svh;
   }
 }
 
