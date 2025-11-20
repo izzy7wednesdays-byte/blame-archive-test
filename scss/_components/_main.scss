@@ -1853,7 +1853,7 @@
   --z: 81;
 
   @include respond(xs) {
-    --left: 885svh;  
+    --left: 889svh;  
     --scale: 0.30;
     --y: 55svh;
   }
@@ -1869,7 +1869,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 868svh;  
+    --left: 873svh;  
     --scale: .30;
     --y: 57svh;
   }
