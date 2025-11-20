@@ -998,6 +998,7 @@
   --z: 28;
   
    @include respond(xs) {
+     display:none;
     --left:369svh;
   }
 }
