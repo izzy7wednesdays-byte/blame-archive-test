@@ -1451,6 +1451,7 @@
   --ta: center !important;
   --tt: uppercase;
   --text-color: #4CA8E9;
+  --text-max-w: 32ch;
 
   @include respond(xs) {
     --left: 637svh;
@@ -1601,7 +1602,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 705svh;
+    --left: 702svh;
     --scale: .22;
     --y: 30svh;
   }
@@ -1617,8 +1618,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 724svh;
-    --scale:0.33;
+    --left: 725svh;
+    --scale:0.31;
     --y: 60svh;    
   }
 }
@@ -1664,6 +1665,7 @@
   --ta: center !important;
   --tt: uppercase;
   --text-color: #4CA8E9;
+  --text-max-w: 32ch;
 
   @include respond(xs) {
     --left: 743svh;       
@@ -1780,7 +1782,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 868svh;
+    --left: 858svh;
   }
 }
 
@@ -1794,7 +1796,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 881svh;       
+    --left: 871svh;       
   }
 }
 
@@ -1808,7 +1810,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 888svh;         
+    --left: 878svh;         
   }
 }
 
@@ -1822,7 +1824,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 898svh;         
+    --left: 888svh;         
   }
 }
 
@@ -1849,7 +1851,8 @@
   --z: 81;
 
   @include respond(xs) {
-    --left: 960svh;       
+    --left: 945svh;  
+    --scale: .30;
   }
 }
 
@@ -1863,6 +1866,8 @@
   pointer-events: none;
 
   @include respond(xs) {
+    --left: 926svh;  
+    --scale: .30;
   }
 }
 
