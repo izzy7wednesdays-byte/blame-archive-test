@@ -1853,7 +1853,7 @@
   --z: 81;
 
   @include respond(xs) {
-    --left: 870svh;  
+    --left: 879svh;  
     --scale: .25;
   }
 }
@@ -1868,7 +1868,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 851svh;  
+    --left: 860svh;  
     --scale: .30;
   }
 }
@@ -1891,7 +1891,8 @@
 
   @include respond(xs) {
     --left: 891svh;
-    --scale: .23;    
+    --scale: .23;   
+    --y:36svh;
   }
 }
 
@@ -1939,7 +1940,7 @@
   --z: 30;
 
   @include respond(xs) {
-    --left:907svh;    
+    --left:912svh;    
   }
 }
 
@@ -1960,7 +1961,7 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left:906svh;      
+    --left:911svh;      
   }
 }
 
@@ -1988,6 +1989,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    --left:920svh;
   }
 }
 
@@ -2008,6 +2010,7 @@
   --text-color: #D9EBFF;
 
   @include respond(xs) {
+    --lefT: 926svh;
   }
 }
 
@@ -2021,6 +2024,7 @@
   --z: 30;
 
   @include respond(xs) {
+    --left: 941svh;
   }
 }
 
@@ -2041,6 +2045,7 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
+    --left: 939svh;
   }
 }
 
@@ -2054,6 +2059,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    --lefT: 1170svh;
   }
 }
 
@@ -2074,6 +2080,7 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
+    --left: 1191svh;
   }
 }
 
@@ -2087,6 +2094,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    --left: 1191svh;    
   }
 }
 
@@ -2100,6 +2108,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    --left: 1198svh;
   }
 }
 
