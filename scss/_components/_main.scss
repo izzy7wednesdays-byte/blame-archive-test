@@ -1618,7 +1618,7 @@
 
   @include respond(xs) {
     --left: 724svh;
-    --scale:0.35
+    --scale:0.35;
     --y: 60svh;    
   }
 }
