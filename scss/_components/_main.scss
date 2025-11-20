@@ -1451,7 +1451,7 @@
   --ta: center !important;
   --tt: uppercase;
   --text-color: #4CA8E9;
-  --text-max-w: 32ch;
+  --text-max-w: 40ch;
 
   @include respond(xs) {
     --left: 637svh;
@@ -1618,9 +1618,9 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 725svh;
+    --left: 727svh;
     --scale:0.31;
-    --y: 60svh;    
+    --y: 61svh;    
   }
 }
 
@@ -1665,7 +1665,7 @@
   --ta: center !important;
   --tt: uppercase;
   --text-color: #4CA8E9;
-  --text-max-w: 32ch;
+  --text-max-w: 40ch;
 
   @include respond(xs) {
     --left: 743svh;       
@@ -1738,7 +1738,8 @@
   --z: 710;
 
   @include respond(xs) {
-    --left: 825svh;    
+    --left: 825svh;  
+    display:none;
   }
 }
 
@@ -1782,7 +1783,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 858svh;
+    --left: 840svh;
   }
 }
 
@@ -1796,7 +1797,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 871svh;       
+    --left: 853svh;       
   }
 }
 
@@ -1810,7 +1811,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 878svh;         
+    --left: 857svh;         
   }
 }
 
@@ -1824,7 +1825,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 888svh;         
+    --left: 867svh;         
   }
 }
 
