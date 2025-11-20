@@ -714,7 +714,7 @@
     outline-color: magenta;
     outline-offset: 6px;
     --left:250svh;
-    --scale: .40;
+    --scale: .37;
     --y: 20svh;
     --rot:0deg;
   }
@@ -1481,7 +1481,7 @@
   --z: 72;
 
   @include respond(xs) {
-    --left:670svh;
+    --left:699svh;
   }
 }
 
@@ -1502,7 +1502,7 @@
   --text-color: #4C58E9;
 
   @include respond(xs) {
-    --left:661svh;    
+    --left:690svh;    
   }
 }
 
@@ -1515,7 +1515,7 @@
   --z: 71;
 
   @include respond(xs) {
-    --left:680svh;
+    --left:685svh;
     --y:31svh;
   }
 }
