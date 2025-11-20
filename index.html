@@ -268,10 +268,11 @@
       <figure class="slot slot--lottie slot--sc play-lightsleeper"
               id="play-lightsleeper"
               data-sc-url="https://soundcloud.com/izzy-macarthur/light-sleeper">
-      
-        <div class="lot-box">
+
+        <!-- DESKTOP -->
+        <div class="lot-box play-lightsleeper-desktop">
           <dotlottie-wc
-            src="Lottie/listen-to-lightsleeper.lottie"
+            data-lottie-src="Lottie/listen-to-lightsleeper.lottie"
             autoplay
             loop
             speed="0.25"
@@ -279,8 +280,13 @@
             style="width:100%;height:100%">
           </dotlottie-wc>
         </div>
+        
+        <!-- MOBILE -->
+        <img class="play-lightsleeper-mobile"
+         data-lazy-src="assets/img/play-lightsleeper-mobile.webp"
+         alt="Play Light Sleeper">
       
-        <!-- Invisible click layer that your SC JS listens for -->
+        <!-- Invisible click layer  -->
         <button class="sc-trigger"
                 type="button"
                 aria-label="Play Light Sleeper (SoundCloud)">
