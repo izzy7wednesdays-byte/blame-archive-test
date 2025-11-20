@@ -374,7 +374,7 @@ html, body {
 /* ========= REPLACE TEXT SLOT ========= */
 .slot--text .text-box {
   /* core type */
-  font-family: var(--ff, "Thinker"), var(--ff, "Manic") system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: var(--ff, "Thinker"), var(--ff, "Manic"), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: var(--fw, 400);
   font-style: var(--fstyle, normal);
   font-stretch: var(--fstr, normal);
