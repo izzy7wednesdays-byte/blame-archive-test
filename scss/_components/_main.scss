@@ -1665,7 +1665,7 @@
   --ta: center !important;
   --tt: uppercase;
   --text-color: #4CA8E9;
-  --text-max-w: 50ch;
+  --text-max-w: 45ch;
 
   @include respond(xs) {
     --left: 743svh;       
@@ -1783,7 +1783,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 830svh;
+    --left: 823svh!important;
     --scale: .58;
   }
 }
