@@ -421,11 +421,10 @@ html, body {
   filter: brightness(1.15);
 }
 
-/* ========= TEXT SLOT ========= */
-/* TEXT SLOT */
+/* ========= REPLACE TEXT SLOT ========= */
 .slot--text .text-box {
   /* core type */
-  font-family: var(--ff, "Thinker"), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: var(--ff, "Thinker"), var(--ff, "Manic"), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: var(--fw, 400);
   font-style: var(--fstyle, normal);
   font-stretch: var(--fstr, normal);
@@ -437,11 +436,13 @@ html, body {
   /* text behavior */
   text-align: var(--ta, left);
   text-transform: var(--tt, none);
-  white-space: var(--ws-mode, normal);
-  text-wrap: var(--wrap, pretty);
+  /* these two are the “line-break” controls, overridable per slot */
+  white-space: var(--ws-mode, normal); /* e.g. pre-line, pre, nowrap */
+  text-wrap: var(--wrap, pretty); /* e.g. normal, nowrap, balance */
   hyphens: var(--hy, manual);
   overflow-wrap: anywhere;
-  max-width: min(90svh, var(--ch, 28ch));
+  /* NEW: per-slot max width override, still supports --ch if you want */
+  max-width: var(--text-max-w, min(90svh, var(--ch, 28ch)));
   /* decoration / effects */
   text-decoration: var(--dec, none);
   text-underline-offset: var(--uoff, 0.15em);
@@ -2031,6 +2032,7 @@ html, body {
   --ta: center !important;
   --tt: uppercase;
   --text-color: #4CA8E9;
+  --text-max-w: 45ch;
 }
 @media (max-width: 36em) {
   .misery-wants-company-text {
@@ -2123,9 +2125,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-wlj-text {
-    --left:685svh;
+    --left:680svh;
     --scale:0.18;
-    --y:85svh;
+    --y:80svh;
   }
 }
 
@@ -2140,8 +2142,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-wlj {
-    --left:693svh;
-    --scale:0.34;
+    --left:692svh;
+    --scale:0.37;
+    --y: 55svh;
   }
 }
 
@@ -2184,6 +2187,14 @@ html, body {
   --z: 70;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .smurfette-1 {
+    --left: 702svh;
+    --scale: .22;
+    --y: 30svh;
+  }
+}
+
 .thestar-tarot {
   --left: 903svh;
   --scale: .38;
@@ -2193,6 +2204,14 @@ html, body {
   --z: 70;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .thestar-tarot {
+    --left: 729svh;
+    --scale:0.30;
+    --y: 61svh;
+  }
+}
+
 .play-sleepwalking {
   --left: 905svh;
   --scale: .2;
@@ -2201,6 +2220,12 @@ html, body {
   --rot: 10deg;
   --z: 50;
 }
+@media (max-width: 36em) {
+  .play-sleepwalking {
+    --left: 720svh;
+  }
+}
+
 .sleepwalking-radio {
   --left: 920svh;
   --scale: .22;
@@ -2209,6 +2234,12 @@ html, body {
   --rot: 0deg;
   --z: 40;
 }
+@media (max-width: 36em) {
+  .sleepwalking-radio {
+    --left: 740svh;
+  }
+}
+
 .sleepwalking-radio-text {
   --left: 923svh;
   --scale: .2;
@@ -2223,7 +2254,14 @@ html, body {
   --ta: center !important;
   --tt: uppercase;
   --text-color: #4CA8E9;
+  --text-max-w: 45ch;
 }
+@media (max-width: 36em) {
+  .sleepwalking-radio-text {
+    --left: 743svh;
+  }
+}
+
 .sleepwalking-radio-polaroid {
   --left: 954svh;
   --scale: .22;
@@ -2233,6 +2271,12 @@ html, body {
   --z: 40;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .sleepwalking-radio-polaroid {
+    --left: 771svh;
+  }
+}
+
 .sleepwalking-visualizer {
   --left: 944svh;
   --scale: .38;
@@ -2241,6 +2285,13 @@ html, body {
   --rot: 0deg;
   --z: 71;
 }
+@media (max-width: 36em) {
+  .sleepwalking-visualizer {
+    --left: 761svh;
+    --scale: .34;
+  }
+}
+
 .sleepwalking-title {
   --left: 938svh;
   --scale: .18;
@@ -2250,6 +2301,12 @@ html, body {
   --z: 100;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .sleepwalking-title {
+    --left: 755svh;
+  }
+}
+
 .sleepwalking-listeningparty {
   --left: 970svh;
   --scale: .35;
@@ -2259,6 +2316,13 @@ html, body {
   --rot: 0deg;
   --z: 50;
 }
+@media (max-width: 36em) {
+  .sleepwalking-listeningparty {
+    --left: 787svh;
+    --scale: 0.32;
+  }
+}
+
 .blue-star-8 {
   --left: 1008svh;
   --scale: .04;
@@ -2267,6 +2331,13 @@ html, body {
   --rot: -7deg;
   --z: 710;
 }
+@media (max-width: 36em) {
+  .blue-star-8 {
+    --left: 825svh;
+    display: none;
+  }
+}
+
 .about-sleepwalking {
   --left: 1009svh;
   --scale: .35;
@@ -2276,6 +2347,12 @@ html, body {
   --z: 71;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .about-sleepwalking {
+    --left: 826svh;
+  }
+}
+
 .sleepwalking-receipt {
   --left: 1051svh;
   --scale: .50;
@@ -2285,6 +2362,12 @@ html, body {
   --z: 70;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .sleepwalking-receipt {
+    --left: 868svh;
+  }
+}
+
 .ep-inspo {
   --left: 1007svh;
   --scale: .63;
@@ -2294,6 +2377,13 @@ html, body {
   --z: 71;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .ep-inspo {
+    --left: 823svh!important;
+    --scale: .58;
+  }
+}
+
 .silver-star1-3 {
   --left: 1020svh;
   --scale: .15;
@@ -2303,6 +2393,12 @@ html, body {
   --z: 710;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .silver-star1-3 {
+    --left: 853svh;
+  }
+}
+
 .blue-star-9 {
   --left: 1027svh;
   --scale: .06;
@@ -2312,6 +2408,12 @@ html, body {
   --z: 710;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .blue-star-9 {
+    --left: 857svh;
+  }
+}
+
 .silver-star3-7 {
   --left: 1037svh;
   --scale: .08;
@@ -2321,6 +2423,12 @@ html, body {
   --z: 710;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .silver-star3-7 {
+    --left: 867svh;
+  }
+}
+
 .top-spotify-sparkles {
   --left: 1075svh;
   --scale: .36;
@@ -2330,6 +2438,12 @@ html, body {
   --z: 32;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .top-spotify-sparkles {
+    display: none;
+  }
+}
+
 .ep-inspo-sp {
   --left: 1089svh;
   --scale: .35;
@@ -2338,6 +2452,13 @@ html, body {
   --rot: 0deg;
   --z: 81;
 }
+@media (max-width: 36em) {
+  .ep-inspo-sp {
+    --left: 925svh;
+    --scale: .30;
+  }
+}
+
 .bottom-spotify-sparkles {
   --left: 1070svh;
   --scale: .37;
@@ -2347,6 +2468,13 @@ html, body {
   --z: 32;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .bottom-spotify-sparkles {
+    --left: 906svh;
+    --scale: .30;
+  }
+}
+
 .ep-click-toread {
   --left: 1078svh;
   --scale: .25;
@@ -2362,6 +2490,13 @@ html, body {
   --tt: uppercase;
   --text-color: #4CA8E9;
 }
+@media (max-width: 36em) {
+  .ep-click-toread {
+    --left:912svh;
+    --scale: .20;
+  }
+}
+
 .ep-telephone {
   --left: 1077svh;
   --scale: .26;
@@ -2370,6 +2505,12 @@ html, body {
   --rot: 0deg;
   --z: 72;
 }
+@media (max-width: 36em) {
+  .ep-telephone {
+    --left:911svh;
+  }
+}
+
 .ep-phoningfriends {
   --left: 1085svh;
   --scale: .25;
@@ -2385,6 +2526,12 @@ html, body {
   --tt: uppercase;
   --text-color: #4CA8E9;
 }
+@media (max-width: 36em) {
+  .ep-phoningfriends {
+    --left:918svh;
+  }
+}
+
 .mixing-misery-1 {
   --left: 1115svh;
   --scale: .41;
@@ -4016,6 +4163,108 @@ html, body {
   --x: 8svh;
   --rot: 0deg;
   --z: 2;
+}
+/* =========================================
+   OVERLAY AS MODAL
+   ========================================= */
+/* Lock scrolling when overlay is open (matches reference modal behavior) */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Full-screen dark backdrop */
+#overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#overlay.is-open {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal “window” */
+#overlay .ov-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  max-width: 76rem;
+  width: min(76rem, 100% - 2rem);
+  max-height: 90vh; /* key: gives us a viewport height cap */
+  padding: 0.3rem;
+  border-radius: 1.5rem;
+  background-color: transparent; /* or a frame color if you want */
+  box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.55);
+  overflow: hidden; /* keeps scroll area clipped to rounded corners */
+}
+
+/* Scrollable content area (image lives inside here) */
+#overlay .ov-scroll {
+  width: 100%;
+  max-height: calc(90vh - 1.5rem); /* slightly less than ov-card max-height */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-radius: 1.2rem;
+  /* optional: if you want a background behind the image */
+  /* background-color: #000; */
+}
+
+/* Background image itself */
+#overlay #overlay-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Animate in when overlay opens */
+#overlay.is-open #overlay-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* X button: fixed relative to the top of the card,
+   image scrolls underneath because it's inside .ov-scroll */
+/* ===== Overlay "X" close button (scales with overlay) ===== */
+#overlay .ov-card {
+  position: relative;
+}
+
+#overlay .overlay-close {
+  position: absolute;
+  /* Position as percentages of the overlay card (or image) */
+  top: var(--ov-x-top, 3%);
+  left: var(--ov-x-left, 3%);
+  /* Size as a percentage of the overlay width, so it scales with the overlay */
+  width: var(--ov-x-size, 5%);
+  height: auto;
+  max-width: none;
+  cursor: pointer;
+  z-index: 200;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.18s ease, filter 0.18s ease;
+  display: block;
+  object-fit: contain;
+}
+
+#overlay .overlay-close:hover {
+  transform: scale(1.05);
+  filter: brightness(1.5);
 }
 
 /*# sourceMappingURL=style.css.map */
