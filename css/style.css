@@ -776,8 +776,19 @@ html, body {
 }
 @media (max-width: 36em) {
   .lfg {
+    display: none;
+  }
+}
+
+.lfg-mobile {
+  display: none;
+}
+@media (max-width: 36em) {
+  .lfg-mobile {
+    display: flex;
+    position: absolute;
     --left:25svh;
-    --scale:.1;
+    --scale:.07;
     --y:3svh;
     --x:0svh;
     --rot:0deg;
@@ -1007,7 +1018,6 @@ html, body {
     --left:177svh;
     --scale: .23;
     --y:30svh;
-    pointer-events: none;
   }
 }
 
@@ -1056,11 +1066,20 @@ html, body {
   background: transparent;
   cursor: pointer;
 }
+.play-lightsleeper .play-lightsleeper-mobile {
+  display: none;
+}
 @media (max-width: 36em) {
   .play-lightsleeper {
-    --left:145svh;
-    --y:73svh;
-    --scale: .28;
+    --left:152svh;
+    --y:75svh;
+    --scale: .20;
+  }
+  .play-lightsleeper .play-lightsleeper-desktop {
+    display: none;
+  }
+  .play-lightsleeper .play-lightsleeper-mobile {
+    display: block;
   }
 }
 
@@ -1227,9 +1246,23 @@ html, body {
 }
 @media (max-width: 36em) {
   .exitwounds-animation-1 {
-    --left:250svh;
+    display: none;
+  }
+}
+
+.exitwounds-animation-mobile {
+  display: none;
+}
+@media (max-width: 36em) {
+  .exitwounds-animation-mobile {
+    display: flex;
+    outline: 2px dashed;
+    outline-color: magenta;
+    outline-offset: 6px;
+    --left:243svh;
     --scale: .33;
-    --y: 21svh;
+    --y: 20svh;
+    --rot:0deg;
   }
 }
 
@@ -1299,7 +1332,7 @@ html, body {
   .read-susbstack-text {
     --left:286svh;
     --scale:.15;
-    --y:78svh;
+    --y:76svh;
   }
 }
 
@@ -1334,7 +1367,7 @@ html, body {
   .scorpio-constellation {
     --left: 270svh;
     --scale: .22;
-    --y: 40svh;
+    --y: 42svh;
   }
 }
 
@@ -1885,7 +1918,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-ogchorus-text {
-    --left: 562svh;
+    --left: 557svh;
+    --scale:.19;
   }
 }
 
@@ -1915,9 +1949,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .about-misery {
-    --left: 584svh;
+    --left: 582svh;
     --scale:0.50;
-    --y:45svh;
+    --y:47svh;
   }
 }
 
@@ -1932,7 +1966,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-6 {
-    --left: 606svh;
+    display: none;
+    --left: 604svh;
   }
 }
 
@@ -1947,7 +1982,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .kat-stratford-dancing {
-    --left: 580svh;
+    --left: 577svh;
     --scale:.19;
   }
 }
@@ -1963,7 +1998,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .solo-cups {
-    --left: 601svh;
+    --left: 598svh;
   }
 }
 
@@ -1977,7 +2012,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-wants-company {
-    --left: 647svh;
+    --left: 637svh;
+    --y:73svh;
   }
 }
 
@@ -1998,7 +2034,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-wants-company-text {
-    --left: 645svh;
+    --left: 637svh;
+    --y:63svh;
   }
 }
 
@@ -2013,7 +2050,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-title {
-    --left: 614svh;
+    --left: 605svh;
+    --scale:.72;
   }
 }
 
@@ -2026,6 +2064,12 @@ html, body {
   --rot: 0deg;
   --z: 72;
 }
+@media (max-width: 36em) {
+  .vocals-misery-4 {
+    --left:715svh;
+  }
+}
+
 .vocals-misery-4-text {
   --left: 840svh;
   --scale: .2;
@@ -2041,6 +2085,12 @@ html, body {
   --tt: lowercase;
   --text-color: #4C58E9;
 }
+@media (max-width: 36em) {
+  .vocals-misery-4-text {
+    --left:706svh;
+  }
+}
+
 .play-misery {
   --left: 861svh;
   --scale: .22;
@@ -2049,6 +2099,13 @@ html, body {
   --rot: -10deg;
   --z: 71;
 }
+@media (max-width: 36em) {
+  .play-misery {
+    --left:690svh;
+    --y:29svh;
+  }
+}
+
 .misery-wlj-text {
   --left: 875svh;
   --scale: .2;
@@ -2064,6 +2121,13 @@ html, body {
   --tt: uppercase;
   --text-color: #4CA8E9;
 }
+@media (max-width: 36em) {
+  .misery-wlj-text {
+    --left:690svh;
+    --scale:0.18;
+  }
+}
+
 .misery-wlj {
   --left: 878svh;
   --scale: .35;
@@ -2073,6 +2137,13 @@ html, body {
   --rot: 0deg;
   --z: 72;
 }
+@media (max-width: 36em) {
+  .misery-wlj {
+    --left:690svh;
+    --scale:0.30;
+  }
+}
+
 .star-trio-2 {
   --left: 886svh;
   --scale: .34;
@@ -2082,6 +2153,12 @@ html, body {
   --z: 73;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .star-trio-2 {
+    display: none;
+  }
+}
+
 .misery-visualizer {
   --left: 853svh;
   --scale: .38;
@@ -2090,6 +2167,13 @@ html, body {
   --rot: 0deg;
   --z: 39;
 }
+@media (max-width: 36em) {
+  .misery-visualizer {
+    --left:680svh;
+    --scale:0.30;
+  }
+}
+
 .smurfette-1 {
   --left: 884svh;
   --scale: .25;
