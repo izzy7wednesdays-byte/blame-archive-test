@@ -79,22 +79,33 @@ body.modal-open {
 
 /* X button: fixed relative to the top of the card,
    image scrolls underneath because it's inside .ov-scroll */
+/* ===== Overlay "X" close button (scales with overlay) ===== */
+#overlay .ov-card {
+  position: relative; // make sure this is set so the X is anchored to the card
+}
+
 #overlay .overlay-close {
   position: absolute;
+
+  /* Position as percentages of the overlay card (or image) */
   top: var(--ov-x-top, 3%);
   left: var(--ov-x-left, 3%);
-  width: var(--ov-x-size, 2.7svh);
+
+  /* Size as a percentage of the overlay width, so it scales with the overlay */
+  width: var(--ov-x-size, 5%);
   height: auto;
   max-width: none;
 
   cursor: pointer;
+  z-index: 200;
+  user-select: none;
   -webkit-user-drag: none;
-  z-index: 2; /* above image & scroll area */
-
   transition: transform 0.18s ease, filter 0.18s ease;
+  display: block;
+  object-fit: contain;
 }
 
 #overlay .overlay-close:hover {
   transform: scale(1.05);
-  filter: brightness(1.1);
+  filter: brightness(1.5);
 }
