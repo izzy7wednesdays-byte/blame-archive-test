@@ -817,7 +817,7 @@
   @include respond(xs) {
     --left: 270svh;
     --scale: .22;
-    --y: 40svh;
+    --y: 42svh;
   }
 }
 
@@ -1431,7 +1431,8 @@
   --z: 40;
 
   @include respond(xs) {
-    --left: 640svh;
+    --left: 637svh;
+    --y:73svh;
   }
 }
 
@@ -1452,8 +1453,8 @@
   --text-color: #4CA8E9;
 
   @include respond(xs) {
-    --left: 639svh;
-    --y:67svh;
+    --left: 637svh;
+    --y:63svh;
   }
 }
 
@@ -1482,7 +1483,7 @@
   --z: 72;
 
   @include respond(xs) {
-    --left:695svh;
+    --left:715svh;
   }
 }
 
@@ -1503,7 +1504,7 @@
   --text-color: #4C58E9;
 
   @include respond(xs) {
-    --left:686svh;    
+    --left:706svh;    
   }
 }
 
