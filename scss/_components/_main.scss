@@ -1991,7 +1991,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:947svh;
+    display:none;
   }
 }
 
@@ -2012,7 +2012,7 @@
   --text-color: #D9EBFF;
 
   @include respond(xs) {
-    --left: 953svh;
+    display: none;
   }
 }
 
@@ -2061,7 +2061,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --lefT: 959svh;
+    --left:947svh;
   }
 }
 
