@@ -1,1 +1,96 @@
-// TODO: fill this later
+/* =========================================
+   MODAL / OVERLAY
+   ========================================= */
+
+/* Lock scrolling when any modal/overlay is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Full-screen dark backdrop */
+#overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &.is-open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Inner “modal card” */
+#overlay .ov-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  position: relative;
+  min-height: 15rem;
+  max-width: 76rem;
+  width: min(76rem, calc(100% - 2rem));
+
+  padding: 0.3rem;
+  border-radius: 1.5rem;
+
+  /* Keep this transparent so the image is the hero. */
+  background-color: transparent;
+
+  box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+
+/* Main overlay image – each overlay gets its own src via JS */
+#overlay #overlay-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Animate image in when the overlay opens */
+#overlay.is-open #overlay-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* “X” close button – using CSS vars for per-overlay adjustments
+   (JS sets --ov-x-top, --ov-x-left, --ov-x-size on .ov-card) */
+#overlay .overlay-close {
+  position: absolute;
+  top: var(--ov-x-top, 3%);
+  left: var(--ov-x-left, 3%);
+  width: var(--ov-x-size, 2.7svh);
+  max-width: none;
+  height: auto;
+
+  display: block;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+/* Hover behavior similar spirit to reference red-circle button */
+#overlay .overlay-close:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* If you want a literal red circle like the reference modal button,
+   you can wrap the X image in a button and style that as the circle,
+   or add a ::before pseudo-element here. For now we keep it simple. */
