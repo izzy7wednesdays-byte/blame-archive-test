@@ -533,10 +533,15 @@
     cursor: pointer;
   }
 
+  .play-lightsleeper-mobile {display: none;}
+
   @include respond(xs) {
     --left:145svh;
     --y:73svh;    
     --scale: .28;
+
+    .play-lightsleeper-desk { display: none; }
+    .play-lightsleeper-mobile { display: block; }
   }
 }
 
@@ -705,7 +710,7 @@
   display:none;
 
   @include respond(xs) {
-    display: flex!important;
+    display: flex;
     outline: 2px dashed;
     outline-color: magenta;
     outline-offset: 6px;
