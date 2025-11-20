@@ -456,15 +456,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     overlay.classList.add("is-open");
     overlay.setAttribute("aria-hidden", "false");
-    // Optional: lock body scroll if you want
-    // document.body.classList.add("overlay-open");
+
+    // Match reference modal behavior: lock background via body.modal-open
+    document.body.classList.add("modal-open");
   }
 
   // Close overlay and clean up
   function closeOverlay() {
     overlay.classList.remove("is-open");
     overlay.setAttribute("aria-hidden", "true");
-    // document.body.classList.remove("overlay-open");
+
+    // Remove body lock, same as reference modal script
+    document.body.classList.remove("modal-open");
 
     // Let any fade-out animation run before clearing
     setTimeout(() => {
@@ -493,15 +496,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const src = slot.getAttribute("data-overlay-src");
       if (!src) {
-        console.warn("[Overlay] Slot missing data-overlay-src:", slot);
+        console.warn("[Overlay] Slot clicked without data-overlay-src", slot);
         return;
       }
 
-      // Prefer explicit overlay alt, then inner img alt, then empty string
-      const innerImg = slot.querySelector("img");
+      // Use data-overlay-alt if present, else inherit from inner <img> alt
       const alt =
         slot.getAttribute("data-overlay-alt") ||
-        (innerImg ? innerImg.getAttribute("alt") || "" : "");
+        (slot.querySelector("img")?.getAttribute("alt")) ||
+        "";
 
       openOverlay(src, alt, slot);
     });
