@@ -2123,8 +2123,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-wlj-text {
-    --left:690svh;
+    --left:685svh;
     --scale:0.18;
+    --y:85svh;
   }
 }
 
@@ -2139,8 +2140,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-wlj {
-    --left:690svh;
-    --scale:0.30;
+    --left:693svh;
+    --scale:0.34;
   }
 }
 
