@@ -1451,7 +1451,7 @@
   --ta: center !important;
   --tt: uppercase;
   --text-color: #4CA8E9;
-  --text-max-w: 50ch;
+  --text-max-w: 45ch;
 
   @include respond(xs) {
     --left: 637svh;
