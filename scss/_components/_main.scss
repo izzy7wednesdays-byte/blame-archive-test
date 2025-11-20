@@ -1515,7 +1515,8 @@
   --z: 71;
 
   @include respond(xs) {
-    --left:671svh;      
+    --left:680svh;
+    --y:31svh;
   }
 }
 
@@ -1551,7 +1552,7 @@
   --z: 72;
 
   @include respond(xs) {
-    --left:687svh;  
+    --left:690svh;  
     --scale:0.30;    
   }
 }
