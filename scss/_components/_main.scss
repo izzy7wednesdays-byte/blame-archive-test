@@ -2266,6 +2266,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    --left:1101svh;
   }
 }
 
@@ -2279,6 +2280,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    --left:1100svh;
   }
 }
 
@@ -2292,6 +2294,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    --left:1100svh;
   }
 }
 
@@ -2305,6 +2308,7 @@
   --z: 32;
 
   @include respond(xs) {
+    --left:1102svh;    
   }
 }
 
@@ -2318,6 +2322,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    --left: 1134svh;
   }
 }
 
@@ -2331,6 +2336,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    --left:1129svh;
   }
 }
 
