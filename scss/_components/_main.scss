@@ -1853,8 +1853,8 @@
   --z: 81;
 
   @include respond(xs) {
-    --left: 889svh;  
-    --scale: 0.30;
+    --left: 891svh;  
+    --scale: 0.28;
     --y: 55svh;
   }
 }
@@ -1870,7 +1870,7 @@
 
   @include respond(xs) {
     --left: 873svh;  
-    --scale: .30;
+    --scale: .33;
     --y: 57svh;
   }
 }
@@ -1991,7 +1991,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:940svh;
+    --left:947svh;
   }
 }
 
@@ -2012,7 +2012,7 @@
   --text-color: #D9EBFF;
 
   @include respond(xs) {
-    --left: 946svh;
+    --left: 953svh;
   }
 }
 
