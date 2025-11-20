@@ -482,7 +482,6 @@
     --left:177svh;
     --scale: .23;
     --y:30svh;
-    pointer-events:none;
   }
 }
 
@@ -536,9 +535,9 @@
   .play-lightsleeper-mobile {display: none;}
 
   @include respond(xs) {
-    --left:145svh;
+    --left:150svh;
     --y:73svh;    
-    --scale: .28;
+    --scale: .20;
 
     .play-lightsleeper-desktop { display: none; }
     .play-lightsleeper-mobile { display: block; }
