@@ -1451,7 +1451,7 @@
   --ta: center !important;
   --tt: uppercase;
   --text-color: #4CA8E9;
-  --text-max-w: 40ch;
+  --text-max-w: 50ch;
 
   @include respond(xs) {
     --left: 637svh;
@@ -1618,8 +1618,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 727svh;
-    --scale:0.31;
+    --left: 729svh;
+    --scale:0.30;
     --y: 61svh;    
   }
 }
@@ -1665,7 +1665,7 @@
   --ta: center !important;
   --tt: uppercase;
   --text-color: #4CA8E9;
-  --text-max-w: 40ch;
+  --text-max-w: 50ch;
 
   @include respond(xs) {
     --left: 743svh;       
@@ -1783,7 +1783,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 840svh;
+    --left: 830svh;
+    --scale: .58;
   }
 }
 
