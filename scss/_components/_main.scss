@@ -1617,7 +1617,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 720svh;
+    --left: 724svh;
+    --scale:0.35
     --y: 60svh;    
   }
 }
