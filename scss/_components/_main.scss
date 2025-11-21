@@ -232,8 +232,8 @@
   pointer-events: none;
   
   @include respond(xs) {
-    --left:18svh; 
-    --scale:.18; 
+    --left:20svh; 
+    --scale:.20; 
     --y:28svh; 
     --x:0svh; 
     --rot:0deg; 
@@ -262,9 +262,9 @@
   @include respond(xs) {
     display:flex;
     position:absolute;
-    --left:25svh; 
+    --left:27svh; 
     --scale:.04; 
-    --y:3svh; 
+    --y:4svh; 
     --x:0svh; 
     --rot:0deg; 
     --z:4;
@@ -369,7 +369,7 @@
 
   @include respond(xs) {
     --left:102svh; 
-    --scale:.33; 
+    --scale:.30; 
     --y:72svh; 
     --x:-4svh; 
     --rot:-5deg;
@@ -535,8 +535,11 @@
   .play-lightsleeper-mobile {display: none;}
 
   @include respond(xs) {
-    --left:152svh;
-    --y:75svh;    
+    //--left:152svh;
+    //--y:75svh;    
+    //--scale: .20;
+    --left:150svh;
+    --y:24svh;    
     --scale: .20;
 
     .play-lightsleeper-desktop { display: none; }
@@ -568,9 +571,12 @@
   --z:9;
 
   @include respond(xs) {
-    --left:150svh;
+    //--left:150svh;
     --scale:.23;
-    --y:24svh;
+   // --y:24svh;
+    --left:152svh;
+    //--scale:.20;
+    --y:65svh;
   }
 }
 
