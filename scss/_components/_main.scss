@@ -20,7 +20,7 @@
     position: absolute;
     --left: 12svh;
     --scale: .84;
-    --y: 17svh;
+    --y: 16svh;
     --x: 0svh;
     --rot: 0deg;
     --z: 1;
@@ -224,7 +224,7 @@
 
 .the-scrapbook {
   --left:65svh; 
-  --scale:.45; 
+  --scale:.4; 
   --y:12svh; 
   --x:0svh; 
   --rot:0deg; 
@@ -233,7 +233,7 @@
   
   @include respond(xs) {
     --left:18svh; 
-    --scale:.27; 
+    --scale:.24; 
     --y:26svh; 
     --x:0svh; 
     --rot:0deg; 
