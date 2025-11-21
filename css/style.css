@@ -2397,8 +2397,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-inspo {
-    --left: 823svh;
-    --scale: .58;
+    --left: 820svh;
+    --scale: .50;
   }
 }
 
