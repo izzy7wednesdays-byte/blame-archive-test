@@ -1677,6 +1677,7 @@ html, body {
 }
 
 .landmines-title {
+  display: flex;
   --left: 578svh;
   --scale: .17;
   --y: 38svh;
@@ -1687,9 +1688,25 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-title {
+    display: none;
     --left: 437svh;
     --scale:.14;
     --y:40svh;
+  }
+}
+
+.landmines-title-mobile {
+  display: none;
+  --left: 437svh;
+  --scale:.14;
+  --y:40svh;
+  --z: 30;
+  pointer-events: none;
+}
+@media (max-width: 36em) {
+  .landmines-title-mobile {
+    display: flex;
+    position: absolute;
   }
 }
 
@@ -3100,7 +3117,7 @@ html, body {
 @media (max-width: 36em) {
   .silver-star3-8 {
     display: none;
-    --left:1249svh;
+    --left: 1249svh;
   }
 }
 
@@ -3404,7 +3421,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-9 {
-    --left:1389svh;
+    --left: 1389svh;
   }
 }
 
@@ -3449,7 +3466,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-10 {
-    --left:1405svh;
+    --left: 1405svh;
   }
 }
 
@@ -4052,7 +4069,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-matches {
-    --left:1518svh;
+    --left:1718svh;
   }
 }
 
@@ -4130,6 +4147,7 @@ html, body {
   --ta: center;
   --tt: lowercase;
   --text-color: #4CA8E9;
+  --text-max-w: 48ch;
 }
 @media (max-width: 36em) {
   .pretty-little-liars-text {
@@ -4285,7 +4303,7 @@ html, body {
 }
 
 .poster {
-  --left: 2074svh;
+  --left: 2080svh;
   --scale: .45;
   --y: 2svh;
   --x: 0svh;
@@ -4328,7 +4346,7 @@ html, body {
 }
 
 .sims {
-  --left: 2111svh;
+  --left: 2114svh;
   --scale: .10;
   --y: 35svh;
   --x: 0svh;
@@ -4338,7 +4356,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sims {
-    --left:1906svh;
+    --left:1909svh;
   }
 }
 
@@ -4797,6 +4815,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-19 {
+    display: none;
     --left:2149svh;
   }
 }
