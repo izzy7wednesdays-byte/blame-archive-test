@@ -224,7 +224,7 @@
 
 .the-scrapbook {
   --left:65svh; 
-  --scale:.5; 
+  --scale:.45; 
   --y:12svh; 
   --x:0svh; 
   --rot:0deg; 
@@ -233,7 +233,7 @@
   
   @include respond(xs) {
     --left:18svh; 
-    --scale:.32; 
+    --scale:.27; 
     --y:26svh; 
     --x:0svh; 
     --rot:0deg; 
