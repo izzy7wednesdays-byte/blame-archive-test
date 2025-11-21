@@ -3099,6 +3099,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-8 {
+    display: none;
     --left:1249svh;
   }
 }
