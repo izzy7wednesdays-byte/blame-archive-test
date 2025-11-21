@@ -183,9 +183,9 @@
 }
 
 .torn-note {
-  --left: 11svh;
-  --scale: .57;
-  --y: -9svh;
+  --left: 13svh;
+  --scale: .54;
+  --y: -6svh;
   --x: -2svh;
   --rot: 0deg;
   --z: 3;
@@ -193,10 +193,10 @@
   
   @include respond(xs) {
     --left:41svh; 
-    --scale:.35; 
-    --y:63svh; 
+    --scale:.32; 
+    --y:64svh; 
     --x:15svh; 
-    --rot:10deg; 
+    --rot:12deg; 
     --z:4;
     pointer-events: none;
   }
