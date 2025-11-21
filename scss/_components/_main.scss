@@ -3467,6 +3467,7 @@
 
   @include respond(xs) {
     --left:1785svh;
+    --text-max-w: 23ch;
   }
 }
 
@@ -3527,6 +3528,7 @@
   --ta: center;
   --tt: lowercase;
   --text-color: #4CA8E9;
+  --text-max-w: 55ch;
 
   @include respond(xs) {
     --left:1827svh;
@@ -3619,7 +3621,7 @@
   --z: 61;
 
   @include respond(xs) {
-    --left:1869svh;
+    --left:1885svh;
   }
 }
 
