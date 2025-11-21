@@ -3595,7 +3595,7 @@
 }
 
 .poster {
-  --left: 2074svh;
+  --left: 2080svh;
   --scale: .45;
   --y: 2svh;
   --x: 0svh;
@@ -3635,7 +3635,7 @@
 }
 
 .sims {
-  --left: 2111svh;
+  --left: 2114svh;
   --scale: .10;
   --y: 35svh;
   --x: 0svh;
@@ -3644,7 +3644,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1906svh;
+    --left:1909svh;
   }
 }
 
