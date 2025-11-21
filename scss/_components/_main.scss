@@ -1117,7 +1117,7 @@
 }
 
 .landmines-title {
-  display:flex!important;
+  display: flex!important;
   --left: 578svh;
   --scale: .17;
   --y: 38svh;
@@ -1127,7 +1127,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    display:none;
+    display:none !important;
     --left: 437svh;
     --scale:.14;
     --y:40svh;
@@ -1143,7 +1143,7 @@
     pointer-events: none;
 
     @include respond(xs) {
-      display: flex;
+      display: flex!important;
       position: absolute;
   }   
 }
@@ -3286,8 +3286,8 @@
 }
 
 .exitwounds-subway {
-  --left: 1801svh;
-  --scale: .29;
+  --left: 18010svh;
+  --scale: .35;
   --y: 18svh;
   --x: 0svh;
   --rot: -3deg;
@@ -3295,7 +3295,9 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1596svh;
+    --left:1609svh;
+    --scale: .35;
+    --y: 0svh;
   }
 }
 
@@ -3630,7 +3632,7 @@
   --z: 61;
 
   @include respond(xs) {
-    --left:1872svh;
+    --left:1870svh;
   }
 }
 
@@ -3658,12 +3660,14 @@
   --z: 60;
 
   @include respond(xs) {
-    --left:1896svh;
+    --left:1893svh;
+    --scale: .14;
+    --y: 54svh;
   }
 }
 
 .sims {
-  --left: 2114svh;
+  --left: 2117svh;
   --scale: .10;
   --y: 35svh;
   --x: 0svh;
@@ -3672,12 +3676,12 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1909svh;
+    --left:1912svh;
   }
 }
 
 .selfie-poster {
-  --left: 2104svh;
+  --left: 2107svh;
   --scale: .35;
   --y: 1svh;
   --x: 0svh;
@@ -3686,7 +3690,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1899svh;
+    --left:1902svh;
   }
 }
 
@@ -3704,6 +3708,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    display:none;
     --left:1931svh;
   }
 }
@@ -3718,7 +3723,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1925svh;
+    --left:19228svh;
+    --scale: .55;
     --y:2svh;
   }
 }
@@ -3747,7 +3753,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1958svh;
+    --left:1964svh;
+    --y: 38svh;
   }
 }
 
