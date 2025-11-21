@@ -2959,7 +2959,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .scrabble-piece {
-    --left:1131svh;
+    --left:1129svh;
   }
 }
 
@@ -3008,6 +3008,12 @@ html, body {
   --rot: 0deg;
   --z: 32;
 }
+@media (max-width: 36em) {
+  .mixing-sleepwalking-2 {
+    --left:1153svh;
+  }
+}
+
 .ep-tweet {
   --left: 1353svh;
   --scale: .48;
@@ -3019,7 +3025,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-tweet {
-    --left:1150svh;
+    --left:1147svh;
   }
 }
 
@@ -3034,7 +3040,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .starterpack {
-    --left:1166svh;
+    --left:1170svh;
   }
 }
 
@@ -4043,6 +4049,12 @@ html, body {
   --z: 60;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .landmines-matches {
+    --left:1518svh;
+  }
+}
+
 .blue-star-16 {
   --left: 1924svh;
   --scale: .11;
@@ -4052,6 +4064,12 @@ html, body {
   --z: 400;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .blue-star-16 {
+    --left:1719svh;
+  }
+}
+
 .fire-meme {
   --left: 1950svh;
   --scale: .26;
@@ -4061,6 +4079,12 @@ html, body {
   --z: 60;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .fire-meme {
+    --left:1745svh;
+  }
+}
+
 .silver-star3-13 {
   --left: 1964svh;
   --scale: .13;
@@ -4070,6 +4094,12 @@ html, body {
   --z: 60;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .silver-star3-13 {
+    --left:1759svh;
+  }
+}
+
 .pretty-little-liars {
   --left: 1990svh;
   --scale: .22;
@@ -4079,6 +4109,12 @@ html, body {
   --z: 60;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .pretty-little-liars {
+    --left:1785svh;
+  }
+}
+
 .pretty-little-liars-text {
   --left: 1990svh;
   --scale: .22;
@@ -4094,6 +4130,12 @@ html, body {
   --tt: lowercase;
   --text-color: #4CA8E9;
 }
+@media (max-width: 36em) {
+  .pretty-little-liars-text {
+    --left:1785svh;
+  }
+}
+
 .m-title {
   --left: 1960svh;
   --scale: .13;
@@ -4103,6 +4145,12 @@ html, body {
   --z: 61;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .m-title {
+    --left:1755svh;
+  }
+}
+
 .candle-lighting {
   --left: 1983svh;
   --scale: .40;
@@ -4112,6 +4160,12 @@ html, body {
   --rot: 0deg;
   --z: 60;
 }
+@media (max-width: 36em) {
+  .candle-lighting {
+    --left:1778svh;
+  }
+}
+
 .early-posters {
   --left: 2004svh;
   --scale: .45;
@@ -4121,6 +4175,12 @@ html, body {
   --z: 59;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .early-posters {
+    --left:1799svh;
+  }
+}
+
 .early-posters-text {
   --left: 2032svh;
   --scale: .2;
@@ -4136,6 +4196,12 @@ html, body {
   --tt: lowercase;
   --text-color: #4CA8E9;
 }
+@media (max-width: 36em) {
+  .early-posters-text {
+    --left:1827svh;
+  }
+}
+
 .poster-arrow {
   --left: 2052svh;
   --scale: .10;
@@ -4145,6 +4211,12 @@ html, body {
   --z: 60;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .poster-arrow {
+    --left:1847svh;
+  }
+}
+
 .thank-you-text {
   --left: 2053svh;
   --scale: .2;
@@ -4160,6 +4232,12 @@ html, body {
   --tt: lowercase;
   --text-color: #4CA8E9;
 }
+@media (max-width: 36em) {
+  .thank-you-text {
+    --left:1848svh;
+  }
+}
+
 .about-matchbooks {
   --left: 2032svh;
   --scale: .2;
@@ -4169,6 +4247,12 @@ html, body {
   --z: 60;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .about-matchbooks {
+    --left:1827svh;
+  }
+}
+
 .sticker-1 {
   --left: 2074svh;
   --scale: .24;
@@ -4178,6 +4262,12 @@ html, body {
   --z: 60;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .sticker-1 {
+    --left:1869svh;
+  }
+}
+
 .sticker-3 {
   --left: 2072svh;
   --scale: .24;
@@ -4187,6 +4277,12 @@ html, body {
   --z: 60;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .sticker-3 {
+    --left:1867svh;
+  }
+}
+
 .poster {
   --left: 2074svh;
   --scale: .45;
@@ -4195,6 +4291,12 @@ html, body {
   --rot: -3deg;
   --z: 61;
 }
+@media (max-width: 36em) {
+  .poster {
+    --left:1869svh;
+  }
+}
+
 .sticker-2 {
   --left: 2105svh;
   --scale: .24;
@@ -4204,6 +4306,12 @@ html, body {
   --z: 60;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .sticker-2 {
+    --left:1900svh;
+  }
+}
+
 .buy-button {
   --left: 2096svh;
   --scale: .17;
@@ -4212,6 +4320,12 @@ html, body {
   --rot: 5deg;
   --z: 60;
 }
+@media (max-width: 36em) {
+  .buy-button {
+    --left:1896svh;
+  }
+}
+
 .sims {
   --left: 2111svh;
   --scale: .10;
@@ -4221,6 +4335,12 @@ html, body {
   --z: 61;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .sims {
+    --left:1906svh;
+  }
+}
+
 .selfie-poster {
   --left: 2104svh;
   --scale: .35;
@@ -4230,6 +4350,12 @@ html, body {
   --z: 60;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .selfie-poster {
+    --left:1809svh;
+  }
+}
+
 .glow-star-7 {
   --left: 2136svh;
   --scale: .12;
@@ -4239,6 +4365,12 @@ html, body {
   --z: 400;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .glow-star-7 {
+    --left:1931svh;
+  }
+}
+
 .london-title {
   --left: 2120svh;
   --scale: .25;
@@ -4248,6 +4380,12 @@ html, body {
   --z: 40;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .london-title {
+    --left:1915svh;
+  }
+}
+
 .glow-star-8 {
   --left: 2159svh;
   --scale: .10;
@@ -4257,6 +4395,12 @@ html, body {
   --z: 440;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .glow-star-8 {
+    --left:1954svh;
+  }
+}
+
 .hangout-poster {
   --left: 2159svh;
   --scale: .71;
@@ -4266,6 +4410,12 @@ html, body {
   --z: 44;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .hangout-poster {
+    --left:1954svh;
+  }
+}
+
 .london-camcorder {
   --left: 2149svh;
   --scale: .26;
@@ -4275,6 +4425,12 @@ html, body {
   --z: 42;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .london-camcorder {
+    --left:1944svh;
+  }
+}
+
 .london-live-1 {
   --left: 2177svh;
   --scale: .30;
@@ -4284,6 +4440,12 @@ html, body {
   --rot: -2deg;
   --z: 41;
 }
+@media (max-width: 36em) {
+  .london-live-1 {
+    --left:1972svh;
+  }
+}
+
 .london-live-2 {
   --left: 2198svh;
   --scale: .38;
@@ -4293,6 +4455,12 @@ html, body {
   --rot: 0deg;
   --z: 43;
 }
+@media (max-width: 36em) {
+  .london-live-2 {
+    --left:1993svh;
+  }
+}
+
 .hangout-vlog {
   --left: 2214svh;
   --scale: .35;
@@ -4301,6 +4469,12 @@ html, body {
   --rot: 0deg;
   --z: 57;
 }
+@media (max-width: 36em) {
+  .hangout-vlog {
+    --left:2009svh;
+  }
+}
+
 .rsvp-cloud {
   --left: 2216svh;
   --scale: .15;
@@ -4310,6 +4484,12 @@ html, body {
   --z: 44;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .rsvp-cloud {
+    --left:2011svh;
+  }
+}
+
 .glow-star-9 {
   --left: 2222svh;
   --scale: .09;
@@ -4319,6 +4499,12 @@ html, body {
   --z: 440;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .glow-star-9 {
+    --left:2017svh;
+  }
+}
+
 .rsvp-arrow {
   --left: 2224svh;
   --scale: .04;
@@ -4328,6 +4514,12 @@ html, body {
   --z: 44;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .rsvp-arrow {
+    --left:2019svh;
+  }
+}
+
 .rsvp-button {
   --left: 2238svh;
   --scale: .13;
@@ -4336,6 +4528,12 @@ html, body {
   --rot: 0deg;
   --z: 57;
 }
+@media (max-width: 36em) {
+  .rsvp-button {
+    --left:2033svh;
+  }
+}
+
 .blue-star-17 {
   --left: 2245svh;
   --scale: .06;
@@ -4345,6 +4543,12 @@ html, body {
   --z: 500;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .blue-star-17 {
+    --left:2040svh;
+  }
+}
+
 .london-matches {
   --left: 2222svh;
   --scale: .44;
@@ -4354,6 +4558,12 @@ html, body {
   --z: 50;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .london-matches {
+    --left:2017svh;
+  }
+}
+
 .silver-star3-14 {
   --left: 2266svh;
   --scale: .11;
@@ -4363,6 +4573,12 @@ html, body {
   --z: 500;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .silver-star3-14 {
+    --left:2061svh;
+  }
+}
+
 .london-about {
   --left: 2278svh;
   --scale: .59;
@@ -4371,6 +4587,12 @@ html, body {
   --rot: -8deg;
   --z: 45;
 }
+@media (max-width: 36em) {
+  .london-about {
+    --left:2073svh;
+  }
+}
+
 .blue-star-18 {
   --left: 2300svh;
   --scale: .06;
@@ -4380,6 +4602,12 @@ html, body {
   --z: 405;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .blue-star-18 {
+    --left:2095svh;
+  }
+}
+
 .onedirection {
   --left: 2280svh;
   --scale: .18;
@@ -4389,6 +4617,12 @@ html, body {
   --z: 45;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .onedirection {
+    --left:2075svh;
+  }
+}
+
 .onedirection-text {
   --left: 2280svh;
   --scale: .15;
@@ -4404,6 +4638,12 @@ html, body {
   --tt: lowercase;
   --text-color: #E1EFFA;
 }
+@media (max-width: 36em) {
+  .onedirection-text {
+    --left:2075svh;
+  }
+}
+
 .silver-star3-15 {
   --left: 2310svh;
   --scale: .05;
@@ -4413,6 +4653,12 @@ html, body {
   --z: 405;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .silver-star3-15 {
+    --left:2105svh;
+  }
+}
+
 .silver-star3-16 {
   --left: 2320svh;
   --scale: .08;
@@ -4422,6 +4668,12 @@ html, body {
   --z: 405;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .silver-star3-16 {
+    --left:2115svh;
+  }
+}
+
 .glow-star-10 {
   --left: 2340svh;
   --scale: .11;
@@ -4431,6 +4683,12 @@ html, body {
   --z: 405;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .glow-star-10 {
+    --left:2135svh;
+  }
+}
+
 .hangout-tweet {
   --left: 2324svh;
   --scale: .375;
@@ -4440,6 +4698,12 @@ html, body {
   --z: 46;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .hangout-tweet {
+    --left:2119svh;
+  }
+}
+
 .londoncard-v1 {
   --left: 2319svh;
   --scale: .35;
@@ -4449,6 +4713,12 @@ html, body {
   --z: 45;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .londoncard-v1 {
+    --left:2114svh;
+  }
+}
+
 .glow-star-11 {
   --left: 2346svh;
   --scale: .11;
@@ -4458,6 +4728,12 @@ html, body {
   --z: 500;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .glow-star-11 {
+    --left:2141svh;
+  }
+}
+
 .glow-star-12 {
   --left: 2357svh;
   --scale: .09;
@@ -4467,6 +4743,12 @@ html, body {
   --z: 500;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .glow-star-12 {
+    --left:2152svh;
+  }
+}
+
 .londoncard-arrow-1 {
   --left: 2346svh;
   --scale: .04;
@@ -4476,6 +4758,12 @@ html, body {
   --z: 46;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .londoncard-arrow-1 {
+    --left:2141svh;
+  }
+}
+
 .londoncard-text {
   --left: 2348svh;
   --scale: .20;
@@ -4491,6 +4779,12 @@ html, body {
   --tt: lowercase;
   --text-color: #E1EFFA;
 }
+@media (max-width: 36em) {
+  .londoncard-text {
+    --left:2143svh;
+  }
+}
+
 .blue-star-19 {
   --left: 2354svh;
   --scale: .07;
@@ -4500,6 +4794,12 @@ html, body {
   --z: 500;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .blue-star-19 {
+    --left:2149svh;
+  }
+}
+
 .londoncard-arrow-2 {
   --left: 2355svh;
   --scale: .04;
@@ -4509,6 +4809,12 @@ html, body {
   --z: 46;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .londoncard-arrow-2 {
+    --left:2150svh;
+  }
+}
+
 .silver-star3-17 {
   --left: 2369svh;
   --scale: .12;
@@ -4518,6 +4824,12 @@ html, body {
   --z: 500;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .silver-star3-17 {
+    --left:2164svh;
+  }
+}
+
 .blue-star-20 {
   --left: 2368svh;
   --scale: .07;
@@ -4527,6 +4839,12 @@ html, body {
   --z: 500;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .blue-star-20 {
+    --left:2163svh;
+  }
+}
+
 .london-tv {
   --left: 2340svh;
   --scale: .435;
@@ -4535,6 +4853,12 @@ html, body {
   --rot: 0deg;
   --z: 47;
 }
+@media (max-width: 36em) {
+  .london-tv {
+    --left:2135svh;
+  }
+}
+
 .londoncard-front {
   --left: 2368.5svh;
   --scale: .35;
@@ -4544,6 +4868,12 @@ html, body {
   --z: 45;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .londoncard-front {
+    --left:2163.5svh;
+  }
+}
+
 .film-strip {
   --left: 2399svh;
   --scale: .74;
@@ -4553,6 +4883,12 @@ html, body {
   --z: 44;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .film-strip {
+    --left:2194svh;
+  }
+}
+
 .londoncard-back {
   --left: 2379svh;
   --scale: .26;
@@ -4562,6 +4898,12 @@ html, body {
   --z: 45;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .londoncard-back {
+    --left:2174svh;
+  }
+}
+
 .dreamdotnet {
   --left: 2415svh;
   --scale: .25;
@@ -4571,6 +4913,12 @@ html, body {
   --z: 44;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .dreamdotnet {
+    --left:2210svh;
+  }
+}
+
 .church-video {
   --left: 2419svh;
   --scale: .30;
@@ -4580,6 +4928,12 @@ html, body {
   --rot: 0deg;
   --z: 46;
 }
+@media (max-width: 36em) {
+  .church-video {
+    --left:2214svh;
+  }
+}
+
 .villains {
   --left: 2421svh;
   --scale: .30;
@@ -4589,6 +4943,12 @@ html, body {
   --z: 45;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .villains {
+    --left:2216svh;
+  }
+}
+
 .strawberry {
   --left: 2473svh;
   --scale: .21;
@@ -4598,6 +4958,12 @@ html, body {
   --z: 46;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .strawberry {
+    --left:2268svh;
+  }
+}
+
 .glow-star-13 {
   --left: 2478svh;
   --scale: .13;
@@ -4607,6 +4973,12 @@ html, body {
   --z: 46;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .glow-star-13 {
+    --left:2273svh;
+  }
+}
+
 .next-title {
   --left: 2456svh;
   --scale: .30;
@@ -4616,6 +4988,12 @@ html, body {
   --z: 70;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .next-title {
+    --left:2251svh;
+  }
+}
+
 .join-postcard {
   --left: 2455svh;
   --scale: .37;
@@ -4624,6 +5002,12 @@ html, body {
   --rot: 8deg;
   --z: 46;
 }
+@media (max-width: 36em) {
+  .join-postcard {
+    --left:2250svh;
+  }
+}
+
 .presave-text {
   --left: 2496svh;
   --scale: .14;
@@ -4639,6 +5023,12 @@ html, body {
   --tt: lowercase;
   --text-color: #E1EFFA;
 }
+@media (max-width: 36em) {
+  .presave-text {
+    --left:2291svh;
+  }
+}
+
 .presave-button {
   --left: 2512svh;
   --scale: .30;
@@ -4647,6 +5037,12 @@ html, body {
   --rot: 5deg;
   --z: 71;
 }
+@media (max-width: 36em) {
+  .presave-button {
+    --left:2307svh;
+  }
+}
+
 .im-stamp {
   --left: 2525svh;
   --scale: .25;
@@ -4656,6 +5052,12 @@ html, body {
   --z: 70;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .im-stamp {
+    --left:2320svh;
+  }
+}
+
 .thankyou-note {
   --left: 2551svh;
   --scale: .9;
@@ -4665,6 +5067,12 @@ html, body {
   --z: 71;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .thankyou-note {
+    --left:2346svh;
+  }
+}
+
 .lock-logo {
   --left: 2615svh;
   --scale: .85;
@@ -4674,6 +5082,13 @@ html, body {
   --z: 71;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .lock-logo {
+    --left:2410svh;
+    --scale: 0.75;
+  }
+}
+
 .social-sparkles-2 {
   --left: 2620svh;
   --scale: .15;
@@ -4683,6 +5098,12 @@ html, body {
   --z: 2;
   pointer-events: none;
 }
+@media (max-width: 36em) {
+  .social-sparkles-2 {
+    --left:2415svh;
+  }
+}
+
 .instagram-2 {
   --left: 2631svh;
   --scale: .05;
@@ -4692,6 +5113,12 @@ html, body {
   --z: 2;
   outline: none;
 }
+@media (max-width: 36em) {
+  .instagram-2 {
+    --left:2426svh;
+  }
+}
+
 .tiktok-2 {
   --left: 2637svh;
   --scale: .05;
@@ -4701,6 +5128,12 @@ html, body {
   --z: 2;
   outline: none;
 }
+@media (max-width: 36em) {
+  .tiktok-2 {
+    --left:2432svh;
+  }
+}
+
 .twitter-2 {
   --left: 2642svh;
   --scale: .05;
@@ -4710,6 +5143,12 @@ html, body {
   --z: 2;
   outline: none;
 }
+@media (max-width: 36em) {
+  .twitter-2 {
+    --left:2437svh;
+  }
+}
+
 .discord-2 {
   --left: 2649svh;
   --scale: .05;
@@ -4719,6 +5158,12 @@ html, body {
   --z: 2;
   outline: none;
 }
+@media (max-width: 36em) {
+  .discord-2 {
+    --left:2444svh;
+  }
+}
+
 .spotify-2 {
   --left: 2654svh;
   --scale: .05;
@@ -4728,6 +5173,12 @@ html, body {
   --z: 2;
   outline: none;
 }
+@media (max-width: 36em) {
+  .spotify-2 {
+    --left:2449svh;
+  }
+}
+
 .apple-music-2 {
   --left: 2660svh;
   --scale: .05;
@@ -4737,14 +5188,27 @@ html, body {
   --z: 2;
   outline: none;
 }
+@media (max-width: 36em) {
+  .apple-music-2 {
+    --left:2455svh;
+  }
+}
+
 .back-button {
   --left: 2685svh;
-  --scale: .2;
+  --scale: .18;
   --y: 40svh;
   --x: 8svh;
   --rot: 0deg;
   --z: 2;
 }
+@media (max-width: 36em) {
+  .back-button {
+    --left:2480svh;
+    --scale:.15;
+  }
+}
+
 /* =========================================
    OVERLAY AS MODAL
    ========================================= */
