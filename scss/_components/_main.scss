@@ -2472,8 +2472,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    display:none;
-    --left:1249svh;
+    display: none;
+    --left: 1249svh;
   }
 }
 
@@ -2762,7 +2762,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1389svh;
+    --left: 1389svh;
   }
 }
 
@@ -2804,7 +2804,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1405svh;
+    --left: 1405svh;
   }
 }
 
