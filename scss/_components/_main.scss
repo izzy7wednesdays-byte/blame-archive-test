@@ -233,8 +233,8 @@
   
   @include respond(xs) {
     --left:18svh; 
-    --scale:.20; 
-    --y:26svh; 
+    --scale:.18; 
+    --y:28svh; 
     --x:0svh; 
     --rot:0deg; 
     --z:4;
@@ -714,7 +714,7 @@
     outline-color: magenta;
     outline-offset: 6px;
     --left:243svh;
-    --scale: .33;
+    --scale: .20;
     --y: 20svh;
     --rot:0deg;
   }
