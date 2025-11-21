@@ -4152,7 +4152,7 @@ html, body {
 @media (max-width: 36em) {
   .pretty-little-liars-text {
     --left:1785svh;
-    --text-max-w: 23ch;
+    --text-max-w: 30ch;
   }
 }
 
@@ -4314,7 +4314,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .poster {
-    --left:1885svh;
+    --left:1875svh;
   }
 }
 
@@ -4751,7 +4751,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-11 {
-    --left:2141svh;
+    --left:2144svh;
+    --y: 35svh;
   }
 }
 
@@ -4766,6 +4767,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-12 {
+    display: none;
     --left:2152svh;
   }
 }
