@@ -4372,8 +4372,9 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:2410svh;
+    --left:2412svh;
     --scale: 0.75;
+    --y:15svh;
   }
 }
 
@@ -4394,7 +4395,7 @@
 
 .instagram-2 {
   --left: 2631svh;
-  --scale: .05;
+  --scale: .04;
   --y: 9svh;
   --x: 8svh;
   --rot: 0deg;
@@ -4403,12 +4404,13 @@
 
   @include respond(xs) {
     --left:2426svh;
+    --scale: .037;
   }
 }
 
 .tiktok-2 {
   --left: 2637svh;
-  --scale: .05;
+  --scale: .04;
   --y: 9svh;
   --x: 8svh;
   --rot: 0deg;
@@ -4417,12 +4419,13 @@
 
   @include respond(xs) {
     --left:2432svh;
+    --scale: .037;
   }
 }
 
 .twitter-2 {
   --left: 2642svh;
-  --scale: .05;
+  --scale: .04;
   --y: 9svh;
   --x: 8svh;
   --rot: 0deg;
@@ -4431,12 +4434,13 @@
 
   @include respond(xs) {
     --left:2437svh;
+    --scale: .037;
   }
 }
 
 .discord-2 {
   --left: 2649svh;
-  --scale: .05;
+  --scale: .04;
   --y: 9svh;
   --x: 8svh;
   --rot: 0deg;
@@ -4445,12 +4449,13 @@
 
   @include respond(xs) {
     --left:2444svh;
+    --scale: .037;
   }
 }
 
 .spotify-2 {
   --left: 2654svh;
-  --scale: .05;
+  --scale: .04;
   --y: 9svh;
   --x: 8svh;
   --rot: 0deg;
@@ -4459,12 +4464,13 @@
 
   @include respond(xs) {
     --left:2449svh;
+    --scale: .037;
   }
 }
 
 .apple-music-2 {
   --left: 2660svh;
-  --scale: .05;
+  --scale: .04;
   --y: 9svh;
   --x: 8svh;
   --rot: 0deg;
@@ -4473,6 +4479,7 @@
 
   @include respond(xs) {
     --left:2455svh;
+    --scale: .037;
   }
 }
 
