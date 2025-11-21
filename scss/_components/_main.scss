@@ -4079,6 +4079,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    display:none;
     --left:2149svh;
   }
 }
