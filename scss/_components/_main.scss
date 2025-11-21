@@ -184,7 +184,7 @@
 
 .torn-note {
   --left: 11svh;
-  --scale: .68;
+  --scale: .57;
   --y: -9svh;
   --x: -2svh;
   --rot: 0deg;
@@ -193,7 +193,7 @@
   
   @include respond(xs) {
     --left:41svh; 
-    --scale:.4; 
+    --scale:.35; 
     --y:63svh; 
     --x:15svh; 
     --rot:10deg; 
