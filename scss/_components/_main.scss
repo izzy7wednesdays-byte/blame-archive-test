@@ -3738,16 +3738,16 @@
 }
 
 .hangout-poster {
-  --left: 2159svh;
+  --left: 2163svh;
   --scale: .57;
-  --y: 32svh;
+  --y: 35svh;
   --x: 0svh;
-  --rot: 1deg;
+  --rot: -4deg;
   --z: 44;
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1954svh;
+    --left:1958svh;
   }
 }
 
