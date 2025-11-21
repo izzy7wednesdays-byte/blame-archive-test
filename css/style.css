@@ -4147,7 +4147,7 @@ html, body {
   --ta: center;
   --tt: lowercase;
   --text-color: #4CA8E9;
-  --text-max-w: 48ch;
+  --text-max-w: 55ch;
 }
 @media (max-width: 36em) {
   .pretty-little-liars-text {
@@ -4373,7 +4373,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .selfie-poster {
-    --left:1809svh;
+    --left:1899svh;
   }
 }
 
@@ -5106,8 +5106,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .lock-logo {
-    --left:2410svh;
+    --left:2412svh;
     --scale: 0.75;
+    --y:15svh;
   }
 }
 
@@ -5128,7 +5129,7 @@ html, body {
 
 .instagram-2 {
   --left: 2631svh;
-  --scale: .05;
+  --scale: .04;
   --y: 9svh;
   --x: 8svh;
   --rot: 0deg;
@@ -5138,12 +5139,13 @@ html, body {
 @media (max-width: 36em) {
   .instagram-2 {
     --left:2426svh;
+    --scale: .037;
   }
 }
 
 .tiktok-2 {
   --left: 2637svh;
-  --scale: .05;
+  --scale: .04;
   --y: 9svh;
   --x: 8svh;
   --rot: 0deg;
@@ -5153,12 +5155,13 @@ html, body {
 @media (max-width: 36em) {
   .tiktok-2 {
     --left:2432svh;
+    --scale: .037;
   }
 }
 
 .twitter-2 {
   --left: 2642svh;
-  --scale: .05;
+  --scale: .04;
   --y: 9svh;
   --x: 8svh;
   --rot: 0deg;
@@ -5168,12 +5171,13 @@ html, body {
 @media (max-width: 36em) {
   .twitter-2 {
     --left:2437svh;
+    --scale: .037;
   }
 }
 
 .discord-2 {
   --left: 2649svh;
-  --scale: .05;
+  --scale: .04;
   --y: 9svh;
   --x: 8svh;
   --rot: 0deg;
@@ -5183,12 +5187,13 @@ html, body {
 @media (max-width: 36em) {
   .discord-2 {
     --left:2444svh;
+    --scale: .037;
   }
 }
 
 .spotify-2 {
   --left: 2654svh;
-  --scale: .05;
+  --scale: .04;
   --y: 9svh;
   --x: 8svh;
   --rot: 0deg;
@@ -5198,12 +5203,13 @@ html, body {
 @media (max-width: 36em) {
   .spotify-2 {
     --left:2449svh;
+    --scale: .037;
   }
 }
 
 .apple-music-2 {
   --left: 2660svh;
-  --scale: .05;
+  --scale: .04;
   --y: 9svh;
   --x: 8svh;
   --rot: 0deg;
@@ -5213,6 +5219,7 @@ html, body {
 @media (max-width: 36em) {
   .apple-music-2 {
     --left:2455svh;
+    --scale: .037;
   }
 }
 
