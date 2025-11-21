@@ -591,7 +591,7 @@ html, body {
 
 .instagram {
   --left: 28svh;
-  --scale: .05;
+  --scale: .04;
   --y: 55svh;
   --x: 8svh;
   --rot: 0deg;
@@ -610,7 +610,7 @@ html, body {
 
 .tiktok {
   --left: 34svh;
-  --scale: .05;
+  --scale: .04;
   --y: 55svh;
   --x: 8svh;
   --rot: 0deg;
@@ -629,7 +629,7 @@ html, body {
 
 .twitter {
   --left: 40svh;
-  --scale: .05;
+  --scale: .04;
   --y: 55svh;
   --x: 8svh;
   --rot: 0deg;
@@ -648,7 +648,7 @@ html, body {
 
 .discord {
   --left: 46svh;
-  --scale: .05;
+  --scale: .04;
   --y: 55svh;
   --x: 8svh;
   --rot: 0deg;
@@ -667,7 +667,7 @@ html, body {
 
 .spotify {
   --left: 52svh;
-  --scale: .05;
+  --scale: .04;
   --y: 55svh;
   --x: 8svh;
   --rot: 0deg;
@@ -686,7 +686,7 @@ html, body {
 
 .apple-music {
   --left: 58svh;
-  --scale: .05;
+  --scale: .04;
   --y: 55svh;
   --x: 8svh;
   --rot: 0deg;
@@ -704,9 +704,9 @@ html, body {
 }
 
 .torn-note {
-  --left: 11svh;
-  --scale: .68;
-  --y: -9svh;
+  --left: 16svh;
+  --scale: .54;
+  --y: -4svh;
   --x: -2svh;
   --rot: 0deg;
   --z: 3;
@@ -714,11 +714,11 @@ html, body {
 }
 @media (max-width: 36em) {
   .torn-note {
-    --left:41svh;
-    --scale:.4;
-    --y:63svh;
+    --left:43svh;
+    --scale:.325;
+    --y:66svh;
     --x:15svh;
-    --rot:10deg;
+    --rot:12deg;
     --z:4;
     pointer-events: none;
   }
