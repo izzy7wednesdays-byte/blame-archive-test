@@ -1476,14 +1476,14 @@
   --ff: "Manic";
   --fw: 400;
   --fs-mul: .1;
-  --ta: center !important;
+  --ta: center;
   --tt: uppercase;
   --text-color: #4CA8E9;
   --text-max-w: 45ch;
 
   @include respond(xs) {
     --left: 637svh;
-    --y:63svh;
+    --y:65svh;
   }
 }
 
@@ -1813,7 +1813,7 @@
 
   @include respond(xs) {
     --left: 818svh;
-    --scale: .48;
+    --scale: .46;
   }
 }
 
@@ -1882,7 +1882,7 @@
   --z: 81;
 
   @include respond(xs) {
-    --left: 891svh;  
+    --left: 893svh;  
     --scale: 0.28;
     --y: 55svh;
   }
@@ -3299,7 +3299,7 @@
   --scale: .35;
   --y: 18svh;
   --x: 0svh;
-  --rot: -3deg;
+  --rot: 3deg;
   --z: 49;
   pointer-events: none;
 
@@ -3411,6 +3411,7 @@
 }
 
 .blue-star-16 {
+  display: flex;
   --left: 1924svh;
   --scale: .11;
   --y: 57svh;
@@ -3420,6 +3421,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    display:none;
     --left:1719svh;
   }
 }
@@ -3727,14 +3729,14 @@
   --scale: .5;
   --y: 2svh;
   --x: 10svh;
-  --rot: -4deg;
+  --rot: 0deg;
   --z: 40;
   pointer-events: none;
 
   @include respond(xs) {
     --left:1928svh;
-    --scale: .6;
-    --y:2svh;
+    --scale: .65;
+    --y:4svh;
   }
 }
 
@@ -4404,7 +4406,7 @@
 
   @include respond(xs) {
     --left:2412svh;
-    --scale: 0.75;
+    --scale: 0.7;
     --y:15svh;
   }
 }
