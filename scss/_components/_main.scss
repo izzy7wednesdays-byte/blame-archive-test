@@ -1565,7 +1565,7 @@
   @include respond(xs) {
     --left:680svh;  
     --scale:0.18;
-    --y:80svh;
+    --y:83svh;
   }
 }
 
@@ -2648,7 +2648,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1323svh;
+    --left:1330svh;
+    --y:2svh;
   }
 }
 
@@ -3094,7 +3095,7 @@
   --scale: .25;
   --y: 80svh;
   --x: 0svh;
-  --rot: 90deg;
+  --rot: 0deg;
   --z: 40;
   pointer-events: none;
 
@@ -3289,7 +3290,7 @@
   --scale: .29;
   --y: 18svh;
   --x: 0svh;
-  --rot: 87deg;
+  --rot: -3deg;
   --z: 49;
   pointer-events: none;
 
@@ -3708,16 +3709,17 @@
 }
 
 .london-title {
-  --left: 2120svh;
+  --left: 2130svh;
   --scale: .5;
-  --y: 37svh;
+  --y: 2svh;
   --x: 10svh;
   --rot: -4deg;
   --z: 40;
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1915svh;
+    --left:1925svh;
+    --y:2svh;
   }
 }
 
