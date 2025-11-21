@@ -1804,8 +1804,8 @@
 
 .ep-inspo {
   --left: 1007svh;
-  --scale: .60;
-  --y: 46svh;
+  --scale: .56;
+  --y: 45svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 71;
@@ -1814,6 +1814,7 @@
   @include respond(xs) {
     --left: 818svh;
     --scale: .46;
+    --y: 48svh;
   }
 }
 
@@ -2645,9 +2646,9 @@
 }
 
 .shoot-makeup {
-  --left: 1528svh;
+  --left: 1532svh;
   --scale: .18;
-  --y: 7svh;
+  --y: 2svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 39;
@@ -3097,16 +3098,16 @@
 }
 
 .editing-misery {
-  --left: 1665svh;
+  --left: 1670svh;
   --scale: .25;
-  --y: 80svh;
+  --y: 75svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 40;
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1480svh;
+    --left:1481svh;
     --y: 68svh;
   }
 }
@@ -3281,7 +3282,7 @@
 
 .videos-about {
   --left: 1805svh;
-  --scale: .25;
+  --scale: .24;
   --y: 34svh;
   --x: 0svh;
   --rot: -2deg;
@@ -3295,9 +3296,9 @@
 }
 
 .exitwounds-subway {
-  --left: 1810svh;
+  --left: 1815svh;
   --scale: .35;
-  --y: 18svh;
+  --y: 10svh;
   --x: 0svh;
   --rot: 3deg;
   --z: 49;
@@ -3635,8 +3636,8 @@
 }
 
 .poster {
-  --left: 2080svh;
-  --scale: .45;
+  --left: 2077svh;
+  --scale: .42;
   --y: 2svh;
   --x: 0svh;
   --rot: -3deg;
@@ -3664,8 +3665,8 @@
 
 .buy-button {
   --left: 2096svh;
-  --scale: .17;
-  --y: 50svh;
+  --scale: .15;
+  --y: 52svh;
   --x: 0svh;
   --rot: 5deg;
   --z: 60;
@@ -3678,7 +3679,7 @@
 }
 
 .sims {
-  --left: 2117svh;
+  --left: 2115svh;
   --scale: .10;
   --y: 35svh;
   --x: 0svh;
@@ -3692,7 +3693,7 @@
 }
 
 .selfie-poster {
-  --left: 2107svh;
+  --left: 2105svh;
   --scale: .35;
   --y: 1svh;
   --x: 0svh;
@@ -3734,7 +3735,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1928svh;
+    --left:1926svh;
     --scale: .65;
     --y:4svh;
   }
@@ -3764,8 +3765,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1964svh;
-    --y: 38svh;
+    --left:1968svh;
+    --y: 40svh;
   }
 }
 
@@ -4516,10 +4517,25 @@
   }
 }
 
-.back-button {
+.the-end {
   --left: 2685svh;
   --scale: .18;
   --y: 40svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  pointer-events: none;
+
+  @include respond(xs) {
+    --left:2480svh;
+    --scale:.15;
+  }
+}
+
+.back-button {
+  --left: 2685svh;
+  --scale: .18;
+  --y: 15svh;
   --x: 8svh;
   --rot: 0deg;
   --z: 2;
