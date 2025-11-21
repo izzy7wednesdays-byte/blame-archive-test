@@ -2637,7 +2637,7 @@
   --scale: .18;
   --y: 7svh;
   --x: 0svh;
-  --rot: 90deg;
+  --rot: 0deg;
   --z: 39;
   pointer-events: none;
 
@@ -3595,6 +3595,7 @@
 
   @include respond(xs) {
     --left:1869svh;
+    --scale:.2
   }
 }
 
@@ -3609,6 +3610,7 @@
 
   @include respond(xs) {
     --left:1867svh;
+    --scale:.2
   }
 }
 
@@ -3621,7 +3623,7 @@
   --z: 61;
 
   @include respond(xs) {
-    --left:1875svh;
+    --left:1872svh;
   }
 }
 
@@ -3636,6 +3638,7 @@
 
   @include respond(xs) {
     --left:1900svh;
+    --scale:.2
   }
 }
 
@@ -3700,10 +3703,10 @@
 
 .london-title {
   --left: 2120svh;
-  --scale: .25;
+  --scale: .5;
   --y: 37svh;
   --x: 10svh;
-  --rot: -94deg;
+  --rot: -4deg;
   --z: 40;
   pointer-events: none;
 
@@ -3728,7 +3731,7 @@
 
 .hangout-poster {
   --left: 2159svh;
-  --scale: .71;
+  --scale: .57;
   --y: 32svh;
   --x: 0svh;
   --rot: 1deg;
