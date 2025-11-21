@@ -572,9 +572,9 @@
 
   @include respond(xs) {
     //--left:150svh;
-    --scale:.23;
+    --scale:.21;
    // --y:24svh;
-    --left:152svh;
+    --left:155svh;
     //--scale:.20;
     --y:65svh;
   }
@@ -720,7 +720,7 @@
     outline-color: magenta;
     outline-offset: 6px;
     --left:243svh;
-    --scale: .16;
+    --scale: .18;
     --y: 20svh;
     --rot:0deg;
   }
