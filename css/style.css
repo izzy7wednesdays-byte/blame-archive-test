@@ -532,7 +532,7 @@ html, body {
     position: absolute;
     --left: 12svh;
     --scale: .84;
-    --y: 17svh;
+    --y: 16svh;
     --x: 0svh;
     --rot: 0deg;
     --z: 1;
@@ -747,7 +747,7 @@ html, body {
 
 .the-scrapbook {
   --left:65svh;
-  --scale:.5;
+  --scale:.4;
   --y:12svh;
   --x:0svh;
   --rot:0deg;
@@ -757,7 +757,7 @@ html, body {
 @media (max-width: 36em) {
   .the-scrapbook {
     --left:18svh;
-    --scale:.32;
+    --scale:.24;
     --y:26svh;
     --x:0svh;
     --rot:0deg;
@@ -789,7 +789,7 @@ html, body {
     display: flex;
     position: absolute;
     --left:25svh;
-    --scale:.07;
+    --scale:.04;
     --y:3svh;
     --x:0svh;
     --rot:0deg;
