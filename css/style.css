@@ -532,7 +532,7 @@ html, body {
     position: absolute;
     --left: 12svh;
     --scale: .86;
-    --y: 16svh;
+    --y: 15svh;
     --x: 0svh;
     --rot: 0deg;
     --z: 1;
@@ -756,7 +756,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .the-scrapbook {
-    --left:23svh;
+    --left:22svh;
     --scale:.20;
     --y:30svh;
     --x:0svh;
@@ -1115,9 +1115,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .lightsleeper-voicememo {
-    --scale:.21;
     --left:155svh;
-    --y:69svh;
+    --scale:.21;
+    --y:73svh;
   }
 }
 
@@ -1262,12 +1262,9 @@ html, body {
 @media (max-width: 36em) {
   .exitwounds-animation-mobile {
     display: flex;
-    outline: 2px dashed;
-    outline-color: magenta;
-    outline-offset: 6px;
-    --left:243svh;
+    --left:241svh;
     --scale: .15;
-    --y: 20svh;
+    --y: 22svh;
     --rot:0deg;
   }
 }
@@ -1412,6 +1409,7 @@ html, body {
 @media (max-width: 36em) {
   .subscribe-arrow {
     --left: 300svh;
+    --scale: 0.035;
     --rot: -57deg;
     --y:11svh;
   }
@@ -1702,8 +1700,8 @@ html, body {
 
 .landmines-title-mobile {
   display: none !important;
-  --left: 437svh;
-  --scale:.14;
+  --left: 435svh;
+  --scale:.13;
   --y:40svh;
   --z: 30;
   pointer-events: none;
@@ -1905,6 +1903,7 @@ html, body {
   .misery-ogchorus {
     --left: 542svh;
     --scale:0.25;
+    --y: 72svh;
     outline: 2px dashed;
     outline-color: magenta;
     outline-offset: 6px;
@@ -2054,7 +2053,7 @@ html, body {
   --ff: "Manic";
   --fw: 400;
   --fs-mul: .1;
-  --ta: center !important;
+  --ta: center;
   --tt: uppercase;
   --text-color: #4CA8E9;
   --text-max-w: 45ch;
@@ -2062,7 +2061,7 @@ html, body {
 @media (max-width: 36em) {
   .misery-wants-company-text {
     --left: 637svh;
-    --y:63svh;
+    --y:65svh;
   }
 }
 
@@ -2396,8 +2395,8 @@ html, body {
 
 .ep-inspo {
   --left: 1007svh;
-  --scale: .63;
-  --y: 46svh;
+  --scale: .56;
+  --y: 45svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 71;
@@ -2405,8 +2404,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-inspo {
-    --left: 820svh;
-    --scale: .50;
+    --left: 818svh;
+    --scale: .46;
+    --y: 50svh;
   }
 }
 
@@ -2480,7 +2480,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-inspo-sp {
-    --left: 891svh;
+    --left: 893svh;
     --scale: 0.28;
     --y: 55svh;
   }
@@ -3279,9 +3279,9 @@ html, body {
 }
 
 .shoot-makeup {
-  --left: 1528svh;
+  --left: 1532svh;
   --scale: .18;
-  --y: 7svh;
+  --y: 2svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 39;
@@ -3289,8 +3289,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .shoot-makeup {
-    --left:1330svh;
-    --y:2svh;
+    --left:1335svh;
+    --y:1svh;
   }
 }
 
@@ -3756,9 +3756,9 @@ html, body {
 }
 
 .editing-misery {
-  --left: 1665svh;
+  --left: 1670svh;
   --scale: .25;
-  --y: 80svh;
+  --y: 75svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 40;
@@ -3766,8 +3766,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .editing-misery {
-    --left:1470svh;
-    --y: 70svh;
+    --left:1481svh;
+    --y: 68svh;
   }
 }
 
@@ -3953,7 +3953,7 @@ html, body {
 
 .videos-about {
   --left: 1805svh;
-  --scale: .25;
+  --scale: .24;
   --y: 34svh;
   --x: 0svh;
   --rot: -2deg;
@@ -3961,25 +3961,26 @@ html, body {
 }
 @media (max-width: 36em) {
   .videos-about {
-    --left:1600svh;
+    --left:1605svh;
     --scale: 0.22;
+    --rot: -3deg;
   }
 }
 
 .exitwounds-subway {
-  --left: 1810svh;
+  --left: 1815svh;
   --scale: .35;
-  --y: 18svh;
+  --y: 10svh;
   --x: 0svh;
-  --rot: -3deg;
+  --rot: 3deg;
   --z: 49;
   pointer-events: none;
 }
 @media (max-width: 36em) {
   .exitwounds-subway {
     --left:1616svh;
-    --scale: .35;
-    --y: 0svh;
+    --scale: .36;
+    --y: -1svh;
   }
 }
 
@@ -4087,6 +4088,7 @@ html, body {
 }
 
 .blue-star-16 {
+  display: flex;
   --left: 1924svh;
   --scale: .11;
   --y: 57svh;
@@ -4097,6 +4099,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-16 {
+    display: none;
     --left:1719svh;
   }
 }
@@ -4320,8 +4323,8 @@ html, body {
 }
 
 .poster {
-  --left: 2080svh;
-  --scale: .45;
+  --left: 2077svh;
+  --scale: .42;
   --y: 2svh;
   --x: 0svh;
   --rot: -3deg;
@@ -4351,8 +4354,8 @@ html, body {
 
 .buy-button {
   --left: 2096svh;
-  --scale: .17;
-  --y: 50svh;
+  --scale: .15;
+  --y: 52svh;
   --x: 0svh;
   --rot: 5deg;
   --z: 60;
@@ -4366,7 +4369,7 @@ html, body {
 }
 
 .sims {
-  --left: 2117svh;
+  --left: 2115svh;
   --scale: .10;
   --y: 35svh;
   --x: 0svh;
@@ -4381,7 +4384,7 @@ html, body {
 }
 
 .selfie-poster {
-  --left: 2107svh;
+  --left: 2105svh;
   --scale: .35;
   --y: 1svh;
   --x: 0svh;
@@ -4416,15 +4419,15 @@ html, body {
   --scale: .5;
   --y: 2svh;
   --x: 10svh;
-  --rot: -4deg;
+  --rot: 0deg;
   --z: 40;
   pointer-events: none;
 }
 @media (max-width: 36em) {
   .london-title {
-    --left:1928svh;
-    --scale: .55;
-    --y:2svh;
+    --left:1926svh;
+    --scale: .65;
+    --y:4svh;
   }
 }
 
@@ -4454,8 +4457,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .hangout-poster {
-    --left:1964svh;
-    --y: 38svh;
+    --left:1968svh;
+    --y: 40svh;
   }
 }
 
@@ -4506,7 +4509,7 @@ html, body {
 
 .hangout-vlog {
   --left: 2214svh;
-  --scale: .35;
+  --scale: .33;
   --y: 64svh;
   --x: 0svh;
   --rot: 0deg;
@@ -5133,7 +5136,7 @@ html, body {
 @media (max-width: 36em) {
   .lock-logo {
     --left:2412svh;
-    --scale: 0.75;
+    --scale: 0.7;
     --y:15svh;
   }
 }
@@ -5154,7 +5157,7 @@ html, body {
 }
 
 .instagram-2 {
-  --left: 2631svh;
+  --left: 2630svh;
   --scale: .04;
   --y: 9svh;
   --x: 8svh;
@@ -5164,13 +5167,13 @@ html, body {
 }
 @media (max-width: 36em) {
   .instagram-2 {
-    --left:2426svh;
+    --left:2425svh;
     --scale: .037;
   }
 }
 
 .tiktok-2 {
-  --left: 2637svh;
+  --left: 2636svh;
   --scale: .04;
   --y: 9svh;
   --x: 8svh;
@@ -5180,7 +5183,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .tiktok-2 {
-    --left:2432svh;
+    --left:2431svh;
     --scale: .037;
   }
 }
@@ -5202,7 +5205,7 @@ html, body {
 }
 
 .discord-2 {
-  --left: 2649svh;
+  --left: 2648svh;
   --scale: .04;
   --y: 9svh;
   --x: 8svh;
@@ -5212,7 +5215,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .discord-2 {
-    --left:2444svh;
+    --left:2443svh;
     --scale: .037;
   }
 }
@@ -5249,10 +5252,26 @@ html, body {
   }
 }
 
-.back-button {
+.the-end {
   --left: 2685svh;
   --scale: .18;
   --y: 40svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  pointer-events: none;
+}
+@media (max-width: 36em) {
+  .the-end {
+    --left:2480svh;
+    --scale:.15;
+  }
+}
+
+.back-button {
+  --left: 2685svh;
+  --scale: .18;
+  --y: 15svh;
   --x: 8svh;
   --rot: 0deg;
   --z: 2;
