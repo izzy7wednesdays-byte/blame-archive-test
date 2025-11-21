@@ -1111,6 +1111,7 @@
 }
 
 .landmines-title {
+  display:flex;
   --left: 578svh;
   --scale: .17;
   --y: 38svh;
@@ -1120,10 +1121,25 @@
   pointer-events: none;
 
   @include respond(xs) {
+    display:none;
     --left: 437svh;
     --scale:.14;
     --y:40svh;
   }     
+}
+
+.landmines-title-mobile {
+    --display:none;
+    --left: 437svh;
+    --scale:.14;
+    --y:40svh;
+    --z: 30;
+    pointer-events: none;
+
+    @include respond(xs) {
+      display: flex;
+      position: absolute;
+  }   
 }
 
 .landmines-lyricvideo {
