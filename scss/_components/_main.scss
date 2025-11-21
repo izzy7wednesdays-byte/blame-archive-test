@@ -1117,7 +1117,7 @@
 }
 
 .landmines-title {
-  display:flex;
+  display:flex!important;
   --left: 578svh;
   --scale: .17;
   --y: 38svh;
@@ -1135,7 +1135,7 @@
 }
 
 .landmines-title-mobile {
-    display:none;
+    display: none!important;
     --left: 437svh;
     --scale:.14;
     --y:40svh;
