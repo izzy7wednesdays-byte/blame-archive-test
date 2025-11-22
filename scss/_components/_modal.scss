@@ -2,12 +2,12 @@
    OVERLAY AS MODAL
    ========================================= */
 
-/* Lock scrolling when overlay is open (matches reference modal behavior) */
+/* Lock background scroll when modal is open (optional but recommended) */
 body.modal-open {
   overflow: hidden;
 }
 
-/* Full-screen dark backdrop */
+/* Full-screen dimmed backdrop */
 #overlay {
   position: fixed;
   inset: 0;
@@ -27,7 +27,7 @@ body.modal-open {
   }
 }
 
-/* Modal “window” */
+/* Modal box (“window”) */
 #overlay .ov-card {
   position: relative;
   display: flex;
@@ -35,30 +35,30 @@ body.modal-open {
   align-items: stretch;
   justify-content: flex-start;
 
-  max-width: 76rem;
-  width: min(76rem, calc(100% - 2rem));
-  max-height: 90vh;        /* key: gives us a viewport height cap */
+  /* Smaller than full width */
+  max-width: 60rem;
+  width: min(60rem, calc(100% - 4rem));
+
+  /* Smaller than full height */
+  max-height: 80vh;
+
   padding: 0.3rem;
   border-radius: 1.5rem;
-
-  background-color: transparent; /* or a frame color if you want */
+  background-color: transparent; // or a frame color if you want
   box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.55);
-  overflow: hidden;              /* keeps scroll area clipped to rounded corners */
+  overflow: hidden; // keeps scrolling content clipped to rounded corners
 }
 
-/* Scrollable content area (image lives inside here) */
+/* Scrollable area for the image */
 #overlay .ov-scroll {
   width: 100%;
-  max-height: calc(90vh - 1.5rem); /* slightly less than ov-card max-height */
+  max-height: calc(80vh - 3rem); // leave room for X button + padding
   overflow-y: auto;
   overscroll-behavior: contain;
   border-radius: 1.2rem;
-
-  /* optional: if you want a background behind the image */
-  /* background-color: #000; */
 }
 
-/* Background image itself */
+/* Background image (can be taller than the box; excess will scroll) */
 #overlay #overlay-img {
   display: block;
   width: 100%;
@@ -71,41 +71,30 @@ body.modal-open {
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-/* Animate in when overlay opens */
+/* Fade/scale in when modal opens */
 #overlay.is-open #overlay-img {
   opacity: 1;
   transform: scale(1);
 }
 
-/* X button: fixed relative to the top of the card,
-   image scrolls underneath because it's inside .ov-scroll */
-/* ===== Overlay "X" close button (scales with overlay) ===== */
-#overlay .ov-card {
-  position: relative; // make sure this is set so the X is anchored to the card
-}
-
+/* X button – pinned to the card, scales/positions via CSS vars */
 #overlay .overlay-close {
   position: absolute;
-
-  /* Position as percentages of the overlay card (or image) */
   top: var(--ov-x-top, 3%);
   left: var(--ov-x-left, 3%);
-
-  /* Size as a percentage of the overlay width, so it scales with the overlay */
-  width: var(--ov-x-size, 5%);
+  width: var(--ov-x-size, 5%); // % of card width so it scales with modal
   height: auto;
   max-width: none;
-
   cursor: pointer;
-  z-index: 200;
+  z-index: 2;
   user-select: none;
   -webkit-user-drag: none;
-  transition: transform 0.18s ease, filter 0.18s ease;
   display: block;
   object-fit: contain;
+  transition: transform 0.18s ease, filter 0.18s ease;
 }
 
 #overlay .overlay-close:hover {
   transform: scale(1.05);
-  filter: brightness(1.5);
+  filter: brightness(1.1);
 }
