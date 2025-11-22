@@ -417,7 +417,7 @@
   display: none;
   
   @include respond(xs) {
-    display: flex !important;
+    display: flex;
     
     --left:103svh;
     --y:49svh;
