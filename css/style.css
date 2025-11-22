@@ -397,9 +397,9 @@ html, body {
     outline-offset: 0.5svh;
   } */
 .special-message {
-  --left: -26svh;
-  --scale: 1.12;
-  --y: 21svh;
+  --left: -33svh;
+  --scale: 1.05;
+  --y: 28svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 1;
@@ -612,8 +612,8 @@ html, body {
 }
 
 .tracklist {
-  --left:91svh;
-  --scale:.42;
+  --left:100svh;
+  --scale:.38;
   --y:57svh;
   --x:15svh;
   --rot:8deg;
@@ -707,7 +707,7 @@ html, body {
 }
 
 .broken-cd {
-  --left:143svh;
+  --left:145svh;
   --scale:.35;
   --y:67svh;
   --x:0svh;
@@ -728,7 +728,7 @@ html, body {
 }
 
 .blue-star-1 {
-  --left:183svh;
+  --left:185svh;
   --scale:.06;
   --y:85svh;
   --x:0svh;
@@ -748,7 +748,7 @@ html, body {
 }
 
 .blue-star-2 {
-  --left:185svh;
+  --left:187svh;
   --scale:.13;
   --y:95svh;
   --x:0svh;
@@ -763,7 +763,7 @@ html, body {
 }
 
 .silver-star1-1 {
-  --left:187svh;
+  --left:189svh;
   --scale:.17;
   --y:73svh;
   --x:0svh;
@@ -833,7 +833,7 @@ html, body {
 }
 
 .about-lightsleeper-mobile {
-  display: none;
+  display: none !important;
 }
 @media (max-width: 36em) {
   .about-lightsleeper-mobile {
@@ -2390,7 +2390,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-inspo-sp {
-    --left: 883svh;
+    --left: 881svh;
     --scale: 0.28;
     --y: 55svh;
   }
