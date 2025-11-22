@@ -414,10 +414,10 @@
 }
 
 .about-lightsleeper-mobile { 
-  display: none!important;
+  display: none;
   
   @include respond(xs) {
-    display: flex;
+    display: flex !important;
     
     --left:103svh;
     --y:49svh;
