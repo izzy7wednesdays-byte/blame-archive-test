@@ -44,9 +44,9 @@ body.modal-open {
 
   padding: 0.3rem;
   border-radius: 1.5rem;
-  background-color: transparent; // or a frame color if you want
+  background-color: transparent;
   box-shadow: none /* 0 1.4rem 3rem rgba(0, 0, 0, 0.55) */;
-  overflow: hidden; // keeps scrolling content clipped to rounded corners
+  overflow: hidden;
 }
 
 /* Scrollable area for the image */
