@@ -388,15 +388,16 @@ html, body {
   text-align: var(--ta, left);
   text-transform: var(--tt, none);
 
-  /* these two are the “line-break” controls, overridable per slot */
-  white-space: var(--ws-mode, normal);          /* e.g. pre-line, pre, nowrap */
-  text-wrap:   var(--wrap, pretty);            /* e.g. normal, nowrap, balance */
+  /* line-break controls */
+  white-space: var(--ws-mode, normal);
+  text-wrap:   var(--wrap, pretty);
 
   hyphens: var(--hy, manual);
   overflow-wrap: anywhere;
 
-  /* NEW: per-slot max width override, still supports --ch if you want */
-  max-width: var(--text-max-w, min(90svh, var(--ch, 28ch)));
+  /* text max width override */
+  max-width: var(--text-max-w);
+  max-width: min(90svh, var(--ch, 28ch));
 
   /* decoration / effects */
   text-decoration: var(--dec, none);
