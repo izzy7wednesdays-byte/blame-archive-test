@@ -23,6 +23,11 @@ html, body {
   --bg: #0d161d;
   --fg: #e7f1ff;
 }
+@media (max-width: 36em) {
+  :root {
+    --rail-w: 2515svh;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -906,8 +911,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star1-2 {
-    --left:165svh;
-    --scale:15;
+    --left:170svh;
+    --scale:.15;
     --y:10svh;
   }
 }
@@ -1583,7 +1588,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-5 {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -3283,7 +3288,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .star-trio-4 {
-    --left:1385svh;
+    display: none;
   }
 }
 
@@ -3522,7 +3527,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-14 {
-    --left:1403svh;
+    display: none;
   }
 }
 
@@ -3567,7 +3572,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-5 {
-    --left:1414svh;
+    display: none;
   }
 }
 
@@ -3950,7 +3955,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glitter-truck-2 {
-    --left:1649svh;
+    display: none;
   }
 }
 
@@ -4011,8 +4016,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-16 {
-    display: none;
-    --left:1709svh;
+    display: none !important;
   }
 }
 
@@ -4430,7 +4434,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .hangout-vlog {
-    --left:1999svh;
+    --left:2003svh;
   }
 }
 
@@ -4540,7 +4544,7 @@ html, body {
   }
 }
 
-.london-about {
+.about-london {
   --left: 2278svh;
   --scale: .59;
   --y: 40svh;
@@ -4549,7 +4553,7 @@ html, body {
   --z: 45;
 }
 @media (max-width: 36em) {
-  .london-about {
+  .about-london {
     --left:2063svh;
   }
 }
@@ -4616,6 +4620,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-15 {
+    display: none;
     --left:2095svh;
   }
 }
@@ -4791,6 +4796,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-17 {
+    display: none;
     --left:2154svh;
   }
 }
@@ -4820,7 +4826,22 @@ html, body {
 }
 @media (max-width: 36em) {
   .london-tv {
-    --left:2125svh;
+    display: none;
+  }
+}
+
+.london-tv-mobile {
+  display: none !important;
+}
+@media (max-width: 36em) {
+  .london-tv-mobile {
+    display: flex !important;
+    --left: 2143svh;
+    --scale: .33;
+    --y: 62svh;
+    --x: 0svh;
+    --rot: 0deg;
+    --z: 47;
   }
 }
 
@@ -4940,6 +4961,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-13 {
+    display: none;
     --left:2263svh;
   }
 }
