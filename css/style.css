@@ -5276,6 +5276,11 @@ body.modal-open {
   object-fit: contain;
   transition: transform 0.18s ease, filter 0.18s ease;
 }
+@media (max-width: 36em) {
+  #overlay .overlay-close {
+    width: var(--ov-x-size, 0.5%);
+  }
+}
 
 #overlay .overlay-close:hover {
   transform: scale(1.05);
