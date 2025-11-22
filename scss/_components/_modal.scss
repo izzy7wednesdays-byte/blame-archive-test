@@ -92,6 +92,9 @@ body.modal-open {
   display: block;
   object-fit: contain;
   transition: transform 0.18s ease, filter 0.18s ease;
+
+   @include respond(xs) {
+      width: var(--ov-x-size, 0.5%); 
 }
 
 #overlay .overlay-close:hover {
