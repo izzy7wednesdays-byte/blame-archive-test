@@ -233,102 +233,6 @@ html, body {
   outline-offset: 6px;
 }
 
-/* ===== OVERLAY: BASE ===== */
-#overlay {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.75);
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.18s ease, visibility 0.18s ease;
-}
-
-#overlay.is-open {
-  display: flex !important;
-  opacity: 1;
-  visibility: visible;
-}
-
-/* ===== MEDIA: OVERLAY CARD (Scrollable & Height-locked) ===== */
-#overlay .ov-card {
-  --ov-max-w: min(72vw, 1100px);
-  --ov-max-h: 72svh;
-  --ov-pad: 1svh;
-  display: block;
-  position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
-  overscroll-behavior: contain;
-  scroll-behavior: auto; /* normal feel, not “sticky” */
-  max-width: var(--ov-max-w);
-  max-height: var(--ov-max-h);
-  padding: var(--ov-pad);
-  margin: 0 auto;
-  background: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-#overlay .ov-card::-webkit-scrollbar {
-  width: 6px;
-}
-
-#overlay .ov-card::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 3px;
-}
-
-/* ===== Inner image should fit and stay contained ===== */
-#overlay .ov-card > img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: none;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-  border-radius: 12px;
-}
-
-/* ===== Overlay "X" close button ===== */
-#overlay .overlay-close {
-  position: absolute;
-  top: 3%;
-  left: 3%;
-  /* Force scaling to work properly */
-  width: 2.7svh !important;
-  max-width: none !important;
-  height: auto !important;
-  cursor: pointer;
-  z-index: 200;
-  user-select: none;
-  -webkit-user-drag: none;
-  transition: transform 0.18s ease, filter 0.18s ease;
-  display: block;
-  object-fit: contain;
-}
-
-#overlay .overlay-close:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-}
-
-/* ===== OVERLAY IMAGE ===== */
-#overlay .ov-card img {
-  opacity: 0;
-  transform: scale(0.98);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-#overlay.is-open .ov-card img {
-  opacity: 1;
-  transform: scale(1);
-}
-
 /* ========= INTERACTIVE MEDIA HIT ZONE FIX ========= */
 .slot[data-overlay-src],
 .slot--sc,
@@ -374,31 +278,14 @@ html, body {
   pointer-events: auto;
 }
 
-/* ========= BEHAVIOR: OPENING OVERLAY FLOAT EFFECT (inside overlay scroll) ========= */
-#overlay .ov-card {
-  overflow-y: auto;
-  overflow-x: hidden;
-  overscroll-behavior: contain;
-  scroll-behavior: smooth;
-}
-
-#overlay .ov-card img {
-  will-change: transform;
-  transition: transform 0.3s ease-out;
-}
-
-#overlay .ov-card.is-scrolling img {
-  transform: none;
-}
-
 /* ========= GROW-ON-HOVER ========= */
-/* Elements that should "grow" on hover:
+/* Elements that grow on hover:
    - overlay images
    - soundcloud trigger images/buttons
    - audio trigger images
    - linked images
    - overlay Lotties
-   - the play-lightsleeper Lottie (SoundCloud) */
+   - play-lightsleeper Lottie (SoundCloud) */
 .slot[data-overlay-src] img,
 .slot--sc .sc-trigger,
 .slot--audio .audio-trigger,
@@ -442,8 +329,7 @@ html, body {
   hyphens: var(--hy, manual);
   overflow-wrap: anywhere;
   /* text max width override */
-  max-width: var(--text-max-w);
-  max-width: min(90svh, var(--ch, 28ch));
+  max-width: var(--text-max-w, 28ch);
   /* decoration / effects */
   text-decoration: var(--dec, none);
   text-underline-offset: var(--uoff, 0.15em);
@@ -2283,7 +2169,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .sleepwalking-radio-text {
-    --left: 735svh;
+    --left: 734svh;
+    --y: 0svh;
   }
 }
 
@@ -3757,7 +3644,7 @@ html, body {
 }
 
 .editing-misery {
-  --left: 1680svh;
+  --left: 1685svh;
   --scale: .25;
   --y: 71svh;
   --x: 0svh;
@@ -4175,7 +4062,7 @@ html, body {
 
 .m-title {
   --left: 1960svh;
-  --scale: .13;
+  --scale: .08;
   --y: 48svh;
   --x: 0svh;
   --rot: -3deg;
@@ -5303,12 +5190,12 @@ html, body {
 /* =========================================
    OVERLAY AS MODAL
    ========================================= */
-/* Lock scrolling when overlay is open (matches reference modal behavior) */
+/* Lock background scroll when modal is open (optional but recommended) */
 body.modal-open {
   overflow: hidden;
 }
 
-/* Full-screen dark backdrop */
+/* Full-screen dimmed backdrop */
 #overlay {
   position: fixed;
   inset: 0;
@@ -5327,35 +5214,35 @@ body.modal-open {
   visibility: visible;
 }
 
-/* Modal “window” */
+/* Modal box (“window”) */
 #overlay .ov-card {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  max-width: 76rem;
-  width: min(76rem, 100% - 2rem);
-  max-height: 90vh; /* key: gives us a viewport height cap */
+  /* Smaller than full width */
+  max-width: 60rem;
+  width: min(60rem, 100% - 4rem);
+  /* Smaller than full height */
+  max-height: 80vh;
   padding: 0.3rem;
   border-radius: 1.5rem;
-  background-color: transparent; /* or a frame color if you want */
+  background-color: transparent;
   box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.55);
-  overflow: hidden; /* keeps scroll area clipped to rounded corners */
+  overflow: hidden;
 }
 
-/* Scrollable content area (image lives inside here) */
+/* Scrollable area for the image */
 #overlay .ov-scroll {
   width: 100%;
-  max-height: calc(90vh - 1.5rem); /* slightly less than ov-card max-height */
+  max-height: calc(80vh - 3rem);
   overflow-y: auto;
   overscroll-behavior: contain;
   border-radius: 1.2rem;
-  /* optional: if you want a background behind the image */
-  /* background-color: #000; */
 }
 
-/* Background image itself */
+/* Background image (can be taller than the box; excess will scroll) */
 #overlay #overlay-img {
   display: block;
   width: 100%;
@@ -5367,40 +5254,32 @@ body.modal-open {
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-/* Animate in when overlay opens */
+/* Fade/scale in when modal opens */
 #overlay.is-open #overlay-img {
   opacity: 1;
   transform: scale(1);
 }
 
-/* X button: fixed relative to the top of the card,
-   image scrolls underneath because it's inside .ov-scroll */
-/* ===== Overlay "X" close button (scales with overlay) ===== */
-#overlay .ov-card {
-  position: relative;
-}
-
+/* X button – pinned to the card, scales/positions via CSS vars */
 #overlay .overlay-close {
   position: absolute;
-  /* Position as percentages of the overlay card (or image) */
   top: var(--ov-x-top, 3%);
   left: var(--ov-x-left, 3%);
-  /* Size as a percentage of the overlay width, so it scales with the overlay */
   width: var(--ov-x-size, 5%);
   height: auto;
   max-width: none;
   cursor: pointer;
-  z-index: 200;
+  z-index: 2;
   user-select: none;
   -webkit-user-drag: none;
-  transition: transform 0.18s ease, filter 0.18s ease;
   display: block;
   object-fit: contain;
+  transition: transform 0.18s ease, filter 0.18s ease;
 }
 
 #overlay .overlay-close:hover {
   transform: scale(1.05);
-  filter: brightness(1.5);
+  filter: brightness(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */
