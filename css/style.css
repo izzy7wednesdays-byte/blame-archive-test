@@ -5229,7 +5229,7 @@ body.modal-open {
   padding: 0.3rem;
   border-radius: 1.5rem;
   background-color: transparent;
-  box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.55);
+  box-shadow: none;
   overflow: hidden;
 }
 
@@ -5254,18 +5254,18 @@ body.modal-open {
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-/* Fade/scale in when modal opens */
+/* Fade/scale */
 #overlay.is-open #overlay-img {
   opacity: 1;
   transform: scale(1);
 }
 
-/* X button – pinned to the card, scales/positions via CSS vars */
+/* X button */
 #overlay .overlay-close {
   position: absolute;
   top: var(--ov-x-top, 3%);
   left: var(--ov-x-left, 3%);
-  width: var(--ov-x-size, 5%);
+  width: var(--ov-x-size, 2%);
   height: auto;
   max-width: none;
   cursor: pointer;
