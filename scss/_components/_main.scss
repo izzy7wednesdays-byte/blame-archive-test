@@ -1201,7 +1201,7 @@
   }      
 }
 
-.landmines-about {
+.about-landmines {
   --left: 643svh;
   --scale: .3;
   --y: 46svh;
@@ -1210,8 +1210,9 @@
   --z: 30;
 
   @include respond(xs) {
-    --left: 478svh;
+    --left: 476svh;
     --scale:.27;
+    --y: 47svh;
   }      
 }
 
