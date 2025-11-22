@@ -539,12 +539,10 @@
   .play-lightsleeper-mobile {display: none;}
 
   @include respond(xs) {
-    //--left:152svh;
-    //--y:75svh;    
-    //--scale: .20;
     --left:150svh;
     --y:24svh;    
     --scale: .20;
+    --z:9;
 
     .play-lightsleeper-desktop { display: none; }
     .play-lightsleeper-mobile { display: flex; }
@@ -575,12 +573,10 @@
   --z:9;
 
   @include respond(xs) {
-    //--left:150svh;
     --left:155svh;
     --scale:.21;
     --y:73svh;
-   // --y:24svh;
-    //--scale:.20;
+    --z:40;
   }
 }
 
