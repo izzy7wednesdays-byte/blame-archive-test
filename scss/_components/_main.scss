@@ -803,7 +803,7 @@
   @include respond(xs) {
     --left: 292svh;
     --scale: .06;
-    --rot: 9deg;
+    --rot: 11deg;
     --y: 65svh;
   }
 }
@@ -888,9 +888,9 @@
   --z: 3;
 
   @include respond(xs) {
-    --left: 304svh;
+    --left: 303svh;
     --scale: 0.7;
-    --y: 29svh;
+    --y: 30svh;
   }
 }
 
