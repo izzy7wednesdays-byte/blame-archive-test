@@ -851,6 +851,7 @@
   --fs-mul: .21;
   --ta: center;
   --text-color: #4CA8E9;
+  --tt: uppercase;
 
   @include respond(xs) {
     --left: 282svh;
