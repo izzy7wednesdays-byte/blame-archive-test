@@ -717,7 +717,7 @@
   @include respond(xs) {
     display: flex;
     --left:241svh;
-    --scale: .15;
+    --scale: .13;
     --y: 22svh;
     --rot:0deg;
   }
@@ -802,7 +802,7 @@
 
   @include respond(xs) {
     --left: 295svh;
-    --scale: .08;
+    --scale: .06;
     --rot: 9deg;
     --y: 63svh;
   }
@@ -857,10 +857,10 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 300svh;
+    --left: 298svh;
     --scale: 0.035;
     --rot: -57deg;
-    --y:11svh;
+    --y:10svh;
   }
 }
 
@@ -889,6 +889,7 @@
 
   @include respond(xs) {
     --left: 310svh;
+    --scale: 0.7;
     --y: 29svh;
   }
 }
