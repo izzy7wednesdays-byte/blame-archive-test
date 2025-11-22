@@ -396,9 +396,8 @@ html, body {
   overflow-wrap: anywhere;
 
   /* text max width override */
-  max-width: var(--text-max-w);
-  max-width: min(90svh, var(--ch, 28ch));
-
+  max-width: var(--text-max-w, 28ch);
+  
   /* decoration / effects */
   text-decoration: var(--dec, none);
   text-underline-offset: var(--uoff, .15em);
