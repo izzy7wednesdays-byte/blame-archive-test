@@ -517,7 +517,6 @@
   --ta: center; 
   --fw: 400; 
   --fs-mul: .18; 
-  --tt: uppercase;
   --text-color: #4C58E9;
   
   @include respond(xs) {
@@ -796,7 +795,6 @@
   --ta: center;
   --fw: 400;
   --fs-mul: .15;
-  --tt: uppercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -852,7 +850,6 @@
   --fw: 400;
   --fs-mul: .21;
   --ta: center;
-  --tt: uppercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -1067,7 +1064,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: left;
-  --tt: uppercase;
   --text-color: #4C58E9;
 
   @include respond(xs) {
@@ -1244,7 +1240,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: lowercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -1383,7 +1378,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: lowercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -1494,7 +1488,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: uppercase;
   --text-color: #4CA8E9;
   --text-max-w: 45ch;
 
@@ -1546,7 +1539,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: left;
-  --tt: lowercase;
   --text-color: #4C58E9;
 
   @include respond(xs) {
@@ -1581,7 +1573,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: uppercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -1708,7 +1699,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center !important;
-  --tt: uppercase;
   --text-color: #4CA8E9;
   --text-max-w: 43ch;
 
@@ -1936,7 +1926,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: uppercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -1972,7 +1961,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: uppercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -2007,7 +1995,6 @@
   --fw: 400;
   --fs-mul: .2;
   --ta: center !important;
-  --tt: lowercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -2056,7 +2043,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: lowercase;
   --text-color: #D9EBFF;
 
   @include respond(xs) {
@@ -2091,7 +2077,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center !important;
-  --tt: uppercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -2127,7 +2112,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center !important;
-  --tt: lowercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -2220,7 +2204,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: lowercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -2269,7 +2252,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: uppercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -2416,7 +2398,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: lowercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -2693,7 +2674,6 @@
   --fw: 410;
   --fs-mul: .1;
   --ta: center;
-  --tt: lowercase;
   --text-color: #e1effa;
 
   @include respond(xs) {
@@ -3112,7 +3092,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: lowercase;
   --text-color: #e1effa;
 
   @include respond(xs) {
@@ -3506,7 +3485,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: lowercase;
   --text-color: #4CA8E9;
   --text-max-w: 55ch;
 
@@ -3571,7 +3549,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: lowercase;
   --text-color: #4CA8E9;
   --text-max-w: 55ch;
 
@@ -3607,7 +3584,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: lowercase;
   --text-color: #4CA8E9;
 
   @include respond(xs) {
@@ -4003,7 +3979,6 @@
   --fw: 400;
   --fs-mul: .13;
   --ta: center;
-  --tt: lowercase;
   --text-color: #E1EFFA;
 
   @include respond(xs) {
@@ -4141,7 +4116,6 @@
   --fw: 400;
   --fs-mul: .1;
   --ta: center;
-  --tt: lowercase;
   --text-color: #E1EFFA;
 
   @include respond(xs) {
@@ -4393,7 +4367,6 @@
   --fw: 400;
   --fs-mul: .2;
   --ta: center;
-  --tt: lowercase;
   --text-color: #E1EFFA;
 
   @include respond(xs) {
