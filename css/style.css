@@ -411,11 +411,11 @@ html, body {
 }
 
 .special-message-mobile {
-  display: none !important;
+  display: none;
 }
 @media (max-width: 36em) {
   .special-message-mobile {
-    display: flex !important;
+    display: flex;
     position: absolute;
     --left: 12svh;
     --scale: .86;
@@ -441,11 +441,11 @@ html, body {
 }
 
 .mobile-izzymacarthur {
-  display: none !important;
+  display: none;
 }
 @media (max-width: 36em) {
   .mobile-izzymacarthur {
-    display: flex !important;
+    display: flex;
     --left: 13svh;
     --scale: .12;
     --y: 59svh;
@@ -837,7 +837,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .about-lightsleeper-mobile {
-    display: flex;
+    display: flex !important;
     --left:103svh;
     --y:49svh;
     --scale:.27;
