@@ -4457,7 +4457,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .hangout-poster {
-    --left:1968svh;
+    --left:1966svh;
     --y: 40svh;
   }
 }
@@ -5263,6 +5263,25 @@ html, body {
 }
 @media (max-width: 36em) {
   .the-end {
+    --display:none;
+    --left:2480svh;
+    --scale:.15;
+  }
+}
+
+.the-end-mobile {
+  display: none;
+  --left: 2685svh;
+  --scale: .18;
+  --y: 40svh;
+  --x: 8svh;
+  --rot: 0deg;
+  --z: 2;
+  pointer-events: none;
+}
+@media (max-width: 36em) {
+  .the-end-mobile {
+    display: flex;
     --left:2480svh;
     --scale:.15;
   }
