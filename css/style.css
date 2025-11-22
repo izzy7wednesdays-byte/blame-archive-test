@@ -816,7 +816,8 @@ html, body {
   }
 }
 
-.lightsleeper-about {
+.about-lightsleeper {
+  display: flex;
   --left:210svh;
   --scale:.4;
   --y:58svh;
@@ -826,10 +827,23 @@ html, body {
   pointer-events: auto;
 }
 @media (max-width: 36em) {
-  .lightsleeper-about {
+  .about-lightsleeper {
+    display: none !important;
+  }
+}
+
+.about-lightsleeper-mobile {
+  display: none;
+}
+@media (max-width: 36em) {
+  .about-lightsleeper-mobile {
+    display: flex;
     --left:103svh;
     --y:49svh;
-    --scale:.3;
+    --scale:.27;
+    --rot:-10deg;
+    --z:30;
+    pointer-events: auto;
   }
 }
 
@@ -1347,7 +1361,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-1 {
-    --left:315svh;
+    display: none;
   }
 }
 
@@ -1362,7 +1376,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-3 {
-    --left:325svh;
+    --left:315svh;
   }
 }
 
@@ -1377,7 +1391,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-2 {
-    --left:335svh;
+    --left:323svh;
   }
 }
 
@@ -1392,7 +1406,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-3 {
-    --left:346svh;
+    --left:335svh;
   }
 }
 
@@ -1407,8 +1421,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .glitter-truck {
-    --left:360svh;
-    --scale:.44;
+    --left:347svh;
+    --scale:.42;
   }
 }
 
@@ -1423,7 +1437,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-bts-clip {
-    --left:383svh;
+    --left:375svh;
+    --scale:0.25;
   }
 }
 
@@ -1437,7 +1452,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-voicememo {
-    --left:373svh;
+    --left:365svh;
+    --scale:0.24;
   }
 }
 
@@ -1452,7 +1468,6 @@ html, body {
 @media (max-width: 36em) {
   .blue-star-4 {
     display: none;
-    --left:364svh;
   }
 }
 
@@ -1467,7 +1482,9 @@ html, body {
 }
 @media (max-width: 36em) {
   .katstratford-car {
-    --left:370svh;
+    --left:363svh;
+    --scale:0.16;
+    --z:5;
   }
 }
 
@@ -1482,7 +1499,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .vocals-landmines-1 {
-    --left:417svh;
+    --left:405svh;
   }
 }
 
@@ -1518,7 +1535,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .october-lane {
-    --left:410svh;
+    --left:390svh;
+    --y: -2svh;
     --z: 6;
   }
 }
@@ -1534,8 +1552,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-license {
-    --left:442svh;
-    --scale:.26;
+    --left:428svh;
+    --scale:.24;
   }
 }
 
@@ -1582,7 +1600,7 @@ html, body {
 @media (max-width: 36em) {
   .landmines-title {
     display: none !important;
-    --left: 430svh;
+    --left: 425svh;
     --scale:.12;
     --y:42svh;
   }
@@ -1590,9 +1608,9 @@ html, body {
 
 .landmines-title-mobile {
   display: none !important;
-  --left: 435svh;
+  --left: 420svh;
   --scale:.13;
-  --y:40svh;
+  --y:41svh;
   --z: 30;
   pointer-events: none;
 }
@@ -1613,7 +1631,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-lyricvideo {
-    --left: 438svh;
+    --left: 428svh;
     --scale:.27;
   }
 }
@@ -1634,12 +1652,12 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-reaction-text {
-    --left: 484svh;
-    --scale:.20;
+    --left: 479svh;
+    --scale:.22;
   }
 }
 
-.landmines-about {
+.about-landmines {
   --left: 643svh;
   --scale: .3;
   --y: 46svh;
@@ -1648,9 +1666,10 @@ html, body {
   --z: 30;
 }
 @media (max-width: 36em) {
-  .landmines-about {
-    --left: 488svh;
+  .about-landmines {
+    --left: 476svh;
     --scale:.27;
+    --y: 47svh;
   }
 }
 
@@ -1665,7 +1684,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-og-guitar {
-    --left: 483svh;
+    --left: 478svh;
     --scale:.38;
   }
 }
@@ -1687,7 +1706,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-session-video-text {
-    --left: 481svh;
+    --left: 476svh;
     --scale:.18;
   }
 }
@@ -1703,7 +1722,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-reaction {
-    --left: 513svh;
+    --left: 508svh;
   }
 }
 
@@ -1718,7 +1737,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-6 {
-    --left: 525svh;
+    --left: 520svh;
     --scale: 0.06;
   }
 }
@@ -1734,7 +1753,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-7 {
-    --left: 520svh;
+    --left: 515svh;
   }
 }
 
@@ -1748,7 +1767,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .play-landmines {
-    --left: 519svh;
+    --left: 514svh;
   }
 }
 
@@ -1762,7 +1781,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-session-voicememos {
-    --left: 530svh;
+    --left: 525svh;
   }
 }
 
@@ -1777,7 +1796,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .enchanted-bridge {
-    --left: 537svh;
+    --left: 532svh;
   }
 }
 
@@ -1791,7 +1810,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-ogchorus {
-    --left: 537svh;
+    --left: 532svh;
     --scale:0.25;
     --y: 72svh;
     outline: 2px dashed;
@@ -1811,7 +1830,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-5 {
-    --left: 537svh;
+    --left: 532svh;
   }
 }
 
@@ -1832,7 +1851,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-ogchorus-text {
-    --left: 551svh;
+    --left: 546svh;
     --scale:.19;
     --y: 62svh;
   }
@@ -1849,7 +1868,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .little-miss-misery {
-    --left: 563svh;
+    --left: 558svh;
     --scale:0.19 ;
   }
 }
@@ -1864,7 +1883,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .about-misery {
-    --left: 577svh;
+    --left: 572svh;
     --scale:0.50;
     --y:47svh;
   }
@@ -1882,7 +1901,7 @@ html, body {
 @media (max-width: 36em) {
   .silver-star3-6 {
     display: none;
-    --left: 599svh;
+    --left: 594svh;
   }
 }
 
@@ -1897,7 +1916,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .kat-stratford-dancing {
-    --left: 572svh;
+    --left: 567svh;
     --scale:.19;
   }
 }
@@ -1913,7 +1932,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .solo-cups {
-    --left: 593svh;
+    --left: 588svh;
   }
 }
 
@@ -1927,7 +1946,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-wants-company {
-    --left: 632svh;
+    --left: 627svh;
     --y:74svh;
   }
 }
@@ -1950,7 +1969,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-wants-company-text {
-    --left: 632svh;
+    --left: 627svh;
     --y:65svh;
   }
 }
@@ -1966,7 +1985,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-title {
-    --left: 600svh;
+    --left: 595svh;
     --scale:.72;
   }
 }
@@ -1982,7 +2001,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .vocals-misery-4 {
-    --left:710svh;
+    --left:705svh;
   }
 }
 
@@ -2003,7 +2022,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .vocals-misery-4-text {
-    --left:701svh;
+    --left:696svh;
   }
 }
 
@@ -2017,7 +2036,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .play-misery {
-    --left:685svh;
+    --left:680svh;
     --y:29svh;
   }
 }
@@ -2039,7 +2058,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-wlj-text {
-    --left:675svh;
+    --left:670svh;
     --scale:0.18;
     --y:83svh;
   }
@@ -2056,7 +2075,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-wlj {
-    --left:687svh;
+    --left:682svh;
     --scale:0.37;
     --y: 55svh;
   }
@@ -2087,7 +2106,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-visualizer {
-    --left:675svh;
+    --left:670svh;
     --scale:0.30;
   }
 }
@@ -2103,7 +2122,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .smurfette-1 {
-    --left: 697svh;
+    --left: 692svh;
     --scale: .22;
     --y: 30svh;
   }
@@ -2120,7 +2139,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .thestar-tarot {
-    --left: 724svh;
+    --left: 719svh;
     --scale:0.30;
     --y: 61svh;
   }
@@ -2136,7 +2155,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .play-sleepwalking {
-    --left: 715svh;
+    --left: 710svh;
   }
 }
 
@@ -2150,7 +2169,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sleepwalking-radio {
-    --left: 730svh;
+    --left: 725svh;
   }
 }
 
@@ -2172,7 +2191,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sleepwalking-radio-text {
-    --left: 729svh;
+    --left: 724svh;
     --y: 0svh;
   }
 }
@@ -2188,7 +2207,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sleepwalking-radio-polaroid {
-    --left: 766svh;
+    --left: 761svh;
   }
 }
 
@@ -2202,7 +2221,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sleepwalking-visualizer {
-    --left: 756svh;
+    --left: 751svh;
     --scale: .34;
   }
 }
@@ -2218,7 +2237,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sleepwalking-title {
-    --left: 750svh;
+    --left: 745svh;
     --scale: 0.15;
   }
 }
@@ -2234,7 +2253,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sleepwalking-listeningparty {
-    --left: 782svh;
+    --left: 777svh;
     --scale: 0.32;
   }
 }
@@ -2249,7 +2268,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-8 {
-    --left: 820svh;
+    --left: 815svh;
     display: none;
   }
 }
@@ -2265,7 +2284,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .about-sleepwalking {
-    --left: 821svh;
+    --left: 816svh;
   }
 }
 
@@ -2280,7 +2299,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sleepwalking-receipt {
-    --left: 863svh;
+    --left: 858svh;
   }
 }
 
@@ -2295,7 +2314,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-inspo {
-    --left: 813svh;
+    --left: 808svh;
     --scale: .46;
     --y: 50svh;
   }
@@ -2312,7 +2331,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star1-3 {
-    --left: 848svh;
+    --left: 843svh;
   }
 }
 
@@ -2327,7 +2346,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-9 {
-    --left: 852svh;
+    --left: 847svh;
   }
 }
 
@@ -2342,7 +2361,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-7 {
-    --left: 862svh;
+    --left: 857svh;
   }
 }
 
@@ -2371,7 +2390,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-inspo-sp {
-    --left: 888svh;
+    --left: 883svh;
     --scale: 0.28;
     --y: 55svh;
   }
@@ -2388,7 +2407,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .bottom-spotify-sparkles {
-    --left: 868svh;
+    --left: 863svh;
     --scale: .33;
     --y: 57svh;
   }
@@ -2411,7 +2430,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-click-toread {
-    --left: 886svh;
+    --left: 881svh;
     --scale: .23;
     --y:36svh;
   }
@@ -2427,7 +2446,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-telephone {
-    --left:885svh;
+    --left:880svh;
   }
 }
 
@@ -2448,7 +2467,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-phoningfriends {
-    --left:892svh;
+    --left:887svh;
   }
 }
 
@@ -2463,7 +2482,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .mixing-misery-1 {
-    --left:918svh;
+    --left:913svh;
   }
 }
 
@@ -2484,7 +2503,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .mixing-misery-1-text {
-    --left:917svh;
+    --left:912svh;
   }
 }
 
@@ -2499,7 +2518,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .migos-mairead {
-    --left:918svh;
+    --left:913svh;
   }
 }
 
@@ -2550,7 +2569,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .hannah-montana {
-    --left: 949svh;
+    --left: 944svh;
   }
 }
 
@@ -2571,7 +2590,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .migos-text {
-    --left: 948svh;
+    --left: 943svh;
   }
 }
 
@@ -2586,7 +2605,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-mixing-date {
-    --left:945svh;
+    --left:940svh;
     --y: 2svh;
   }
 }
@@ -2608,7 +2627,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .hannah-montana-text {
-    --left: 975svh;
+    --left: 970svh;
   }
 }
 
@@ -2623,7 +2642,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .notebook {
-    --left: 975svh;
+    --left: 970svh;
   }
 }
 
@@ -2638,7 +2657,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-vocal-booth {
-    --left: 982svh;
+    --left: 977svh;
   }
 }
 
@@ -2653,7 +2672,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-vocal-booth-2 {
-    --left: 990svh;
+    --left: 985svh;
   }
 }
 
@@ -2668,7 +2687,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-title {
-    --left: 968svh;
+    --left: 963svh;
     --scale: 0.33;
     --y: 1svh;
   }
@@ -2685,7 +2704,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-spencer-tracklist {
-    --left: 1014svh;
+    --left: 1009svh;
   }
 }
 
@@ -2706,7 +2725,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-spencer-text {
-    --left: 1015svh;
+    --left: 1010svh;
   }
 }
 
@@ -2721,7 +2740,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .mixing-misery-6 {
-    --left: 1023svh;
+    --left: 1018svh;
   }
 }
 
@@ -2736,7 +2755,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .scrabbleboard {
-    --left: 1048svh;
+    --left: 1043svh;
   }
 }
 
@@ -2757,7 +2776,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sabrinacarpenter-text {
-    --left: 1046svh;
+    --left: 1041svh;
   }
 }
 
@@ -2772,7 +2791,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sabrinacarpenter {
-    --left: 1073svh;
+    --left: 1068svh;
   }
 }
 
@@ -2787,7 +2806,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-10 {
-    --left: 1102svh;
+    --left: 1097svh;
   }
 }
 
@@ -2802,7 +2821,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .discord-message-1 {
-    --left:1096svh;
+    --left:1091svh;
   }
 }
 
@@ -2817,7 +2836,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .discord-message-2 {
-    --left:1095svh;
+    --left:1090svh;
   }
 }
 
@@ -2832,7 +2851,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .discord-message-3 {
-    --left:1095svh;
+    --left:1090svh;
   }
 }
 
@@ -2847,7 +2866,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .exitwounds-zoom {
-    --left:1097svh;
+    --left:1092svh;
   }
 }
 
@@ -2862,7 +2881,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star1-4 {
-    --left: 1129svh;
+    --left: 1124svh;
   }
 }
 
@@ -2877,7 +2896,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .scrabble-piece {
-    --left:1124svh;
+    --left:1119svh;
   }
 }
 
@@ -2892,7 +2911,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-zoom {
-    --left:1126svh;
+    --left:1121svh;
   }
 }
 
@@ -2913,7 +2932,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .zoom-text {
-    --left:1126svh;
+    --left:1121svh;
   }
 }
 
@@ -2928,7 +2947,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .mixing-sleepwalking-2 {
-    --left:1148svh;
+    --left:1143svh;
   }
 }
 
@@ -2943,7 +2962,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-tweet {
-    --left:1142svh;
+    --left:1137svh;
   }
 }
 
@@ -2958,7 +2977,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .starterpack {
-    --left:1165svh;
+    --left:1160svh;
   }
 }
 
@@ -2973,7 +2992,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .ep-cover {
-    --left:1171svh;
+    --left:1166svh;
   }
 }
 
@@ -2988,7 +3007,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .artwork-testshoot-1 {
-    --left:1215svh;
+    --left:1210svh;
   }
 }
 
@@ -3002,7 +3021,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .artwork-title {
-    --left:1204svh;
+    --left:1199svh;
   }
 }
 
@@ -3018,7 +3037,7 @@ html, body {
 @media (max-width: 36em) {
   .silver-star3-8 {
     display: none;
-    --left: 1244svh;
+    --left: 1239svh;
   }
 }
 
@@ -3033,7 +3052,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .artwork-testshoot-5 {
-    --left:1254svh;
+    --left:1249svh;
   }
 }
 
@@ -3048,7 +3067,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .artwork-testshoot-4 {
-    --left:1256svh;
+    --left:1251svh;
   }
 }
 
@@ -3063,7 +3082,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .about-artwork {
-    --left:1237svh;
+    --left:1232svh;
   }
 }
 
@@ -3078,7 +3097,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .caitlin-text-1 {
-    --left:1305svh;
+    --left:1300svh;
   }
 }
 
@@ -3093,7 +3112,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .kayla-polaroid {
-    --left:1298svh;
+    --left:1293svh;
   }
 }
 
@@ -3108,7 +3127,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .tv-photo {
-    --left:1292svh;
+    --left:1287svh;
   }
 }
 
@@ -3123,7 +3142,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .artwork-testshoot-3 {
-    --left:1292svh;
+    --left:1287svh;
   }
 }
 
@@ -3138,7 +3157,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .caitlin-note {
-    --left:1336svh;
+    --left:1331svh;
   }
 }
 
@@ -3152,7 +3171,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .caitlin-text-2 {
-    --left:1324svh;
+    --left:1319svh;
   }
 }
 
@@ -3167,7 +3186,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .shoot-bts-1 {
-    --left:1319svh;
+    --left:1314svh;
   }
 }
 
@@ -3182,7 +3201,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .shoot-makeup {
-    --left:1330svh;
+    --left:1325svh;
     --y:1svh;
   }
 }
@@ -3204,7 +3223,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .shoot-makeup-text {
-    --left:1348svh;
+    --left:1343svh;
   }
 }
 
@@ -3219,7 +3238,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .caitlin-text-3 {
-    --left:1356svh;
+    --left:1351svh;
   }
 }
 
@@ -3234,7 +3253,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .shoot-bts-2 {
-    --left:1361svh;
+    --left:1356svh;
   }
 }
 
@@ -3249,7 +3268,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .star-trio-3 {
-    --left:1374svh;
+    --left:1369svh;
   }
 }
 
@@ -3264,7 +3283,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .star-trio-4 {
-    --left:1390svh;
+    --left:1385svh;
   }
 }
 
@@ -3279,7 +3298,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .dorm-mirror {
-    --left:1377svh;
+    --left:1372svh;
   }
 }
 
@@ -3293,7 +3312,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-bts {
-    --left:1402svh;
+    --left:1397svh;
   }
 }
 
@@ -3308,7 +3327,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .buddy-gif {
-    --left:1402svh;
+    --left:1397svh;
   }
 }
 
@@ -3323,7 +3342,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-9 {
-    --left: 1384svh;
+    --left: 1379svh;
   }
 }
 
@@ -3338,7 +3357,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-11 {
-    --left:1384svh;
+    --left:1379svh;
   }
 }
 
@@ -3353,7 +3372,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-1 {
-    --left:1392svh;
+    --left:1387svh;
   }
 }
 
@@ -3368,7 +3387,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-10 {
-    --left: 1400svh;
+    --left: 1395svh;
   }
 }
 
@@ -3383,7 +3402,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-12 {
-    --left:1403svh;
+    --left:1398svh;
   }
 }
 
@@ -3398,7 +3417,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-11 {
-    --left:1413svh;
+    --left:1408svh;
   }
 }
 
@@ -3413,7 +3432,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-2 {
-    --left:1422svh;
+    --left:1417svh;
   }
 }
 
@@ -3428,7 +3447,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .video-title-camcorder {
-    --left:1375svh;
+    --left:1370svh;
   }
 }
 
@@ -3443,7 +3462,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .video-title-gif {
-    --left:1377svh;
+    --left:1372svh;
   }
 }
 
@@ -3458,7 +3477,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-3 {
-    --left:1384svh;
+    --left:1379svh;
   }
 }
 
@@ -3473,7 +3492,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-13 {
-    --left:1382svh;
+    --left:1377svh;
   }
 }
 
@@ -3488,7 +3507,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-4 {
-    --left:1392svh;
+    --left:1387svh;
   }
 }
 
@@ -3503,7 +3522,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-14 {
-    --left:1408svh;
+    --left:1403svh;
   }
 }
 
@@ -3518,7 +3537,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-12 {
-    --left:1414svh;
+    --left:1409svh;
   }
 }
 
@@ -3533,7 +3552,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-15 {
-    --left:1413svh;
+    --left:1408svh;
   }
 }
 
@@ -3548,7 +3567,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-5 {
-    --left:1419svh;
+    --left:1414svh;
   }
 }
 
@@ -3563,7 +3582,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-brainstorm-1 {
-    --left:1428svh;
+    --left:1423svh;
   }
 }
 
@@ -3578,7 +3597,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-polaroids {
-    --left:1432svh;
+    --left:1427svh;
   }
 }
 
@@ -3593,7 +3612,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-6 {
-    --left:1462svh;
+    --left:1457svh;
   }
 }
 
@@ -3608,7 +3627,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .editing-misery-thought {
-    --left:1452svh;
+    --left:1447svh;
   }
 }
 
@@ -3623,7 +3642,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-brainstorm-arrow {
-    --left:1458svh;
+    --left:1453svh;
   }
 }
 
@@ -3644,7 +3663,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-brainstorm-text {
-    --left:1458svh;
+    --left:1453svh;
   }
 }
 
@@ -3659,7 +3678,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .editing-misery {
-    --left:1476svh;
+    --left:1471svh;
     --y: 68svh;
   }
 }
@@ -3675,7 +3694,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .misery-brainstorm-2 {
-    --left:1477svh;
+    --left:1472svh;
   }
 }
 
@@ -3690,7 +3709,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .the-cake {
-    --left:1470svh;
+    --left:1465svh;
   }
 }
 
@@ -3705,7 +3724,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .cake-boss {
-    --left:1499svh;
+    --left:1494svh;
   }
 }
 
@@ -3720,7 +3739,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .happy-easter {
-    --left:1498svh;
+    --left:1493svh;
   }
 }
 
@@ -3735,7 +3754,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .dab-video {
-    --left:1522svh;
+    --left:1517svh;
   }
 }
 
@@ -3750,7 +3769,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .exitwounds-film-roll {
-    --left:1630svh;
+    --left:1625svh;
   }
 }
 
@@ -3765,7 +3784,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .dvd-video {
-    --left:1550svh;
+    --left:1545svh;
   }
 }
 
@@ -3780,7 +3799,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .across-street {
-    --left:1570svh;
+    --left:1565svh;
   }
 }
 
@@ -3795,7 +3814,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .grew-here {
-    --left:1586svh;
+    --left:1581svh;
   }
 }
 
@@ -3810,7 +3829,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .mazzy-star {
-    --left:1608svh;
+    --left:1603svh;
   }
 }
 
@@ -3825,7 +3844,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .tisthedamn {
-    --left:1630svh;
+    --left:1625svh;
   }
 }
 
@@ -3840,7 +3859,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .tv-unboxing {
-    --left:1575svh;
+    --left:1570svh;
   }
 }
 
@@ -3854,7 +3873,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .videos-about {
-    --left:1600svh;
+    --left:1595svh;
     --scale: 0.22;
     --rot: -3deg;
   }
@@ -3871,7 +3890,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .exitwounds-subway {
-    --left:1611svh;
+    --left:1606svh;
     --scale: .36;
     --y: -1svh;
   }
@@ -3887,7 +3906,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .exitwounds-bts {
-    --left:1649svh;
+    --left:1644svh;
   }
 }
 
@@ -3902,7 +3921,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-bts-tiktok {
-    --left:1643svh;
+    --left:1638svh;
   }
 }
 
@@ -3916,7 +3935,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-bts {
-    --left:1667svh;
+    --left:1662svh;
   }
 }
 
@@ -3931,7 +3950,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glitter-truck-2 {
-    --left:1654svh;
+    --left:1649svh;
   }
 }
 
@@ -3946,7 +3965,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .backtruck-2 {
-    --left:1722svh;
+    --left:1717svh;
   }
 }
 
@@ -3961,7 +3980,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .backtruck-1 {
-    --left:1725svh;
+    --left:1720svh;
   }
 }
 
@@ -3976,7 +3995,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .landmines-matches {
-    --left:1713svh;
+    --left:1708svh;
   }
 }
 
@@ -3993,7 +4012,7 @@ html, body {
 @media (max-width: 36em) {
   .blue-star-16 {
     display: none;
-    --left:1714svh;
+    --left:1709svh;
   }
 }
 
@@ -4008,7 +4027,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .fire-meme {
-    --left:1740svh;
+    --left:1735svh;
   }
 }
 
@@ -4023,7 +4042,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-13 {
-    --left:1754svh;
+    --left:1749svh;
   }
 }
 
@@ -4038,7 +4057,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .pretty-little-liars {
-    --left:1780svh;
+    --left:1775svh;
   }
 }
 
@@ -4060,7 +4079,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .pretty-little-liars-text {
-    --left:1780svh;
+    --left:1775svh;
     --text-max-w: 35ch;
   }
 }
@@ -4076,7 +4095,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .m-title {
-    --left:1750svh;
+    --left:1745svh;
   }
 }
 
@@ -4091,7 +4110,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .candle-lighting {
-    --left:1773svh;
+    --left:1768svh;
   }
 }
 
@@ -4106,7 +4125,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .early-posters {
-    --left:1794svh;
+    --left:1789svh;
   }
 }
 
@@ -4128,7 +4147,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .early-posters-text {
-    --left:1822svh;
+    --left:1817svh;
   }
 }
 
@@ -4143,7 +4162,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .poster-arrow {
-    --left:1842svh;
+    --left:1837svh;
   }
 }
 
@@ -4164,7 +4183,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .thank-you-text {
-    --left:1843svh;
+    --left:1838svh;
   }
 }
 
@@ -4179,7 +4198,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .about-matchbooks {
-    --left:1822svh;
+    --left:1817svh;
   }
 }
 
@@ -4194,7 +4213,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sticker-1 {
-    --left:1864svh;
+    --left:1859svh;
     --scale:.2 ;
   }
 }
@@ -4210,7 +4229,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sticker-3 {
-    --left:1862svh;
+    --left:1857svh;
     --scale:.2 ;
   }
 }
@@ -4225,7 +4244,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .poster {
-    --left:1865svh;
+    --left:1860svh;
   }
 }
 
@@ -4240,7 +4259,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sticker-2 {
-    --left:1895svh;
+    --left:1890svh;
     --scale:.2 ;
   }
 }
@@ -4255,7 +4274,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .buy-button {
-    --left:1888svh;
+    --left:1883svh;
     --scale: .14;
     --y: 54svh;
   }
@@ -4272,7 +4291,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .sims {
-    --left:1907svh;
+    --left:1902svh;
   }
 }
 
@@ -4287,7 +4306,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .selfie-poster {
-    --left:1897svh;
+    --left:1892svh;
   }
 }
 
@@ -4303,7 +4322,7 @@ html, body {
 @media (max-width: 36em) {
   .glow-star-7 {
     display: none;
-    --left:1926svh;
+    --left:1921svh;
   }
 }
 
@@ -4318,7 +4337,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .london-title {
-    --left:1921svh;
+    --left:1916svh;
     --scale: .65;
     --y:4svh;
   }
@@ -4335,7 +4354,8 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-8 {
-    --left:1949svh;
+    --left:1934svh;
+    --y:82svh ;
   }
 }
 
@@ -4350,7 +4370,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .hangout-poster {
-    --left:1961svh;
+    --left:1956svh;
     --y: 40svh;
   }
 }
@@ -4366,7 +4386,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .london-camcorder {
-    --left:1939svh;
+    --left:1934svh;
   }
 }
 
@@ -4381,7 +4401,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .london-live-1 {
-    --left:1967svh;
+    --left:1962svh;
   }
 }
 
@@ -4396,7 +4416,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .london-live-2 {
-    --left:1988svh;
+    --left:1983svh;
   }
 }
 
@@ -4410,7 +4430,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .hangout-vlog {
-    --left:2004svh;
+    --left:1999svh;
   }
 }
 
@@ -4425,7 +4445,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .rsvp-cloud {
-    --left:2006svh;
+    --left:2001svh;
   }
 }
 
@@ -4440,7 +4460,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-9 {
-    --left:2012svh;
+    --left:2007svh;
   }
 }
 
@@ -4455,7 +4475,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .rsvp-arrow {
-    --left:2014svh;
+    --left:2009svh;
   }
 }
 
@@ -4469,7 +4489,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .rsvp-button {
-    --left:2028svh;
+    --left:2023svh;
     --scale: 0.11;
     --y: 45svh;
   }
@@ -4486,7 +4506,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-17 {
-    --left:2035svh;
+    --left:2030svh;
   }
 }
 
@@ -4501,7 +4521,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .london-matches {
-    --left:2012svh;
+    --left:2007svh;
   }
 }
 
@@ -4516,7 +4536,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-14 {
-    --left:2056svh;
+    --left:2051svh;
   }
 }
 
@@ -4530,7 +4550,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .london-about {
-    --left:2068svh;
+    --left:2063svh;
   }
 }
 
@@ -4545,7 +4565,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-18 {
-    --left:2090svh;
+    --left:2085svh;
   }
 }
 
@@ -4560,7 +4580,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .onedirection {
-    --left:2070svh;
+    --left:2065svh;
   }
 }
 
@@ -4581,7 +4601,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .onedirection-text {
-    --left:2070svh;
+    --left:2065svh;
   }
 }
 
@@ -4596,11 +4616,12 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-15 {
-    --left:2100svh;
+    --left:2095svh;
   }
 }
 
 .silver-star3-16 {
+  display: flex;
   --left: 2320svh;
   --scale: .08;
   --y: 94svh;
@@ -4611,7 +4632,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-16 {
-    --left:2110svh;
+    display: none;
   }
 }
 
@@ -4626,7 +4647,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-10 {
-    --left:2130svh;
+    --left:2125svh;
   }
 }
 
@@ -4641,7 +4662,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .hangout-tweet {
-    --left:2114svh;
+    --left:2109svh;
   }
 }
 
@@ -4656,7 +4677,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .londoncard-v1 {
-    --left:2109svh;
+    --left:2104svh;
   }
 }
 
@@ -4671,7 +4692,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-11 {
-    --left:2139svh;
+    --left:2134svh;
     --y: 35svh;
   }
 }
@@ -4688,7 +4709,7 @@ html, body {
 @media (max-width: 36em) {
   .glow-star-12 {
     display: none;
-    --left:2147svh;
+    --left:2142svh;
   }
 }
 
@@ -4703,7 +4724,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .londoncard-arrow-1 {
-    --left:2136svh;
+    --left:2131svh;
   }
 }
 
@@ -4724,7 +4745,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .londoncard-text {
-    --left:2138svh;
+    --left:2133svh;
   }
 }
 
@@ -4740,7 +4761,7 @@ html, body {
 @media (max-width: 36em) {
   .blue-star-19 {
     display: none;
-    --left:2144svh;
+    --left:2139svh;
   }
 }
 
@@ -4755,7 +4776,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .londoncard-arrow-2 {
-    --left:2145svh;
+    --left:2140svh;
   }
 }
 
@@ -4770,7 +4791,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .silver-star3-17 {
-    --left:2159svh;
+    --left:2154svh;
   }
 }
 
@@ -4785,7 +4806,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .blue-star-20 {
-    --left:2158svh;
+    --left:2153svh;
   }
 }
 
@@ -4799,7 +4820,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .london-tv {
-    --left:2130svh;
+    --left:2125svh;
   }
 }
 
@@ -4814,7 +4835,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .londoncard-front {
-    --left:2158.5svh;
+    --left:2153.5svh;
   }
 }
 
@@ -4829,7 +4850,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .film-strip {
-    --left:2189svh;
+    --left:2184svh;
   }
 }
 
@@ -4844,7 +4865,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .londoncard-back {
-    --left:2169svh;
+    --left:2164svh;
   }
 }
 
@@ -4859,7 +4880,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .dreamdotnet {
-    --left:2205svh;
+    --left:2200svh;
   }
 }
 
@@ -4874,7 +4895,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .church-video {
-    --left:2209svh;
+    --left:2204svh;
   }
 }
 
@@ -4889,7 +4910,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .villains {
-    --left:2211svh;
+    --left:2206svh;
   }
 }
 
@@ -4904,7 +4925,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .strawberry {
-    --left:2263svh;
+    --left:2258svh;
   }
 }
 
@@ -4919,7 +4940,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .glow-star-13 {
-    --left:2268svh;
+    --left:2263svh;
   }
 }
 
@@ -4934,7 +4955,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .next-title {
-    --left:2246svh;
+    --left:2241svh;
   }
 }
 
@@ -4948,7 +4969,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .join-postcard {
-    --left:2245svh;
+    --left:2240svh;
   }
 }
 
@@ -4969,7 +4990,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .presave-text {
-    --left:2286svh;
+    --left:2281svh;
   }
 }
 
@@ -4983,7 +5004,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .presave-button {
-    --left:2302svh;
+    --left:2297svh;
   }
 }
 
@@ -4998,7 +5019,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .im-stamp {
-    --left:2315svh;
+    --left:2310svh;
   }
 }
 
@@ -5013,7 +5034,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .thankyou-note {
-    --left:2341svh;
+    --left:2336svh;
   }
 }
 
@@ -5028,7 +5049,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .lock-logo {
-    --left:2407svh;
+    --left:2402svh;
     --scale: 0.7;
     --y:15svh;
   }
@@ -5045,7 +5066,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .social-sparkles-2 {
-    --left:2410svh;
+    --left:2405svh;
     --scale: .13;
   }
 }
@@ -5061,7 +5082,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .instagram-2 {
-    --left:2420svh;
+    --left:2415svh;
     --scale: .037;
     --x: 6.25svh;
   }
@@ -5078,7 +5099,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .tiktok-2 {
-    --left:2425.5svh;
+    --left:2420.5svh;
     --scale: .037;
     --x: 6.25svh;
   }
@@ -5095,7 +5116,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .twitter-2 {
-    --left:2431svh;
+    --left:2426svh;
     --scale: .037;
     --x:6.25svh;
   }
@@ -5112,7 +5133,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .discord-2 {
-    --left:2436.5svh;
+    --left:2431.5svh;
     --scale: .037;
     --x:6.25svh;
   }
@@ -5129,7 +5150,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .spotify-2 {
-    --left:2443svh;
+    --left:2438svh;
     --scale: .037;
     --x:6.25svh;
   }
@@ -5146,7 +5167,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .apple-music-2 {
-    --left:2448.5svh;
+    --left:2443.5svh;
     --scale: .037;
     --x:6.25svh;
   }
@@ -5174,7 +5195,7 @@ html, body {
 @media (max-width: 36em) {
   .the-end-mobile {
     display: flex;
-    --left:2468svh;
+    --left:2463svh;
     --scale:.30;
     --y: 40svh;
     --x: 8svh;
@@ -5194,7 +5215,7 @@ html, body {
 }
 @media (max-width: 36em) {
   .back-button {
-    --left:2475svh;
+    --left:2470svh;
     --scale:.05;
   }
 }
@@ -5202,7 +5223,7 @@ html, body {
 /* =========================================
    OVERLAY AS MODAL
    ========================================= */
-/* Lock background scroll when modal is open (optional but recommended) */
+/* Lock background scroll when modal is open */
 body.modal-open {
   overflow: hidden;
 }
@@ -5226,35 +5247,33 @@ body.modal-open {
   visibility: visible;
 }
 
-/* Modal box (“window”) */
+/* Modal box */
 #overlay .ov-card {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  /* Smaller than full width */
   max-width: 60rem;
   width: min(60rem, 100% - 4rem);
-  /* Smaller than full height */
   max-height: 80vh;
   padding: 0.3rem;
-  border-radius: 1.5rem;
+  border-radius: 0.3rem;
   background-color: transparent;
   box-shadow: none;
   overflow: hidden;
 }
 
-/* Scrollable area for the image */
+/* Scrollable info */
 #overlay .ov-scroll {
   width: 100%;
   max-height: calc(80vh - 3rem);
   overflow-y: auto;
   overscroll-behavior: contain;
-  border-radius: 1.2rem;
+  border-radius: 0.3rem;
 }
 
-/* Background image (can be taller than the box; excess will scroll) */
+/* Background image */
 #overlay #overlay-img {
   display: block;
   width: 100%;
@@ -5290,12 +5309,13 @@ body.modal-open {
 }
 @media (max-width: 36em) {
   #overlay .overlay-close {
-    width: var(--ov-x-size, 0.5%);
+    left: var(--ov-x-left, 3.5%);
+    width: var(--ov-x-size, 1.75%);
   }
 }
 
 #overlay .overlay-close:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
   filter: brightness(1.1);
 }
 
