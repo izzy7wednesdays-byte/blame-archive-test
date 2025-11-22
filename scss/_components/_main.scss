@@ -414,7 +414,7 @@
 }
 
 .about-lightsleeper-mobile { 
-  display: none;
+  display: none!important;
   
   @include respond(xs) {
     display: flex;
