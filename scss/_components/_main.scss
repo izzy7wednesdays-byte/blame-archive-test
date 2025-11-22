@@ -13,10 +13,10 @@
 }
   
 .special-message-mobile {
-  display: none!important;
+  display: none;
     
   @include respond(xs) {
-    display: flex!important;
+    display: flex;
     position: absolute;
     --left: 12svh;
     --scale: .86;
@@ -41,10 +41,10 @@
 }
 
 .mobile-izzymacarthur {
-  display: none!important;
+  display: none;
 
   @include respond(xs) {
-    display: flex!important;
+    display: flex;
     --left: 13svh;
     --scale: .12;
     --y: 59svh;
