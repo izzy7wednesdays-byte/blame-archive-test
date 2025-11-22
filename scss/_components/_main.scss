@@ -4529,26 +4529,23 @@
   pointer-events: none;
 
   @include respond(xs) {
-    display:none!important;
-    --left:2480svh;
-    --scale:.15;
+    display: none!important;
   }
 }
 
 .the-end-mobile {
   display: none;
-  --left: 2685svh;
-  --scale: .18;
-  --y: 40svh;
-  --x: 8svh;
-  --rot: 0deg;
-  --z: 2;
-  pointer-events: none;
 
   @include respond(xs) {
     display: flex;
+    
     --left:2480svh;
     --scale:.30;
+    --y: 40svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+    pointer-events: none;
   }
 }
 
