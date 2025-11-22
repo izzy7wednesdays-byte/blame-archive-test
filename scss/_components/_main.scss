@@ -3384,7 +3384,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1649svh;
+    display:none;
+    //--left:1649svh;
   }
 }
 
