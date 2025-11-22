@@ -66,7 +66,7 @@
 
   /* text behavior */
   text-align: var(--ta, left);
-  text-transform: var(--tt, none);
+  text-transform: var(text-transform, none);
 
   /* line-break controls */
   white-space: var(--ws-mode, normal);
