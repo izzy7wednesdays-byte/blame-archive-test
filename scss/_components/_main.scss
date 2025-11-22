@@ -977,7 +977,7 @@
   --z: 40;
 
    @include respond(xs) {
-    --left:378svh;
+    --left:375svh;
     --scale:0.25;
   }
 }
@@ -991,7 +991,7 @@
   --z: 30;
 
   @include respond(xs) {
-    --left:368svh;
+    --left:365svh;
     --scale:0.24;
   }  
 }
@@ -1019,8 +1019,8 @@
   pointer-events: none;
   
   @include respond(xs) {
-    --left:365svh;
-    --scale:0.19;
+    --left:363svh;
+    --scale:0.16;
   }
 }
 
@@ -1069,7 +1069,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:405svh;
+    --left:400svh;
     --z: 6;    
   }  
 }
@@ -1084,7 +1084,7 @@
   pointer-events: none;
   
   @include respond(xs) {
-    --left:437svh;
+    --left:432svh;
     --scale:.24;
   }    
 }
@@ -1137,7 +1137,7 @@
 
 .landmines-title-mobile {
     display: none!important;
-    --left: 430svh;
+    --left: 420svh;
     --scale:.13;
     --y:41svh;
     --z: 30;
