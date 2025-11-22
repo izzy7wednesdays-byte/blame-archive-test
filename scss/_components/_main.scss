@@ -801,7 +801,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 295svh;
+    --left: 292svh;
     --scale: .06;
     --rot: 9deg;
     --y: 65svh;
@@ -888,7 +888,7 @@
   --z: 3;
 
   @include respond(xs) {
-    --left: 307svh;
+    --left: 304svh;
     --scale: 0.7;
     --y: 29svh;
   }
