@@ -1130,7 +1130,7 @@
   pointer-events: none;
 
   @include respond(xs) {
-    display:none!important;
+    display:none;
   }     
 }
 
@@ -2753,7 +2753,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1385svh;
+    display: none;
+    //--left:1385svh;
   }
 }
 
@@ -2980,7 +2981,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1403svh;
+    display: none;
+    //--left:1403svh;
   }
 }
 
@@ -3022,7 +3024,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1414svh;
+    display: none;
+    //--left:1414svh;
   }
 }
 
@@ -3442,8 +3445,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    display: none;
-    --left:1709svh;
+    display: none!important;
+    //--left:1709svh;
   }
 }
 
@@ -4017,6 +4020,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    display: none;
     --left:2095svh;
   }
 }
@@ -4183,6 +4187,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    display: none;
     --left:2154svh;
   }
 }
@@ -4326,6 +4331,7 @@
   pointer-events: none;
 
   @include respond(xs) {
+    display:none;
     --left:2263svh;
   }
 }
