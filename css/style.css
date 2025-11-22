@@ -967,6 +967,7 @@ html, body {
     --left:150svh;
     --y:24svh;
     --scale: .20;
+    --z:9;
   }
   .play-lightsleeper .play-lightsleeper-desktop {
     display: none;
@@ -1005,6 +1006,7 @@ html, body {
     --left:155svh;
     --scale:.21;
     --y:73svh;
+    --z:40;
   }
 }
 
