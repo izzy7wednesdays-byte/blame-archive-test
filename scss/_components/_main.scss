@@ -1696,7 +1696,8 @@
   --text-max-w: 43ch;
 
   @include respond(xs) {
-    --left: 735svh;       
+    --left: 733svh; 
+    --y: 0svh;
   }
 }
 
