@@ -4438,6 +4438,7 @@
   @include respond(xs) {
     --left:2425svh;
     --scale: .037;
+    --x: 6.25svh;
   }
 }
 
@@ -4451,8 +4452,9 @@
   outline: none;
 
   @include respond(xs) {
-    --left:2431svh;
+    --left:2430.5svh;
     --scale: .037;
+    --x: 6.25svh;
   }
 }
 
@@ -4466,8 +4468,9 @@
   outline: none;
 
   @include respond(xs) {
-    --left:2437svh;
+    --left:2436svh;
     --scale: .037;
+    --x:6.25svh;
   }
 }
 
@@ -4481,8 +4484,9 @@
   outline: none;
 
   @include respond(xs) {
-    --left:2443svh;
+    --left:2441.5svh;
     --scale: .037;
+    --x:6.25svh;
   }
 }
 
@@ -4496,8 +4500,9 @@
   outline: none;
 
   @include respond(xs) {
-    --left:2449svh;
+    --left:2448svh;
     --scale: .037;
+    --x:6.25svh;
   }
 }
 
@@ -4511,8 +4516,9 @@
   outline: none;
 
   @include respond(xs) {
-    --left:2455svh;
+    --left:2453.5svh;
     --scale: .037;
+    --x:6.25svh;
   }
 }
 
