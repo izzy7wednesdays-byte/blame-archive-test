@@ -3771,7 +3771,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:1944svh;
+    --left:1934svh;
+    --y:82svh
   }
 }
 
@@ -4021,6 +4022,7 @@
 }
 
 .silver-star3-16 {
+  display: flex;
   --left: 2320svh;
   --scale: .08;
   --y: 94svh;
@@ -4030,7 +4032,8 @@
   pointer-events: none;
 
   @include respond(xs) {
-    --left:2105svh;
+    display: none;
+    //--left:2105svh;
   }
 }
 
