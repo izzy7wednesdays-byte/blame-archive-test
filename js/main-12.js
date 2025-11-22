@@ -479,34 +479,42 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 180);
   }
 
-  // Attach click handlers to every overlay-enabled slot
+    // Attach click handlers to every overlay-enabled slot
   const overlaySlots = document.querySelectorAll(".slot[data-overlay-src]");
   if (!overlaySlots.length) {
     console.warn("[Overlay] No .slot[data-overlay-src] elements found");
   }
 
   overlaySlots.forEach(slot => {
-    // Make sure the whole slot feels clickable
-    slot.style.cursor = "pointer";
+    // Only specific media elements inside the slot should trigger the overlay
+    const triggers = slot.querySelectorAll("img, picture, video, dotlottie-wc, canvas");
 
-    slot.addEventListener("click", (e) => {
-      // Don't let inner elements (if any) hijack the event
-      e.preventDefault();
-      e.stopPropagation();
+    if (!triggers.length) {
+      console.warn("[Overlay] No media trigger (img/picture/video/dotlottie-wc/canvas) found inside slot:", slot);
+      return;
+    }
 
-      const src = slot.getAttribute("data-overlay-src");
-      if (!src) {
-        console.warn("[Overlay] Slot clicked without data-overlay-src", slot);
-        return;
-      }
+    triggers.forEach(trigger => {
+      // Cursor + click only on the media, not the whole slot
+      trigger.style.cursor = "pointer";
 
-      // Use data-overlay-alt if present, else inherit from inner <img> alt
-      const alt =
-        slot.getAttribute("data-overlay-alt") ||
-        (slot.querySelector("img")?.getAttribute("alt")) ||
-        "";
+      trigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
 
-      openOverlay(src, alt, slot);
+        const src = slot.getAttribute("data-overlay-src");
+        if (!src) {
+          console.warn("[Overlay] Slot missing data-overlay-src:", slot);
+          return;
+        }
+
+        // Prefer explicit overlay alt, then trigger alt, then empty string
+        const alt =
+          slot.getAttribute("data-overlay-alt") ||
+          (trigger.getAttribute("alt") || "");
+
+        openOverlay(src, alt, slot);
+      });
     });
   });
 
