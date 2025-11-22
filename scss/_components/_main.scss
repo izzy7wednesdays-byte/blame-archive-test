@@ -879,6 +879,21 @@
   }
 }
 
+.exitwounds-substackflier-2 {
+  --left: 453svh;
+  --scale: .76;
+  --y: 30svh;
+  --x: 0svh;
+  --rot: 14deg;
+  --z: 3;
+
+  @include respond(xs) {
+    --left: 303svh;
+    --scale: 0.7;
+    --y: 30svh;
+  }
+}
+
 .silver-star3-1 {
   --left: 459svh;
   --scale: .10;
