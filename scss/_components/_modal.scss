@@ -2,7 +2,7 @@
    OVERLAY AS MODAL
    ========================================= */
 
-/* Lock background scroll when modal is open (optional but recommended) */
+/* Lock background scroll when modal is open */
 body.modal-open {
   overflow: hidden;
 }
@@ -27,7 +27,7 @@ body.modal-open {
   }
 }
 
-/* Modal box (“window”) */
+/* Modal box */
 #overlay .ov-card {
   position: relative;
   display: flex;
@@ -35,11 +35,9 @@ body.modal-open {
   align-items: stretch;
   justify-content: flex-start;
 
-  /* Smaller than full width */
   max-width: 60rem;
   width: min(60rem, calc(100% - 4rem));
-
-  /* Smaller than full height */
+   
   max-height: 80vh;
 
   padding: 0.3rem;
@@ -49,16 +47,16 @@ body.modal-open {
   overflow: hidden;
 }
 
-/* Scrollable area for the image */
+/* Scrollable info */
 #overlay .ov-scroll {
   width: 100%;
-  max-height: calc(80vh - 3rem); // leave room for X button + padding
+  max-height: calc(80vh - 3rem); // room for X button + padding
   overflow-y: auto;
   overscroll-behavior: contain;
   border-radius: 1.2rem;
 }
 
-/* Background image (can be taller than the box; excess will scroll) */
+/* Background image */
 #overlay #overlay-img {
   display: block;
   width: 100%;
@@ -82,7 +80,7 @@ body.modal-open {
   position: absolute;
   top: var(--ov-x-top, 3%);
   left: var(--ov-x-left, 3%);
-  width: var(--ov-x-size, 2%); // % of card width so it scales with modal
+  width: var(--ov-x-size, 2%); // % of card width --> scales with modal
   height: auto;
   max-width: none;
   cursor: pointer;
@@ -99,6 +97,6 @@ body.modal-open {
 }
 
 #overlay .overlay-close:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
   filter: brightness(1.1);
 }
