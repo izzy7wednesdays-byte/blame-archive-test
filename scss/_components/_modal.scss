@@ -53,7 +53,7 @@ body.modal-open {
   max-height: calc(80vh - 3rem); // room for X button + padding
   overflow-y: auto;
   overscroll-behavior: contain;
-  border-radius: 1.2rem;
+  border-radius: 0.8rem;
 }
 
 /* Background image */
@@ -92,7 +92,7 @@ body.modal-open {
   transition: transform 0.18s ease, filter 0.18s ease;
 
    @include respond(xs) {
-      width: var(--ov-x-size, 0.75%); 
+      width: var(--ov-x-size, 1%); 
    }
 }
 
