@@ -93,7 +93,7 @@ body.modal-open {
 
    @include respond(xs) {
       left: var(--ov-x-left, 3.5%);
-      width: var(--ov-x-size, 1.5%); 
+      width: var(--ov-x-size, 1.75%); 
    }
 }
 
