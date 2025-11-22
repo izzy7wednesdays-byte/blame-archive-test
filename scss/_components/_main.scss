@@ -804,7 +804,7 @@
     --left: 295svh;
     --scale: .06;
     --rot: 9deg;
-    --y: 63svh;
+    --y: 65svh;
   }
 }
 
@@ -888,7 +888,7 @@
   --z: 3;
 
   @include respond(xs) {
-    --left: 310svh;
+    --left: 307svh;
     --scale: 0.7;
     --y: 29svh;
   }
