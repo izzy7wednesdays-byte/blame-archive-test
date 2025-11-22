@@ -1,10 +1,10 @@
 // 1) tools
 @import "_abstract/mixins";
 
-// 2) base (this is your old CSS)
+// 2) base
 @import "_base/base";
 @import "_base/typography";
 
-// 3) components (we'll fill _main.scss later)
+// 3) components
 @import "_components/main";
 @import "_components/modal";
