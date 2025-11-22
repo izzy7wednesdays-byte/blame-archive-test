@@ -3846,7 +3846,7 @@
   --z: 57;
 
   @include respond(xs) {
-    --left:1999svh;
+    --left:2003svh;
   }
 }
 
@@ -4227,7 +4227,7 @@
   @include respond(xs) {
     display: flex!important;
 
-    --left: 2140svh;
+    --left: 2143svh;
     --scale: .33;
     --y: 62svh;
     --x: 0svh;
