@@ -13,6 +13,10 @@ html, body {
     --rail-w: 2775svh;
     --bg: #0d161d;
     --fg: #e7f1ff;
+
+    @include respond(xs) {
+      --rail-w: 2600svh;
+    }
   }
 
   *{ box-sizing:border-box }
