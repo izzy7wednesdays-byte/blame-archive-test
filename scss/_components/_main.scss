@@ -409,7 +409,7 @@
   pointer-events:auto;
   
   @include respond(xs) {
-    display: none;
+    display: none !important;
   }
 }
 
