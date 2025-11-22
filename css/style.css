@@ -436,13 +436,14 @@ html, body {
   /* text behavior */
   text-align: var(--ta, left);
   text-transform: var(--tt, none);
-  /* these two are the “line-break” controls, overridable per slot */
-  white-space: var(--ws-mode, normal); /* e.g. pre-line, pre, nowrap */
-  text-wrap: var(--wrap, pretty); /* e.g. normal, nowrap, balance */
+  /* line-break controls */
+  white-space: var(--ws-mode, normal);
+  text-wrap: var(--wrap, pretty);
   hyphens: var(--hy, manual);
   overflow-wrap: anywhere;
-  /* NEW: per-slot max width override, still supports --ch if you want */
-  max-width: var(--text-max-w, min(90svh, var(--ch, 28ch)));
+  /* text max width override */
+  max-width: var(--text-max-w);
+  max-width: min(90svh, var(--ch, 28ch));
   /* decoration / effects */
   text-decoration: var(--dec, none);
   text-underline-offset: var(--uoff, 0.15em);
@@ -540,9 +541,9 @@ html, body {
 }
 
 .izzymacarthur {
-  --left: 18svh;
+  --left: 16svh;
   --scale: .15;
-  --y: 60svh;
+  --y: 62svh;
   --x: 8svh;
   --rot: 0deg;
   --z: 2;
@@ -666,7 +667,7 @@ html, body {
 }
 
 .spotify {
-  --left: 52svh;
+  --left: 53svh;
   --scale: .04;
   --y: 55svh;
   --x: 8svh;
@@ -685,7 +686,7 @@ html, body {
 }
 
 .apple-music {
-  --left: 58svh;
+  --left: 59svh;
   --scale: .04;
   --y: 55svh;
   --x: 8svh;
@@ -704,7 +705,7 @@ html, body {
 }
 
 .torn-note {
-  --left: 16svh;
+  --left: 18svh;
   --scale: .54;
   --y: -4svh;
   --x: -2svh;
@@ -947,9 +948,9 @@ html, body {
 }
 
 .autumn-text {
-  --left:220svh;
-  --scale:.3;
-  --y:22svh;
+  --left:223svh;
+  --scale:.32;
+  --y:23svh;
   --x:0svh;
   --rot:2deg;
   --z:0;
@@ -1567,7 +1568,7 @@ html, body {
 }
 
 .katstratford-car {
-  --left: 519svh;
+  --left: 518svh;
   --scale: .21;
   --y: 13svh;
   --x: 0svh;
@@ -2135,7 +2136,7 @@ html, body {
 .misery-wlj-text {
   --left: 875svh;
   --scale: .2;
-  --y: 88svh;
+  --y: 86svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 73;
@@ -2157,7 +2158,7 @@ html, body {
 
 .misery-wlj {
   --left: 878svh;
-  --scale: .35;
+  --scale: .36;
   --ar: 9/16;
   --y: 52svh;
   --x: 0svh;
@@ -2174,7 +2175,7 @@ html, body {
 
 .star-trio-2 {
   --left: 886svh;
-  --scale: .34;
+  --scale: .32;
   --y: 69svh;
   --x: 0svh;
   --rot: -160deg;
@@ -2471,7 +2472,7 @@ html, body {
 }
 
 .ep-inspo-sp {
-  --left: 1089svh;
+  --left: 1090svh;
   --scale: .35;
   --y: 53svh;
   --x: 0svh;
@@ -3279,9 +3280,9 @@ html, body {
 }
 
 .shoot-makeup {
-  --left: 1532svh;
+  --left: 1544svh;
   --scale: .18;
-  --y: 2svh;
+  --y: 1svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 39;
@@ -3756,9 +3757,9 @@ html, body {
 }
 
 .editing-misery {
-  --left: 1670svh;
+  --left: 1680svh;
   --scale: .25;
-  --y: 75svh;
+  --y: 71svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 40;
@@ -3968,9 +3969,9 @@ html, body {
 }
 
 .exitwounds-subway {
-  --left: 1815svh;
+  --left: 1822svh;
   --scale: .35;
-  --y: 10svh;
+  --y: 3svh;
   --x: 0svh;
   --rot: 3deg;
   --z: 49;
@@ -4416,7 +4417,7 @@ html, body {
 
 .london-title {
   --left: 2130svh;
-  --scale: .5;
+  --scale: .63;
   --y: 2svh;
   --x: 10svh;
   --rot: 0deg;
@@ -4447,9 +4448,9 @@ html, body {
 }
 
 .hangout-poster {
-  --left: 2163svh;
-  --scale: .57;
-  --y: 35svh;
+  --left: 2167svh;
+  --scale: .6;
+  --y: 38svh;
   --x: 0svh;
   --rot: -4deg;
   --z: 44;
@@ -4556,7 +4557,7 @@ html, body {
   --scale: .04;
   --y: 42svh;
   --x: 0svh;
-  --rot: -2deg;
+  --rot: -4deg;
   --z: 44;
   pointer-events: none;
 }
@@ -4567,9 +4568,9 @@ html, body {
 }
 
 .rsvp-button {
-  --left: 2238svh;
-  --scale: .13;
-  --y: 43svh;
+  --left: 2237svh;
+  --scale: .12;
+  --y: 44svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 57;
@@ -5221,7 +5222,7 @@ html, body {
 }
 
 .spotify-2 {
-  --left: 2654svh;
+  --left: 2655svh;
   --scale: .04;
   --y: 9svh;
   --x: 8svh;
@@ -5237,7 +5238,7 @@ html, body {
 }
 
 .apple-music-2 {
-  --left: 2660svh;
+  --left: 2661svh;
   --scale: .04;
   --y: 9svh;
   --x: 8svh;
@@ -5253,8 +5254,9 @@ html, body {
 }
 
 .the-end {
-  --left: 2685svh;
-  --scale: .18;
+  display: flex;
+  --left: 2690svh;
+  --scale: .3;
   --y: 40svh;
   --x: 8svh;
   --rot: 0deg;
@@ -5263,33 +5265,29 @@ html, body {
 }
 @media (max-width: 36em) {
   .the-end {
-    --display:none;
-    --left:2480svh;
-    --scale:.15;
+    display: none !important;
   }
 }
 
 .the-end-mobile {
   display: none;
-  --left: 2685svh;
-  --scale: .18;
-  --y: 40svh;
-  --x: 8svh;
-  --rot: 0deg;
-  --z: 2;
-  pointer-events: none;
 }
 @media (max-width: 36em) {
   .the-end-mobile {
     display: flex;
-    --left:2480svh;
-    --scale:.15;
+    --left:2475svh;
+    --scale:.30;
+    --y: 40svh;
+    --x: 8svh;
+    --rot: 0deg;
+    --z: 2;
+    pointer-events: none;
   }
 }
 
 .back-button {
   --left: 2685svh;
-  --scale: .18;
+  --scale: .17;
   --y: 15svh;
   --x: 8svh;
   --rot: 0deg;
@@ -5298,7 +5296,7 @@ html, body {
 @media (max-width: 36em) {
   .back-button {
     --left:2480svh;
-    --scale:.15;
+    --scale:.05;
   }
 }
 
