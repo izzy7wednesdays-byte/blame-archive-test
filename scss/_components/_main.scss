@@ -2157,16 +2157,17 @@
 }
 
 .ep-title {
-  --left: 1176svh;
+  --left: 1182svh;
   --scale: .3;
-  --y: -7svh;
+  --y: 1svh;
   --x: 0svh;
   --rot: 0deg;
   --z: 100;
   pointer-events: none;
 
   @include respond(xs) {
-    --left: 971svh;
+    --left: 973svh;
+    --y: 1svh;
   }
 }
 
