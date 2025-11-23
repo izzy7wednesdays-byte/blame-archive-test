@@ -1,2 +1,146 @@
-// scss/_base/_utilities.scss
-// Later: helper classes like .visually-hidden, .clickable, etc., if you split them out.
+/* Containers */
+.container, 
+.container-fluid,
+.container-xxxl, 
+.container-xxl,
+.container-xl, 
+.container-lg, 
+.container-md, 
+.container-sm, 
+.container-xs, 
+.container-xxs {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+}
+.container-xxl {
+    max-width: 1600px;
+}
+.container-xl {
+    max-width: 1439px;
+}
+.container-lg {
+    max-width: 1200px;
+}
+.container-md {
+    max-width: 992px;
+}
+.container-sm {
+    max-width: 768px;
+}
+.container-xs {
+    max-width: 576px;
+}
+
+/* Positions */
+.position-absolute {
+    position: absolute;
+}
+.position-relative {
+    position: relative;
+}
+.position-fixed {
+    position: fixed;
+}
+
+/* Text alignment */
+.txt-align-center {
+    text-align: center;
+}
+.txt-align-left {
+    text-align: left;
+}
+.txt-align-right {
+    text-align: right;
+}
+
+/* Heights */
+.h-100 {
+    height: 100%;
+}
+
+/* Widths */
+.w-100 {
+    width: 100%;
+}
+.w-70 {
+    width: 70%;
+}
+.w-40 {
+    width: 40%;
+}
+.w-xs-80 {
+    @include respond(xs) {
+        width: 80%;
+    }
+}
+
+/* Overflow */
+.of-h {
+    overflow: hidden;
+}
+
+/* Display */
+.display-none, .d-n {
+    display: none !important;
+}
+.display-flex, .d-flex, .d-f {
+    display: flex !important;
+}
+.display-grid, .d-g {
+    display: grid !important;
+}
+.display-block, .d-b {
+    display: block !important;
+}
+.d-xs-b {
+    @include respond(xs) {
+        display: block !important;
+    }
+}
+.display-inline-block, .d-ib {
+    display: inline-block;
+}
+
+/* Flex Justify */
+.justify-space-between, .jc-sb {
+    justify-content: space-between;
+}
+.justify-space-evenly, .jc-se {
+    justify-content: space-evenly;
+}
+.fd-c {
+    flex-direction: column;
+}
+.fd-xs-c {
+    @include respond(xs) {
+        flex-direction: column;
+    }
+}
+
+/* Flex Align */
+.align-items-center, .ai-c {
+    align-items: center;
+}
+
+/* Flex */
+.flex-1 {
+    flex: 1;
+}
+
+/* Letter Spacing */
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+/* Stick */
+.stick {
+	position:fixed;
+	top:0px;
+}
+
+/* Disabled text */
+.txt-disabled {
+    pointer-events: none;
+    opacity: 0.5;  
+}
