@@ -1,7 +1,9 @@
-$main-font: "Thinker", Times;
-$small-font: "Thinker",sans-serif;
+$font-size-base: 1.6rem;
+$font-size-sm: 1.3rem;
+$font-size-lg: 2rem;
 
-$manic-font: "Manic", Georgia;
+$font-main: "Thinker", system-ui, -apple-system, "Segoe UI", sans-serif;
+$font-alt: "Manic", system-ui, -apple-system, "Segoe UI", sans-serif;
 
 $font-weight: 400;
 $enable-responsive-font-sizes: true;
