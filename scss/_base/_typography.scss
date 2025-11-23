@@ -58,3 +58,10 @@
 .is-lowercase {
   text-transform: lowercase;
 }
+
+.small {
+    font-size: 1.1rem;
+    @include respond(xs) {
+        font-size: .8rem;
+    }
+}
