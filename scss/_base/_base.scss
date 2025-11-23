@@ -1,8 +1,27 @@
 /* ========= BASE / INITIAL PAINT ========= */
-html, body {
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+html, body { 
   background: #0f0f12;
   color: #e0e0e0;
   min-height: 100%;
+}
+
+/* ========= GLOBAL TYPOGRAPHY DEFAULTS ========= */
+body {
+  font-family: $font-main;
+}
+
+p,
+strong {
+  font-size: $font-size-base;    // or whatever base you like
+}
+
+button {
+  font-family: $font-main;
 }
 
 /* ========= V146.2 — FIXING OVERLAY - LINE 446 ========= */
