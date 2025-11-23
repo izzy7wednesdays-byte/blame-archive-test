@@ -1,36 +1,35 @@
 /* === Core webfonts === */
 
-/* Thinker (regular) */
+/* Thinker */
 @font-face {
   font-family: "Thinker";
   src: url("../assets/fonts/thinker/Thinker.woff2") format("woff2"),
        url("../assets/fonts/thinker/Thinker.ttf") format("truetype");
 }
 
+/* Manic Family */
 @font-face {
   font-family: "Manic";
   src: url("../assets/fonts/manic/manic-regular.woff2") format("woff2"),
        url("../assets/fonts/manic/manic-regular.otf") format("opentype");
 }
-
 @font-face {
   font-family: "Manic Alt 1";
   src: url("../assets/fonts/manic/manic-alt1.woff2") format("woff2"),
        url("../assets/fonts/manic/manic-alt1.otf") format("opentype");
 }
-
 @font-face {
   font-family: "Manic Alt 2";
   src: url("../assets/fonts/manic/manic-alt2.woff2") format("woff2"),
        url("../assets/fonts/manic/manic-alt2.otf") format("opentype");
 }
-
 @font-face {
   font-family: "Manic Alt 3";
   src: url("../assets/fonts/manic/manic-alt3.woff2") format("woff2"),
        url("../assets/fonts/manic/manic-alt3.otf") format("opentype");
 }
 
+/* Text Utilities */
 .is-uppercase {
   text-transform: uppercase;
 }
@@ -46,6 +45,7 @@
     }
 }
 
+/* Reset form controls */
 button,
 input,
 select,
