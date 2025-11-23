@@ -12,16 +12,18 @@ html, body {
 
 /* ========= GLOBAL TYPOGRAPHY DEFAULTS ========= */
 body {
+  font-family: $font-main; "Thinker", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+
+button {
   font-family: $font-main;
 }
 
 p,
 strong {
-  font-size: $font-size-base;    // or whatever base you like
-}
-
-button {
-  font-family: $font-main;
+  font-size: $font-size-base;
+  line-height: 1.4;   /* if you want a global line-height */
 }
 
 /* ========= V146.2 — FIXING OVERLAY - LINE 446 ========= */
