@@ -42,4 +42,14 @@
       display: block;
     }
   }
+
+  .lottie-open-modal { 
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      scale: 1.02;
+      filter: brightness(1.15);
+    }
+  }
 }
