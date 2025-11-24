@@ -5,16 +5,17 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Pause all <audio> elements in .slot--audio, except optional one
-  function pauseAllHtmlAudio(exceptAudio) {
-    document.querySelectorAll(".slot--audio audio").forEach(a => {
-      if (a !== exceptAudio) {
-        try { a.pause(); } catch (e) {}
-      }
-    });
-  }
+    function pauseAllHtmlAudio(except) {
+      // Pause all <audio> elements in the document, except optional one
+      document
+        .querySelectorAll("audio")
+        .forEach(a => {
+          if (a !== except) {
+            try { a.pause(); } catch (e) {}
+          }
+        });
+    }
   
-  // Pause the single shared SC widget + any legacy widgets
   function pauseAllSc() {
     if (window.__scSingleWidget) {
       try { window.__scSingleWidget.pause(); } catch (e) {}
@@ -227,68 +228,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   })();
 
-  /* ===== 3. Voice Memo (image-controlled audio) ===== */
-  // Cache audio slots query
-  const audioSlots = document.querySelectorAll(".slot--audio");
-  audioSlots.forEach(slot => {
-    const audio   = slot.querySelector("audio");
-    const trigger = slot.querySelector(".audio-trigger");
-    if (!audio || !trigger) return;
-
-    const fileFromDataAttr = (slot.dataset.audioSrc || "").trim();
-    if (fileFromDataAttr) {
-      audio.src = fileFromDataAttr;
-    }
-
-    audio.preload = "auto";
-    audio.setAttribute("playsinline", "");
-
-    function syncUI() {
-      const isPlaying = !audio.paused && !audio.ended;
-      slot.classList.toggle("is-playing", isPlaying);
-      trigger.setAttribute("aria-pressed", isPlaying ? "true" : "false");
-    }
-
-    trigger.addEventListener("click", e => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      // If this one is currently playing → pause on click #2
-      if (!audio.paused && !audio.ended) {
-        audio.pause();
-        syncUI();
-        return;
-      }
-
-      // Otherwise pause all other audio + SC and play this one
-      pauseAllHtmlAudio(audio);
-      pauseAllSc();
-
-      const playAttempt = audio.play();
-
-      if (playAttempt && typeof playAttempt.catch === "function") {
-        playAttempt.catch(err => {
-          console.warn("[VoiceMemo] play() was blocked:", err);
-        });
-      }
-
-      syncUI();
-    });
-
-    audio.addEventListener("play",  syncUI);
-    audio.addEventListener("pause", syncUI);
-    audio.addEventListener("ended", syncUI);
-
-    audio.addEventListener("error", () => {
-      console.warn("[VoiceMemo] audio error", {
-        src: audio.currentSrc,
-        error: audio.error
-      });
-    });
-
-    syncUI();
-  });
-
 /* ===== 3.5 Vimeo single-play controller ===== */
 (function initVimeoPlayers() {
   try {
@@ -301,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Keep a list of all Vimeo players so we can pause others
     window.__vimeoPlayers = [];
 
-    document.querySelectorAll("iframe.video-iframe").forEach(iframe => {
+    document.querySelectorAll("iframe.vimeo-iframe").forEach(iframe => {
       // Only touch real Vimeo embeds
       const src =
         iframe.getAttribute("src") ||
