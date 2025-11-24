@@ -5,8 +5,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ===== Shared helpers (SC + HTML audio + Vimeo) ===== */
-
   // Pause all <audio> elements in .slot--audio, except optional one
   function pauseAllHtmlAudio(exceptAudio) {
     document.querySelectorAll(".slot--audio audio").forEach(a => {
@@ -15,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
+  
   // Pause the single shared SC widget + any legacy widgets
   function pauseAllSc() {
     if (window.__scSingleWidget) {
@@ -70,43 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
     lottieElements.forEach(el => io.observe(el));
   })();
 
-/* ===== 1.4 Lottie offscreen pause/resume =====
-  (function initLottieVisibility() {
-    if (!("IntersectionObserver" in window)) return;
-
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const el = entry.target;
-      
-        // Skip auto-play/pause for Lotties that opt out
-        if (el.hasAttribute("data-no-pause")) return;
-      
-        const isVisible = entry.isIntersecting && entry.intersectionRatio > 0.01;
-
-        try {
-          // dotlottie-wc exposes play()/pause() in most builds
-          if (isVisible) {
-            if (typeof el.play === "function") {
-              el.play();
-            }
-          } else {
-            if (typeof el.pause === "function") {
-              el.pause();
-            }
-          }
-        } catch (err) {
-          console.warn("[Lottie] play/pause failed for", el, err);
-        }
-      });
-    }, {
-      root: null,
-      threshold: 0.01
-    });
-
-    // Observe ALL Lotties, lazy or not
-    document.querySelectorAll("dotlottie-wc").forEach(el => io.observe(el));
-  })();  */
-
     /* ===== 1.3 Lazy-load external frames (opt-in only) ===== */
   (function initLazyFrames() {
     // If the browser is too old, let everything load normally.
@@ -152,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lazyImages.forEach(el => io.observe(el));
   })();
 
-  /* ===== 2. SoundCloud image-controlled player (Option B: single hidden iframe) ===== */
+  /* ===== 2. SoundCloud image-controlled player ===== */
   (function initSCController() {
     const SC_SCRIPT_SRC = 'https://w.soundcloud.com/player/api.js';
     const iframe = document.getElementById('sc-player-iframe');
@@ -176,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Shared widget state
     let widget = null;          // SC.Widget instance (created once)
-    let initialized = false;    // iframe has been pointed at SC at least once
+    let initialized = false;    // iframe  pointed at SC at least once
     let currentUrl = null;      // currently loaded track
     let busy = false;           // debounce fast double taps
 
@@ -318,7 +279,6 @@ document.addEventListener("DOMContentLoaded", () => {
     syncUI();
   });
 
-  /* ===== 3.5 Vimeo single-play controller ===== */
 /* ===== 3.5 Vimeo single-play controller ===== */
 (function initVimeoPlayers() {
   try {
@@ -331,7 +291,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Keep a list of all Vimeo players so we can pause others
     window.__vimeoPlayers = [];
 
-    document.querySelectorAll(".slot--video iframe").forEach(iframe => {
+    document.querySelectorAll("iframe.video-iframe").forEach(iframe => {
       // Only touch real Vimeo embeds
       const src =
         iframe.getAttribute("src") ||
