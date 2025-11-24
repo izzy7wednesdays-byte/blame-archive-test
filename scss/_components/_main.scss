@@ -25,6 +25,22 @@
       border: 0;
       border-radius: none; 
     }
+    .audio-img {
+      cursor: pointer;
+      user-select: none;
+      display: block;
+      height: calc(var(--band-h) * var(--scale));
+      width: auto;
+      object-fit: contain;
+      
+      &:hover {
+              scale: 1.02;
+              filter: brightness(1.15);
+    }  
+    .audio-img.is-playing {
+      scale: 1.02;
+      filter: brightness(1.15);
+    }
     img {
       max-width: initial;
     }
