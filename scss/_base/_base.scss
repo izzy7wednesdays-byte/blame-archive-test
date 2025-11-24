@@ -11,7 +11,9 @@ html, body {
 }
 
 /* ========= GLOBAL TYPOGRAPHY DEFAULTS ========= */
-body { font-family: $font-main; "Thinker"}
+body {
+  font-family: $font-main;
+}
 
 button {
   font-family: $font-main;
