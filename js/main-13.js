@@ -374,40 +374,39 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })();
 
-/* ===== 4.2 GIF/WebP animation offscreen swap ===== */
-  (function initGifVisibility() {
-    if (!("IntersectionObserver" in window)) return;
+/* ===== GIF placeholders → GIF Play ===== */
+(function initGifPlaceholders() {
+  const gifImgs = Array.from(
+    document.querySelectorAll("img[data-gif-src]")
+  );
+  if (!gifImgs.length) return;
 
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const img = entry.target;
-        const fullSrc = img.getAttribute("data-gif-src");
-        const placeholder = img.getAttribute("data-gif-placeholder") || "";
-
-        if (!fullSrc) return;
-
-        const isVisible = entry.isIntersecting && entry.intersectionRatio > 0.01;
-
-        if (isVisible) {
-          // Swap to animated version if not already set
-          if (img.getAttribute("src") !== fullSrc) {
-            img.setAttribute("src", fullSrc);
-          }
-        } else {
-          // Swap to placeholder (static) when offscreen, if provided
-          if (placeholder && img.getAttribute("src") !== placeholder) {
-            img.setAttribute("src", placeholder);
-          }
-        }
-      });
-    }, {
-      root: null,
-      threshold: 0.01
+  if (!("IntersectionObserver" in window)) {
+    gifImgs.forEach(img => {
+      const gifSrc = img.getAttribute("data-gif-src");
+      if (gifSrc) img.src = gifSrc;
     });
+    return;
+  }
 
-    // Observe all GIF/WebP images that declare data-gif-src
-    document.querySelectorAll("img[data-gif-src]").forEach(img => io.observe(img));
-  })();
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const img = entry.target;
+      const gifSrc = img.dataset.gifSrc;
+      const staticSrc = img.dataset.staticSrc;
+
+      if (entry.isIntersecting) {
+        if (img.src !== gifSrc) img.src = gifSrc;
+      } else {
+        if (staticSrc && img.src !== staticSrc) img.src = staticSrc;
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  gifImgs.forEach(img => observer.observe(img));
+})();
 
 /* ===== Modal Overlay System ===== */
 (function () {
