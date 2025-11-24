@@ -161,7 +161,8 @@
       <img loading="lazy" class="blue-star-1" src="assets/img/stars/blue-star.webp?v=3" />
       <img loading="lazy" class="blue-star-2" src="assets/img/stars/blue-star.webp?v=3" />
       <img loading="lazy" class="silver-star1-1" src="assets/img/stars/silver-star1.webp?v=3" />
-      <img data-modal="lightsleeper-modal" loading="lazy" src="assets/img/tv-message-1.webp"class="lightsleeper-about open-modal">
+      <img data-modal="lightsleeper-modal" loading="lazy" src="assets/img/tv-message-1.webp" class="about-lightsleeper open-modal">
+      <img data-modal="lightsleeper-modal" loading="lazy" src="assets/img/lightsleeper-about.webp" class="about-lightsleeper-mobile open-modal">
       <img loading="lazy" class="autumn-text" src="assets/img/autumn-text.webp?v=3" />
       <img loading="lazy" class="blame-it-notesapp" src="assets/img/blame-it-notesapp.webp?v=2">
       <img loading="lazy" class="silver-star1-2" src="assets/img/stars/silver-star1.webp?v=3" />
@@ -177,8 +178,7 @@
             style="width:100%;height:100%">
           </dotlottie-wc>
         </div>
-      </figure>
-      
+      </figure>      
       <!-- 7) YOUTUBE – Light Sleeper Visualizer -->
       <figure class="slot slot--youtube lightsleeper-visualizer" id="lightsleeper-visualizer">
         <div class="yt-box">
@@ -191,26 +191,6 @@
           </iframe>
         </div>
       </figure>
-  
-      <!-- 8) DESKTOP/MOBILE - About Light Sleeper -->
-
-      <!-- Trigger image in the rail -->
-<img loading="lazy" class="about-lightsleeper open-modal" src="assets/img/tv-message-1.webp?v=2"
-  data-modal="about-lightsleeper-modal">
-        <!-- a) GIF:OVERLAY -->
-        <figure class="slot about-lightsleeper" id="about-lightsleeper"
-          data-overlay-src="assets/img/about/about-lightsleeper.webp?v=1"
-          data-overlay-alt="About Light Sleeper">
-           <img data-lazy-src="assets/img/tv-message-1.webp?v=2" alt="TV message" loading="lazy" decoding="async" style="cursor:pointer;">
-        </figure>
-
-        <!-- a) IMG:OVERLAY -->
-        <figure class="slot about-lightsleeper-mobile" id="about-lightsleeper-mobile"
-          data-overlay-src="assets/img/about/about-lightsleeper.webp?v=1"
-          data-overlay-alt="About Light Sleeper">
-           <img data-lazy-src="assets/img/lightsleeper-about.webp?v=2" alt="TV message" loading="lazy" decoding="async" style="cursor:pointer;">
-        </figure>
-  
       <!-- 11) VIMEO - Light Sleeper Studio -->
       <figure class="slot slot--video lightsleeper-studio" id="lightsleeper-studio">
         <div class="video-box">
@@ -223,14 +203,17 @@
           </iframe>
         </div>
       </figure>
-      
-      <!-- 13) GIF:OVERLAY - Click for Chordz Gif -->
-      <figure class="slot chords-gif" id="chords-gif"
-        data-overlay-src="assets/img/lightsleeper-chords.webp?v=3"
-        data-overlay-alt="Izzy with Guitar">
-        <img data-lazy-src="assets/gifs/izzymacarthur-withguitar.webp?v=2" alt="Light Sleeper Chords" loading="lazy" decoding="async" style="cursor:pointer;">
-      </figure>
-  
+
+<img data-modal="lightsleeper-chords-modal" loading="lazy" src="assets/img/izzymacarthur-withguitar.webp" class="lightsleeper-chords open-modal">   
+
+<div id="lightsleeper-chords-modal" class="modal hidden">
+  <button class="close-modal"></button>
+  <div class="modal-content">
+    <img
+      src="assets/img/lightsleeper-chords.webp?v=1"
+      class="modal-image">
+  </div>
+</div>  
       <!-- 14) Text - Click4Chordz -->
       <!-- <figure class="is-uppercase click4chordz" id="click4chordz">
         <div class="text-box">
@@ -309,6 +292,7 @@
       <img loading="lazy" class="silver-star3-3" src="assets/img/stars/silver-star3.webp?v=3" />
    
       <p class="text-wrapper-2">click to press play, dj!</p>
+      <img data-modal="exitwounds-modal" loading="lazy" src="assets/img/exit-wounds-bandages.webp" class="about-exitwounds open-modal">
       <p class="text-wrapper-4">READ MORE ABOUT<br>EXIT WOUNDS ON MY<br>SUBSTACK "10<br>THINGS I'M<br>THINKING ABOUT"!</p>
       <p class="text-wrapper-3">click me</p>
       <p class="text-wrapper-5">if you don't think<br>it's, like, totally lame,<br>you should subscribe</p>
@@ -338,14 +322,6 @@
       <!-- <figure class="slot slot--text pressplaydj" id="pressplaydj">
         <div class="text-box">click to press play, dj!</div>
       </figure> -->
-
-      <!-- 7) IMG:OVERLAY - Exit Wounds: About Slot -->
-      <figure class="slot about-exitwounds" id="about-exitwounds"
-        data-overlay-src="assets/img/about/about-exitwounds.webp?v=3"
-        data-overlay-alt="About Exit Wounds">
-        <img src="assets/img/exit-wounds-bandages.webp?v=1" alt="Exit Wounds Bandages" loading="lazy" decoding="async" style="cursor:pointer;">
-      </figure>
-  
       <!-- 8) LOTTIE & IMG — Crashing Down Animation -->
           <!-- a) LOTTIE — Crashing Down Animation -->
           <figure class="slot slot--lottie exitwounds-animation-1" id="exitwounds-animation-1">
@@ -429,6 +405,7 @@
 
       <p class="text-wrapper-6">i have to admit i was NOT a<br>content queen when writing<br>and recording... i have a LOT<br>of videos at this atrocious angle,<br>but i adore the landmines bgvs,<br>so here they are, extra loud 4 u<br></p>
       <p class="text-wrapper-7">watching you guys<br>react to landmines's<br>release meant so<br>much to me (thank <br>you brooke & ava<br>for letting me use<br>this video)<br></p>
+      <img data-modal="landmines-modal" loading="lazy" src="assets/img/landmines-about.webp" class="about-landmines open-modal">
       <p class="text-wrapper-8">the sick ass acoustic<br>bass guitar in session<br>(izzy @ 19 = not cute)</p>
 
       
@@ -443,8 +420,7 @@
             style="width:100%;height:100%">
           </dotlottie-wc>
         </div>
-      </figure>
-      
+      </figure>    
       <!-- 2) VIMEO – Landmines BTS -->
       <figure class="slot slot--video landmines-bts-clip" id="landmines-bts-clip">
         <div class="video-box">
@@ -456,8 +432,7 @@
             title="landmines bts clip">
           </iframe>
         </div>
-      </figure>
-  
+      </figure> 
       <!-- 3) VIMEO – Landmines Voicememo -->
       <figure class="slot slot--video landmines-voicememo" id="landmines-voicememo">
         <div class="video-box">
@@ -470,8 +445,7 @@
           </iframe>
         </div>
       </figure>
-
-      <!-- 5) GIF - Kat Stratford Driver -->
+    <!-- 5) GIF - Kat Stratford Driver -->
       <figure class="slot katstratford-car" id="katstratford-car">
         <img
           data-lazy-src="assets/gifs/static/kat-stratford-car.webp"
@@ -481,7 +455,6 @@
           loading="lazy"
           decoding="async">
       </figure>
-
        <!-- 6) VIMEO - Landmines Vocals Session -->
       <figure class="slot slot--video vocals-landmines-1" id="vocals-landmines-1">
         <div class="video-box">
@@ -493,8 +466,7 @@
             title="Recording Landmines Vocals">
           </iframe>
         </div>
-      </figure>
-  
+      </figure> 
       <!-- 7) TEXT - Vocals Landmines Text -->
       <!-- <figure class="slot slot--text vocals-landmines-1-text" id="vocals-landmines-1-text">
         <div class="text-box">
@@ -506,7 +478,6 @@
           so here they are, extra loud 4 u<br>
         </div>
       </figure> -->
-
       <!-- 13) YOUTUBE – Landmines Lyric Video -->
       <figure class="slot slot--youtube landmines-lyricvideo" id="landmines-lyricvideo">
         <div class="yt-box">
@@ -532,14 +503,7 @@
           this video)<br>
         </div>
       </figure> -->
-      
-      <!-- 15) IMG:OVERLAY - About Landmines -->
-      <figure class="slot about-landmines" id="about-landmines"
-        data-overlay-src="assets/img/about/about-landmines.webp?v=1"
-        data-overlay-alt="About Landmines">
-        <img data-lazy-src="assets/img/landmines-about.webp?v=3" alt="About Landmines Modal" loading="lazy" decoding="async" style="cursor:pointer;">
-      </figure>
-
+  
       <!-- 16) VIMEO - Landmines from Session -->
       <figure class="slot slot--video landmines-og-guitar" id="landmines-og-guitar">
         <div class="video-box">
@@ -601,7 +565,8 @@
       <img loading="lazy" class="misery-title" src="assets/img/misery-title.webp?v=3" />
  
       <p class="text-wrapper-9">when i came up with the<br>first draft of what's now<br>the misery missing company<br>chorus<br></p>
-      <p class="text-wrapper-10">the first version of misery missing <br>companyi wrote for my freshman year of <br>college'ssongwriting class</p>
+      <img data-modal="misery-modal" loading="lazy" src="assets/img/misery-about.webp" class="about-misery open-modal">
+      <p class="text-wrapper-10">the first version of misery missing <br>companyi wrote for my freshman year of <br>college's songwriting class</p>
       <p class="text-wrapper-11">doing misery<br>vocals en le<br>studio<br></p>
       <p class="text-wrapper-12">this is my friend lj<br>and i in my freshman<br>dorm when i played her<br>misery for the first<br>time</p>
 
@@ -623,12 +588,6 @@
           chorus<br>
         </div>
       </figure> -->
-
-      <!-- 5) IMG:OVERLAY - Misery - About -->
-      <figure class="slot about-misery" data-overlay-src="assets/img/about/about-misery.webp?v=1">
-        <img data-lazy-src="assets/img/misery-about.webp?v=3"  loading="lazy" decoding="async" style="cursor:pointer;">
-      </figure>
-
       <!-- 7) GIF - Misery – Kat Stratford Dancing  -->
       <figure class="slot kat-stratford-dancing" id="kat-stratford-dancing">
         <img
@@ -637,13 +596,11 @@
           data-gif-placeholder="assets/gifs/static/kat-stratford-dancing.webp"
           loading="lazy">
       </figure>
-  
       <!-- 8) GIF - Misery – Solo cups animation  -->
       <figure class="slot solo-cups">
         <img data-lazy-src="assets/gifs/solo-cups.webp" data-gif-src="assets/gifs/solo-cups.webp?v=3" data-gif-placeholder="assets/gifs/static/solo-cups.webp"
           loading="lazy">
       </figure>
-  
       <!-- 9) VIMEO – Misery – First Draft Voicememo -->
       <figure class="slot slot--video misery-wants-company" id="misery-wants-company">
         <div class="video-box">
@@ -655,8 +612,7 @@
             title="Misery first draft of Chorus">
           </iframe>
         </div>
-      </figure>
-      
+      </figure>    
       <!-- 10) TEXT - first draft of misery -->
       <!-- <figure class="slot slot--text misery-wants-company-text" id="misery-wants-company-text">
         <div class="text-box">
@@ -665,7 +621,6 @@
           songwriting class
         </div>
       </figure> -->
-  
       <!-- 12) VIMEO - Misery Vocals in Studio -->
       <figure class="slot slot--video vocals-misery-4" id="vocals-misery-4">
         <div class="video-box">
@@ -678,7 +633,6 @@
           </iframe>
         </div>
       </figure>
-  
       <!-- 13) TEXT - Misery Vocals in Studio -->
       <!-- <figure class="slot slot--text vocals-misery-4-text" id="vocals-misery-4-text">
         <div class="text-box">
@@ -687,15 +641,13 @@
           studio<br>
         </div>
       </figure> -->
-    
       <!-- 14) SOUNDCLOUD — Play Misery -->
       <figure class="slot slot--sc play-misery" id="play-misery"
               data-sc-url="https://soundcloud.com/izzy-macarthur/misery-missing-company">
         <img class="sc-trigger"
              data-lazy-src="assets/img/play-misery.webp?v=3"
              alt="Play Misery Missing Company (SoundCloud)">
-      </figure>
-       
+      </figure>      
       <!-- 15) TEXT - Misery with LJ -->
       <!-- <figure class="slot slot--text misery-wlj-text" id="misery-wlj-text">
         <div class="text-box">
@@ -706,7 +658,6 @@
           time
         </div>
       </figure> -->
-
       <!-- 16) VIMEO - Misery w Lily -->
       <figure class="slot slot--video misery-wlj" id="misery-wlj">
         <div class="video-box">
@@ -718,8 +669,7 @@
             title="Misery Missing Company with LJ">
           </iframe>
         </div>
-      </figure>
-  
+      </figure> 
       <!-- 18) YOUTUBE – Misery Visualizer -->
       <figure class="slot slot--youtube misery-visualizer" id="misery-visualizer">
         <div class="yt-box">
@@ -731,8 +681,7 @@
             allowfullscreen>
           </iframe>
         </div>
-      </figure>
-   
+      </figure>   
       <!-- ========================= -->
              <!-- SLEEPWALKING -->
       <!-- ========================= --> 
@@ -743,7 +692,7 @@
       <img loading="lazy" class="sleepwalking-receipt" src="assets/img/stars/sleepwalking-receipt.webp?v=3" />
 
       <p class="text-wrapper-13">me in my music tech class when <br>sleepwalking was played on the radio<br>for the first time ever</p>
-
+      <img data-modal="sleepwalking-modal" loading="lazy" src="assets/img/sleepwalking-about.webp" class="about-sleepwalking open-modal">
   
        <!-- 3) SOUNDCLOUD — Play Sleepwalking -->
       <figure class="slot slot--sc play-sleepwalking" id="play-sleepwalking"
@@ -810,13 +759,6 @@
           </iframe>
         </div>
       </figure>
-
-      <!-- 11) IMG:OVERLAY - About Sleepwalking -->
-      <figure class="slot about-sleepwalking" id="about-sleepwalking"
-        data-overlay-src="assets/img/about/about-sleepwalking.webp?v=1"
-        data-overlay-alt="About Sleepwalking">
-        <img data-lazy-src="assets/img/sleepwalking-about.webp?v=2" alt="Sleepwalking About" loading="lazy" decoding="async" style="cursor:pointer;">
-      </figure>
   
       <!-- ========================= -->
              <!-- THE EP -->
@@ -846,6 +788,7 @@
       <img loading="lazy" class="ep-cover" src="assets/img/ep-cover.webp?v=1" />
 
       <p class="text-wrapper-15">click the phone to read<br>what i've gotta say</p>  
+      <img data-modal="ep-modal" loading="lazy" src="assets/img/ep-telephone.webp" class="about-ep open-modal">
       <p class="text-wrapper-14">phoning all my<br>friends!!!</p>
       <p class="text-wrapper-16">mixing misery missing<br>company<br></p>
       <p class="text-wrapper-17"there were<br>horrible<br>wildfires in<br>canada when we<br>were recording<br>the vocals, so<br>it felt like it<br>was 5pm all day</p>
@@ -870,12 +813,6 @@
           what i've gotta say
         </div>
       </figure> -->
-      <!-- 6) IMG:OVERLAY - EP – Telephone -->
-      <figure class="slot ep-telephone" id="ep-telephone"
-        data-overlay-src="assets/img/about/about-ep.webp?v=2"
-        data-overlay-alt="About Telephone">
-        <img data-lazy-src="assets/img/ep-telephone.webp?v=2" alt="EP Telephone" loading="lazy" decoding="async" style="cursor:pointer;">
-      </figure>
       <!-- 6) TEXT - EP - Phoning Friends -->
       <!-- <figure class="slot slot--text ep-phoningfriends" id="ep-phoningfriends">
         <div class="text-box"> phoning all my<br> friends!!!</div> </figure> -->     
@@ -1022,6 +959,7 @@
       <!-- ========================= --> 
       <img loading="lazy" class="artwork-title" src="assets/img/artwork-title.webp?v=2" />
       <img loading="lazy" class="silver-star3-8" src="assets/img/stars/silver-star3.webp?v=2" />
+      <img data-modal="artwork-modal" loading="lazy" src="assets/img/artwork-about.webp" class="about-artwork open-modal">
       <img loading="lazy" class="tv-photo" src="assets/img/tv-photo.webp?v=2" />      
       <img loading="lazy" class="caitlin-note" src="assets/img/caitlin-note.webp?v=2" />
       <img loading="lazy" class="caitlin-text-1" src="assets/img/caitlin-text-1.webp?v=2" />
@@ -1069,12 +1007,6 @@
             title=”Artwork Testshoot 4">
           </iframe>
         </div>
-      </figure>
-      <!-- 5) IMG:OVERLAY – About Artwork -->
-      <figure class="slot about-artwork" id="about-artwork"
-        data-overlay-src="assets/img/about/about-artwork.webp?v=2"
-        data-overlay-alt="About artwork">
-        <img src="assets/img/artwork-about.webp?v=2" alt="About Artwork" loading="lazy" decoding="async" style="cursor:pointer;">
       </figure>
       <!-- 7) GIF - Artwork – Kayla Polaroid -->
       <figure class="slot kayla-polaroid" id="kayla-polaroid">
@@ -1164,6 +1096,7 @@
       <img loading="lazy" class="backtruck-1" src="assets/img/backtruck-1.webp?v=2" /> 
 
       <p class="text-wrapper-24">brainstorming the<br>misery visualizer<br>(ft. my horrible<br>sketches)</p>
+      <img data-modal="videos-modal" loading="lazy" src="assets/img/videos-about.webp" class="about-videos open-modal">
       
 
       <!-- 1) VIDEO - YouTube – Misery Missing Company Behind the Scenes -->
@@ -1337,12 +1270,6 @@
           </iframe>
         </div>
       </figure>
-      <!-- #) IMG:OVERLAY - Overlay - About Videos -->
-      <figure class="slot videos-about" id="videos-about"
-        data-overlay-src="assets/img/about/about-videos.webp?v=3"
-        data-overlay-alt="About the Videos">
-        <img src="assets/img/videos-about.webp?v=2" alt="About Videos" loading="lazy" decoding="async" style="cursor:pointer;">
-      </figure>  
       <!-- #) VIDEO - YouTube – Exit Wounds Behind the Scenes -->
       <figure class="slot slot--youtube exitwounds-bts" id="exitwounds-bts">
         <div class="yt-box">
@@ -1410,6 +1337,7 @@
       <p class="text-wrapper-25">anytime i light a match, i feel like<br>i’m committing a crime straight out <br>of pretty little liars</p>
       <p class="text-wrapper-26">two of the first drafts of the<br>posters before they became what<br>people now have hung up in their<br>houses (absolutely crazytown to<br>think about)</p>
       <p class="text-wrapper-27">a special thank<br>you must go to my<br>lovely friend xoee<br>for designing<br>these with me <3<br></p>
+      <img data-modal="matches-modal" loading="lazy" src="assets/img/matchbooks-about.webp" class="about-matches open-modal">
 
       <!-- 5) GIFS - Merch – Pretty Little Liars Gif -->
       <figure class="slot pretty-little-liars" id="pretty-little-liars">
@@ -1459,12 +1387,6 @@
           these with me <3<br>
         </div>
       </figure> -->
-      <!-- 13) URL:OVERLAY – MERCH – MATCHBOOKS -->
-      <figure class="slot about-matchbooks" id="about-matchbooks"
-        data-overlay-src="assets/img/about/about-matches.webp?v=2"
-        data-overlay-alt="About Landmines">
-        <img src="assets/img/matchbooks-about.webp?v=3" alt="About the Matches" loading="lazy" decoding="async" style="cursor:pointer;">
-      </figure>
       <!-- 16) IMG:URL - Merch – Poster -->
       <figure class="slot poster" id="poster">
         <a href="https://shopizzymacarthur.com/products/limited-edition-signed-poster"
@@ -1504,6 +1426,7 @@
       <img loading="lazy" class="rsvp-arrow" src="assets/img/arrows/swirl-arrow-r?v=3" />
       <img loading="lazy" class="blue-star-17" src="assets/img/stars/blue-star.webp?v=3" />
       <img loading="lazy" class="london-matches" src="assets/img/london-matches.webp?v=3" />
+      <img data-modal="london-modal" loading="lazy" src="assets/img/london-about.webp" class="about-london open-modal">
       <img loading="lazy" class="silver-star3-14" src="assets/img/stars/silver-star3.webp?v=3" />
       <img loading="lazy" class="blue-star-18" src="assets/img/stars/blue-star.webp?v=3" />      
       <img loading="lazy" class="silver-star3-15" src="assets/img/stars/silver-star3.webp?v=3" />
@@ -1521,9 +1444,9 @@
       <img loading="lazy" class="londoncard-front" src="assets/img/london-card-front-2.webp?v=3" />
       <img loading="lazy" class="film-strip" src="assets/img/lfilm-hangout.webp?v=3" />
       <img loading="lazy" class="londoncard-back" src="assets/img/london-card-back.webp?v=3" />
-
       <p class="text-wrapper-28">(sorry, i had to)</p>
       <p class="text-wrapper-29">london hang<br>trading<br>cards:<br>version one<br>vs.<br>the final version</p>
+      <img data-modal="london-tv-modal" loading="lazy" src="assets/img/london-tv-mobile.webp" class="london-tv-mobile open-modal">
 
       <!-- 6) VIMEO - London – Sleepwalking Live from London -->
       <figure class="slot slot--video london-live-1" id="london-live-1">
@@ -1569,12 +1492,6 @@
                alt="RSVP Button">
         </a>
       </figure>
-      <!-- 16) IMG:OVERLAY - About London -->
-        <figure class="slot about-london" id="about-london"
-          data-overlay-src="assets/img/about/about-london.webp?v=2"
-          data-overlay-alt="About London (from my substack)">
-          <img data-lazy-src="assets/img/london-about.webp?v=2" alt="London Composition Book" loading="lazy" decoding="async" style="cursor:pointer;">
-        </figure>
       <!-- 18) GIF - One Direction Gif -->
       <figure class="slot onedirection" id="onedirection">
         <img
@@ -1585,23 +1502,6 @@
           loading="lazy"
           decoding="async">
       </figure> 
-      <!-- 19) TEXT – One Direction Text -->
-      <!-- <figure class="slot slot--text onedirection-text" id="onedirection-text">
-        <div class="text-box">
-          (sorry, i had to)<br>
-        </div>
-      </figure> -->
-      <!-- 28) TEXT - London – Card Text -->
-      <!-- <figure class="slot slot--text londoncard-text" id="londoncard-text">
-        <div class="text-box">
-          london hang<br>
-          trading<br>
-          cards:<br>
-          version one<br>
-          vs.<br>
-          the final version
-        </div>
-      </figure> -->   
       <!-- 33) DESKTOP + MOBILE - MORE FROM LONDON -->
         <!-- a) LOTTIE:OVERLAY - MORE FROM LONDON -->
         <figure class="slot slot--lottie london-tv"
@@ -1617,12 +1517,6 @@
               style="width:100%;height:100%">
             </dotlottie-wc>
           </div>
-        </figure>
-       <!-- b) IMG:OVERLAY - Mobile MORE FROM LONDON -->
-        <figure class="slot london-tv-mobile" id="london-tv-mobile"
-          data-overlay-src="assets/img/london-tv-pics.webp?v=2"
-          data-overlay-alt="More Pics from London overlay">
-           <img data-lazy-src="assets/img/london-tv-mobile.webp?v=2" alt="London TV message" loading="lazy" decoding="async" style="cursor:pointer;">
         </figure>
     
       <!-- ========================= -->
@@ -1659,17 +1553,6 @@
                alt="Join Mailing List Card">
         </a>
       </figure>
-      <!-- 8) TEXT - NEXT - PRE-SAVE TEXT -->
-      <!-- <figure class="slot slot--text presave-text" id="presave-text">
-        <div class="text-box">
-          the best news ever is that<br>
-          you can pre-save any of my<br>
-          future releases RIGHT NOW!!!!<br>
-          you’ll be the first to know<br>
-          about new music, which i am<br>
-          working very diligently on<br>
-        </div>
-      </figure> -->
         <!-- 9) IMG:URL - NEXT - PRE-SAVE BUTTON -->
       <figure class="slot presave-button" id="presave-button">
         <a href="https://fvr.fan/izzymacarthur/presave"
@@ -1740,6 +1623,7 @@
       
     </div>
 
+    
     <!-- MODAL -->
     <div id="lightsleeper-modal" class="modal hidden">
       <button class="close-modal"></button>
@@ -1748,6 +1632,82 @@
       </div>
     </div>
 
+    <div id="lightsleeper-chords-modal" class="modal hidden">
+      <button class="close-modal"></button>
+      <div class="modal-content">
+        <img src="assets/img/lightsleeper-chords.webp?v=1" class="modal-image">
+      </div>
+    </div>  
+
+    <div id="exitwounds-modal" class="modal hidden">
+      <button class="close-modal"></button>
+      <div class="modal-content">
+        <img src="assets/img/about/about-exitwounds.webp?v=1" class="modal-image">
+      </div>
+    </div>
+
+    <div id="landmines-modal" class="modal hidden">
+      <button class="close-modal"></button>
+      <div class="modal-content">
+        <img src="assets/img/about/about-landmines.webp?v=1" class="modal-image">
+      </div>
+    </div>
+
+    <div id="misery-modal" class="modal hidden">
+      <button class="close-modal"></button>
+      <div class="modal-content">
+        <img src="assets/img/about/about-misery.webp?v=1" class="modal-image">
+      </div>
+    </div>
+
+    <div id="sleepwalking-modal" class="modal hidden">
+      <button class="close-modal"></button>
+      <div class="modal-content">
+        <img src="assets/img/about/about-sleepwalking.webp?v=1" class="modal-image">
+      </div>
+    </div>
+
+    <div id="ep-modal" class="modal hidden">
+      <button class="close-modal"></button>
+      <div class="modal-content">
+        <img src="assets/img/about/about-ep.webp?v=1" class="modal-image">
+      </div>
+    </div>
+
+    <div id="artwork-modal" class="modal hidden">
+      <button class="close-modal"></button>
+      <div class="modal-content">
+        <img src="assets/img/about/about-artwork.webp?v=1" class="modal-image">
+      </div>
+    </div>
+
+    <div id="videos-modal" class="modal hidden">
+      <button class="close-modal"></button>
+      <div class="modal-content">
+        <img src="assets/img/about/about-videos.webp?v=1" class="modal-image">
+      </div>
+    </div>
+
+     <div id="matches-modal" class="modal hidden">
+      <button class="close-modal"></button>
+      <div class="modal-content">
+        <img src="assets/img/about/about-matches.webp?v=1" class="modal-image">
+      </div>
+    </div>
+
+    <div id="london-modal" class="modal hidden">
+      <button class="close-modal"></button>
+      <div class="modal-content">
+        <img src="assets/img/about/about-london.webp?v=1" class="modal-image">
+      </div>
+    </div>
+
+    <div id="london-tv-modal" class="modal hidden">
+      <button class="close-modal"></button>
+        <div class="modal-content">
+          <img src="assets/img/london-tv-pics.webp?v=1" class="modal-image">
+        </div>
+      </div>
     
   </div>
 
