@@ -1,7 +1,11 @@
-<script>
-(function () {
-  // All images that should control audio
-  const imgAudioEls = document.querySelectorAll("img[data-audio-src]");
+// js/lib/audio-img.js
+// Image-controlled audio (Audrey style)
+// -------------------------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+  const imgs = document.querySelectorAll("img[data-audio-src]");
+
+  if (!imgs.length) return;
 
   const audioList = [];
 
@@ -13,31 +17,27 @@
     });
   }
 
-  imgAudioEls.forEach((img, index) => {
+  imgs.forEach((img, index) => {
     const src = img.getAttribute("data-audio-src");
     if (!src) return;
 
-    // Create a hidden <audio> element, Audrey-style
+    // Create hidden audio element (Audrey-style)
     const audio = document.createElement("audio");
     audio.id = `img_audio_${index + 1}`;
     audio.src = src;
     audio.preload = "auto";
     audio.setAttribute("playsinline", "");
-    audio.dataset.audioImg = "true";
 
-    // Hide it visually but keep it in the DOM
+    // visually hide
     audio.style.position = "absolute";
     audio.style.left = "-9999px";
     audio.style.top = "auto";
     audio.style.width = "1px";
     audio.style.height = "1px";
     audio.style.opacity = "0";
-    audio.style.pointerEvents = "none";
-    audio.style.border = "0";
 
-    // Append near the scripts block (like Audrey)
-    (document.currentScript && document.currentScript.parentElement || document.body)
-      .appendChild(audio);
+    // append after the current script (like Audrey)
+    document.body.appendChild(audio);
 
     audioList.push(audio);
 
@@ -46,40 +46,32 @@
       img.classList.toggle("is-playing", isPlaying);
     }
 
-    img.addEventListener("click", function (e) {
+    img.style.cursor = "pointer";
+
+    img.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
 
-      // If this one is currently playing → pause on second click
+      // toggle behavior
       if (!audio.paused && !audio.ended) {
         audio.pause();
         syncUI();
         return;
       }
 
-      // Pause all our other img-audios
+      // pause all other audio sources (using globals from main-13.js)
+      if (typeof pauseAllHtmlAudio === "function") pauseAllHtmlAudio();
       pauseAllImgAudios(audio);
-
-      // Also try to pause Vimeo + SoundCloud if your globals exist
+      if (typeof pauseAllSc === "function") pauseAllSc();
       if (Array.isArray(window.__vimeoPlayers)) {
         window.__vimeoPlayers.forEach(p => {
           try { p.pause(); } catch (err) {}
         });
       }
-      if (window.__scSingleWidget) {
-        try { window.__scSingleWidget.pause(); } catch (err) {}
-      }
-      if (Array.isArray(window.__scWidgets)) {
-        window.__scWidgets.forEach(w => {
-          try { w.pause(); } catch (err) {}
-        });
-      }
 
-      const playAttempt = audio.play();
-      if (playAttempt && typeof playAttempt.catch === "function") {
-        playAttempt.catch(err => {
-          console.warn("[ImgAudio] play() was blocked:", err);
-        });
+      const attempt = audio.play();
+      if (attempt?.catch) {
+        attempt.catch(err => console.warn("[img-audio] play() blocked:", err));
       }
 
       syncUI();
@@ -89,5 +81,4 @@
     audio.addEventListener("pause", syncUI);
     audio.addEventListener("ended", syncUI);
   });
-})();
-</script>
+});
