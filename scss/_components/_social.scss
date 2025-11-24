@@ -1,1 +1,63 @@
-// TODO: fill this later
+.social {
+  position: absolute;
+  top: 10svh;          /* adjust */
+  left: 17svh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2svh; 
+
+  .social-sparkle-l,
+  .social-sparkle-r {
+    width: 5svh;
+    height: auto;
+    display: block;
+
+    pointer-events: none;
+  }
+
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 0.8;
+    }
+
+    img {
+      width: 3svh;
+      height: 3svh;
+      display: block;
+      object-fit: contain;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  }
+
+  @include respond(xs) {
+    gap: 1.2svh;
+
+    .social-sparkle-l,
+    .social-sparkle-r {
+      width: 4svh;
+    }
+
+    .icon img {
+      width: 2.5svh;
+      height: 2.5svh;
+    }
+  }
+}
