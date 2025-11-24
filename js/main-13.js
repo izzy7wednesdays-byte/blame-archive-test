@@ -1,8 +1,4 @@
 /* ========= MAIN INITIALIZATION ========= */
-/* ==================================================== */
-/* --------- V10.0 GIF/WebP animation offscreen swap  ----------- */
-/* ==================================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
 
     function pauseAllHtmlAudio(except) {
