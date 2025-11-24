@@ -669,32 +669,22 @@ body {
         --x:0svh;
         --rot:0deg;
         --z:40;
-  
-        .sc-trigger {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          border: 0;
-          padding: 0;
-          background: transparent;
-          cursor: pointer;
+        
+        @include respond(xs) {
+          display: none;
         }
       
-        .play-lightsleeper-mobile { display: none;}
-      
+      .play-lightsleeper-mobile { 
+        display: none;
+    
         @include respond(xs) {
           --left:150svh;
           --y:24svh;
           --scale:.20;
           --z:9;
-      
-          dotlottie-wc.play-lightsleeper {display: none;}
-      
-          .play-lightsleeper-mobile {display: flex;}
         }
       }
-     
+   
       .broken-breathing {
         --left:263svh;
         --scale:.28;
