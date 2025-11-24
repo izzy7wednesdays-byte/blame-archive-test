@@ -18,6 +18,17 @@ body {
       display: block;
       border: 0;
       border-radius: none;
+
+      position: absolute;
+      left: calc(var(--left) + var(--group-left));
+      bottom: 0;
+      height: calc(var(--band-h) * var(--scale));
+      width: calc(var(--band-h) * var(--scale) * var(--ar, 16/9));
+      transform: translate(var(--x), calc(-1 * var(--y))) rotate(var(--rot));
+      transform-origin: center bottom;
+      z-index: var(--z);
+      display: block;
+      border: 0;
     }
 
     .vimeo-iframe {
@@ -26,6 +37,17 @@ body {
       display: block;
       border: 0;
       border-radius: none;
+
+      position: absolute;
+      left: calc(var(--left) + var(--group-left));
+      bottom: 0;
+      height: calc(var(--band-h) * var(--scale));
+      width: calc(var(--band-h) * var(--scale) * var(--ar, 16/9));
+      transform: translate(var(--x), calc(-1 * var(--y))) rotate(var(--rot));
+      transform-origin: center bottom;
+      z-index: var(--z);
+      display: block;
+      border: 0;
     }
 
     .audio-img {
