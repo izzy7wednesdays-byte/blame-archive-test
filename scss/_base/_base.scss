@@ -68,115 +68,6 @@ strong {
     padding: 0;           
     --group-left: -25svh;
   }
-/* ========= SLOT CONTROL PANEL ========= */
-  .slot{
-    --left: 0svh;
-    --scale: 1;
-    --y: 0svh;
-    --x: 0svh;
-    --rot: 0deg;
-    --z: 1;
-
-    position: absolute;
-    left: calc(var(--left) + var(--group-left));
-    bottom: 0;
-    display: flex; align-items: flex-end;
-    height: var(--band-h);
-    transform: translate(var(--x), calc(-1 * var(--y))) rotate(var(--rot));
-    transform-origin: center bottom;
-    z-index: var(--z);
-    color: inherit; text-decoration: none;
-  }
-
-  .slot img{
-    height: calc(var(--band-h) * var(--scale));
-    width: auto;
-    display: block;
-    object-fit: contain;
-  }
-
-/* MEDIA: YOUTUBE SLOT */
-  .slot--youtube {
-    pointer-events: auto;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-  
-  .slot--youtube .yt-box {
-    --ratio: 16/9;
-    --yt-shrink: 0.85;
-    --h: calc(var(--band-h) * var(--scale) * var(--yt-shrink));
-  
-    height: var(--h);
-    width: calc(var(--h) * var(--ratio));
-  
-    display: block;
-    overflow: hidden;
-    border-radius: 12px;
-    background: #000;
-  }
-  
-  .slot--youtube iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    border-radius: 12px;
-    display: block;
-  }
-
-/* MEDIA: LOTTIE SLOT */
-  .slot--lottie {
-    pointer-events: auto;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-  
-  .slot--lottie .lot-box {
-    --lot-shrink: 0.85;
-    --ratio: 1.8;
-    --h: calc(var(--band-h) * var(--scale) * var(--lot-shrink));
-  
-    height: var(--h);
-    width: calc(var(--h) * var(--ratio));
-  
-    display: block;
-    overflow: hidden;
-    border-radius: 12px;
-    background: transparent;
-  }
-  
-  .slot--lottie dotlottie-wc {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-  
-  /* MEDIA: VIMEO VIDEO SLOT */
-  .slot--video .video-box{
-    --h: calc(var(--band-h) * var(--scale));
-    height: var(--h);
-    width: calc(var(--h) * var(--ar, 16/9));
-    display: block;
-    overflow: hidden;
-    border-radius: 12px;
-    background: #000;
-  }
-  .slot--video iframe{ width: 100%; height: 100%; display:block; border:0; }
-
-
-/* MEDIA: GIF SLOT */
-  .slot--gif .gif-box{
-    --h: calc(var(--band-h) * var(--scale));
-    height: var(--h);
-    width: calc(var(--h) * var(--ar, 1));
-    display:block;
-    overflow:hidden;
-    border-radius:12px;
-    background:#0000;
-  }
-  .slot--gif img{ width:100%; height:100%; object-fit:cover; display:block; }
 
 /* MEDIA: SOUNDCLOUD SLOT */
   .slot--sc .sc-iframe{
@@ -188,22 +79,6 @@ strong {
     height: calc(var(--band-h) * var(--scale));
     width: auto; display:block; object-fit: contain;
     cursor: pointer;
-  }
-
-/* MEDIA: AUDIO (IMAGE-CONTROLLED) SLOT */
-  .slot--audio .audio-trigger{
-    height: calc(var(--band-h) * var(--scale));
-    width: auto; display:block; object-fit: contain;
-    cursor: pointer; user-select: none;
-  }
-  .slot--audio audio{
-    position:absolute; left:-9999px; top:auto;
-    width:1px; height:1px; opacity:0; pointer-events:none; border:0;
-  }
-  .slot--audio.is-playing .audio-trigger{
-    outline: 2px dashed;
-    outline-color: #4CA8E9;
-    outline-offset: 6px;
   }
 
 /* ========= INTERACTIVE MEDIA HIT ZONE FIX ========= */
@@ -282,16 +157,6 @@ strong {
     filter: brightness(1.15);
   }
 
-/* ===== Remove Global Drop Shadow ===== */
-  .slot img,
-  .slot--youtube .yt-box,
-  .slot--tiktok .tiktok-box,
-  .slot--lottie .lot-box,
-  .slot--video .video-box,
-  .slot--gif .gif-box, .slot--text .text-box {
-    filter: none !important;
-  }
-
 /* ========= NON-CLICKABLE SLOT SAFEGUARD ========= */
 /* Disable pointer-events ONLY on entire slots that are truly non-clickable */
 .slot:not([data-overlay-src]):not(.slot--sc):not(.slot--audio):not(.slot--youtube):not(.slot--video):not(:has(a)) {
@@ -309,25 +174,3 @@ strong {
   .slot--video iframe {
     pointer-events: auto !important;
   }
-
-/* ======== TEMPORARY: DEBUG SLOT VISUALIZATION ======== */
-/* TEMPORARY ONLY: outline each slot's box so we can see its footprint */
-  /* .slot--text,
-  .slot--audio,
-  .slot--lottie,
-  .slot--youtube,
-  .slot--vimeo {
-    outline: 2px dashed rgba(255, 0, 0, 0.6);
-    outline-offset: 0svh; 
-  } */
-  
-/* Optional: also outline internal content boxes for clarity */
-/*  .slot--text .text-box,
-  .slot--audio,
-  .slot--lottie,
-  .slot--image img,
-  .slot--youtube iframe,
-  .slot--vimeo iframe {
-    outline: 2px solid rgba(0, 200, 255, 0.6);
-    outline-offset: 0.5svh;
-  } */
