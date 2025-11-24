@@ -661,7 +661,7 @@ body {
           display:none;
         }
       }
-      
+
       .play-lightsleeper {
         --left:262svh;
         --scale:.35;
@@ -669,15 +669,15 @@ body {
         --x:0svh;
         --rot:0deg;
         --z:40;
-        
-        dotlottie-wc {
+  
+        dotlottie-wc.play-lightsleeper {
           pointer-events: none;
           width: 100%;
           height: 100%;
           display: block;
         }
-        
-        .sc-trigger{
+  
+        .sc-trigger {
           position: absolute;
           inset: 0;
           width: 100%;
@@ -688,19 +688,20 @@ body {
           cursor: pointer;
         }
       
-        .play-lightsleeper-mobile {display: none;}
+        .play-lightsleeper-mobile { display: none;}
       
         @include respond(xs) {
           --left:150svh;
-          --y:24svh;    
-          --scale: .20;
+          --y:24svh;
+          --scale:.20;
           --z:9;
       
-          .play-lightsleeper-desktop { display: none; }
-          .play-lightsleeper-mobile { display: flex; }
+          dotlottie-wc.play-lightsleeper {display: none;}
+      
+          .play-lightsleeper-mobile {display: flex;}
         }
       }
-      
+     
       .broken-breathing {
         --left:263svh;
         --scale:.28;
