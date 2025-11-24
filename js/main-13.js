@@ -159,61 +159,71 @@ document.addEventListener("DOMContentLoaded", () => {
       return widget;
     }
 
-    // Click behavior on any .sc-trigger inside .slot--sc
-    document.addEventListener('click', async (e) => {
-      const trigger = e.target.closest('.sc-trigger');
-      if (!trigger) return;
-
+  // Click behavior on any SoundCloud trigger
+  document.addEventListener('click', async (e) => {
+    // Accept both new and legacy trigger classes
+    const trigger = e.target.closest('.sc-trigger, .lottie-sc-trigger');
+    if (!trigger) return;
+  
+    // 1) New architecture: data-sc-url on the trigger itself
+    let trackUrl = (trigger.dataset.scUrl || '').trim();
+  
+    // 2) Legacy fallback: inside a .slot--sc wrapper with data-sc-url
+    if (!trackUrl) {
       const slot = trigger.closest('.slot--sc');
-      // NEW: if this click is NOT inside a SoundCloud slot, ignore it completely
       if (!slot) return;
-
-      const trackUrl = (slot.dataset.scUrl || '').trim();
-      if (!trackUrl || busy) return;
-
-      e.preventDefault();
-      e.stopPropagation();
-
-      busy = true;
-      try {
-        const w = await ensureWidget(trackUrl);
-
-        if (currentUrl && trackUrl === currentUrl) {
-          // === Same track: *toggle* the current state ===
-          try {
-            w.isPaused((paused) => {
-              if (paused) {
-                // Was paused → about to play: pause other audio + videos
-                pauseAllHtmlAudio();
-                pauseAllSc();
-                if (Array.isArray(window.__vimeoPlayers)) {
-                  window.__vimeoPlayers.forEach(p => { try { p.pause(); } catch (e) {} });
-                }
-                w.play();
-              } else {
-                // Was playing → pause on second click
-                w.pause();
+      trackUrl = (slot.dataset.scUrl || '').trim();
+    }
+  
+    if (!trackUrl || busy) return;
+  
+    e.preventDefault();
+    e.stopPropagation();
+  
+    busy = true;
+    try {
+      const w = await ensureWidget(trackUrl);
+  
+      if (currentUrl && trackUrl === currentUrl) {
+        // === Same track: toggle play/pause ===
+        try {
+          w.isPaused((paused) => {
+            if (paused) {
+              // Was paused → about to play: pause other audio + videos
+              pauseAllHtmlAudio();
+              pauseAllSc();
+              if (Array.isArray(window.__vimeoPlayers)) {
+                window.__vimeoPlayers.forEach(p => {
+                  try { p.pause(); } catch (e) {}
+                });
               }
-            });
-          } catch (err) {
-            console.warn("[SC] isPaused() failed, falling back to play()", err);
-            w.play();
-          }
-        } else {
-          // === New track: switch + play, while stopping other audio ===
-          pauseAllHtmlAudio();
-          pauseAllSc();
-          if (Array.isArray(window.__vimeoPlayers)) {
-            window.__vimeoPlayers.forEach(p => { try { p.pause(); } catch (e) {} });
-          }
-
-          currentUrl = trackUrl;
-          w.load(trackUrl, { auto_play: true, show_teaser: false });
+              w.play();
+            } else {
+              // Was playing → pause on second click
+              w.pause();
+            }
+          });
+        } catch (err) {
+          console.warn("[SC] isPaused() failed, falling back to play()", err);
+          w.play();
         }
-      } finally {
-        setTimeout(() => { busy = false; }, 200);
+      } else {
+        // === New track: switch + play, while stopping other audio ===
+        pauseAllHtmlAudio();
+        pauseAllSc();
+        if (Array.isArray(window.__vimeoPlayers)) {
+          window.__vimeoPlayers.forEach(p => {
+            try { p.pause(); } catch (e) {}
+          });
+        }
+  
+        currentUrl = trackUrl;
+        w.load(trackUrl, { auto_play: true, show_teaser: false });
       }
-    }, { passive: false });
+    } finally {
+      setTimeout(() => { busy = false; }, 200);
+    }
+  }, { passive: false });
 
   })();
 
