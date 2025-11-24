@@ -1,107 +1,45 @@
-/* =========================================
-   OVERLAY AS MODAL
-   ========================================= */
-
-/* Lock background scroll when modal is open */
-
-.open-modal:hover {
-   cursor: pointer; }
-
-body.modal-open {
-  overflow: hidden;
-}
-
-/* Full-screen dimmed backdrop */
-#overlay {
+.modal {
   position: fixed;
   inset: 0;
-  display: none;
+  z-index: 9999;
+  background: rgba(0,0,0,0.6);
+  display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.75);
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 4svh;
 
-  &.is-open {
-    display: flex;
-    opacity: 1;
-    visibility: visible;
+  &.hidden {
+    display: none;
   }
-}
 
-/* Modal box */
-#overlay .ov-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
+  .close-modal {
+    position: absolute;
+    top: 2svh;
+    right: 2svh;
+    width: 4svh;
+    height: 4svh;
+    background: url("assets/img/x.webp") no-repeat center / contain;
+    border: none;
+    cursor: pointer;
+  }
 
-  max-width: 60rem;
-  width: min(60rem, calc(100% - 4rem));
-   
-  max-height: 80vh;
+.close-modal:hover {
+   transform: scale(1.15);
+   filter: brightness(1.1);
+  }
 
-  padding: 0.3rem;
-  border-radius: 0.3rem;
-  background-color: transparent;
-  box-shadow: none /* 0 1.4rem 3rem rgba(0, 0, 0, 0.55) */;
-  overflow: hidden;
-}
+  .modal-content {
+    background: #fff;
+    border-radius: 1.5svh;
+    max-height: 80svh;
+    max-width: 80svh;
+    overflow-y: auto;
+    padding: 2svh;
 
-/* Scrollable info */
-#overlay .ov-scroll {
-  width: 100%;
-  max-height: calc(80vh - 3rem); // room for X button + padding
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  border-radius: 0.3rem;
-}
-
-/* Background image */
-#overlay #overlay-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: none;
-  object-fit: contain;
-
-  opacity: 0;
-  transform: scale(0.98);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-/* Fade/scale */
-#overlay.is-open #overlay-img {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* X button */
-#overlay .overlay-close {
-  position: absolute;
-  top: var(--ov-x-top, 3%);
-  left: var(--ov-x-left, 3%);
-  width: var(--ov-x-size, 2%); // % of card width --> scales with modal
-  height: auto;
-  max-width: none;
-  cursor: pointer;
-  z-index: 2;
-  user-select: none;
-  -webkit-user-drag: none;
-  display: block;
-  object-fit: contain;
-  transition: transform 0.18s ease, filter 0.18s ease;
-
-   @include respond(xs) {
-      left: var(--ov-x-left, 3.5%);
-      width: var(--ov-x-size, 1.75%); 
-   }
-}
-
-#overlay .overlay-close:hover {
-  transform: scale(1.15);
-  filter: brightness(1.1);
+    .modal-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
 }
