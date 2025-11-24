@@ -1,8 +1,90 @@
-/* ========= BASE / INITIAL PAINT ========= */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+  transition: all 300ms;
+}
 html {
-  font-size: 62.5%;
+	font-size:62.5%;
   scroll-behavior: smooth;
 }
+body {
+    font-family: $main-font;
+    overflow-x: hidden;
+}
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+.clear:after {
+    clear:both;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+a {
+	color:white;
+	text-decoration:none;
+    transition: all 400ms;
+    font-size: 1.6rem;
+    font-family: $main-font;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+button {
+    transition: all 400ms;
+    font-family: $main-font;
+}
+p, strong {
+  font-size: $font-size-base;
+  line-height: 1.4;   /* if you want a global line-height */  
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background: $main;
+	color:$bg-color;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background: $main;
+	color:$bg-color;
+	text-shadow:none;
+}
+::-moz-selection {
+	background: $main;
+	color:$bg-color;
+	text-shadow:none;
+}
+::placeholder {
+    color: $main;
+}
+::-moz-placeholder {
+    color: $main;
+}
+::-webkit-input-placeholder {
+    color: $main;
+}
+
+/* ========= BASE / INITIAL PAINT ========= */
 
 html, body { 
   background: #0f0f12;
@@ -10,23 +92,7 @@ html, body {
   min-height: 100%;
 }
 
-/* ========= GLOBAL TYPOGRAPHY DEFAULTS ========= */
-body {
-  font-family: $font-main;
-}
-
-button {
-  font-family: $font-main;
-}
-
-p,
-strong {
-  font-size: $font-size-base;
-  line-height: 1.4;   /* if you want a global line-height */
-}
-
-/* ========= V146.2 — FIXING OVERLAY - LINE 446 ========= */
-  
+/* ========= V146.2 — FIXING OVERLAY - LINE 446 ========= */  
 /* ========= GLOBAL CONTROLS ========= */
   :root{
     --band-h: 100svh;
