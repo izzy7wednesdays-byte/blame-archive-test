@@ -662,20 +662,13 @@ body {
         }
       }
 
-      .play-lightsleeper {
+      .play-lightsleeper-desktop {
         --left:262svh;
         --scale:.35;
         --y:32svh;
         --x:0svh;
         --rot:0deg;
         --z:40;
-  
-        dotlottie-wc.play-lightsleeper {
-          pointer-events: none;
-          width: 100%;
-          height: 100%;
-          display: block;
-        }
   
         .sc-trigger {
           position: absolute;
