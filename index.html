@@ -1,22 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>Blame It On A Bad Dream — Horizontal Scrapbook Archive</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   
-  <!-- 1) Preload only the fonts visible on first paint -->
-  <link rel="preload" as="font" href="fonts/Thinker.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="font" href="fonts/manic-regular.woff2" type="font/woff2" crossorigin>
+    <title>Izzy MacArthur — Scrapbook Archive</title>
+<!-- add favicon -->  <link rel="shortcut icon" href="./assets/img/fav.png?v=a0a0a4a2" /> 
+    <meta name="title" content="Izzy MacArthur" />
+    <meta name="description" content="Scrapbook" />
 
-  <!-- 2) Preload style.css script -->
-  <link rel="preload" as="style" href="css/style.css?v=2.0">
+    <!-- Open Graph / Facebook
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="scrapbook.izzymacarthur.com" />
+    <meta property="og:title" content="Izzy MacArthur" />
+    <meta property="og:site_name" content="Izzy MacArthur" />
+    <meta property="og:description" content="Blame it on a Bad Dream " /> -->
+<!-- NOTE: FIX  <meta property="og:image" content="https://scrapbook.izzymacarthur.com/assets/img/og.jpg" /> -->
 
-  <!-- 3) Load all style.css script -->
-  <link rel="stylesheet" href="css/style.css?v=4.0">
+    <!-- Twitter 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="izzymacarthur.com" />
+    <meta name="twitter:title" content="Izzy MacArthur" />
+    <meta name="twitter:description" content="Scrapbook" /> -->
+<!-- NOTE: FIX  <meta name="twitter:image" content="https://scrapbook.izzymacarthur.com/assets/img/og.jpg" /> -->
+
+<!-- NOTE: ADD <meta name="facebook-domain-verification" content="ADD IN" /> -->
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=0.0">
+    
+    <!-- Fonts Preload -->
+    <link rel="preload" as="font" href="fonts/Thinker.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="fonts/manic-regular.woff2" type="font/woff2" crossorigin>
+    
+    <!-- Lottie -->
+    <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"></script>
+
+    <!-- Google Tag Manager -->
+<!-- ADD -->     
+    <!-- End Google Tag Manager -->
   
-  <!-- 4) Lottie web component -->
-  <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"></script>
 </head>
 
         <!-- ================================================= -->
@@ -24,43 +49,43 @@
         <!-- ================================================= -->
   
 <body class="desktop">
+
+    <!-- Google Tag Manager (noscript) -->
+<!-- NOTE: ADD -->   
+    <!-- End Google Tag Manager (noscript) -->
+  
   <div class="hwrap" id="hwrap">
     <div class="rail">
-      
-        <figure class="slot special-message" id="special-message">
-          <img
-            src="assets/img/special-message.webp?v=2"
-            alt="A SPECIAL MESSAGE FROM…" />
-        </figure>
-      
-        <!-- b) mobile - A Special Message From... -->
-        <figure class="slot special-message-mobile" id="special-message-mobile">
-          <img
-            src="assets/img/special-message-mobile.webp?v=2"
-            alt="A SPECIAL MESSAGE FROM… xs" />
-        </figure>
+    
+        <img loading="lazy" class="special-message" src="assets/img/special-message.webp?v=1" />
+        <img loading="lazy" class="special-message-mobile" src="assets/img/special-message-mobile.webp?v=2">
   
-      <!-- 2) IMG - Izzy MacArthur -->
-      <figure class="slot izzymacarthur" id="izzymacarthur">
-        <img
-          data-lazy-src="assets/img/scribble-izzy.webp?v=2"
-          alt="Izzy MacArthur" />
-      </figure>
+        <img loading="lazy" class="izzymacarthur" src="assets/img/scribble-izzy.webp?v=2" />
+        <img loading="lazy" class="mobile-izzymacarthur" src="assets/img/mobile-izzymacarthur.webp?v=2" />
 
-      <figure class="slot mobile-izzymacarthur" id="mobile-izzymacarthur">
-        <img
-          data-lazy-src="assets/img/mobile-izzymacarthur.webp?v=2"
-          alt="Izzy MacArthur" />
+        <img loading="lazy" class="torn-note" src="assets/img/torn-note.webp?v=2" />
+        <img loading="lazy" class="tracklist" src="assets/img/tracklist.webp?v=2" />
+        <img loading="lazy" class="the-scrapbook" src="assets/img/the-scrapbook.webp?v=1" />
+        <img loading="lazy" class="lfg-mobile" src="assets/img/pink-lfg-mobile.webp?v=1" />
+
+      <!--
+        <div class="social">
+          <a class="bookends social-sparkles" aria-label="Social Sparkles">
+            <img loading="lazy" src="assets/img/social-sparkles.webp?v=2" decoding="async">
+          </a>
+          <a class="icon" href="https://www.instagram.com/izzyrmac/" target="_blank" rel="noopener noreferrer"
+            class="fab fa-tiktok" aria-label="Instagram">
+            <img src="assets/icons/instagram.svg?v=1" alt="Instagram">
+            <span class="sr-only">Instagram</span> -->
+
+      <figure class="slot social-sparkles">
+        <img loading="lazy"
+          src="assets/img/social-sparkles.webp?v=2"/>
+        </a>
       </figure>
-  
-      <!-- 3) IMG - Social Sparkles -->
-      <figure class="slot social-sparkles" id="social-sparkles">
-        <img src="assets/img/social-sparkles.webp?v=2"
-           alt="Social Sparkles" loading="lazy" decoding="async">
-       </figure>
-  
+        
       <!-- 4) IMG:URL - Instagram -->
-      <figure class="slot instagram" id="instagram">
+      <figure class="slot instagram">
         <a href="https://www.instagram.com/izzyrmac/" target="_blank" rel="noopener noreferrer">
           <img src="assets/icons/instagram.svg?v=1" alt="Instagram" loading="lazy" decoding="async">
         </a>
@@ -100,29 +125,7 @@
           <img src="assets/icons/apple-music.svg?v=1" alt="Apple Music" loading="lazy" decoding="async">
         </a>
       </figure>
-      
-      <!-- 10) IMG - Torn Note -->
-      <figure class="slot torn-note" id="torn-note">
-        <img
-          src="assets/img/torn-note.webp?v=2"
-          alt="Note from Izzy" />
-        </a>
-      </figure>
-  
-      <!-- 11) IMG - Tracklist -->
-      <figure class="slot tracklist" id="tracklist">
-        <img
-          src="assets/img/tracklist.webp?v=2"
-          alt="Tracklist" />
-      </figure>
-  
-      <!-- 12) IMG - The Scrapbook -->
-      <figure class="slot the-scrapbook" id="the-scrapbook">
-        <img
-          src="assets/img/the-scrapbook.webp?v=1"
-          alt="the blame it on a bad dream scrapbook" />
-      </figure>
-  
+    
       <!-- 13) LOTTIE & IMG — LFG -->
         <!-- a) LOTTIE — LFG -->
         <figure class="slot slot--lottie lfg" id="lfg">
@@ -136,13 +139,7 @@
              </dotlottie-wc>
           </div>
         </figure>
-
-        <!-- b) IMG — LFG -->
-        <figure class="slot lfg-mobile" id="lfg-mobile">
-          <img
-            data-lazy-src="assets/img/pink-lfg-mobile.webp?v=1"
-            alt="lfg mobile version" />
-        </figure>
+    
   
       <!-- 14) LOTTIE — Pink Flashing Arrow -->
       <figure class="slot slot--lottie pink-arrow" id="pink-arrow">
@@ -161,25 +158,15 @@
             <!-- LIGHT SLEEPER -->
       <!-- ========================= -->
 
-      <!-- 1) IMG - BROKEN CD -->
-      <figure class="slot broken-cd" id="broken-cd">
-        <img src="assets/img/broken-cd.webp?v=3" alt="All the Silence Broken CD" loading="lazy" decoding="async">
-      </figure>
+      <img loading="lazy" class="broken-cd" src="assets/img/broken-cd.webp?v=3" />
+      <img loading="lazy" class="blue-star-1" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="blue-star-2" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="silver-star1-1" src="assets/img/stars/silver-star1.webp?v=3" />
 
-      <!-- 3) IMG - Blue Star -->
-      <figure class="slot blue-star-1" id="blue-star-1">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=3" alt="Blue Star Sticker" loading="lazy" decoding="async">
-      </figure>
+      <img loading="lazy" class="autumn-text" src="assets/img/autumn-text.webp?v=3" />
+      <img loading="lazy" class="blame-it-notesapp" src="assets/img/blame-it-notesapp.webp?v=2">
 
-      <!-- 4) IMG - Blue Star -->
-      <figure class="slot blue-star-2" id="blue-star-2">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=3" alt="Blue Star Sticker" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 5) IMG - Silver Star -->
-      <figure class="slot silver-star1-1" id="silver-star1-1">
-        <img data-lazy-src="assets/img/stars/silver-star1.webp?v=3" alt="Silver Star Sticker" loading="lazy" decoding="async">
-      </figure>
+      <img loading="lazy" class="silver-star1-2" src="assets/img/stars/silver-star1.webp?v=3" />
       
       <!-- 6) LOTTIE — Light Sleeper Title -->
       <figure class="slot slot--lottie lightsleeper-title" id="lightsleeper-title">
@@ -222,16 +209,6 @@
            <img data-lazy-src="assets/img/lightsleeper-about.webp?v=2" alt="TV message" loading="lazy" decoding="async" style="cursor:pointer;">
         </figure>
   
-      <!-- 9) IMG - AUTUMN TEXT -->
-      <figure class="slot autumn-text" id="autumn-text">
-        <img data-lazy-src="assets/img/autumn-text.webp?v=3" alt="Autumn text" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 10) IMG - BLAME IT Notes App -->
-      <figure class="slot blame-it-notesapp" id="blame-it-notesapp">
-        <img data-lazy-src="assets/img/blame-it-notesapp.webp?v=2" alt="Blame It notes app" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- 11) VIMEO - Light Sleeper Studio -->
       <figure class="slot slot--video lightsleeper-studio" id="lightsleeper-studio">
         <div class="video-box">
@@ -244,12 +221,7 @@
           </iframe>
         </div>
       </figure>
-
-      <!-- 12) IMG - Silver Star -->
-      <figure class="slot silver-star1-2" id="silver-star1-2">
-        <img data-lazy-src="assets/img/stars/silver-star1.webp?v=2" alt="silver star" loading="lazy" decoding="async">
-      </figure>
-  
+      
       <!-- 13) GIF:OVERLAY - Click for Chordz Gif -->
       <figure class="slot chords-gif" id="chords-gif"
         data-overlay-src="assets/img/lightsleeper-chords.webp?v=3"
@@ -321,6 +293,24 @@
       <!-- ========================= -->
             <!-- EXIT WOUNDS -->
       <!-- ========================= -->
+      <img loading="lazy" class="star-trio-1" src="assets/img/stars/star-trio.webp?v=3" />
+      <img loading="lazy" class="exitwounds-title" src="assets/img/exit-wounds-title.webp?v=2" />
+      <img loading="lazy" class="missed-calls" src="assets/img/missed-calls?v=2" />
+      <img loading="lazy" class="exitwounds-animation-mobile" src="assets/img/exitwounds-animation-mobile?v=2" />
+      <img loading="lazy" class="click-me-arrow" src="assets/img/arrows/manic-3l-4CA8E9.webp?v=2" />
+      <img loading="lazy" class="substack-point-arrow" src="assets/img/arrows/swirl-3B-4CA8E9.webp?v=2" />
+      <img loading="lazy" class="scorpio-constellation" src="assets/img/scorpio-constellation.webp?v=1" /> 
+      <img loading="lazy" class="subscribe-arrow" src="assets/img/arrows/manic-3-4CA8E9.webp?v=2" /> 
+      <img loading="lazy" class="silver-star3-1" src="assets/img/stars/silver-star3.webp?v=3" />
+      <img loading="lazy" class="blue-star-3" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="silver-star3-2" src="assets/img/stars/silver-star3.webp?v=3" />
+      <img loading="lazy" class="silver-star3-3" src="assets/img/stars/silver-star3.webp?v=3" />
+   
+      <p class="text-wrapper-2">click to press play, dj!</p>
+      <p class="text-wrapper-4">READ MORE ABOUT<br>EXIT WOUNDS ON MY<br>SUBSTACK "10<br>THINGS I'M<br>THINKING ABOUT"!</p>
+      <p class="text-wrapper-3">click me</p>
+      <p class="text-wrapper-5">if you don't think<br>it's, like, totally lame,<br>you should subscribe</p>
+      
       <!-- 1) YOUTUBE – Exit Wounds: Lyric Video - Placeholder -->
       <figure class="slot slot--youtube exitwounds-lyricvideo" id="exitwounds-lyricvideo">
         <div class="yt-box">
@@ -332,16 +322,6 @@
             allowfullscreen>
           </iframe>
         </div>
-      </figure>
-
-      <!-- 2) IMG - Star Trio  -->
-      <figure class="slot star-trio-1" id="star-trio-1">
-        <img data-lazy-src="assets/img/stars/star-trio.webp?v=2" alt="Star Trio" loading="lazy" decoding="async">
-      </figure>
-      
-      <!-- 3) IMG - Exit Wounds Title  -->
-      <figure class="slot exitwounds-title" id="exitwounds-title">
-        <img data-lazy-src="assets/img/exit-wounds-title.webp?v=2" alt="Exit Wounds Title" loading="lazy" decoding="async">
       </figure>
   
       <!-- 4) SOUNDCLOUD — Play Exit Wounds -->
@@ -356,12 +336,6 @@
       <!-- <figure class="slot slot--text pressplaydj" id="pressplaydj">
         <div class="text-box">click to press play, dj!</div>
       </figure> -->
-      <p class="text-wrapper-2">click to press play, dj!</p>
-
-      <!-- 6) IMG - Missed Calls Graphic  -->
-      <figure class="slot missed-calls" id="missed-calls">
-        <img data-lazy-src="assets/img/missed-calls.webp?v=1" alt="Missed Calls" loading="lazy" decoding="async">
-      </figure>
 
       <!-- 7) IMG:OVERLAY - Exit Wounds: About Slot -->
       <figure class="slot about-exitwounds" id="about-exitwounds"
@@ -383,11 +357,6 @@
               </dotlottie-wc>
             </div>
           </figure>
-  
-          <!-- b) IMG - Exit Wounds – Crashing Down Mobile Still -->
-          <figure class="slot exitwounds-animation-mobile" id="exitwounds-animation-mobile">
-            <img data-lazy-src="assets/img/exitwounds-animation-mobile.webp?v=2" alt="exit wounds animation mobile version" loading="lazy" decoding="async">
-          </figure>
 
       <!-- 9) IMG:MP3 - Exit Wounds Voicememo -->
       <figure class="slot slot--audio play-exitwounds-voicememo" id="play-exitwounds-voicememo"
@@ -402,13 +371,7 @@
       <!-- <figure class="slot slot--text click-me-text" id="click-me-text">
         <div class="text-box">click me</div>
       </figure> -->
-      <p class="text-wrapper-3">click me</p>
-      
-      <!-- 11) IMG - Exit Wounds – Click Me Arrow -->
-      <figure class="slot click-me-arrow" id="click-me-arrow">
-        <img data-lazy-src="assets/img/arrows/manic-3l-4CA8E9.webp?v=2" alt="exit wounds click me arrow" loading="lazy" decoding="async">
-      </figure>
-
+ 
       <!-- 12) TEXT - Read More About Exit Wounds -->
       <!-- <figure class="slot slot--text read-susbstack-text" id="read-susbstack-text">
         <div class="text-box">
@@ -419,18 +382,7 @@
           THINKING ABOUT"!
         </div>
       </figure> -->
-      <p class="text-wrapper-4">READ MORE ABOUT<br>EXIT WOUNDS ON MY<br>SUBSTACK "10<br>THINGS I'M<br>THINKING ABOUT"!</p>
-
-      <!-- 13) IMG - Arrow Pointing to Exit Wounds Flier -->
-      <figure class="slot substack-point-arrow" id="substack-point-arrow">
-        <img data-lazy-src="assets/img/arrows/swirl-3B-4CA8E9.webp?v=1" alt="substack point arrow" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 14) IMG - Scorpio Constellation -->
-      <figure class="slot scorpio-constellation" id="scorpio-constellation">
-        <img data-lazy-src="assets/img/scorpio-constellation.webp?v=1" alt="Scorpio Constellation" loading="lazy" decoding="async">
-      </figure>      
-   
+  
       <!-- 15) TEXT - Subscribe to Substack -->
       <!-- <figure class="slot slot--text subscribe-substack-text" id="subscribe-substack-text">
         <div class="text-box">
@@ -439,14 +391,7 @@
           you should subscribe
         </div>
       </figure> -->
-      <p class="text-wrapper-5">if you don't think<br>it's, like, totally lame,<br>you should subscribe</p>
 
-            
-      <!-- 16) IMG - Subscribe Arrow  -->
-      <figure class="slot subscribe-arrow" id="subscribe-arrow">
-        <img data-lazy-src="assets/img/arrows/manic-3-4CA8E9.webp?v=2" alt="subscribe arrow" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- 17) IMG:URL - Substack Subscribe Button -->
       <figure class="slot subscribe-button" id="subscribe-button">
         <a href="https://izzymacarthur.substack.com/embed"
@@ -465,30 +410,26 @@
         </a>
       </figure>
 
-      <!-- 19) IMG - Silver Star 3-1  -->
-      <figure class="slot silver-star3-1" id="silver-star3-1">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=2" alt="Silver Star 3-1" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 20) IMG - Blue Star 3  -->
-      <figure class="slot blue-star-3" id="blue-star-3">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=2" alt="Blue Star 3" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 21) IMG - Silver Star 3-2  -->
-      <figure class="slot silver-star3-2" id="silver-star3-2">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=2" alt="Silver Star 3-2" loading="lazy" decoding="async">
-      </figure>
-
-       <!-- 22) IMG - Silver Star 3-3  -->
-      <figure class="slot silver-star3-3" id="silver-star3-3">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=2" alt="Silver Star 3-3" loading="lazy" decoding="async">
-      </figure>
-
-
       <!-- ========================= -->
             <!-- LANDMINES -->
       <!-- ========================= -->
+      <img loading="lazy" class="blue-star-4" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="october-lane" src="assets/img/october-lane.webp?v=3" />
+      <img loading="lazy" class="landmines-license" src="assets/img/landmines-license.webp?v=3" />
+      <img loading="lazy" class="silver-star3-4" src="assets/img/stars/silver-star3.webp?v=3" />
+      <img loading="lazy" class="blue-star-5" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="landmines-title" src="assets/gifs/landmines-title.webp?v=3" />
+      <img loading="lazy" class="landmines-title-mobile" src="assets/img/landmines-title-mobile.webp?v=3" />
+      <img loading="lazy" class="blue-star-6" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="blue-star-7" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="enchanted-bridge" src="assets/img/enchanted-bridge.webp?v=3" />
+      <img loading="lazy" class="star-trio-2" src="assets/img/stars/star-trio.webp" />
+
+      <p class="text-wrapper-6">i have to admit i was NOT a<br>content queen when writing<br>and recording... i have a LOT<br>of videos at this atrocious angle,<br>but i adore the landmines bgvs,<br>so here they are, extra loud 4 u<br></p>
+      <p class="text-wrapper-7">watching you guys<br>react to landmines's<br>release meant so<br>much to me (thank <br>you brooke & ava<br>for letting me use<br>this video)<br></p>
+      <p class="text-wrapper-8">the sick ass acoustic<br>bass guitar in session<br>(izzy @ 19 = not cute)</p>
+
+      
       <!-- 1) LOTTIE — Glitter Truck -->
       <figure class="slot slot--lottie glitter-truck" id="glitter-truck">
         <div class="lot-box">
@@ -528,11 +469,6 @@
         </div>
       </figure>
 
-      <!-- 4) IMG - Blue Star -->
-      <figure class="slot blue-star-4" id="blue-star-4">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=3" alt="Blue Star Sticker 4" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- 5) GIF - Kat Stratford Driver -->
       <figure class="slot katstratford-car" id="katstratford-car">
         <img
@@ -543,7 +479,6 @@
           loading="lazy"
           decoding="async">
       </figure>
-
 
        <!-- 6) VIMEO - Landmines Vocals Session -->
       <figure class="slot slot--video vocals-landmines-1" id="vocals-landmines-1">
@@ -569,38 +504,6 @@
           so here they are, extra loud 4 u<br>
         </div>
       </figure> -->
-     <p class="text-wrapper-6">i have to admit i was NOT a<br>content queen when writing<br>and recording... i have a LOT<br>of videos at this atrocious angle,<br>but i adore the landmines bgvs,<br>so here they are, extra loud 4 u<br></p>
-
-      <!-- 8) IMG - October Lane -->
-      <figure class="slot october-lane" id="october-lane">
-        <img data-lazy-src="assets/img/october-lane.webp?v=2" alt="October Lane Street Sign" loading="lazy" decoding="async">
-      </figure>
-      
-      <!-- 9) IMG - Landmines License  -->
-      <figure class="slot landmines-license" id="landmines-license">
-        <img data-lazy-src="assets/img/landmines-license.webp?v=2" alt="Landmines License" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 10) IMG - Silver Star 3-4  -->
-      <figure class="slot silver-star3-4" id="silver-star3-4">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=2" alt="Silver Star 3-4" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 11) IMG - Blue Star -->
-      <figure class="slot blue-star-5" id="blue-star-5">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=3" alt="Blue Star Sticker 5" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 12) IMG - Landmines Title -->
-        <!-- a) Desktop -->
-        <figure class="slot landmines-title" id="landmines-title">
-          <img data-lazy-src="assets/gifs/landmines-title.webp?v=3" alt="landmines title" loading="lazy" decoding="async">
-        </figure>
-
-        <!-- b) Mobile -->
-        <figure class="slot landmines-title-mobile" id="landmines-title-mobile">
-          <img data-lazy-src="assets/img/landmines-title-mobile.webp?v=3" alt="landmines title" loading="lazy" decoding="async">
-        </figure>
 
       <!-- 13) YOUTUBE – Landmines Lyric Video -->
       <figure class="slot slot--youtube landmines-lyricvideo" id="landmines-lyricvideo">
@@ -627,8 +530,7 @@
           this video)<br>
         </div>
       </figure> -->
-      <p class="text-wrapper-7">watching you guys<br>react to landmines's<br>release meant so<br>much to me (thank <br>you brooke & ava<br>for letting me use<br>this video)<br></p>
-  
+      
       <!-- 15) IMG:OVERLAY - About Landmines -->
       <figure class="slot about-landmines" id="about-landmines"
         data-overlay-src="assets/img/about/about-landmines.webp?v=1"
@@ -657,8 +559,7 @@
           (izzy @ 19 = not cute)
         </div>
       </figure> -->
-      <p class="text-wrapper-8">the sick ass acoustic<br>bass guitar in session<br>(izzy @ 19 = not cute)</p>
-
+      
       <!-- 18) VIMEO - Landmines Reaction -->
       <figure class="slot slot--video landmines-reaction" id="landmines-reaction">
         <div class="video-box">
@@ -672,16 +573,6 @@
         </div>
       </figure>
 
-      <!-- 19) IMG - Blue Star -->
-      <figure class="slot blue-star-6" id="blue-star-6">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=3" alt="Blue Star Sticker 6" loading="lazy" decoding="async">
-      </figure>
-
-       <!-- 20) IMG - Blue Star -->
-      <figure class="slot blue-star-7" id="blue-star-7">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=3" alt="Blue Star Sticker 7" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- 21) SOUNDCLOUD — Play Landmines -->
       <figure class="slot slot--sc play-landmines" id="play-landmines"
              data-sc-url="https://soundcloud.com/izzy-macarthur/landmines">
@@ -698,34 +589,30 @@
              alt="Play Landmines Voice Memo">
         <audio preload="auto" playsinline></audio>
       </figure>
-  
-      <!-- 23) Enchanted Bridge -->
-      <figure class="slot enchanted-bridge" id="enchanted-bridge">
-        <img data-lazy-src="assets/img/enchanted-bridge.webp?v=4" alt="Enchanted Bridge" loading="lazy" decoding="async">
-      </figure>
 
       <!-- ========================= -->
         <!-- MISERY MISSING COMPANY -->
       <!-- ========================= --> 
+      <img loading="lazy" class="silver-star3-5" src="assets/img/stars/silver-star3.webp?v=3" />
+      <img loading="lazy" class="little-miss-misery" src="assets/img/little-miss-misery3.webp?v=3" />
+      <img loading="lazy" class="silver-star3-6" src="assets/img/stars/silver-star3.webp?v=2" />
+      <img loading="lazy" class="misery-title" src="assets/img/misery-title.webp?v=3" />
+ 
+      <p class="text-wrapper-9">when i came up with the<br>first draft of what's now<br>the misery missing company<br>chorus<br></p>
+      <p class="text-wrapper-10">the first version of misery missing <br>companyi wrote for my freshman year of <br>college'ssongwriting class</p>
+      <p class="text-wrapper-11">doing misery<br>vocals en le<br>studio<br></p>
+      <p class="text-wrapper-12">this is my friend lj<br>and i in my freshman<br>dorm when i played her<br>misery for the first<br>time</p>
+
       <!-- 1) VIMEO – Misery – OG Chorus Voicememo -->
-          <figure class="slot slot--video misery-ogchorus" id="misery-ogchorus">
+          <figure class="slot slot--video misery-ogchorus">
             <div class="video-box">
-              <iframe
-                data-lazy-src="https://player.vimeo.com/video/1115354360?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                allowfullscreen
-                title="misery-og-chorus-voicememo">
+              <iframe data-lazy-src="https://player.vimeo.com/video/1115354360?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&dnt=1&transparent=0&playsinline=1"
+                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen>
               </iframe>
             </div>
           </figure>
-
-      <!-- 2) IMG - Silver Star 3-5  -->
-      <figure class="slot silver-star3-5" id="silver-star3-5">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=2" alt="Silver Star 3-5" loading="lazy" decoding="async">
-      </figure>
       
-      <!-- 3) TEXT - OG Chorus -->
+     <!-- 3) TEXT - OG Chorus -->
       <!-- <figure class="slot slot--text misery-ogchorus-text" id="misery-ogchorus-text">
         <div class="text-box">
           when i came up with the<br>
@@ -734,24 +621,10 @@
           chorus<br>
         </div>
       </figure> -->
-      <p class="text-wrapper-9">when i came up with the<br>first draft of what's now<br>the misery missing company<br>chorus<br></p>
-
-  
-      <!-- 4) IMG - Misery – Little Miss Misery -->
-      <figure class="slot little-miss-misery" id="little-miss-misery">
-        <img data-lazy-src="assets/img/little-miss-misery.webp?v=2" alt="little miss misery" loading="lazy" decoding="async">
-      </figure>
 
       <!-- 5) IMG:OVERLAY - Misery - About -->
-      <figure class="slot about-misery" id="about-misery"
-        data-overlay-src="assets/img/about/about-misery.webp?v=1"
-        data-overlay-alt="About Misery Missing Company">
-        <img data-lazy-src="assets/img/misery-about.webp?v=3" alt="About Misery Missing Company" loading="lazy" decoding="async" style="cursor:pointer;">
-      </figure>
-
-      <!-- 6) IMG - Silver Star 3-6  -->
-      <figure class="slot silver-star3-6" id="silver-star3-6">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=2" alt="Silver Star 3-6" loading="lazy" decoding="async">
+      <figure class="slot about-misery" data-overlay-src="assets/img/about/about-misery.webp?v=1">
+        <img data-lazy-src="assets/img/misery-about.webp?v=3"  loading="lazy" decoding="async" style="cursor:pointer;">
       </figure>
 
       <!-- 7) GIF - Misery – Kat Stratford Dancing  -->
@@ -760,20 +633,13 @@
           data-lazy-src="assets/gifs/kat-stratford-dancing.webp"
           data-gif-src="assets/gifs/kat-stratford-dancing.webp?v=3"
           data-gif-placeholder="assets/gifs/static/kat-stratford-dancing.webp"
-          alt="kat stratford dancing"
-          loading="lazy"
-          decoding="async">
+          loading="lazy">
       </figure>
   
       <!-- 8) GIF - Misery – Solo cups animation  -->
-      <figure class="slot solo-cups" id="solo-cups">
-        <img
-          data-lazy-src="assets/gifs/solo-cups.webp"
-          data-gif-src="assets/gifs/solo-cups.webp?v=3"
-          data-gif-placeholder="assets/gifs/static/solo-cups.webp"
-          alt="solo-cups"
-          loading="lazy"
-          decoding="async">
+      <figure class="slot solo-cups">
+        <img data-lazy-src="assets/gifs/solo-cups.webp" data-gif-src="assets/gifs/solo-cups.webp?v=3" data-gif-placeholder="assets/gifs/static/solo-cups.webp"
+          loading="lazy">
       </figure>
   
       <!-- 9) VIMEO – Misery – First Draft Voicememo -->
@@ -797,12 +663,6 @@
           songwriting class
         </div>
       </figure> -->
-      <p class="text-wrapper-10">the first version of misery missing <br>companyi wrote for my freshman year of <br>college'ssongwriting class</p>
-
-      <!-- 11) IMG - Misery Title -->
-      <figure class="slot misery-title" id="misery-title">
-        <img data-lazy-src="assets/img/misery-title.webp?v=3" alt="Misery Title" loading="lazy" decoding="async">
-      </figure>
   
       <!-- 12) VIMEO - Misery Vocals in Studio -->
       <figure class="slot slot--video vocals-misery-4" id="vocals-misery-4">
@@ -825,8 +685,7 @@
           studio<br>
         </div>
       </figure> -->
-      <p class="text-wrapper-11">doing misery<br>vocals en le<br>studio<br></p>
-
+    
       <!-- 14) SOUNDCLOUD — Play Misery -->
       <figure class="slot slot--sc play-misery" id="play-misery"
               data-sc-url="https://soundcloud.com/izzy-macarthur/misery-missing-company">
@@ -834,8 +693,7 @@
              data-lazy-src="assets/img/play-misery.webp?v=3"
              alt="Play Misery Missing Company (SoundCloud)">
       </figure>
-      
-  
+       
       <!-- 15) TEXT - Misery with LJ -->
       <!-- <figure class="slot slot--text misery-wlj-text" id="misery-wlj-text">
         <div class="text-box">
@@ -846,7 +704,6 @@
           time
         </div>
       </figure> -->
-      <p class="text-wrapper-12">this is my friend lj<br>and i in my freshman<br>dorm when i played her<br>misery for the first<br>time</p>
 
       <!-- 16) VIMEO - Misery w Lily -->
       <figure class="slot slot--video misery-wlj" id="misery-wlj">
@@ -859,11 +716,6 @@
             title="Misery Missing Company with LJ">
           </iframe>
         </div>
-      </figure>
-
-      <!-- 17) IMG - Star Trio -->
-      <figure class="slot star-trio-2" id="star-trio-2">
-        <img data-lazy-src="assets/img/stars/star-trio.webp?v=3" alt="Star Trio" loading="lazy" decoding="async">
       </figure>
   
       <!-- 18) YOUTUBE – Misery Visualizer -->
@@ -882,15 +734,14 @@
       <!-- ========================= -->
              <!-- SLEEPWALKING -->
       <!-- ========================= --> 
-      <!-- 1) IMG - Smurfette -->
-      <figure class="slot smurfette-1" id="smurfette-1">
-        <img data-lazy-src="assets/img/smurfette-1.webp?v=1" alt="Smurfette" loading="lazy" decoding="async">
-      </figure>
+      <img loading="lazy" class="smurfette-1" src="assets/img/smurfette-1.webp" />
+      <img loading="lazy" class="thestar-tarot" src="assets/img/thestar-tarot.webp" />
+      <img loading="lazy" class="sleepwalking-radio-polaroid" src="assets/img/sleepwalking-radio.webp" />
+      <img loading="lazy" class="blue-star-8" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="sleepwalking-receipt" src="assets/img/stars/sleepwalking-receipt.webp?v=3" />
 
-      <!-- 2) IMG - SLEEPWALKING – The Star Tarot Card -->
-      <figure class="slot thestar-tarot" id="thestar-tarot">
-        <img data-lazy-src="assets/img/thestar-tarot.webp?v=2" alt="The Star Tarot Card" loading="lazy" decoding="async">
-      </figure>
+      <p class="text-wrapper-13">me in my music tech class when <br>sleepwalking was played on the radio<br>for the first time ever</p>
+
   
        <!-- 3) SOUNDCLOUD — Play Sleepwalking -->
       <figure class="slot slot--sc play-sleepwalking" id="play-sleepwalking"
@@ -920,13 +771,7 @@
         </div>
       </figure> -->
 
-      <p class="text-wrapper-13">me in my music tech class when <br>sleepwalking was played on the radio<br>for the first time ever</p>
-  
-      <!-- 6) IMG - Sleepwalking – Polaroid -->
-      <figure class="slot sleepwalking-radio-polaroid" id="sleepwalking-radio-polaroid">
-        <img data-lazy-src="assets/img/sleepwalking-radio.webp?v=1" alt="Sleepwalking Radio Polaroid" loading="lazy" decoding="async">
-      </figure>
-
+      
       <!-- 7) YOUTUBE – Sleepwalking - Visualizer -->
       <figure class="slot slot--youtube sleepwalking-visualizer" id="sleepwalking-visualizer">
         <div class="yt-box">
@@ -964,11 +809,6 @@
         </div>
       </figure>
 
-      <!-- 10) IMG - Blue Star -->
-      <figure class="slot blue-star-8" id="blue-star-8">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=3" alt="Blue Star Sticker 8" loading="lazy" decoding="async">
-      </figure>
-
       <!-- 11) IMG:OVERLAY - About Sleepwalking -->
       <figure class="slot about-sleepwalking" id="about-sleepwalking"
         data-overlay-src="assets/img/about/about-sleepwalking.webp?v=1"
@@ -976,39 +816,43 @@
         <img data-lazy-src="assets/img/sleepwalking-about.webp?v=2" alt="Sleepwalking About" loading="lazy" decoding="async" style="cursor:pointer;">
       </figure>
   
-      <!-- 12) IMG - Sleepwalking – Receipt -->
-      <figure class="slot sleepwalking-receipt" id="sleepwalking-receipt">
-        <img data-lazy-src="assets/img/sleepwalking-receipt.webp?v=1" alt="The Star Tarot Card" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- ========================= -->
              <!-- THE EP -->
       <!-- ========================= --> 
-      <!-- 1) IMG - EP – EP Inspo Playlist -->
-      <figure class="slot ep-inspo" id="ep-inspo">
-        <img data-lazy-src="assets/img/ep-inspo-playlist.webp?v=1" alt="EP Inspo Playlist" loading="lazy" decoding="async">
-      </figure>
+      <img loading="lazy" class="ep-inspo" src="assets/img/ep-inspo-playlist.webp?v=3" />
+      <img loading="lazy" class="silver-star1-3" src="assets/img/stars/silver-star1.webp?v=3" />
+      <img loading="lazy" class="blue-star-9" src="assets/img/stars/blue-star.webp?v=3"/>
+      <img loading="lazy" class="silver-star3-7" src="assets/img/stars/silver-star3.webp?v=2" />
+      <img loading="lazy" class="top-spotify-sparkles" src="assets/img/top-left-sparkles.webp?v=1" />
+      <img loading="lazy" class="bottom-spotify-sparkles" src="assets/img/bottom-right-sparkles.webp?v=1" />
+      <img loading="lazy" class="air-quality" src="assets/img/air-quality.webp?v=1" />       <img loading="lazy" class="air-quality" src="assets/img/air-quality.webp?v=1" />
+      <img loading="lazy" class="notebook" src="assets/img/notebook.webp?v=1" />   
+      <img loading="lazy" class="ep-vocal-booth" src="assets/img/ep-vocal-booth.webp?v=1" />
+      <img loading="lazy" class="ep-vocal-booth-2" src="assets/img/ep-vocal-booth-2.webp?v=1" />
+      <img loading="lazy" class="ep-title" src="assets/img/ep-title.webp?v=1" />
+      <img loading="lazy" class="ep-spencer-tracklist" src="assets/img/ep-spencer-text.webp?v=1" />
+      <img loading="lazy" class="blue-star-10" data-lazy-src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="discord-message-1" src="assets/img/discord-message-1.webp?v=1" />
+      <img loading="lazy" class="discord-message-2" src="assets/img/discord-message-2.webp?v=1" />
+      <img loading="lazy" class="discord-message-3" src="assets/img/scrabble-dm.webp?v=1" />
+      <img loading="lazy" class="ep-mixing-date" src="assets/img/ep-mixing-date.webp?v=1" /> 
+      <img loading="lazy" class="scrabbleboard" src="assets/img/scrabble-placeholder.webp?v=1" /> 
+      <img loading="lazy" class="silver-star1-4" src="assets/img/stars/silver-star1.webp?v=1" />
+      <img loading="lazy" class="scrabble-piece" src="assets/img/scrabble-piece.webp?v=1" />   
+      <img loading="lazy" class="ep-tweet" src="assets/img/brooke-tweet.webp?v=1" />
+      <img loading="lazy" class="starterpack" src="assets/img/ig-starterpack.webp?v=1" />
+      <img loading="lazy" class="ep-cover" src="assets/img/ep-cover.webp?v=1" />
 
-      <!-- #) IMG - Silver Star Overlay -->
-      <figure class="slot silver-star1-3" id="silver-star1-3">
-        <img data-lazy-src="assets/img/stars/silver-star1.webp?v=3" alt="silver star" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- #) IMG - Blue Star -->
-      <figure class="slot blue-star-9" id="blue-star-9">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=3" alt="Blue Star Sticker 9" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- #) IMG - Silver Star 3-7  -->
-      <figure class="slot silver-star3-7" id="silver-star3-7">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=2" alt="Silver Star 3-7" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- #) IMG - EP – Top left Sparkles -->
-      <figure class="slot top-spotify-sparkles" id="top-spotify-sparkles">
-        <img data-lazy-src="assets/img/top-left-sparkles.webp?v=1" alt="Top Left Sparkles" loading="lazy" decoding="async">
-      </figure>
-
+      <p class="text-wrapper-15">click the phone to read<br>what i've gotta say</p>  
+      <p class="text-wrapper-14">phoning all my<br>friends!!!</p>
+      <p class="text-wrapper-16">mixing misery missing<br>company<br></p>
+      <p class="text-wrapper-17"there were<br>horrible<br>wildfires in<br>canada when we<br>were recording<br>the vocals, so<br>it felt like it<br>was 5pm all day</p>
+      <p class="text-wrapper-18">the migos carpool<br>karaoke is my fav, so<br>i make everyone watch<br>it with me</p>
+      <p class="text-wrapper-19">some girls were listening to<br>hannah montana in the car,<br>full blast, the night misery<br>was being released – it felt<br>like a good omen</p>
+      <p class="text-wrapper-20">me<br>overthinking<br>the<br>tracklist<br>order...<br>(what's new)</p>
+      <p class="text-wrapper-21">i went to the sabrina<br>carpenter concert a<br>week after my ep<br>released. if jesus<br>was a carpenter,<br>then i’m a follower<br>of christ.</p>
+      <p class="text-wrapper-22">terrorizing you guys<br>by releasing music<br>is one of my<br> fav pastimes</p>
+  
       <!-- #) IMG:URL - EP – Inspiration Playlist Spotify -->
       <figure class="slot ep-inspo-sp" id="ep-inspo-sp">
         <a href="https://open.spotify.com/playlist/0fWV5W7mDt9TdUve5H6ewX?si=a39b138b86d74fc9&pt=215639c8dfc517c2c42dc6dd477bc204"
@@ -1017,12 +861,6 @@
                alt="EP Inspiration">
         </a>
       </figure>
-
-      <!-- 4) IMG - EP – Bottom Right Sparkles -->
-      <figure class="slot bottom-spotify-sparkles" id="bottom-spotify-sparkles">
-        <img data-lazy-src="assets/img/bottom-right-sparkles.webp?v=1" alt="Bottom Right Sparkles" loading="lazy" decoding="async">
-      </figure>
-
       <!-- 5) TEXT - EP - Click to Read -->
       <!-- <figure class="slot slot--text ep-click-toread" id="ep-click-toread">
         <div class="text-box">
@@ -1030,26 +868,15 @@
           what i've gotta say
         </div>
       </figure> -->
-
-      <p class="text-wrapper-15">click the phone to read<br>what i've gotta say</p>
-  
       <!-- 6) IMG:OVERLAY - EP – Telephone -->
       <figure class="slot ep-telephone" id="ep-telephone"
         data-overlay-src="assets/img/about/about-ep.webp?v=2"
         data-overlay-alt="About Telephone">
         <img data-lazy-src="assets/img/ep-telephone.webp?v=2" alt="EP Telephone" loading="lazy" decoding="async" style="cursor:pointer;">
       </figure>
-  
       <!-- 6) TEXT - EP - Phoning Friends -->
       <!-- <figure class="slot slot--text ep-phoningfriends" id="ep-phoningfriends">
-        <div class="text-box">
-          phoning all my<br>
-          friends!!!
-        </div>
-      </figure> -->
-
-      <p class="text-wrapper-14">phoning all my<br>friends!!!</p>
-
+        <div class="text-box"> phoning all my<br> friends!!!</div> </figure> -->     
       <!-- 7) VIMEO – EP – Mixing Misery -->
       <figure class="slot slot--video mixing-misery-1" id="mixing-misery-1">
         <div class="video-box">
@@ -1061,19 +888,12 @@
             title=”Mixing Misery">
           </iframe>
         </div>
-      </figure>
-  
+      </figure>  
       <!-- 8) TEXT - Mixing Misery -->
       <!-- <figure class="slot slot--text mixing-misery-1-text" id="mixing-misery-1-text">
-        <div class="text-box">
-          mixing misery missing<br>
-          company<br>
-        </div>
+        <div class="text-box"> mixing misery missing<br> company<br> </div>
       </figure> -->
-
-      <p class="text-wrapper-16">mixing misery missing<br>company<br></p>
-  
-       <!-- 9) VIMEO – EP – Migos -->
+      <!-- 9) VIMEO – EP – Migos -->
       <figure class="slot slot--video migos-mairead" id="migos-mairead">
         <div class="video-box">
           <iframe
@@ -1084,30 +904,10 @@
             title=”Migos Carpool Karaoke">
           </iframe>
         </div>
-      </figure>
-
-      <!-- 10) IMG - EP – Air Quality -->
-      <figure class="slot air-quality" id="air-quality">
-        <img data-lazy-src="assets/img/air-quality.webp?v=1" alt="EP Title" loading="lazy" decoding="async">
-      </figure>
-  
+      </figure>  
       <!-- 11) TEXT - EP - Air Quality -->
       <!-- <figure class="slot slot--text air-quality-text" id="air-quality-text">
-        <div class="text-box">
-          there were<br>
-          horrible<br>
-          wildfires in<br>
-          canada when we<br>
-          were recording<br>
-          the vocals, so<br>
-          it felt like it<br>
-          was 5pm all day
-        </div>
-      </figure> -->
-      
-      <p class="text-wrapper-17"there were<br>horrible<br>wildfires in<br>canada when we<br>were recording<br>the vocals, so<br>it felt like it<br>was 5pm all day</p>
-
-  
+        <div class="text-box"> there were<br> horrible<br>wildfires in<br>canada when we<br>were recording<br>the vocals, so<br>it felt like it<br>was 5pm all day</div></figure> --> 
       <!-- 12) VIMEO – EP – Hannah Montana -->
       <figure class="slot slot--video hannah-montana" id="hannah-montana">
         <div class="video-box">
@@ -1119,25 +919,13 @@
             title=”Hannah Montana">
           </iframe>
         </div>
-      </figure>
-  
+      </figure>  
       <!-- 13) TEXT - EP - Migos Carpool Karaoke -->
       <!-- <figure class="slot slot--text migos-text" id="migos-text">
-        <div class="text-box">
-          the migos carpool<br>
-          karaoke is my fav, so<br>
-          i make everyone watch<br>
-          it with me
+        <div class="text-box"> the migos carpool<br>karaoke is my fav, so<br>i make everyone watch<br>it with me
         </div>
       </figure> -->
-      <p class="text-wrapper-18">the migos carpool<br>karaoke is my fav, so<br>i make everyone watch<br>it with me</p>
-  
-      <!-- 14) IMG - EP – Mix Date Photo -->
-      <figure class="slot ep-mixing-date" id="ep-mixing-date">
-        <img data-lazy-src="assets/img/ep-mixing-date.webp?v=1" alt="EP Mixing Date Picture" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 15) TEXT - Hannah Montana -->
+        <!-- 15) TEXT - Hannah Montana -->
       <!-- <figure class="slot slot--text hannah-montana-text" id="hannah-montana-text">
         <div class="text-box">
           some girls were listening to<br>
@@ -1146,46 +934,12 @@
           was being released – it felt<br>
           like a good omen
         </div>
-      </figure> -->
-      <p class="text-wrapper-19">some girls were listening to<br>hannah montana in the car,<br>full blast, the night misery<br>was being released – it felt<br>like a good omen</p>
-  
-      <!-- 16) IMG - EP – Notebook -->
-      <figure class="slot notebook" id="notebook">
-        <img data-lazy-src="assets/img/notebook.webp?v=1" alt="Notebook" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 17) IMG - EP – Vocal Booth -->
-      <figure class="slot ep-vocal-booth" id="ep-vocal-booth">
-        <img data-lazy-src="assets/img/ep-vocal-booth.webp?v=1" alt="In Vocal Booth Selfie" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 18) IMG - EP – Vocal Booth 2 -->
-      <figure class="slot ep-vocal-booth-2" id="ep-vocal-booth-2">
-        <img data-lazy-src="assets/img/ep-vocal-booth-2.webp?v=1" alt="Vocal Booth Setup" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 19) IMG - EP – Title  -->
-      <figure class="slot ep-title" id="ep-title">
-        <img data-lazy-src="assets/img/ep-title.webp?v=1" alt="EP Title" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 20) IMG - EP – Spencer Tracklist -->
-      <figure class="slot ep-spencer-tracklist" id="ep-spencer-tracklist">
-        <img data-lazy-src="assets/img/ep-spencer-text.webp?v=1" alt="Vocal Booth Setup" loading="lazy" decoding="async">
-      </figure>
-  
+      </figure> -->    
       <!-- 21) TEXT - EP Spencer Text -->
       <!-- <figure class="slot slot--text ep-spencer-text" id="ep-spencer-text">
-        <div class="text-box">
-          me<br>
-          overthinking<br>
-          the<br>
-          tracklist<br>
-          order...
+        <div class="text-box"> me<br> overthinking<br>the<br>tracklist<br>order...
         </div>
       </figure> -->
-      <p class="text-wrapper-20">me<br>overthinking<br>the<br>tracklist<br>order...<br>(what's new)</p>
-
       <!-- 22) VIMEO – EP – Mixing Misery 6 -->
       <figure class="slot slot--video mixing-misery-6" id="mixing-misery-6">
         <div class="video-box">
@@ -1197,28 +951,12 @@
             title=”Mixing Misery Video">
           </iframe>
         </div>
-      </figure>
-  
-      <!-- 23) IMG - EP – Scrabble Board -->
-      <figure class="slot scrabbleboard" id="scrabbleboard">
-        <img data-lazy-src="assets/img/scrabble-placeholder.webp?v=1" alt="Scrabble Board Placeholder" loading="lazy" decoding="async">
-      </figure>
-
+      </figure> 
       <!-- 24) TEXT - EP Sabrina Carpenter Text -->
       <!-- <figure class="slot slot--text sabrinacarpenter-text" id="sabrinacarpenter-text">
         <div class="text-box">
-          i went to the sabrina<br>
-          carpenter concert a<br>
-          week after my ep<br>
-          released. if jesus<br>
-          was a carpenter,<br>
-          then i’m a follower<br>
-          of christ.
-        </div>
+          i went to the sabrina<br>carpenter concert a<br>week after my ep<br>released. if jesus<br>was a carpenter,<br>then i’m a follower<br>of christ.</div>
       </figure> -->
-
-      <p class="text-wrapper-21">i went to the sabrina<br>carpenter concert a<br>week after my ep<br>released. if jesus<br>was a carpenter,<br>then i’m a follower<br>of christ.</p>
-  
       <!-- 25) VIMEO – EP – Sabrina Carpenter -->
       <figure class="slot slot--video sabrinacarpenter" id="sabrinacarpenter">
         <div class="video-box">
@@ -1230,28 +968,7 @@
             title=”Sabrina Carpenter">
           </iframe>
         </div>
-      </figure>
-
-      <!-- #) IMG - Blue Star -->
-      <figure class="slot blue-star-10" id="blue-star-10">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=3" alt="Blue Star Sticker 10" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 26) IMG - EP – Discord Messages -->
-      <figure class="slot discord-message-1" id="discord-message-1">
-        <img data-lazy-src="assets/img/discord-message-1.webp?v=1" alt="Scrabble Discord Messages" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 27) IMG - EP – Discord Messages -->
-      <figure class="slot discord-message-2" id="discord-message-2">
-        <img data-lazy-src="assets/img/discord-message-2.webp?v=1" alt="Scrabble Discord Messages" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 28) IMG - EP – Discord Messages -->
-      <figure class="slot discord-message-3" id="discord-message-3">
-        <img data-lazy-src="assets/img/scrabble-dm.webp?v=1" alt="Scrabble Discord Messages" loading="lazy" decoding="async">
-      </figure>
-  
+      </figure> 
       <!-- 29) VIMEO – EP – Exit Wounds Zoom -->
       <figure class="slot slot--video exitwounds-zoom" id="exitwounds-zoom">
         <div class="video-box">
@@ -1264,17 +981,6 @@
           </iframe>
         </div>
       </figure>
-
-      <!-- 30) IMG - Silver Star Overlay -->
-      <figure class="slot silver-star1-4" id="silver-star1-4">
-        <img data-lazy-src="assets/img/stars/silver-star1.webp?v=3" alt="silver star" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 31) IMG - EP – Scrabble Piece -->
-      <figure class="slot scrabble-piece" id="scrabble-piece">
-        <img data-lazy-src="assets/img/scrabble-piece.webp?v=1" alt="Scrabble Piece Received" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- 32) VIMEO – EP – EP Zoom -->
       <figure class="slot slot--video ep-zoom" id="ep-zoom">
         <div class="video-box">
@@ -1286,8 +992,7 @@
             title=”EP Zoom">
           </iframe>
         </div>
-      </figure>
-  
+      </figure> 
       <!-- 33) TEXT - EP Zoom Text -->
       <!-- <figure class="slot slot--text zoom-text" id="zoom-text">
         <div class="text-box">
@@ -1296,10 +1001,7 @@
           is one of my<br>
           pastimes
         </div>
-      </figure> -->
-
-      <p class="text-wrapper-22">terrorizing you guys<br>by releasing music<br>is one of my<br> fav pastimes</p>
-  
+      </figure> -->     
       <!-- 34) VIMEO – EP – Mixing Sleepwalking-2 -->
       <figure class="slot slot--video mixing-sleepwalking-2" id="mixing-sleepwalking-2">
         <div class="video-box">
@@ -1313,24 +1015,23 @@
         </div>
       </figure>
   
-      <!-- 35) IMG - EP – What's an EP Tweet -->
-      <figure class="slot ep-tweet" id="ep-tweet">
-        <img data-lazy-src="assets/img/brooke-tweet.webp?v=1" alt="What's an EP tweet" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 36) IMG - EP – Starter Pack -->
-      <figure class="slot starterpack" id="starterpack">
-        <img data-lazy-src="assets/img/ig-starterpack.webp?v=1" alt="Instagram Starterpack" loading="lazy" decoding="async">
-      </figure>
-      
-      <!-- 37) IMG - EP – Cover -->
-      <figure class="slot ep-cover" id="ep-cover">
-        <img data-lazy-src="assets/img/ep-cover.webp?v=1" alt="Blame it on a Bad Dream EP Cover Art" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- ========================= -->
              <!-- THE ARTWORK -->
       <!-- ========================= --> 
+      <img loading="lazy" class="artwork-title" src="assets/img/artwork-title.webp?v=2" />
+      <img loading="lazy" class="silver-star3-8" src="assets/img/stars/silver-star3.webp?v=2" />
+      <img loading="lazy" class="tv-photo" src="assets/img/tv-photo.webp?v=2" />      
+      <img loading="lazy" class="caitlin-note" src="assets/img/caitlin-note.webp?v=2" />
+      <img loading="lazy" class="caitlin-text-1" src="assets/img/caitlin-text-1.webp?v=2" />
+      <img loading="lazy" class="caitlin-text-2" src="assets/img/caitlin-text-2.webp?v=2" />     
+      <img loading="lazy" class="shoot-makeup" src="assets/img/shoot-makeup.webp?v=2" />
+      <img loading="lazy" class="dorm-mirror" src="assets/img/dorm-mirror.webp?v=2" />
+      <img loading="lazy" class="caitlin-text-3" src="assets/img/caitlin-text-3.webp?v=2" />      
+      <img loading="lazy" class="star-trio-3" src="assets/img/stars/star-trio.webp?v=2" />
+      <img loading="lazy" class="star-trio-4" src="assets/img/stars/star-trio.webp?v=2" />
+
+      <p class="text-wrapper-23">i may have<br>to quit my<br>day job and<br>become a<br>fulltime<br>#beautyguru</p>
+  
       <!-- 1) VIMEO – Artwork – Artwork Test Shoot Video -->
       <figure class="slot slot--video artwork-testshoot-1" id="artwork-testshoot-1">
         <div class="video-box">
@@ -1342,18 +1043,7 @@
             title=”Artwork Testshoot">
           </iframe>
         </div>
-      </figure>
-      
-      <!-- 2) IMG - Artwork – Artwork Title -->
-      <figure class="slot artwork-title" id="artwork-title">
-        <img data-lazy-src="assets/img/artwork-title.webp?v=2" alt="The Artwork Heading Title" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- #) IMG - Silver Star 3-8  -->
-      <figure class="slot silver-star3-8" id="silver-star3-8">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=2" alt="Silver Star 3-8" loading="lazy" decoding="async">
-      </figure>
-  
+      </figure>  
       <!-- 3) VIMEO – Artwork – Artwork Test Shoot Video 5 -->
       <figure class="slot slot--video artwork-testshoot-5" id="artwork-testshoot-5">
         <div class="video-box">
@@ -1366,7 +1056,6 @@
           </iframe>
         </div>
       </figure> 
-  
       <!-- 4) VIMEO – Artwork – Artwork Test Shoot Video 4 -->
       <figure class="slot slot--video artwork-testshoot-4" id="artwork-testshoot-4">
         <div class="video-box">
@@ -1379,19 +1068,12 @@
           </iframe>
         </div>
       </figure>
-
       <!-- 5) IMG:OVERLAY – About Artwork -->
       <figure class="slot about-artwork" id="about-artwork"
         data-overlay-src="assets/img/about/about-artwork.webp?v=2"
         data-overlay-alt="About artwork">
         <img src="assets/img/artwork-about.webp?v=2" alt="About Artwork" loading="lazy" decoding="async" style="cursor:pointer;">
       </figure>
-
-      <!-- 6) IMG - Artwork – Caitlin Text 1 -->
-      <figure class="slot caitlin-text-1" id="caitlin-text-1">
-        <img data-lazy-src="assets/img/caitlin-text-1.webp?v=1" alt="Caitlin Texts" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- 7) GIF - Artwork – Kayla Polaroid -->
       <figure class="slot kayla-polaroid" id="kayla-polaroid">
         <img
@@ -1401,13 +1083,7 @@
           alt="kayla polaroid collage"
           loading="lazy"
           decoding="async">
-      </figure>
-  
-      <!-- 8) IMG - Artwork – TV Photo -->
-      <figure class="slot tv-photo" id="tv-photo">
-        <img data-lazy-src="assets/img/tv-photo.webp?v=1" alt="TV Photo" loading="lazy" decoding="async">
-      </figure>
-  
+      </figure> 
       <!-- 9) VIMEO – Artwork – Artwork Test Shoot Video 3 -->
       <figure class="slot slot--video artwork-testshoot-3" id="artwork-testshoot-3">
         <div class="video-box">
@@ -1420,17 +1096,6 @@
           </iframe>
         </div>
       </figure>
-
-      <!-- 10) IMG - Artwork – Caitlin Note -->
-      <figure class="slot caitlin-note" id="caitlin-note">
-        <img data-lazy-src="assets/img/caitlin-note.webp?v=1" alt="Caitlin Note" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 11) IMG - Artwork – Caitlin Text 2 -->
-      <figure class="slot caitlin-text-2" id="caitlin-text-2">
-        <img data-lazy-src="assets/img/caitlin-text-2.webp?v=1" alt="Caitlin Texts" loading="lazy" decoding="async">
-      </figure>
-
       <!-- 12) VIMEO – Artwork – Shoot BTS 1 -->
       <figure class="slot slot--video shoot-bts-1" id="shoot-bts-1">
         <div class="video-box">
@@ -1443,12 +1108,6 @@
           </iframe>
         </div>
       </figure>
-  
-      <!-- 13) IMG - Artwork – Shoot Makeup -->
-      <figure class="slot shoot-makeup" id="shoot-makeup">
-        <img data-lazy-src="assets/img/shoot-makeup.webp?v=1" alt="Caitlin Note" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- 14) TEXT - Artwork - Shoot Makeup Text -->
       <!-- <figure class="slot slot--text shoot-makeup-text" id="shoot-makeup-text">
         <div class="text-box">
@@ -1459,15 +1118,7 @@
           fulltime<br>
           #beautyguru
         </div>
-      </figure> -->
-
-      <p class="text-wrapper-23">i may have<br>to quit my<br>day job and<br>become a<br>fulltime<br>#beautyguru</p>
-  
-      <!-- 15) IMG - Artwork – Caitlin Texts -->
-      <figure class="slot caitlin-text-3" id="caitlin-text-3">
-        <img data-lazy-src="assets/img/caitlin-text-3.webp?v=1" alt="Caitlin Texts" loading="lazy" decoding="async">
-      </figure>
-  
+      </figure> --> 
       <!-- 16) VIMEO – Artwork – Shoot BTS 2 -->
       <figure class="slot slot--video shoot-bts-2" id="shoot-bts-2">
         <div class="video-box">
@@ -1480,25 +1131,39 @@
           </iframe>
         </div>
       </figure>
-
-      <!-- #) IMG - Star Trio  -->
-      <figure class="slot star-trio-3" id="star-trio-3">
-        <img data-lazy-src="assets/img/stars/star-trio.webp?v=2" alt="Star Trio" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- #) IMG - Star Trio  -->
-      <figure class="slot star-trio-4" id="star-trio-4">
-        <img data-lazy-src="assets/img/stars/star-trio.webp?v=2" alt="Star Trio" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- #) IMG - Artwork – Dorm Mirror -->
-      <figure class="slot dorm-mirror" id="dorm-mirror">
-        <img data-lazy-src="assets/img/dorm-mirror.webp?v=1" alt="Caitlin Texts" loading="lazy" decoding="async">
-      </figure>
-      
+    
       <!-- ========================= -->
              <!-- THE VIDEOS -->
       <!-- ========================= --> 
+      <img loading="lazy" class="silver-star3-9" src="assets/img/stars/silver-star3.webp?v=3" />
+      <img loading="lazy" class="blue-star-11" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="glow-star-1" src="assets/img/stars/glow-star.webp?v=3" />     
+      <img loading="lazy" class="silver-star3-10" src="assets/img/stars/silver-star3.webp?v=3" />
+      <img loading="lazy" class="blue-star-12" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="silver-star3-11" src="assets/img/stars/silver-star3.webp?v=3" />
+      <img loading="lazy" class="glow-star-2" src="assets/img/stars/glow-star.webp?v=3" />    
+      <img loading="lazy" class="video-title-camcorder" src="assets/img/video-title-camcorder.webp?v=2" />
+      <img loading="lazy" class="glow-star-3" src="assets/img/stars/glow-star.webp?v=3" /> 
+      <img loading="lazy" class="blue-star-13" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="glow-star-4" src="assets/img/stars/glow-star.webp?v=3" /> 
+      <img loading="lazy" class="blue-star-14" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="silver-star3-12" src="assets/img/stars/silver-star3.webp?v=3" />
+      <img loading="lazy" class="blue-star-15" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="glow-star-5" src="assets/img/stars/glow-star.webp?v=3" />   
+      <img loading="lazy" class="misery-brainstorm-1" src="assets/img/misery-brainstorm-1.webp?v=2" />
+      <img loading="lazy" class="editing-misery-thought" src="assets/img/editing-misery-thought.webp?v=2" />      
+      <img loading="lazy" class="glow-star-6" src="assets/img/stars/glow-star.webp?v=3" />   
+      <img loading="lazy" class="editing-misery-arrow" src="assets/img/misery-brainstorm-arrow.webp?v=2" /> 
+      <img loading="lazy" class="editing-misery" src="assets/img/editing-misery-video.webp?v=2" />         
+      <img loading="lazy" class="misery-brainstorm-2" src="assets/img/misery-brainstorm-2.webp?v=2" />     
+      <img loading="lazy" class="exitwounds-film-roll" src="assets/img/exitwounds-film-roll.webp?v=2" /> 
+      <img loading="lazy" class="exitwounds-subway" src="assets/img/exitwounds-subway.webp?v=2" />       
+      <img loading="lazy" class="backtruck-2" src="assets/img/backtruck-2.webp?v=2" /> 
+      <img loading="lazy" class="backtruck-1" src="assets/img/backtruck-1.webp?v=2" /> 
+
+      <p class="text-wrapper-24">brainstorming the<br>misery visualizer<br>(ft. my horrible<br>sketches)</p>
+      
+
       <!-- 1) VIDEO - YouTube – Misery Missing Company Behind the Scenes -->
       <figure class="slot slot--youtube misery-bts" id="misery-bts">
         <div class="yt-box">
@@ -1511,7 +1176,6 @@
           </iframe>
         </div>
       </figure>
-  
       <!-- 2) GIF - Videos – Buddy Gif -->
       <figure class="slot buddy-gif" id="buddy-gif">
         <img
@@ -1521,48 +1185,7 @@
           alt="buddy cakeboss"
           loading="lazy"
           decoding="async">
-      </figure>
-
-      <!-- 3) IMG - Silver Star 3 -->
-      <figure class="slot silver-star3-9" id="silver-star3-9">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=1" alt="Silver Star " loading="lazy" decoding="async">
-      </figure>
-
-       <!-- 4) IMG - Blue Star -->
-      <figure class="slot blue-star-11" id="blue-star-11">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=2" alt="Blue Star 11" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 5) IMG - Glow Star -->
-      <figure class="slot glow-star-1" id="glow-star-1">
-        <img data-lazy-src="assets/img/stars/glow-star.webp?v=2" alt="Glow Star 1" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 6) IMG - Silver Star 3 -->
-      <figure class="slot silver-star3-10" id="silver-star3-10">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=1" alt="Silver Star " loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 7) IMG - Blue Star -->
-      <figure class="slot blue-star-12" id="blue-star-12">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=2" alt="Blue Star" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 8) IMG - Silver Star 3 -->
-      <figure class="slot silver-star3-11" id="silver-star3-11">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=1" alt="Silver Star " loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 9) IMG - Glow Star -->
-      <figure class="slot glow-star-2" id="glow-star-2">
-        <img data-lazy-src="assets/img/stars/glow-star.webp?v=2" alt="Glow Star 2" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 10) IMG - Videos – The Videos Title Camcorder -->
-      <figure class="slot video-title-camcorder" id="video-title-camcorder">
-        <img data-lazy-src="assets/img/video-title-camcorder.webp?v=1" alt="Videos Section Title Camcorder Overlay" loading="lazy" decoding="async">
-      </figure>
-      
+      </figure>      
       <!-- 11) LOTTIE – VIDEOS — The Videos Title -->
       <figure class="slot slot--lottie video-title-gif" id="video-title-gif">
         <div class="lot-box">
@@ -1575,47 +1198,6 @@
           </dotlottie-wc>
         </div>
       </figure>
-
-      <!-- 12) IMG - Glow Star -->
-      <figure class="slot glow-star-3" id="glow-star-3">
-        <img data-lazy-src="assets/img/stars/glow-star.webp?v=2" alt="Glow Star 3" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 13) IMG - Blue Star -->
-      <figure class="slot blue-star-13" id="blue-star-13">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=2" alt="Blue Star" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 14) IMG - Glow Star 4 -->
-      <figure class="slot glow-star-4" id="glow-star-4">
-        <img data-lazy-src="assets/img/stars/glow-star.webp?v=2" alt="Glow Star 4" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 15) IMG - Blue Star -->
-      <figure class="slot blue-star-14" id="blue-star-14">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=2" alt="Blue Star 14" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 16) IMG - Silver Star 3 -->
-      <figure class="slot silver-star3-12" id="silver-star3-12">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=1" alt="Silver Star " loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 17) IMG - Blue Star -->
-      <figure class="slot blue-star-15" id="blue-star-15">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=2" alt="Blue Star 14" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 18) IMG - Glow Star 5 -->
-      <figure class="slot glow-star-5" id="glow-star-5">
-        <img data-lazy-src="assets/img/stars/glow-star.webp?v=2" alt="Glow Star 4" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 19) IMG - Videos – Misery Brainstorm 1 -->
-      <figure class="slot misery-brainstorm-1" id="misery-brainstorm-1">
-        <img data-lazy-src="assets/img/misery-brainstorm-1.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- 20) GIF - Videos – Misery Polaroids -->   
       <figure class="slot misery-polaroids" id="misery-polaroids">
         <img
@@ -1626,22 +1208,6 @@
           loading="lazy"
           decoding="async">
       </figure>
-
-      <!-- 21) IMG - Videos – Editing misery video thought bubble -->
-      <figure class="slot editing-misery-thought" id="editing-misery-thought">
-        <img data-lazy-src="assets/img/editing-misery-thought.webp?v=1" alt="Editing Misery Thought Bubble" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 22) IMG - Glow Star 6 -->
-      <figure class="slot glow-star-6" id="glow-star-6">
-        <img data-lazy-src="assets/img/stars/glow-star.webp?v=2" alt="Glow Star 4" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- #) IMG - Videos – Misery Brainstorm Arrow -->
-      <figure class="slot misery-brainstorm-arrow" id="misery-brainstorm-arrow">
-        <img data-lazy-src="assets/img/misery-brainstorm-arrow.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- #) TEXT - Videos – Misery Brainstorm Text -->
       <!-- <figure class="slot slot--text misery-brainstorm-text" id="misery-brainstorm-text">
         <div class="text-box">
@@ -1651,19 +1217,6 @@
           sketches)
         </div>
       </figure> -->
-
-      <p class="text-wrapper-24">brainstorming the<br>misery visualizer<br>(ft. my horrible<br>sketches)</p>
-      
-      <!-- #) IMG - Videos – Editing Misery Photo -->
-      <figure class="slot editing-misery" id="editing-misery">
-        <img src="assets/img/editing-misery-video.webp?v=1" alt="Editing Misery Video" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- #) IMG - Videos – Misery Brainstorm 2 -->
-      <figure class="slot misery-brainstorm-2" id="misery-brainstorm-2">
-        <img data-lazy-src="assets/img/misery-brainstorm-2.webp?v=1" alt="Misery Video Brainstorm" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- #) VIMEO - Videos – The Cake -->
       <figure class="slot slot--video the-cake" id="the-cake">
         <div class="video-box">
@@ -1675,8 +1228,7 @@
             title=”The Cake BTS Misery Video">
           </iframe>
         </div>
-      </figure>
-  
+      </figure>  
       <!-- #) VIMEO - Videos – Cake Boss -->
       <figure class="slot slot--video cake-boss" id="cake-boss">
         <div class="video-box">
@@ -1689,7 +1241,6 @@
           </iframe>
         </div>
       </figure>
-  
       <!-- #) VIMEO - Videos – Happy Easter -->
       <figure class="slot slot--video happy-easter" id="happy-easter">
         <div class="video-box">
@@ -1702,7 +1253,6 @@
           </iframe>
         </div>
       </figure>
-  
       <!-- #) VIMEO - Videos – Dab Video -->
       <figure class="slot slot--video dab-video" id="dab-video">
         <div class="video-box">
@@ -1715,12 +1265,6 @@
           </iframe>
         </div>
       </figure>
-  
-      <!-- #) IMG - Videos – Exit Wounds Film Roll -->
-      <figure class="slot exitwounds-film-roll" id="exitwounds-film-roll">
-        <img src="assets/img/exitwounds-film-roll.webp?v=1" alt="Exit Wounds Film Roll" loading="lazy" decoding="async">
-      </figure>
-
       <!-- #) GIF – DVD VIDEO  -->
       <figure class="slot dvd-video" id="dvd-video">
         <img
@@ -1730,8 +1274,7 @@
           alt="dvd video"
           loading="lazy"
           decoding="async">
-      </figure>
-  
+      </figure> 
       <!-- #) VIMEO - Videos – Across Street (Exit Wounds BTS) -->
       <figure class="slot slot--video across-street" id="across-street">
         <div class="video-box">
@@ -1743,8 +1286,7 @@
             title=”Across Street BTS Exit Wounds Video">
           </iframe>
         </div>
-      </figure>
-  
+      </figure> 
       <!-- #) VIMEO - Videos – Grew Here (Exit Wounds BTS) -->
       <figure class="slot slot--video grew-here" id="grew-here">
         <div class="video-box">
@@ -1756,8 +1298,7 @@
             title=”Grew Here BTS Exit Wounds Video">
           </iframe>
         </div>
-      </figure>
-  
+      </figure> 
       <!-- #) VIMEO - Videos – Mazzy Star (Exit Wounds BTS) -->
       <figure class="slot slot--video mazzy-star" id="mazzy-star">
         <div class="video-box">
@@ -1769,8 +1310,7 @@
             title=”Mazzy Star BTS Exit Wounds Video">
           </iframe>
         </div>
-      </figure>
-  
+      </figure>  
       <!-- #) VIMEO - Videos – Tis the Damn (Exit Wounds BTS) -->
       <figure class="slot slot--video tisthedamn" id="tisthedamn">
         <div class="video-box">
@@ -1783,7 +1323,6 @@
           </iframe>
         </div>
       </figure>
-
       <!-- #) VIMEO - Videos – TV Unboxing (Misery BTS) -->
       <figure class="slot slot--video tv-unboxing" id="tv-unboxing">
         <div class="video-box">
@@ -1796,19 +1335,12 @@
           </iframe>
         </div>
       </figure>
-
       <!-- #) IMG:OVERLAY - Overlay - About Videos -->
       <figure class="slot videos-about" id="videos-about"
         data-overlay-src="assets/img/about/about-videos.webp?v=3"
         data-overlay-alt="About the Videos">
         <img src="assets/img/videos-about.webp?v=2" alt="About Videos" loading="lazy" decoding="async" style="cursor:pointer;">
-      </figure>
-  
-      <!-- #) IMG - Videos – Exit Wounds Subway -->
-      <figure class="slot exitwounds-subway" id="exitwounds-subway">
-        <img data-lazy-src="assets/img/exitwounds-subway.webp?v=1" alt="Exit Wounds Subway " loading="lazy" decoding="async">
-      </figure>
-  
+      </figure>  
       <!-- #) VIDEO - YouTube – Exit Wounds Behind the Scenes -->
       <figure class="slot slot--youtube exitwounds-bts" id="exitwounds-bts">
         <div class="yt-box">
@@ -1820,8 +1352,7 @@
             allowfullscreen>
           </iframe>
         </div>
-        </figure>
-      
+        </figure>      
       <!-- #) VIMEO - Videos – Landmines BTS TikTok -->
       <figure class="slot slot--video landmines-bts-tiktok" id="landmines-bts-tiktok">
         <div class="video-box">
@@ -1833,8 +1364,7 @@
             title=”Landmines BTS TikTok Video">
           </iframe>
         </div>
-      </figure>
-  
+      </figure>  
       <!-- #) YouTube – Landmines Behind the Scenes -->
       <figure class="slot slot--youtube landmines-bts" id="landmines-bts">
         <div class="yt-box">
@@ -1847,7 +1377,6 @@
           </iframe>
         </div>
         </figure>
-
       <!-- #) Lottie — Glitter Truck -->
         <figure class="slot slot--lottie glitter-truck-2" id="glitter-truck-2">
           <div class="lot-box">
@@ -1860,40 +1389,26 @@
             </dotlottie-wc>
           </div>
         </figure>
-  
-      <!-- #) IMG - Videos – Back Truck 2 -->
-      <figure class="slot backtruck-2" id="backtruck-2">
-        <img data-lazy-src="assets/img/back-truck2.webp?v=1" alt="Back of Landmines Truck" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- #) IMG - Videos – Back Truck 1 -->
-      <figure class="slot backtruck-1" id="backtruck-1">
-        <img data-lazy-src="assets/img/back-truck1.webp?v=1" alt="Back of Landmines Truck" loading="lazy" decoding="async">
-      </figure>
           
       <!-- ========================= -->
              <!-- THE MERCH -->
       <!-- ========================= --> 
-      <!-- 1) IMG - Merch – Landmines Matches -->
-      <figure class="slot landmines-matches" id="landmines-matches">
-        <img data-lazy-src="assets/img/landmines-matches.webp?v=1" alt="Landmines Matches" loading="lazy" decoding="async">
-      </figure>
+      <img loading="lazy" class="landmines-matches" src="assets/img/landmines-matches.webp?v=2" />
+      <img loading="lazy" class="blue-star-16" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="fire-meme" src="assets/img/fire-meme.webp?v=2" />
+      <img loading="lazy" class="silver-star3-13" src="assets/img/stars/silver-star3.webp?v=3" /> 
+      <img loading="lazy" class="m-title" src="assets/img/matches-merch.webp?v=2" />
+      <img loading="lazy" class="early-posters" src="assets/img/poster-earlyversion.webp?v=2" /> 
+      <img loading="lazy" class="poster-arrow" src="assets/img/arrows/arrow-9-4CA8E9.webp?v=1" />    
+      <img loading="lazy" class="sticker-1" src="assets/img/driver-sticker-glow.webp?v=2" />
+      <img loading="lazy" class="sticker-3" src="assets/img/izzyloves-sticker-glow.webp?v=2" />
+      <img loading="lazy" class="sticker-2" src="assets/img/little-miss-sticker-glow.webp?v=2" />
+      <img loading="lazy" class="selfie-poster" src="assets/img/selfie-poster.webp?v=2" />
+      
+      <p class="text-wrapper-25">anytime i light a match, i feel like<br>i’m committing a crime straight out <br>of pretty little liars</p>
+      <p class="text-wrapper-26">two of the first drafts of the<br>posters before they became what<br>people now have hung up in their<br>houses (absolutely crazytown to<br>think about)</p>
+      <p class="text-wrapper-27">a special thank<br>you must go to my<br>lovely friend xoee<br>for designing<br>these with me <3<br></p>
 
-      <!-- 2) IMG - Blue Star -->
-      <figure class="slot blue-star-16" id="blue-star-16">
-        <img src="assets/img/stars/blue-star.webp?v=2" alt="Blue Star 16" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 3) IMG - Merch – Fire Meme -->
-      <figure class="slot fire-meme" id="fire-meme">
-        <img data-lazy-src="assets/img/fire-meme.webp?v=1" alt="Framed Fire Meme" loading="lazy" decoding="async">
-      </figure>
-
-        <!-- 4) IMG - Silver Star 3 -->
-      <figure class="slot silver-star3-13" id="silver-star3-13">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=2" alt="Silver Star 3" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- 5) GIFS - Merch – Pretty Little Liars Gif -->
       <figure class="slot pretty-little-liars" id="pretty-little-liars">
         <img
@@ -1904,21 +1419,13 @@
           loading="lazy"
           decoding="async">
       </figure>
-  
       <!-- 6) TEXT- Merch – Pretty Little Liars Text -->
       <!-- <figure class="slot slot--text pretty-little-liars-text" id="pretty-little-liars-text">
         <div class="text-box">
           anytime i light a match, i feel like <br>i’m committing a crime straight out <br>of pretty little liars
         </div>
       </figure> -->
-      <p class="text-wrapper-25">anytime i light a match, i feel like<br>i’m committing a crime straight out <br>of pretty little liars</p>
-      
-      <!-- 7) IMG - Merch – Matches & Merch Title -->
-      <figure class="slot m-title" id="m-title">
-        <img data-lazy-src="assets/img/matches-merch.webp?v=1" alt="Matches + Merch Title" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 8) VIMEO - Merch – Candle Lighting -->
+     <!-- 8) VIMEO - Merch – Candle Lighting -->
       <figure class="slot slot--video candle-lighting" id="candle-lighting">
         <div class="video-box">
           <iframe
@@ -1929,13 +1436,7 @@
             title=”Candle Lighting">
           </iframe>
         </div>
-      </figure>
-
-      <!-- 9) IMG - Merch – Early Posters -->
-      <figure class="slot early-posters" id="early-posters">
-        <img data-lazy-src="assets/img/poster-earlyversion.webp?v=1" alt="Early Versions of Posters" loading="lazy" decoding="async">
-      </figure>
-  
+      </figure>  
       <!-- 10) TEXT - Merch – Early Posters Text -->
       <!-- <figure class="slot slot--text early-posters-text" id="early-posters-text">
         <div class="text-box">
@@ -1945,15 +1446,7 @@
           houses (absolutely crazytown to<br>
           think about)
         </div>
-      </figure> -->
-
-      <p class="text-wrapper-26">two of the first drafts of the<br>posters before they became what<br>people now have hung up in their<br>houses (absolutely crazytown to<br>think about)</p>
-  
-      <!-- 11) IMG - Merch – Posters Arrow -->
-      <figure class="slot poster-arrow" id="poster-arrow">
-        <img data-lazy-src="assets/img/arrows/arrow-9-4CA8E9.webp?v=1" alt="Early Versions of Posters" loading="lazy" decoding="async">
-      </figure>
-  
+      </figure> --> 
       <!-- 12) TEXT - Merch – Thank You Text -->
       <!-- <figure class="slot slot--text thank-you-text" id="thank-you-text">
         <div class="text-box">
@@ -1964,26 +1457,12 @@
           these with me <3<br>
         </div>
       </figure> -->
-
-      <p class="text-wrapper-27">a special thank<br>you must go to my<br>lovely friend xoee<br>for designing<br>these with me <3<br></p>
-  
       <!-- 13) URL:OVERLAY – MERCH – MATCHBOOKS -->
       <figure class="slot about-matchbooks" id="about-matchbooks"
         data-overlay-src="assets/img/about/about-matches.webp?v=2"
         data-overlay-alt="About Landmines">
         <img src="assets/img/matchbooks-about.webp?v=3" alt="About the Matches" loading="lazy" decoding="async" style="cursor:pointer;">
       </figure>
-  
-      <!-- 14) Merch – Driver Sticker -->
-      <figure class="slot sticker-1" id="sticker-1">
-        <img data-lazy-src="assets/img/driver-sticker-glow.webp?v=1" alt="I Know I Can't Be the Driver Sticker" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 15) IMG - Merch – Izzy MacArthur Loves Me Sticker -->
-      <figure class="slot sticker-3" id="sticker-3">
-        <img data-lazy-src="assets/img/izzyloves-sticker-glow.webp?v=1" alt="Izzy MacArthur Loves Me Sticker" loading="lazy" decoding="async">
-      </figure>
-
       <!-- 16) IMG:URL - Merch – Poster -->
       <figure class="slot poster" id="poster">
         <a href="https://shopizzymacarthur.com/products/limited-edition-signed-poster"
@@ -1992,12 +1471,6 @@
                alt="Limited Edition Signed Poster">
         </a>
       </figure>
-  
-      <!-- 17) IMG - Merch – Little Miss Misery Sticker -->
-      <figure class="slot sticker-2" id="sticker-2">
-        <img data-lazy-src="assets/img/little-miss-sticker-glow.webp?v=1" alt="Little Miss Misery Sticker" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- 18) IMG:URL - Merch – Buy Button -->
       <figure class="slot buy-button" id="buy-button">
         <a href="https://shopizzymacarthur.com"
@@ -2006,7 +1479,6 @@
                alt="Buy Merch Button">
         </a>
       </figure>
-  
       <!-- 19) GIF - MERCH – SIMS GIF -->
       <figure class="slot sims" id="sims">
         <img
@@ -2017,41 +1489,40 @@
           loading="lazy"
           decoding="async">
       </figure>
-  
-      <!-- 20) Merch – Selfie Poster -->
-      <figure class="slot selfie-poster" id="selfie-poster">
-        <img data-lazy-src="assets/img/selfie-poster.webp?v=1" alt="Selfie with Poster" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- ========================= -->
                <!-- LONDON -->
       <!-- ========================= --> 
+      <img loading="lazy" class="glow-star-7" src="assets/img/stars/glow-star.webp?v=3" /> 
+      <img loading="lazy" class="london-title" src="assets/img/london-title.webp?v=3" />
+      <img loading="lazy" class="glow-star-8" src="assets/img/stars/glow-star.webp?v=3" /> 
+      <img loading="lazy" class="hangout-poster" src="assets/img/hangout-poster.webp?v=3" />
+      <img loading="lazy" class="london-camcorder" src="assets/img/london-camcorder.webp?v=3" />
+      <img loading="lazy" class="rsvp-cloud" src="assets/img/rsvp-hangout.webp?v=3" />
+      <img loading="lazy" class="glow-star-9" src="assets/img/stars/glow-star.webp?v=3" /> 
+      <img loading="lazy" class="rsvp-arrow" src="assets/img/arrows/swirl-arrow-r?v=3" />
+      <img loading="lazy" class="blue-star-17" src="assets/img/stars/blue-star.webp?v=3" />
+      <img loading="lazy" class="london-matches" src="assets/img/london-matches.webp?v=3" />
+      <img loading="lazy" class="silver-star3-14" src="assets/img/stars/silver-star3.webp?v=3" />
+      <img loading="lazy" class="blue-star-18" src="assets/img/stars/blue-star.webp?v=3" />      
+      <img loading="lazy" class="silver-star3-15" src="assets/img/stars/silver-star3.webp?v=3" />
+      <img loading="lazy" class="silver-star3-16" src="assets/img/stars/silver-star3.webp?v=3" />
+      <img loading="lazy" class="glow-star-10" src="assets/img/stars/glow-star.webp?v=3" /> 
+      <img loading="lazy" class="hangout-tweet" src="assets/img/hangout-tweet.webp?v=3" />
+      <img loading="lazy" class="londoncard-v1" src="assets/img/london-card-v1.webp?v=3" />
+      <img loading="lazy" class="glow-star-11" src="assets/img/stars/glow-star.webp?v=3" /> 
+      <img loading="lazy" class="glow-star-12" src="assets/img/stars/glow-star.webp?v=3" /> 
+      <img loading="lazy" class="londoncard-arrow-1" src="assets/img/arrows/swirl-arrow-r.webp?v=3" />
+      <img loading="lazy" class="blue-star-19" src="assets/img/stars/blue-star.webp?v=3" />    
+      <img loading="lazy" class="londoncard-arrow-2" src="assets/img/arrows/swirl-arrow-l.webp?v=3" />
+      <img loading="lazy" class="silver-star3-17" src="assets/img/stars/silver-star3.webp?v=3" />
+      <img loading="lazy" class="blue-star-20" src="assets/img/stars/blue-star.webp?v=3" />   
+      <img loading="lazy" class="londoncard-front" src="assets/img/london-card-front-2.webp?v=3" />
+      <img loading="lazy" class="film-strip" src="assets/img/lfilm-hangout.webp?v=3" />
+      <img loading="lazy" class="londoncard-back" src="assets/img/london-card-back.webp?v=3" />
 
-      <!-- 1) IMG - Glow Star 7 -->
-      <figure class="slot glow-star-7" id="glow-star-7">
-        <img data-lazy-src="assets/img/stars/glow-star.webp?v=2" alt="Glow Star 7" loading="lazy" decoding="async">
-      </figure>
-      
-      <!-- 2) IMG - London – London Title -->
-      <figure class="slot london-title" id="london-title">
-        <img data-lazy-src="assets/img/london-title.webp?v=1" alt="London Title" loading="lazy" decoding="async">
-      </figure>
+      <p class="text-wrapper-28">(sorry, i had to)</p>
+      <p class="text-wrapper-29">london hang<br>trading<br>cards:<br>version one<br>vs.<br>the final version</p>
 
-      <!-- 3) IMG - Glow Star 8 -->
-      <figure class="slot glow-star-8" id="glow-star-8">
-        <img data-lazy-src="assets/img/stars/glow-star.webp?v=2" alt="Glow Star 8" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 4) IMG - London – Hangout Poster -->
-      <figure class="slot hangout-poster" id="hangout-poster">
-        <img data-lazy-src="assets/img/hangout-poster.webp?v=2" alt="London Hangout Poster" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 5) IMG - London – Camcorder -->
-      <figure class="slot london-camcorder" id="london-camcorder">
-        <img data-lazy-src="assets/img/camcorder-london.webp?v=2" alt="Camcorder Overlay" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- 6) VIMEO - London – Sleepwalking Live from London -->
       <figure class="slot slot--video london-live-1" id="london-live-1">
         <div class="video-box">
@@ -2063,8 +1534,7 @@
             title=”Sleepwalking Live from London">
           </iframe>
         </div>
-      </figure>
-  
+      </figure> 
       <!-- 7) VIMEO - London – Landmines Live from London -->
       <figure class="slot slot--video london-live-2" id="london-live-2">
         <div class="video-box">
@@ -2077,8 +1547,7 @@
           </iframe>
         </div>
       </figure>
-  
-      <!-- 8) YOUTUBE – London Vlog -->
+       <!-- 8) YOUTUBE – London Vlog -->
       <figure class="slot slot--youtube hangout-vlog" id="hangout-vlog">
         <div class="yt-box">
           <iframe
@@ -2089,23 +1558,7 @@
             allowfullscreen>
           </iframe>
         </div>
-      </figure>
-  
-      <!-- 9) IMG - London – Hangout Rsvp Cloud -->
-      <figure class="slot rsvp-cloud" id="rsvp-cloud">
-        <img data-lazy-src="assets/img/rsvp-hangout.webp?v=1" alt="Future Hangout RSVP" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 10) IMG - Glow Star 9 -->
-      <figure class="slot glow-star-9" id="glow-star-9">
-        <img data-lazy-src="assets/img/stars/glow-star.webp?v=2" alt="Glow Star 9" loading="lazy" decoding="async">
-      </figure>
-      
-      <!-- 11) IMG - London – Hangout RSVP Arrow -->
-      <figure class="slot rsvp-arrow" id="rsvp-arrow">
-        <img data-lazy-src="assets/img/arrows/swirl-arrow-r.webp?v=1" alt="Swirl Arrow 1" loading="lazy" decoding="async">
-      </figure>
-      
+      </figure>   
       <!-- 12) IMG:URL - London – Hangout RSVP Button -->
       <figure class="slot rsvp-button" id="rsvp-button">
         <a href="https://www.fvr.fan/izzymacarthur/hangoutrequests?tag=storyboard"
@@ -2114,35 +1567,12 @@
                alt="RSVP Button">
         </a>
       </figure>
-
-      <!-- 13) IMG - Blue Star 17 -->
-      <figure class="slot blue-star-17" id="blue-star-17">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=2" alt="Blue Star 17" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 14) IMG - London – Matchbook -->
-      <figure class="slot london-matches" id="london-matches">
-        <img data-lazy-src="assets/img/london-matches.webp?v=1" alt="London Matches" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 15) IMG - Silver Star 3 -->
-      <figure class="slot silver-star3-14" id="silver-star3-14">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=2" alt="Silver Star 3" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- 16) IMG:OVERLAY - About London -->
         <figure class="slot about-london" id="about-london"
           data-overlay-src="assets/img/about/about-london.webp?v=2"
           data-overlay-alt="About London (from my substack)">
           <img data-lazy-src="assets/img/london-about.webp?v=2" alt="London Composition Book" loading="lazy" decoding="async" style="cursor:pointer;">
         </figure>
-
-      
-      <!-- 17) IMG - Blue Star 18 -->
-      <figure class="slot blue-star-18" id="blue-star-18">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=2" alt="Blue Star 18" loading="lazy" decoding="async">
-      </figure>
-  
       <!-- 18) GIF - One Direction Gif -->
       <figure class="slot onedirection" id="onedirection">
         <img
@@ -2152,57 +1582,13 @@
           alt="one direction gif"
           loading="lazy"
           decoding="async">
-      </figure>
-  
+      </figure> 
       <!-- 19) TEXT – One Direction Text -->
       <!-- <figure class="slot slot--text onedirection-text" id="onedirection-text">
         <div class="text-box">
           (sorry, i had to)<br>
         </div>
       </figure> -->
-
-      <p class="text-wrapper-28">(sorry, i had to)</p>
-
-      <!-- 20) IMG - Silver Star 3 -->
-      <figure class="slot silver-star3-15" id="silver-star3-15">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=2" alt="Silver Star 3" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 21) IMG - Silver Star 3 -->
-      <figure class="slot silver-star3-16" id="silver-star3-16">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=2" alt="Silver Star 3" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 22) IMG - Glow Star 10 -->
-      <figure class="slot glow-star-10" id="glow-star-10">
-        <img data-lazy-src="assets/img/stars/glow-star.webp?v=2" alt="Glow Star" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 23) IMG - Tweet from Hangout -->
-      <figure class="slot hangout-tweet" id="hangout-tweet">
-        <img data-lazy-src="assets/img/hangout-tweet.webp?v=1" alt="Tweet from London Hangout" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 24) IMG - London – Card V1 -->
-      <figure class="slot londoncard-v1" id="londoncard-v1">
-        <img data-lazy-src="assets/img/london-card-v1.webp?v=1" alt="Version 1 of London Baseball Card Front" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 25) IMG - Glow Star 11 -->
-      <figure class="slot glow-star-11" id="glow-star-11">
-        <img data-lazy-src="assets/img/stars/glow-star.webp?v=2" alt="Glow Star" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 26) IMG - Glow Star 12 -->
-      <figure class="slot glow-star-12" id="glow-star-12">
-        <img data-lazy-src="assets/img/stars/glow-star.webp?v=2" alt="Glow Star" loading="lazy" decoding="async">
-      </figure>
-      
-      <!-- 27) IMG - London – Card Arrow -->
-      <figure class="slot londoncard-arrow-1" id="londoncard-arrow-1">
-        <img data-lazy-src="assets/img/arrows/swirl-arrow-r.webp?v=1" alt="Swirl Arrow 1" loading="lazy" decoding="async">
-      </figure>
-      
       <!-- 28) TEXT - London – Card Text -->
       <!-- <figure class="slot slot--text londoncard-text" id="londoncard-text">
         <div class="text-box">
@@ -2213,30 +1599,7 @@
           vs.<br>
           the final version
         </div>
-      </figure> -->
-
-      <p class="text-wrapper-29">london hang<br>trading<br>cards:<br>version one<br>vs.<br>the final version</p>
-
-      <!-- 29) IMG - Blue Star -->
-      <figure class="slot blue-star-19" id="blue-star-19">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=2" alt="Blue Star" loading="lazy" decoding="async">
-      </figure>
-      
-      <!-- 30) IMG - London – Card Arrow 2 -->
-      <figure class="slot londoncard-arrow-2" id="londoncard-arrow-2">
-        <img data-lazy-src="assets/img/arrows/swirl-arrow-l.webp?v=1" alt="Swirl Arrow 2" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 31) IMG - Silver Star 3 -->
-      <figure class="slot silver-star3-17" id="silver-star3-17">
-        <img data-lazy-src="assets/img/stars/silver-star3.webp?v=2" alt="Silver Star 3" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 32) IMG - Blue Star -->
-      <figure class="slot blue-star-20" id="blue-star-20">
-        <img data-lazy-src="assets/img/stars/blue-star.webp?v=2" alt="Blue Star" loading="lazy" decoding="async">
-      </figure>
-      
+      </figure> -->   
       <!-- 33) DESKTOP + MOBILE - MORE FROM LONDON -->
         <!-- a) LOTTIE:OVERLAY - MORE FROM LONDON -->
         <figure class="slot slot--lottie london-tv"
@@ -2253,38 +1616,27 @@
             </dotlottie-wc>
           </div>
         </figure>
-
        <!-- b) IMG:OVERLAY - Mobile MORE FROM LONDON -->
         <figure class="slot london-tv-mobile" id="london-tv-mobile"
           data-overlay-src="assets/img/london-tv-pics.webp?v=2"
           data-overlay-alt="More Pics from London overlay">
            <img data-lazy-src="assets/img/london-tv-mobile.webp?v=2" alt="London TV message" loading="lazy" decoding="async" style="cursor:pointer;">
         </figure>
-      
-      <!-- 34) IMG - London – Card Front -->
-      <figure class="slot londoncard-front" id="londoncard-front">
-        <img data-lazy-src="assets/img/london-card-front-2.webp?v=1" alt="London Baseball Card Front" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 35) IMG - London – Film -->
-      <figure class="slot film-strip" id="film-strip">
-        <img data-lazy-src="assets/img/film-hangout.webp?v=1" alt="London Film Strip" loading="lazy" decoding="async">
-      </figure>
-      
-      <!-- 36) IMG - London – Card Back -->
-      <figure class="slot londoncard-back" id="londoncard-back">
-        <img data-lazy-src="assets/img/london-card-back.webp?v=1" alt="London Baseball Card Back" loading="lazy" decoding="async">
-      </figure>
-  
+    
       <!-- ========================= -->
              <!-- WHAT'S NEXT -->
       <!-- ========================= --> 
-  
-      <!-- 1) IMG - NEXT - DREAMDOTNET -->
-      <figure class="slot dreamdotnet" id="dreamdotnet">
-        <img data-lazy-src="assets/img/dreamdotnet.webp?v=1" alt="dreamdotnet photo" loading="lazy" decoding="async">
-      </figure>
-      
+      <img loading="lazy" class="dreamdotnet" src="assets/img/dreamdotnet.webp?v=3" /> 
+      <img loading="lazy" class="villains" src="assets/img/villains.webp?v=3" />
+      <img loading="lazy" class="strawberry" src="assets/img/strawberry.webp?v=3" />
+      <img loading="lazy" class="glow-star-13" src="assets/img/stars/glow-star.webp?v=3" /> 
+      <img loading="lazy" class="next-title" src="assets/img/whatsnext-title.webp?v=3" />
+      <img loading="lazy" class="im-stamp" src="assets/img/im-stamp.webp?v=3" />   
+      <img loading="lazy" class="the-end" src="assets/img/the-end.webp?v=3" />
+      <img loading="lazy" class="the-end-mobile" src="assets/img/the-end-mobile.webp?v=3" />
+
+      <p class="text-wrapper-30">the best news ever is that<br>you can pre-save any of my<br>future releases RIGHT NOW!!!!<br>you’ll be the first to know<br>about new music, which i am<br>working very diligently on<br></p>
+   
       <!-- 2) VIMEO - NEXT - CHURCH -->
       <figure class="slot slot--video church-video" id="church-video">
         <div class="video-box">
@@ -2296,28 +1648,7 @@
             title="Church Singing Video">
           </iframe>
         </div>
-      </figure>
-  
-      <!-- 3) IMG - NEXT - VILLAINS -->
-      <figure class="slot villains" id="villains">
-        <img data-lazy-src="assets/img/villains.webp?v=1" alt="Villain Meme" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 4) IMG - NEXT - STRAWBERRY -->
-      <figure class="slot strawberry" id="strawberry">
-        <img data-lazy-src="assets/img/strawberry.webp?v=1" alt="Strawberry Picture" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 5) IMG - Blue Star -->
-      <figure class="slot glow-star-13" id="glow-star-13">
-        <img data-lazy-src="assets/img/stars/glow-star.webp?v=3" alt="Blue Star Sticker" loading="lazy" decoding="async">
-      </figure>
-
-      <!-- 6) IMG – NEXT – TITLE -->
-      <figure class="slot next-title" id="next-title">
-        <img data-lazy-src="assets/img/whatsnext-title.webp?v=3" alt="What's Next Angel TItle" loading="lazy" decoding="async">
-      </figure>
-  
+      </figure> 
       <!-- 7) IMG:URL - NEXT - JOIN POSTCARD BUTTON -->
       <figure class="slot join-postcard" id="join-postcard">
         <a href="https://www.fvr.fan/izzymacarthur/mailing-list"
@@ -2326,7 +1657,6 @@
                alt="Join Mailing List Card">
         </a>
       </figure>
-
       <!-- 8) TEXT - NEXT - PRE-SAVE TEXT -->
       <!-- <figure class="slot slot--text presave-text" id="presave-text">
         <div class="text-box">
@@ -2338,27 +1668,14 @@
           working very diligently on<br>
         </div>
       </figure> -->
-      <p class="text-wrapper-30">the best news ever is that<br>you can pre-save any of my<br>future releases RIGHT NOW!!!!<br>you’ll be the first to know<br>about new music, which i am<br>working very diligently on<br></p>
-  
-      <!-- 9) IMG:URL - NEXT - PRE-SAVE BUTTON -->
+        <!-- 9) IMG:URL - NEXT - PRE-SAVE BUTTON -->
       <figure class="slot presave-button" id="presave-button">
         <a href="https://fvr.fan/izzymacarthur/presave"
            target="_blank" rel="noopener noreferrer">
           <img data-lazy-src="assets/img/presave-button.webp?v=1"
                alt="Pre-save button">
         </a>
-      </figure>
-
-      <!-- 10) IMG - NEXT - Izzy MacArthur Stamp -->
-      <figure class="slot im-stamp" id="im-stamp">
-        <img data-lazy-src="assets/img/im-stamp.webp?v=1" alt="Izzy MacArthur Stamp" loading="lazy" decoding="async">
-      </figure>
-  
-      <!-- 11) IMG - Next – TY NOTE -->
-      <figure class="slot thankyou-note" id="thankyou-note">
-        <img data-lazy-src="assets/img/thankyou-note.webp?v=2" alt="Thank You Note" loading="lazy" decoding="async">
-      </figure>
-  
+      </figure> 
       <!-- 12) GIF - NEXT - LOCK LOGO -->
        <figure class="slot lock-logo" id="lock-logo">
         <img
@@ -2369,68 +1686,47 @@
           loading="lazy"
           decoding="async">
       </figure>
-
       <!-- 13) IMG - NEXT - SOCIAL SPARKLES -->
       <figure class="slot social-sparkles-2" id="social-sparkles-2">
         <img data-lazy-src="assets/img/social-sparkles.webp?v=2"
            alt="Social Sparkles" loading="lazy" decoding="async">
        </figure>
-  
-      <!-- 14) IMG - NEXT - INSTAGRAM -->
+        <!-- 14) IMG - NEXT - INSTAGRAM -->
       <figure class="slot instagram-2" id="instagram-2">
         <a href="https://www.instagram.com/izzyrmac/" target="_blank" rel="noopener noreferrer">
           <img data-lazy-src="assets/icons/instagram.svg?v=2" alt="Instagram" loading="lazy" decoding="async">
         </a>
       </figure>
-  
-      <!-- 15) IMG - NEXT - TIKTOK -->
+        <!-- 15) IMG - NEXT - TIKTOK -->
       <figure class="slot tiktok-2" id="tiktok-2">
         <a href="https://www.tiktok.com/@izzyrmac" target="_blank" rel="noopener noreferrer">
           <img data-lazy-src="assets/icons/tiktok.svg?v=2" alt="TikTok" loading="lazy" decoding="async">
         </a>
-      </figure>
-  
+      </figure>  
       <!-- 16) IMG - NEXT - TWITTER -->
       <figure class="slot twitter-2" id="twitter-2">
         <a href="https://x.com/izzymacarthur" target="_blank" rel="noopener noreferrer">
           <img data-lazy-src="assets/icons/twitter.svg?v=2" alt="Twitter" loading="lazy" decoding="async">
         </a>
-      </figure>
-  
+      </figure>  
       <!-- 17) IMG - NEXT - DISCORD -->
       <figure class="slot discord-2" id="discord-2">
         <a href="https://discord.gg/ThyMfuESqz" target="_blank" rel="noopener noreferrer">
           <img data-lazy-src="assets/icons/discord.svg?v=2" alt="Discord" loading="lazy" decoding="async">
         </a>
       </figure>
-  
-      <!-- 18) IMG - NEXT - SPOTIFY -->
+        <!-- 18) IMG - NEXT - SPOTIFY -->
       <figure class="slot spotify-2" id="spotify-2">
         <a href="https://open.spotify.com/artist/0Fs1CZdAsOEh1R93yK4UAE?si=DmfA6Y10Td2h7h4O5gCqBA" target="_blank" rel="noopener noreferrer">
           <img data-lazy-src="assets/icons/spotify.svg?v=2" alt="Spotify" loading="lazy" decoding="async">
         </a>
-      </figure>
-  
+      </figure>  
       <!-- 19) IMG - NEXT - APPLE MUSIC -->
       <figure class="slot apple-music-2" id="apple-music-2">
         <a href="https://music.apple.com/us/artist/izzy-macarthur/1741386936" target="_blank" rel="noopener noreferrer">
           <img data-lazy-src="assets/icons/apple-music.svg?v=2" alt="Apple Music" loading="lazy" decoding="async">
         </a>
-      </figure>
-
-      <!-- 20) IMG - THE END -->
-        <!-- a) IMG - DESKTOP -->
-        <figure class="slot the-end" id="the-end">
-          <img data-lazy-src="assets/img/the-end.webp?v=1"
-             alt="The End" loading="lazy" decoding="async">
-         </figure>
-
-        <!-- b) IMG - MOBILE -->
-        <figure class="slot the-end-mobile" id="the-end-mobile">
-          <img data-lazy-src="assets/img/the-end-mobile.webp?v=1"
-             alt="The End" loading="lazy" decoding="async">
-         </figure>
-      
+      </figure>      
       <!-- 21) IMG:URL - BACK BUTTON -->
       <figure class="slot back-button" id="back-button">
         <a href="https://izzymacarthur.com/home/"
