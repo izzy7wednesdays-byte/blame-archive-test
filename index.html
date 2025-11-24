@@ -157,15 +157,13 @@
       <!-- ========================= -->
             <!-- LIGHT SLEEPER -->
       <!-- ========================= -->
-
       <img loading="lazy" class="broken-cd" src="assets/img/broken-cd.webp?v=3" />
       <img loading="lazy" class="blue-star-1" src="assets/img/stars/blue-star.webp?v=3" />
       <img loading="lazy" class="blue-star-2" src="assets/img/stars/blue-star.webp?v=3" />
       <img loading="lazy" class="silver-star1-1" src="assets/img/stars/silver-star1.webp?v=3" />
-
+      <img data-modal="lightsleeper-modal" loading="lazy" src="assets/img/tv-message-1.webp"class="lightsleeper-about open-modal">
       <img loading="lazy" class="autumn-text" src="assets/img/autumn-text.webp?v=3" />
       <img loading="lazy" class="blame-it-notesapp" src="assets/img/blame-it-notesapp.webp?v=2">
-
       <img loading="lazy" class="silver-star1-2" src="assets/img/stars/silver-star1.webp?v=3" />
       
       <!-- 6) LOTTIE — Light Sleeper Title -->
@@ -195,6 +193,10 @@
       </figure>
   
       <!-- 8) DESKTOP/MOBILE - About Light Sleeper -->
+
+      <!-- Trigger image in the rail -->
+<img loading="lazy" class="about-lightsleeper open-modal" src="assets/img/tv-message-1.webp?v=2"
+  data-modal="about-lightsleeper-modal">
         <!-- a) GIF:OVERLAY -->
         <figure class="slot about-lightsleeper" id="about-lightsleeper"
           data-overlay-src="assets/img/about/about-lightsleeper.webp?v=1"
@@ -1737,6 +1739,16 @@
       </figure>
       
     </div>
+
+    <!-- MODAL -->
+    <div id="lightsleeper-modal" class="modal hidden">
+      <button class="close-modal"></button>
+      <div class="modal-content">
+        <img loading="lazy" src="assets/img/about/about-lightsleeper.webp?v=1" class="modal-image">
+      </div>
+    </div>
+
+    
   </div>
 
 <!-- Reusable overlay -->
@@ -1747,8 +1759,7 @@
       src="assets/ui/x.webp"
       alt="Close overlay"
     >
-
-    <!-- Scrollable area that holds the background image -->
+    <!-- Background Image Container -->
     <div class="ov-scroll">
       <img id="overlay-img" alt="">
     </div>
@@ -1768,7 +1779,7 @@
   <script src="https://player.vimeo.com/api/player.js"></script>
 
   <!-- Main JS bundle -->
-  <script src="js/main-12.js?v=12.0" defer></script>
+  <script src="js/main-13.js?v=12.0" defer></script>
   
 </body>
 </html>
