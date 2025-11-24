@@ -3,6 +3,10 @@
    ========================================= */
 
 /* Lock background scroll when modal is open */
+
+.open-modal:hover {
+   cursor: pointer; }
+
 body.modal-open {
   overflow: hidden;
 }
