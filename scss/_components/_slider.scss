@@ -1,1 +1,50 @@
-// TODO: fill this later
+/* ========= HORIZONTAL SLIDER ========= */
+
+body.desktop {
+  /* Scroll container: matches <div class="hwrap" id="hwrap"> */
+  .hwrap {
+    height: 100svh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    display: grid;
+    align-items: center;
+
+    /* Scrollbar styling */
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #2c2c32;
+      border-radius: 8px;
+    }
+    
+    > .rail {
+      background-color: #0d161d;
+      width: 31773px;
+      height: 847px;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      overflow-y: hidden;
+      width: 3751.2vh; 
+      
+      --group-left: -25svh;
+
+
+      > * {
+        position: absolute;
+        left: calc(var(--left) + var(--group-left));
+        bottom: 0;
+        transform: translate(var(--x), calc(-1 * var(--y)))
+          rotate(var(--rot));
+        transform-origin: center bottom;
+        z-index: var(--z);
+      }
+    }
+  }
+}
