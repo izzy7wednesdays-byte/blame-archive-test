@@ -125,10 +125,10 @@ body {
         top: 83.85vh;
         left: 4.2vh;
 
-        width: 150vh;
+        width: 200vh;
         height: 100vh;
-        top: 0vh;
-        left: 0vh;
+        top: -20vh;
+        left: -40vh;
 
        @include respond(xs) {
         }
