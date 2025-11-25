@@ -1,5 +1,3 @@
-/* ========= HORIZONTAL SLIDER ========= */
-
 body.desktop {
 
   .rail {
@@ -26,7 +24,6 @@ body.desktop {
       z-index: var(--z);
     }
 
-    /* optional scrollbar styling */
     &::-webkit-scrollbar {
       height: 8px;
     }
