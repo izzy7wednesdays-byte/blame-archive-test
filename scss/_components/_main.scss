@@ -157,9 +157,9 @@ body {
         width: 113.7vh; 
         height: 20.6vh;  
         top: 18vh;     
-        left: 16vh; 
+        left: 1vh; 
 
-        transform: scale(0.85);        /* ← this is the magic */
+        transform: scale(0.95);     
         transform-origin: center; 
 
         @include respond(xs) { 
@@ -319,14 +319,21 @@ body {
     
       
       .torn-note {
-        display: none;
-        --left: 18svh;
-        --scale: .54;
-        --y: -4svh;
-        --x: -2svh;
-        --rot: 0deg;
-        --z: 3;
-        pointer-events: none;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 113.7vh; 
+        height: 20.6vh;  
+        top: 18vh;     
+        left: 1vh; 
+
+        transform: scale(0.95);     
+        transform-origin: center; 
+
+        @include respond(xs) { 
+          display: none;
+        }
+      }
         
         @include respond(xs) {
           --left:43svh; 
