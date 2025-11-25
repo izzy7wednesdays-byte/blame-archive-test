@@ -530,7 +530,7 @@ body {
       }
       
       .about-lightsleeper { 
-        display: flex;
+        display: none;
         
         --left:210svh;
         --scale:.4;
@@ -815,6 +815,7 @@ body {
       }
       
       .about-exitwounds {
+        display:none;
         --left: 397svh;
         --scale: .31;
         --y: 45svh;
@@ -996,6 +997,7 @@ body {
       }
       
       .subscribe-button {
+        display:none;
         --left: 459svh;
         --scale: .14;
         --y: 10svh;
@@ -1317,6 +1319,7 @@ body {
       }
       
       .about-landmines {
+        display:none;
         --left: 643svh;
         --scale: .3;
         --y: 46svh;
@@ -1522,6 +1525,7 @@ body {
       }
       
       .about-misery {
+        display:none;
         --left: 739svh;
         --scale: .56;
         --y: 43svh;
@@ -1900,6 +1904,7 @@ body {
       }
       
       .about-sleepwalking {
+        display:none;
         --left: 1009svh;
         --scale: .35;
         --y: 1svh;
@@ -2655,6 +2660,7 @@ body {
       }
       
       .about-artwork {
+        display:none;
         --left: 1447svh;
         --scale: .34;
         --y: 2svh;
@@ -3402,6 +3408,7 @@ body {
       }
       
       .videos-about {
+        display:none;
         --left: 1805svh;
         --scale: .24;
         --y: 34svh;
@@ -3711,6 +3718,7 @@ body {
       }
       
       .about-matchbooks {
+        display:none;
         --left: 2032svh;
         --scale: .2;
         --y: 73svh;
@@ -3784,6 +3792,7 @@ body {
       }
       
       .buy-button {
+        display:none;
         --left: 2096svh;
         --scale: .15;
         --y: 52svh;
@@ -3989,6 +3998,7 @@ body {
       }
       
       .rsvp-button {
+        display:none;
         --left: 2237svh;
         --scale: .12;
         --y: 44svh;
@@ -4046,6 +4056,7 @@ body {
       }
       
       .about-london {
+        display:none;
         --left: 2278svh;
         --scale: .59;
         --y: 40svh;
