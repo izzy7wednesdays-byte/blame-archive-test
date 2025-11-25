@@ -146,6 +146,7 @@ body {
       }
     
       .izzymacarthur {
+        display: none;
         --left: 16svh;
         --scale: .15;
         --y: 62svh;
@@ -171,7 +172,8 @@ body {
           --z: 2;
         }
       }
-      
+
+    .social { display: none;}
         .social-sparkles {
           --left: 17svh;
           --scale: .15;
@@ -301,6 +303,7 @@ body {
       }
       
       .torn-note {
+        display: none;
         --left: 18svh;
         --scale: .54;
         --y: -4svh;
@@ -321,6 +324,7 @@ body {
       }
       
       .tracklist {
+        display: none;
         --left:100svh; 
         --scale:.38; 
         --y:57svh; 
@@ -341,6 +345,7 @@ body {
       }
       
       .the-scrapbook {
+        display: none;
         --left:65svh; 
         --scale:.4; 
         --y:15svh; 
@@ -361,6 +366,7 @@ body {
       }
       
       .lfg { 
+        display: none;
         --left:97svh; 
         --scale:.1; 
         --y:5svh; 
@@ -378,7 +384,7 @@ body {
         display:none;
         
         @include respond(xs) {
-          display:flex;
+          display: none;
           position:absolute;
           --left:27svh; 
           --scale:.04; 
@@ -391,6 +397,7 @@ body {
       }
         
         .pink-arrow { 
+          display: none;
           --left:123svh; 
           --scale:.09; 
           --y:5svh; 
@@ -412,6 +419,7 @@ body {
       
         // ========= LIGHT SLEEPER SECTION (slot classes) =========
       .broken-cd { 
+        display: none;
         --left:145svh; 
         --scale:.35; 
         --y:67svh;
@@ -421,6 +429,7 @@ body {
         pointer-events:none;
         
         @include respond(xs) {
+     
           --left:66svh; 
           --scale:.32; 
           --y:44svh; 
@@ -432,6 +441,7 @@ body {
       }
       
       .blue-star-1 { 
+        display: none;
         --left:185svh; 
         --scale:.06; 
         --y:85svh;
@@ -451,6 +461,7 @@ body {
       }
       
       .blue-star-2 {
+        display: none;
         --left:187svh;
         --scale:.13;
         --y:95svh;
