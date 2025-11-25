@@ -154,10 +154,13 @@ body {
         position: absolute;
         object-fit: cover;
         
-        width: 50vh; 
-        height: 26vh;  
+        width: 113.7vh; 
+        height: 20.6vh;  
         top: 18vh;     
         left: 16vh; 
+
+        transform: scale(0.85);        /* ← this is the magic */
+        transform-origin: center; 
 
         @include respond(xs) { 
           display: none;
