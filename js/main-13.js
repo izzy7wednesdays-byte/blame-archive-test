@@ -23,18 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  /* ===== 1. Horizontal scroll wheel behavior ===== */
-  const hwrap = document.getElementById("hwrap");
-  if (hwrap) {
-    hwrap.addEventListener("wheel", e => {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        hwrap.scrollLeft += e.deltaY;
-        e.preventDefault();
-      }
-    }, { passive: false });
-  }
-
-   /* ===== 1.2 Lazy-load Lotties (opt-in only) ===== */
+   /* ===== 1.2 Lazy-load Lotties ===== */
   (function initLazyLotties() {
     // If the browser is too old, just let Lotties load normally.
     if (!("IntersectionObserver" in window)) return;
