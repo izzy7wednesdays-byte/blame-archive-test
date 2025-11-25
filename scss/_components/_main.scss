@@ -73,16 +73,6 @@ body {
       max-width: initial;
     }
 
-    /* Slotless layout: position any direct .rail children using CSS vars */
-    & > .rail > * {
-      position: absolute;
-      left: calc(var(--left) + var(--group-left));
-      bottom: 0;
-      transform: translate(var(--x), calc(-1 * var(--y))) rotate(var(--rot));
-      transform-origin: center bottom;
-      z-index: var(--z);
-    }
-
 /* MEDIA: LOTTIE */
     dotlottie-wc.lottie {
       --lot-shrink: 0.85;
