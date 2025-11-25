@@ -15,23 +15,6 @@ body.desktop {
 
     --group-left: -25svh;
 
-    > * {
-      position: absolute;
-
-      left: calc(var(--left) + var(--group-left));
-
-      bottom: 0;
-
-      transform:
-        translate(var(--x), calc(-1 * var(--y)))
-        scale(var(--scale))
-        rotate(var(--rot));
-
-      transform-origin: center bottom;
-
-      z-index: var(--z);
-    }
-
     &::-webkit-scrollbar {
       height: 8px;
     }
