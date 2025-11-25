@@ -126,18 +126,35 @@ body {
           }
         }
      }   
-      .special-message {
-        --left: -33svh;
-        --scale: 1.05;
-        --y: 28svh;
-        --x: 0svh;
-        --rot: 0deg;
-        --z: 1;
+    //  .special-message {
+   //     --left: -33svh;
+   //     --scale: 1.05;
+   //     --y: 28svh;
+   //     --x: 0svh;
+   //     --rot: 0deg;
+   //     --z: 1;
         
-        @include respond(xs) {
-          display:none;
-        }
-      } 
+   //     @include respond(xs) {
+   //       display:none;
+   //     }
+  //    } 
+    .special-message {
+            position: absolute;
+            object-fit: cover;
+            width: 93px;
+            height: 121px;
+            top: 830px;
+            left: 42px;
+
+            width: 9.3vh;
+            height: 12.1vh;
+            top: 83.85vh;
+            left: 4.2vh;
+
+            width: 11vh;
+            height: 14.3vh;
+            top: 83vh;
+            left: 4.8vh;
       
       .special-message-mobile {
         display: none;
