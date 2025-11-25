@@ -153,30 +153,12 @@ body {
       .izzymacarthur {
         position: absolute;
         object-fit: cover;
-      
-        width: 1000px;
-        height: 121px;
-        top: 830px;
-        left: 42px;
+        
+        width: 20vh; 
+        height: 26vh;  
+        top: 18vh;     
+        left: 16vh; 
 
-        width: 100vh;
-        height: 12.1vh;
-        top: 83.85vh;
-        left: 80vh;
-
-        width: 210vh;
-        height: 100vh;
-        top: -40vh;
-        left: -60vh;
-
-        display: none;
-        --left: 16svh;
-        --scale: .15;
-        --y: 62svh;
-        --x: 8svh;
-        --rot: 0deg;
-        --z: 2;
-      
         @include respond(xs) { 
           display: none;
         }
