@@ -125,7 +125,10 @@ body {
         height: 14.3vh;
         top: 83vh;
         left: 4.8vh;
+
+       @include respond(xs) {
         }
+      }
       
       .special-message-mobile {
         display: none;
