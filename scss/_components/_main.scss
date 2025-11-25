@@ -680,6 +680,8 @@ body {
         @include respond(xs) {
           display: none;
         }
+      }
+        
       
       .play-lightsleeper-mobile { 
         display: none;
@@ -4717,6 +4719,6 @@ body {
           --scale:.05;
         }
       }
-        
+      
   }
 }
