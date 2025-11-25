@@ -317,7 +317,6 @@ body {
         }
       }
     
-      
       .torn-note {
         position: absolute;
         object-fit: cover;
@@ -338,16 +337,6 @@ body {
         }
       }
         
-        @include respond(xs) {
-          --left:43svh; 
-          --scale:.325; 
-          --y:66svh; 
-          --x:15svh; 
-          --rot:12deg; 
-          --z:4;
-          pointer-events: none;
-        }
-      }
       
       .tracklist {
         display: none;
