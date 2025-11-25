@@ -3755,6 +3755,7 @@ body {
       }
       
       .poster {
+        display: none;
         --left: 2077svh;
         --scale: .42;
         --y: 2svh;
@@ -4447,6 +4448,7 @@ body {
       }
       
       .next-title {
+        display: none;
         --left: 2456svh;
         --scale: .30;
         --y: 40svh;
@@ -4461,6 +4463,7 @@ body {
       }
       
       .join-postcard {
+        display: none;
         --left: 2455svh;
         --scale: .37;
         --y: 2svh;
@@ -4474,6 +4477,7 @@ body {
       }
       
       .text-wrapper-30 {
+        display: none;
         --left: 2496svh;
         --scale: .14;
         --y: 71svh;
@@ -4494,6 +4498,7 @@ body {
       }
       
       .presave-button {
+        display: none;
         --left: 2512svh;
         --scale: .30;
         --y: 37svh;
@@ -4507,6 +4512,7 @@ body {
       }
       
       .im-stamp {
+        display: none;
         --left: 2525svh;
         --scale: .25;
         --y: 2svh;
@@ -4521,6 +4527,7 @@ body {
       }
       
       .thankyou-note {
+        display: none;
         --left: 2551svh;
         --scale: .9;
         --y: 5svh;
@@ -4535,6 +4542,7 @@ body {
       }
       
       .lock-logo {
+        display: none;
         --left: 2615svh;
         --scale: .85;
         --y: 13svh;
@@ -4549,7 +4557,8 @@ body {
           --y:15svh;
         }
       }
-      
+
+    .social-2 {display: none}
       .social-sparkles-2 {
         --left: 2620svh;
         --scale: .15;
@@ -4662,7 +4671,7 @@ body {
       }
       
       .the-end {
-        display: flex;
+       display: none;
         
         --left: 2690svh;
         --scale: .3;
@@ -4694,6 +4703,7 @@ body {
       }
       
       .back-button {
+        display: none;
         --left: 2685svh;
         --scale: .17;
         --y: 15svh;
