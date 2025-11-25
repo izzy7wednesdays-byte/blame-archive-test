@@ -1,26 +1,34 @@
 body.desktop {
 
-  .rail {
-    height: 100svh;
-    overflow-x: auto;
+  // === MAIN HORIZONTAL BAND  ===
+  > .rail {
+    width: 3751.2vh;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
     overflow-y: hidden;
-    white-space: nowrap;
+
+    overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    display: flex;
-
-    position: relative;
-
-    width: 3751.2vh;
 
     --group-left: -25svh;
 
     > * {
       position: absolute;
+
       left: calc(var(--left) + var(--group-left));
+
       bottom: 0;
-      transform: translate(var(--x), calc(-1 * var(--y))) rotate(var(--rot));
+
+      transform:
+        translate(var(--x), calc(-1 * var(--y)))
+        scale(var(--scale))
+        rotate(var(--rot));
+
       transform-origin: center bottom;
+
       z-index: var(--z);
     }
 
@@ -31,6 +39,19 @@ body.desktop {
     &::-webkit-scrollbar-thumb {
       background: #2c2c32;
       border-radius: 8px;
+    }
+  }
+  .pusher {
+    width: 1px;
+    height: 1px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+
+    left: calc(3148vh * 1000 / 847);
+
+    @include respond(xs) {
+      left: 3673vh;
     }
   }
 }
