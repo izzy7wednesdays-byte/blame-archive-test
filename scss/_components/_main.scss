@@ -322,12 +322,15 @@ body {
         position: absolute;
         object-fit: cover;
         
-        width: 113.7vh; 
-        height: 20.6vh;  
-        top: 18vh;     
-        left: 1vh; 
+        width: 989px;
+        height: 979px;
+        
+        width: 131vh; 
+        height: 94.9vh;  
+        top: 50vh;     
+        left: 0vh; 
 
-        transform: scale(0.95);     
+        transform: scale(1);     
         transform-origin: center; 
 
         @include respond(xs) { 
