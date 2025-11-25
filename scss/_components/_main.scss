@@ -123,14 +123,15 @@ body {
         width: 100vh;
         height: 12.1vh;
         top: 83.85vh;
-        left: 4.2vh;
+        left: 80vh;
 
         width: 210vh;
         height: 100vh;
-        top: -20vh;
-        left: -80vh;
+        top: -40vh;
+        left: -60vh;
 
        @include respond(xs) {
+         display:none;
         }
       }
       
@@ -150,6 +151,24 @@ body {
       }
     
       .izzymacarthur {
+        position: absolute;
+        object-fit: cover;
+      
+        width: 1000px;
+        height: 121px;
+        top: 830px;
+        left: 42px;
+
+        width: 100vh;
+        height: 12.1vh;
+        top: 83.85vh;
+        left: 80vh;
+
+        width: 210vh;
+        height: 100vh;
+        top: -40vh;
+        left: -60vh;
+
         display: none;
         --left: 16svh;
         --scale: .15;
