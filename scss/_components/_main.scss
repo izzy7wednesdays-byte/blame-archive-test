@@ -657,6 +657,7 @@ body {
       }
 
       .play-lightsleeper-desktop {
+        display:none;
         --left:262svh;
         --scale:.35;
         --y:32svh;
@@ -763,6 +764,7 @@ body {
       }
       
       .play-exitwounds {
+         display:none;
         --left: 362svh;
         --scale: .25;
         --y: 69svh;
@@ -1013,6 +1015,7 @@ body {
       }
       
       .exitwounds-substackflier-2 {
+         display:none;
         --left: 453svh;
         --scale: .76;
         --y: 30svh;
@@ -1414,6 +1417,7 @@ body {
       }
       
       .play-landmines {
+         display:none;
         --left: 686svh;
         --scale: .28;
         --y: 1svh;
@@ -1670,6 +1674,7 @@ body {
       }
       
       .play-misery {
+         display:none;
         --left: 861svh;
         --scale: .22;
         --y: 33svh;
@@ -1784,6 +1789,7 @@ body {
       }
       
       .play-sleepwalking {
+         display:none;
         --left: 905svh;
         --scale: .2;
         --y: 34svh;
@@ -3407,7 +3413,7 @@ body {
         }
       }
       
-      .videos-about {
+      .about-videos {
         display:none;
         --left: 1805svh;
         --scale: .24;
@@ -3717,7 +3723,7 @@ body {
         }
       }
       
-      .about-matchbooks {
+      .about-matches {
         display:none;
         --left: 2032svh;
         --scale: .2;
