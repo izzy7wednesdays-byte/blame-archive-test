@@ -177,8 +177,9 @@ body {
         }
       }
 
-    .social { display: none;}
-        .social-sparkles {
+    .social, .social-sparkle-l, .social-sparkle-r, .text-wrap-31 { display: none;}
+        .social-sparkle-l {
+          display:none;
           --left: 17svh;
           --scale: .15;
           --y: 50svh;
@@ -199,6 +200,7 @@ body {
         }
         
       .instagram {
+        display:none;
         --left: 28svh;
         --scale: .04;
         --y: 55svh;
@@ -217,6 +219,7 @@ body {
       }
         
       .tiktok {
+        display:none;
         --left: 34svh;
         --scale: .04;
         --y: 55svh;
@@ -235,6 +238,7 @@ body {
       }
         
       .twitter {
+        display:none;
         --left: 40svh;
         --scale: .04;
         --y: 55svh;
@@ -253,6 +257,7 @@ body {
       }
         
       .discord {
+        display:none;
         --left: 46svh;
         --scale: .04;
         --y: 55svh;
@@ -271,6 +276,7 @@ body {
       }
         
       .spotify {
+        display:none;
         --left: 53svh;
         --scale: .04;
         --y: 55svh;
@@ -306,6 +312,7 @@ body {
           --z: 2;
         }
       }
+    
       
       .torn-note {
         display: none;
