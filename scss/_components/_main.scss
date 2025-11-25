@@ -340,16 +340,16 @@ body {
       .tracklist {
         position: absolute;
         object-fit: cover;
-        
+        		
         width: 989px;
         height: 979px;
-        
+        		
         width: 150vh;
         height: 150vh;
-        top: 1vh;
-        left: -53vh;
-        
-        transform: scale(.34);
+        top: -50vh;
+        left: 75vh;
+        		
+        transform: scale(0.34);
         transform-origin: center;
         
         @include respond(xs) {
