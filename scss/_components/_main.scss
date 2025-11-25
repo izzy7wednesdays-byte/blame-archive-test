@@ -171,7 +171,9 @@ body {
           --z: 1;
         }
       }
-        
+
+    .hide{
+      display: none;
       .izzymacarthur {
         --left: 16svh;
         --scale: .15;
@@ -4719,6 +4721,7 @@ body {
           --scale:.05;
         }
       }
+    } //hide
       
   }
 }
