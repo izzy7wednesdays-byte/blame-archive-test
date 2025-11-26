@@ -10,7 +10,7 @@ body {
     height: 100vh;
     height: 100svh;
     overflow: initial;
-    z-index: var(z);
+    z-index: 0;
     
     .youtube-iframe, .vimeo-iframe {
       width: 100%;
