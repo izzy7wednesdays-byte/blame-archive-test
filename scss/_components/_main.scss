@@ -550,6 +550,7 @@ body {
     .about-lightsleeper { 
       position: absolute;
       object-fit: cover;
+      pointer-events: auto;
       
       width: 300px;
       height: 300px;
@@ -716,6 +717,7 @@ body {
     }
       
     .text-wrapper { 
+      pointer-events: none;
       position: absolute;
       font-weight: 400;
       color: #4C58E9;
@@ -820,6 +822,7 @@ body {
     .lightsleeper-voicememo {
       position: absolute;
       object-fit: cover;
+      pointer-events: auto;
       
       width: 554px;
       height: 547px;
@@ -831,6 +834,7 @@ body {
       height: 73.92vh;
       top: 15vh;
       left: 289vh;
+      z-index: 2;
       
       transform: scale(.4) rotate(0deg);
       transform-origin: center;
@@ -839,7 +843,7 @@ body {
       }
     }
       
-      // ========= EXIT WOUNDS SECTION (slot classes) =========
+// ========= EXIT WOUNDS SECTION (slot classes) =========
       
     .exitwounds-lyricvideo {
       position: absolute;
@@ -855,6 +859,7 @@ body {
       height: 145.95vh;
       top: -55vh;
       left: 193vh;
+      z-index: 3;
       
       transform: scale(.20) rotate(0deg);
       transform-origin: center;
@@ -910,6 +915,7 @@ body {
     .play-exitwounds {
       position: absolute;
       object-fit: cover;
+      pointer-events: auto;
       
       width: 592px;
       height: 440px;
@@ -918,6 +924,7 @@ body {
       height: 59.73vh;
       top: -12vh;
       left: 335vh;
+      z-index:3;
               
       transform: scale(0.45) rotate(13deg);
       transform-origin: center;
@@ -976,6 +983,7 @@ body {
     .about-exitwounds {
       position: absolute;
       object-fit: cover;
+      pointer-events: auto;
       
       width: 591px;
       height: 881px;
@@ -984,6 +992,7 @@ body {
       height: 119.05vh;
       top: -20vh;
       left: 372vh;
+      z-index: 2;
               
       transform: scale(0.30) rotate(-10deg);
       transform-origin: center;
@@ -995,6 +1004,7 @@ body {
     .exitwounds-animation {
       position: absolute;
       object-fit: cover;
+      pointer-events: auto;
       
       width: 2160px;
       height: 1080px;
@@ -1006,6 +1016,7 @@ body {
       height: 145.95vh;
       top: -10vh;
       left: 300vh;
+      z-index: 2;
               
       transform: scale(0.20) rotate(0deg);
       transform-origin: center;
@@ -1038,6 +1049,7 @@ body {
     .exitwounds-voicememo {
       position: absolute;
       object-fit: cover;
+      pointer-events: auto;
       
       width: 366px;
       height: 434px;
@@ -1049,6 +1061,7 @@ body {
       height: 58.65vh;
       top: 56vh;
       left: 379vh;
+      z-index: 2;
               
       transform: scale(0.38) rotate(0deg);
       transform-origin: center;
@@ -1160,6 +1173,7 @@ body {
     .scorpio-constellation {
       position: absolute;
       object-fit: cover;
+      pointer-events: none;
       
       width: 678px;
       height: 594px;
@@ -1225,6 +1239,7 @@ body {
     .subscribe-button {
       position: absolute;
       object-fit: cover;
+      pointer-events: auto;
       
       width: 386px;
       height: 176px;
@@ -1233,6 +1248,7 @@ body {
       height: 23.78vh;
       top: 70vh;
       left: 490vh;
+      z-index: 3;
               
       transform: scale(0.5) rotate(-2deg);
       transform-origin: center;
@@ -1244,6 +1260,7 @@ body {
     .exitwounds-substackflier {
       position: absolute;
       object-fit: cover;
+      pointer-events: auto;
       
       width: 860px;
       height: 1112px;
@@ -1252,6 +1269,7 @@ body {
       height: 150.27vh;
       top: -37vh;
       left: 480vh;
+      z-index: 1;
               
       transform: scale(0.50) rotate(9deg);
       transform-origin: center;
