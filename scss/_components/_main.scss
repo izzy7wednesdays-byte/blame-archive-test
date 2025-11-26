@@ -124,10 +124,10 @@ body {
 
         width: 205vh;
         height: 100vh;
-        top: -34vh;
-        left: -65vh;
+        top: -35vh;
+        left: -70vh;
 
-        transform: scale(0.95);     
+        transform: scale(0.86);     
         transform-origin: center; 
 
        @include respond(xs) {
@@ -178,9 +178,9 @@ body {
         width: 113.7vh; 
         height: 20.6vh;  
         top: 18vh;     
-        left: 1vh; 
+        left: -10vh; 
 
-        transform: scale(0.95);     
+        transform: scale(0.75);     
         transform-origin: center; 
 
         @include respond(xs) { 
@@ -382,9 +382,9 @@ body {
         width: 202vh;
         height: 187.4vh;
         top: -70vh;
-        left: 47vh;
+        left: 27vh;
         		
-        transform: scale(0.25) rotate(7deg);
+        transform: scale(0.23) rotate(7deg);
         transform-origin: center center;
         
         @include respond(xs) {
@@ -404,7 +404,7 @@ body {
         width: 106.4vh;
         height: 48.8vh;
         top: 37vh;
-        left: 35vh;
+        left: 30vh;
         		
         transform: scale(0.75) rotate(0deg);
         transform-origin: center;
@@ -484,7 +484,7 @@ body {
         width: 73.03vh;
         height: 76.19vh;
         top: -14vh;
-        left: 160vh;
+        left: 140vh;
 
         transform: scale(.50) rotate(87deg);
         transform-origin: center;
@@ -506,7 +506,7 @@ body {
         width: 20.81vh;
         height: 19.86vh;
         top: 5vh;
-        left: 212vh;
+        left: 190vh;
 
         transform: scale(0.38) rotate(15deg);
         transform-origin: center;
@@ -528,7 +528,7 @@ body {
         width: 20.81vh;
         height: 19.86vh;
         top: -7vh;
-        left: 225vh;
+        left: 205vh;
 
         transform: scale(0.70) rotate(20deg);
         transform-origin: center;
@@ -551,9 +551,9 @@ body {
         width: 28.82vh;
         height: 28.38vh;
         top: 15vh;
-        left: 227vh;
+        left: 207vh;
         
-        transform: scale(.8) rotate(15deg);
+        transform: scale(.8) rotate(14deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -596,7 +596,7 @@ body {
         width: 259.46vh;
         height: 145.95vh;
         top: 10vh;
-        left: 70vh;
+        left: 50vh;
         
         transform: scale(.20) rotate(0deg);
         transform-origin: center;
@@ -621,7 +621,7 @@ body {
         width: 40.54vh;
         height: 40.54vh;
         top: 0vh;
-        left: 247vh;
+        left: 227vh;
         
         transform: scale(1.05) rotate(-4deg);
         transform-origin: center;
@@ -676,7 +676,7 @@ body {
         width: 88.11vh;
         height: 73.78vh;
         top: 22vh;
-        left: 216vh;
+        left: 196vh;
         
         transform: scale(.4) rotate(7deg);
         transform-origin: center;
@@ -701,7 +701,7 @@ body {
         width: 95.95vh;
         height:44.59vh;
         top: 63vh;
-        left: 208vh;
+        left: 188vh;
         
         transform: scale(.56) rotate(-3deg);
         transform-origin: center;
@@ -725,7 +725,7 @@ body {
         width: 145.95vh;
         height: 259.46vh;
         top: -108vh;
-        left: 229vh;
+        left: 209vh;
         
         transform: scale(.16) rotate(0deg);
         transform-origin: center;
@@ -749,8 +749,8 @@ body {
         
         width: 28.82vh;
         height: 28.38vh;
-        top: 50vh;
-        left: 270vh;
+        top: 60vh;
+        left: 250vh;
         
         transform: scale(0.80) rotate(10deg);
         transform-origin: center;
@@ -775,7 +775,7 @@ body {
         width: 27.027vh;
         height: 33.78vh;
         top: 0vh;
-        left: 313vh;
+        left: 293vh;
         
         transform: scale(0.80) rotate(0deg);
         transform-origin: center;
@@ -855,7 +855,7 @@ body {
         width: 259.46vh;
         height: 145.95vh;
         top: 10vh;
-        left: 183vh;
+        left: 163vh;
         
         transform: scale(.20) rotate(0deg);
         transform-origin: center;
@@ -880,7 +880,7 @@ body {
         width: 74.86vh;
         height: 73.92vh;
         top: 15vh;
-        left: 295vh;
+        left: 308vh;
         
         transform: scale(.4) rotate(0deg);
         transform-origin: center;
@@ -907,8 +907,8 @@ body {
         
         width: 259.46vh;
         height: 145.95vh;
-        top: 10vh;
-        left: 0vh;
+        top: -55vh;
+        left: 218vh;
         
         transform: scale(.20) rotate(0deg);
         transform-origin: center;
@@ -932,10 +932,10 @@ body {
         
         width: 35.68vh;
         height: 57.43vh;
-        top: 0vh;
-        left: 0vh;
+        top: 25vh;
+        left: 360vh;
         
-        transform: scale(1) rotate(0deg);
+        transform: scale(.52) rotate(195deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -957,10 +957,10 @@ body {
         
         width: 115.81vh;
         height: 57.97vh;
-        top: 400vh;
-        left: 0vh;
+        top: 55vh;
+        left: 300vh;
         
-        transform: scale(1) rotate(0deg);
+        transform: scale(0.56) rotate(-10deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -978,10 +978,10 @@ body {
         
         width: 80vh;
         height: 59.73vh;
-        top: 400vh;
-        left: 0vh;
+        top: -12vh;
+        left: 367vh;
                 
-        transform: scale(1) rotate(0deg);
+        transform: scale(0.45) rotate(13deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -1010,10 +1010,10 @@ body {
         
         width: 93.51vh;
         height: 99.46vh;
-        top: 400vh;
-        left: 0vh;
+        top: 10vh;
+        left: 365vh;
                 
-        transform: scale(1) rotate(0deg);
+        transform: scale(0.40) rotate(20deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1032,10 +1032,10 @@ body {
         
         width: 79.86vh;
         height: 119.05vh;
-        top: 400vh;
-        left: 0vh;
+        top: 0vh;
+        left: 415vh;
                 
-        transform: scale(1) rotate(0deg);
+        transform: scale(0.30) rotate(-10deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1054,6 +1054,7 @@ body {
       }
       
       .exitwounds-animation-mobile {
+        display:none;
         position: absolute;
         object-fit: cover;
         
