@@ -1047,7 +1047,22 @@ body {
       }
       
       .exitwounds-animation {
-        display: none;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 2160px;
+        height: 1080px;
+        
+        width: 291.89vh;
+        height: 145.95vh;
+        
+        width: 291.89vh;
+        height: 145.95vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display:none;
