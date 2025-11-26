@@ -567,17 +567,17 @@ body {
         position: absolute;
         object-fit: cover;
         
-        width: 552px;
-        height: 576px;
+        width: 570px;
+        height: 4411px;
         
-        width: 74.59vh;
-        height: 77.84vh;
-
-        width: 73.03vh;
-        height: 76.19vh;
-        top: -14vh;
-        left: 140vh;
-
+        width: 77.03vh;
+        height: 598.08vh;
+        
+        width: 77.03vh;
+        height: 598.08vh;
+        top: 0vh;
+        left: 0vh;
+        
         transform: scale(1) rotate(0deg);
         transform-origin: center;
       
@@ -817,7 +817,22 @@ body {
       }
 
       .play-lightsleeper-desktop {
-        display:none;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1114px;
+        height: 1114px;
+        
+        width: 150.54vh;
+        height: 150.54vh;
+        
+        width: 150.54vh;
+        height: 150.54vh;
+        top: 0vh;
+        left: 393vh;
+        
+        transform: scale(0.80) rotate(0deg);
+        transform-origin: center;
         
         @include respond(xs) {
           display: none;
