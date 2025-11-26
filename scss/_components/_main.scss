@@ -1372,46 +1372,70 @@ body {
       }
       
       .landmines-bts-clip {
-        --left: 532svh;
-        --scale: .3;
-        --ar: 16/9;
-        --y: 65svh;
-        --x: 0svh;
-        --rot: 0deg;
-        --z-index: 40;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: auto;
+        
+        width: 1920px;
+        height: 1080px;
+        
+        width: 259.46vh;
+        height: 145.95vh;
+        
+        width: 259.46vh;
+        height: 145.95vh;
+        top: 0vh;
+        left: 400vh;
+        z-index: auto;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
          @include respond(xs) {
-          --left:375svh;
-          --scale:0.25;
         }
       }
       
       .landmines-voicememo {
-        --left: 523svh;
-        --scale: .26;
-        --y: 37svh;
-        --x: 5svh;
-        --rot: 0deg;
-        z-index: 30;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: auto;
+        
+        width: 1920px;
+        height: 1080px;
+        
+        width: 259.46vh;
+        height: 145.95vh;
+        
+        width: 259.46vh;
+        height: 145.95vh;
+        top: 0vh;
+        left: 400vh;
+        z-index: auto;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:365svh;
-          --scale:0.24;
+
         }  
       }
       
       .blue-star-4 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
-        width: 154;
-        height: 147;
-        --left: 517svh;
-        --scale: .04;
-        --y: 41svh;
-        --x: 5svh;
-        --rot: 6deg;
-        z-index: 28;
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        top: 0vh;
+        left: 400vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
          @include respond(xs) {
            display:none;
@@ -1419,29 +1443,43 @@ body {
       }
       
       .katstratford-car {
-        --left: 518svh;
-        --scale: .21;
-        --y: 13svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 30;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
         
+        width: 540px;
+        height: 288px;
+        
+        width: 72.97vh;
+        height: 38.92vh;
+        top: 0vh;
+        left: 400vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+        
         @include respond(xs) {
-          --left:363svh;
-          --scale:0.16;
           z-index:5;
         }
       }
       
       .vocals-landmines-1 {
-        --left: 568svh;
-        --scale: .35;
-        --ar: 9/16;
-        --y: 0svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 37;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: auto;
+        
+        width: 1080px;
+        height: 1920px;
+        
+        width: 145.95vh;
+        height: 259.45vh
+        top: 0vh;
+        left: 400vh;
+        z-index: auto;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:405svh;
@@ -1449,19 +1487,7 @@ body {
       }
       
       .text-wrapper-6 {
-        --left: 549svh;
-        --scale: .18;
-        --y: 21svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 38;
-        pointer-events: none;
-      
-        --ff: "Manic";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: left;
-        --text-color: #4C58E9;
+        dispaly: none;
       
         @include respond(xs) {
           display:none;
@@ -1469,49 +1495,64 @@ body {
       }
       
       .october-lane {
-        --left: 566svh;
-        --scale: .25;
-        --y: -4svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 38;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 440px;
+        height: 1000px;
+        
+        width: 0vh;
+        height: 0vh;
+        top: vh;
+        left: vh;
+        z-index: 6;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
-        @include respond(xs) {
-          --left:390svh;
-          --y: -2svh;
-          z-index: 6;    
+        @include respond(xs) {   
         }  
       }
       
       .landmines-license {
-        --left: 590svh;
-        --scale: .29;
-        --y: 65svh;
-        --x: 0svh;
-        --rot: -8deg;
-        z-index: 40;
-        pointer-events: none;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none, auto;
+        
+        width: 860px;
+        height: 502px;
+        
+        width: 116.21vh;
+        height: 67.84vh;
+        top: vh;
+        left: vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
         @include respond(xs) {
-          --left:428svh;
-          --scale:.24;
+
         }    
       }
       
       .silver-star3-4 {
-position: absolute;
-object-fit: cover;
-
-width: 165px;
-height: 160px;
-        --left: 580svh;
-        --scale: .06;
-        --y: 57svh;
-        --x: 0svh;
-        --rot: 9deg;
-        z-index: 41;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 165px;
+        height: 160px;
+        
+        width: 22.30vh;
+        height: 21.52vh;
+        top: vh;
+        left: vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
         @include respond(xs) {
           display:none!important;
@@ -1521,16 +1562,19 @@ height: 160px;
       .blue-star-5 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        --left: 638svh;
-        --scale: .07;
-        --y: 60svh;
-        --x: 0svh;
-        --rot: -5deg;
-        z-index: 420;
         pointer-events: none;
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display:none;
@@ -1538,30 +1582,44 @@ height: 160px;
       }
       
       .landmines-title {
-        display: flex!important;
-        --left: 578svh;
-        --scale: .17;
-        --y: 38svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 30;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 2249px;
+        height: 550px;
+        
+        width: 303.92vh;
+        height: 74.32vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display:none !important;
-          --left: 425svh;
-          --scale:.12;
-          --y:42svh;
         }     
       }
       
       .landmines-title-mobile {
           display: none!important;
-          --left: 420svh;
-          --scale:.13;
-          --y:41svh;
-          z-index: 30;
+          position: absolute;
+          object-fit: cover;
           pointer-events: none;
+          
+          width: 992px;
+          height: 229px;
+          
+          width: 134.05vh;
+          height: 30.95vh;
+          top: 0vh;
+          left: 0vh;
+          z-index: 0;
+                  
+          transform: scale(1) rotate(0deg);
+          transform-origin: center;
       
           @include respond(xs) {
             display: flex!important;
@@ -1570,12 +1628,24 @@ height: 160px;
       }
       
       .landmines-lyricvideo {
-        --left: 590svh;
-        --scale: .38;
-        --y: 3svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 19;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: auto;
+        
+        width: 1920px;
+        height: 1080px;
+        
+        width: 259.46vh;
+        height: 145.95vh;
+        
+        width: 259.46vh;
+        height: 145.95vh;
+        top: 10vh;
+        left: 400vh;
+        z-index: 3;
+        
+        transform: scale(.20) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 428svh;
@@ -1605,13 +1675,21 @@ height: 160px;
       }
       
       .about-landmines {
-        display:none;
-        --left: 643svh;
-        --scale: .3;
-        --y: 46svh;
-        --x: 10svh;
-        --rot: -25deg;
-        z-index: 30;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: auto;
+        
+        width: 716px
+        height: 1075px;
+        
+        width: 96.76vh;
+        height: 145.27vh
+        top: 0vh;
+        left: 400vh;
+        z-index: auto;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 476svh;
@@ -1621,13 +1699,21 @@ height: 160px;
       }
       
       .landmines-og-guitar {
-        --left: 650svh;
-        --scale: .38;
-        --ar: 9/16;
-        --y: 9svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 25;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: auto;
+        
+        width: 1920px;
+        width: 1080px;
+        
+        width: 259.45vh;
+        height: 145.95vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 478svh;
@@ -1657,13 +1743,21 @@ height: 160px;
       }
       
       .landmines-reaction {
-        --left: 670svh;
-        --scale: .42;
-        --ar: 9/16;
-        --y: 55svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 42;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: auto;
+        
+        width: 1080px;
+        height: 1920px;
+        
+        width: 145.95vh;
+        height: 259.45vh
+        top: 0vh;
+        left: 400vh;
+        z-index: auto;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 508svh; 
@@ -1673,37 +1767,41 @@ height: 160px;
       .blue-star-6 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        
-        --left: 678svh;
-        --scale: .04;
-        --y: 49svh;
-        --x: 0svh;
-        --rot: 4deg;
-        z-index: 420;
         pointer-events: none;
-      
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        top: 0vh;
+        left: 450vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+        
         @include respond(xs) {
-          --left: 520svh; 
-          --scale: 0.06;
+
         }  
       }
       
       .blue-star-7 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        --left: 685svh;
-        --scale: .07;
-        --y: 29svh;
-        --x: 0svh;
-        --rot: -30deg !important;
-        z-index: 420;
         pointer-events: none;
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        top: 0vh;
+        left: 450vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 515svh; 
@@ -1711,26 +1809,42 @@ height: 160px;
       }
       
       .play-landmines {
-         display:none;
-        --left: 686svh;
-        --scale: .28;
-        --y: 1svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 19;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: auto;
+        
+        width: 630px;
+        height: 660px;
+        
+        width: 85.14h;
+        height: 89.19vh;
+        top: 0vh;
+        left: 450vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 514svh; 
         }  
       }
       
       .landmines-session-voicememos {
-        --left: 685svh;
-        --scale: .31;
-        --y: 27svh;
-        --x: 10svh;
-        --rot: 7deg;
-        z-index: 21;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: auto;
+        
+        width: 427px;
+        height: 509px;
+        
+        width: 57.70px;
+        height: 68.78px;
+        top: 0vh;
+        left: 650vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 525svh; 
@@ -1738,13 +1852,21 @@ height: 160px;
       }
       
       .enchanted-bridge {
-        --left: 707svh;
-        --scale: .17;
-        --y: 2svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 18;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 604px;
+        height: 256px;
+        
+        width: 81.62h;
+        height: 34.60vh;
+        top: 0vh;
+        left: 450vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 532svh; 
