@@ -86,7 +86,7 @@ body {
           }
         }
      }   
-.text-wrapper-4, .text-wrapper-5, .text-wrapper-6, .text-wrapper-7, .text-wrapper-8,.text-wrapper-9,.text-wrapper-10,.text-wrapper-11,.text-wrapper-12,.text-wrapper-13,.text-wrapper-14,.text-wrapper-15,.text-wrapper-16,.text-wrapper-17,.text-wrapper-18,.text-wrapper-19,.text-wrapper-20,.text-wrapper-21,.text-wrapper-22,.text-wrapper-23,.text-wrapper-24,.text-wrapper-25,.text-wrapper-26,.text-wrapper-27,.text-wrapper-28,.text-wrapper-29,.text-wrapper-30,.text-wrapper-31 { display: none;}
+ .text-wrapper-12,.text-wrapper-13, .text-wrapper-14,.text-wrapper-15,.text-wrapper-16,.text-wrapper-17,.text-wrapper-18,.text-wrapper-19,.text-wrapper-20,.text-wrapper-21,.text-wrapper-22,.text-wrapper-23,.text-wrapper-24,.text-wrapper-25,.text-wrapper-26,.text-wrapper-27,.text-wrapper-28,.text-wrapper-29,.text-wrapper-30,.text-wrapper-31 { display: none;}
    
     .special-message {
       position: absolute;
@@ -495,6 +495,7 @@ body {
     .lightsleeper-title { 
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
       
       width: 4411px;
       height: 570px;
@@ -942,8 +943,8 @@ body {
       left: 457.4vh;
       
       width: 30.7vh;
-      top: 33vh;
-      left: 358vh;
+      top: 31vh;
+      left: 356vh;
       
       transform: rotate(13deg);
       transform-origin: center;
@@ -981,7 +982,7 @@ body {
       
       width: 79.86vh;
       height: 119.05vh;
-      top: -20vh;
+      top: -37vh;
       left: 372vh;
       z-index: 2;
               
@@ -995,7 +996,7 @@ body {
     .exitwounds-animation {
       position: absolute;
       object-fit: cover;
-      pointer-events: auto;
+      pointer-events: none;
       
       width: 2160px;
       height: 1080px;
@@ -1005,8 +1006,8 @@ body {
       
       width: 291.89vh;
       height: 145.95vh;
-      top: -10vh;
-      left: 300vh;
+      top: -8vh;
+      left: 292vh;
       z-index: 2;
               
       transform: scale(0.20) rotate(0deg);
@@ -1151,10 +1152,10 @@ body {
   
       width: 120.00vh;
       height: 44.86vh;
-      top: 0vh;
-      left: 410vh;
+      top: 10vh;
+      left: 385vh;
               
-      transform: scale(0.3) rotate(0deg);
+      transform: scale(0.24) rotate(0deg);
       transform-origin: center;
     
       @include respond(xs) {
@@ -1172,9 +1173,9 @@ body {
       width: 91.62vh;
       height: 80.27vh;
       top: 13vh;
-      left: 438vh;
+      left: 394vh;
               
-      transform: scale(0.40) rotate(20deg);
+      transform: scale(0.32) rotate(0deg);
       transform-origin: center;
     
       @include respond(xs) {
@@ -1218,9 +1219,9 @@ body {
       width: 72.31vh;
       height: 34.68vh;
       top: 70vh;
-      left: 460vh;
+      left: 410vh;
               
-      transform: scale(.13) rotate(-40deg);
+      transform: scale(.13) rotate(-45deg);
       transform-origin: center;
     
       @include respond(xs) {
@@ -1238,10 +1239,10 @@ body {
       width: 52.16vh;
       height: 23.78vh;
       top: 70vh;
-      left: 490vh;
+      left: 439vh;
       z-index: 3;
               
-      transform: scale(0.5) rotate(-2deg);
+      transform: scale(0.55) rotate(-2deg);
       transform-origin: center;
     
       @include respond(xs) {
@@ -1258,8 +1259,8 @@ body {
       
       width: 116.22vh;
       height: 150.27vh;
-      top: -37vh;
-      left: 480vh;
+      top: -34vh;
+      left: 435vh;
       z-index: 1;
               
       transform: scale(0.50) rotate(9deg);
