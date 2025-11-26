@@ -347,7 +347,7 @@ body {
         top: 1vh;
         left: -53vh;
         
-        transform: scale(.34);
+        transform: scale(.34) rotate(0deg);
         transform-origin: center;
 
         @include respond(xs) { 
@@ -366,8 +366,8 @@ body {
         top: -50vh;
         left: 75vh;
         		
-        transform: scale(0.33);
-        transform-origin: center;
+        transform: scale(0.33) rotate(3deg);
+        transform-origin: center center;
         
         @include respond(xs) {
         }
@@ -385,7 +385,7 @@ body {
         top: 37vh;
         left: 35vh;
         		
-        transform: scale(0.75);
+        transform: scale(0.75) rotate(0deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -404,7 +404,7 @@ body {
         top: 85vh;
         left: 60vh;
 
-        transform: scale(.78);
+        transform: scale(.78) rotate(0deg);
         transform-origin: center;
         pointer-events: none;
         
@@ -438,7 +438,7 @@ body {
           top: 85vh;
           left: 98vh;
   
-          transform: scale(0.78);
+          transform: scale(0.78) rotate(0deg);
           transform-origin: center;
           
           @include respond(xs) {
@@ -452,6 +452,9 @@ body {
         		
         width: 552px;
         height: 576px;
+
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
         @include respond(xs) {
         }
@@ -463,6 +466,9 @@ body {
         
         width: 154;
         height: 147;
+
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
         @include respond(xs) {
         }
@@ -474,6 +480,9 @@ body {
         
         width: 154;
         height: 147;
+
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display: none;
@@ -486,6 +495,9 @@ body {
         
         width: 214;
         height: 210;
+
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:200svh;
