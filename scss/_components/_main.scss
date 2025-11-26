@@ -361,12 +361,12 @@ body {
         width: 859px;
         height: 799px;
         		
-        width: 150vh;
-        height: 150vh;
+        width: 167.5vh;
+        height: 167.5vh;
         top: -50vh;
         left: 75vh;
         		
-        transform: scale(0.34);
+        transform: scale(0.33);
         transform-origin: center;
         
         @include respond(xs) {
