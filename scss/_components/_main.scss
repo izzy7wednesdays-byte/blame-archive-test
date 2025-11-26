@@ -114,10 +114,10 @@ body {
       width: 205vh;
       height: 100vh;
       top: -35vh;
-      left: -70vh;
+      left: -73.5vh;
       z-index: 1;
 
-      transform: scale(0.86);     
+      transform: scale(0.76);     
       transform-origin: center; 
 
       @include respond(xs) {
@@ -304,11 +304,11 @@ body {
           
       width: 202vh;
       height: 187.4vh;
-      top: -70vh;
-      left: 27vh;
+      top: -73vh;
+      left: 13vh;
       z-index: 2;
           
-      transform: scale(0.23) rotate(7deg);
+      transform: scale(0.21) rotate(7deg);
       transform-origin: center center;
       
       @include respond(xs) {
@@ -327,8 +327,8 @@ body {
           
       width: 106.4vh;
       height: 48.8vh;
-      top: 37vh;
-      left: 30vh;
+      top: 40vh;
+      left: 36vh;
       z-index: 3;
           
       transform: scale(0.75) rotate(0deg);
@@ -350,12 +350,12 @@ body {
       
       width: 110.68vh;
       height: 29.59vh;
-      top: 0vh;
-      left: 20vh;
+      top: 76vh;
+      left: 58vh;
       
       z-index: 5;
       
-      transform: scale(1) rotate(0deg);
+      transform: scale(.22) rotate(0deg);
       transform-origin: center;
      
       @include respond(xs) {
@@ -395,12 +395,12 @@ body {
       
       width: 141.49vh;
       height: 55vh; 
-      top: 0vh;
-      left: 20vh;
+      top: 63vh;
+      left: 62vh;
 
       z-index: 5;
       
-      transform: scale(1) rotate(0deg);
+      transform: scale(.1) rotate(0deg);
       transform-origin: center;
       
       @include respond(xs) {
@@ -421,7 +421,7 @@ body {
       width: 73.03vh;
       height: 76.19vh;
       top: -14vh;
-      left: 140vh;
+      left: 122vh;
       z-index: 2;
   
       transform: scale(.50) rotate(87deg);
@@ -444,10 +444,10 @@ body {
       width: 20.81vh;
       height: 19.86vh;
       top: 5vh;
-      left: 190vh;
+      left: 171vh;
       z-index: 2;
 
-      transform: scale(0.38) rotate(15deg);
+      transform: scale(0.38) rotate(13deg);
       transform-origin: center;
       
       @include respond(xs) {
@@ -467,7 +467,7 @@ body {
       width: 20.81vh;
       height: 19.86vh;
       top: -7vh;
-      left: 205vh;
+      left: 185vh;
       z-index: 2;
 
       transform: scale(0.70) rotate(20deg);
@@ -491,7 +491,7 @@ body {
       width: 28.82vh;
       height: 28.38vh;
       top: 15vh;
-      left: 207vh;
+      left: 187vh;
       z-index: 2;
       
       transform: scale(.8) rotate(14deg);
@@ -559,8 +559,8 @@ body {
       
       width: 40.54vh;
       height: 40.54vh;
-      top: 0vh;
-      left: 227vh;
+      top: 1vh;
+      left: 207vh;
 
       z-index: 2;
       
@@ -659,7 +659,7 @@ body {
       width: 145.95vh;
       height: 259.46vh;
       top: -108vh;
-      left: 209vh;
+      left: 187vh;
       z-index: 3;
       
       transform: scale(.16) rotate(0deg);
@@ -705,7 +705,7 @@ body {
       width: 27.027vh;
       height: 33.78vh;
       top: 0vh;
-      left: 293vh;
+      left: 270vh;
       z-index: 3;
       
       transform: scale(0.80) rotate(0deg);
@@ -733,10 +733,13 @@ body {
       left: 457.4vh;
       
       width: 30.7vh;
-      top: 3vh;
-      left: 309vh;
+      top: 4vh;
+      left: 275vh;
       z-index: 4;
-      
+
+      transform: rotate(0deg);
+      transform-origin: center;
+
       @include respond(xs) {
         display:none;
       }
@@ -755,7 +758,7 @@ body {
       width: 150.54vh;
       height: 150.54vh;
       top: -25vh;
-      left: 235vh;
+      left: 213vh;
       z-index: 2;
       
       transform: scale(0.2) rotate(0deg);
@@ -827,7 +830,7 @@ body {
       width: 74.86vh;
       height: 73.92vh;
       top: 15vh;
-      left: 308vh;
+      left: 289vh;
       
       transform: scale(.4) rotate(0deg);
       transform-origin: center;
@@ -851,7 +854,7 @@ body {
       width: 259.46vh;
       height: 145.95vh;
       top: -55vh;
-      left: 218vh;
+      left: 193vh;
       
       transform: scale(.20) rotate(0deg);
       transform-origin: center;
@@ -872,8 +875,8 @@ body {
       
       width: 35.68vh;
       height: 57.43vh;
-      top: 25vh;
-      left: 355vh;
+      top: 22vh;
+      left: 335vh;
       
       transform: scale(.52) rotate(195deg);
       transform-origin: center;
@@ -895,7 +898,7 @@ body {
       width: 115.81vh;
       height: 57.97vh;
       top: 55vh;
-      left: 300vh;
+      left: 297vh;
       
       transform: scale(0.56) rotate(-10deg);
       transform-origin: center;
@@ -914,7 +917,7 @@ body {
       width: 80vh;
       height: 59.73vh;
       top: -12vh;
-      left: 360vh;
+      left: 335vh;
               
       transform: scale(0.45) rotate(13deg);
       transform-origin: center;
@@ -941,8 +944,11 @@ body {
       left: 457.4vh;
       
       width: 30.7vh;
-      top: 3vh;
-      left: 30vh;
+      top: 33vh;
+      left: 358vh;
+      
+      transform: rotate(13deg);
+      transform-origin: center;
     
       @include respond(xs) {
       }
@@ -957,8 +963,8 @@ body {
       
       width: 93.51vh;
       height: 99.46vh;
-      top: 7vh;
-      left: 350vh;
+      top: 10vh;
+      left: 333vh;
               
       transform: scale(0.30) rotate(20deg);
       transform-origin: center;
@@ -977,7 +983,7 @@ body {
       width: 79.86vh;
       height: 119.05vh;
       top: -20vh;
-      left: 404vh;
+      left: 372vh;
               
       transform: scale(0.30) rotate(-10deg);
       transform-origin: center;
@@ -1042,7 +1048,7 @@ body {
       width: 48.00vh;
       height: 58.65vh;
       top: 56vh;
-      left: 390vh;
+      left: 379vh;
               
       transform: scale(0.38) rotate(0deg);
       transform-origin: center;
@@ -1054,8 +1060,8 @@ body {
     .text-wrapper-3 {
       position: absolute;
       font-weight: 400;
-      color: #4C58E9;
-      font-size: 15px;
+      color: #4CA8E9;
+      font-size: 32px;
       letter-spacing: 0;
       line-height: normal;
       text-align: center;
@@ -1069,8 +1075,11 @@ body {
       left: 457.4vh;
       
       width: 30.7vh;
-      top: 0vh;
-      left: 30vh;
+      top: 73vh;
+      left: 409vh;
+      
+      transform: rotate(0deg);
+      transform-origin: center;
     
       @include respond(xs) {
       }
@@ -1088,10 +1097,10 @@ body {
       
       width: 64.46vh;
       height: 28.24vh;
-      top: 68vh;
-      left: 398vh;
+      top: 71vh;
+      left: 386vh;
               
-      transform: scale(.16) rotate(-8deg);
+      transform: scale(.14) rotate(-16deg);
       transform-origin: center;
     
       @include respond(xs) {
@@ -1099,6 +1108,28 @@ body {
     }
       
     .text-wrapper-4 {
+      position: absolute;
+      font-weight: 400;
+      color: #4CA8E9;
+      font-size: 32px;
+      letter-spacing: 0;
+      line-height: normal;
+      text-align: center;
+
+      width: 260px;
+      top: 820px;
+      left: 4574px;
+      
+      width: 26vh;
+      top: 82vh;
+      left: 457.4vh;
+      
+      width: 30.7vh;
+      top: 73vh;
+      left: 409vh;
+
+      transform: rotate(0deg);
+      transform-origin: center;
     
       @include respond(xs) {
       }
@@ -1146,6 +1177,27 @@ body {
     }
       
     .text-wrapper-5 {
+      position: absolute;
+      object-fit: cover;
+      
+      width: 1000px;
+      height: 625px;
+      top: 830px;
+      left: 42px;
+      
+      width: 132.28vh;
+      height: 82.67vh;
+      top: 83.85vh;
+      left: 80vh;
+
+      width: 205vh;
+      height: 100vh;
+      top: -35vh;
+      left: -73.5vh;
+      z-index: 1;
+
+      transform: rotate(0deg);
+      transform-origin: center;
     
       @include respond(xs) {
       }
