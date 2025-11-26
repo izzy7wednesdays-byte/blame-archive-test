@@ -389,10 +389,10 @@ body {
         		
         width: 106.4vh;
         height: 48.8vh;
-        top: 35vh;
-        left: 37vh;
+        top: 37vh;
+        left: 35vh;
         		
-        transform: scale(0.78);
+        transform: scale(0.75);
         transform-origin: center;
         
         @include respond(xs) {
@@ -415,18 +415,11 @@ body {
         		
         width: 106.4vh;
         height: 48.8vh;
-        top: 35vh;
-        left: 37vh;
+        top: 85vh;
+        left: 60vh;
 
-        transform: scale(0.78);
+        transform: scale(1);
         transform-origin: center;
-        
-        --left:97svh; 
-        --scale:.1; 
-        --y:5svh; 
-        --x:0svh; 
-        --rot:0deg; 
-        --z:4;
         pointer-events: none;
         
         @include respond(xs) {
@@ -464,19 +457,11 @@ body {
           		
           width: 106.4vh;
           height: 48.8vh;
-          top: 35vh;
-          left: 37vh;
+          top: 85vh;
+          left: 98vh;
   
           transform: scale(0.78);
           transform-origin: center;
-
-          --left:123svh; 
-          --scale:.09; 
-          --y:5svh; 
-          --x:0svh; 
-          --rot:0deg; 
-          --z:5;
-          pointer-events: none;
           
           @include respond(xs) {
             --left:50svh; 
