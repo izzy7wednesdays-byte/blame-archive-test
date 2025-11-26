@@ -184,33 +184,16 @@ body {
       
         @include respond(xs) {
           display: flex;
-          --left: 13svh;
-          --scale: .12;
-          --y: 59svh;
-          --x: 8svh;
-          --rot: 0deg;
-          --z: 2;
         }
       }
 
     .social, .social-sparkle-l, .social-sparkle-r,
         .social-sparkle-l {
           display:none;
-          --left: 17svh;
-          --scale: .15;
-          --y: 50svh;
-          --x: 8svh;
-          --rot: 0deg;
-          --z: 2;
+
           pointer-events: none;
           
           @include respond(xs) { 
-            --left: 11.5svh;
-            --scale: .13;
-            --y: 13svh;
-            --x: 8svh;
-            --rot: 0deg;
-            --z: 2;
             pointer-events: none;
           }
         }
@@ -225,69 +208,28 @@ body {
         --z: 2;
         
         @include respond(xs) {
-          --left: 22svh;
-          --scale: .037;
-          --y: 18.75svh;
-          --x: 6.25svh;
-          --rot: 0deg;
-          --z: 2;
         }
       }
         
       .tiktok {
         display:none;
-        --left: 34svh;
-        --scale: .04;
-        --y: 55svh;
-        --x: 8svh;
-        --rot: 0deg;
-        --z: 2;
         
         @include respond(xs) {
-          --left: 27.5svh;
-          --scale: .037;
-          --y: 17.25svh;
-          --x: 6.25svh;
-          --rot: 0deg;
-          --z: 2;
+
         }
       }
         
       .twitter {
         display:none;
-        --left: 40svh;
-        --scale: .04;
-        --y: 55svh;
-        --x: 8svh;
-        --rot: 0deg;
-        --z: 2;
         
         @include respond(xs) {
-          --left: 33svh;
-          --scale: .037;
-          --y: 18.75svh;
-          --x: 6.25svh;
-          --rot: 0deg;
-          --z: 2;
         }
       }
         
       .discord {
         display:none;
-        --left: 46svh;
-        --scale: .04;
-        --y: 55svh;
-        --x: 8svh;
-        --rot: 0deg;
-        --z: 2;
         
         @include respond(xs) {
-          --left: 38.5svh;
-          --scale: .037;
-          --y: 17.25svh;
-          --x: 6.25svh;
-          --rot: 0deg;
-          --z: 2;
         }
       }
         
@@ -312,20 +254,8 @@ body {
         
       .apple-music {
         display:none;
-        --left: 59svh;
-        --scale: .04;
-        --y: 55svh;
-        --x: 8svh;
-        --rot: 0deg;
-        --z: 2;
         
         @include respond(xs) { 
-          --left: 50.5svh;
-          --scale: .037;
-          --y: 17.25svh;
-          --x: 6.25svh;
-          --rot: 0deg;
-          --z: 2;
         }
       }
     
@@ -545,9 +475,6 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:200svh;
-          --scale:.13;
-          --y:60svh;
         }
       }
       
@@ -592,9 +519,6 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:123svh;
-          --y:50svh;
-          --scale: .27;
         }
       }
       
@@ -644,11 +568,6 @@ body {
         @include respond(xs) {
           display: flex !important;
           
-          --left:103svh;
-          --y:49svh;
-          --scale:.27;
-          --rot:-10deg;
-          --z:30;
           pointer-events:auto;
         }
       }
@@ -672,9 +591,6 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
-          --left:111svh;
-          --y: 20svh;
-          --scale:.28;
         }
       }
       
@@ -697,8 +613,6 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
-          --left:150svh;
-          --y:2svh;
         }
       }
       
@@ -721,9 +635,6 @@ body {
         transform-origin: center;
      
         @include respond(xs) {
-          --left:185svh;
-          --y:57svh;    
-          --scale:.35;
         }
       }
       
@@ -746,9 +657,6 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
-          --left:170svh;
-          --scale:.15;
-          --y:10svh;
         }
       }
       
@@ -771,26 +679,42 @@ body {
         transform-origin: center;
                      
         @include respond(xs) {
-          --left:177svh;
-          --scale: .23;
-          --y:30svh;
         }
       }
       
       .text-wrapper { 
-        --left:288svh;
-        --scale:.11;
-        --y:88svh;
-        --x:0svh; 
-        --rot:0deg; 
-        --z:42; 
-        pointer-events:none;
+        position: absolute;
+        font-weight: 400;
+        color: #4C58E9;
+        font-size: 15px;
+        letter-spacing: 0;
+        line-height: normal;
         
-        --ff: "Manic"; 
-        --ta: center; 
-        --fw: 400; 
-        --fs-mul: .18; 
-        --text-color: #4C58E9;
+        width: 260px;
+        top: 820px;
+        left: 4574px;
+        
+        width: 26vh;
+        top: 82vh;
+        left: 457.4vh;
+        
+        width: 30.7vh;
+        top: 96.8vh;
+        left: 540vh;
+
+       // --left:288svh;
+       // --scale:.11;
+       // --y:88svh;
+       // --x:0svh; 
+       // --rot:0deg; 
+       // --z:42; 
+       // pointer-events:none;
+        
+       // --ff: "Manic"; 
+       // --ta: center; 
+       // --fw: 400; 
+      //  --fs-mul: .18; 
+       // --text-color: #4C58E9;
         
         @include respond(xs) {
           display:none;
