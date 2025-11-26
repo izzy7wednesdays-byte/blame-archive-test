@@ -403,7 +403,7 @@ body {
       
       .lfg { 
         position: absolute;
-        object-fit: cover;
+        object-fit: contain;
         
         width: 819px;
         height: 297px;
@@ -444,7 +444,7 @@ body {
         
         .pink-arrow {    
           position: absolute;
-          object-fit: cover;
+          object-fit: contain;
           
           width: 1046px;
           height: 407px;
@@ -453,7 +453,7 @@ body {
           height: 55vh;
           
           width: 141.49vh;
-          height: 55vh;
+          height: 55vh; 
           top: 0vh;
           left: 0vh;
           
