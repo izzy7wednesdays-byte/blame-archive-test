@@ -376,7 +376,7 @@ body {
         width: 202vh;
         height: 187.4vh;
         top: -70vh;
-        left: 55vh;
+        left: 47vh;
         		
         transform: scale(0.25) rotate(7deg);
         transform-origin: center center;
@@ -477,10 +477,10 @@ body {
 
         width: 73.03vh;
         height: 76.19vh;
-        top: 40vh;
-        left: 68vh;
+        top: -14vh;
+        left: 170vh;
 
-        transform: scale(1) rotate(0deg);
+        transform: scale(.60) rotate(90deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -491,18 +491,18 @@ body {
         position: absolute;
         object-fit: cover;
         
-        width: 154;
-        height: 147;
+        width: 154px;
+        height: 147px;
         
         width: 20.81vh;
         height: 19.86vh;
         
-        width: 20.81;
-        height: 19.86;
-        top: 0vh;
-        left: 0vh;
+        width: 20.81vh;
+        height: 19.86vh;
+        top: 5vh;
+        left: 225vh;
 
-        transform: scale(1) rotate(0deg);
+        transform: scale(0.42) rotate(16deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -513,18 +513,18 @@ body {
         position: absolute;
         object-fit: cover;
         
-        width: 154;
-        height: 147;
+        width: 154px;
+        height: 147px;
         
         width: 20.81vh;
         height: 19.86vh;
         
-        width: 20.81;
-        height: 19.86;
-        top: 0vh;
-        left: 0vh;
+        width: 20.81vh;
+        height: 19.86vh;
+        top: -7vh;
+        left: 240vh;
 
-        transform: scale(1) rotate(0deg);
+        transform: scale(0.70) rotate(20deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -544,10 +544,10 @@ body {
         
         width: 28.82vh;
         height: 28.38vh;
-        top: 0vh;
-        left: 0vh;
+        top: 15vh;
+        left: 244vh;
         
-        transform: scale(1) rotate(0deg);
+        transform: scale(.8) rotate(23deg);
         transform-origin: center;
       
         @include respond(xs) {
