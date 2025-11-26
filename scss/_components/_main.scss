@@ -116,7 +116,7 @@ body {
         object-fit: cover;
       
         width: 1000px;
-        height: 121px;
+        height: 625px;
         top: 830px;
         left: 42px;
 
@@ -137,6 +137,14 @@ body {
       
       .special-message-mobile {
         display: none;
+        
+        position: absolute;
+        object-fit: cover;
+      
+        width: 772px;
+        height: 599px;
+        top: 830px;
+        left: 42px;
           
         @include respond(xs) {
           display: flex;
@@ -153,6 +161,11 @@ body {
       .izzymacarthur {
         position: absolute;
         object-fit: cover;
+      
+        width: 860px;
+        height: 156px;
+        top: 830px;
+        left: 42px;
         
         width: 113.7vh; 
         height: 20.6vh;  
@@ -169,6 +182,14 @@ body {
       
       .izzymacarthur-mobile {
         display: none;
+
+        width: 752px;
+        height: 200px;
+
+        width: 113.7vh; 
+        height: 20.6vh;  
+        top: 18vh;     
+        left: 1vh;
       
         @include respond(xs) {
           display: flex;
@@ -322,7 +343,7 @@ body {
         object-fit: cover;
         
         width: 989px;
-        height: 979px;
+        height: 978px;
         
         width: 150vh;
         height: 150vh;
@@ -340,8 +361,8 @@ body {
         position: absolute;
         object-fit: cover;
         		
-        width: 989px;
-        height: 979px;
+        width: 859px;
+        height: 799px;
         		
         width: 150vh;
         height: 150vh;
@@ -389,6 +410,9 @@ body {
       }
       
       .lfg { 
+        position: absolute;
+        object-fit: cover;
+        
         display: none;
         --left:97svh; 
         --scale:.1; 
@@ -405,6 +429,12 @@ body {
       
       .lfg-mobile { 
         display:none;
+
+        position: absolute;
+        object-fit: cover;
+        		
+        width: 378px;
+        height: 118px;
         
         @include respond(xs) {
           display: none;
@@ -443,6 +473,13 @@ body {
         // ========= LIGHT SLEEPER SECTION (slot classes) =========
       .broken-cd { 
         display: none;
+
+        position: absolute;
+        object-fit: cover;
+        		
+        width: 552px;
+        height: 576px;
+        
         --left:145svh; 
         --scale:.35; 
         --y:67svh;
@@ -465,6 +502,12 @@ body {
       
       .blue-star-1 { 
         display: none;
+        
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left:185svh; 
         --scale:.06; 
         --y:85svh;
@@ -485,6 +528,13 @@ body {
       
       .blue-star-2 {
         display: none;
+
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
+        
         --left:187svh;
         --scale:.13;
         --y:95svh;
@@ -499,6 +549,11 @@ body {
       }
       
       .silver-star1-1 { 
+          position: absolute;
+          object-fit: cover;
+          
+          width: 214;
+          height: 210;
         --left:189svh;
         --scale:.17; 
         --y:73svh;
@@ -551,6 +606,9 @@ body {
       
       .about-lightsleeper { 
         display: none;
+
+        width: 300px;
+        height: 300px;
         
         --left:210svh;
         --scale:.4;
@@ -567,6 +625,9 @@ body {
       
       .about-lightsleeper-mobile { 
         display: none !important;
+
+        width: 572px;
+        height: 580px;
         
         @include respond(xs) {
           display: flex !important;
@@ -581,6 +642,11 @@ body {
       }
       
       .autumn-text {
+        display:none;
+
+        width: 652px;
+        height: 546px;
+        
         --left:223svh;
         --scale:.32;
         --y:23svh;
@@ -595,7 +661,12 @@ body {
         }
       }
       
-      .blame-it-notesapp { 
+      .blame-it-notesapp {
+        display: none;
+
+        width: 710px;
+        height: 330px;
+        
         --left:215svh;
         --scale:.20;
         --y:0svh;
@@ -626,6 +697,11 @@ body {
       }
       
       .silver-star1-2 {
+        position: absolute;
+        object-fit: cover;
+          
+        width: 214;
+        height: 210;
         --left:245svh;
         --scale:.18;
         --y:5svh;
@@ -642,6 +718,10 @@ body {
       }
       
       .chords-gif { 
+        display: none;
+        width: 200px;
+        height: 250px;
+        
         --left:272svh; 
         --scale:.3; 
         --y:66svh;
@@ -693,6 +773,9 @@ body {
       
       .play-lightsleeper-mobile { 
         display: none;
+
+        width: 500px;
+        height: 498px;
     
         @include respond(xs) {
           --left:150svh;
@@ -718,6 +801,11 @@ body {
       }
       
       .lightsleeper-voicememo {
+        display: none;
+        
+        width: 554px;
+        height: 547px;
+        
         --left:310svh;
         --scale:.32;
         --y:29svh;
@@ -737,7 +825,6 @@ body {
       // ========= EXIT WOUNDS SECTION (slot classes) =========
       
       .exitwounds-lyricvideo {
-        /* V4 placeholder */
         --left: 298svh;
         --scale: .38;
         --y: 63svh;
@@ -753,6 +840,12 @@ body {
       }
       
       .star-trio-1 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 264px;
+        height: 425px;
+        
         --left: 346svh;
         --scale: .28;
         --y: 61svh;
@@ -769,6 +862,12 @@ body {
       }
       
       .exitwounds-title {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 857px;
+        height: 429px;
+
         --left: 322svh;
         --scale: .33;
         --y: 0svh;
@@ -784,7 +883,13 @@ body {
       }
       
       .play-exitwounds {
-         display:none;
+        display:none;
+
+        position: absolute;
+        object-fit: cover;
+        
+        width: 592px;
+        height: 440px;
         --left: 362svh;
         --scale: .25;
         --y: 69svh;
@@ -821,6 +926,13 @@ body {
       }
       
       .missed-calls {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 672px;
+        height: 736px;
+        
+        
         --left: 365svh;
         --scale: .35;
         --y: 24svh;
@@ -837,6 +949,12 @@ body {
       }
       
       .about-exitwounds {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 591px;
+        height: 881px; 
+        
         display:none;
         --left: 397svh;
         --scale: .31;
@@ -867,6 +985,12 @@ body {
       }
       
       .exitwounds-animation-mobile {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 833px;
+        height: 192px;  
+        
         display:none;
       
         @include respond(xs) {
@@ -879,6 +1003,12 @@ body {
       }
       
       .exitwounds-voicememo {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 366px;
+        height: 434px;   
+        display:none;
         --left: 392svh;
         --scale:.23;
         --y: 1svh;
@@ -910,6 +1040,11 @@ body {
       }
       
       .click-me-arrow {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 417px;
+        height: 209px;
         --left: 413svh;
         --scale: .04;
         --y: 11svh;
@@ -946,6 +1081,11 @@ body {
       }
       
       .substack-point-arrow {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 570px;
+        height: 332px;       
         --left: 433svh;
         --scale: .10;
         --y: 67svh;
@@ -963,6 +1103,11 @@ body {
       }
       
       .scorpio-constellation {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 678px;
+        height: 594px;
         --left: 428svh;
         --scale: .25;
         --y: 40svh;
@@ -1002,6 +1147,11 @@ body {
       }
       
       .subscribe-arrow {
+position: absolute;
+object-fit: cover;
+
+width: 535px;
+height: 264px;
         --left: 452svh;
         --scale: .04;
         --y: 11svh;
@@ -1020,6 +1170,11 @@ body {
       
       .subscribe-button {
         display:none;
+position: absolute;
+object-fit: cover;
+
+width: 386px;
+height: 176px;
         --left: 459svh;
         --scale: .14;
         --y: 10svh;
@@ -1035,6 +1190,11 @@ body {
       }
       
       .exitwounds-substackflier {
+position: absolute;
+object-fit: cover;
+
+width: 860px;
+height: 1112px;
          display:none;
         --left: 453svh;
         --scale: .76;
@@ -1051,6 +1211,11 @@ body {
       }
       
       .silver-star3-1 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         --left: 459svh;
         --scale: .10;
         --y: -1svh;
@@ -1065,6 +1230,11 @@ body {
       }
       
       .blue-star-3 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 468svh;
         --scale: .04;
         --y: 4svh;
@@ -1079,6 +1249,11 @@ body {
       }
       
       .silver-star3-2 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         --left: 478svh;
         --scale: .06;
         --y: 1svh;
@@ -1093,6 +1268,11 @@ body {
       }
       
       .silver-star3-3 {
+position: absolute;
+object-fit: cover;
+
+width: 165px;
+height: 160px;
         --left: 489svh;
         --scale: .08;
         --y: 8svh;
@@ -1153,6 +1333,11 @@ body {
       }
       
       .blue-star-4 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 517svh;
         --scale: .04;
         --y: 41svh;
@@ -1247,6 +1432,11 @@ body {
       }
       
       .silver-star3-4 {
+position: absolute;
+object-fit: cover;
+
+width: 165px;
+height: 160px;
         --left: 580svh;
         --scale: .06;
         --y: 57svh;
@@ -1261,6 +1451,11 @@ body {
       }
       
       .blue-star-5 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 638svh;
         --scale: .07;
         --y: 60svh;
@@ -1408,6 +1603,12 @@ body {
       }
       
       .blue-star-6 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
+        
         --left: 678svh;
         --scale: .04;
         --y: 49svh;
@@ -1423,6 +1624,11 @@ body {
       }
       
       .blue-star-7 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 685svh;
         --scale: .07;
         --y: 29svh;
@@ -1498,6 +1704,11 @@ body {
       }
       
       .silver-star3-5 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         --left: 696svh;
         --scale: .09;
         --y: 59svh;
@@ -1565,6 +1776,11 @@ body {
       }
       
       .silver-star3-6 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         --left: 759svh;
         --scale: .08;
         --y: 29svh;
@@ -1916,6 +2132,11 @@ body {
       }
       
       .blue-star-8 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 1008svh;
         --scale: .04;
         --y: 35svh;
@@ -1977,6 +2198,12 @@ body {
       }
       
       .silver-star1-3 {
+        position: absolute;
+        object-fit: cover;
+          
+        width: 214;
+        height: 210;
+        
         --left: 1020svh;
         --scale: .15;
         --y: 48svh;
@@ -1991,6 +2218,11 @@ body {
       }
       
       .blue-star-9 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 1027svh;
         --scale: .06;
         --y: 40svh;
@@ -2005,6 +2237,11 @@ body {
       }
       
       .silver-star3-7 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         --left: 1037svh;
         --scale: .08;
         --y: 45svh;
@@ -2426,6 +2663,11 @@ body {
       }
       
       .blue-star-10 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 1312svh;
         --scale: .07;
         --y: 93svh;
@@ -2496,6 +2738,12 @@ body {
       }
       
       .silver-star1-4 {
+        position: absolute;
+        object-fit: cover;
+          
+        width: 214;
+        height: 210;
+        
         --left: 1339svh;
         --scale: .27;
         --y: 75svh;
@@ -2645,6 +2893,12 @@ body {
       }
       
       .silver-star3-8 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
+        
         --left: 1454svh;
         --scale: .08;
         --y: 41svh;
@@ -2937,6 +3191,11 @@ body {
       }
       
       .silver-star3-9 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         --left: 1594svh;
         --scale: .08;
         --y: 36svh;
@@ -2951,6 +3210,11 @@ body {
       }
       
       .blue-star-11 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 1594svh;
         --scale: .03;
         --y: 30svh;
@@ -2965,6 +3229,11 @@ body {
       }
       
       .glow-star-1 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 110px;
+        height: 113px;
         --left: 1602svh;
         --scale: .07;
         --y: 31svh;
@@ -2979,6 +3248,11 @@ body {
       }
       
       .silver-star3-10 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         --left: 1610svh;
         --scale: .03;
         --y: 42svh;
@@ -2993,6 +3267,11 @@ body {
       }
       
       .blue-star-12 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 1613svh;
         --scale: .12;
         --y: 26svh;
@@ -3007,6 +3286,11 @@ body {
       }
       
       .silver-star3-11 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         --left: 1623svh;
         --scale: .06;
         --y: 36svh;
@@ -3021,6 +3305,11 @@ body {
       }
       
       .glow-star-2 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 110px;
+        height: 113px;
         --left: 1632svh;
         --scale: .04;
         --y: 39svh;
@@ -3063,6 +3352,11 @@ body {
       }
       
       .glow-star-3 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 110px;
+        height: 113px;
         --left: 1594svh;
         --scale: .03;
         --y: 6svh;
@@ -3077,6 +3371,11 @@ body {
       }
       
       .blue-star-13 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 1592svh;
         --scale: .08;
         --y: -4svh;
@@ -3091,6 +3390,11 @@ body {
       }
       
       .glow-star-4 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 110px;
+        height: 113px;
         --left: 1602svh;
         --scale: .13;
         --y: -6svh;
@@ -3105,6 +3409,11 @@ body {
       }
       
       .blue-star-14 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 1618svh;
         --scale: .03;
         --y: 3svh;
@@ -3120,6 +3429,11 @@ body {
       }
       
       .silver-star3-12 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         --left: 1624svh;
         --scale: .03;
         --y: 4svh;
@@ -3134,6 +3448,11 @@ body {
       }
       
       .blue-star-15 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 1623svh;
         --scale: .06;
         --y: -3svh;
@@ -3148,6 +3467,11 @@ body {
       }
       
       .glow-star-5 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 110px;
+        height: 113px;
         --left: 1629svh;
         --scale: .03;
         --y: -1svh;
@@ -3191,6 +3515,11 @@ body {
       }
       
       .glow-star-6 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 110px;
+        height: 113px;
         --left: 1672svh;
         --scale: .11;
         --y: 65svh;
@@ -3569,6 +3898,11 @@ body {
       }
       
       .blue-star-16 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         display: flex;
         --left: 1924svh;
         --scale: .11;
@@ -3599,6 +3933,11 @@ body {
       }
       
       .silver-star3-13 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         --left: 1964svh;
         --scale: .13;
         --y: 3svh;
@@ -3868,6 +4207,11 @@ body {
       // ========= LONDON SECTION (slot classes) =========
       
       .glow-star-7 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 110px;
+        height: 113px;
         --left: 2136svh;
         --scale: .12;
         --y: 80svh;
@@ -3899,6 +4243,11 @@ body {
       }
       
       .glow-star-8 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 110px;
+        height: 113px;
         --left: 2159svh;
         --scale: .10;
         --y: 92svh;
@@ -3998,6 +4347,11 @@ body {
       }
       
       .glow-star-9 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 110px;
+        height: 113px;
         --left: 2222svh;
         --scale: .09;
         --y: -3svh;
@@ -4042,6 +4396,11 @@ body {
       }
       
       .blue-star-17 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 2245svh;
         --scale: .06;
         --y: 27svh;
@@ -4070,6 +4429,11 @@ body {
       }
       
       .silver-star3-14 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         --left: 2266svh;
         --scale: .11;
         --y: 4svh;
@@ -4098,6 +4462,11 @@ body {
       }
       
       .blue-star-18 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 2300svh;
         --scale: .06;
         --y: 32svh;
@@ -4146,6 +4515,11 @@ body {
       }
       
       .silver-star3-15 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         --left: 2310svh;
         --scale: .05;
         --y: 0svh;
@@ -4161,6 +4535,11 @@ body {
       }
       
       .silver-star3-16 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         display: flex;
         --left: 2320svh;
         --scale: .08;
@@ -4177,6 +4556,11 @@ body {
       }
       
       .glow-star-10 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 110px;
+        height: 113px;
         --left: 2340svh;
         --scale: .11;
         --y: 90svh;
@@ -4219,6 +4603,11 @@ body {
       }
       
       .glow-star-11 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 110px;
+        height: 113px;
         --left: 2346svh;
         --scale: .11;
         --y: 30svh;
@@ -4234,6 +4623,11 @@ body {
       }
       
       .glow-star-12 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 110px;
+        height: 113px;
         --left: 2357svh;
         --scale: .09;
         --y: 46svh;
@@ -4283,6 +4677,11 @@ body {
       }
       
       .blue-star-19 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 2354svh;
         --scale: .07;
         --y: -1svh;
@@ -4312,6 +4711,11 @@ body {
       }
       
       .silver-star3-17 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
         --left: 2369svh;
         --scale: .12;
         --y: 15svh;
@@ -4327,6 +4731,11 @@ body {
       }
       
       .blue-star-20 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 154;
+        height: 147;
         --left: 2368svh;
         --scale: .07;
         --y: 4svh;
@@ -4472,6 +4881,11 @@ body {
       }
       
       .glow-star-13 {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 110px;
+        height: 113px;
         --left: 2478svh;
         --scale: .13;
         --y: 61svh;
