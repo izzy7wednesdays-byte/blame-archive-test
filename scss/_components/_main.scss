@@ -392,10 +392,10 @@ body {
         		
         width: 106.4vh;
         height: 48.8vh;
-        top: 30vh;
-        left: 45vh;
+        top: 35vh;
+        left: 37vh;
         		
-        transform: scale(1);
+        transform: scale(0.78);
         transform-origin: center;
         
         @include respond(xs) {
@@ -412,8 +412,18 @@ body {
       .lfg { 
         position: absolute;
         object-fit: cover;
+
+        width: 804px;
+        height: 369px;
+        		
+        width: 106.4vh;
+        height: 48.8vh;
+        top: 35vh;
+        left: 37vh;
+
+        transform: scale(0.78);
+        transform-origin: center;
         
-        display: none;
         --left:97svh; 
         --scale:.1; 
         --y:5svh; 
@@ -451,6 +461,18 @@ body {
         
         .pink-arrow { 
           display: none;
+          
+          width: 804px;
+          height: 369px;
+          		
+          width: 106.4vh;
+          height: 48.8vh;
+          top: 35vh;
+          left: 37vh;
+  
+          transform: scale(0.78);
+          transform-origin: center;
+
           --left:123svh; 
           --scale:.09; 
           --y:5svh; 
