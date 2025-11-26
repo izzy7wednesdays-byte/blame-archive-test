@@ -616,6 +616,7 @@ body {
       height: 259.46vh;
       top: -108vh;
       left: 209vh;
+      z: 3;
       
       transform: scale(.16) rotate(0deg);
       transform-origin: center;
@@ -660,6 +661,7 @@ body {
       height: 33.78vh;
       top: 0vh;
       left: 293vh;
+      z: 3;
       
       transform: scale(0.80) rotate(0deg);
       transform-origin: center;
@@ -688,6 +690,7 @@ body {
       width: 30.7vh;
       top: 3vh;
       left: 309vh;
+      z: 4;
       
       @include respond(xs) {
         display:none;
@@ -708,6 +711,7 @@ body {
       height: 150.54vh;
       top: -25vh;
       left: 235vh;
+      z: 2;
       
       transform: scale(0.2) rotate(0deg);
       transform-origin: center;
@@ -754,6 +758,7 @@ body {
       height: 145.95vh;
       top: 10vh;
       left: 163vh;
+      z: 1;
       
       transform: scale(.20) rotate(0deg);
       transform-origin: center;
