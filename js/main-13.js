@@ -154,13 +154,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // 1) New architecture: data-sc-url on the trigger itself
     let trackUrl = (trigger.dataset.scUrl || '').trim();
   
-    // 2) Legacy fallback: inside a .slot--sc wrapper with data-sc-url
-    if (!trackUrl) {
-      const slot = trigger.closest('.slot--sc');
-      if (!slot) return;
-      trackUrl = (slot.dataset.scUrl || '').trim();
-    }
-  
     if (!trackUrl || busy) return;
   
     e.preventDefault();
