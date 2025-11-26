@@ -358,15 +358,18 @@ body {
         position: absolute;
         object-fit: cover;
         		
-        width: 1414px;
-        height: 1414px;
+        width: 859px;
+        height: 799px;
+
+        width: 113.62vh;
+        height: 105.69vh;
         		
-        width: 175vh;
-        height: 167.5vh;
-        top: -50vh;
-        left: 75vh;
+        width: 202vh;
+        height: 187.4vh;
+        top: -70vh;
+        left: 55vh;
         		
-        transform: scale(0.33) rotate(3deg);
+        transform: scale(0.25) rotate(7deg);
         transform-origin: center center;
         
         @include respond(xs) {
@@ -379,6 +382,9 @@ body {
         		
         width: 804px;
         height: 369px;
+
+        width: 106.34vh;
+        height: 48.81vh;
         		
         width: 106.4vh;
         height: 48.8vh;
@@ -398,15 +404,16 @@ body {
 
         width: 804px;
         height: 369px;
-        		
+
         width: 106.4vh;
         height: 48.8vh;
-        top: 85vh;
-        left: 60vh;
+        top: 78vh;
+        left: 47vh;
 
-        transform: scale(.78) rotate(0deg);
+        transform: scale(.42) rotate(0deg);
         transform-origin: center;
         pointer-events: none;
+
         
         @include respond(xs) {
           display:none;
@@ -435,10 +442,10 @@ body {
           		
           width: 106.4vh;
           height: 48.8vh;
-          top: 85vh;
-          left: 98vh;
+          top: 40vh;
+          left: 68vh;
   
-          transform: scale(0.78) rotate(0deg);
+          transform: scale(0.20) rotate(0deg);
           transform-origin: center;
           
           @include respond(xs) {
@@ -452,6 +459,14 @@ body {
         		
         width: 552px;
         height: 576px;
+
+        width: 73.03vh;
+        height: 76.19vh;
+
+        width: 73.03vh;
+        height: 76.19vh;
+        top: 40vh;
+        left: 68vh;
 
         transform: scale(1) rotate(0deg);
         transform-origin: center;
