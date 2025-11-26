@@ -370,13 +370,6 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
-          --left:60svh; 
-          --scale:.3; 
-          --y:1svh; 
-          --x:15svh; 
-          --rot:-8deg; 
-          --z:4;
-          pointer-events: none;
         }
       }
       
@@ -396,13 +389,6 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
-          --left:22svh; 
-          --scale:.20; 
-          --y:30svh; 
-          --x:0svh; 
-          --rot:0deg; 
-          --z:4;
-          pointer-events: none;
         }
       }
       
@@ -439,12 +425,6 @@ body {
         @include respond(xs) {
           display: none;
           position:absolute;
-          --left:27svh; 
-          --scale:.04; 
-          --y:4svh; 
-          --x:0svh; 
-          --rot:0deg; 
-          --z:4;
           pointer-events: none;
         }
       }
@@ -462,88 +442,38 @@ body {
           transform-origin: center;
           
           @include respond(xs) {
-            --left:50svh; 
-            --scale:.08; 
-            --y:3svh; 
-            --x:0svh; 
-            --rot:0deg; 
-            --z:4;
-            pointer-events: none;
           }
         }
       
         // ========= LIGHT SLEEPER SECTION (slot classes) =========
       .broken-cd { 
-        display: none;
-
         position: absolute;
         object-fit: cover;
         		
         width: 552px;
         height: 576px;
         
-        --left:145svh; 
-        --scale:.35; 
-        --y:67svh;
-        --x:0svh; 
-        --rot:85deg; 
-        --z:29;
-        pointer-events:none;
-        
         @include respond(xs) {
-     
-          --left:66svh; 
-          --scale:.32; 
-          --y:44svh; 
-          --x:-11svh; 
-          --rot:85deg; 
-          --z:2;
-          pointer-events: none;
         }
       }
       
       .blue-star-1 { 
-        display: none;
-        
         position: absolute;
         object-fit: cover;
         
         width: 154;
         height: 147;
-        --left:185svh; 
-        --scale:.06; 
-        --y:85svh;
-        --x:0svh;
-        --rot:80deg;
-        --z:20;
-        pointer-events:none;
         
         @include respond(xs) {
-          --left:115svh; 
-          --scale:.04; 
-          --y:93svh;
-          --rot:80deg;
-          --z:20;
-          pointer-events:none;
         }
       }
       
       .blue-star-2 {
-        display: none;
-
         position: absolute;
         object-fit: cover;
         
         width: 154;
         height: 147;
-        
-        --left:187svh;
-        --scale:.13;
-        --y:95svh;
-        --x:0svh;
-        --rot:86deg; 
-        --z:20;
-        pointer-events:none;
       
         @include respond(xs) {
           display: none;
@@ -551,18 +481,11 @@ body {
       }
       
       .silver-star1-1 { 
-          position: absolute;
-          object-fit: cover;
-          
-          width: 214;
-          height: 210;
-        --left:189svh;
-        --scale:.17; 
-        --y:73svh;
-        --x:0svh;
-        --rot:83deg;
-        --z:20;
-        pointer-events:none;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 214;
+        height: 210;
       
         @include respond(xs) {
           --left:200svh;
