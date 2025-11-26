@@ -578,13 +578,23 @@ body {
       }
       
       .lightsleeper-visualizer {
-        --left:145svh;
-        --scale:.38;
-        --y:0svh; 
-        --x:10svh;
-        --rot:0deg;
-        --z:3; 
+        position: absolute;
+        object-fit: cover;
         
+        width: 1920px;
+        height: 1080px;
+        
+        width: 259.46vh;
+        height: 145.95vh;
+        
+        width: 259.46vh;
+        height: 145.95vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(.5) rotate(0deg);
+        transform-origin: center;
+      
         @include respond(xs) {
           --left:123svh;
           --y:50svh;
@@ -711,7 +721,7 @@ body {
         top: 0vh;
         left: 0vh;
         
-        transform: scale(1) rotate(0deg);
+        transform: scale(.5) rotate(0deg);
         transform-origin: center;
      
         @include respond(xs) {
@@ -801,6 +811,7 @@ body {
         
       
       .play-lightsleeper-mobile { 
+        display:none;
         position: absolute;
         object-fit: cover;
         
@@ -841,7 +852,7 @@ body {
         top: 0vh;
         left: 0vh;
         
-        transform: scale(1) rotate(0deg);
+        transform: scale(.5) rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
