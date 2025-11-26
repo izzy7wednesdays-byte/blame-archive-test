@@ -127,6 +127,9 @@ body {
         top: -34vh;
         left: -65vh;
 
+        transform: scale(0.95);     
+        transform-origin: center; 
+
        @include respond(xs) {
          display:none;
         }
@@ -147,6 +150,9 @@ body {
         height: 79.23vh;
         top: -34vh;
         left: -65vh;
+
+        transform: scale(0.95);     
+        transform-origin: center; 
           
         @include respond(xs) {
           display: flex;
