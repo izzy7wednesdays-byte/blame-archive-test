@@ -402,22 +402,23 @@ body {
       }
       
       .lfg { 
-      position: absolute;
-      object-fit: cover;
-      
-      width: 297;
-      height: 819px;
-      
-      width: 29.59vh;
-      height: 110.68vh;
-      
-      width: 29.59vh;
-      height: 110.68vh;
-      top: 0vh;
-      left: 10vh;
-      
-      transform: scale(1) rotate(0deg);
-      transform-origin: center;
+        display: flex;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 297;
+        height: 819px;
+        
+        width: 29.59vh;
+        height: 110.68vh;
+        
+        width: 29.59vh;
+        height: 110.68vh;
+        top: 0vh;
+        left: 10vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
        
         @include respond(xs) {
           display:none;
@@ -443,7 +444,8 @@ body {
         }
       }
         
-        .pink-arrow {           
+        .pink-arrow {    
+          display: flex;
           position: absolute;
           object-fit: cover;
           
