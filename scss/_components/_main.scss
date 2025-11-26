@@ -96,624 +96,631 @@ body {
         }
      }   
 .text-wrapper-4, .text-wrapper-5, .text-wrapper-6, .text-wrapper-7, .text-wrapper-8,.text-wrapper-9,.text-wrapper-10,.text-wrapper-11,.text-wrapper-12,.text-wrapper-13,.text-wrapper-14,.text-wrapper-15,.text-wrapper-16,.text-wrapper-17,.text-wrapper-18,.text-wrapper-19,.text-wrapper-20,.text-wrapper-21,.text-wrapper-22,.text-wrapper-23,.text-wrapper-24,.text-wrapper-25,.text-wrapper-26,.text-wrapper-27,.text-wrapper-28,.text-wrapper-29,.text-wrapper-30,.text-wrapper-31 { display: none;}
+   
     .special-message {
-        position: absolute;
-        object-fit: cover;
+      position: absolute;
+      object-fit: cover;
       
-        width: 1000px;
-        height: 625px;
-        top: 830px;
-        left: 42px;
-
-        width: 132.28vh;
-        height: 82.67vh;
-        top: 83.85vh;
-        left: 80vh;
-
-        width: 205vh;
-        height: 100vh;
-        top: -35vh;
-        left: -70vh;
-
-        transform: scale(0.86);     
-        transform-origin: center; 
-
-       @include respond(xs) {
-         display:none;
-        }
-      }
+      width: 1000px;
+      height: 625px;
+      top: 830px;
+      left: 42px;
       
-      .special-message-mobile {
-        display: none; 
-        position: absolute;
-        object-fit: cover;
-        
-        width: 772px;
-        height: 599px;
-        
-        width: 102.12vh;
-        height: 79.23vh;
+      width: 132.28vh;
+      height: 82.67vh;
+      top: 83.85vh;
+      left: 80vh;
 
-        width: 102.12vh;
-        height: 79.23vh;
-        top: -34vh;
-        left: -65vh;
+      width: 205vh;
+      height: 100vh;
+      top: -35vh;
+      left: -70vh;
+      z: 1;
 
-        transform: scale(0.95);     
-        transform-origin: center; 
-          
-        @include respond(xs) {
-          display: flex;
-          position: absolute;
-        }
+      transform: scale(0.86);     
+      transform-origin: center; 
+
+      @include respond(xs) {
+        display:none;
       }
+    }
+      
+    .special-message-mobile {
+      display: none; 
+      position: absolute;
+      object-fit: cover;
+      
+      width: 772px;
+      height: 599px;
+      
+      width: 102.12vh;
+      height: 79.23vh;
+
+      width: 102.12vh;
+      height: 79.23vh;
+      top: -34vh;
+      left: -65vh;
+      z: 1;
+
+      transform: scale(0.95);     
+      transform-origin: center; 
+        
+      @include respond(xs) {
+        display: flex;
+        position: absolute;
+      }
+    }
     
-      .izzymacarthur {
-        position: absolute;
-        object-fit: cover;
+    .izzymacarthur {
+      position: absolute;
+      object-fit: cover;
+    
+      width: 860px;
+      height: 156px;
+      top: 830px;
+      left: 42px;
       
-        width: 860px;
-        height: 156px;
-        top: 830px;
-        left: 42px;
-        
-        width: 113.7vh; 
-        height: 20.6vh;  
-        top: 18vh;     
-        left: -10vh; 
+      width: 113.7vh; 
+      height: 20.6vh;  
+      top: 18vh;     
+      left: -10vh; 
+      z: 2;
 
-        transform: scale(0.75);     
-        transform-origin: center; 
+      transform: scale(0.75);     
+      transform-origin: center; 
 
-        @include respond(xs) { 
-          display: none;
-        }
-      }
-      
-      .izzymacarthur-mobile {
+      @include respond(xs) { 
         display: none;
-
-        position: absolute;
-        object-fit: cover;
-        
-        width: 752px;
-        height: 200px;
-        
-        width: 101.62vh;
-        height: 27.03vh;
+      }
+    }
       
-        @include respond(xs) {
-          display: flex;
-        }
-      }
+    .izzymacarthur-mobile {
+      display: none;
 
-    .social, .social-sparkle-l, .social-sparkle-r,
-        .social-sparkle-l {
-          display:none;
-
-          pointer-events: none;
-          
-          @include respond(xs) { 
-            pointer-events: none;
-          }
-        }
-        
-      .instagram {
-        display:none;
-        --left: 28svh;
-        --scale: .04;
-        --y: 55svh;
-        --x: 8svh;
-        --rot: 0deg;
-        --z: 2;
-        
-        @include respond(xs) {
-        }
-      }
-        
-      .tiktok {
-        display:none;
-        
-        @include respond(xs) {
-
-        }
-      }
-        
-      .twitter {
-        display:none;
-        
-        @include respond(xs) {
-        }
-      }
-        
-      .discord {
-        display:none;
-        
-        @include respond(xs) {
-        }
-      }
-        
-      .spotify {
-        display:none;
-        --left: 53svh;
-        --scale: .04;
-        --y: 55svh;
-        --x: 8svh;
-        --rot: 0deg;
-        --z: 2;
-        
-        @include respond(xs) {
-          --left: 45svh;
-          --scale: .037;
-          --y: 18.75svh;
-          --x: 6.25svh;
-          --rot: 0deg;
-          --z: 2;
-        }
-      }
-        
-      .apple-music {
-        display:none;
-        
-        @include respond(xs) { 
-        }
-      }
+      position: absolute;
+      object-fit: cover;
+      
+      width: 752px;
+      height: 200px;
+      
+      width: 101.62vh;
+      height: 27.03vh;
+      z: 2;
     
-      .torn-note {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 989px;
-        height: 978px;
-
-        width: 133.65vh;
-        height: 132.16vh;
-        
-        width: 150vh;
-        height: 150vh;
-        top: 1vh;
-        left: -53vh;
-        
-        transform: scale(.34) rotate(0deg);
-        transform-origin: center;
-
-        @include respond(xs) { 
-        }
+      @include respond(xs) {
+        display: flex;
       }
+    }
+    
+    .social, .social-sparkle-r, .social-sparkle-l {
+      display:none;
+
+      pointer-events: none;
       
-      .tracklist {
-        position: absolute;
-        object-fit: cover;
-        		
-        width: 859px;
-        height: 799px;
-
-        width: 116.08vh;
-        height: 107.97vh;
-        		
-        width: 202vh;
-        height: 187.4vh;
-        top: -70vh;
-        left: 27vh;
-        		
-        transform: scale(0.23) rotate(7deg);
-        transform-origin: center center;
-        
-        @include respond(xs) {
-        }
+      @include respond(xs) { 
+        pointer-events: none;
       }
+    }
+        
+    .instagram {
+      display:none;
       
-      .the-scrapbook {
-        position: absolute;
-        object-fit: cover;
-        		
-        width: 804px;
-        height: 369px;
-
-        width: 108.65vh;
-        height: 49.86vh;
-        		
-        width: 106.4vh;
-        height: 48.8vh;
-        top: 37vh;
-        left: 30vh;
-        		
-        transform: scale(0.75) rotate(0deg);
-        transform-origin: center;
-        
-        @include respond(xs) {
-        }
+      @include respond(xs) {
       }
+    }
+        
+    .tiktok {
+      display:none;
+        
+      @include respond(xs) {
+        
+      }
+    }
+          
+    .twitter {
+      display:none;
       
-      .lfg { 
-        position: absolute;
-        object-fit: contain;
-        
-        width: 819px;
-        height: 297px;
-        
-        width: 110.68vh;
-        height: 29.59vh;
-        
-        width: 110.68vh;
-        height: 29.59vh;
-        top: 0vh;
-        left: 20vh;
-        
-        transform: scale(1) rotate(0deg);
-        transform-origin: center;
-       
-        @include respond(xs) {
-        }
+      @include respond(xs) {
       }
+    }
+          
+    .discord {
+      display:none;
       
-      .lfg-mobile { 
-        display:none;
-
-        position: absolute;
-        object-fit: cover;
-        
-        width: 378px;
-        height: 118px;
-        
-        width: 51.08vh;
-        height: 15.95vh;
-        
-        @include respond(xs) {
-          display: none;
-          position:absolute;
-          pointer-events: none;
-        }
+      @include respond(xs) {
       }
+    }
         
-        .pink-arrow {    
-          position: absolute;
-          object-fit: cover;
+    .spotify {
+      display:none;
+      
+      @include respond(xs) {
+      }
+    }
           
-          width: 1046px;
-          height: 407px;
+    .apple-music {
+      display:none;
+        
+      @include respond(xs) { 
+      }
+    }
+      
+    .torn-note {
+      position: absolute;
+      object-fit: cover;
+      
+      width: 989px;
+      height: 978px;
+
+      width: 133.65vh;
+      height: 132.16vh;
+      
+      width: 150vh;
+      height: 150vh;
+      top: 1vh;
+      left: -53vh;
+      
+      transform: scale(.34) rotate(0deg);
+      transform-origin: center;
+
+      @include respond(xs) { 
+      }
+    }
+      
+    .tracklist {
+      position: absolute;
+      object-fit: cover;
           
-          width: 141.49vh;
-          height: 55vh;
+      width: 859px;
+      height: 799px;
+
+      width: 116.08vh;
+      height: 107.97vh;
           
-          width: 141.49vh;
-          height: 55vh; 
-          top: 0vh;
-          left: 20vh;
+      width: 202vh;
+      height: 187.4vh;
+      top: -70vh;
+      left: 27vh;
           
-          transform: scale(1) rotate(0deg);
-          transform-origin: center;
+      transform: scale(0.23) rotate(7deg);
+      transform-origin: center center;
+      
+      @include respond(xs) {
+      }
+    }
+        
+    .the-scrapbook {
+      position: absolute;
+      object-fit: cover;
           
-          @include respond(xs) {
-          }
-        }
+      width: 804px;
+      height: 369px;
+
+      width: 108.65vh;
+      height: 49.86vh;
+          
+      width: 106.4vh;
+      height: 48.8vh;
+      top: 37vh;
+      left: 30vh;
+          
+      transform: scale(0.75) rotate(0deg);
+      transform-origin: center;
+      
+      @include respond(xs) {
+      }
+    }
+      
+    .lfg { 
+      position: absolute;
+      object-fit: contain;
+      
+      width: 819px;
+      height: 297px;
+      
+      width: 110.68vh;
+      height: 29.59vh;
+      
+      width: 110.68vh;
+      height: 29.59vh;
+      top: 0vh;
+      left: 20vh;
+      
+      transform: scale(1) rotate(0deg);
+      transform-origin: center;
+     
+      @include respond(xs) {
+      }
+    }
+      
+    .lfg-mobile { 
+      display:none;
+
+      position: absolute;
+      object-fit: cover;
+      
+      width: 378px;
+      height: 118px;
+      
+      width: 51.08vh;
+      height: 15.95vh;
+      
+      @include respond(xs) {
+        display: none;
+        position:absolute;
+        pointer-events: none;
+      }
+    }
+        
+    .pink-arrow {    
+      position: absolute;
+      object-fit: cover;
+      
+      width: 1046px;
+      height: 407px;
+      
+      width: 141.49vh;
+      height: 55vh;
+      
+      width: 141.49vh;
+      height: 55vh; 
+      top: 0vh;
+      left: 20vh;
+      
+      transform: scale(1) rotate(0deg);
+      transform-origin: center;
+      
+      @include respond(xs) {
+      }
+    }
       
         // ========= LIGHT SLEEPER SECTION (slot classes) =========
-      .broken-cd { 
-        position: absolute;
-        object-fit: cover;
-        
-        width: 552px;
-        height: 576px;
-        
-        width: 74.59vh;
-        height: 77.84vh;
+    .broken-cd { 
+      position: absolute;
+      object-fit: cover;
+      
+      width: 552px;
+      height: 576px;
+      
+      width: 74.59vh;
+      height: 77.84vh;
+  
+      width: 73.03vh;
+      height: 76.19vh;
+      top: -14vh;
+      left: 140vh;
+  
+      transform: scale(.50) rotate(87deg);
+      transform-origin: center;
+      
+      @include respond(xs) {
+      }
+    }
+      
+    .blue-star-1 { 
+      position: absolute;
+      object-fit: cover;
+      
+      width: 154px;
+      height: 147px;
+      
+      width: 20.81vh;
+      height: 19.86vh;
+      
+      width: 20.81vh;
+      height: 19.86vh;
+      top: 5vh;
+      left: 190vh;
 
-        width: 73.03vh;
-        height: 76.19vh;
-        top: -14vh;
-        left: 140vh;
+      transform: scale(0.38) rotate(15deg);
+      transform-origin: center;
+      
+      @include respond(xs) {
+      }
+    }
+      
+    .blue-star-2 {
+      position: absolute;
+      object-fit: cover;
+      
+      width: 154px;
+      height: 147px;
+      
+      width: 20.81vh;
+      height: 19.86vh;
+      
+      width: 20.81vh;
+      height: 19.86vh;
+      top: -7vh;
+      left: 205vh;
 
-        transform: scale(.50) rotate(87deg);
-        transform-origin: center;
-        
-        @include respond(xs) {
-        }
+      transform: scale(0.70) rotate(20deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
+        display: none;
       }
+    }
       
-      .blue-star-1 { 
-        position: absolute;
-        object-fit: cover;
-        
-        width: 154px;
-        height: 147px;
-        
-        width: 20.81vh;
-        height: 19.86vh;
-        
-        width: 20.81vh;
-        height: 19.86vh;
-        top: 5vh;
-        left: 190vh;
-
-        transform: scale(0.38) rotate(15deg);
-        transform-origin: center;
-        
-        @include respond(xs) {
-        }
+    .silver-star1-1 { 
+      position: absolute;
+      object-fit: cover;
+      
+      width: 214px;
+      height: 210px;
+      
+      width: 28.82vh;
+      height: 28.38vh;
+      
+      width: 28.82vh;
+      height: 28.38vh;
+      top: 15vh;
+      left: 207vh;
+      
+      transform: scale(.8) rotate(14deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .blue-star-2 {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 154px;
-        height: 147px;
-        
-        width: 20.81vh;
-        height: 19.86vh;
-        
-        width: 20.81vh;
-        height: 19.86vh;
-        top: -7vh;
-        left: 205vh;
-
-        transform: scale(0.70) rotate(20deg);
-        transform-origin: center;
+    .lightsleeper-title { 
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          display: none;
-        }
+      width: 4411px;
+      height: 570px;
+      
+      width: 598.08vh;
+      height: 77.03vh;
+      
+      width: 598.08vh;
+      height: 77.03vh;
+      top: 0vh;
+      left: 0vh;
+      
+      transform: scale(1) rotate(0deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .silver-star1-1 { 
-        position: absolute;
-        object-fit: cover;
-        
-        width: 214px;
-        height: 210px;
-        
-        width: 28.82vh;
-        height: 28.38vh;
-        
-        width: 28.82vh;
-        height: 28.38vh;
-        top: 15vh;
-        left: 207vh;
-        
-        transform: scale(.8) rotate(14deg);
-        transform-origin: center;
+    .lightsleeper-visualizer {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-        }
+      width: 1920px;
+      height: 1080px;
+      
+      width: 259.46vh;
+      height: 145.95vh;
+      
+      width: 259.46vh;
+      height: 145.95vh;
+      top: 10vh;
+      left: 50vh;
+      
+      transform: scale(.20) rotate(0deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .lightsleeper-title { 
-        position: absolute;
-        object-fit: cover;
-        
-        width: 4411px;
-        height: 570px;
-        
-        width: 598.08vh;
-        height: 77.03vh;
-        
-        width: 598.08vh;
-        height: 77.03vh;
-        top: 0vh;
-        left: 0vh;
-        
-        transform: scale(1) rotate(0deg);
-        transform-origin: center;
+    .about-lightsleeper { 
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-        }
-      }
+      width: 300px;
+      height: 300px;
       
-      .lightsleeper-visualizer {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 1920px;
-        height: 1080px;
-        
-        width: 259.46vh;
-        height: 145.95vh;
-        
-        width: 259.46vh;
-        height: 145.95vh;
-        top: 10vh;
-        left: 50vh;
-        
-        transform: scale(.20) rotate(0deg);
-        transform-origin: center;
+      width: 40.54vh;
+      height: 40.54vh;
       
-        @include respond(xs) {
-        }
-      }
+      width: 40.54vh;
+      height: 40.54vh;
+      top: 0vh;
+      left: 227vh;
       
-      .about-lightsleeper { 
-        position: absolute;
-        object-fit: cover;
-        
-        width: 300px;
-        height: 300px;
-        
-        width: 40.54vh;
-        height: 40.54vh;
-        
-        width: 40.54vh;
-        height: 40.54vh;
-        top: 0vh;
-        left: 227vh;
-        
-        transform: scale(1.05) rotate(-4deg);
-        transform-origin: center;
-        
-        @include respond(xs) {
-          display: none !important;
-        }
-      }
+      transform: scale(1.05) rotate(-4deg);
+      transform-origin: center;
       
-      .about-lightsleeper-mobile { 
+      @include respond(xs) {
         display: none !important;
+      }
+    }
+    
+    .about-lightsleeper-mobile { 
+      display: none !important;
 
-        position: absolute;
-        object-fit: cover;
-        
-        width: 572px;
-        height: 580px;
-        
-        width: 77.30vh;
-        height: 78.78vh;
-        
-        width: 77.30vh;
-        height: 78.78vh;
-        top: 0vh;
-        left: 0vh;
-        
-        transform: scale(1) rotate(0deg);
-        transform-origin: center;
-        
-        @include respond(xs) {
-          display: flex !important;
-          
-          pointer-events:auto;
-        }
-      }
+      position: absolute;
+      object-fit: cover;
       
-      .autumn-text {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 652px;
-        height: 546px;
-        
-        width: 88.11vh;
-        height: 73.78vh;
-        
-        width: 88.11vh;
-        height: 73.78vh;
-        top: 22vh;
-        left: 196vh;
-        
-        transform: scale(.4) rotate(7deg);
-        transform-origin: center;
-        
-        @include respond(xs) {
-        }
-      }
+      width: 572px;
+      height: 580px;
       
-      .blame-it-notesapp {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 710px;
-        height: 330px;
-        
-        width: 95.95vh;
-        height:44.59vh;
-        
-        width: 95.95vh;
-        height:44.59vh;
-        top: 63vh;
-        left: 188vh;
-        
-        transform: scale(.56) rotate(-3deg);
-        transform-origin: center;
-        
-        @include respond(xs) {
-        }
-      }
+      width: 77.30vh;
+      height: 78.78vh;
       
-      .lightsleeper-studio { 
-        position: absolute;
-        object-fit: cover;
-        
-        width: 1080px;
-        height: 1920px;
-        
-        width: 145.95vh;
-        height: 259.46vh;
-        
-        width: 145.95vh;
-        height: 259.46vh;
-        top: -108vh;
-        left: 209vh;
-        
-        transform: scale(.16) rotate(0deg);
-        transform-origin: center;
-     
-        @include respond(xs) {
-        }
-      }
+      width: 77.30vh;
+      height: 78.78vh;
+      top: 0vh;
+      left: 0vh;
       
-      .silver-star1-2 {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 214px;
-        height: 210px;
-        
-        width: 28.82vh;
-        height: 28.38vh;
-        
-        width: 28.82vh;
-        height: 28.38vh;
-        top: 60vh;
-        left: 250vh;
-        
-        transform: scale(0.80) rotate(10deg);
-        transform-origin: center;
-        
-        @include respond(xs) {
-        }
-      }
+      transform: scale(1) rotate(0deg);
+      transform-origin: center;
       
-      .lightsleeper-chords { 
-        position: absolute;
-        object-fit: cover;
+      @include respond(xs) {
+        display: flex !important;
         
-        width: 200px;
-        height: 250px;
-        
-        width: 27.027vh;
-        height: 33.78vh;
-        
-        width: 27.027vh;
-        height: 33.78vh;
-        top: 0vh;
-        left: 293vh;
-        
-        transform: scale(0.80) rotate(0deg);
-        transform-origin: center;
-                     
-        @include respond(xs) {
-        }
+        pointer-events:auto;
       }
+    }
       
-      .text-wrapper { 
-        position: absolute;
-        font-weight: 400;
-        color: #4C58E9;
-        font-size: 15px;
-        letter-spacing: 0;
-        line-height: normal;
-        text-align: center;
-        
-        width: 260px;
-        top: 820px;
-        left: 4574px;
-        
-        width: 26vh;
-        top: 82vh;
-        left: 457.4vh;
-        
-        width: 30.7vh;
-        top: 3vh;
-        left: 309vh;
+    .autumn-text {
+      position: absolute;
+      object-fit: cover;
+      
+      width: 652px;
+      height: 546px;
+      
+      width: 88.11vh;
+      height: 73.78vh;
+      
+      width: 88.11vh;
+      height: 73.78vh;
+      top: 22vh;
+      left: 196vh;
+      
+      transform: scale(.4) rotate(7deg);
+      transform-origin: center;
+      
+      @include respond(xs) {
+      }
+    }
+    
+    .blame-it-notesapp {
+      position: absolute;
+      object-fit: cover;
+      
+      width: 710px;
+      height: 330px;
+      
+      width: 95.95vh;
+      height:44.59vh;
+      
+      width: 95.95vh;
+      height:44.59vh;
+      top: 63vh;
+      left: 188vh;
+      
+      transform: scale(.56) rotate(-3deg);
+      transform-origin: center;
+      
+      @include respond(xs) {
+      }
+    }
+      
+    .lightsleeper-studio { 
+      position: absolute;
+      object-fit: cover;
+      
+      width: 1080px;
+      height: 1920px;
+      
+      width: 145.95vh;
+      height: 259.46vh;
+      
+      width: 145.95vh;
+      height: 259.46vh;
+      top: -108vh;
+      left: 209vh;
+      
+      transform: scale(.16) rotate(0deg);
+      transform-origin: center;
+   
+      @include respond(xs) {
+      }
+    }
+      
+    .silver-star1-2 {
+      position: absolute;
+      object-fit: cover;
+      
+      width: 214px;
+      height: 210px;
+      
+      width: 28.82vh;
+      height: 28.38vh;
+      
+      width: 28.82vh;
+      height: 28.38vh;
+      top: 60vh;
+      left: 250vh;
+      
+      transform: scale(0.80) rotate(10deg);
+      transform-origin: center;
+      
+      @include respond(xs) {
+      }
+    }
+      
+    .lightsleeper-chords { 
+      position: absolute;
+      object-fit: cover;
+      
+      width: 200px;
+      height: 250px;
+      
+      width: 27.027vh;
+      height: 33.78vh;
+      
+      width: 27.027vh;
+      height: 33.78vh;
+      top: 0vh;
+      left: 293vh;
+      
+      transform: scale(0.80) rotate(0deg);
+      transform-origin: center;
+                   
+      @include respond(xs) {
+      }
+    }
+      
+    .text-wrapper { 
+      position: absolute;
+      font-weight: 400;
+      color: #4C58E9;
+      font-size: 15px;
+      letter-spacing: 0;
+      line-height: normal;
+      text-align: center;
+      
+      width: 260px;
+      top: 820px;
+      left: 4574px;
+      
+      width: 26vh;
+      top: 82vh;
+      left: 457.4vh;
+      
+      width: 30.7vh;
+      top: 3vh;
+      left: 309vh;
+      
+      @include respond(xs) {
+        display:none;
+      }
+    }
 
-        
-       // --ff: "Manic"; 
-       // --ta: center; 
-
-        
-        @include respond(xs) {
-          display:none;
-        }
+    .play-lightsleeper-desktop {
+      position: absolute;
+      object-fit: cover;
+      
+      width: 1114px;
+      height: 1114px;
+      
+      width: 150.54vh;
+      height: 150.54vh;
+      
+      width: 150.54vh;
+      height: 150.54vh;
+      top: -25vh;
+      left: 235vh;
+      
+      transform: scale(0.2) rotate(0deg);
+      transform-origin: center;
+      
+      @include respond(xs) {
+        display: none;
       }
-
-      .play-lightsleeper-desktop {
+    }
+           
+    .play-lightsleeper-mobile { 
+      display:none;
+      
+      @include respond(xs) {
         position: absolute;
         object-fit: cover;
         
@@ -725,614 +732,506 @@ body {
         
         width: 150.54vh;
         height: 150.54vh;
-        top: -25vh;
-        left: 235vh;
+        top: 0vh;
+        left: 270vh;
         
-        transform: scale(0.2) rotate(0deg);
+        transform: scale(0.35) rotate(0deg);
         transform-origin: center;
-        
-        @include respond(xs) {
-          display: none;
-        }
       }
-           
-      .play-lightsleeper-mobile { 
-        display:none;
-        
-        @include respond(xs) {
-          position: absolute;
-          object-fit: cover;
-          
-          width: 1114px;
-          height: 1114px;
-          
-          width: 150.54vh;
-          height: 150.54vh;
-          
-          width: 150.54vh;
-          height: 150.54vh;
-          top: 0vh;
-          left: 270vh;
-          
-          transform: scale(0.35) rotate(0deg);
-          transform-origin: center;
-        }
-      }
+    }
    
-      .broken-breathing {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 1920px;
-        height: 1080px;
-        
-        width: 259.46vh;
-        height: 145.95vh;
-        
-        width: 259.46vh;
-        height: 145.95vh;
-        top: 10vh;
-        left: 163vh;
-        
-        transform: scale(.20) rotate(0deg);
-        transform-origin: center;
+    .broken-breathing {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left:115svh;
-          --y:1svh;
-          --scale: .2;
-        }
-      }
+      width: 1920px;
+      height: 1080px;
       
-      .lightsleeper-voicememo {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 554px;
-        height: 547px;
-        
-        width: 74.86vh;
-        height: 73.92vh;
-        
-        width: 74.86vh;
-        height: 73.92vh;
-        top: 15vh;
-        left: 308vh;
-        
-        transform: scale(.4) rotate(0deg);
-        transform-origin: center;
-        
-        @include respond(xs) {
-          --left:155svh;
-          --scale:.21;
-          --y:73svh;
-          --z:40;
-        }
+      width: 259.46vh;
+      height: 145.95vh;
+      
+      width: 259.46vh;
+      height: 145.95vh;
+      top: 10vh;
+      left: 163vh;
+      
+      transform: scale(.20) rotate(0deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
+      
+    .lightsleeper-voicememo {
+      position: absolute;
+      object-fit: cover;
+      
+      width: 554px;
+      height: 547px;
+      
+      width: 74.86vh;
+      height: 73.92vh;
+      
+      width: 74.86vh;
+      height: 73.92vh;
+      top: 15vh;
+      left: 308vh;
+      
+      transform: scale(.4) rotate(0deg);
+      transform-origin: center;
+      
+      @include respond(xs) {
+      }
+    }
       
       // ========= EXIT WOUNDS SECTION (slot classes) =========
       
-      .exitwounds-lyricvideo {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 1920px;
-        height: 1080px;
-        
-        width: 259.46vh;
-        height: 145.95vh;
-        
-        width: 259.46vh;
-        height: 145.95vh;
-        top: -55vh;
-        left: 218vh;
-        
-        transform: scale(.20) rotate(0deg);
-        transform-origin: center;
+    .exitwounds-lyricvideo {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left:210svh;
-          --scale: .27;
-          --y:70svh;
-        }
+      width: 1920px;
+      height: 1080px;
+      
+      width: 259.46vh;
+      height: 145.95vh;
+      
+      width: 259.46vh;
+      height: 145.95vh;
+      top: -55vh;
+      left: 218vh;
+      
+      transform: scale(.20) rotate(0deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .star-trio-1 {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 264px;
-        height: 425px;
-        
-        width: 35.68vh;
-        height: 57.43vh;
-        
-        width: 35.68vh;
-        height: 57.43vh;
-        top: 25vh;
-        left: 355vh;
-        
-        transform: scale(.52) rotate(195deg);
-        transform-origin: center;
+    .star-trio-1 {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left:200svh;
-          --scale:.18;
-          --y:48svh;
-        }
+      width: 264px;
+      height: 425px;
+      
+      width: 35.68vh;
+      height: 57.43vh;
+      
+      width: 35.68vh;
+      height: 57.43vh;
+      top: 25vh;
+      left: 355vh;
+      
+      transform: scale(.52) rotate(195deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .exitwounds-title {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 857px;
-        height: 429px;
-        
-        width: 115.81vh;
-        height: 57.97vh;
-        
-        width: 115.81vh;
-        height: 57.97vh;
-        top: 55vh;
-        left: 300vh;
-        
-        transform: scale(0.56) rotate(-10deg);
-        transform-origin: center;
-        
-        @include respond(xs) {
-          --left:200svh;
-          --scale:.25;
-        }
+    .exitwounds-title {
+      position: absolute;
+      object-fit: cover;
+      
+      width: 857px;
+      height: 429px;
+      
+      width: 115.81vh;
+      height: 57.97vh;
+      
+      width: 115.81vh;
+      height: 57.97vh;
+      top: 55vh;
+      left: 300vh;
+      
+      transform: scale(0.56) rotate(-10deg);
+      transform-origin: center;
+      
+      @include respond(xs) {
       }
+    }
       
-      .play-exitwounds {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 592px;
-        height: 440px;
-        
-        width: 80vh;
-        height: 59.73vh;
-        top: -12vh;
-        left: 360vh;
-                
-        transform: scale(0.45) rotate(13deg);
-        transform-origin: center;
-        
-        @include respond(xs) {
-        }
+    .play-exitwounds {
+      position: absolute;
+      object-fit: cover;
+      
+      width: 592px;
+      height: 440px;
+      
+      width: 80vh;
+      height: 59.73vh;
+      top: -12vh;
+      left: 360vh;
+              
+      transform: scale(0.45) rotate(13deg);
+      transform-origin: center;
+      
+      @include respond(xs) {
       }
+    }
       
-      .text-wrapper-2 {
-        position: absolute;
-        font-weight: 400;
-        color: #4C58E9;
-        font-size: 15px;
-        letter-spacing: 0;
-        line-height: normal;
-        text-align: center;
+    .text-wrapper-2 {
+      position: absolute;
+      font-weight: 400;
+      color: #4C58E9;
+      font-size: 15px;
+      letter-spacing: 0;
+      line-height: normal;
+      text-align: center;
 
-        width: 260px;
-        top: 820px;
-        left: 4574px;
-        
-        width: 26vh;
-        top: 82vh;
-        left: 457.4vh;
-        
-        width: 30.7vh;
-        top: 3vh;
-        left: 30vh;
+      width: 260px;
+      top: 820px;
+      left: 4574px;
       
-        @include respond(xs) {
-        }
+      width: 26vh;
+      top: 82vh;
+      left: 457.4vh;
+      
+      width: 30.7vh;
+      top: 3vh;
+      left: 30vh;
+    
+      @include respond(xs) {
       }
+    }
       
-      .missed-calls {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 672px;
-        height: 736px;
-        
-        width: 93.51vh;
-        height: 99.46vh;
-        top: 7vh;
-        left: 350vh;
-                
-        transform: scale(0.30) rotate(20deg);
-        transform-origin: center;
+    .missed-calls {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left: 217svh;    
-          --scale:.28;
-          --y: 28svh;
-        }
+      width: 672px;
+      height: 736px;
+      
+      width: 93.51vh;
+      height: 99.46vh;
+      top: 7vh;
+      left: 350vh;
+              
+      transform: scale(0.30) rotate(20deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .about-exitwounds {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 591px;
-        height: 881px;
-        
-        width: 79.86vh;
-        height: 119.05vh;
-        top: -20vh;
-        left: 404vh;
-                
-        transform: scale(0.30) rotate(-10deg);
-        transform-origin: center;
+    .about-exitwounds {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left: 237svh;
-          --scale:.27;
-          --y: 37svh;
-        }
+      width: 591px;
+      height: 881px;
+      
+      width: 79.86vh;
+      height: 119.05vh;
+      top: -20vh;
+      left: 404vh;
+              
+      transform: scale(0.30) rotate(-10deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .exitwounds-animation {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 2160px;
-        height: 1080px;
-        
-        width: 291.89vh;
-        height: 145.95vh;
-        
-        width: 291.89vh;
-        height: 145.95vh;
-        top: -10vh;
-        left: 300vh;
-                
-        transform: scale(0.20) rotate(0deg);
-        transform-origin: center;
+    .exitwounds-animation {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          display:none;
-        }
-      }
+      width: 2160px;
+      height: 1080px;
       
-      .exitwounds-animation-mobile {
+      width: 291.89vh;
+      height: 145.95vh;
+      
+      width: 291.89vh;
+      height: 145.95vh;
+      top: -10vh;
+      left: 300vh;
+              
+      transform: scale(0.20) rotate(0deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
         display:none;
-        position: absolute;
-        object-fit: cover;
-        
-        width: 833px;
-        height: 192px;
-        
-        width: 112.56vh;
-        height: 25.95vh;
-        top: 400vh;
-        left: 0vh;
-                
-        transform: scale(1) rotate(0deg);
-        transform-origin: center;
-      
-        @include respond(xs) {
-          display: flex;
-          --left:241svh;
-          --scale: .13;
-          --y: 22svh;
-          --rot:0deg;
-        }
       }
+    }
       
-      .exitwounds-voicememo {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 366px;
-        height: 434px;
-        
-        width: 49.56vh;
-        height: 58.65vh;
+    .exitwounds-animation-mobile {
+      display:none;
+      position: absolute;
+      object-fit: cover;
+      
+      width: 833px;
+      height: 192px;
+      
+      width: 112.56vh;
+      height: 25.95vh;
+      top: 400vh;
+      left: 0vh;
+              
+      transform: scale(1) rotate(0deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
+      }
+    }
+      
+    .exitwounds-voicememo {
+      position: absolute;
+      object-fit: cover;
+      
+      width: 366px;
+      height: 434px;
+      
+      width: 49.56vh;
+      height: 58.65vh;
 
-        width: 48.00vh;
-        height: 58.65vh;
-        top: 56vh;
-        left: 390vh;
-                
-        transform: scale(0.38) rotate(0deg);
-        transform-origin: center;
+      width: 48.00vh;
+      height: 58.65vh;
+      top: 56vh;
+      left: 390vh;
+              
+      transform: scale(0.38) rotate(0deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
+      }
+    }
       
-        @include respond(xs) {
-          --left:255svh;
-          --scale: .18;
-        }
-      }  
-      
-      .text-wrapper-3 {
-        position: absolute;
-        font-weight: 400;
-        color: #4C58E9;
-        font-size: 15px;
-        letter-spacing: 0;
-        line-height: normal;
-        text-align: center;
+    .text-wrapper-3 {
+      position: absolute;
+      font-weight: 400;
+      color: #4C58E9;
+      font-size: 15px;
+      letter-spacing: 0;
+      line-height: normal;
+      text-align: center;
 
-        width: 260px;
-        top: 820px;
-        left: 4574px;
-        
-        width: 26vh;
-        top: 82vh;
-        left: 457.4vh;
-        
-        width: 30.7vh;
-        top: 0vh;
-        left: 30vh;
+      width: 260px;
+      top: 820px;
+      left: 4574px;
       
-        @include respond(xs) {
-        }
+      width: 26vh;
+      top: 82vh;
+      left: 457.4vh;
+      
+      width: 30.7vh;
+      top: 0vh;
+      left: 30vh;
+    
+      @include respond(xs) {
       }
+    }
       
-      .click-me-arrow {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 417px;
-        height: 209px;
-        
-        width: 64.46vh;
-        height: 28.24vh;
-        
-        width: 64.46vh;
-        height: 28.24vh;
-        top: 68vh;
-        left: 398vh;
-                
-        transform: scale(.16) rotate(-8deg);
-        transform-origin: center;
+    .click-me-arrow {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left:274svh;
-        }
+      width: 417px;
+      height: 209px;
+      
+      width: 64.46vh;
+      height: 28.24vh;
+      
+      width: 64.46vh;
+      height: 28.24vh;
+      top: 68vh;
+      left: 398vh;
+              
+      transform: scale(.16) rotate(-8deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .text-wrapper-4 {
-        --left: 409svh;
-        --scale: .19;
-        --y: 80svh;
-        --x: 0svh;
-        --rot: 7deg;
-        --z: 8;
-        pointer-events: none;
-      
-        --ff: "Manic";
-        --ta: center;
-        --fw: 400;
-        --fs-mul: .15;
-        --text-color: #4CA8E9;
-      
-        @include respond(xs) {
-          --left:286svh;
-          --scale:.15;
-          --y:76svh;
-        }
+    .text-wrapper-4 {
+    
+      @include respond(xs) {
       }
+    }
       
-      .substack-point-arrow {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 570px;
-        height: 332px;
-        
-        width: 77.00vh;
-        height: 44.86vh;
-
-        width: 120.00vh;
-        height: 44.86vh;
-        top: 0vh;
-        left: 410vh;
-                
-        transform: scale(0.3) rotate(0deg);
-        transform-origin: center;
+    .substack-point-arrow {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left: 292svh;
-          --scale: .06;
-          --rot: 11deg;
-          --y: 65svh;
-        }
+      width: 570px;
+      height: 332px;
+      
+      width: 77.00vh;
+      height: 44.86vh;
+  
+      width: 120.00vh;
+      height: 44.86vh;
+      top: 0vh;
+      left: 410vh;
+              
+      transform: scale(0.3) rotate(0deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .scorpio-constellation {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 678px;
-        height: 594px;
-        
-        width: 91.62vh;
-        height: 80.27vh;
-        top: 13vh;
-        left: 438vh;
-                
-        transform: scale(0.40) rotate(20deg);
-        transform-origin: center;
+    .scorpio-constellation {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left: 270svh;
-          --scale: .22;
-          --y: 42svh;
-        }
+      width: 678px;
+      height: 594px;
+      
+      width: 91.62vh;
+      height: 80.27vh;
+      top: 13vh;
+      left: 438vh;
+              
+      transform: scale(0.40) rotate(20deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .text-wrapper-5 {
-        --left: 418svh;
-        --scale: .12;
-        --y: 1svh;
-        --x: 0svh;
-        --rot: 0deg;
-        --z: 8;
-        pointer-events: none;
-      
-        --ff: "Manic";
-        --fw: 400;
-        --fs-mul: .21;
-        --ta: center;
-        --text-color: #4CA8E9;
-        --tt: uppercase;
-      
-        @include respond(xs) {
-          --left: 282svh;
-          --scale: .10;
-          --y:0svh;
-        }
+    .text-wrapper-5 {
+    
+      @include respond(xs) {
       }
+    }
       
-      .subscribe-arrow {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 535px;
-        height: 264px;
-        
-        width: 72.31vh;
-        height: 34.68vh;
-        top: 70vh;
-        left: 460vh;
-                
-        transform: scale(.13) rotate(-40deg);
-        transform-origin: center;
+    .subscribe-arrow {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left: 298svh;
-          --scale: 0.035;
-          --rot: -57deg;
-          --y:10svh;
-        }
+      width: 535px;
+      height: 264px;
+      
+      width: 72.31vh;
+      height: 34.68vh;
+      top: 70vh;
+      left: 460vh;
+              
+      transform: scale(.13) rotate(-40deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .subscribe-button {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 386px;
-        height: 176px;
-        
-        width: 52.16vh;
-        height: 23.78vh;
-        top: 70vh;
-        left: 490vh;
-                
-        transform: scale(0.5) rotate(-2deg);
-        transform-origin: center;
+    .subscribe-button {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left: 302svh;
-          --scale: .11;
-          --y:14svh;
-        }
+      width: 386px;
+      height: 176px;
+      
+      width: 52.16vh;
+      height: 23.78vh;
+      top: 70vh;
+      left: 490vh;
+              
+      transform: scale(0.5) rotate(-2deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .exitwounds-substackflier {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 860px;
-        height: 1112px;
-        
-        width: 116.22vh;
-        height: 150.27vh;
-        top: -37vh;
-        left: 480vh;
-                
-        transform: scale(0.50) rotate(9deg);
-        transform-origin: center;
+    .exitwounds-substackflier {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left: 303svh;
-          --scale: 0.7;
-          --y: 30svh;
-        }
+      width: 860px;
+      height: 1112px;
+      
+      width: 116.22vh;
+      height: 150.27vh;
+      top: -37vh;
+      left: 480vh;
+              
+      transform: scale(0.50) rotate(9deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .silver-star3-1 {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 165px;
-        height: 160px;
-        
-        width: 22.31vh;
-        height: 21.62vh;
-        top: 400vh;
-        left: 0vh;
-                
-        transform: scale(1) rotate(0deg);
-        transform-origin: center;
+    .silver-star3-1 {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          display:none;
-        }
+      width: 165px;
+      height: 160px;
+      
+      width: 22.31vh;
+      height: 21.62vh;
+      top: 400vh;
+      left: 0vh;
+              
+      transform: scale(1) rotate(0deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
+        display:none;
       }
+    }
       
-      .blue-star-3 {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        
-        width: 20.81vh;
-        height: 19.86vh;
-        top: 400vh;
-        left: 0vh;
-                
-        transform: scale(1) rotate(0deg);
-        transform-origin: center;
+    .blue-star-3 {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left:315svh;
-        }
+      width: 154;
+      height: 147;
+      
+      width: 20.81vh;
+      height: 19.86vh;
+      top: 400vh;
+      left: 0vh;
+              
+      transform: scale(1) rotate(0deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .silver-star3-2 {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 165px;
-        height: 160px;
-        
-        width: 22.31vh;
-        height: 21.62vh;
-        top: 400vh;
-        left: 0vh;
-                
-        transform: scale(1) rotate(0deg);
-        transform-origin: center;
+    .silver-star3-2 {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left:323svh;
-        }
+      width: 165px;
+      height: 160px;
+      
+      width: 22.31vh;
+      height: 21.62vh;
+      top: 400vh;
+      left: 0vh;
+              
+      transform: scale(1) rotate(0deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
-      .silver-star3-3 {
-        position: absolute;
-        object-fit: cover;
-        
-        width: 165px;
-        height: 160px;
-        
-        width: 22.31vh;
-        height: 21.62vh;
-        top: 400vh;
-        left: 0vh;
-                
-        transform: scale(1) rotate(0deg);
-        transform-origin: center;
+    .silver-star3-3 {
+      position: absolute;
+      object-fit: cover;
       
-        @include respond(xs) {
-          --left:335svh;
-        }
+      width: 165px;
+      height: 160px;
+      
+      width: 22.31vh;
+      height: 21.62vh;
+      top: 400vh;
+      left: 0vh;
+              
+      transform: scale(1) rotate(0deg);
+      transform-origin: center;
+    
+      @include respond(xs) {
       }
+    }
       
       // ========= LANDMINES SECTION =========
       
