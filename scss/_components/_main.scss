@@ -725,10 +725,10 @@ body {
         
         width: 150.54vh;
         height: 150.54vh;
-        top: 0vh;
-        left: 270vh;
+        top: -25vh;
+        left: 235vh;
         
-        transform: scale(0.35) rotate(0deg);
+        transform: scale(0.2) rotate(0deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -986,10 +986,10 @@ body {
         
         width: 291.89vh;
         height: 145.95vh;
-        top: 400vh;
-        left: 0vh;
+        top: -10vh;
+        left: 300vh;
                 
-        transform: scale(1) rotate(0deg);
+        transform: scale(0.20) rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
