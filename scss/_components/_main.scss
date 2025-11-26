@@ -564,13 +564,22 @@ body {
       }
       
       .lightsleeper-title { 
-        --left:159svh;
-        --scale:.42; 
-        --y:26svh; 
-        --x:-4svh; 
-        --rot:-5deg;
-        --z:4; 
-        pointer-events: none;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 552px;
+        height: 576px;
+        
+        width: 74.59vh;
+        height: 77.84vh;
+
+        width: 73.03vh;
+        height: 76.19vh;
+        top: -14vh;
+        left: 140vh;
+
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:102svh; 
