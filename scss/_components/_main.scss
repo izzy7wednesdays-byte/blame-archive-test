@@ -697,14 +697,23 @@ body {
       }
       
       .lightsleeper-studio { 
-        --left:247svh;
-        --scale:.40;
-        --ar:9/16;
-        --y:57svh;
-        --x:0svh; 
-        --rot:0deg;
-        --z:41;
+        position: absolute;
+        object-fit: cover;
         
+        width: 1080px;
+        height: 1920px;
+        
+        width: 145.95vh;
+        height: 259.46vh;
+        
+        width: 145.95vh;
+        height: 259.46vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+     
         @include respond(xs) {
           --left:185svh;
           --y:57svh;    
@@ -749,16 +758,12 @@ body {
         
         width: 27.027vh;
         height: 33.78vh;
-        
-        width: 28.82vh;
-        height: 28.38vh;
         top: 0vh;
         left: 0vh;
         
         transform: scale(1) rotate(0deg);
         transform-origin: center;
-                
-        
+                     
         @include respond(xs) {
           --left:177svh;
           --scale: .23;
@@ -788,12 +793,6 @@ body {
 
       .play-lightsleeper-desktop {
         display:none;
-        --left:262svh;
-        --scale:.35;
-        --y:32svh;
-        --x:0svh;
-        --rot:0deg;
-        --z:40;
         
         @include respond(xs) {
           display: none;
@@ -802,10 +801,22 @@ body {
         
       
       .play-lightsleeper-mobile { 
-        display: none;
-
+        position: absolute;
+        object-fit: cover;
+        
         width: 500px;
         height: 498px;
+        
+        width: 67.57vh;
+        height: 67.297vh;
+        
+        width: 67.57vh;
+        height: 67.297vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
     
         @include respond(xs) {
           --left:150svh;
@@ -816,12 +827,22 @@ body {
       }
    
       .broken-breathing {
-        --left:263svh;
-        --scale:.28;
-        --y:0svh;
-        --x:1svh;
-        --rot:0deg;
-        --z:10;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1920px;
+        height: 1080px;
+        
+        width: 259.46vh;
+        height: 145.95vh;
+        
+        width: 259.46vh;
+        height: 145.95vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:115svh;
@@ -831,10 +852,22 @@ body {
       }
       
       .lightsleeper-voicememo {
-        display: none;
+        position: absolute;
+        object-fit: cover;
         
         width: 554px;
         height: 547px;
+        
+        width: 74.86vh;
+        height: 73.92vh;
+        
+        width: 74.86vh;
+        height: 73.92vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
         --left:310svh;
         --scale:.32;
@@ -851,7 +884,6 @@ body {
         }
       }
       
-      // EXIT WOUNDS
       // ========= EXIT WOUNDS SECTION (slot classes) =========
       
       .exitwounds-lyricvideo {
