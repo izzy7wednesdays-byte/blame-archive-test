@@ -890,12 +890,22 @@ body {
       // ========= EXIT WOUNDS SECTION (slot classes) =========
       
       .exitwounds-lyricvideo {
-        --left: 298svh;
-        --scale: .38;
-        --y: 63svh;
-        --x: 0svh;
-        --rot: 0deg;
-        --z: 21;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1920px;
+        height: 1080px;
+        
+        width: 259.46vh;
+        height: 145.95vh;
+        
+        width: 259.46vh;
+        height: 145.95vh;
+        top: 10vh;
+        left: 0vh;
+        
+        transform: scale(.20) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:210svh;
@@ -911,13 +921,16 @@ body {
         width: 264px;
         height: 425px;
         
-        --left: 346svh;
-        --scale: .28;
-        --y: 61svh;
-        --x: 0svh;
-        --rot: -160deg;
-        --z: 10;
-        pointer-events: none;
+        width: 35.68vh;
+        height: 57.43vh;
+        
+        width: 35.68vh;
+        height: 57.43vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:200svh;
@@ -932,15 +945,18 @@ body {
         
         width: 857px;
         height: 429px;
-
-        --left: 322svh;
-        --scale: .33;
-        --y: 0svh;
-        --x: 0svh;
-        --rot: -12deg;
-        --z: 1;
-        pointer-events: none;
-      
+        
+        width: 115.81vh;
+        height: 57.97vh;
+        
+        width: 115.81vh;
+        height: 57.97vh;
+        top: 400vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+        
         @include respond(xs) {
           --left:200svh;
           --scale:.25;
@@ -948,19 +964,19 @@ body {
       }
       
       .play-exitwounds {
-        display:none;
-
         position: absolute;
         object-fit: cover;
         
         width: 592px;
         height: 440px;
-        --left: 362svh;
-        --scale: .25;
-        --y: 69svh;
-        --x: 0svh;
-        --rot: 13deg;
-        --z: 11;
+        
+        width: 80vh;
+        height: 59.73vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
         @include respond(xs) {
           --left: 255svh;
@@ -970,18 +986,7 @@ body {
       }
       
       .text-wrapper-2 {
-        --left: 359svh;
-        --scale: .17;
-        --y: 63svh;
-        --x: 0svh;
-        --rot: 12.5deg;
-        --z: 12;
-        pointer-events: none;
-      
-        --ff: "Thinker";
-        --fw: 400;
-        --fs-mul: .17;
-        --text-color: #4CA8E9;
+        display:none;
       
         @include respond(xs) {
           --left: 254svh;
@@ -997,14 +1002,13 @@ body {
         width: 672px;
         height: 736px;
         
-        
-        --left: 365svh;
-        --scale: .35;
-        --y: 24svh;
-        --x: -6svh;
-        --rot: 10deg;
-        --z: 9;
-        pointer-events: none;
+        width: 93.51vh;
+        height: 99.46vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 217svh;    
@@ -1018,15 +1022,15 @@ body {
         object-fit: cover;
         
         width: 591px;
-        height: 881px; 
+        height: 881px;
         
-        display:none;
-        --left: 397svh;
-        --scale: .31;
-        --y: 45svh;
-        --x: 8svh;
-        --rot: -6deg;
-        --z: 9;
+        width: 79.86vh;
+        height: 119.05vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 237svh;
@@ -1036,13 +1040,7 @@ body {
       }
       
       .exitwounds-animation {
-        --left: 387svh;
-        --scale: .40;
-        --y: 23svh;
-        --x: 0svh;
-        --rot: 0deg;
-        --z: 2;
-        pointer-events: none;
+        display: none;
       
         @include respond(xs) {
           display:none;
@@ -1054,9 +1052,15 @@ body {
         object-fit: cover;
         
         width: 833px;
-        height: 192px;  
+        height: 192px;
         
-        display:none;
+        width: 112.56vh;
+        height: 25.95vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display: flex;
@@ -1072,14 +1076,15 @@ body {
         object-fit: cover;
         
         width: 366px;
-        height: 434px;   
-        display:none;
-        --left: 392svh;
-        --scale:.23;
-        --y: 1svh;
-        --x: 0svh;
-        --rot: 0deg;
-        --z: 7;
+        height: 434px;
+        
+        width: 49,56vh;
+        height: 58.65vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:255svh;
@@ -1110,13 +1115,17 @@ body {
         
         width: 417px;
         height: 209px;
-        --left: 413svh;
-        --scale: .04;
-        --y: 11svh;
-        --x: 0svh;
-        --rot: -4deg;
-        --z: 6;
-        pointer-events: none;
+        
+        width: 64.46vh;
+        height: 28.24vh;
+        
+        width: 64.46vh;
+        height: 28.24vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:274svh;
@@ -1150,14 +1159,15 @@ body {
         object-fit: cover;
         
         width: 570px;
-        height: 332px;       
-        --left: 433svh;
-        --scale: .10;
-        --y: 67svh;
-        --x: 0svh;
-        --rot: 7deg;
-        --z: 4;
-        pointer-events: none;
+        height: 332px;
+        
+        width: 77.03vh;
+        height: 44.86vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 292svh;
@@ -1173,13 +1183,14 @@ body {
         
         width: 678px;
         height: 594px;
-        --left: 428svh;
-        --scale: .25;
-        --y: 40svh;
-        --x: 0svh;
-        --rot: 0deg;
-        --z: 4;
-        pointer-events: none;
+        
+        width: 91.62vh;
+        height: 80.27vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 270svh;
@@ -1212,18 +1223,19 @@ body {
       }
       
       .subscribe-arrow {
-position: absolute;
-object-fit: cover;
-
-width: 535px;
-height: 264px;
-        --left: 452svh;
-        --scale: .04;
-        --y: 11svh;
-        --x: 0svh;
-        --rot: -57deg;
-        --z: 20;
-        pointer-events: none;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 535px;
+        height: 264px;
+        
+        width: 72.31vh;
+        height: 34.68vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 298svh;
@@ -1234,18 +1246,19 @@ height: 264px;
       }
       
       .subscribe-button {
-        display:none;
-position: absolute;
-object-fit: cover;
-
-width: 386px;
-height: 176px;
-        --left: 459svh;
-        --scale: .14;
-        --y: 10svh;
-        --x: 0svh;
-        --rot: 6deg;
-        --z: 20;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 386px;
+        height: 176px;
+        
+        width: 52.16vh;
+        height: 23.78vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 302svh;
@@ -1255,18 +1268,19 @@ height: 176px;
       }
       
       .exitwounds-substackflier {
-position: absolute;
-object-fit: cover;
-
-width: 860px;
-height: 1112px;
-         display:none;
-        --left: 453svh;
-        --scale: .76;
-        --y: 30svh;
-        --x: 0svh;
-        --rot: 14deg;
-        --z: 3;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 860px;
+        height: 1112px;
+        
+        width: 116.22vh;
+        height: 150.27vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 303svh;
@@ -1281,13 +1295,14 @@ height: 1112px;
         
         width: 165px;
         height: 160px;
-        --left: 459svh;
-        --scale: .10;
-        --y: -1svh;
-        --x: 0svh;
-        --rot: -59deg;
-        --z: 20;
-        pointer-events: none;
+        
+        width: 22.31vh;
+        height: 21.62vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display:none;
@@ -1300,13 +1315,14 @@ height: 1112px;
         
         width: 154;
         height: 147;
-        --left: 468svh;
-        --scale: .04;
-        --y: 4svh;
-        --x: 0svh;
-        --rot: 16deg;
-        --z: 20;
-        pointer-events: none;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:315svh;
@@ -1319,13 +1335,14 @@ height: 1112px;
         
         width: 165px;
         height: 160px;
-        --left: 478svh;
-        --scale: .06;
-        --y: 1svh;
-        --x: 0svh;
-        --rot: 12deg;
-        --z: 20;
-        pointer-events: none;
+        
+        width: 22.31vh;
+        height: 21.62vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:323svh;
@@ -1333,18 +1350,19 @@ height: 1112px;
       }
       
       .silver-star3-3 {
-position: absolute;
-object-fit: cover;
-
-width: 165px;
-height: 160px;
-        --left: 489svh;
-        --scale: .08;
-        --y: 8svh;
-        --x: 0svh;
-        --rot: 48deg;
-        --z: 20;
-        pointer-events: none;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 165px;
+        height: 160px;
+        
+        width: 22.31vh;
+        height: 21.62vh;
+        top: 400vh;
+        left: 0vh;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:335svh;
