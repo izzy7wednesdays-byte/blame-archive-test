@@ -117,8 +117,8 @@ body {
         top: 830px;
         left: 42px;
 
-        width: 100vh;
-        height: 12.1vh;
+        width: 132.28vh;
+        height: 82.67vh;
         top: 83.85vh;
         left: 80vh;
 
@@ -133,15 +133,20 @@ body {
       }
       
       .special-message-mobile {
-        display: none;
-        
+        display: none; 
         position: absolute;
         object-fit: cover;
-      
+        
         width: 772px;
         height: 599px;
-        top: 830px;
-        left: 42px;
+        
+        width: 102.12vh;
+        height: 79.23vh;
+
+        width: 102.12vh;
+        height: 79.23vh;
+        top: -34vh;
+        left: -65vh;
           
         @include respond(xs) {
           display: flex;
@@ -180,13 +185,14 @@ body {
       .izzymacarthur-mobile {
         display: none;
 
+        position: absolute;
+        object-fit: cover;
+        
         width: 752px;
         height: 200px;
-
-        width: 113.7vh; 
-        height: 20.6vh;  
-        top: 18vh;     
-        left: 1vh;
+        
+        width: 101.62vh;
+        height: 27.03vh;
       
         @include respond(xs) {
           display: flex;
@@ -341,6 +347,9 @@ body {
         
         width: 989px;
         height: 978px;
+
+        width: 133.65vh;
+        height: 132.16vh;
         
         width: 150vh;
         height: 150vh;
@@ -361,8 +370,8 @@ body {
         width: 859px;
         height: 799px;
 
-        width: 113.62vh;
-        height: 105.69vh;
+        width: 116.08vh;
+        height: 107.97vh;
         		
         width: 202vh;
         height: 187.4vh;
@@ -383,8 +392,8 @@ body {
         width: 804px;
         height: 369px;
 
-        width: 106.34vh;
-        height: 48.81vh;
+        width: 108.65vh;
+        height: 49.86vh;
         		
         width: 106.4vh;
         height: 48.8vh;
@@ -425,9 +434,12 @@ body {
 
         position: absolute;
         object-fit: cover;
-        		
+        
         width: 378px;
         height: 118px;
+        
+        width: 51.08vh;
+        height: 15.95vh;
         
         @include respond(xs) {
           display: none;
@@ -456,12 +468,12 @@ body {
       .broken-cd { 
         position: absolute;
         object-fit: cover;
-        		
+        
         width: 552px;
         height: 576px;
-
-        width: 73.03vh;
-        height: 76.19vh;
+        
+        width: 74.59vh;
+        height: 77.84vh;
 
         width: 73.03vh;
         height: 76.19vh;
@@ -481,6 +493,14 @@ body {
         
         width: 154;
         height: 147;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: 20.81;
+        height: 19.86;
+        top: 0vh;
+        left: 0vh;
 
         transform: scale(1) rotate(0deg);
         transform-origin: center;
@@ -495,6 +515,14 @@ body {
         
         width: 154;
         height: 147;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: 20.81;
+        height: 19.86;
+        top: 0vh;
+        left: 0vh;
 
         transform: scale(1) rotate(0deg);
         transform-origin: center;
@@ -508,9 +536,17 @@ body {
         position: absolute;
         object-fit: cover;
         
-        width: 214;
-        height: 210;
-
+        width: 214px;
+        height: 210px;
+        
+        width: 28.82vh;
+        height: 28.38vh;
+        
+        width: 28.82vh;
+        height: 28.38vh;
+        top: 0vh;
+        left: 0vh;
+        
         transform: scale(1) rotate(0deg);
         transform-origin: center;
       
@@ -557,18 +593,22 @@ body {
       }
       
       .about-lightsleeper { 
-        display: none;
-
+        position: absolute;
+        object-fit: cover;
+        
         width: 300px;
         height: 300px;
         
-        --left:210svh;
-        --scale:.4;
-        --y:58svh;
-        --x:0svh;
-        --rot:-10deg;
-        --z:30;
-        pointer-events:auto;
+        width: 40.54vh;
+        height: 40.54vh;
+        
+        width: 40.54vh;
+        height: 40.54vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
         @include respond(xs) {
           display: none !important;
@@ -578,8 +618,22 @@ body {
       .about-lightsleeper-mobile { 
         display: none !important;
 
+        position: absolute;
+        object-fit: cover;
+        
         width: 572px;
         height: 580px;
+        
+        width: 77.30vh;
+        height: 78.78vh;
+        
+        width: 77.30vh;
+        height: 78.78vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
         @include respond(xs) {
           display: flex !important;
@@ -594,17 +648,22 @@ body {
       }
       
       .autumn-text {
-        display:none;
-
+        position: absolute;
+        object-fit: cover;
+        
         width: 652px;
         height: 546px;
         
-        --left:223svh;
-        --scale:.32;
-        --y:23svh;
-        --x:0svh;
-        --rot:2deg;
-        --z:0;
+        width: 88.11vh;
+        height: 73.78vh;
+        
+        width: 88.11vh;
+        height: 73.78vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
         @include respond(xs) {
           --left:111svh;
@@ -614,17 +673,22 @@ body {
       }
       
       .blame-it-notesapp {
-        display: none;
-
+        position: absolute;
+        object-fit: cover;
+        
         width: 710px;
         height: 330px;
         
-        --left:215svh;
-        --scale:.20;
-        --y:0svh;
-        --x:0svh;
-        --rot:-2deg;
-        --z:4;
+        width: 95.95vh;
+        height:44.59vh;
+        
+        width: 95.95vh;
+        height:44.59vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
         @include respond(xs) {
           --left:150svh;
@@ -651,16 +715,20 @@ body {
       .silver-star1-2 {
         position: absolute;
         object-fit: cover;
-          
-        width: 214;
-        height: 210;
-        --left:245svh;
-        --scale:.18;
-        --y:5svh;
-        --x:0svh;
-        --rot:20deg;
-        --z:60;
-        pointer-events:none;
+        
+        width: 214px;
+        height: 210px;
+        
+        width: 28.82vh;
+        height: 28.38vh;
+        
+        width: 28.82vh;
+        height: 28.38vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
         @include respond(xs) {
           --left:170svh;
@@ -669,17 +737,27 @@ body {
         }
       }
       
-      .chords-gif { 
-        display: none;
+      .lightsleeper-chords { 
+        position: absolute;
+        object-fit: cover;
+        
         width: 200px;
         height: 250px;
         
-        --left:272svh; 
-        --scale:.3; 
-        --y:66svh;
-        --x:0svh; 
-        --rot:0deg;
-        --z:41;
+        width: 27.027vh;
+        height: 33.78vh;
+        
+        width: 27.027vh;
+        height: 33.78vh;
+        
+        width: 28.82vh;
+        height: 28.38vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+                
         
         @include respond(xs) {
           --left:177svh;
