@@ -115,7 +115,7 @@ body {
       height: 100vh;
       top: -35vh;
       left: -70vh;
-      z: 1;
+      z-index: 1;
 
       transform: scale(0.86);     
       transform-origin: center; 
@@ -140,7 +140,7 @@ body {
       height: 79.23vh;
       top: -34vh;
       left: -65vh;
-      z: 1;
+      z-index: 1;
 
       transform: scale(0.95);     
       transform-origin: center; 
@@ -164,7 +164,7 @@ body {
       height: 20.6vh;  
       top: 18vh;     
       left: -10vh; 
-      z: 2;
+      z-index: 2;
 
       transform: scale(0.75);     
       transform-origin: center; 
@@ -185,7 +185,7 @@ body {
       
       width: 101.62vh;
       height: 27.03vh;
-      z: 2;
+      z-index: 2;
     
       @include respond(xs) {
         display: flex;
@@ -196,7 +196,7 @@ body {
       display:none;
       pointer-events: none;
 
-      z: 5;
+      z-index: 5;
       
       @include respond(xs) { 
         pointer-events: none;
@@ -206,7 +206,7 @@ body {
     .instagram {
       display:none;
 
-      z: 5;
+      z-index: 5;
       
       @include respond(xs) {
       }
@@ -215,7 +215,7 @@ body {
     .tiktok {
       display:none;
 
-      z: 5;
+      z-index: 5;
         
       @include respond(xs) {
         
@@ -225,7 +225,7 @@ body {
     .twitter {
       display:none;
 
-      z: 5;
+      z-index: 5;
       
       @include respond(xs) {
       }
@@ -234,7 +234,7 @@ body {
     .discord {
       display:none;
 
-      z: 5;
+      z-index: 5;
       
       @include respond(xs) {
       }
@@ -243,7 +243,7 @@ body {
     .spotify {
       display:none;
 
-      z: 5;
+      z-index: 5;
       
       @include respond(xs) {
       }
@@ -252,7 +252,7 @@ body {
     .apple-music {
       display:none;
 
-      z: 5;
+      z-index: 5;
         
       @include respond(xs) { 
       }
@@ -262,7 +262,7 @@ body {
       display:none;
       pointer-events: none;
 
-      z: 5;
+      z-index: 5;
       
       @include respond(xs) { 
         pointer-events: none;
@@ -283,7 +283,7 @@ body {
       height: 150vh;
       top: 1vh;
       left: -53vh;
-      z: 3;
+      z-index: 3;
       
       transform: scale(.34) rotate(0deg);
       transform-origin: center;
@@ -306,7 +306,7 @@ body {
       height: 187.4vh;
       top: -70vh;
       left: 27vh;
-      z: 2;
+      z-index: 2;
           
       transform: scale(0.23) rotate(7deg);
       transform-origin: center center;
@@ -329,7 +329,7 @@ body {
       height: 48.8vh;
       top: 37vh;
       left: 30vh;
-      z: 3;
+      z-index: 3;
           
       transform: scale(0.75) rotate(0deg);
       transform-origin: center;
@@ -353,7 +353,7 @@ body {
       top: 0vh;
       left: 20vh;
       
-      z: 5;
+      z-index: 5;
       
       transform: scale(1) rotate(0deg);
       transform-origin: center;
@@ -374,7 +374,7 @@ body {
       width: 51.08vh;
       height: 15.95vh;
 
-      z: 5;
+      z-index: 5;
       
       @include respond(xs) {
         display: none;
@@ -398,7 +398,7 @@ body {
       top: 0vh;
       left: 20vh;
 
-      z: 5;
+      z-index: 5;
       
       transform: scale(1) rotate(0deg);
       transform-origin: center;
@@ -422,7 +422,7 @@ body {
       height: 76.19vh;
       top: -14vh;
       left: 140vh;
-      z: 2;
+      z-index: 2;
   
       transform: scale(.50) rotate(87deg);
       transform-origin: center;
@@ -445,7 +445,7 @@ body {
       height: 19.86vh;
       top: 5vh;
       left: 190vh;
-      z: 2;
+      z-index: 2;
 
       transform: scale(0.38) rotate(15deg);
       transform-origin: center;
@@ -468,7 +468,7 @@ body {
       height: 19.86vh;
       top: -7vh;
       left: 205vh;
-      z: 2;
+      z-index: 2;
 
       transform: scale(0.70) rotate(20deg);
       transform-origin: center;
@@ -492,7 +492,7 @@ body {
       height: 28.38vh;
       top: 15vh;
       left: 207vh;
-      z: 2;
+      z-index: 2;
       
       transform: scale(.8) rotate(14deg);
       transform-origin: center;
@@ -515,7 +515,7 @@ body {
       height: 77.03vh;
       top: 0vh;
       left: 0vh;
-      z: 4;
+      z-index: 4;
       
       transform: scale(1) rotate(0deg);
       transform-origin: center;
@@ -538,7 +538,7 @@ body {
       height: 145.95vh;
       top: 10vh;
       left: 50vh;
-      z: 3;
+      z-index: 3;
       
       transform: scale(.20) rotate(0deg);
       transform-origin: center;
@@ -562,7 +562,7 @@ body {
       top: 0vh;
       left: 227vh;
 
-      z: 2;
+      z-index: 2;
       
       transform: scale(1.05) rotate(-4deg);
       transform-origin: center;
@@ -588,7 +588,7 @@ body {
       height: 78.78vh;
       top: 0vh;
       left: 0vh;
-      z: 2;
+      z-index: 2;
       
       transform: scale(1) rotate(0deg);
       transform-origin: center;
@@ -614,7 +614,7 @@ body {
       height: 73.78vh;
       top: 22vh;
       left: 196vh;
-      z: 1;
+      z-index: 1;
       
       transform: scale(.4) rotate(7deg);
       transform-origin: center;
@@ -637,7 +637,7 @@ body {
       height:44.59vh;
       top: 63vh;
       left: 188vh;
-      z: 3;
+      z-index: 3;
       
       transform: scale(.56) rotate(-3deg);
       transform-origin: center;
@@ -660,7 +660,7 @@ body {
       height: 259.46vh;
       top: -108vh;
       left: 209vh;
-      z: 3;
+      z-index: 3;
       
       transform: scale(.16) rotate(0deg);
       transform-origin: center;
@@ -683,7 +683,7 @@ body {
       height: 28.38vh;
       top: 60vh;
       left: 250vh;
-      z: 4;
+      z-index: 4;
       
       transform: scale(0.80) rotate(10deg);
       transform-origin: center;
@@ -706,7 +706,7 @@ body {
       height: 33.78vh;
       top: 0vh;
       left: 293vh;
-      z: 3;
+      z-index: 3;
       
       transform: scale(0.80) rotate(0deg);
       transform-origin: center;
@@ -735,7 +735,7 @@ body {
       width: 30.7vh;
       top: 3vh;
       left: 309vh;
-      z: 4;
+      z-index: 4;
       
       @include respond(xs) {
         display:none;
@@ -756,7 +756,7 @@ body {
       height: 150.54vh;
       top: -25vh;
       left: 235vh;
-      z: 2;
+      z-index: 2;
       
       transform: scale(0.2) rotate(0deg);
       transform-origin: center;
@@ -783,7 +783,7 @@ body {
         height: 150.54vh;
         top: 0vh;
         left: 270vh;
-        z: 2;
+        z-index: 2;
         
         transform: scale(0.35) rotate(0deg);
         transform-origin: center;
@@ -804,7 +804,7 @@ body {
       height: 145.95vh;
       top: 10vh;
       left: 163vh;
-      z: 1;
+      z-index: 1;
       
       transform: scale(.20) rotate(0deg);
       transform-origin: center;
@@ -1293,7 +1293,7 @@ body {
         --y: -18svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 7;
+        --z-index: 7;
         pointer-events: none;
         
          @include respond(xs) {
@@ -1309,7 +1309,7 @@ body {
         --y: 65svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 40;
+        --z-index: 40;
       
          @include respond(xs) {
           --left:375svh;
@@ -1323,7 +1323,7 @@ body {
         --y: 37svh;
         --x: 5svh;
         --rot: 0deg;
-        --z: 30;
+        z-index: 30;
       
         @include respond(xs) {
           --left:365svh;
@@ -1342,7 +1342,7 @@ body {
         --y: 41svh;
         --x: 5svh;
         --rot: 6deg;
-        --z: 28;
+        z-index: 28;
         
          @include respond(xs) {
            display:none;
@@ -1355,13 +1355,13 @@ body {
         --y: 13svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 30;
+        z-index: 30;
         pointer-events: none;
         
         @include respond(xs) {
           --left:363svh;
           --scale:0.16;
-          --z:5;
+          z-index:5;
         }
       }
       
@@ -1372,7 +1372,7 @@ body {
         --y: 0svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 37;
+        z-index: 37;
       
         @include respond(xs) {
           --left:405svh;
@@ -1385,7 +1385,7 @@ body {
         --y: 21svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 38;
+        z-index: 38;
         pointer-events: none;
       
         --ff: "Manic";
@@ -1405,13 +1405,13 @@ body {
         --y: -4svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 38;
+        z-index: 38;
         pointer-events: none;
       
         @include respond(xs) {
           --left:390svh;
           --y: -2svh;
-          --z: 6;    
+          z-index: 6;    
         }  
       }
       
@@ -1421,7 +1421,7 @@ body {
         --y: 65svh;
         --x: 0svh;
         --rot: -8deg;
-        --z: 40;
+        z-index: 40;
         pointer-events: none;
         
         @include respond(xs) {
@@ -1441,7 +1441,7 @@ height: 160px;
         --y: 57svh;
         --x: 0svh;
         --rot: 9deg;
-        --z: 41;
+        z-index: 41;
         pointer-events: none;
         
         @include respond(xs) {
@@ -1460,7 +1460,7 @@ height: 160px;
         --y: 60svh;
         --x: 0svh;
         --rot: -5deg;
-        --z: 420;
+        z-index: 420;
         pointer-events: none;
       
         @include respond(xs) {
@@ -1475,7 +1475,7 @@ height: 160px;
         --y: 38svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 30;
+        z-index: 30;
         pointer-events: none;
       
         @include respond(xs) {
@@ -1491,7 +1491,7 @@ height: 160px;
           --left: 420svh;
           --scale:.13;
           --y:41svh;
-          --z: 30;
+          z-index: 30;
           pointer-events: none;
       
           @include respond(xs) {
@@ -1506,7 +1506,7 @@ height: 160px;
         --y: 3svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 19;
+        z-index: 19;
       
         @include respond(xs) {
           --left: 428svh;
@@ -1520,7 +1520,7 @@ height: 160px;
         --y: 76svh;
         --x: 2svh;
         --rot: 0deg;
-        --z: 16;
+        z-index: 16;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -1542,7 +1542,7 @@ height: 160px;
         --y: 46svh;
         --x: 10svh;
         --rot: -25deg;
-        --z: 30;
+        z-index: 30;
       
         @include respond(xs) {
           --left: 476svh;
@@ -1558,7 +1558,7 @@ height: 160px;
         --y: 9svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 25;
+        z-index: 25;
       
         @include respond(xs) {
           --left: 478svh;
@@ -1572,7 +1572,7 @@ height: 160px;
         --y: 1svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 38;
+        z-index: 38;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -1594,7 +1594,7 @@ height: 160px;
         --y: 55svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 42;
+        z-index: 42;
       
         @include respond(xs) {
           --left: 508svh; 
@@ -1613,7 +1613,7 @@ height: 160px;
         --y: 49svh;
         --x: 0svh;
         --rot: 4deg;
-        --z: 420;
+        z-index: 420;
         pointer-events: none;
       
         @include respond(xs) {
@@ -1633,7 +1633,7 @@ height: 160px;
         --y: 29svh;
         --x: 0svh;
         --rot: -30deg !important;
-        --z: 420;
+        z-index: 420;
         pointer-events: none;
       
         @include respond(xs) {
@@ -1648,7 +1648,7 @@ height: 160px;
         --y: 1svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 19;
+        z-index: 19;
       
         @include respond(xs) {
           --left: 514svh; 
@@ -1661,7 +1661,7 @@ height: 160px;
         --y: 27svh;
         --x: 10svh;
         --rot: 7deg;
-        --z: 21;
+        z-index: 21;
       
         @include respond(xs) {
           --left: 525svh; 
@@ -1674,7 +1674,7 @@ height: 160px;
         --y: 2svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 18;
+        z-index: 18;
         pointer-events: none;
       
         @include respond(xs) {
@@ -1690,7 +1690,7 @@ height: 160px;
         --y: 70svh;
         --x: 2svh;
         --rot: 0deg;
-        --z: 40;
+        z-index: 40;
       
         @include respond(xs) {
           --left: 532svh; 
@@ -1713,7 +1713,7 @@ height: 160px;
         --y: 59svh;
         --x: 0svh;
         --rot: 10deg;
-        --z: 410;
+        z-index: 410;
         pointer-events: none;
       
         @include respond(xs) {
@@ -1727,7 +1727,7 @@ height: 160px;
         --y: 59svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 40;
+        z-index: 40;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -1749,7 +1749,7 @@ height: 160px;
         --y: 27svh;
         --x: 10svh;
         --rot: 4deg;
-        --z: 39;
+        z-index: 39;
         pointer-events: none;
       
         @include respond(xs) {
@@ -1765,7 +1765,7 @@ height: 160px;
         --y: 43svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 41;
+        z-index: 41;
       
         @include respond(xs) {
           --left: 572svh;
@@ -1785,7 +1785,7 @@ height: 160px;
         --y: 29svh;
         --x: 0svh;
         --rot: -5deg;
-        --z: 43;
+        z-index: 43;
         pointer-events: none;
       
         @include respond(xs) {
@@ -1800,7 +1800,7 @@ height: 160px;
         --y: 1svh;
         --x: 11svh;
         --rot: 0deg;
-        --z: 39;
+        z-index: 39;
         pointer-events: none;
       
         @include respond(xs) {
@@ -1815,7 +1815,7 @@ height: 160px;
         --y: 0svh;
         --x: 0svh;
         --rot: 5deg;
-        --z: 43;
+        z-index: 43;
         pointer-events: none;
       
         @include respond(xs) {
@@ -1829,7 +1829,7 @@ height: 160px;
         --y: 75svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 40;
+        z-index: 40;
       
         @include respond(xs) {
           --left: 627svh;
@@ -1843,7 +1843,7 @@ height: 160px;
         --y: 69svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 41;
+        z-index: 41;
         pointer-events: none;
       
         --ff: "Manic";
@@ -1865,7 +1865,7 @@ height: 160px;
         --y: -6svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 42;
+        z-index: 42;
         pointer-events: none;
       
         @include respond(xs) {
@@ -1881,7 +1881,7 @@ height: 160px;
         --y: 61svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 72;
+        z-index: 72;
       
         @include respond(xs) {
           --left:705svh;
@@ -1894,7 +1894,7 @@ height: 160px;
         --y: 87svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 73;
+        z-index: 73;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -1915,7 +1915,7 @@ height: 160px;
         --y: 33svh;
         --x: 0svh;
         --rot: -10deg;
-        --z: 71;
+        z-index: 71;
       
         @include respond(xs) {
           --left:680svh;
@@ -1929,7 +1929,7 @@ height: 160px;
         --y: 86svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 73;
+        z-index: 73;
         pointer-events: none;
       
         --ff: "Manic";
@@ -1952,7 +1952,7 @@ height: 160px;
         --y: 52svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 72;
+        z-index: 72;
       
         @include respond(xs) {
           --left:682svh;  
@@ -1967,7 +1967,7 @@ height: 160px;
         --y: 69svh;
         --x: 0svh;
         --rot: -160deg;
-        --z: 73;
+        z-index: 73;
         pointer-events: none;
       
         @include respond(xs) {
@@ -1981,7 +1981,7 @@ height: 160px;
         --y: 0svh;
         --x: 8svh;
         --rot: 0deg;
-        --z: 39;
+        z-index: 39;
       
         @include respond(xs) {
           --left:670svh;  
@@ -1997,7 +1997,7 @@ height: 160px;
         --y: 30svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 70;
+        z-index: 70;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2013,7 +2013,7 @@ height: 160px;
         --y: 60svh;
         --x: 10svh;
         --rot: -9deg;
-        --z: 70;
+        z-index: 70;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2030,7 +2030,7 @@ height: 160px;
         --y: 34svh;
         --x: 10svh;
         --rot: 10deg;
-        --z: 50;
+        z-index: 50;
       
         @include respond(xs) {
           --left: 710svh;
@@ -2043,7 +2043,7 @@ height: 160px;
         --y: 7svh;
         --x: 1svh;
         --rot: 0deg;
-        --z: 40;
+        z-index: 40;
       
         @include respond(xs) {
           --left: 725svh;    
@@ -2056,7 +2056,7 @@ height: 160px;
         --y: 0svh;
         --x: 1svh;
         --rot: 0deg;
-        --z: 42;
+        z-index: 42;
         pointer-events: none;
       
         --ff: "Manic";
@@ -2078,7 +2078,7 @@ height: 160px;
         --y: 14svh;
         --x: 1svh;
         --rot: -10deg;
-        --z: 40;
+        z-index: 40;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2092,7 +2092,7 @@ height: 160px;
         --y: 63svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 71;
+        z-index: 71;
       
         @include respond(xs) {
           --left: 751svh;  
@@ -2106,7 +2106,7 @@ height: 160px;
         --y: 39svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 100;
+        z-index: 100;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2122,7 +2122,7 @@ height: 160px;
         --y: 0svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 50;
+        z-index: 50;
       
         @include respond(xs) {
           --left: 777svh;     
@@ -2141,7 +2141,7 @@ height: 160px;
         --y: 35svh;
         --x: 0svh;
         --rot: -7deg;
-        --z: 710;
+        z-index: 710;
       
         @include respond(xs) {
           --left: 815svh;  
@@ -2156,7 +2156,7 @@ height: 160px;
         --y: 1svh;
         --x: 0svh;
         --rot: 7deg;
-        --z: 71;
+        z-index: 71;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2170,7 +2170,7 @@ height: 160px;
         --y: 1svh;
         --x: 0svh;
         --rot: -10deg;
-        --z: 70;
+        z-index: 70;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2186,7 +2186,7 @@ height: 160px;
         --y: 45svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 71;
+        z-index: 71;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2208,7 +2208,7 @@ height: 160px;
         --y: 48svh;
         --x: 0svh;
         --rot: -20deg;
-        --z: 710;
+        z-index: 710;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2227,7 +2227,7 @@ height: 160px;
         --y: 40svh;
         --x: 0svh;
         --rot: 15deg;
-        --z: 710;
+        z-index: 710;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2246,7 +2246,7 @@ height: 160px;
         --y: 45svh;
         --x: 0svh;
         --rot: 10deg;
-        --z: 710;
+        z-index: 710;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2260,7 +2260,7 @@ height: 160px;
         --y: 83svh;
         --x: 0svh;
         --rot: 75deg;
-        --z: 32;
+        z-index: 32;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2275,7 +2275,7 @@ height: 160px;
         --y: 53svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 81;
+        z-index: 81;
       
         @include respond(xs) {
           --left: 881svh;  
@@ -2290,7 +2290,7 @@ height: 160px;
         --y: 53svh;
         --x: 0svh;
         --rot: 80deg;
-        --z: 32;
+        z-index: 32;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2306,7 +2306,7 @@ height: 160px;
         --y: 38svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 30;
+        z-index: 30;
         pointer-events: none;
       
         --ff: "Manic";
@@ -2329,7 +2329,7 @@ height: 160px;
         --y: 11svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 72;
+        z-index: 72;
       
         @include respond(xs) {
           --left:880svh; 
@@ -2342,7 +2342,7 @@ height: 160px;
         --y: 4svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 30;
+        z-index: 30;
         pointer-events: none;
       
         --ff: "Manic";
@@ -2363,7 +2363,7 @@ height: 160px;
         --y: 5svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 30;
+        z-index: 30;
       
         @include respond(xs) {
           --left:913svh;    
@@ -2376,7 +2376,7 @@ height: 160px;
         --y: 0svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 30;
+        z-index: 30;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -2397,7 +2397,7 @@ height: 160px;
         --y: 47svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 33;
+        z-index: 33;
       
         @include respond(xs) {
           --left:913svh;         
@@ -2410,7 +2410,7 @@ height: 160px;
         --y: 1svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 30;
+        z-index: 30;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2424,7 +2424,7 @@ height: 160px;
         --y: 1svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 31;
+        z-index: 31;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -2445,7 +2445,7 @@ height: 160px;
         --y: 58svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 30;
+        z-index: 30;
       
         @include respond(xs) {
           --left: 944svh;
@@ -2458,7 +2458,7 @@ height: 160px;
         --y: 47svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 30;
+        z-index: 30;
         pointer-events: none;
       
         --ff: "Manic";
@@ -2478,7 +2478,7 @@ height: 160px;
         --y: 5svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 30;
+        z-index: 30;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2493,7 +2493,7 @@ height: 160px;
         --y: 81svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 30;
+        z-index: 30;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -2513,7 +2513,7 @@ height: 160px;
         --y: 42svh;
         --x: 0svh;
         --rot: 5deg;
-        --z: 29;
+        z-index: 29;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2527,7 +2527,7 @@ height: 160px;
         --y: 38svh;
         --x: 0svh;
         --rot: -15deg;
-        --z: 30;
+        z-index: 30;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2541,7 +2541,7 @@ height: 160px;
         --y: 49svh;
         --x: 0svh;
         --rot: 100deg;
-        --z: 31;
+        z-index: 31;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2555,7 +2555,7 @@ height: 160px;
         --y: 1svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 100;
+        z-index: 100;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2571,7 +2571,7 @@ height: 160px;
         --y: 55svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 28;
+        z-index: 28;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2585,7 +2585,7 @@ height: 160px;
         --y: 76svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 32;
+        z-index: 32;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -2606,7 +2606,7 @@ height: 160px;
         --y: 17svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 31;
+        z-index: 31;
       
         @include respond(xs) {
           --left: 1018svh;
@@ -2619,7 +2619,7 @@ height: 160px;
         --y: 46svh;
         --x: 0svh;
         --rot: -5deg;
-        --z: 32;
+        z-index: 32;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2633,7 +2633,7 @@ height: 160px;
         --y: 20svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 33;
+        z-index: 33;
         pointer-events: none;
       
         --ff: "Manic";
@@ -2654,7 +2654,7 @@ height: 160px;
         --y: 1svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 32;
+        z-index: 32;
       
         @include respond(xs) {
           --left: 1068svh;    
@@ -2672,7 +2672,7 @@ height: 160px;
         --y: 93svh;
         --x: 0svh;
         --rot: 8deg;
-        --z: 320;
+        z-index: 320;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2686,7 +2686,7 @@ height: 160px;
         --y: 70svh;
         --x: 0svh;
         --rot: 2deg;
-        --z: 32;
+        z-index: 32;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2700,7 +2700,7 @@ height: 160px;
         --y: 59svh;
         --x: 0svh;
         --rot: -2deg;
-        --z: 33;
+        z-index: 33;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2714,7 +2714,7 @@ height: 160px;
         --y: 50svh;
         --x: 0svh;
         --rot: 1deg;
-        --z: 32;
+        z-index: 32;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2729,7 +2729,7 @@ height: 160px;
         --y: 3svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 32;
+        z-index: 32;
       
         @include respond(xs) {
           --left:1092svh;    
@@ -2748,7 +2748,7 @@ height: 160px;
         --y: 75svh;
         --x: 0svh;
         --rot: 18deg;
-        --z: 36;
+        z-index: 36;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2762,7 +2762,7 @@ height: 160px;
         --y: 57svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 35;
+        z-index: 35;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2777,7 +2777,7 @@ height: 160px;
         --y: 11svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 32;
+        z-index: 32;
       
         @include respond(xs) {
           --left:1121svh;
@@ -2790,7 +2790,7 @@ height: 160px;
         --y: 0svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 32;
+        z-index: 32;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -2811,7 +2811,7 @@ height: 160px;
         --y: 52svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 32;
+        z-index: 32;
       
         @include respond(xs) {
           --left:1143svh;
@@ -2824,7 +2824,7 @@ height: 160px;
         --y: 2svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 40;
+        z-index: 40;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2838,7 +2838,7 @@ height: 160px;
         --y: 56svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 40;
+        z-index: 40;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2852,7 +2852,7 @@ height: 160px;
         --y: 0svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 40;
+        z-index: 40;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2871,7 +2871,7 @@ height: 160px;
         --y: 66svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 49;
+        z-index: 49;
       
         @include respond(xs) {
           --left:1210svh;
@@ -2884,7 +2884,7 @@ height: 160px;
         --y: 46svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 41;
+        z-index: 41;
       
         @include respond(xs) {
           --left:1199svh;
@@ -2903,7 +2903,7 @@ height: 160px;
         --y: 41svh;
         --x: 0svh;
         --rot: 8deg;
-        --z: 500;
+        z-index: 500;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2919,7 +2919,7 @@ height: 160px;
         --y: 68svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 46;
+        z-index: 46;
       
         @include respond(xs) {
           --left:1249svh;
@@ -2933,7 +2933,7 @@ height: 160px;
         --y: 44svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 45;
+        z-index: 45;
       
         @include respond(xs) {
           --left:1251svh;
@@ -2947,7 +2947,7 @@ height: 160px;
         --y: 2svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 50;
+        z-index: 50;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2961,7 +2961,7 @@ height: 160px;
         --y: 64svh;
         --x: 0svh;
         --rot: 1.5deg;
-        --z: 39;
+        z-index: 39;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2975,7 +2975,7 @@ height: 160px;
         --y: 43svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 42;
+        z-index: 42;
         pointer-events: none;
       
         @include respond(xs) {
@@ -2989,7 +2989,7 @@ height: 160px;
         --y: 22svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 42;
+        z-index: 42;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3004,7 +3004,7 @@ height: 160px;
         --y: -1svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 44;
+        z-index: 44;
       
         @include respond(xs) {
           --left:1287svh;
@@ -3017,7 +3017,7 @@ height: 160px;
         --y: 77svh !important;
         --x: 0svh;
         --rot: 0deg;
-        --z: 41;
+        z-index: 41;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3031,7 +3031,7 @@ height: 160px;
         --y: 43svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 37;
+        z-index: 37;
       
         @include respond(xs) {
           --left:1319svh;
@@ -3045,7 +3045,7 @@ height: 160px;
         --y: 20svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 45;
+        z-index: 45;
       
         @include respond(xs) {
           --left:1314svh;
@@ -3058,7 +3058,7 @@ height: 160px;
         --y: 1svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 39;
+        z-index: 39;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3073,7 +3073,7 @@ height: 160px;
         --y: 2svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 40;
+        z-index: 40;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -3093,7 +3093,7 @@ height: 160px;
         --y: 45svh;
         --x: 0svh;
         --rot: -5deg;
-        --z: 40;
+        z-index: 40;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3108,7 +3108,7 @@ height: 160px;
         --y: 5svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 48;
+        z-index: 48;
       
         @include respond(xs) {
           --left:1356svh;
@@ -3121,7 +3121,7 @@ height: 160px;
         --y: 79svh;
         --x: 10svh;
         --rot: 12deg;
-        --z: 410;
+        z-index: 410;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3135,7 +3135,7 @@ height: 160px;
         --y: 97svh;
         --x: 10svh;
         --rot: -160deg;
-        --z: 410;
+        z-index: 410;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3150,7 +3150,7 @@ height: 160px;
         --y: 42svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 40;
+        z-index: 40;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3168,7 +3168,7 @@ height: 160px;
         --y: 62svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 39;
+        z-index: 39;
       
         @include respond(xs) {
           --left:1397svh;
@@ -3181,7 +3181,7 @@ height: 160px;
         --y: 45svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 53;
+        z-index: 53;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3200,7 +3200,7 @@ height: 160px;
         --y: 36svh;
         --x: 0svh;
         --rot: -25deg;
-        --z: 400;
+        z-index: 400;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3219,7 +3219,7 @@ height: 160px;
         --y: 30svh;
         --x: 0svh;
         --rot: -20deg;
-        --z: 400;
+        z-index: 400;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3238,7 +3238,7 @@ height: 160px;
         --y: 31svh;
         --x: 0svh;
         --rot: 15deg;
-        --z: 4;
+        z-index: 4;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3257,7 +3257,7 @@ height: 160px;
         --y: 42svh;
         --x: 0svh;
         --rot: -20deg;
-        --z: 4;
+        z-index: 4;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3276,7 +3276,7 @@ height: 160px;
         --y: 26svh;
         --x: 0svh;
         --rot: -15deg;
-        --z: 4;
+        z-index: 4;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3295,7 +3295,7 @@ height: 160px;
         --y: 36svh;
         --x: 0svh;
         --rot: 20deg;
-        --z: 4;
+        z-index: 4;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3314,7 +3314,7 @@ height: 160px;
         --y: 39svh;
         --x: 0svh;
         --rot: 15deg;
-        --z: 4;
+        z-index: 4;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3328,7 +3328,7 @@ height: 160px;
         --y: -14svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 41;
+        z-index: 41;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3342,7 +3342,7 @@ height: 160px;
         --y: 10svh;
         --x: 10svh;
         --rot: -3deg;
-        --z: 40;
+        z-index: 40;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3361,7 +3361,7 @@ height: 160px;
         --y: 6svh;
         --x: 0svh;
         --rot: -30deg;
-        --z: 4;
+        z-index: 4;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3380,7 +3380,7 @@ height: 160px;
         --y: -4svh;
         --x: 0svh;
         --rot: -20deg;
-        --z: 4;
+        z-index: 4;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3399,7 +3399,7 @@ height: 160px;
         --y: -6svh;
         --x: 0svh;
         --rot: 15deg;
-        --z: 4;
+        z-index: 4;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3418,7 +3418,7 @@ height: 160px;
         --y: 3svh;
         --x: 0svh;
         --rot: -20deg;
-        --z: 4;
+        z-index: 4;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3438,7 +3438,7 @@ height: 160px;
         --y: 4svh;
         --x: 0svh;
         --rot: -20deg;
-        --z: 4;
+        z-index: 4;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3457,7 +3457,7 @@ height: 160px;
         --y: -3svh;
         --x: 0svh;
         --rot: -40deg;
-        --z: 4;
+        z-index: 4;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3476,7 +3476,7 @@ height: 160px;
         --y: -1svh;
         --x: 0svh;
         --rot: -20deg;
-        --z: 4;
+        z-index: 4;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3491,7 +3491,7 @@ height: 160px;
         --y: 35svh;
         --x: 0svh;
         --rot: -2deg;
-        --z: 54;
+        z-index: 54;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3505,7 +3505,7 @@ height: 160px;
         --y: -4svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 43;
+        z-index: 43;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3524,7 +3524,7 @@ height: 160px;
         --y: 65svh;
         --x: 0svh;
         --rot: -10deg;
-        --z: 4;
+        z-index: 4;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3538,7 +3538,7 @@ height: 160px;
         --y: 75svh;
         --x: 0svh;
         --rot: 2deg;
-        --z: 41;
+        z-index: 41;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3552,7 +3552,7 @@ height: 160px;
         --y: 42svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 43;
+        z-index: 43;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3566,7 +3566,7 @@ height: 160px;
         --y: 38svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 39;
+        z-index: 39;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -3586,7 +3586,7 @@ height: 160px;
         --y: 71svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 40;
+        z-index: 40;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3601,7 +3601,7 @@ height: 160px;
         --y: 34svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 43;
+        z-index: 43;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3616,7 +3616,7 @@ height: 160px;
         --y: 1svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 48;
+        z-index: 48;
       
         @include respond(xs) {
           --left:1465svh;
@@ -3630,7 +3630,7 @@ height: 160px;
         --y: 36svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 50;
+        z-index: 50;
       
         @include respond(xs) {
           --left:1494svh;
@@ -3644,7 +3644,7 @@ height: 160px;
         --y: 67svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 51;
+        z-index: 51;
       
         @include respond(xs) {
           --left:1493svh;
@@ -3658,7 +3658,7 @@ height: 160px;
         --y: 5svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 49;
+        z-index: 49;
       
         @include respond(xs) {
           --left:1517svh;
@@ -3671,7 +3671,7 @@ height: 160px;
         --y: 76svh;
         --x: 0svh;
         --rot: -90deg;
-        --z: 56;
+        z-index: 56;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3685,7 +3685,7 @@ height: 160px;
         --y: 36svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 10;
+        z-index: 10;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3700,7 +3700,7 @@ height: 160px;
         --y: 64svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 52;
+        z-index: 52;
       
         @include respond(xs) {
           --left:1565svh;
@@ -3714,7 +3714,7 @@ height: 160px;
         --y: 64svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 53;
+        z-index: 53;
       
         @include respond(xs) {
           --left:1581svh;
@@ -3728,7 +3728,7 @@ height: 160px;
         --y: 64svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 54;
+        z-index: 54;
       
         @include respond(xs) {
           --left:1603svh;
@@ -3742,7 +3742,7 @@ height: 160px;
         --y: 64svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 55;
+        z-index: 55;
       
         @include respond(xs) {
           --left:1625svh;
@@ -3756,7 +3756,7 @@ height: 160px;
         --y: 2svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 49;
+        z-index: 49;
       
         @include respond(xs) {
           --left:1570svh;
@@ -3770,7 +3770,7 @@ height: 160px;
         --y: 34svh;
         --x: 0svh;
         --rot: -2deg;
-        --z: 50;
+        z-index: 50;
       
         @include respond(xs) {
           --left:1595svh;
@@ -3785,7 +3785,7 @@ height: 160px;
         --y: 3svh;
         --x: 0svh;
         --rot: 3deg;
-        --z: 49;
+        z-index: 49;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3801,7 +3801,7 @@ height: 160px;
         --y: 60svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 57;
+        z-index: 57;
       
         @include respond(xs) {
           --left:1644svh;
@@ -3815,7 +3815,7 @@ height: 160px;
         --y: 3svh;
         --x: 0svh;
         --rot: -1deg;
-        --z: 54;
+        z-index: 54;
       
         @include respond(xs) {
           --left:1638svh;
@@ -3828,7 +3828,7 @@ height: 160px;
         --y: 13svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 53;
+        z-index: 53;
       
         @include respond(xs) {
           --left:1662svh;
@@ -3841,7 +3841,7 @@ height: 160px;
         --y: -22svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 57;
+        z-index: 57;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3856,7 +3856,7 @@ height: 160px;
         --y: 27svh;
         --x: 0svh;
         --rot: 2deg;
-        --z: 56;
+        z-index: 56;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3870,7 +3870,7 @@ height: 160px;
         --y: 3svh;
         --x: 0svh;
         --rot: 4deg;
-        --z: 55;
+        z-index: 55;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3888,7 +3888,7 @@ height: 160px;
         --y: 60svh;
         --x: 0svh;
         --rot: -2.5deg;
-        --z: 60;
+        z-index: 60;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3908,7 +3908,7 @@ height: 160px;
         --y: 57svh;
         --x: 0svh;
         --rot: -40deg;
-        --z: 400;
+        z-index: 400;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3923,7 +3923,7 @@ height: 160px;
         --y: 16svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 60;
+        z-index: 60;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3942,7 +3942,7 @@ height: 160px;
         --y: 3svh;
         --x: 0svh;
         --rot: 15deg;
-        --z: 60;
+        z-index: 60;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3956,7 +3956,7 @@ height: 160px;
         --y: 73svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 60;
+        z-index: 60;
         pointer-events: none;
       
         @include respond(xs) {
@@ -3970,7 +3970,7 @@ height: 160px;
         --y: 65svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 39;
+        z-index: 39;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -3992,7 +3992,7 @@ height: 160px;
         --y: 48svh;
         --x: 0svh;
         --rot: -3deg;
-        --z: 61;
+        z-index: 61;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4007,7 +4007,7 @@ height: 160px;
         --y: -1svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 60;
+        z-index: 60;
       
         @include respond(xs) {
           --left:1768svh;
@@ -4020,7 +4020,7 @@ height: 160px;
         --y: -2svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 59;
+        z-index: 59;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4034,7 +4034,7 @@ height: 160px;
         --y: 35svh;
         --x: 0svh;
         --rot: -4deg;
-        --z: 60;
+        z-index: 60;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -4055,7 +4055,7 @@ height: 160px;
         --y: 28svh;
         --x: 0svh;
         --rot: 19deg;
-        --z: 60;
+        z-index: 60;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4069,7 +4069,7 @@ height: 160px;
         --y: 7svh;
         --x: 0svh;
         --rot: -.5deg;
-        --z: 60;
+        z-index: 60;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -4090,7 +4090,7 @@ height: 160px;
         --y: 73svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 60;
+        z-index: 60;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4104,7 +4104,7 @@ height: 160px;
         --y: 73svh;
         --x: 0svh;
         --rot: -5deg;
-        --z: 60;
+        z-index: 60;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4119,7 +4119,7 @@ height: 160px;
         --y: 49svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 60;
+        z-index: 60;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4135,7 +4135,7 @@ height: 160px;
         --y: 2svh;
         --x: 0svh;
         --rot: -3deg;
-        --z: 61;
+        z-index: 61;
       
         @include respond(xs) {
           --left:1860svh;
@@ -4148,7 +4148,7 @@ height: 160px;
         --y: 73svh;
         --x: 0svh;
         --rot: 7deg;
-        --z: 60;
+        z-index: 60;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4164,7 +4164,7 @@ height: 160px;
         --y: 52svh;
         --x: 0svh;
         --rot: 5deg;
-        --z: 60;
+        z-index: 60;
       
         @include respond(xs) {
           --left:1883svh;
@@ -4179,7 +4179,7 @@ height: 160px;
         --y: 35svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 61;
+        z-index: 61;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4193,7 +4193,7 @@ height: 160px;
         --y: 1svh;
         --x: 0svh;
         --rot: 2deg;
-        --z: 60;
+        z-index: 60;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4216,7 +4216,7 @@ height: 160px;
         --y: 80svh;
         --x: 10svh;
         --rot: 70deg;
-        --z: 400;
+        z-index: 400;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4231,7 +4231,7 @@ height: 160px;
         --y: 2svh;
         --x: 10svh;
         --rot: 0deg;
-        --z: 40;
+        z-index: 40;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4252,7 +4252,7 @@ height: 160px;
         --y: 92svh;
         --x: 0svh;
         --rot: 1deg;
-        --z: 440;
+        z-index: 440;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4267,7 +4267,7 @@ height: 160px;
         --y: 38svh;
         --x: 0svh;
         --rot: -4deg;
-        --z: 44;
+        z-index: 44;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4282,7 +4282,7 @@ height: 160px;
         --y: 16svh;
         --x: 0svh;
         --rot: 90deg;
-        --z: 42;
+        z-index: 42;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4297,7 +4297,7 @@ height: 160px;
         --y: 2svh;
         --x: 0svh;
         --rot: -2deg;
-        --z: 41;
+        z-index: 41;
       
         @include respond(xs) {
           --left:1962svh;
@@ -4311,7 +4311,7 @@ height: 160px;
         --y: 2svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 43;
+        z-index: 43;
       
         @include respond(xs) {
           --left:1983svh;
@@ -4324,7 +4324,7 @@ height: 160px;
         --y: 64svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 57;
+        z-index: 57;
       
         @include respond(xs) {
           --left:2003svh;
@@ -4337,7 +4337,7 @@ height: 160px;
         --y: 47svh;
         --x: 0svh;
         --rot: -15deg;
-        --z: 44;
+        z-index: 44;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4356,7 +4356,7 @@ height: 160px;
         --y: -3svh;
         --x: 0svh;
         --rot: -1deg;
-        --z: 440;
+        z-index: 440;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4370,7 +4370,7 @@ height: 160px;
         --y: 42svh;
         --x: 0svh;
         --rot: -4deg;
-        --z: 44;
+        z-index: 44;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4385,7 +4385,7 @@ height: 160px;
         --y: 44svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 57;
+        z-index: 57;
       
         @include respond(xs) {
           --left:2023svh;
@@ -4405,7 +4405,7 @@ height: 160px;
         --y: 27svh;
         --x: 0svh;
         --rot: -10deg;
-        --z: 500;
+        z-index: 500;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4419,7 +4419,7 @@ height: 160px;
         --y: -2svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 50;
+        z-index: 50;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4438,7 +4438,7 @@ height: 160px;
         --y: 4svh;
         --x: 0svh;
         --rot: 10deg;
-        --z: 500;
+        z-index: 500;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4453,7 +4453,7 @@ height: 160px;
         --y: 40svh;
         --x: 0svh;
         --rot: -8deg;
-        --z: 45;
+        z-index: 45;
       
         @include respond(xs) {
           --left:2063svh;
@@ -4471,7 +4471,7 @@ height: 160px;
         --y: 32svh;
         --x: 0svh;
         --rot: -8deg;
-        --z: 405;
+        z-index: 405;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4485,7 +4485,7 @@ height: 160px;
         --y: 12svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 45;
+        z-index: 45;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4499,7 +4499,7 @@ height: 160px;
         --y: 9svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 45;
+        z-index: 45;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -4524,7 +4524,7 @@ height: 160px;
         --y: 0svh;
         --x: 0svh;
         --rot: -10deg;
-        --z: 405;
+        z-index: 405;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4545,7 +4545,7 @@ height: 160px;
         --y: 94svh;
         --x: 0svh;
         --rot: -8deg;
-        --z: 405;
+        z-index: 405;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4565,7 +4565,7 @@ height: 160px;
         --y: 90svh;
         --x: 0svh;
         --rot: 8deg;
-        --z: 405;
+        z-index: 405;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4579,7 +4579,7 @@ height: 160px;
         --y: 49svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 46;
+        z-index: 46;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4593,7 +4593,7 @@ height: 160px;
         --y: 4svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 45;
+        z-index: 45;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4612,7 +4612,7 @@ height: 160px;
         --y: 30svh;
         --x: 0svh;
         --rot: 10deg;
-        --z: 500;
+        z-index: 500;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4632,7 +4632,7 @@ height: 160px;
         --y: 46svh;
         --x: 0svh;
         --rot: -10deg;
-        --z: 500;
+        z-index: 500;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4647,7 +4647,7 @@ height: 160px;
         --y: 3svh;
         --x: 0svh;
         --rot: -63deg;
-        --z: 46;
+        z-index: 46;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4661,7 +4661,7 @@ height: 160px;
         --y: 13svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 46;
+        z-index: 46;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -4686,7 +4686,7 @@ height: 160px;
         --y: -1svh;
         --x: 0svh;
         --rot: -10deg;
-        --z: 500;
+        z-index: 500;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4701,7 +4701,7 @@ height: 160px;
         --y: 33svh;
         --x: 0svh;
         --rot: 170deg;
-        --z: 46;
+        z-index: 46;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4720,7 +4720,7 @@ height: 160px;
         --y: 15svh;
         --x: 0svh;
         --rot: -10deg;
-        --z: 500;
+        z-index: 500;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4740,7 +4740,7 @@ height: 160px;
         --y: 4svh;
         --x: 0svh;
         --rot: -15deg;
-        --z: 500;
+        z-index: 500;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4754,7 +4754,7 @@ height: 160px;
         --y: 61svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 47;
+        z-index: 47;
       
         @include respond(xs) {
           display:none;
@@ -4773,7 +4773,7 @@ height: 160px;
           --y: 62svh;
           --x: 0svh;
           --rot: 0deg;
-          --z: 47;
+          z-index: 47;
         }
       }
       
@@ -4783,7 +4783,7 @@ height: 160px;
         --y: 28svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 45;
+        z-index: 45;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4797,7 +4797,7 @@ height: 160px;
         --y: 25svh;
         --x: 0svh;
         --rot: -5deg;
-        --z: 44;
+        z-index: 44;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4811,7 +4811,7 @@ height: 160px;
         --y: 0svh;
         --x: 3svh;
         --rot: 0deg;
-        --z: 45;
+        z-index: 45;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4829,7 +4829,7 @@ height: 160px;
         --y: 72svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 44;
+        z-index: 44;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4844,7 +4844,7 @@ height: 160px;
         --y: 38svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 46;
+        z-index: 46;
       
         @include respond(xs) {
           --left:2204svh;
@@ -4857,7 +4857,7 @@ height: 160px;
         --y: 2svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 45;
+        z-index: 45;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4871,7 +4871,7 @@ height: 160px;
         --y: 75svh;
         --x: 0svh;
         --rot: 5deg;
-        --z: 46;
+        z-index: 46;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4890,7 +4890,7 @@ height: 160px;
         --y: 61svh;
         --x: 0svh;
         --rot: 5deg;
-        --z: 46;
+        z-index: 46;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4906,7 +4906,7 @@ height: 160px;
         --y: 40svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 70;
+        z-index: 70;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4921,7 +4921,7 @@ height: 160px;
         --y: 2svh;
         --x: 0svh;
         --rot: 8deg;
-        --z: 46;
+        z-index: 46;
       
         @include respond(xs) {
           --left:2240svh;
@@ -4935,7 +4935,7 @@ height: 160px;
         --y: 71svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 71;
+        z-index: 71;
         pointer-events: none;
       
         --ff: "Thinker";
@@ -4956,7 +4956,7 @@ height: 160px;
         --y: 37svh;
         --x: 0svh;
         --rot: 5deg;
-        --z: 71;
+        z-index: 71;
       
         @include respond(xs) {
           --left:2297svh;
@@ -4970,7 +4970,7 @@ height: 160px;
         --y: 2svh;
         --x: 0svh;
         --rot: -5deg;
-        --z: 70;
+        z-index: 70;
         pointer-events: none;
       
         @include respond(xs) {
@@ -4985,7 +4985,7 @@ height: 160px;
         --y: 5svh;
         --x: 0svh;
         --rot: -5deg;
-        --z: 71;
+        z-index: 71;
         pointer-events: none;
       
         @include respond(xs) {
@@ -5000,7 +5000,7 @@ height: 160px;
         --y: 13svh;
         --x: 0svh;
         --rot: 0deg;
-        --z: 71;
+        z-index: 71;
         pointer-events: none;
       
         @include respond(xs) {
@@ -5017,7 +5017,7 @@ height: 160px;
         --y: 4svh;
         --x: 8svh;
         --rot: 0deg;
-        --z: 2;
+        z-index: 2;
         pointer-events: none;
       
         @include respond(xs) {
@@ -5032,7 +5032,7 @@ height: 160px;
         --y: 9svh;
         --x: 8svh;
         --rot: 0deg;
-        --z: 2;
+        z-index: 2;
         outline: none;
       
         @include respond(xs) {
@@ -5048,7 +5048,7 @@ height: 160px;
         --y: 9svh;
         --x: 8svh;
         --rot: 0deg;
-        --z: 2;
+        z-index: 2;
         outline: none;
       
         @include respond(xs) {
@@ -5064,7 +5064,7 @@ height: 160px;
         --y: 9svh;
         --x: 8svh;
         --rot: 0deg;
-        --z: 2;
+        z-index: 2;
         outline: none;
       
         @include respond(xs) {
@@ -5080,7 +5080,7 @@ height: 160px;
         --y: 9svh;
         --x: 8svh;
         --rot: 0deg;
-        --z: 2;
+        z-index: 2;
         outline: none;
       
         @include respond(xs) {
@@ -5096,7 +5096,7 @@ height: 160px;
         --y: 9svh;
         --x: 8svh;
         --rot: 0deg;
-        --z: 2;
+        z-index: 2;
         outline: none;
       
         @include respond(xs) {
@@ -5113,7 +5113,7 @@ height: 160px;
         --y: 9svh;
         --x: 8svh;
         --rot: 0deg;
-        --z: 2;
+        z-index: 2;
         outline: none;
       
         @include respond(xs) {
@@ -5131,7 +5131,7 @@ height: 160px;
         --y: 40svh;
         --x: 8svh;
         --rot: 0deg;
-        --z: 2;
+        z-index: 2;
         pointer-events: none;
       
         @include respond(xs) {
@@ -5150,7 +5150,7 @@ height: 160px;
           --y: 40svh;
           --x: 8svh;
           --rot: 0deg;
-          --z: 2;
+          z-index: 2;
           pointer-events: none;
         }
       }
@@ -5162,7 +5162,7 @@ height: 160px;
         --y: 15svh;
         --x: 8svh;
         --rot: 0deg;
-        --z: 2;
+        --z-index: 2;
       
         @include respond(xs) {
           --left:2470svh;
