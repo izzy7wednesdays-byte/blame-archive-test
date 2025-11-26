@@ -414,22 +414,23 @@ body {
       }
       
       .lfg { 
-        position: absolute;
-        object-fit: cover;
-
-        width: 804px;
-        height: 369px;
-
-        width: 106.4vh;
-        height: 48.8vh;
-        top: 78vh;
-        left: 47vh;
-
-        transform: scale(.42) rotate(0deg);
-        transform-origin: center;
-        pointer-events: none;
-
-        
+      position: absolute;
+      object-fit: cover;
+      
+      width: 297;
+      height: 819px;
+      
+      width: 29.59vh;
+      height: 110.68vh;
+      
+      width: 29.59vh;
+      height: 110.68vh;
+      top: 0vh;
+      left: 10vh;
+      
+      transform: scale(1) rotate(0deg);
+      transform-origin: center;
+       
         @include respond(xs) {
           display:none;
         }
@@ -455,15 +456,21 @@ body {
       }
         
         .pink-arrow {           
-          width: 804px;
-          height: 369px;
-          		
-          width: 106.4vh;
-          height: 48.8vh;
-          top: 40vh;
-          left: 68vh;
-  
-          transform: scale(0.20) rotate(0deg);
+          position: absolute;
+          object-fit: cover;
+          
+          width: 407px;
+          height: 1046px;
+          
+          width: 55vh;
+          height: 141.49vh;
+          
+          width: 55vh;
+          height: 141.49vh;
+          top: 0vh;
+          left: 0vh;
+          
+          transform: scale(1) rotate(0deg);
           transform-origin: center;
           
           @include respond(xs) {
