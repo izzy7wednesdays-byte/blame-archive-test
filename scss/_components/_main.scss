@@ -1184,7 +1184,13 @@ body {
       
     .text-wrapper-5 {
       position: absolute;
-      object-fit: cover;
+      
+      font-weight: 400;
+      color: #4CA8E9;
+      font-size: 32px;
+      letter-spacing: 0;
+      line-height: normal;
+      text-align: center;
       
       width: 1000px;
       height: 625px;
