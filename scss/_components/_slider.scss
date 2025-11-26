@@ -13,8 +13,6 @@ body.desktop {
     scroll-behavior: smooth;
     scrollbar-width: thin;
 
-    --group-left: -25svh;
-
     &::-webkit-scrollbar {
       height: 8px;
     }
