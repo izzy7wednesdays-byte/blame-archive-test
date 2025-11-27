@@ -3979,10 +3979,13 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
+        
         width: 1080px;
         height: 1920px;
+        
         width: 118.681318681319vh;
         height: 210.989010989011vh;
+        
         width: 23.7362637362638vh;
         height: 42.1978021978022vh;
         top: 56vh;
@@ -3996,13 +3999,24 @@ body {
       }
       
       .star-trio-3 {
-        --left: 1584svh;
-        --scale: .10;
-        --y: 79svh;
-        --x: 10svh;
-        --rot: 12deg;
-        z-index: 410;
-        pointer-events: none;
+        position: absolute;
+        object-fit: cover;
+        pointer-events:none;
+        
+        width: 264px;
+        height: 425px;
+        
+        width: 29.010989010989vh;
+        height: 47.8021978021978vh;
+        
+        width: vh;
+        height: vh;
+        top: 22vh;
+        left: 335vh;
+        z-index: auto;
+        
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1369svh;
@@ -4010,13 +4024,24 @@ body {
       }
       
       .star-trio-4 {
-        --left: 1600svh;
-        --scale: .15;
-        --y: 97svh;
-        --x: 10svh;
-        --rot: -160deg;
-        z-index: 410;
-        pointer-events: none;
+        position: absolute;
+        object-fit: cover;
+        pointer-events:none;
+        
+        width: 264px;
+        height: 425px;
+        
+        width: 29.010989010989vh;
+        height: 47.8021978021978vh;
+        
+        width: vh;
+        height: vh;
+        top: 22vh;
+        left: 335vh;
+        z-index: auto;
+        
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display: none;
