@@ -3477,12 +3477,12 @@ body {
         width: 105.34521vh;
         height: 67.26058vh;
         
-        width: 25.989010989011vh;
-        height: 16.5934065934066vh;
-        top: 30vh;
+        width: 20.7912087912088vh;
+        height: 13.2747252747253vh;
+        top: 34vh;
         left: 1407vh;
         z-index: auto;
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
    
         @include respond(xs) {
@@ -3516,23 +3516,23 @@ body {
         position: absolute;
         font-weight: 400;
         color: #4CA8E9;
-        font-size: 32px;
+        font-size: 15px;
         letter-spacing: 0;
         line-height: normal;
         text-align: center;
-  
+        text-transform: uppercase;
+        
         width: 260px;
         top: 820px;
+        
         left: 4574px;
-        
         width: 30.7vh;
-        top: 73vh;
-        left: 409vh;
         
+        top: 89.5vh;
+        left: 1397.5vh;
         transform: rotate(0deg);
         transform-origin: center;
-        
-      
+             
         @include respond(xs) {
           --left:1121svh;
         }
@@ -3541,24 +3541,21 @@ body {
       .mixing-sleepwalking-2 {
         position: absolute;
         object-fit: cover;
-        
         width: 1080px;
         height: 1920px;
         
         width: 118.03279vh;
         height: 209.83607vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
-        
-        transform: scale(1) rotate(0deg);
+        width: 29.6703296703298vh;
+        height: 52.7472527472528vh;
+        top: 2vh;
+        left: 1429vh;
+        z-index: auto;
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
-          --left:1143svh;
         }
       }
       
@@ -3566,25 +3563,21 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        
         width: 658px;
         height: 1206px;
         
         width: 73.27394vh;
         height: 134.29844vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
-        
+        width: 25.3076923076923vh; 
+        height: 46.3846153846156vh;
+        top: 56vh;
+        left: 1427vh;
+        z-index: auto;
         transform: scale(1) rotate(0deg);
         transform-origin: center;
         
-      
         @include respond(xs) {
-          --left:1137svh;
         }
       }
       
@@ -3592,25 +3585,21 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        
         width: 1080px;
         height: 1080px;
         
-        width: 120.26726vh;
-        height: 120.26726vh;
+        width: 118.681318681319vh;
+        height: 118.681318681319vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
-        
-        transform: scale(1) rotate(0deg);
+        width: 42.7252747252748vh;
+        height: 42.7252747252748vh;
+        top: 1vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
         transform-origin: center;
-        
       
         @include respond(xs) {
-          --left:1160svh;
         }
       }
       
@@ -3618,23 +3607,20 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        
         width: 1000px;
         height: 1000px;
         
         width: 111.35857vh;
         height: 111.35857vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
-        
-        transform: scale(1) rotate(0deg);
+        width: 50.8131868131868vh;
+        height: 50.8131868131868vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
         transform-origin: center;
-        
-      
+
         @include respond(xs) {
           --left:1166svh;
         }
