@@ -3855,7 +3855,7 @@ body {
         height: 38.4615384615385vh;
         width: 47.2527472527473vh;
         height: 19.2307692307693vh;
-        top: 1vh;
+        top: 5vh;
         left: 1622vh;
         z-index: auto;
         transform: rotate(0deg);
@@ -4001,21 +4001,17 @@ body {
       .star-trio-3 {
         position: absolute;
         object-fit: cover;
-        pointer-events:none;
-        
+        pointer-events: none;
         width: 264px;
         height: 425px;
-        
-        width: 29.010989010989vh;
-        height: 47.8021978021978vh;
-        
-        width: vh;
-        height: vh;
-        top: 22vh;
-        left: 335vh;
+        width: 29.010989011vh;
+        height: 47.8021978022vh;
+        width: 11.6043956043956vh;
+        height: 19.1208791208791vh;
+        top: -1vh;
+        left: 1677vh;
         z-index: auto;
-        
-        transform: rotate(0deg);
+        transform: rotate(-41deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -4026,21 +4022,17 @@ body {
       .star-trio-4 {
         position: absolute;
         object-fit: cover;
-        pointer-events:none;
-        
+        pointer-events: none;
         width: 264px;
         height: 425px;
-        
         width: 29.010989010989vh;
         height: 47.8021978021978vh;
-        
-        width: vh;
-        height: vh;
-        top: 22vh;
-        left: 335vh;
-        z-index: auto;
-        
-        transform: rotate(0deg);
+        width: 14.5054945054945vh;
+        height: 23.9010989010989vh;
+        top: -3vh;
+        left: 1705vh;
+        z-index: 3;
+        transform: rotate(220deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -4077,11 +4069,11 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 1920px;
+        height: 1080px;
         
-        width: vh;
-        height: vh;
+        width: 210.989010989011vh;
+        height: 118.681318681319vh;
         
         width: vh;
         height: vh;
@@ -4099,11 +4091,11 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 498px;
+        height: 278px;
         
-        width: vh;
-        height: vh;
+        width: 54.7252747252747vh;
+        height: 30.5494505494505vh;
         
         width: vh;
         height: vh;
@@ -4128,8 +4120,8 @@ body {
         width: 18.03279vh;
         height: 17.48634vh;
         
-        width: 7.213116vh;
-        height: 6.994536vh;
+        width: vh;
+        height: vh;
         top: 0vh;
         left: 500vh;
         z-index: auto ;
@@ -4169,11 +4161,11 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 110px;
+        height: 113px;
         
-        width: vh;
-        height: vh;
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
         
         width: vh;
         height: vh;
@@ -4266,11 +4258,11 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 110px;
+        height: 113px;
         
-        width: vh;
-        height: vh;
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
         
         width: vh;
         height: vh;
@@ -4334,11 +4326,11 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 110px;
+        height: 113px;
         
-        width: vh;
-        height: vh;
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
         
         width: vh;
         height: vh;
@@ -4381,11 +4373,11 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 110px;
+        height: 113px;
         
-        width: vh;
-        height: vh;
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
         
         width: vh;
         height: vh;
@@ -4476,11 +4468,11 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 110px;
+        height: 113px;
         
-        width: vh;
-        height: vh;
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
         
         width: vh;
         height: vh;
@@ -4543,11 +4535,11 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 110px;
+        height: 113px;
         
-        width: vh;
-        height: vh;
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
         
         width: vh;
         height: vh;
@@ -5586,16 +5578,20 @@ body {
       .glow-star-7 {
         position: absolute;
         object-fit: cover;
-        
+        pointer-events: none;
         width: 110px;
         height: 113px;
-        --left: 2136svh;
-        --scale: .12;
-        --y: 80svh;
-        --x: 10svh;
-        --rot: 70deg;
-        z-index: 400;
-        pointer-events: none;
+        
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display:none;
@@ -5632,11 +5628,11 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 110px;
+        height: 113px;
         
-        width: vh;
-        height: vh;
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
         
         width: vh;
         height: vh;
@@ -5795,11 +5791,11 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 110px;
+        height: 113px;
         
-        width: vh;
-        height: vh;
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
         
         width: vh;
         height: vh;
@@ -6085,16 +6081,20 @@ body {
       .glow-star-10 {
         position: absolute;
         object-fit: cover;
-        
+        pointer-events: none;
         width: 110px;
         height: 113px;
-        --left: 2340svh;
-        --scale: .11;
-        --y: 90svh;
-        --x: 0svh;
-        --rot: 8deg;
-        z-index: 405;
-        pointer-events: none;
+        
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2125svh;
@@ -6151,11 +6151,11 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 110px;
+        height: 113px;
         
-        width: vh;
-        height: vh;
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
         
         width: vh;
         height: vh;
@@ -6175,11 +6175,11 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 110px;
+        height: 113px;
         
-        width: vh;
-        height: vh;
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
         
         width: vh;
         height: vh;
@@ -6550,11 +6550,11 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 110px;
+        height: 113px;
         
-        width: vh;
-        height: vh;
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
         
         width: vh;
         height: vh;
