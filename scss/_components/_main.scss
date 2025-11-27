@@ -503,13 +503,13 @@ body {
       width: 598.08vh;
       height: 77.03vh;
       
-      width: 598.08vh;
-      height: 77.03vh;
-      top: 0vh;
-      left: 0vh;
-      z-index: 4;
+      width: 299.04vh;
+      height: 38.516vh;
+      top: 36vh;
+      left: 24vh;
+      z-index: 0;
       
-      transform: scale(1) rotate(0deg);
+      transform: scale(0.4) rotate(-8deg);
       transform-origin: center;
     
       @include respond(xs) {
