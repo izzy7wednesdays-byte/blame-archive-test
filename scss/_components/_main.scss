@@ -3701,17 +3701,17 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 872px;
+        height: 480px;
         
-        width: vh;
-        height: vh;
+        width: 95.8241758241758vh;
+        height: 52.7472527472527vh;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
+        width: 47.9120879120879vh;
+        height: 26.3736263736264vh;
+        top: 3vh;
+        left: 1539vh;
+        z-index: 3;
         transform: rotate(0deg);
         transform-origin: center;
       
@@ -3722,18 +3722,19 @@ body {
       .artwork-testshoot-4 {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
+        width: 872px;
+        height: 480px;
+        
+        width: 95.8241758241758vh;
+        height: 52.7472527472527vh;
+        
+        width: 47.9120879120879vh;
+        height: 26.3736263736264vh;
+        top: 30vh;
+        left: 1544vh;
+        z-index: 2;
         transform: rotate(0deg);
         transform-origin: center;
       
@@ -3744,18 +3745,19 @@ body {
       .about-artwork {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
+        width: 860px;
+        height: 545px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 94.5054945054945vh;
+        height: 59.8901098901099vh;
+        
+        width: 61.4285714285714vh;
+        height: 38.9285714285714vh;
+        top: 59vh;
+        left: 1511vh;
         z-index: auto;
+        
         transform: rotate(0deg);
         transform-origin: center;
       
@@ -3765,43 +3767,39 @@ body {
       
       .caitlin-text-1 {
         position: absolute;
-        object-fit: cover;
-        pointer-events: none;
-        width: px;
-        height: px;
-        
-        width: vh;
-        height: vh;
-        
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
-        transform: rotate(0deg);
-        transform-origin: center;
-      
+      object-fit: cover;
+      pointer-events: none;
+      width: 600px;
+      height: 668px;
+      width: 65.9340659340659vh;
+      height: 73.4065934065934vh;
+      width: 29.010989010989vh;
+      height: 32.2989010989011vh;
+      top: 1vh;
+      left: 1592vh;
+      z-index: 0;
+      transform: rotate(-3deg);
+      transform-origin: center;
+          
         @include respond(xs) {
         }
       }
       
       .kayla-polaroid {
         position: absolute;
-        object-fit: cover;
-        pointer-events: none;
-        width: px;
-        height: px;
-        
-        width: vh;
-        height: vh;
-        
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
-        transform: rotate(0deg);
-        transform-origin: center;
+    object-fit: cover;
+    pointer-events: none;
+    width: 565px;
+    height: 450px;
+    width: 62.0879120879121vh;
+    height: 49.4505494505495vh;
+    width: 24.8351648351648vh;
+    height: 19.7802197802198vh;
+    top: 35vh;
+    left: 1593vh;
+    z-index: auto;
+    transform: rotate(0deg);
+    transform-origin: center;
       
         @include respond(xs) {
         }
@@ -3809,21 +3807,19 @@ body {
       
       .tv-photo {
         position: absolute;
-        object-fit: cover;
-        pointer-events: none;
-        width: px;
-        height: px;
-        
-        width: vh;
-        height: vh;
-        
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
-        transform: rotate(0deg);
-        transform-origin: center;
+    object-fit: cover;
+    pointer-events: none;
+    width: 600px;
+    height: 450px;
+    width: 65.9340659340659vh;
+    height: 49.4505494505495vh;
+    width: 26.3736263736264vh;
+    height: 19.7802197802198vh;
+    top: 56vh;
+    left: 1575vh;
+    z-index: auto;
+    transform: rotate(0deg);
+    transform-origin: center;
       
         @include respond(xs) {
         }
@@ -3833,16 +3829,14 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
-        
-        width: vh;
-        height: vh;
-        
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 872px;
+        height: 480px;
+        width: 95.8241758241758vh;
+        height: 52.7472527472527vh;
+        width: 36.4131868131868vh;
+        height: 20.043956043956vh;
+        top: 78vh;
+        left: 1575vh;
         z-index: auto;
         transform: rotate(0deg);
         transform-origin: center;
@@ -3855,16 +3849,14 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
-        
-        width: vh;
-        height: vh;
-        
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 860px;
+        height: 350px;
+        width: 94.5054945054945vh;
+        height: 38.4615384615385vh;
+        width: 47.2527472527473vh;
+        height: 19.2307692307693vh;
+        top: 1vh;
+        left: 1622vh;
         z-index: auto;
         transform: rotate(0deg);
         transform-origin: center;
@@ -3877,17 +3869,15 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
-        
-        width: vh;
-        height: vh;
-        
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
+        width: 670px;
+        height: 712px;
+        width: 73.6263736263736vh;
+        height: 78.2417582417582vh;
+        width: 32.3956043956044vh;
+        height: 34.4263736263736vh;
+        top: 20vh;
+        left: 1619vh;
+        z-index: 0;
         transform: rotate(0deg);
         transform-origin: center;
       
@@ -3899,16 +3889,14 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
-        
-        width: vh;
-        height: vh;
-        
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 872px;
+        height: 480px;
+        width: 95.8241758241758vh;
+        height: 52.7472527472527vh;
+        width: 43.1208791208791vh;
+        height: 23.7362637362637vh;
+        top: 56vh;
+        left: 1603vh;
         z-index: auto;
         transform: rotate(0deg);
         transform-origin: center;
@@ -3921,16 +3909,17 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
+        width: 489px;
+        height: 652px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 53.7362637362637vh;
+        height: 71.6483516483516vh;
+        
+        width: 14.5087912087912vh;
+        height: 19.3450549450549vh;
+        top: 81vh;
+        left: 1613vh;
         z-index: auto;
         transform: rotate(0deg);
         transform-origin: center;
@@ -3943,20 +3932,19 @@ body {
         position: absolute;
         font-weight: 400;
         color: #4CA8E9;
-        font-size: 32px;
+        font-size: 15px;
         letter-spacing: 0;
         line-height: normal;
         text-align: center;
         text-transform: uppercase;
-  
+        
         width: 260px;
         top: 820px;
         left: 4574px;
         
         width: 30.7vh;
-        top: 73vh;
-        left: 409vh;
-        
+        top: 83vh;
+        left: 1621vh;
         transform: rotate(0deg);
         transform-origin: center;
         z-index: 0;
@@ -3969,18 +3957,18 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 670px;
+        height: 892px;
         
-        width: vh;
-        height: vh;
+        width: 73.6263736263736vh;
+        height: 98.021978021978vh;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
-        transform: rotate(0deg);
+        width: 32.3956043956044vh;
+        height: 43.1296703296703vh;
+        top: 10vh;
+        left: 1649vh;
+        z-index: 0;
+        transform: rotate(-4deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -3991,16 +3979,14 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
-        
-        width: vh;
-        height: vh;
-        
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 1080px;
+        height: 1920px;
+        width: 118.681318681319vh;
+        height: 210.989010989011vh;
+        width: 23.7362637362638vh;
+        height: 42.1978021978022vh;
+        top: 56vh;
+        left: 1648vh;
         z-index: auto;
         transform: rotate(0deg);
         transform-origin: center;
@@ -4042,16 +4028,14 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
-        
-        width: vh;
-        height: vh;
-        
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 600px;
+        height: 802px;
+        width: 65.9340659340659vh;
+        height: 88.1318681318681vh;
+        width: 26.3736263736264vh;
+        height: 35.2527472527472vh;
+        top: 18vh;
+        left: 1678vh;
         z-index: auto;
         transform: rotate(0deg);
         transform-origin: center;
