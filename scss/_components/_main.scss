@@ -3631,29 +3631,47 @@ body {
       // ========= ARTWORK SECTION (slot classes) =========
       
       .artwork-testshoot-1 {
-        --left: 1425svh;
-        --scale: .28;
-        --ar: 4/3;
-        --y: 66svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 49;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: 640px;
+        height: 480px;
+        
+        width: 70.3296703296703vh;
+        height: 52.7472527472527vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
+
       
         @include respond(xs) {
-          --left:1210svh;
         }
       }
       
       .artwork-title {
-        --left: 1414svh;
-        --scale: .2;
-        --y: 46svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 41;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1199svh;
         }
       }
       
@@ -3684,157 +3702,244 @@ body {
       }
       
       .artwork-testshoot-5 {
-        --left: 1464svh;
-        --scale: .27;
-        --ar: 109/60;
-        --y: 68svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 46;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1249svh;
         }
       }
       
       .artwork-testshoot-4 {
-        --left: 1466svh;
-        --scale: .22;
-        --ar: 109/60;
-        --y: 44svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 45;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1251svh;
         }
       }
       
       .about-artwork {
-        display:none;
-        --left: 1447svh;
-        --scale: .34;
-        --y: 2svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 50;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1232svh;
         }
       }
       
       .caitlin-text-1 {
-        --left: 1515svh;
-        --scale: .34;
-        --y: 64svh;
-        --x: 0svh;
-        --rot: 1.5deg;
-        z-index: 39;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1300svh;
         }
       }
       
       .kayla-polaroid {
-        --left: 1508svh;
-        --scale: .19;
-        --y: 43svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 42;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1293svh;
         }
       }
       
       .tv-photo {
-        --left: 1502svh;
-        --scale: .19;
-        --y: 22svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 42;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1287svh;
         }
       }
       
       .artwork-testshoot-3 {
-        --left: 1502svh;
-        --scale: .20;
-        --ar: 109/60;
-        --y: -1svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 44;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1287svh;
         }
       }
       
       .caitlin-note {
-        --left: 1546svh;
-        --scale: .2;
-        --y: 77svh !important;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 41;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1331svh;
         }
       }
       
       .caitlin-text-2 {
-        --left: 1534svh;
-        --scale: .34;
-        --y: 43svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 37;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1319svh;
         }
       }
       
       .shoot-bts-1 {
-        --left: 1529svh;
-        --scale: .22;
-        --ar: 109/60;
-        --y: 20svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 45;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1314svh;
         }
       }
       
       .shoot-makeup {
-        --left: 1544svh;
-        --scale: .18;
-        --y: 1svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 39;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1325svh;
-          --y:1svh;
         }
       }
       
@@ -3846,6 +3951,7 @@ body {
         letter-spacing: 0;
         line-height: normal;
         text-align: center;
+        text-transform: uppercase;
   
         width: 260px;
         top: 820px;
@@ -3857,36 +3963,53 @@ body {
         
         transform: rotate(0deg);
         transform-origin: center;
+        z-index:0
       
         @include respond(xs) {
         }
       }
       
       .caitlin-text-3 {
-        --left: 1566svh;
-        --scale: .35;
-        --y: 45svh;
-        --x: 0svh;
-        --rot: -5deg;
-        z-index: 40;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1351svh;
         }
       }
       
       .shoot-bts-2 {
-        --left: 1571svh;
-        --scale: .38;
-        --ar: 9/16;
-        --y: 5svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 48;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1356svh;
         }
       }
       
@@ -3920,16 +4043,24 @@ body {
       }
       
       .dorm-mirror {
-        --left: 1587svh;
-        --scale: .35;
-        --y: 42svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 40;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1372svh;
         }
       }
       
@@ -3938,29 +4069,46 @@ body {
       // ========= VIDEO SECTION (slot classes) =========
       
       .misery-bts {
-        --left: 1612svh;
-        --scale: .38;
-        --y: 62svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 39;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1397svh;
         }
       }
       
       .buddy-gif {
-        --left: 1612svh;
-        --scale: .15;
-        --y: 45svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 53;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1397svh;
         }
       }
       
@@ -3985,7 +4133,6 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left: 1379svh;
         }
       }
       
@@ -4010,23 +4157,26 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:1379svh;
         }
       }
       
       .glow-star-1 {
         position: absolute;
         object-fit: cover;
-        
-        width: 110px;
-        height: 113px;
-        --left: 1602svh;
-        --scale: .07;
-        --y: 31svh;
-        --x: 0svh;
-        --rot: 15deg;
-        z-index: 4;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1387svh;
@@ -4054,7 +4204,6 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
-          --left: 1395svh;
         }
       }
       
@@ -4111,44 +4260,65 @@ body {
       .glow-star-2 {
         position: absolute;
         object-fit: cover;
-        
-        width: 110px;
-        height: 113px;
-        --left: 1632svh;
-        --scale: .04;
-        --y: 39svh;
-        --x: 0svh;
-        --rot: 15deg;
-        z-index: 4;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1417svh;
         }
       }
       
       .video-title-camcorder {
-        --left: 1585svh;
-        --scale: .54;
-        --y: -14svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 41;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1370svh;
         }
       }
       
       .video-title-gif {
-        --left: 1587svh;
-        --scale: .20;
-        --y: 10svh;
-        --x: 10svh;
-        --rot: -3deg;
-        z-index: 40;
+        display: none;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1372svh;
@@ -4158,19 +4328,22 @@ body {
       .glow-star-3 {
         position: absolute;
         object-fit: cover;
-        
-        width: 110px;
-        height: 113px;
-        --left: 1594svh;
-        --scale: .03;
-        --y: 6svh;
-        --x: 0svh;
-        --rot: -30deg;
-        z-index: 4;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1379svh;
         }
       }
       
@@ -4202,19 +4375,22 @@ body {
       .glow-star-4 {
         position: absolute;
         object-fit: cover;
-        
-        width: 110px;
-        height: 113px;
-        --left: 1602svh;
-        --scale: .13;
-        --y: -6svh;
-        --x: 0svh;
-        --rot: 15deg;
-        z-index: 4;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1387svh;
         }
       }
       
@@ -4240,7 +4416,6 @@ body {
       
         @include respond(xs) {
           display: none;
-          //--left:1403svh;
         }
       }
       
@@ -4265,7 +4440,6 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:1409svh;
         }
       }
       
@@ -4290,102 +4464,139 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:1408svh;
         }
       }
       
       .glow-star-5 {
         position: absolute;
         object-fit: cover;
-        
-        width: 110px;
-        height: 113px;
-        --left: 1629svh;
-        --scale: .03;
-        --y: -1svh;
-        --x: 0svh;
-        --rot: -20deg;
-        z-index: 4;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display: none;
-          //--left:1414svh;
         }
       }
       
       .misery-brainstorm-1 {
-        --left: 1638svh;
-        --scale: .25;
-        --y: 35svh;
-        --x: 0svh;
-        --rot: -2deg;
-        z-index: 54;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1423svh;
         }
       }
       
       .misery-polaroids {
-        --left: 1642svh;
-        --scale: .38;
-        --y: -4svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 43;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1427svh;
         }
       }
       
       .glow-star-6 {
         position: absolute;
         object-fit: cover;
-        
-        width: 110px;
-        height: 113px;
-        --left: 1672svh;
-        --scale: .11;
-        --y: 65svh;
-        --x: 0svh;
-        --rot: -10deg;
-        z-index: 4;
         pointer-events: none;
-      
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
+        
         @include respond(xs) {
-          --left:1457svh;
         }
       }
       
       .editing-misery-thought {
-        --left: 1662svh;
-        --scale: .20;
-        --y: 75svh;
-        --x: 0svh;
-        --rot: 2deg;
-        z-index: 41;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1447svh;
         }
       }
       
       .misery-brainstorm-arrow {
-        --left: 1668svh;
-        --scale: .16;
-        --y: 42svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 43;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1453svh;
         }
       }
       
@@ -4410,262 +4621,405 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:1453svh;
         }
       }
       
       .editing-misery {
-        --left: 1685svh;
-        --scale: .25;
-        --y: 71svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 40;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1471svh;
-          --y: 68svh;
+
         }
       }
       
       .misery-brainstorm-2 {
-        --left: 1687svh;
-        --scale: .28;
-        --y: 34svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 43;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1472svh;
         }
       }
       
       .the-cake {
-        --left: 1680svh;
-        --scale: .27;
-        --ar: 16/9;
-        --y: 1svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 48;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1465svh;
         }
       }
       
       .cake-boss {
-        --left: 1709svh;
-        --scale: .27;
-        --ar: 16/9;
-        --y: 36svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 50;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1494svh;
         }
       }
       
       .happy-easter {
-        --left: 1708svh;
-        --scale: .27;
-        --ar: 16/9;
-        --y: 67svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 51;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1493svh;
         }
       }
       
       .dab-video {
-        --left: 1732svh;
-        --scale: .27;
-        --ar: 16/9;
-        --y: 5svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 49;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1517svh;
         }
       }
       
       .exitwounds-film-roll {
-        --left: 1840svh;
-        --scale: 1;
-        --y: 76svh;
-        --x: 0svh;
-        --rot: -90deg;
-        z-index: 56;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1625svh;
         }
       }
       
       .dvd-video {
-        --left: 1760svh;
-        --scale: .18;
-        --y: 36svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 10;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1545svh;
         }
       }
       
       .across-street {
-        --left: 1780svh;
-        --scale: .26;
-        --ar: 287/480;
-        --y: 64svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 52;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1565svh;
         }
       }
       
       .grew-here {
-        --left: 1796svh;
-        --scale: .26;
-        --ar: 407/482;
-        --y: 64svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 53;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1581svh;
         }
       }
       
       .mazzy-star {
-        --left: 1818svh;
-        --scale: .26;
-        --ar: 407/482;
-        --y: 64svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 54;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1603svh;
         }
       }
       
       .tisthedamn {
-        --left: 1840svh;
-        --scale: .26;
-        --ar: 357/481;
-        --y: 64svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 55;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1625svh;
         }
       }
       
       .tv-unboxing {
-        --left: 1785svh;
-        --scale: .56;
-        --ar: 9/16;
-        --y: 2svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 49;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1570svh;
         }
       }
       
       .about-videos {
-        display:none;
-        --left: 1805svh;
-        --scale: .24;
-        --y: 34svh;
-        --x: 0svh;
-        --rot: -2deg;
-        z-index: 50;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1595svh;
-          --scale: 0.22;
-          --rot: -3deg;
+
         }
       }
       
       .exitwounds-subway {
-        --left: 1822svh;
-        --scale: .35;
-        --y: 3svh;
-        --x: 0svh;
-        --rot: 3deg;
-        z-index: 49;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1606svh;
-          --scale: .36;
-          --y: -1svh;
         }
       }
       
       .exitwounds-bts {
-        --left: 1859svh;
-        --scale: .4;
-        --y: 60svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 57;
-      
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
+        
         @include respond(xs) {
-          --left:1644svh;
+
         }
       }
       
       .landmines-bts-tiktok {
-        --left: 1853svh;
-        --scale: .5;
-        --ar: 9/16;
-        --y: 3svh;
-        --x: 0svh;
-        --rot: -1deg;
-        z-index: 54;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1638svh;
         }
       }
       
       .landmines-bts {
-        --left: 1877svh;
-        --scale: .4;
-        --y: 13svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 53;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1662svh;
         }
       }
       
@@ -4696,30 +5050,46 @@ body {
       }
       
       .backtruck-2 {
-        --left: 1932svh;
-        --scale: .29;
-        --y: 27svh;
-        --x: 0svh;
-        --rot: 2deg;
-        z-index: 56;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1717svh;
         }
       }
       
       .backtruck-1 {
-        --left: 1935svh;
-        --scale: .29;
-        --y: 3svh;
-        --x: 0svh;
-        --rot: 4deg;
-        z-index: 55;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:1720svh;
         }
       }
       
@@ -4728,13 +5098,22 @@ body {
       // ========= MERCH SECTION (slot classes) =========
       
       .landmines-matches {
-        --left: 1923svh;
-        --scale: .35;
-        --y: 60svh;
-        --x: 0svh;
-        --rot: -2.5deg;
-        z-index: 60;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1708svh;
@@ -4768,14 +5147,23 @@ body {
       }
       
       .fire-meme {
-        --left: 1950svh;
-        --scale: .26;
-        --y: 16svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 60;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
-      
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
+        
         @include respond(xs) {
           --left:1735svh;
         }
@@ -4807,13 +5195,22 @@ body {
       }
       
       .pretty-little-liars {
-        --left: 1990svh;
-        --scale: .22;
-        --y: 73svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 60;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1775svh;
@@ -4847,13 +5244,22 @@ body {
       }
       
       .m-title {
-        --left: 1960svh;
-        --scale: .08;
-        --y: 48svh;
-        --x: 0svh;
-        --rot: -3deg;
-        z-index: 61;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1745svh;
@@ -4861,13 +5267,22 @@ body {
       }
       
       .candle-lighting {
-        --left: 1983svh;
-        --scale: .40;
-        --ar: 9/16;
-        --y: -1svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 60;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1768svh;
@@ -4875,13 +5290,22 @@ body {
       }
       
       .early-posters {
-        --left: 2004svh;
-        --scale: .45;
-        --y: -2svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 59;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1789svh;
@@ -4914,13 +5338,22 @@ body {
       }
       
       .poster-arrow {
-        --left: 2052svh;
-        --scale: .10;
-        --y: 28svh;
-        --x: 0svh;
-        --rot: 19deg;
-        z-index: 60;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1837svh;
@@ -4953,14 +5386,22 @@ body {
       }
       
       .about-matches {
-        display:none;
-        --left: 2032svh;
-        --scale: .2;
-        --y: 73svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 60;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1817svh;
@@ -4968,13 +5409,22 @@ body {
       }
       
       .sticker-1 {
-        --left: 2074svh;
-        --scale: .24;
-        --y: 73svh;
-        --x: 0svh;
-        --rot: -5deg;
-        z-index: 60;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1859svh;
@@ -4983,13 +5433,22 @@ body {
       }
       
       .sticker-3 {
-        --left: 2072svh;
-        --scale: .24;
-        --y: 49svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 60;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1857svh;
@@ -4998,13 +5457,22 @@ body {
       }
       
       .poster {
-        display: none;
-        --left: 2077svh;
-        --scale: .42;
-        --y: 2svh;
-        --x: 0svh;
-        --rot: -3deg;
-        z-index: 61;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1860svh;
@@ -5012,13 +5480,22 @@ body {
       }
       
       .sticker-2 {
-        --left: 2105svh;
-        --scale: .24;
-        --y: 73svh;
-        --x: 0svh;
-        --rot: 7deg;
-        z-index: 60;
+       position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1890svh;
@@ -5027,13 +5504,22 @@ body {
       }
       
       .buy-button {
-        display:none;
-        --left: 2096svh;
-        --scale: .15;
-        --y: 52svh;
-        --x: 0svh;
-        --rot: 5deg;
-        z-index: 60;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: auto;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1883svh;
@@ -5043,13 +5529,22 @@ body {
       }
       
       .sims {
-        --left: 2115svh;
-        --scale: .10;
-        --y: 35svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 61;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1902svh;
@@ -5057,13 +5552,22 @@ body {
       }
       
       .selfie-poster {
-        --left: 2105svh;
-        --scale: .35;
-        --y: 1svh;
-        --x: 0svh;
-        --rot: 2deg;
-        z-index: 60;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1892svh;
@@ -5095,14 +5599,23 @@ body {
       }
       
       .london-title {
-        --left: 2130svh;
-        --scale: .63;
-        --y: 2svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 40;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
-      
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
+        
         @include respond(xs) {
           --left:1916svh;
           --scale: .65;
@@ -5113,16 +5626,20 @@ body {
       .glow-star-8 {
         position: absolute;
         object-fit: cover;
-        
-        width: 110px;
-        height: 113px;
-        --left: 2159svh;
-        --scale: .10;
-        --y: 92svh;
-        --x: 0svh;
-        --rot: 1deg;
-        z-index: 440;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1934svh;
@@ -5131,13 +5648,22 @@ body {
       }
       
       .hangout-poster {
-        --left: 2167svh;
-        --scale: .6;
-        --y: 38svh;
-        --x: 0svh;
-        --rot: -4deg;
-        z-index: 44;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1956svh;
@@ -5146,13 +5672,22 @@ body {
       }
       
       .london-camcorder {
-        --left: 2149svh;
-        --scale: .26;
-        --y: 16svh;
-        --x: 0svh;
-        --rot: 90deg;
-        z-index: 42;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1934svh;
@@ -5160,13 +5695,22 @@ body {
       }
       
       .london-live-1 {
-        --left: 2177svh;
-        --scale: .30;
-        --ar: 9/16;
-        --y: 2svh;
-        --x: 0svh;
-        --rot: -2deg;
-        z-index: 41;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1962svh;
@@ -5174,13 +5718,22 @@ body {
       }
       
       .london-live-2 {
-        --left: 2198svh;
-        --scale: .38;
-        --ar: 9/16;
-        --y: 2svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 43;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1983svh;
@@ -5188,12 +5741,22 @@ body {
       }
       
       .hangout-vlog {
-        --left: 2214svh;
-        --scale: .33;
-        --y: 64svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 57;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2003svh;
@@ -5201,13 +5764,22 @@ body {
       }
       
       .rsvp-cloud {
-        --left: 2216svh;
-        --scale: .15;
-        --y: 47svh;
-        --x: 0svh;
-        --rot: -15deg;
-        z-index: 44;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2001svh;
@@ -5217,16 +5789,20 @@ body {
       .glow-star-9 {
         position: absolute;
         object-fit: cover;
-        
-        width: 110px;
-        height: 113px;
-        --left: 2222svh;
-        --scale: .09;
-        --y: -3svh;
-        --x: 0svh;
-        --rot: -1deg;
-        z-index: 440;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2007svh;
@@ -5234,13 +5810,22 @@ body {
       }
       
       .rsvp-arrow {
-        --left: 2224svh;
-        --scale: .04;
-        --y: 42svh;
-        --x: 0svh;
-        --rot: -4deg;
-        z-index: 44;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2009svh;
@@ -5248,14 +5833,22 @@ body {
       }
       
       .rsvp-button {
-        display:none;
-        --left: 2237svh;
-        --scale: .12;
-        --y: 44svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 57;
-      
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
         @include respond(xs) {
           --left:2023svh;
           --scale: 0.11;
@@ -5289,13 +5882,22 @@ body {
       }
       
       .london-matches {
-        --left: 2222svh;
-        --scale: .44;
-        --y: -2svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 50;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2007svh;
@@ -5328,13 +5930,22 @@ body {
       }
       
       .about-london {
-        display:none;
-        --left: 2278svh;
-        --scale: .59;
-        --y: 40svh;
-        --x: 0svh;
-        --rot: -8deg;
-        z-index: 45;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2063svh;
@@ -5367,13 +5978,22 @@ body {
       }
       
       .onedirection {
-        --left: 2280svh;
-        --scale: .18;
-        --y: 12svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 45;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2065svh;
@@ -5477,13 +6097,22 @@ body {
       }
       
       .hangout-tweet {
-        --left: 2324svh;
-        --scale: .375;
-        --y: 49svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 46;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2109svh;
@@ -5491,13 +6120,22 @@ body {
       }
       
       .londoncard-v1 {
-        --left: 2319svh;
-        --scale: .35;
-        --y: 4svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 45;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2104svh;
@@ -5507,16 +6145,20 @@ body {
       .glow-star-11 {
         position: absolute;
         object-fit: cover;
-        
-        width: 110px;
-        height: 113px;
-        --left: 2346svh;
-        --scale: .11;
-        --y: 30svh;
-        --x: 0svh;
-        --rot: 10deg;
-        z-index: 500;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2134svh;
@@ -5527,16 +6169,20 @@ body {
       .glow-star-12 {
         position: absolute;
         object-fit: cover;
-        
-        width: 110px;
-        height: 113px;
-        --left: 2357svh;
-        --scale: .09;
-        --y: 46svh;
-        --x: 0svh;
-        --rot: -10deg;
-        z-index: 500;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display:none;
@@ -5545,14 +6191,23 @@ body {
       }
       
       .londoncard-arrow-1 {
-        --left: 2346svh;
-        --scale: .04;
-        --y: 3svh;
-        --x: 0svh;
-        --rot: -63deg;
-        z-index: 46;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
-      
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
+        
         @include respond(xs) {
           --left:2131svh;
         }
@@ -5609,13 +6264,22 @@ body {
       }
       
       .londoncard-arrow-2 {
-        --left: 2355svh;
-        --scale: .04;
-        --y: 33svh;
-        --x: 0svh;
-        --rot: 170deg;
-        z-index: 46;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2140svh;
@@ -5674,12 +6338,22 @@ body {
       }
       
       .london-tv {
-        --left: 2340svh;
-        --scale: .435;
-        --y: 61svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 47;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display:none;
@@ -5703,13 +6377,22 @@ body {
       }
       
       .londoncard-front {
-        --left: 2368.5svh;
-        --scale: .35;
-        --y: 28svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 45;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2153.5svh;
@@ -5717,13 +6400,22 @@ body {
       }
       
       .film-strip {
-        --left: 2399svh;
-        --scale: .74;
-        --y: 25svh;
-        --x: 0svh;
-        --rot: -5deg;
-        z-index: 44;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2184svh;
@@ -5731,13 +6423,22 @@ body {
       }
       
       .londoncard-back {
-        --left: 2379svh;
-        --scale: .26;
-        --y: 0svh;
-        --x: 3svh;
-        --rot: 0deg;
-        z-index: 45;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2164svh;
@@ -5749,13 +6450,22 @@ body {
       // ========= WHAT'S NEXT SECTION (slot classes) =========
       
       .dreamdotnet {
-        --left: 2415svh;
-        --scale: .25;
-        --y: 72svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 44;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2200svh;
@@ -5763,13 +6473,22 @@ body {
       }
       
       .church-video {
-        --left: 2419svh;
-        --scale: .30;
-        --ar: 336/299;
-        --y: 38svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 46;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2204svh;
@@ -5777,13 +6496,22 @@ body {
       }
       
       .villains {
-        --left: 2421svh;
-        --scale: .30;
-        --y: 2svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 45;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2206svh;
@@ -5791,13 +6519,22 @@ body {
       }
       
       .strawberry {
-        --left: 2473svh;
-        --scale: .21;
-        --y: 75svh;
-        --x: 0svh;
-        --rot: 5deg;
-        z-index: 46;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2258svh;
@@ -5807,16 +6544,20 @@ body {
       .glow-star-13 {
         position: absolute;
         object-fit: cover;
-        
-        width: 110px;
-        height: 113px;
-        --left: 2478svh;
-        --scale: .13;
-        --y: 61svh;
-        --x: 0svh;
-        --rot: 5deg;
-        z-index: 46;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display:none;
@@ -5825,14 +6566,22 @@ body {
       }
       
       .next-title {
-        display: none;
-        --left: 2456svh;
-        --scale: .30;
-        --y: 40svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 70;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2241svh;
@@ -5840,13 +6589,22 @@ body {
       }
       
       .join-postcard {
-        display: none;
-        --left: 2455svh;
-        --scale: .37;
-        --y: 2svh;
-        --x: 0svh;
-        --rot: 8deg;
-        z-index: 46;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2240svh;
@@ -5879,28 +6637,44 @@ body {
       }
       
       .presave-button {
-        display: none;
-        --left: 2512svh;
-        --scale: .30;
-        --y: 37svh;
-        --x: 0svh;
-        --rot: 5deg;
-        z-index: 71;
-      
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
         @include respond(xs) {
           --left:2297svh;
         }
       }
       
       .im-stamp {
-        display: none;
-        --left: 2525svh;
-        --scale: .25;
-        --y: 2svh;
-        --x: 0svh;
-        --rot: -5deg;
-        z-index: 70;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2310svh;
@@ -5908,14 +6682,22 @@ body {
       }
       
       .thankyou-note {
-        display: none;
-        --left: 2551svh;
-        --scale: .9;
-        --y: 5svh;
-        --x: 0svh;
-        --rot: -5deg;
-        z-index: 71;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2336svh;
@@ -5923,14 +6705,22 @@ body {
       }
       
       .lock-logo {
-        display: none;
-        --left: 2615svh;
-        --scale: .85;
-        --y: 13svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 71;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 46vh;
+        left: 1460vh;
+        z-index: auto;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2402svh;
