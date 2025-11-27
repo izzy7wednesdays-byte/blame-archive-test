@@ -3547,8 +3547,8 @@ body {
         width: 118.03279vh;
         height: 209.83607vh;
         
-        width: 29.6703296703298vh;
-        height: 52.7472527472528vh;
+        width: 26.1098901098902vh;
+        height: 46.4175824175824vh;
         top: 2vh;
         left: 1429vh;
         z-index: auto;
@@ -3571,8 +3571,8 @@ body {
         
         width: 25.3076923076923vh; 
         height: 46.3846153846156vh;
-        top: 56vh;
-        left: 1427vh;
+        top: 50vh;
+        left: 1429vh;
         z-index: auto;
         transform: scale(1) rotate(0deg);
         transform-origin: center;
@@ -3594,7 +3594,7 @@ body {
         width: 42.7252747252748vh;
         height: 42.7252747252748vh;
         top: 1vh;
-        left: 1460vh;
+        left: 1456vh;
         z-index: auto;
         transform: rotate(0deg);
         transform-origin: center;
@@ -3609,15 +3609,13 @@ body {
         pointer-events: none;
         width: 1000px;
         height: 1000px;
-        
         width: 111.35857vh;
         height: 111.35857vh;
-        
-        width: 50.8131868131868vh;
-        height: 50.8131868131868vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
+        width: 53.054945054945vh;
+        height: 53.054945054945vh;
+        top: 45vh;
+        left: 1456vh;
+        z-index: 0;
         transform: rotate(0deg);
         transform-origin: center;
 
@@ -3625,29 +3623,27 @@ body {
           --left:1166svh;
         }
       }
-      
-      
-      
+  
       // ========= ARTWORK SECTION (slot classes) =========
       
       .artwork-testshoot-1 {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
+        
         width: 640px;
         height: 480px;
         
-        width: 70.3296703296703vh;
-        height: 52.7472527472527vh;
+        width: 70.3296703297vh;
+        height: 52.7472527473vh;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 38.6813186813187vh;
+        height: 29.010989010989vh;
+        top: 2vh;
+        left: 1500vh;
         z-index: auto;
         transform: rotate(0deg);
         transform-origin: center;
-
       
         @include respond(xs) {
         }
@@ -3657,17 +3653,17 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 673px;
+        height: 374px;
         
-        width: vh;
-        height: vh;
+        width: 73.956043956044vh;
+        height: 41.0989010989011vh;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
+        width: 44.3736263736264vh;
+        height: 20.65934vh;
+        top: 33vh;
+        left: 1499vh;
+        z-index: 1;
         transform: rotate(0deg);
         transform-origin: center;
       
