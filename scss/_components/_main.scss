@@ -2652,87 +2652,120 @@ body {
       // ========= EP SECTION (slot classes) =========
       
       .ep-inspo {
-        --left: 1007svh;
-        --scale: .56;
-        --y: 45svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 71;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 859px;
+        height: 572px;
+        
+        width: 95.65702vh;
+        height: 63.6971vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 700vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 808svh;
-          --scale: .46;
-          --y: 50svh;
+
         }
       }
       
       .silver-star1-3 {
         position: absolute;
         object-fit: cover;
-          
-        width: 214;
-        height: 210;
-        
-        --left: 1020svh;
-        --scale: .15;
-        --y: 48svh;
-        --x: 0svh;
-        --rot: -20deg;
-        z-index: 710;
         pointer-events: none;
+        
+        width: 214px;
+        height: 210px;
+        
+        width: 28.82vh;
+        height: 28.38vh;
+        
+        width: 28.82vh;
+        height: 28.38vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
-        @include respond(xs) {
-          --left: 843svh;       
+        @include respond(xs) {     
         }
       }
       
       .blue-star-9 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        --left: 1027svh;
-        --scale: .06;
-        --y: 40svh;
-        --x: 0svh;
-        --rot: 15deg;
-        z-index: 710;
         pointer-events: none;
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
-        @include respond(xs) {
-          --left: 847svh;         
+        @include respond(xs) {      
         }
       }
       
       .silver-star3-7 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 165px;
         height: 160px;
-        --left: 1037svh;
-        --scale: .08;
-        --y: 45svh;
-        --x: 0svh;
-        --rot: 10deg;
-        z-index: 710;
-        pointer-events: none;
+        
+        width: 18.03279vh;
+        height: 17.48634vh;
+        
+        width: 7.213116vh;
+        height: 6.994536vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
-        @include respond(xs) {
-          --left: 857svh;         
+        @include respond(xs) {      
         }
       }
       
       .top-spotify-sparkles {
-        --left: 1075svh;
-        --scale: .36;
-        --y: 83svh;
-        --x: 0svh;
-        --rot: 75deg;
-        z-index: 32;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 499px;
+        height: 570px;
+        
+        width: 55.56793vh;
+        height: 63.47439vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display:none;
@@ -2740,52 +2773,55 @@ body {
       }
       
       .ep-inspo-sp {
-        display:none;
-        --left: 1090svh;
-        --scale: .35;
-        --y: 53svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 81;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        
+        width: 898px;
+        height: 899px;
+        
+        width: 100vh;
+        height: 100.11136vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 881svh;  
-          --scale: 0.28;
-          --y: 55svh;
         }
       }
       
       .bottom-spotify-sparkles {
-        --left: 1070svh;
-        --scale: .37;
-        --y: 53svh;
-        --x: 0svh;
-        --rot: 80deg;
-        z-index: 32;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 499px;
+        height: 570px;
+        
+        width: 55.56793vh;
+        height: 63.47439vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 863svh;  
-          --scale: .33;
-          --y: 57svh;
         }
       }
       
       .ep-click-toread {
-        --left: 1078svh;
-        --scale: .25;
-        --y: 38svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 30;
-        pointer-events: none;
-      
-        --ff: "Manic";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: center;
-        --text-color: #4CA8E9;
-      
+
         @include respond(xs) {
           --left: 881svh;
           --scale: .23;   
@@ -2794,105 +2830,105 @@ body {
       }
       
       .about-ep {
-        display:none;
-        --left: 1077svh;
-        --scale: .22;
-        --y: 11svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 72;
-      
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        
+        width: 860px;
+        height: 628px;
+        
+        width: 95.76837vh;
+        height: 69.93318vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         @include respond(xs) {
-          --left:880svh; 
         }
       }
       
       .text-wrapper-14 {
-        position: absolute;
-        display: flex;
-      
-        font-weight: 400;
-        color: #4CA8E9;
-        font-size: 14px;
-        letter-spacing: 0;
-        line-height: 1.2;
-        text-align: center;
-        text-transform: uppercase;
-        
-        width: 1000px;
-        height: 625px;
-        
-        width: 132.28vh;
-        height: 82.67vh;
-  
-        width: 22vh;
-        height: 110vh;
-        top: 91vh;
-        left: 661vh;
-        z-index: 3;
-        transform: rotate(0deg);
-        transform-origin: center;
       
         @include respond(xs) {
         }
       }
       
       .mixing-misery-1 {
-        --left: 1115svh;
-        --scale: .41;
-        --ar: 9/16;
-        --y: 5svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 30;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1080px;
+        height: 1920px;
+        
+        width: 118.03279vh;
+        height: 209.83607vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
-        @include respond(xs) {
-          --left:913svh;    
+        @include respond(xs) {  
         }
       }
       
       .text-wrapper-16 {
-        --left: 1114svh;
-        --scale: .11;
-        --y: 0svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 30;
-        pointer-events: none;
       
-        --ff: "Thinker";
-        --fw: 400;
-        --fs-mul: .2;
-        --ta: center !important;
-        --text-color: #4CA8E9;
-      
-        @include respond(xs) {
-          --left:912svh;      
+        @include respond(xs) {   
         }
       }
       
       .migos-mairead {
-        --left: 1129svh;
-        --scale: .5;
-        --ar: 9/16;
-        --y: 47svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 33;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1080px;
+        height: 1920px;
+        
+        width: 118.03279vh;
+        height: 209.83607vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
-        @include respond(xs) {
-          --left:913svh;         
+        @include respond(xs) {        
         }
       }
       
       .air-quality {
-        --left: 1139svh;
-        --scale: .45;
-        --y: 1svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 30;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 1179px;
+        height: 2289px;
+        
+        width: 131.29176vh;
+        height: 254.89978vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display:none;
@@ -2900,19 +2936,6 @@ body {
       }
       
       .text-wrapper-17 {
-        --left: 1145svh;
-        --scale: .19;
-        --y: 1svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 31;
-        pointer-events: none;
-      
-        --ff: "Thinker";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: center;
-        --text-color: #D9EBFF;
       
         @include respond(xs) {
           display: none;
@@ -2920,47 +2943,55 @@ body {
       }
       
       .hannah-montana {
-        --left: 1160svh;
-        --scale: .40;
-        --ar: 9/16;
-        --y: 58svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 30;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1080px;
+        height: 1920px;
+        
+        width: 118.03279vh;
+        height: 209.83607vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 944svh;
         }
       }
       
       .text-wrapper-18 {
-        --left: 1158svh;
-        --scale: .21;
-        --y: 47svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 30;
-        pointer-events: none;
-      
-        --ff: "Manic";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: center !important;
-        --text-color: #4CA8E9;
+        
       
         @include respond(xs) {
-          --left: 943svh;
+
         }
       }
       
       .ep-mixing-date {
-        --left: 1164svh;
-        --scale: .40;
-        --y: 5svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 30;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 330px;
+        height: 588px;
+        
+        width: 36.74833vh;
+        height: 65.47884vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:940svh;
@@ -2969,47 +3000,57 @@ body {
       }
       
       .text-wrapper-19 {
-        --left: 1185svh;
-        --scale: .21;
-        --y: 81svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 30;
-        pointer-events: none;
-      
-        --ff: "Thinker";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: center !important;
-        --text-color: #4CA8E9;
+        
       
         @include respond(xs) {
-          --left: 970svh;
+
         }
       }
       
       .notebook {
-        --left: 1185svh;
-        --scale: .35;
-        --y: 42svh;
-        --x: 0svh;
-        --rot: 5deg;
-        z-index: 29;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
-      
+        
+        width: 860px;
+        height: 628px;
+        
+        width: 95.76837vh;
+        height: 69.93318vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+       
         @include respond(xs) {
-          --left: 970svh;    
+   
         }
       }
       
       .ep-vocal-booth {
-        --left: 1192svh;
-        --scale: .22;
-        --y: 38svh;
-        --x: 0svh;
-        --rot: -15deg;
-        z-index: 30;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 283px;
+        height: 328px;
+        
+        width: 31.51448vh;
+        height: 36.52561vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 977svh;
@@ -3017,27 +3058,49 @@ body {
       }
       
       .ep-vocal-booth-2 {
-        --left: 1200svh;
-        --scale: .22;
-        --y: 49svh;
-        --x: 0svh;
-        --rot: 100deg;
-        z-index: 31;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
-      
+        
+        width: 316px;
+        height: 422px;
+        
+        width: 35.18931vh;
+        height: 46.99332vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+    
         @include respond(xs) {
           --left: 985svh;
         }
       }
       
       .ep-title {
-        --left: 1188svh;
-        --scale: .3;
-        --y: 1svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 100;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 928px;
+        height: 357px;
+        
+        width: 103.34076vh;
+        height: 39.75501vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 963svh;
@@ -3047,47 +3110,55 @@ body {
       }
       
       .ep-spencer-tracklist {
-        --left: 1224svh;
-        --scale: .41;
-        --y: 55svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 28;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
-      
+        
+        width: 878px;
+        height: 1242px;
+        
+        width: 97.77283vh;
+        height: 138.30735vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+    
         @include respond(xs) {
           --left: 1009svh;
         }
       }
       
       .text-wrapper-20 {
-        --left: 1225svh;
-        --scale: .22;
-        --y: 76svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 32;
-        pointer-events: none;
-      
-        --ff: "Thinker";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: center;
-        --text-color: #4CA8E9;
-      
+ 
         @include respond(xs) {
           --left: 1010svh;
         }
       }
       
       .mixing-misery-6 {
-        --left: 1233svh;
-        --scale: .36;
-        --ar: 9/16;
-        --y: 17svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 31;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1080px;
+        height: 1920px;
+        
+        width: 118.03279vh;
+        height: 209.83607vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 1018svh;
@@ -3095,13 +3166,24 @@ body {
       }
       
       .scrabbleboard {
-        --left: 1258svh;
-        --scale: .5;
-        --y: 46svh;
-        --x: 0svh;
-        --rot: -5deg;
-        z-index: 32;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 498px;
+        height: 526px;
+        
+        width: 55.45657vh;
+        height: 58.57461vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 1043svh;
@@ -3109,108 +3191,154 @@ body {
       }
       
       .text-wrapper-21 {
-        --left: 1256svh;
-        --scale: .2;
-        --y: 20svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 33;
-        pointer-events: none;
-      
-        --ff: "Manic";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: center;
-        --text-color: #4CA8E9;
+   
       
         @include respond(xs) {
-          --left: 1041svh;
+    
         }
       }
       
       .sabrinacarpenter {
-        --left: 1283svh;
-        --scale: .42;
-        --ar: 9/16;
-        --y: 1svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 32;
-      
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1080px;
+        height: 1920px;
+        
+        width: 118.03279vh;
+        height: 209.83607vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         @include respond(xs) {
-          --left: 1068svh;    
+        
         }
       }
       
       .blue-star-10 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        --left: 1312svh;
-        --scale: .07;
-        --y: 93svh;
-        --x: 0svh;
-        --rot: 8deg;
-        z-index: 320;
         pointer-events: none;
-      
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+
         @include respond(xs) {
           --left: 1097svh;
         }
       }
       
       .discord-message-1 {
-        --left: 1306svh;
-        --scale: .21;
-        --y: 70svh;
-        --x: 0svh;
-        --rot: 2deg;
-        z-index: 32;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
-      
+        
+        width: 1014px;
+        height: 685px;
+        
+        width: 112.91759vh;
+        height: 76.28062vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+     
         @include respond(xs) {
           --left:1091svh;
         }
       }
       
       .discord-message-2 {
-        --left: 1307svh;
-        --scale: .11;
-        --y: 59svh;
-        --x: 0svh;
-        --rot: -2deg;
-        z-index: 33;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
-      
+        
+        width: 1080px;
+        height: 383px;
+        
+        width: 120.26726vh;
+        height: 42.65033vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+   
         @include respond(xs) {
           --left:1090svh;
         }
       }
       
       .discord-message-3 {
-        --left: 1306svh;
-        --scale: .10;
-        --y: 50svh;
-        --x: 0svh;
-        --rot: 1deg;
-        z-index: 32;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
-      
+        
+        width: 1179px;
+        height: 404px;
+        
+        width: 131.29176vh;
+        height: 44.98886vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+   
         @include respond(xs) {
           --left:1090svh;
         }
       }
       
       .exitwounds-zoom {
-        --left: 1308svh;
-        --scale: .45;
-        --ar: 9/16;
-        --y: 3svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 32;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1080px;
+        height: 1920px;
+        
+        width: 118.03279vh;
+        height: 209.83607vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1092svh;    
@@ -3220,45 +3348,70 @@ body {
       .silver-star1-4 {
         position: absolute;
         object-fit: cover;
-          
-        width: 214;
-        height: 210;
-        
-        --left: 1339svh;
-        --scale: .27;
-        --y: 75svh;
-        --x: 0svh;
-        --rot: 18deg;
-        z-index: 36;
         pointer-events: none;
-      
+        
+        width: 214px;
+        height: 210px;
+        
+        width: 28.82vh;
+        height: 28.38vh;
+        
+        width: 28.82vh;
+        height: 28.38vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+       
         @include respond(xs) {
           --left: 1124svh;
         }
       }
       
       .scrabble-piece {
-        --left: 1334svh;
-        --scale: .14;
-        --y: 57svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 35;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
-      
+        
+        width: 946px;
+        height: 604px;
+        
+        width: 105.34521vh;
+        height: 67.26058vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+   
         @include respond(xs) {
           --left:1119svh;
         }
       }
       
       .ep-zoom {
-        --left: 1336svh;
-        --scale: .45;
-        --ar: 9/16;
-        --y: 11svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 32;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1080px;
+        height: 1920px;
+        
+        width: 118.03279vh;
+        height: 209.83607vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1121svh;
@@ -3266,19 +3419,7 @@ body {
       }
       
       .text-wrapper-22 {
-        --left: 1336svh;
-        --scale: .22;
-        --y: 0svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 32;
-        pointer-events: none;
-      
-        --ff: "Thinker";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: center;
-        --text-color: #4CA8E9;
+        
       
         @include respond(xs) {
           --left:1121svh;
@@ -3286,13 +3427,23 @@ body {
       }
       
       .mixing-sleepwalking-2 {
-        --left: 1358svh;
-        --scale: .44;
-        --ar: 9/16;
-        --y: 52svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 32;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1080px;
+        height: 1920px;
+        
+        width: 118.03279vh;
+        height: 209.83607vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1143svh;
@@ -3300,13 +3451,25 @@ body {
       }
       
       .ep-tweet {
-        --left: 1353svh;
-        --scale: .48;
-        --y: 2svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 40;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 658px;
+        height: 1206px;
+        
+        width: 73.27394vh;
+        height: 134.29844vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+        
       
         @include respond(xs) {
           --left:1137svh;
@@ -3314,13 +3477,25 @@ body {
       }
       
       .starterpack {
-        --left: 1375svh;
-        --scale: .39;
-        --y: 56svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 40;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 1080px;
+        height: 1080px;
+        
+        width: 120.26726vh;
+        height: 120.26726vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+        
       
         @include respond(xs) {
           --left:1160svh;
@@ -3328,13 +3503,25 @@ body {
       }
       
       .ep-cover {
-        --left: 1381svh;
-        --scale: .54;
-        --y: 0svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 40;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 1000px;
+        height: 1000px;
+        
+        width: 111.35857vh;
+        height: 111.35857vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+        
       
         @include respond(xs) {
           --left:1166svh;
@@ -3375,17 +3562,22 @@ body {
       .silver-star3-8 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 165px;
         height: 160px;
         
-        --left: 1454svh;
-        --scale: .08;
-        --y: 41svh;
-        --x: 0svh;
-        --rot: 8deg;
-        z-index: 500;
-        pointer-events: none;
+        width: 18.03279vh;
+        height: 17.48634vh;
+        
+        width: 7.213116vh;
+        height: 6.994536vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display: none;
@@ -3673,16 +3865,22 @@ body {
       .silver-star3-9 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 165px;
         height: 160px;
-        --left: 1594svh;
-        --scale: .08;
-        --y: 36svh;
-        --x: 0svh;
-        --rot: -25deg;
-        z-index: 400;
-        pointer-events: none;
+        
+        width: 18.03279vh;
+        height: 17.48634vh;
+        
+        width: 7.213116vh;
+        height: 6.994536vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 1379svh;
@@ -3692,16 +3890,22 @@ body {
       .blue-star-11 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        --left: 1594svh;
-        --scale: .03;
-        --y: 30svh;
-        --x: 0svh;
-        --rot: -20deg;
-        z-index: 400;
         pointer-events: none;
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1379svh;
@@ -3730,17 +3934,23 @@ body {
       .silver-star3-10 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 165px;
         height: 160px;
-        --left: 1610svh;
-        --scale: .03;
-        --y: 42svh;
-        --x: 0svh;
-        --rot: -20deg;
-        z-index: 4;
-        pointer-events: none;
-      
+        
+        width: 18.03279vh;
+        height: 17.48634vh;
+        
+        width: 7.213116vh;
+        height: 6.994536vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+        
         @include respond(xs) {
           --left: 1395svh;
         }
@@ -3749,16 +3959,22 @@ body {
       .blue-star-12 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        --left: 1613svh;
-        --scale: .12;
-        --y: 26svh;
-        --x: 0svh;
-        --rot: -15deg;
-        z-index: 4;
         pointer-events: none;
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1398svh;
@@ -3768,16 +3984,22 @@ body {
       .silver-star3-11 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 165px;
         height: 160px;
-        --left: 1623svh;
-        --scale: .06;
-        --y: 36svh;
-        --x: 0svh;
-        --rot: 20deg;
-        z-index: 4;
-        pointer-events: none;
+        
+        width: 18.03279vh;
+        height: 17.48634vh;
+        
+        width: 7.213116vh;
+        height: 6.994536vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1408svh;
@@ -3853,16 +4075,22 @@ body {
       .blue-star-13 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        --left: 1592svh;
-        --scale: .08;
-        --y: -4svh;
-        --x: 0svh;
-        --rot: -20deg;
-        z-index: 4;
         pointer-events: none;
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1377svh;
@@ -3891,16 +4119,22 @@ body {
       .blue-star-14 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        --left: 1618svh;
-        --scale: .03;
-        --y: 3svh;
-        --x: 0svh;
-        --rot: -20deg;
-        z-index: 4;
         pointer-events: none;
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display: none;
@@ -3911,16 +4145,22 @@ body {
       .silver-star3-12 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 165px;
         height: 160px;
-        --left: 1624svh;
-        --scale: .03;
-        --y: 4svh;
-        --x: 0svh;
-        --rot: -20deg;
-        z-index: 4;
-        pointer-events: none;
+        
+        width: 18.03279vh;
+        height: 17.48634vh;
+        
+        width: 7.213116vh;
+        height: 6.994536vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1409svh;
@@ -3930,16 +4170,22 @@ body {
       .blue-star-15 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        --left: 1623svh;
-        --scale: .06;
-        --y: -3svh;
-        --x: 0svh;
-        --rot: -40deg;
-        z-index: 4;
         pointer-events: none;
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1408svh;
@@ -4391,17 +4637,22 @@ body {
       .blue-star-16 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        display: flex;
-        --left: 1924svh;
-        --scale: .11;
-        --y: 57svh;
-        --x: 0svh;
-        --rot: -40deg;
-        z-index: 400;
         pointer-events: none;
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display: none!important;
@@ -4426,16 +4677,22 @@ body {
       .silver-star3-13 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 165px;
         height: 160px;
-        --left: 1964svh;
-        --scale: .13;
-        --y: 3svh;
-        --x: 0svh;
-        --rot: 15deg;
-        z-index: 60;
-        pointer-events: none;
+        
+        width: 18.03279vh;
+        height: 17.48634vh;
+        
+        width: 7.213116vh;
+        height: 6.994536vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:1749svh;
@@ -4889,16 +5146,22 @@ body {
       .blue-star-17 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        --left: 2245svh;
-        --scale: .06;
-        --y: 27svh;
-        --x: 0svh;
-        --rot: -10deg;
-        z-index: 500;
         pointer-events: none;
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2030svh;
@@ -4922,16 +5185,22 @@ body {
       .silver-star3-14 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 165px;
         height: 160px;
-        --left: 2266svh;
-        --scale: .11;
-        --y: 4svh;
-        --x: 0svh;
-        --rot: 10deg;
-        z-index: 500;
-        pointer-events: none;
+        
+        width: 18.03279vh;
+        height: 17.48634vh;
+        
+        width: 7.213116vh;
+        height: 6.994536vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2051svh;
@@ -4955,16 +5224,22 @@ body {
       .blue-star-18 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        --left: 2300svh;
-        --scale: .06;
-        --y: 32svh;
-        --x: 0svh;
-        --rot: -8deg;
-        z-index: 405;
         pointer-events: none;
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2085svh;
@@ -5008,16 +5283,22 @@ body {
       .silver-star3-15 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 165px;
         height: 160px;
-        --left: 2310svh;
-        --scale: .05;
-        --y: 0svh;
-        --x: 0svh;
-        --rot: -10deg;
-        z-index: 405;
-        pointer-events: none;
+        
+        width: 18.03279vh;
+        height: 17.48634vh;
+        
+        width: 7.213116vh;
+        height: 6.994536vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display: none;
@@ -5028,17 +5309,22 @@ body {
       .silver-star3-16 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 165px;
         height: 160px;
-        display: flex;
-        --left: 2320svh;
-        --scale: .08;
-        --y: 94svh;
-        --x: 0svh;
-        --rot: -8deg;
-        z-index: 405;
-        pointer-events: none;
+        
+        width: 18.03279vh;
+        height: 17.48634vh;
+        
+        width: 7.213116vh;
+        height: 6.994536vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display: none;
@@ -5170,17 +5456,22 @@ body {
       .blue-star-19 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        --left: 2354svh;
-        --scale: .07;
-        --y: -1svh;
-        --x: 0svh;
-        --rot: -10deg;
-        z-index: 500;
         pointer-events: none;
-      
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         @include respond(xs) {
           display:none;
           --left:2139svh;
@@ -5204,17 +5495,23 @@ body {
       .silver-star3-17 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 165px;
         height: 160px;
-        --left: 2369svh;
-        --scale: .12;
-        --y: 15svh;
-        --x: 0svh;
-        --rot: -10deg;
-        z-index: 500;
-        pointer-events: none;
-      
+        
+        width: 18.03279vh;
+        height: 17.48634vh;
+        
+        width: 7.213116vh;
+        height: 6.994536vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+        
         @include respond(xs) {
           display: none;
           --left:2154svh;
@@ -5224,16 +5521,22 @@ body {
       .blue-star-20 {
         position: absolute;
         object-fit: cover;
-        
-        width: 154;
-        height: 147;
-        --left: 2368svh;
-        --scale: .07;
-        --y: 4svh;
-        --x: 0svh;
-        --rot: -15deg;
-        z-index: 500;
         pointer-events: none;
+        
+        width: 154px;
+        height: 147px;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left:2153svh;
