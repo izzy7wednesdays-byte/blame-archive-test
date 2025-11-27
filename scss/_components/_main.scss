@@ -949,16 +949,16 @@ body {
       width: 2160px;
       height: 1080px;
       
-      width: 291.89vh;
-      height: 145.95vh;
+      width: 236.06557vh;
+      height: 118.03279vh;
       
-      width: 291.89vh;
-      height: 145.95vh;
-      top: -13vh;
-      left: 274vh;
+      width: 47.213114vh;
+      height: 23.606558vh;
+      top: 49vh;
+      left: 397vh;
       z-index: 2;
               
-      transform: scale(0.20) rotate(0deg);
+      transform: scale(1) rotate(0deg);
       transform-origin: center;
     
       @include respond(xs) {
@@ -1384,11 +1384,14 @@ body {
         width: 154px;
         height: 147px;
         
-        width: 20.81vh;
-        height: 19.86vh;
-        top: 27vh;
-        left: 519vh;
-        z-index: 0;
+        width: 16.8306vh;
+        height: 16.06557vh;
+
+        width: 3.36612vh;
+        height: 3.213114vh;
+        top: 56vh;
+        left: 521vh;
+        z-index: 3;
                 
         transform: scale(1) rotate(12deg);
         transform-origin: center;
@@ -1655,12 +1658,11 @@ body {
         top: 83.85vh;
         left: 580vh;
   
-        width: 205vh;
-        height: 100vh;
-        top: 60vh;
-        left: 564vh;
+        width: 209vh;
+        height: 96vh;
+        top: 4vh;
+        left: 544vh;
         z-index: 2;
-  
         transform: rotate(0deg);
         transform-origin: center;
       
@@ -1723,7 +1725,7 @@ body {
       
         font-weight: 400;
         color: #4CA8E9;
-        font-size: 16px;
+        font-size: 14px;
         letter-spacing: 0;
         line-height: 1.2;
         text-align: left;
@@ -1739,12 +1741,11 @@ body {
         top: 83.85vh;
         left: 580vh;
   
-        width: 205vh;
+        width: 206vh;
         height: 100vh;
-        top: 60vh;
-        left: 564vh;
+        top: 89vh;
+        left: 570vh;
         z-index: 2;
-  
         transform: rotate(0deg);
         transform-origin: center;
         
