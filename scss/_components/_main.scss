@@ -1357,13 +1357,6 @@ body {
       // ========= LANDMINES SECTION =========
       
       .glitter-truck {
-        --left: 494svh;
-        --scale: .48;
-        --y: -18svh;
-        --x: 0svh;
-        --rot: 0deg;
-        --z-index: 7;
-        pointer-events: none;
         
          @include respond(xs) {
           --left:347svh;
@@ -1416,7 +1409,6 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-
         }  
       }
       
@@ -1525,8 +1517,8 @@ body {
         
         width: 116.21vh;
         height: 67.84vh;
-        top: vh;
-        left: vh;
+        top: 0vh;
+        left: 45vh;
         z-index: 0;
                 
         transform: scale(1) rotate(0deg);
@@ -1547,8 +1539,8 @@ body {
         
         width: 22.30vh;
         height: 21.52vh;
-        top: vh;
-        left: vh;
+        top: 0vh;
+        left: 550vh;
         z-index: 0;
                 
         transform: scale(1) rotate(0deg);
@@ -1648,29 +1640,13 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left: 428svh;
-          --scale:.27;
         }       
       }
       
       .text-wrapper-7 {
-        --left: 640svh;
-        --scale: .23;
-        --y: 76svh;
-        --x: 2svh;
-        --rot: 0deg;
-        z-index: 16;
-        pointer-events: none;
-      
-        --ff: "Thinker";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: center;
-        --text-color: #4CA8E9;
       
         @include respond(xs) {
-          --left: 479svh;
-          --scale:.22;
+
         }      
       }
       
@@ -1679,7 +1655,7 @@ body {
         object-fit: cover;
         pointer-events: auto;
         
-        width: 716px
+        width: 716px;
         height: 1075px;
         
         width: 96.76vh;
@@ -1692,9 +1668,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left: 476svh;
-          --scale:.27;
-          --y: 47svh;
+
         }      
       }
       
@@ -1703,11 +1677,11 @@ body {
         object-fit: cover;
         pointer-events: auto;
         
+        width: 1080px; 
         width: 1920px;
-        width: 1080px;
         
-        width: 259.45vh;
-        height: 145.95vh;
+        width: 145.95vh;
+        height: 259.45vh;
         top: 0vh;
         left: 500vh;
         z-index: auto;
@@ -1716,29 +1690,14 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left: 478svh;
-          --scale:.38;
+
         }       
       }
       
       .text-wrapper-8 {
-        --left: 650svh;
-        --scale: .2;
-        --y: 1svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 38;
-        pointer-events: none;
-      
-        --ff: "Thinker";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: center;
-        --text-color: #4CA8E9;
       
         @include respond(xs) {
-          --left: 476svh;
-          --scale:.18;
+
         }  
       }
       
@@ -1760,7 +1719,6 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left: 508svh; 
         }
       }
       
@@ -1804,7 +1762,6 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left: 515svh; 
         }  
       }
       
@@ -1847,7 +1804,6 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left: 525svh; 
         }  
       }
       
@@ -1869,7 +1825,6 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left: 532svh; 
         }  
       }
       
