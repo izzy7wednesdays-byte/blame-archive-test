@@ -2807,26 +2807,24 @@ body {
         position: absolute;
         font-weight: 400;
         color: #4CA8E9;
-        font-size: 32px;
+        font-size: 28px;
         letter-spacing: 0;
         line-height: normal;
         text-align: center;
+        text-transform: uppercase;
   
         width: 260px;
         top: 820px;
         left: 4574px;
         
-        width: 30.7vh;
-        top: 73vh;
-        left: 409vh;
-        
+        width: 70.7vh;
+        top: 54vh;
+        left: 1092vh;
         transform: rotate(0deg);
         transform-origin: center;
-
+        
         @include respond(xs) {
-          --left: 881svh;
-          --scale: .23;   
-          --y:36svh;
+
         }
       }
       
@@ -2857,10 +2855,11 @@ body {
         position: absolute;
         font-weight: 400;
         color: #4CA8E9;
-        font-size: 32px;
+        font-size: 23px;
         letter-spacing: 0;
         line-height: normal;
         text-align: center;
+        text-transform: uppercase;
   
         width: 260px;
         top: 820px;
@@ -2870,10 +2869,9 @@ body {
         top: 82vh;
         left: 457.4vh;
         
-        width: 30.7vh;
-        top: 73vh;
-        left: 409vh;
-        
+        width: 60.7vh;
+        top: 91vh;
+        left: 1096vh;
         transform: rotate(0deg);
         transform-origin: center;
       
@@ -2891,10 +2889,10 @@ body {
         width: 118.03279vh;
         height: 209.83607vh;
         
-        width: 29.5081975vh;
-        height: 52.4590175vh;
-        top: 42vh;
-        left: 1154vh;
+        width: 23.7362637362638vh;
+        height: 42.1978021978022vh;
+        top: 50vh;
+        left: 1159vh;
         z-index: 1;
         transform: scale(1) rotate(0deg);
         transform-origin: center;
@@ -2907,7 +2905,7 @@ body {
         position: absolute;
         font-weight: 400;
         color: #4CA8E9;
-        font-size: 32px;
+        font-size: 23px;
         letter-spacing: 0;
         line-height: normal;
         text-align: center;
@@ -2917,9 +2915,8 @@ body {
         left: 4574px;
         
         width: 30.7vh;
-        top: 73vh;
-        left: 409vh;
-        
+        top: 93vh;
+        left: 1153.5vh;
         transform: rotate(0deg);
         transform-origin: center;
       
@@ -2937,12 +2934,11 @@ body {
         width: 118.03279vh;
         height: 209.83607vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
-        
+        width: 29.6703296703298vh;
+        height: 52.7472527472528vh;
+        top: 2vh;
+        left: 1184vh;
+        z-index: auto;
         transform: scale(1) rotate(0deg);
         transform-origin: center;
       
@@ -2958,15 +2954,14 @@ body {
         width: 1179px;
         height: 2289px;
         
-        width: 131.29176vh;
-        height: 254.89978vh;
+        width: 129.56043956044vh;
+        height: 251.538461538462vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
-        
+        width: 23.3208791208792vh;
+        height: 45.2769230769232vh;
+        top: 56vh;
+        left: 1187vh;
+        z-index: auto;
         transform: scale(1) rotate(0deg);
         transform-origin: center;
       
@@ -2978,20 +2973,20 @@ body {
       .text-wrapper-17 {
         position: absolute;
         font-weight: 400;
-        color: #4CA8E9;
-        font-size: 32px;
+        color: #e1effa;
+        font-size: 17px;
         letter-spacing: 0;
         line-height: normal;
         text-align: center;
-  
+        text-transform: uppercase;
+        
         width: 260px;
         top: 820px;
         left: 4574px;
         
-        width: 30.7vh;
-        top: 73vh;
-        left: 409vh;
-        
+        width: 50.7vh;
+        top: 84vh;
+        left: 1176.5vh;
         transform: rotate(0deg);
         transform-origin: center;
       
@@ -3006,16 +3001,15 @@ body {
         
         width: 1080px;
         height: 1920px;
+  
+        width: 118.681318681319vh;
+        height: 210.989010989011vh;
         
-        width: 118.03279vh;
-        height: 209.83607vh;
-        
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
-        
+        width: 23.7362637362638vh;
+        height: 42.1978021978022vh;
+        top: 2vh;
+        left: 1215vh;
+        z-index: auto;
         transform: scale(1) rotate(0deg);
         transform-origin: center;
       
@@ -3027,23 +3021,22 @@ body {
         position: absolute;
         font-weight: 400;
         color: #4CA8E9;
-        font-size: 32px;
+        font-size: 17px;
         letter-spacing: 0;
         line-height: normal;
+        text-transform: uppercase;
         text-align: center;
-  
+        
         width: 260px;
         top: 820px;
         left: 4574px;
         
         width: 30.7vh;
-        top: 73vh;
-        left: 409vh;
-        
+        top: 44vh;
+        left: 1212vh;
         transform: rotate(0deg);
         transform-origin: center;
-        
-      
+         
         @include respond(xs) {
 
         }
@@ -3057,21 +3050,19 @@ body {
         width: 330px;
         height: 588px;
         
-        width: 36.74833vh;
-        height: 65.47884vh;
+        width: 36.2637362637363vh;
+        height: 64.6153846153846vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
+        width: 21.7582417582418vh;
+        height: 38.7692307692308vh;
+        top: 58vh;
+        left: 1214vh;
+        z-index: auto;
         
         transform: scale(1) rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
-          --left:940svh;
-          --y: 2svh;
         }
       }
       
@@ -3079,22 +3070,22 @@ body {
         position: absolute;
         font-weight: 400;
         color: #4CA8E9;
-        font-size: 32px;
+        font-size: 16px;
         letter-spacing: 0;
         line-height: normal;
         text-align: center;
-  
+        text-transform: uppercase;
+        
         width: 260px;
         top: 820px;
+        
         left: 4574px;
+        width: 31.7vh;
         
-        width: 30.7vh;
-        top: 73vh;
-        left: 409vh;
-        
+        top: 3vh;
+        left: 1240vh;
         transform: rotate(0deg);
-        transform-origin: center;
-        
+        transform-origin: center;   
       
         @include respond(xs) {
 
