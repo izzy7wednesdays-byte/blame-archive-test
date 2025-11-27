@@ -183,66 +183,12 @@ body {
       }
     }
     
-    .social-sparkle-l {
-      pointer-events: none;
-
+    .social {
       z-index: 5;
-      
-      @include respond(xs) { 
-        pointer-events: none;
-      }
-    }
-        
-    .instagram {
-      z-index: 5;
-      
-      @include respond(xs) {
-      }
-    }
-        
-    .tiktok {
-      z-index: 5;
-        
-      @include respond(xs) {
-        
-      }
-    }
-          
-    .twitter {
-      z-index: 5;
-      
-      @include respond(xs) {
-      }
-    }
-          
-    .discord {
-      z-index: 5;
-      
-      @include respond(xs) {
-      }
-    }
-        
-    .spotify {
-      z-index: 5;
-      
-      @include respond(xs) {
-      }
-    }
-          
-    .apple-music {
-      z-index: 5;
-        
-      @include respond(xs) { 
-      }
     }
 
-    .social-sparkle-r {
-      pointer-events: none;
-      z-index: 5;
-      
-      @include respond(xs) { 
-        pointer-events: none;
-      }
+    .glitter-truck {
+
     }
       
     .torn-note {
@@ -489,8 +435,8 @@ body {
       height: 77.03vh;
       
       width: 155.04vh;
-      height: 38.516vh;
-      top: 36vh;
+      height: 51.516vh;
+      top: 30vh;
       left: 93vh;
       z-index: 0;
       
