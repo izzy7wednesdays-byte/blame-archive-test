@@ -2358,58 +2358,95 @@ body {
       // ========= SLEEPWALKING SECTION (slot classes) =========
       
       .smurfette-1 {
-        --left: 884svh;
-        --scale: .25;
-        --y: 30svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 70;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 366px;
+        height: 453px;
+        
+        width: 40.75724vh;
+        height: 50.44543vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 700vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 692svh;
-          --scale: .22;
-          --y: 30svh;
+
         }
       }
       
       .thestar-tarot {
-        --left: 903svh;
-        --scale: .38;
-        --y: 60svh;
-        --x: 10svh;
-        --rot: -9deg;
-        z-index: 70;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 666px;
+        height: 974px;
+        
+        width: 74.16481vh;
+        height: 108.46325vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 700vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
-        @include respond(xs) {
-          --left: 719svh;
-          --scale:0.30;
-          --y: 61svh;    
+        @include respond(xs) {  
         }
       }
       
       .play-sleepwalking {
-         display:none;
-        --left: 905svh;
-        --scale: .2;
-        --y: 34svh;
-        --x: 10svh;
-        --rot: 10deg;
-        z-index: 50;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 750px;
+        height: 477px;
+        
+        width: 83.51893vh;
+        height: 53.11804vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 700vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 710svh;
         }
       }
       
       .sleepwalking-radio {
-        --left: 920svh;
-        --scale: .22;
-        --y: 7svh;
-        --x: 1svh;
-        --rot: 0deg;
-        z-index: 40;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1920px;
+        height: 1080px;
+        
+        width: 209.83607vh;
+        height: 118.03279vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 725svh;    
@@ -2447,13 +2484,24 @@ body {
       }
       
       .sleepwalking-radio-polaroid {
-        --left: 954svh;
-        --scale: .22;
-        --y: 14svh;
-        --x: 1svh;
-        --rot: -10deg;
-        z-index: 40;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 654px;
+        height: 1000px;
+        
+        width: 72.82851vh;
+        height: 111.35857vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 700vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 761svh;       
@@ -2461,61 +2509,95 @@ body {
       }
       
       .sleepwalking-visualizer {
-        --left: 944svh;
-        --scale: .38;
-        --y: 63svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 71;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1920px;
+        height: 1080px;
+        
+        width: 209.83607vh;
+        height: 118.03279vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 751svh;  
-          --scale: .34;
         }
       }
       
       .sleepwalking-title {
-        --left: 938svh;
-        --scale: .18;
-        --y: 39svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 100;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 1500px;
+        height: 400px;
+        
+        width: 167.03786vh;
+        height: 44.54343vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 700vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 745svh;     
-          --scale: 0.15;
+
         }
       }
       
       .sleepwalking-listeningparty {
-        --left: 970svh;
-        --scale: .35;
-        --ar: 4/3;
-        --y: 0svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 50;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1920px;
+        height: 1080px;
+        
+        width: 209.83607vh;
+        height: 118.03279vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 777svh;     
-          --scale: 0.32;
+
         }
       }
       
       .blue-star-8 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 154;
         height: 147;
-        --left: 1008svh;
-        --scale: .04;
-        --y: 35svh;
-        --x: 0svh;
-        --rot: -7deg;
-        z-index: 710;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        
+        width: 20.81vh;
+        height: 19.86vh;
+        top: 0vh;
+        left: 0vh;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 815svh;  
@@ -2524,14 +2606,23 @@ body {
       }
       
       .about-sleepwalking {
-        display:none;
-        --left: 1009svh;
-        --scale: .35;
-        --y: 1svh;
-        --x: 0svh;
-        --rot: 7deg;
-        z-index: 71;
-        pointer-events: none;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 859px;
+        height: 886px;
+        
+        width: 95.65702vh;
+        height: 98.6637vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 700vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 816svh;
@@ -2539,13 +2630,24 @@ body {
       }
       
       .sleepwalking-receipt {
-        --left: 1051svh;
-        --scale: .50;
-        --y: 1svh;
-        --x: 0svh;
-        --rot: -10deg;
-        z-index: 70;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 509px;
+        height: 905px;
+        
+        width: 56.68151vh;
+        height: 100.77951vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 700vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 858svh;      
