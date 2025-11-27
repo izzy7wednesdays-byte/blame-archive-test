@@ -1377,11 +1377,11 @@ body {
         
         width: 259.46vh;
         height: 145.95vh;
-        top: 0vh;
-        left: 400vh;
-        z-index: auto;
+        top: -56vh;
+        left: 424vh;
+        z-index: 3;
         
-        transform: scale(1) rotate(0deg);
+        transform: scale(0.18) rotate(0deg);
         transform-origin: center;
       
          @include respond(xs) {
@@ -1401,11 +1401,11 @@ body {
         
         width: 259.46vh;
         height: 145.95vh;
-        top: 0vh;
-        left: 400vh;
-        z-index: auto;
+        top: -28vh;
+        left: 419vh;
+        z-index: 2;
         
-        transform: scale(1) rotate(0deg);
+        transform: scale(0.18) rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1422,11 +1422,11 @@ body {
         
         width: 20.81vh;
         height: 19.86vh;
-        top: 0vh;
-        left: 400vh;
+        top: 27vh;
+        left: 519vh;
         z-index: 0;
                 
-        transform: scale(1) rotate(0deg);
+        transform: scale(0.2) rotate(12deg);
         transform-origin: center;
         
          @include respond(xs) {
@@ -1444,11 +1444,11 @@ body {
         
         width: 72.97vh;
         height: 38.92vh;
-        top: 0vh;
-        left: 400vh;
+        top: 53vh;
+        left: 503vh;
         z-index: 0;
                 
-        transform: scale(1) rotate(0deg);
+        transform: scale(0.55) rotate(0deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -1466,11 +1466,11 @@ body {
         
         width: 145.95vh;
         height: 259.45vh;
-        top: 0vh;
-        left: 400vh;
-        z-index: auto;
+        top: -51vh;
+        left: 522vh;
+        z-index: 1;
         
-        transform: scale(1) rotate(0deg);
+        transform: scale(0.15) rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
