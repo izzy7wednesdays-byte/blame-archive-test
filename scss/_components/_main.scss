@@ -1915,7 +1915,7 @@ body {
         width: 54.5573782vh;
         height: 30.6885254vh;
         top: 4vh;
-        left: 740vh;
+        left: 703vh;
         z-index: auto ;
         
         transform: scale(1) rotate(0deg);
@@ -2017,19 +2017,16 @@ body {
         width: 94.65479vh;
         height: 101.55902vh;
         
-        width: vh;
-        height: vh;
+        width: 47.327395vh;
+        height: 50.77951vh;
         top: 0vh;
-        left: 500vh;
+        left: 759vh;
         z-index: auto ;
         
         transform: scale(1) rotate(0deg);
         transform-origin: center;
         
         @include respond(xs) {
-          --left: 572svh;
-          --scale:0.50;
-          --y:47svh;
         }
       }
       
