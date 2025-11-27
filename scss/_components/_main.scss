@@ -1985,6 +1985,24 @@ body {
       }
       
       .little-miss-misery {
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        
+        width: 556px;
+        height: 556px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           --left: 558svh;
@@ -1993,6 +2011,24 @@ body {
       }
       
       .about-misery {
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        
+        width: 850px;
+        height: 912px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
         @include respond(xs) {
           --left: 572svh;
@@ -2027,17 +2063,27 @@ body {
       }
       
       .kat-stratford-dancing {
-        --left: 738svh;
-        --scale: .23;
-        --y: 1svh;
-        --x: 11svh;
-        --rot: 0deg;
-        z-index: 39;
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: px;
+        height: px;
+        
+        width: vh;
+        height: vh;
+        
+        width: vh;
+        height: vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 567svh;    
-          --scale:.19;
+
         }
       }
       
