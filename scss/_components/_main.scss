@@ -1447,6 +1447,7 @@ body {
       
       .text-wrapper-6 {
         position: absolute;
+        display: flex;
       
         font-weight: 400;
         color: #4CA8E9;
@@ -1639,6 +1640,7 @@ body {
       
       .text-wrapper-7 {
         position: absolute;
+        display: flex;
       
         font-weight: 400;
         color: #4CA8E9;
@@ -1722,6 +1724,7 @@ body {
       
       .text-wrapper-8 {
         position: absolute;
+        display: flex;
       
         font-weight: 400;
         color: #4CA8E9;
@@ -1901,72 +1904,88 @@ body {
       // ========= MISERY SECTION (slot classes) =========
       
       .misery-ogchorus {
-        --left: 695svh;
-        --scale: .28;
-        --y: 70svh;
-        --x: 2svh;
-        --rot: 0deg;
-        z-index: 40;
+        position: absolute;
+        object-fit: cover;
+        
+        width: 1920px;
+        height: 1080px;
+        
+        width: 209.83607vh;
+        height: 118.03279vh;
+        
+        width: 41.967214vh;
+        height: 23.606558vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 532svh; 
-          --scale:0.25;
-          --y: 72svh;
-          outline: 2px dashed;
-          outline-color: magenta;
-          outline-offset: 6px;
         }
       }
       
       .silver-star3-5 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 165px;
         height: 160px;
-        --left: 696svh;
-        --scale: .09;
-        --y: 59svh;
-        --x: 0svh;
-        --rot: 10deg;
-        z-index: 410;
-        pointer-events: none;
+        
+        width: 18.03279vh;
+        height: 17.48634vh;
+        
+        width: 7.213116vh;
+        height: 6.994536vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 532svh;    
         }
       }
       
       .text-wrapper-9 {
-        --left: 715svh;
-        --scale: .22;
-        --y: 59svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 40;
-        pointer-events: none;
+        position: absolute;
+        display: flex;
       
-        --ff: "Thinker";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: center;
-        --text-color: #4CA8E9;
-      
+        font-weight: 400;
+        color: #4CA8E9;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 1.2;
+        text-align: left;
+        text-transform: uppercase;
+        
+        width: 1000px;
+        height: 625px;
+        top: 830px;
+        left: 42px;
+        
+        width: 132.28vh;
+        height: 82.67vh;
+        top: 83.85vh;
+        left: 580vh;
+  
+        width: 206vh;
+        height: 100vh;
+        top: 89vh;
+        left: 570vh;
+        z-index: 2;
+        transform: rotate(0deg);
+        transform-origin: center;;
+            
         @include respond(xs) {
-          --left: 546svh;    
-          --scale:.19;
-          --y: 62svh;
+    
         }
       }
       
       .little-miss-misery {
-        --left: 721svh;
-        --scale: .23;
-        --y: 27svh;
-        --x: 10svh;
-        --rot: 4deg;
-        z-index: 39;
-        pointer-events: none;
       
         @include respond(xs) {
           --left: 558svh;
@@ -1975,14 +1994,7 @@ body {
       }
       
       .about-misery {
-        display:none;
-        --left: 739svh;
-        --scale: .56;
-        --y: 43svh;
-        --x: 10svh;
-        --rot: 0deg;
-        z-index: 41;
-      
+        
         @include respond(xs) {
           --left: 572svh;
           --scale:0.50;
@@ -1993,20 +2005,25 @@ body {
       .silver-star3-6 {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 165px;
         height: 160px;
-        --left: 759svh;
-        --scale: .08;
-        --y: 29svh;
-        --x: 0svh;
-        --rot: -5deg;
-        z-index: 43;
-        pointer-events: none;
-      
+        
+        width: 18.03279vh;
+        height: 17.48634vh;
+        
+        width: 7.213116vh;
+        height: 6.994536vh;
+        top: 0vh;
+        left: 500vh;
+        z-index: auto ;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+        
         @include respond(xs) {
-          display:none;
-          --left: 594svh;     
+          display:none;  
         }
       }
       
