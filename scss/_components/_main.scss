@@ -1287,7 +1287,7 @@ body {
       
       // ========= LANDMINES SECTION =========
       
-      .glitter-truck {
+      .glitter-truck-2 {
         
          @include respond(xs) {
           --left:347svh;
@@ -3912,13 +3912,7 @@ body {
         }
       }
       
-      .glitter-truck-2 {
-        --left: 1864svh;
-        --scale: .6;
-        --y: -22svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 57;
+      .glitter-truck-3 {
         pointer-events: none;
       
         @include respond(xs) {
