@@ -79,7 +79,7 @@ body {
           }
         }
      }   
-.text-wrapper-22,.text-wrapper-23,.text-wrapper-24,.text-wrapper-25,.text-wrapper-26,.text-wrapper-27,.text-wrapper-28,.text-wrapper-29,.text-wrapper-30,.text-wrapper-31 { display: none;}
+    .text-wrapper-28,.text-wrapper-29,.text-wrapper-30,.text-wrapper-31 { display: none;}
    
     .special-message {
       position: absolute;
@@ -3342,16 +3342,15 @@ body {
         width: 154px;
         height: 147px;
         
-        width: 20.81vh;
-        height: 19.86vh;
+        width: 16.9230769230769vh;
+        height: 16.1538461538462vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 0vh;
+        width: 10.1538461538461vh;
+        height: 9.69230769230772vh;
+        top: -3vh;
+        left: 1395vh;
         z-index: 0;
-                
-        transform: scale(1) rotate(0deg);
+        transform: rotate(33deg);
         transform-origin: center;
 
         @include respond(xs) {
@@ -3363,24 +3362,21 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        
         width: 1014px;
         height: 685px;
         
         width: 112.91759vh;
         height: 76.28062vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
-        
-        transform: scale(1) rotate(0deg);
+        width: 27.8571428571428vh;
+        height: 18.8186813186813vh;
+        top: 9vh;
+        left: 1378vh;
+        z-index: 0;
+        transform: scale(1) rotate(4deg);
         transform-origin: center;
      
         @include respond(xs) {
-          --left:1091svh;
         }
       }
       
@@ -3388,24 +3384,21 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        
         width: 1080px;
         height: 383px;
         
         width: 120.26726vh;
         height: 42.65033vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
-        
+        width: 29.6703296703298vh;
+        height: 10.521978021978vh;
+        top: 27vh;
+        left: 1379vh;
+        z-index: 1;
         transform: scale(1) rotate(0deg);
         transform-origin: center;
    
         @include respond(xs) {
-          --left:1090svh;
         }
       }
       
@@ -3413,48 +3406,42 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        
         width: 1179px;
         height: 404px;
         
         width: 131.29176vh;
         height: 44.98886vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
-        
-        transform: scale(1) rotate(0deg);
+        width: 32.39010989011vh;
+        height: 11.0989010989011vh;
+        top: 36vh;
+        left: 1377vh;
+        z-index: 0;
+        transform: rotate(5deg);
         transform-origin: center;
    
         @include respond(xs) {
-          --left:1090svh;
         }
       }
       
       .exitwounds-zoom {
         position: absolute;
         object-fit: cover;
-        
         width: 1080px;
         height: 1920px;
         
         width: 118.03279vh;
         height: 209.83607vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
-        
-        transform: scale(1) rotate(0deg);
+        width: 23.7362637362638vh;
+        height: 42.1978021978022vh;
+        top: 56vh;
+        left: 1376vh;
+        z-index: auto;
+        transform: rotate(0deg);
         transform-origin: center;
       
-        @include respond(xs) {
-          --left:1092svh;    
+        @include respond(xs) {   
         }
       }
       
@@ -3462,7 +3449,6 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        
         width: 214px;
         height: 210px;
         
@@ -3471,14 +3457,13 @@ body {
         
         width: 28.82vh;
         height: 28.38vh;
-        top: 0vh;
-        left: 0vh;
-        
-        transform: scale(1) rotate(0deg);
+        top: -2vh;
+        left: 1411vh;
+        z-index: 6;
+        transform: rotate(21deg);
         transform-origin: center;
        
         @include respond(xs) {
-          --left: 1124svh;
         }
       }
       
@@ -3486,44 +3471,40 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        
         width: 946px;
         height: 604px;
         
         width: 105.34521vh;
         height: 67.26058vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
-        
+        width: 25.989010989011vh;
+        height: 16.5934065934066vh;
+        top: 30vh;
+        left: 1407vh;
+        z-index: auto;
         transform: scale(1) rotate(0deg);
         transform-origin: center;
    
         @include respond(xs) {
-          --left:1119svh;
         }
       }
       
       .ep-zoom {
         position: absolute;
         object-fit: cover;
-        
         width: 1080px;
         height: 1920px;
         
         width: 118.03279vh;
         height: 209.83607vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
+        width: 23.7362637362638vh;
+        height: 42.1978021978022vh;
+        top: 48vh;
+        left: 1401vh;
+        z-index: auto;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
