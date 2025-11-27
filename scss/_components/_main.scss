@@ -192,18 +192,6 @@ body {
       object-fit: cover;
       pointer-events: none;
       
-      //width: 800px;
-      //height: 150px;
-      
-      //width: 169.92vh;
-      //height: 40.54vh;
-      
-     // width: 63.72vh;
-      //height: 15.2025vh;
-     // top: 41vh;
-    //  left: 12vh;
-    //  z-index: auto;
-
       width:  800px;
       height: 150px;
       
@@ -212,8 +200,8 @@ body {
       
       width: 107.12vh;
       height: 20.27vh;
-      top: 41vh;
-      left: 12vh;
+      top: 36vh;
+      left: -24vh;
       z-index: auto;
       
       transform: scale(1) rotate(0deg);
@@ -1463,8 +1451,9 @@ body {
         color: #4CA8E9;
         font-size: 16px;
         letter-spacing: 0;
-        line-height: normal;
-        text-align: center;
+        line-height: 1.2;
+        text-align: left;
+        text-transform: uppercase;
         
         width: 1000px;
         height: 625px;
@@ -1478,9 +1467,9 @@ body {
   
         width: 205vh;
         height: 100vh;
-        top: 90vh;
-        left: 331vh;
-        z-index: 0;
+        top: 60vh;
+        left: 564vh;
+        z-index: 2;
   
         transform: rotate(0deg);
         transform-origin: center;
@@ -1501,7 +1490,7 @@ body {
         width: 54.46vh;
         height: 135.16vh;
         top: 21vh;
-        left: 538vh;
+        left: 550vh;
         z-index: 2;
                 
         transform: scale(0.2) rotate(0deg);
