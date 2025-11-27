@@ -1589,26 +1589,26 @@ body {
       }
       
       .landmines-title-mobile {
-          display: none!important;
+        display: none!important;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        
+        width: 992px;
+        height: 229px;
+        
+        width: 134.05vh;
+        height: 30.95vh;
+        top: 0vh;
+        left: 0vh;
+        z-index: 0;
+                
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
+    
+        @include respond(xs) {
+          display: flex!important;
           position: absolute;
-          object-fit: cover;
-          pointer-events: none;
-          
-          width: 992px;
-          height: 229px;
-          
-          width: 134.05vh;
-          height: 30.95vh;
-          top: 0vh;
-          left: 0vh;
-          z-index: 0;
-                  
-          transform: scale(1) rotate(0deg);
-          transform-origin: center;
-      
-          @include respond(xs) {
-            display: flex!important;
-            position: absolute;
         }   
       }
       
@@ -1626,8 +1626,8 @@ body {
         width: 259.46vh;
         height: 145.95vh;
         top: 10vh;
-        left: 400vh;
-        z-index: 3;
+        left: 503vh;
+        z-index: 1;
         
         transform: scale(.20) rotate(0deg);
         transform-origin: center;
@@ -1637,6 +1637,34 @@ body {
       }
       
       .text-wrapper-7 {
+        position: absolute;
+      
+        font-weight: 400;
+        color: #4CA8E9;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 1.2;
+        text-align: left;
+        text-transform: uppercase;
+        
+        width: 1000px;
+        height: 625px;
+        top: 830px;
+        left: 42px;
+        
+        width: 132.28vh;
+        height: 82.67vh;
+        top: 83.85vh;
+        left: 580vh;
+  
+        width: 205vh;
+        height: 100vh;
+        top: 60vh;
+        left: 564vh;
+        z-index: 2;
+  
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
 
@@ -1653,9 +1681,12 @@ body {
         
         width: 96.76vh;
         height: 145.27vh;
-        top: 0vh;
-        left: 400vh;
-        z-index: auto;
+
+        width: 24.19vh;
+        height: 36.3175vh;
+        top: 10vh;
+        left: 687vh;
+        z-index: 2;
         
         transform: scale(1) rotate(0deg);
         transform-origin: center;
@@ -1675,9 +1706,9 @@ body {
         
         width: 145.95vh;
         height: 259.45vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto;
+        top: -50vh;
+        left: 598vh;
+        z-index: 1;
         
         transform: scale(1) rotate(0deg);
         transform-origin: center;
@@ -1688,7 +1719,36 @@ body {
       }
       
       .text-wrapper-8 {
+        position: absolute;
       
+        font-weight: 400;
+        color: #4CA8E9;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 1.2;
+        text-align: left;
+        text-transform: uppercase;
+        
+        width: 1000px;
+        height: 625px;
+        top: 830px;
+        left: 42px;
+        
+        width: 132.28vh;
+        height: 82.67vh;
+        top: 83.85vh;
+        left: 580vh;
+  
+        width: 205vh;
+        height: 100vh;
+        top: 60vh;
+        left: 564vh;
+        z-index: 2;
+  
+        transform: rotate(0deg);
+        transform-origin: center;
+        
+        display: none;
         @include respond(xs) {
 
         }  
@@ -1701,11 +1761,14 @@ body {
         
         width: 1080px;
         height: 1920px;
+
+        width: 118.03279px;
+        height: 209.83607px;
         
-        width: 145.95vh;
-        height: 259.45vh;
-        top: 0vh;
-        left: 400vh;
+        width: 29.19vh;
+        height: 51.89vh;
+        top: 6vh;
+        left: 654vh;
         z-index: auto;
         
         transform: scale(1) rotate(0deg);
