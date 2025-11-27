@@ -188,7 +188,24 @@ body {
     }
 
     .glitter-truck {
-
+      position: absolute;
+      object-fit: cover;
+      pointer-events: none;
+      
+      width: 1250px;
+      height: 300px;
+      
+      width: 169.92vh;
+      height: 40.54vh;
+      
+      width: 169.92vh;
+      height: 40.54vh;
+      top: 0vh;
+      left: 0vh;
+      z-index: auto;
+      
+      transform: scale(1) rotate(0deg);
+      transform-origin: center;
     }
       
     .torn-note {
@@ -1288,6 +1305,24 @@ body {
       // ========= LANDMINES SECTION =========
       
       .glitter-truck-2 {
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        
+        width: 1250px;
+        height: 300px;
+        
+        width: 169.92vh;
+        height: 40.54vh;
+        
+        width: 169.92vh;
+        height: 40.54vh;
+        top: 0vh;
+        left: 400vh;
+        z-index: auto;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
         
          @include respond(xs) {
           --left:347svh;
@@ -3913,7 +3948,24 @@ body {
       }
       
       .glitter-truck-3 {
+        position: absolute;
+        object-fit: cover;
         pointer-events: none;
+        
+        width: 1250px;
+        height: 300px;
+        
+        width: 169.92vh;
+        height: 40.54vh;
+        
+        width: 169.92vh;
+        height: 40.54vh;
+        top: 0vh;
+        left: 800vh;
+        z-index: auto;
+        
+        transform: scale(1) rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display:none;
