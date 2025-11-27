@@ -2368,13 +2368,12 @@ body {
         width: 40.75724vh;
         height: 50.44543vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 700vh;
-        z-index: auto ;
-        
-        transform: scale(1) rotate(0deg);
+        width: 24.454344vh;
+        height: 30.267258vh;
+        top: 8vh;
+        left: 1014vh;
+        z-index: auto;
+        transform: scale(1) rotate(-13deg);
         transform-origin: center;
       
         @include respond(xs) {
