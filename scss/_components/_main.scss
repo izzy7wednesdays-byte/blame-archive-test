@@ -1958,26 +1958,22 @@ body {
         font-size: 14px;
         letter-spacing: 0;
         line-height: 1.2;
-        text-align: left;
+        text-align: center;
         text-transform: uppercase;
         
         width: 1000px;
         height: 625px;
-        top: 830px;
-        left: 42px;
         
         width: 132.28vh;
         height: 82.67vh;
-        top: 83.85vh;
-        left: 580vh;
   
-        width: 206vh;
-        height: 100vh;
-        top: 89vh;
-        left: 570vh;
-        z-index: 2;
+        width: 22vh;
+        height: 110vh;
+        top: 91vh;
+        left: 661vh;
+        z-index: 3;
         transform: rotate(0deg);
-        transform-origin: center;;
+        transform-origin: center;
             
         @include respond(xs) {
     
@@ -2113,10 +2109,10 @@ body {
         width: 209.83607vh;
         height: 118.03279vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
+        width: 54.5573782vh;
+        height: 30.6885254vh;
+        top: 6vh;
+        left: 807vh;
         z-index: auto ;
         
         transform: scale(1) rotate(0deg);
@@ -2129,7 +2125,30 @@ body {
       }
       
       .text-wrapper-10 {
-
+        position: absolute;
+        display: flex;
+      
+        font-weight: 400;
+        color: #4CA8E9;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 1.2;
+        text-align: center;
+        text-transform: uppercase;
+        
+        width: 1000px;
+        height: 625px;
+        
+        width: 132.28vh;
+        height: 82.67vh;
+  
+        width: 22vh;
+        height: 110vh;
+        top: 91vh;
+        left: 661vh;
+        z-index: 3;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
 
@@ -2146,10 +2165,10 @@ body {
         width: 91.09131vh;
         height: 73.94209vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
+        width: 71.9621349vh;
+        height: 58.4142511vh;
+        top: 40vh;
+        left: 790vh;
         z-index: auto ;
         
         transform: scale(1) rotate(0deg);
@@ -2169,11 +2188,11 @@ body {
         width: 118.03279vh;
         height: 209.83607vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
+        width: 21.8195415594vh;
+        height: 38.7902959002vh;
+        top: 7vh;
+        left: 863vh;
+        z-index: 4;
         
         transform: scale(1) rotate(0deg);
         transform-origin: center;
@@ -2183,6 +2202,30 @@ body {
       }
       
       .text-wrapper-11 {
+        position: absolute;
+        display: flex;
+      
+        font-weight: 400;
+        color: #4CA8E9;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 1.2;
+        text-align: center;
+        text-transform: uppercase;
+        
+        width: 1000px;
+        height: 625px;
+        
+        width: 132.28vh;
+        height: 82.67vh;
+  
+        width: 22vh;
+        height: 110vh;
+        top: 91vh;
+        left: 661vh;
+        z-index: 3;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {   
         }
@@ -2198,11 +2241,11 @@ body {
         width: 58.57461vh;
         height: 68.59688vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
+        width: 23.13697095vh;
+        height: 27.0957676vh;
+        top: 40vh;
+        left: 870vh;
+        z-index: 5;
         
         transform: scale(1) rotate(0deg);
         transform-origin: center;
@@ -2212,24 +2255,33 @@ body {
       }
       
       .text-wrapper-12 {
-        --left: 875svh;
-        --scale: .2;
-        --y: 86svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 73;
-        pointer-events: none;
+        position: absolute;
+        display: flex;
       
-        --ff: "Manic";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: center;
-        --text-color: #4CA8E9;
+        font-weight: 400;
+        color: #4CA8E9;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 1.2;
+        text-align: center;
+        text-transform: uppercase;
+        
+        width: 1000px;
+        height: 625px;
+        
+        width: 132.28vh;
+        height: 82.67vh;
+  
+        width: 22vh;
+        height: 110vh;
+        top: 91vh;
+        left: 661vh;
+        z-index: 3;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:670svh;  
-          --scale:0.18;
-          --y:83svh;
+
         }
       }
       
@@ -2243,11 +2295,11 @@ body {
         width: 118.03279vh;
         height: 209.83607vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
+        width: 21.8195415594vh;
+        height: 38.7902959002vh;
+        top: 13vh;
+        left: 886vh;
+        z-index: 4 ;
         
         transform: scale(1) rotate(0deg);
         transform-origin: center;
@@ -2290,11 +2342,11 @@ body {
         width: 209.83607vh;
         height: 118.03279vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 500vh;
-        z-index: auto ;
+        width: 54.5573782vh;
+        height: 30.6885254vh;
+        top: 68vh;
+        left: 864vh;
+        z-index: 1;
         
         transform: scale(1) rotate(0deg);
         transform-origin: center;
@@ -2365,24 +2417,32 @@ body {
       }
       
       .text-wrapper-13 {
-        --left: 923svh;
-        --scale: .2;
-        --y: 0svh;
-        --x: 1svh;
-        --rot: 0deg;
-        z-index: 42;
-        pointer-events: none;
+        position: absolute;
+        display: flex;
       
-        --ff: "Manic";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: center !important;
-        --text-color: #4CA8E9;
-        --text-max-w: 43ch;
+        font-weight: 400;
+        color: #4CA8E9;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 1.2;
+        text-align: center;
+        text-transform: uppercase;
+        
+        width: 1000px;
+        height: 625px;
+        
+        width: 132.28vh;
+        height: 82.67vh;
+  
+        width: 22vh;
+        height: 110vh;
+        top: 91vh;
+        left: 661vh;
+        z-index: 3;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left: 724svh; 
-          --y: 0svh;
         }
       }
       
@@ -2651,22 +2711,32 @@ body {
       }
       
       .text-wrapper-14 {
-        --left: 1085svh;
-        --scale: .25;
-        --y: 4svh;
-        --x: 0svh;
-        --rot: 0deg;
-        z-index: 30;
-        pointer-events: none;
+        position: absolute;
+        display: flex;
       
-        --ff: "Manic";
-        --fw: 400;
-        --fs-mul: .1;
-        --ta: center;
-        --text-color: #4CA8E9;
+        font-weight: 400;
+        color: #4CA8E9;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 1.2;
+        text-align: center;
+        text-transform: uppercase;
+        
+        width: 1000px;
+        height: 625px;
+        
+        width: 132.28vh;
+        height: 82.67vh;
+  
+        width: 22vh;
+        height: 110vh;
+        top: 91vh;
+        left: 661vh;
+        z-index: 3;
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
-          --left:887svh;
         }
       }
       
