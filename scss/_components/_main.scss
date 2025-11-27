@@ -183,8 +183,7 @@ body {
       }
     }
     
-    .social, .social-sparkle-l {
-      display:none;
+    .social-sparkle-l {
       pointer-events: none;
 
       z-index: 5;
@@ -195,8 +194,6 @@ body {
     }
         
     .instagram {
-      display:none;
-
       z-index: 5;
       
       @include respond(xs) {
@@ -204,8 +201,6 @@ body {
     }
         
     .tiktok {
-      display:none;
-
       z-index: 5;
         
       @include respond(xs) {
@@ -214,8 +209,6 @@ body {
     }
           
     .twitter {
-      display:none;
-
       z-index: 5;
       
       @include respond(xs) {
@@ -223,8 +216,6 @@ body {
     }
           
     .discord {
-      display:none;
-
       z-index: 5;
       
       @include respond(xs) {
@@ -232,8 +223,6 @@ body {
     }
         
     .spotify {
-      display:none;
-
       z-index: 5;
       
       @include respond(xs) {
@@ -241,8 +230,6 @@ body {
     }
           
     .apple-music {
-      display:none;
-
       z-index: 5;
         
       @include respond(xs) { 
@@ -250,9 +237,7 @@ body {
     }
 
     .social-sparkle-r {
-      display:none;
       pointer-events: none;
-
       z-index: 5;
       
       @include respond(xs) { 
