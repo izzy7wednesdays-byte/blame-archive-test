@@ -1660,10 +1660,10 @@ body {
         top: 83.85vh;
         left: 580vh;
   
-        width: 209vh;
+        width: 29vh;
         height: 96vh;
         top: 4vh;
-        left: 544vh;
+        left: 638vh;
         z-index: 2;
         transform: rotate(0deg);
         transform-origin: center;
@@ -1744,17 +1744,16 @@ body {
         top: 83.85vh;
         left: 580vh;
   
-        width: 206vh;
-        height: 100vh;
-        top: 89vh;
-        left: 570vh;
-        z-index: 2;
+        width: 22vh;
+        height: 110vh;
+        top: 91vh;
+        left: 661vh;
+        z-index: 3;
         transform: rotate(0deg);
         transform-origin: center;
         
-        display: none;
         @include respond(xs) {
-
+          display: none;
         }  
       }
       
