@@ -198,10 +198,10 @@ body {
       width: 169.92vh;
       height: 40.54vh;
       
-      width: 169.92vh;
-      height: 40.54vh;
-      top: 0vh;
-      left: 0vh;
+      width: 63.72vh;
+      height: 15.2025vh;
+      top: 41vh;
+      left: 12vh;
       z-index: auto;
       
       transform: scale(1) rotate(0deg);
@@ -220,7 +220,7 @@ body {
       
       width: 150vh;
       height: 150vh;
-      top: 1vh;
+      top: 2vh;
       left: -53vh;
       z-index: 3;
       
@@ -448,16 +448,16 @@ body {
       width: 4411px;
       height: 570px;
       
-      width: 598.08vh;
-      height: 77.03vh;
+      width: 596.08vh;
+      height: 77.027vh;
       
-      width: 155.04vh;
-      height: 51.516vh;
-      top: 30vh;
-      left: 93vh;
+      width: 61.4773333333vh;
+      height: 26.9369333333vh;
+      top: 41vh;
+      left: 142vh;
       z-index: 0;
       
-      transform: scale(0.4) rotate(-8deg);
+      transform: scale(1) rotate(-9deg);
       transform-origin: center;
     
       @include respond(xs) {
@@ -1315,11 +1315,11 @@ body {
         width: 169.92vh;
         height: 40.54vh;
         
-        width: 169.92vh;
-        height: 40.54vh;
-        top: 0vh;
-        left: 400vh;
-        z-index: auto;
+        width: 63.72vh;
+        height: 15.2025vh;
+        top: 87vh;
+        left: 515vh;
+        z-index: 1;
         
         transform: scale(1) rotate(0deg);
         transform-origin: center;
@@ -1445,7 +1445,33 @@ body {
       }
       
       .text-wrapper-6 {
-        dispaly: none;
+        position: absolute;
+      
+        font-weight: 400;
+        color: #4CA8E9;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: normal;
+        text-align: center;
+        
+        width: 1000px;
+        height: 625px;
+        top: 830px;
+        left: 42px;
+        
+        width: 132.28vh;
+        height: 82.67vh;
+        top: 83.85vh;
+        left: 580vh;
+  
+        width: 205vh;
+        height: 100vh;
+        top: 90vh;
+        left: 331vh;
+        z-index: 0;
+  
+        transform: rotate(0deg);
+        transform-origin: center;
       
         @include respond(xs) {
           display:none;
