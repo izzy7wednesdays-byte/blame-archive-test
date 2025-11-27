@@ -2588,12 +2588,11 @@ body {
         width: 20.81vh;
         height: 19.86vh;
         
-        width: 20.81vh;
-        height: 19.86vh;
-        top: 0vh;
-        left: 0vh;
-        
-        transform: scale(1) rotate(0deg);
+        width: 7.2835vh;
+        height: 6.951vh;
+        top: 58vh;
+        left: 1066vh;
+        transform: scale(1) rotate(20deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -2612,13 +2611,13 @@ body {
         width: 95.65702vh;
         height: 98.6637vh;
         
-        width: vh;
-        height: vh;
-        top: 0vh;
-        left: 700vh;
-        z-index: auto ;
+        width: 35.3930974vh;
+        height: 36.505569vh;
+        top: 64vh;
+        left: 1034vh;
+        z-index: 2;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(10deg);
         transform-origin: center;
       
         @include respond(xs) {
