@@ -89,3 +89,21 @@
     }
   }
 }
+
+.social-2 {
+  position: absolute;
+  top: 37svh;
+  left: 5svh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2svh; 
+
+  .social-sparkle-l-2,
+  .social-sparkle-r-2 {
+    width: 5svh;
+    height: auto;
+    display: block;
+
+    pointer-events: none;
+  }
