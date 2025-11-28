@@ -5689,7 +5689,7 @@ body {
         height: 63.5604395604396vh;
         top: -2vh;
         left: 2325vh;
-        z-index: 1;
+        z-index: 6;
         
         transform: rotate(-5deg);
         transform-origin: center;
@@ -5702,22 +5702,24 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
+        width: 905px;
+        height: 525px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
-        transform: rotate(0deg);
+        width: 99.4505494505495vh;
+        height: 57.6923076923077vh;
+        
+        width: 45.7472527472528vh;
+        height: 26.5384615384615vh;
+        top: 68vh;
+        left: 2322vh;
+        z-index: 4;
+        
+        transform: rotate(93deg);
         transform-origin: center;
       
         @include respond(xs) {
-          --left:1934svh;
+
         }
       }
       
@@ -5735,37 +5737,38 @@ body {
         width: 17.8021978021979vh;
         height: 31.6483516483517vh;
         top: 64vh;
-        left: 2336vh;
+
+        left: 2336.5vh;
         z-index: 1;
         
-        transform: rotate(0deg);
+        transform: rotate(2deg);
         transform-origin: center;
       
         @include respond(xs) {
-          --left:1962svh;
         }
       }
       
       .london-live-2 {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
-        width: px;
-        height: px;
+
+        width: 1080px;
+        height: 1920px;
         
-        width: vh;
-        height: vh;
+        width: 118.681318681319vh;
+        height: 210.989010989011vh;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 21.3626373626374vh;
+        height: 37.978021978022vh;
+        top: 60vh;
+        left: 2362.5vh;
         z-index: auto;
+        
         transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
-          --left:1983svh;
+
         }
       }
       
@@ -5773,22 +5776,22 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 1920px;
+        height: 1080px;
         
-        width: vh;
-        height: vh;
+        width: 210.989010989011vh;
+        height: 118.681318681319vh;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
+        width: 56.967032967033vh;
+        height: 32.0439560439561vh;
+        top: 2vh;
+        left: 2377.5vh;
+        z-index: 8;
+        
         transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2003svh;
         }
       }
       
@@ -5796,22 +5799,24 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
+        width: 562px;
+        height: 425px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
-        transform: rotate(0deg);
+        width: 61.7582417582418vh;
+        height: 46.7032967032967vh;
+        
+        width: 30.8791208791209vh;
+        height: 23.3516483516484vh;
+        top: 36vh;
+        left: 2379vh;
+        z-index: 0;
+        
+        transform: rotate(-5deg);
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2001svh;
+          
         }
       }
       
@@ -5819,22 +5824,24 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
+        
         width: 110px;
         height: 113px;
         
-        width: 12.0879120879121vh;
-        height: 12.4175824175824vh;
+        width: 12.0879120879vh;
+        height: 12.4175824176vh;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 12.0879120879vh;
+        height: 12.4175824176vh;
+        top: 89vh;
+        left: 2385vh;
         z-index: auto;
+        
         transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2007svh;
+          
         }
       }
       
@@ -5864,24 +5871,24 @@ body {
       .rsvp-button {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
-        width: px;
-        height: px;
+        pointer-events: auto;
         
-        width: vh;
-        height: vh;
+        width: 563px;
+        height: 189px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 61.8681318681319vh;
+        height: 20.7692307692308vh;
+        
+        width: 38.3582417582418vh;
+        height: 12.8769230769231vh;
+        top: 41vh;
+        left: 2424vh;
         z-index: auto;
+        
         transform: rotate(0deg);
         transform-origin: center;
+        
         @include respond(xs) {
-          --left:2023svh;
-          --scale: 0.11;
-          --y: 45svh;
         }
       }
       
