@@ -6852,6 +6852,10 @@ body {
         top: 28vh;
         left: 2885vh;
         z-index: auto;
+        
+        @include respond(xs) {
+           display: none;
+        }
       }
       
       .back-button {
