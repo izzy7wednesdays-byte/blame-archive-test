@@ -6507,63 +6507,88 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
+        width: 503px;
+        height: 230px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 55.2747252747253vh;
+        height: 25.2747252747253vh;
+        
+        width: 55.2747252747253vh;
+        height: 25.2747252747253vh;
+        top: 3vh;
+        left: 2606vh;
         z-index: auto;
+        
         transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2200svh;
         }
       }
       
       .church-video {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
+        width: 812px;
+        height: 910px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 89.2307692307692vh;
+        height: 100vh;
+        
+        width: 31.2307692307692vh;
+        height: 35vh;
+        top: 30vh;
+        left: 2609vh;
         z-index: auto;
+        
         transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2204svh;
         }
+      }
+
+      .text-wrapper-30 {
+        position: absolute;
+        font-weight: 400;
+        color: #4CA8E9;
+        font-size: 17px;
+        letter-spacing: 0;
+        line-height: normal;
+        text-align: center;
+        text-transform: uppercase;
+        
+        width: 260px;
+        top: 820px;
+        
+        left: 4574px;
+        width: 28.7vh;
+        top: 64vh;
+        left: 2610vh;
+        
+        transform: rotate(0deg);
+        transform-origin: center;
       }
       
       .villains {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
+        width: 492px;
+        height: 484px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 54.0659340659341vh;
+        height: 53.1868131868132vh;
+        
+        width: 24.3296703296703vh;
+        height: 23.9340659340659vh;
+        top: 75vh;
+        left: 2613vh;
         z-index: auto;
+        
         transform: rotate(0deg);
         transform-origin: center;
       
@@ -6576,22 +6601,23 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
+        width: 438px;
+        height: 506px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 48.1318681318681vh;
+        height: 55.6043956043956vh;
+        
+        width: 19.2527472527472vh;
+        height: 22.2417582417582vh;
+        top: 5vh;
+        left: 2664vh;
         z-index: auto;
-        transform: rotate(0deg);
+        
+        transform: rotate(10deg);
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2258svh;
         }
       }
       
@@ -6623,18 +6649,20 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
+        width: 566px;
+        height: 304px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 62.1978021978022vh;
+        height: 33.4065934065934vh;
+        
+        width: 62.1978021978022vh;
+        height: 33.4065934065934vh;
+        top: 31vh;
+        left: 2644vh;
         z-index: auto;
-        transform: rotate(0deg);
+        
+        transform: rotate(-7deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -6645,27 +6673,28 @@ body {
       .join-postcard {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
-        width: px;
-        height: px;
+        pointer-events: auto;
         
-        width: vh;
-        height: vh;
+        width: 638px;
+        height: 404px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 70.1098901098901vh;
+        height: 44.3956043956044vh;
+        
+        width: 49.0769230769231vh;
+        height: 31.0769230769231vh;
+        top: 68vh;
+        left: 2642vh;
         z-index: auto;
-        transform: rotate(0deg);
+        
+        transform: rotate(4deg);
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2240svh;
         }
       }
       
-      .text-wrapper-30 {
+      .text-wrapper-31 {
         position: absolute;
         font-weight: 400;
         color: #4CA8E9;
@@ -6693,20 +6722,23 @@ body {
       .presave-button {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
-        width: px;
-        height: px;
+        pointer-events: auto;
         
-        width: vh;
-        height: vh;
+        width: 392px;
+        height: 390px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 43.0769230769231vh;
+        height: 42.8571428571429vh;
+        
+        width: 25.8461538461539vh;
+        height: 25.7142857142857vh;
+        top: 37vh;
+        left: 2708vh;
         z-index: auto;
+        
         transform: rotate(0deg);
         transform-origin: center;
+            
         @include respond(xs) {
           --left:2297svh;
         }
@@ -6716,18 +6748,20 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
+        width: 420px;
+        height: 532px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 46.1538461538462vh;
+        height: 58.4615384615385vh;
+        
+        width: 23.0769230769231vh;
+        height: 29.2307692307693vh;
+        top: 70vh;
+        left: 2700vh;
         z-index: auto;
-        transform: rotate(0deg);
+        
+        transform: rotate(-7deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -6739,18 +6773,20 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
+        width: 556px;
+        height: 740px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 61.0989010989011vh;
+        height: 81.3186813186813vh;
+        
+        width: 67.2087912087912vh;
+        height: 89.4505494505494vh;
+        top: 3vh;
+        left: 2736vh;
         z-index: auto;
-        transform: rotate(0deg);
+        
+        transform: rotate(-7deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -6762,17 +6798,19 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
+        width: 1200px;
+        height: 1200px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
+        width: 131.868131868132vh;
+        height: 131.868131868132vh;
+        
+        width: 79.1208791208792vh;
+        height: 79.1208791208792vh;
+        top: 2vh;
+        left: 2809vh;
         z-index: auto;
+        
         transform: rotate(0deg);
         transform-origin: center;
       
