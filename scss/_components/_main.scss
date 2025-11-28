@@ -6836,19 +6836,42 @@ body {
           pointer-events: none;
         }
       }
+
+      .the-end {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 750px;
+        height: 250px;
+        
+        width: 82.4175824175824vh;
+        height: 27.4725274725275vh;
+        
+        width: 98.9010989010989vh;
+        height: 32.967032967033vh;
+        top: 28vh;
+        left: 2885vh;
+        z-index: auto;
+      }
       
       .back-button {
-        display: none;
-        --left: 2685svh;
-        --scale: .17;
-        --y: 15svh;
-        --x: 8svh;
-        --rot: 0deg;
-        --z-index: 2;
+        position: absolute;
+        object-fit: cover;
+        pointer-events: auto;
+        
+        width: 674px;
+        height: 122px;
+        
+        width: 74.0659340659341vh;
+        height: 13.4065934065934vh;
+        
+        width: 88.8791208791209vh;
+        height: 16.0879120879121vh;
+        top: 69vh;
+        left: 2889vh;
+        z-index: 3;
       
         @include respond(xs) {
-          --left:2470svh;
-          --scale:.05;
         }
       }
       
