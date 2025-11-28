@@ -4907,19 +4907,21 @@ body {
       .about-videos {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+
         width: 859px;
         height: 530px;
         
-        width: 94.3956043956044vh;
-        height: 58.2417582417582vh;
+        width: 94.3956043956vh;
+        height: 58.2417582418vh;
         
-        width: vh;
-        height: vh;
+        width: 33.0384615384615vh;
+        height: 20.3846153846154vh;
+        
         top: 46vh;
-        left: 1460vh;
-        z-index: auto;
-        transform: rotate(0deg);
+        left: 1951vh;
+        z-index: 2;
+        
+        transform: rotate(6deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -4931,18 +4933,20 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
+        
         width: 572px;
         height: 764px;
         
-        width: 62.8571428571429vh;
-        height: 83.956043956044vh;
+        width: 62.8571428571vh;
+        height: 83.956043956vh;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
-        transform: rotate(0deg);
+        width: 25.1428571428572vh;
+        height: 33.5824175824176vh;
+        top: 64vh;
+        left: 1946vh;
+        z-index: 1;
+        
+        transform: rotate(-5deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -4952,18 +4956,19 @@ body {
       .exitwounds-bts {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+
         width: 1920px;
         height: 1080px;
         
-        width: 210.989010989011vh;
-        height: 118.681318681319vh;
+        width: 210.989010989vh;
+        height: 118.6813186813vh;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
+        width: 73.8461538461539vh;
+        height: 41.5384615384617vh;
+        top: 2.5vh;
+        left: 1988vh;
+        z-index: 8;
+        
         transform: rotate(0deg);
         transform-origin: center;
         
@@ -4975,20 +4980,20 @@ body {
       .landmines-bts-tiktok {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+    
         width: 1080px;
         height: 1920px;
         
         width: 118.03279vh;
         height: 209.83607vh;
         
-        width: 23.7362637362638vh;
-        height: 42.1978021978022vh;
-        top: 56vh;
-        left: 1376vh;
-        z-index: auto;
+        width: 28.4835164835166vh;
+        height: 50.6373626373626vh;
+        top: 47vh;
+        left: 1987vh;
+        z-index: 2;
         
-        transform: rotate(0deg);
+        transform: rotate(-3deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -4998,18 +5003,19 @@ body {
       .landmines-bts {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+
         width: 1920px;
         height: 1080px;
         
-        width: 210.989010989011vh;
-        height: 118.681318681319vh;
+        width: 210.989010989vh;
+        height: 118.6813186813vh;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
+        width: 63.2967032967033vh;
+        height: 35.6043956043957vh;
+        top: 52vh;
+        left: 2014vh;
+        z-index: 1;
+        
         transform: rotate(0deg);
         transform-origin: center;
       
@@ -5028,11 +5034,11 @@ body {
         width: 169.92vh;
         height: 40.54vh;
         
-        width: 169.92vh;
-        height: 40.54vh;
-        top: 0vh;
-        left: 800vh;
-        z-index: auto;
+        width: 68.6813186813185vh;
+        height: 16.4835164835165vh;
+        top: 87vh;
+        left: 2023vh;
+        z-index: 4;
         
         transform: scale(1) rotate(0deg);
         transform-origin: center;
