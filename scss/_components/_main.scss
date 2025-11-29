@@ -67,9 +67,10 @@ body {
       left: calc(3148vh * 1000/847);
 
       @include respond(xs) {
-        left: 3673vh;
+        left: 3673svh;
       }
     }
+    
     img {
         &.open-modal {
           cursor: pointer;
