@@ -6340,7 +6340,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2140svh;
+       
         }
       }
       
@@ -6366,7 +6366,7 @@ body {
         
         @include respond(xs) {
           display: none;
-          --left:2154svh;
+ 
         }
       }
       
@@ -6398,14 +6398,14 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
+        width: 1275px;
+        height: 1000px;
         
-        width: vh;
-        height: vh;
+        width: 140.10989010989vh;
+        height: 109.89010989011vh;
         
-        width: vh;
-        height: vh;
+        width: 77.0604395604395vh;
+        height: 60.4395604395605vh;
         top: 46vh;
         left: 2549vh;
         z-index: auto;
@@ -6414,7 +6414,6 @@ body {
       
         @include respond(xs) {
           display:none;
-          //--left:2125svh;
         }
       }
       
@@ -6424,11 +6423,6 @@ body {
         @include respond(xs) {
           display: flex!important;
       
-          --left: 2143svh;
-          --scale: .33;
-          --y: 62svh;
-          --x: 0svh;
-          --rot: 0deg;
           z-index: 47;
         }
       }
@@ -6454,7 +6448,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2153.5svh;
+        
         }
       }
       
@@ -6506,9 +6500,7 @@ body {
         @include respond(xs) {
         }
       }
-      
-      
-      
+
       // ========= WHAT'S NEXT SECTION (slot classes) =========
       
       .dreamdotnet {
@@ -6601,7 +6593,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2206svh;
+          
         }
       }
       
@@ -6626,6 +6618,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          
         }
       }
       
@@ -6649,7 +6642,7 @@ body {
       
         @include respond(xs) {
           display:none;
-          --left:2263svh;
+
         }
       }
       
@@ -6674,7 +6667,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2241svh;
+
         }
       }
       
@@ -6888,5 +6881,5 @@ body {
         @include respond(xs) {
         }
       }
- }    
+  }
 }
