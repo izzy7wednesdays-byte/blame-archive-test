@@ -6715,7 +6715,6 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2281svh;
         }
       }
       
@@ -6740,7 +6739,6 @@ body {
         transform-origin: center;
             
         @include respond(xs) {
-          --left:2297svh;
         }
       }
       
@@ -6765,7 +6763,6 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2310svh;
         }
       }
       
@@ -6790,7 +6787,6 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2336svh;
         }
       }
       
@@ -6815,24 +6811,27 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:2402svh;
-          --scale: 0.7;
-          --y:15svh;
         }
       }
       
       .the-end-mobile {
+        position: absolute;
+        object-fit: cover;
+        
+        width: 750px;
+        height: 250px;
+        
+        width: 82.4175824175824vh;
+        height: 27.4725274725275vh;
+        
+        width: 98.9010989010989vh;
+        height: 32.967032967033vh;
+        top: 28vh;
+        left: 2885vh;
+        z-index: auto;
         display: none;
       
         @include respond(xs) {
-          display: flex;
-          
-          --left:2463svh;
-          --scale:.30;
-          --y: 40svh;
-          --x: 8svh;
-          --rot: 0deg;
-          z-index: 2;
           pointer-events: none;
         }
       }
