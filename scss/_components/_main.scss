@@ -4249,15 +4249,19 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
+        
         width: 599px;
         height: 607px;
+        
         width: 65.8241758241758vh;
         height: 66.7032967032967vh;
+        
         width: 55.9505494505494vh;
         height: 56.6978021978022vh;
         top: 58vh;
         left: 1677vh;
-        z-index: auto;
+        z-index: 1;
+        
         transform: rotate(0deg);
         transform-origin: center;
       
@@ -4266,22 +4270,24 @@ body {
       }
       
       .video-title-gif {
-        display: none;
         position: absolute;
         object-fit: cover;
         pointer-events: none;
-        width: px;
-        height: px;
         
-        width: vh;
-        height: vh;
+        width: 499px;
+        height: 290px;
         
-        width: vh;
-        height: vh;
-        top: 46vh;
-        left: 1460vh;
-        z-index: auto;
-        transform: rotate(0deg);
+        width: 54.8351648351648vh;
+        height: 31.8681318681319vh;
+        
+        width: 30.1593406593406vh;
+        height: 17.5274725274725vh;
+        
+        top: 72vh;
+        left: 1679vh;
+        z-index: 0;
+        
+        transform: rotate(-2.5deg);
         transform-origin: center;
       
         @include respond(xs) {
