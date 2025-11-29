@@ -65,6 +65,10 @@ body {
       position: absolute;
       top: 0;
       left: calc(3148vh * 1000/847);
+
+      @include respond(xs) {
+        left: 3673vh;
+      }
     }
     
     img {
