@@ -84,25 +84,19 @@ body {
     .special-message {
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
       
-      width: 1000px;
-      height: 625px;
-      top: 830px;
-      left: 42px;
-      
-      width: 132.28vh;
-      height: 82.67vh;
-      top: 83.85vh;
-      left: 80vh;
+      width: 860px;
+      height: 537px;
 
-      width: 205vh;
-      height: 100vh;
-      top: -35vh;
-      left: -73.5vh;
+      width: 94.5054945054945vh;
+      height: 59.010989010989vh;
+
+      width: 160.659340659341vh;
+      height: 100.318681318681vh;
+      top: -36vh;
+      left: -50.5vh;
       z-index: 1;
-
-      transform: scale(0.76);     
-      transform-origin: center; 
 
       @include respond(xs) {
         display:none;
@@ -111,47 +105,45 @@ body {
       
     .special-message-mobile {
       display: none; 
-      position: absolute;
-      object-fit: cover;
-      
-      width: 772px;
-      height: 599px;
-      
-      width: 102.12vh;
-      height: 79.23vh;
-
-      width: 102.12vh;
-      height: 79.23vh;
-      top: -34vh;
-      left: -65vh;
-      z-index: 1;
-
-      transform: scale(0.95);     
-      transform-origin: center; 
         
       @include respond(xs) {
         display: flex;
         position: absolute;
+        object-fit: cover;
+        pointer-events:none;
+        
+        width: 860px;
+        height: 537px;
+  
+        width: 94.5054945054945vh;
+        height: 59.010989010989vh;
+  
+        width: 160.659340659341vh;
+        height: 100.318681318681vh;
+        top: -36vh;
+        left: -50.5vh;
+        z-index: 1;
       }
     }
     
     .izzymacarthur {
       position: absolute;
       object-fit: cover;
-    
+      pointer-events; none;
+      
       width: 860px;
       height: 156px;
-      top: 830px;
-      left: 42px;
-      
-      width: 113.7vh; 
-      height: 20.6vh;  
-      top: 18vh;     
-      left: -10vh; 
-      z-index: 2;
 
-      transform: scale(0.75);     
-      transform-origin: center; 
+      width: 113.7vh;
+      height: 20.6vh;
+      
+      width: 80.3296703296703vh;
+      height: 14.5714285714285vh;
+      top: 21vh;
+      left: 8vh;
+      z-index: 2;
+      transform: scale(1);
+      transform-origin: center;
 
       @include respond(xs) { 
         display: none;
@@ -193,7 +185,7 @@ body {
       
       width: 107.12vh;
       height: 20.27vh;
-      top: 36vh;
+      top: 35.5vh;
       left: -24vh;
       z-index: auto;
       
@@ -204,20 +196,21 @@ body {
     .torn-note {
       position: absolute;
       object-fit: cover;
-      
+      pointer-events:none;
+ 
       width: 989px;
       height: 978px;
-
+      
       width: 133.65vh;
       height: 132.16vh;
       
-      width: 150vh;
-      height: 150vh;
-      top: 2vh;
-      left: -53vh;
+      width: 49.9934065934067vh;
+      height: 49.4373626373624vh;
+      top: 53vh;
+      left: -4vh;
       z-index: 3;
       
-      transform: scale(.34) rotate(0deg);
+      transform: rotate(2deg);
       transform-origin: center;
 
       @include respond(xs) { 
@@ -227,20 +220,21 @@ body {
     .tracklist {
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
           
       width: 859px;
       height: 799px;
-
+      
       width: 116.08vh;
       height: 107.97vh;
-          
-      width: 202vh;
-      height: 187.4vh;
-      top: -73vh;
-      left: 13vh;
+      
+      width: 42.478021978022vh;
+      height: 39.510989010989vh;
+      top: 0vh;
+      left: 94vh;
       z-index: 2;
-          
-      transform: scale(0.21) rotate(7deg);
+      
+      transform: rotate(7deg);
       transform-origin: center center;
       
       @include respond(xs) {
@@ -250,20 +244,21 @@ body {
     .the-scrapbook {
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
           
       width: 804px;
       height: 369px;
-
+      
       width: 108.65vh;
       height: 49.86vh;
-          
-      width: 106.4vh;
-      height: 48.8vh;
-      top: 40vh;
-      left: 36vh;
+      
+      width: 79.5164835164836vh;
+      height: 36.4945054945055vh;
+      top: 46vh;
+      left: 49vh;
       z-index: 3;
-          
-      transform: scale(0.75) rotate(0deg);
+      
+      transform: rotate(0deg);
       transform-origin: center;
       
       @include respond(xs) {
@@ -273,6 +268,7 @@ body {
     .lfg { 
       position: absolute;
       object-fit: contain;
+      pointer-events:none;
       
       width: 819px;
       height: 297px;
@@ -318,6 +314,7 @@ body {
     .pink-arrow {    
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
       
       width: 1046px;
       height: 407px;
@@ -343,6 +340,7 @@ body {
     .broken-cd { 
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
       
       width: 552px;
       height: 576px;
@@ -366,6 +364,7 @@ body {
     .blue-star-1 { 
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
       
       width: 154px;
       height: 147px;
@@ -389,6 +388,7 @@ body {
     .blue-star-2 {
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
       
       width: 154px;
       height: 147px;
@@ -413,6 +413,7 @@ body {
     .silver-star1-1 { 
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
       
       width: 214px;
       height: 210px;
@@ -436,7 +437,7 @@ body {
     .lightsleeper-title { 
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
       
       width: 4411px;
       height: 570px;
@@ -537,6 +538,7 @@ body {
     .autumn-text {
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
       
       width: 652px;
       height: 546px;
@@ -560,6 +562,7 @@ body {
     .blame-it-notesapp {
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
       
       width: 710px;
       height: 330px;
@@ -606,6 +609,7 @@ body {
     .silver-star1-2 {
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
       
       width: 214px;
       height: 210px;
@@ -629,6 +633,7 @@ body {
     .lightsleeper-chords { 
       position: absolute;
       object-fit: cover;
+      pointer-events: auto;
       
       width: 200px;
       height: 250px;
@@ -652,6 +657,7 @@ body {
     .text-wrapper { 
       pointer-events: none;
       position: absolute;
+      
       font-weight: 400;
       color: #4C58E9;
       font-size: 15px;
@@ -683,6 +689,7 @@ body {
     .play-lightsleeper-desktop {
       position: absolute;
       object-fit: cover;
+      pointer-events: auto;
       
       width: 1114px;
       height: 1114px;
@@ -731,6 +738,7 @@ body {
     .broken-breathing {
       position: absolute;
       object-fit: cover;
+      pointer-events: auto;
       
       width: 1920px;
       height: 1080px;
@@ -781,6 +789,7 @@ body {
     .exitwounds-lyricvideo {
       position: absolute;
       object-fit: cover;
+      pointer-events: auto;
       
       width: 1920px;
       height: 1080px;
@@ -804,6 +813,7 @@ body {
     .star-trio-1 {
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
       
       width: 264px;
       height: 425px;
@@ -826,6 +836,7 @@ body {
     .exitwounds-title {
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
       
       width: 857px;
       height: 429px;
@@ -857,7 +868,7 @@ body {
       height: 59.73vh;
       top: -12vh;
       left: 335vh;
-      z-index:3;
+      z-index: 3;
               
       transform: scale(0.45) rotate(13deg);
       transform-origin: center;
@@ -868,6 +879,8 @@ body {
       
     .text-wrapper-2 {
       position: absolute;
+      pointer-events:none;
+      
       font-weight: 400;
       color: #4C58E9;
       font-size: 15px;
@@ -897,6 +910,7 @@ body {
     .missed-calls {
       position: absolute;
       object-fit: cover;
+      pointer-events:none;
       
       width: 672px;
       height: 736px;
@@ -951,7 +965,7 @@ body {
       left: 397vh;
       z-index: 2;
               
-      transform: scale(1) rotate(0deg);
+      transform: rotate(0deg);
       transform-origin: center;
     
       @include respond(xs) {
@@ -1005,6 +1019,8 @@ body {
       
     .text-wrapper-3 {
       position: absolute;
+      pointer-events:none;
+      
       font-weight: 400;
       color: #4CA8E9;
       font-size: 32px;
