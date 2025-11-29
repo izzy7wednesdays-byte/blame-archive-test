@@ -1944,7 +1944,7 @@ body {
       .text-wrapper-9 {
         position: absolute;
         display: flex;
-      
+        
         font-weight: 400;
         color: #4CA8E9;
         font-size: 14px;
@@ -1958,12 +1958,13 @@ body {
         
         width: 132.28vh;
         height: 82.67vh;
-  
-        width: 22vh;
+        
+        width: 41vh;
         height: 110vh;
-        top: 91vh;
-        left: 661vh;
+        top: 33.5vh;
+        left: 713vh;
         z-index: 3;
+        
         transform: rotate(0deg);
         transform-origin: center;
             
@@ -1985,7 +1986,7 @@ body {
         
         width: 24.4395604395604vh;
         height: 24.4395604395604vh;
-        top: 40vh;
+        top: 43vh;
         left: 739vh;
         z-index: 0;
         transform: scale(1) rotate(-11deg);
@@ -6065,7 +6066,7 @@ body {
       }
       
       .silver-star3-15 {
-        osition: absolute;
+        position: absolute;
         object-fit: cover;
         pointer-events: none;
         
@@ -6319,13 +6320,13 @@ body {
         width: 382px;
         height: 150px;
         
-        width: 41.978021978022vh;
-        height: 16.4835164835165vh;
+        width: 41.978021978vh;
+        height: 16.4835164835vh;
         
-        width: 16.7912087912088vh;
-        height: 6.5934065934066vh;
-        top: 57vh;
-        left: 2535vh;
+        width: 8.3956043956vh;
+        height: 3.2967032967vh;
+        top: 61vh;
+        left: 2534vh;
         z-index: auto;
         
         transform: rotate(165deg);
@@ -6696,21 +6697,24 @@ body {
       
       .text-wrapper-31 {
         position: absolute;
+        
         font-weight: 400;
         color: #4CA8E9;
-        font-size: 32px;
+        font-size: 23px;
         letter-spacing: 0;
         line-height: normal;
         text-align: center;
-  
+        text-transform: uppercase;
+            
         width: 260px;
         top: 820px;
         left: 4574px;
-        
-        width: 30.7vh;
-        top: 73vh;
-        left: 409vh;
-        
+            
+        width: 38.7vh;
+        top: 2vh;
+        left: 2690vh;
+        z-index: 2;
+            
         transform: rotate(0deg);
         transform-origin: center;
       
