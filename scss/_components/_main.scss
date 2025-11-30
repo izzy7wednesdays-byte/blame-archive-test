@@ -53,7 +53,7 @@ body {
       background-color: white;
       position: absolute;
       top: 0;
-      left: calc(3000vh * 1000/847);
+      left: calc(2800vh * 1000/847);
       @include respond(xs) {
         left: 3673vh;
       }
