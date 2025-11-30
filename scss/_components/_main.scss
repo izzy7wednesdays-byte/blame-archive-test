@@ -96,21 +96,21 @@ body {
         
       @include respond(xs) {
         display: flex;
+        
         position: absolute;
         object-fit: cover;
         pointer-events: none;
         
         width: 860px;
-        height: 537px;
-  
-        width: 94.5054945054945vh;
-        height: 59.010989010989vh;
-  
-        width: 160.659340659341vh;
-        height: 100.318681318681vh;
-        top: -36vh;
-        left: -50.5vh;
-        z-index: 1;
+        height: 599px;
+        
+        width: 91.1452184179457vh;
+        height: 59.010989011vh;
+        
+        width: 91.1452184179457vh;
+        height: 70.7201889020071vh;
+        top: -3vh;
+        left: -8.5vh;
       }
     }
     
@@ -150,17 +150,15 @@ body {
         
         width: 752px;
         height: 200px;
-
-        width: 113.7vh;
-        height: 20.6vh;
         
-        width: 80.3296703296703vh;
-        height: 14.5714285714285vh;
+        width: 88.7839433293979vh;
+        height: 23.6127508854782vh;
+        
+        width: 35.5135773317592vh;
+        height: 9.44510035419128vh;
         top: 21vh;
-        left: 8vh;
+        left: 10vh;
         z-index: 2;
-        transform: scale(1);
-        transform-origin: center;
       }
     }
     
@@ -185,31 +183,41 @@ body {
       left: -24vh;
       z-index: auto;
       
-      transform: scale(1) rotate(0deg);
+      transform: rotate(0deg);
       transform-origin: center;
+
+      @include respond(xs) {
+        width: 800px;
+        height: 150px;
+        
+        width: 107.12vh;
+        height: 20.27vh;
+        
+        width: 94.4510035419126vh;
+        height: 17.7095631641086vh;
+        width: 56.6706021251476vh;
+        height: 10.6257378984652vh;
+        top: 27.5vh;
+        left: -11vh;
+      }
     }
       
     .torn-note {
       position: absolute;
       object-fit: cover;
       pointer-events: none;
- 
-      width: 989px;
-      height: 978px;
-      
-      width: 133.65vh;
-      height: 132.16vh;
-      
-      width: 49.9934065934067vh;
-      height: 49.4373626373624vh;
-      top: 53vh;
-      left: -4vh;
-      z-index: 3;
+
+      width: 35.0295159386067vh;
+      height: 34.6399055489964vh;
+      top: 60vh;
+      left: -3vh;
       
       transform: rotate(2deg);
       transform-origin: center;
 
       @include respond(xs) { 
+
+        
       }
     }
       
@@ -234,6 +242,10 @@ body {
       transform-origin: center center;
       
       @include respond(xs) {
+        width: 23.5989010989011vh;
+        height: 21.9505494505495vh;
+        top: 1vh;
+        left: 32vh;
       }
     }
         
@@ -258,6 +270,13 @@ body {
       transform-origin: center;
       
       @include respond(xs) {
+        width: 44.1758241758242vh;
+        height: 20.2747252747253vh;
+        top: 36vh;
+        left: 1.5vh;
+        z-index: 3;
+        transform: rotate(0deg);
+        transform-origin: center;
       }
     }
       
