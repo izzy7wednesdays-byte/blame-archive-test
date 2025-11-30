@@ -15,7 +15,7 @@ body {
       cursor: pointer;
     }
     
-    .audio-img {
+    .audio-img,  {
       cursor: pointer;
       user-select: none;
       display: flex;
@@ -1916,7 +1916,7 @@ body {
         height: 31.78767vh;
         top: 40vh;
         left: 705vh;
-        z-index: 0;
+        z-index: 2;
         
         transform: rotate(14deg);            
         transform-origin: center;
@@ -1965,7 +1965,7 @@ body {
         height: 30.6885254vh;
         top: 4vh;
         left: 703vh;
-        z-index: auto ;
+        z-index: 3;
         
         transform: rotate(0deg);
         transform-origin: center;
