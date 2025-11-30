@@ -15,24 +15,24 @@ body {
       cursor: pointer;
     }
     
- //   .audio-img {
- //     cursor: pointer;
- //     user-select: none;
-  //    display: flex;
-  //    height: calc(var(--band-h) * var(--scale));
- //     width: auto;
- //     object-fit: contain;
+ /*   .audio-img {
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      height: calc(var(--band-h) * var(--scale));
+      width: auto;
+      object-fit: contain;
 
-//      &:hover {
-//        scale: 1.02;
- //       filter: brightness(1.15);
+      &:hover {
+        scale: 1.02;
+        filter: brightness(1.15);
       }
-//    }
-   // .audio-img.is-playing {
-   //   scale: 1.02;
-   //   filter: brightness(1.15);
-  //  }
-
+   }
+    .audio-img.is-playing {
+      scale: 1.02;
+      filter: brightness(1.15);
+   }
+*/
     img {
       max-width: initial;
     }
