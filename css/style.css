@@ -747,6 +747,7 @@ body.desktop {
 }
 body.desktop iframe {
   background-color: rgba(132, 132, 132, 0.2352941176);
+  cursor: pointer;
 }
 body.desktop .audio-img {
   cursor: pointer;
@@ -1240,6 +1241,7 @@ body.desktop .play-lightsleeper-desktop {
   position: absolute;
   object-fit: cover;
   pointer-events: auto;
+  cursor: pointer;
   width: 1114px;
   height: 1114px;
   width: 122.4175824176vh;
@@ -1264,6 +1266,7 @@ body.desktop .play-lightsleeper-mobile {
   body.desktop .play-lightsleeper-mobile {
     position: absolute;
     object-fit: cover;
+    cursor: pointer;
     width: 1114px;
     height: 1114px;
     width: 150.54vh;
@@ -1359,6 +1362,7 @@ body.desktop .play-exitwounds {
   position: absolute;
   object-fit: cover;
   pointer-events: auto;
+  cursor: pointer;
   width: 592px;
   height: 440px;
   width: 65.0549450549vh;
@@ -2103,6 +2107,7 @@ body.desktop .play-landmines {
   position: absolute;
   object-fit: cover;
   pointer-events: auto;
+  cursor: pointer;
   width: 630px;
   height: 660px;
   width: 68.85246vh;
@@ -2387,6 +2392,7 @@ body.desktop .text-wrapper-11 {
 body.desktop .play-misery {
   position: absolute;
   object-fit: cover;
+  cursor: pointer;
   width: 526px;
   height: 616px;
   width: 58.57461vh;
@@ -2506,6 +2512,7 @@ body.desktop .thestar-tarot {
 body.desktop .play-sleepwalking {
   position: absolute;
   object-fit: cover;
+  cursor: pointer;
   width: 750px;
   height: 477px;
   width: 83.51893vh;
@@ -5478,11 +5485,11 @@ body.desktop .london-tv {
   height: 1000px;
   width: 140.1098901099vh;
   height: 109.8901098901vh;
-  width: 77.0604395604vh;
-  height: 60.4395604396vh;
-  top: 46vh;
-  left: 2549vh;
-  z-index: auto;
+  width: 50.0892857143vh;
+  height: 39.2857142857vh;
+  top: -1vh;
+  left: 2532vh;
+  z-index: 4;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -5893,6 +5900,7 @@ body .ae-modal-closed {
 
 body.desktop > .rail {
   width: 3751.2vh;
+  width: var(--rail-w);
   height: 100%;
   position: relative;
   display: flex;
