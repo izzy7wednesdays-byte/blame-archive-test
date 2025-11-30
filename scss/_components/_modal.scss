@@ -29,12 +29,11 @@
   }
 
   .modal-content {
-    background: #fff;
-    border-radius: 1.5svh;
-    max-height: 80svh;
-    max-width: 80svh;
+    background-color: transparent;
+    max-height: 60svh;
+    max-width: 102svh;
     overflow-y: auto;
-    padding: 2svh;
+    padding: 0svh;
 
     .modal-image {
       width: 100%;
