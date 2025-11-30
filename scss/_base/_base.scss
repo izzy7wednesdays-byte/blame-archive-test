@@ -41,6 +41,8 @@ a:focus {
 a:hover,
 a:active {
 	outline:0;
+	scale: 1.02;
+    filter: brightness(1.15);
 }
 input:focus {
 	outline:0;
@@ -52,7 +54,7 @@ button {
 }
 p, strong {
   font-size: $font-size-base;
-  line-height: 1.4;   /* if you want a global line-height */  
+  line-height: 1.4; 
 }
 
 /*------------------------------------*\
