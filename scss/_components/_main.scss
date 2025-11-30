@@ -6610,12 +6610,10 @@ body {
       }
       
       .london-tv-mobile {
-        display: none!important;
+        display: none;
       
         @include respond(xs) {
-          display: flex!important;
-      
-          z-index: 47;
+          display: flex; 
         }
       }
       
