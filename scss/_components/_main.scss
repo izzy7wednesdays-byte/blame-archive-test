@@ -11,7 +11,8 @@ body {
     height: 100svh;
     overflow: initial;    
     iframe {
-      background-color: #8484843c;
+      background-color: #8484843c; 
+    }
       //width: 100%;
       //height: 100%;
       //display: block;
@@ -20,7 +21,6 @@ body {
     //  position: absolute;
      // bottom: 0;
      // transform-origin: center bottom;
-    }
     .audio-img {
       cursor: pointer;
       user-select: none;
@@ -6940,4 +6940,23 @@ body {
         }
       }
   }
+  .wiggle {
+        animation: wiggle 0.3s ease;
+    }
+  &.modal-open {
+        &::after {
+            content: '';
+            background-color: rgba(255, 255, 255, 0.129);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+        }
+    }
+  &::before {
+        transition: all 200ms;
+    }
+  .ae-modal-overlay-closed,
+    .ae-modal-closed {
+        display: none;
+    }
 }
