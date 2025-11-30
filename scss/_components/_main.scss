@@ -3981,9 +3981,9 @@ body {
         height: 38.4615384615385vh;
         width: 47.2527472527473vh;
         height: 19.2307692307693vh;
-        top: 5vh;
+        top: .5vh;
         left: 1622vh;
-        z-index: auto;
+        z-index: 5;
         transform: rotate(0deg);
         transform-origin: center;
       
@@ -4034,7 +4034,7 @@ body {
       .shoot-makeup {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+        pointer-events: auto;
         
         width: 489px;
         height: 652px;
@@ -4111,7 +4111,7 @@ body {
       .shoot-bts-2 {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+        pointer-events: auto;
         
         width: 1080px;
         height: 1920px;
@@ -4219,7 +4219,7 @@ body {
       .buddy-gif {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+        pointer-events: auto;
         width: 498px;
         height: 278px;
         width: 54.7252747253vh;
@@ -4820,7 +4820,7 @@ body {
       .cake-boss {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+        pointer-events: auto;
         
         width: 1920px;
         height: 1080px;
@@ -4843,7 +4843,7 @@ body {
       .happy-easter {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+        pointer-events: auto;
         
         width: 1920px;
         height: 1080px;
@@ -4866,7 +4866,7 @@ body {
       .dab-video {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+        pointer-events: auto;
         width: 1920px;
         height: 1080px;
         
@@ -4936,6 +4936,7 @@ body {
       .across-street {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
    
         width: 574px;
         height: 960px;
@@ -4959,7 +4960,7 @@ body {
       .grew-here {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+        pointer-events: auto;
         
         width: 814px;
         height: 964px;
@@ -4983,6 +4984,7 @@ body {
       .mazzy-star {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
 
         width: 814px;
         height: 964px;
@@ -5006,6 +5008,7 @@ body {
       .tisthedamn {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
   
         width: 714px;
         height: 962px;
@@ -5029,6 +5032,7 @@ body {
       .tv-unboxing {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
   
         width: 1080px;
         height: 1920px;
@@ -5052,6 +5056,7 @@ body {
       .about-videos {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
 
         width: 859px;
         height: 530px;
@@ -5101,6 +5106,7 @@ body {
       .exitwounds-bts {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
 
         width: 1920px;
         height: 1080px;
@@ -5125,6 +5131,7 @@ body {
       .landmines-bts-tiktok {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
     
         width: 1080px;
         height: 1920px;
@@ -5148,6 +5155,7 @@ body {
       .landmines-bts {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
 
         width: 1920px;
         height: 1080px;
@@ -5241,9 +5249,7 @@ body {
         @include respond(xs) {
         }
       }
-      
-      
-      
+            
       // ========= MERCH SECTION (slot classes) =========
       
       .landmines-matches {
@@ -5374,6 +5380,8 @@ body {
       
       .text-wrapper-25 {
         position: absolute;
+        pointer-events: none;
+        
         font-weight: 400;
         color: #4CA8E9;
         font-size: 17px;
@@ -5431,6 +5439,7 @@ body {
       .candle-lighting {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
         
         width: 1080px;
         height: 1920px;
@@ -5478,6 +5487,8 @@ body {
       
       .text-wrapper-26 {
         position: absolute;
+        pointer-events: auto;
+        
         font-weight: 400;
         color: #4CA8E9;
         font-size: 15px;
@@ -5533,6 +5544,8 @@ body {
       
       .text-wrapper-27 {
         position: absolute;
+        pointer-events: none;
+        
         font-weight: 400;
         color: #4CA8E9;
         font-size: 19px;
@@ -5565,6 +5578,7 @@ body {
       .about-matches {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
 
         width: 596px;
         height: 298px;
@@ -5638,6 +5652,7 @@ body {
       .poster {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
         
         width: 678px;
         height: 903px;
@@ -5757,11 +5772,8 @@ body {
 
         }
       }
-      
-      
-      
-      // ========= LONDON SECTION (slot classes) =========
-      
+    
+      // ========= LONDON SECTION (slot classes) =========      
       .glow-star-7 {
         position: absolute;
         object-fit: cover;
@@ -5890,7 +5902,7 @@ body {
       .london-live-1 {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+        pointer-events: auto;
         
         width: 1080px;
         height: 1920px;
@@ -5915,6 +5927,7 @@ body {
       .london-live-2 {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
 
         width: 1080px;
         height: 1920px;
@@ -5939,7 +5952,8 @@ body {
       .hangout-vlog {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+        pointer-events: auto;
+        
         width: 1920px;
         height: 1080px;
         
@@ -6136,6 +6150,7 @@ body {
       .about-london {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
         
         width: 562px;
         height: 727px;
@@ -6206,6 +6221,8 @@ body {
       
       .text-wrapper-28 {
         position: absolute;
+        pointer-events: auto;
+        
         font-weight: 400;
         color: #4CA8E9;
         font-size: 22px;
@@ -6433,6 +6450,8 @@ body {
       
       .text-wrapper-29 {
         position: absolute;
+        pointer-events: auto;
+        
         font-weight: 400;
         color: #E1EFFA;
         font-size: 22px;
@@ -6565,7 +6584,8 @@ body {
       .london-tv {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+        pointer-events: auto;
+        
         width: 1275px;
         height: 1000px;
         
@@ -6699,6 +6719,7 @@ body {
       .church-video {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
         
         width: 812px;
         height: 910px;
@@ -6721,6 +6742,8 @@ body {
 
       .text-wrapper-30 {
         position: absolute;
+        pointer-events: none;
+        
         font-weight: 400;
         color: #4CA8E9;
         font-size: 17px;
@@ -6801,14 +6824,15 @@ body {
         position: absolute;
         object-fit: cover;
         pointer-events: none;
+        
         width: 110px;
         height: 113px;
         
         width: 12.0879120879121vh;
         height: 12.4175824175824vh;
         
-        width: vh;
-        height: vh;
+        width: 12.0879120879121vh;
+        height: 12.4175824175824vh;
         top: 46vh;
         left: 1460vh;
         z-index: auto;
@@ -6872,6 +6896,7 @@ body {
       
       .text-wrapper-31 {
         position: absolute;
+        pointer-events: none;
         
         font-weight: 400;
         color: #4CA8E9;
@@ -7002,6 +7027,7 @@ body {
       .the-end-mobile {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 750px;
         height: 250px;
@@ -7024,6 +7050,7 @@ body {
       .the-end {
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 750px;
         height: 250px;
@@ -7053,10 +7080,10 @@ body {
         width: 74.0659340659341vh;
         height: 13.4065934065934vh;
         
-        width: vh;
-        height: vh;
+        width: 74.0659340659341vh;
+        height: 13.4065934065934vh;
         top: 69vh;
-        left: 2889vh;
+        left: 2896vh;
         z-index: 3;
       
         @include respond(xs) {
