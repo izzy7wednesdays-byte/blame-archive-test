@@ -1,3 +1,93 @@
+@keyframes pulsing {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    top: -5rem;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes fadeInGrow {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes fadeInTop20 {
+  0% {
+    opacity: 0;
+    top: -2rem;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    bottom: -5rem;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@keyframes grow {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-1deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 /*
 xs:     0 - 576px
 sm:     576 - 768px
@@ -5932,21 +6022,8 @@ body .ae-modal-closed {
 .modal.hidden {
   display: none;
 }
-.modal .close-modal {
-  position: absolute;
-  top: 2svh;
-  right: 2svh;
-  width: 4svh;
-  height: 4svh;
-  background: url("assets/img/x.webp") no-repeat center/contain;
-  border: none;
-  cursor: pointer;
-}
-.modal .close-modal:hover {
-  transform: scale(1.15);
-  filter: brightness(1.1);
-}
 .modal .modal-content {
+  position: relative;
   background-color: transparent;
   max-height: 60svh;
   max-width: 102svh;
@@ -5957,6 +6034,20 @@ body .ae-modal-closed {
   width: 100%;
   height: auto;
   display: block;
+}
+.modal .modal-content .close-modal {
+  position: absolute;
+  top: 2svh;
+  right: 2svh;
+  width: 4svh;
+  height: 4svh;
+  background: url("assets/img/x.webp") no-repeat center/contain;
+  border: none;
+  cursor: pointer;
+}
+.modal .modal-content .close-modal:hover {
+  transform: scale(1.15);
+  filter: brightness(1.1);
 }
 .modal .lottie-open-modal {
   cursor: pointer;
