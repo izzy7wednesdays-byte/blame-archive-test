@@ -15,7 +15,7 @@ body {
       cursor: pointer;
     }
     
- /*   .audio-img {
+    .audio-img {
       cursor: pointer;
       user-select: none;
       display: flex;
@@ -32,7 +32,7 @@ body {
       scale: 1.02;
       filter: brightness(1.15);
    }
-*/
+
     img {
       max-width: initial;
     }
@@ -53,13 +53,13 @@ body {
       background-color: white;
       position: absolute;
       top: 0;
-      left: calc(3148vh * 1000/847);
+      left: calc(3000vh * 1000/847);
       @include respond(xs) {
         left: 3673vh;
       }
     }    
     img {
-        &.open-modal, .audio-img.is-playing, .audo-img {
+        &.open-modal, {
           cursor: pointer;
           &:hover {
               scale: 1.02;
