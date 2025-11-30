@@ -1,1 +1,98 @@
-// TODO: fill this later
+@keyframes pulsing {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+     0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        top: -5rem;
+    }
+    100% {
+        opacity: 1;
+        top: 0; 
+    }
+}
+
+@keyframes fadeInGrow {
+     0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes fadeInTop20 {
+    0% {
+        opacity: 0;
+        top: -2rem;
+    }
+    100% {
+        opacity: 1;
+        top: 0; 
+    }
+}
+
+@keyframes fadeInBottom {
+     0% {
+        opacity: 0;
+        bottom: -5rem;
+    }
+    100% {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+@keyframes grow {
+     0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-1deg);
+    }
+    75% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
