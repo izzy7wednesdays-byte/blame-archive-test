@@ -72,7 +72,7 @@ body {
     .special-message {
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
       
       width: 860px;
       height: 537px;
@@ -98,7 +98,7 @@ body {
         display: flex;
         position: absolute;
         object-fit: cover;
-        pointer-events:none;
+        pointer-events: none;
         
         width: 860px;
         height: 537px;
@@ -140,19 +140,27 @@ body {
       
     .izzymacarthur-mobile {
       display: none;
-
-      position: absolute;
-      object-fit: cover;
-      
-      width: 752px;
-      height: 200px;
-      
-      width: 101.62vh;
-      height: 27.03vh;
-      z-index: 2;
-    
+        
       @include respond(xs) {
         display: flex;
+        
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        
+        width: 752px;
+        height: 200px;
+
+        width: 113.7vh;
+        height: 20.6vh;
+        
+        width: 80.3296703296703vh;
+        height: 14.5714285714285vh;
+        top: 21vh;
+        left: 8vh;
+        z-index: 2;
+        transform: scale(1);
+        transform-origin: center;
       }
     }
     
@@ -184,7 +192,7 @@ body {
     .torn-note {
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
  
       width: 989px;
       height: 978px;
@@ -208,7 +216,7 @@ body {
     .tracklist {
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
           
       width: 859px;
       height: 799px;
@@ -232,7 +240,7 @@ body {
     .the-scrapbook {
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
           
       width: 804px;
       height: 369px;
@@ -256,7 +264,7 @@ body {
     .lfg { 
       position: absolute;
       object-fit: contain;
-      pointer-events:none;
+      pointer-events: none;
       
       width: 819px;
       height: 297px;
@@ -275,34 +283,42 @@ body {
       transform-origin: center;
      
       @include respond(xs) {
+        display: none;
       }
     }
       
     .lfg-mobile { 
       display:none;
 
-      position: absolute;
-      object-fit: cover;
-      
-      width: 378px;
-      height: 118px;
-      
-      width: 51.08vh;
-      height: 15.95vh;
-
-      z-index: 5;
-      
       @include respond(xs) {
-        display: none;
-        position:absolute;
+        display: flex;
+
+        position: absolute;
+        object-fit: contain;
         pointer-events: none;
+        
+        width: 819px;
+        height: 297px;
+        
+        width: 110.68vh;
+        height: 29.59vh;
+        
+        width: 110.68vh;
+        height: 29.59vh;
+        top: 76vh;
+        left: 58vh;
+        
+        z-index: 5;
+        
+        transform: scale(.22) rotate(0deg);
+        transform-origin: center;        
       }
     }
         
     .pink-arrow {    
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
       
       width: 1046px;
       height: 407px;
@@ -328,7 +344,7 @@ body {
     .broken-cd { 
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
       
       width: 552px;
       height: 576px;
@@ -374,7 +390,7 @@ body {
     .blue-star-2 {
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
       
       width: 154px;
       height: 147px;
@@ -399,7 +415,7 @@ body {
     .silver-star1-1 { 
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
       
       width: 214px;
       height: 210px;
@@ -417,6 +433,7 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        left: 189vh;
       }
     }
       
@@ -493,37 +510,36 @@ body {
     }
     
     .about-lightsleeper-mobile { 
-      display: none !important;
-
-      position: absolute;
-      object-fit: cover;
-      
-      width: 572px;
-      height: 580px;
-      
-      width: 77.30vh;
-      height: 78.78vh;
-      
-      width: 77.30vh;
-      height: 78.78vh;
-      top: 0vh;
-      left: 0vh;
-      z-index: 2;
-      
-      transform: rotate(0deg);
-      transform-origin: center;
+      display: none;
       
       @include respond(xs) {
-        display: flex !important;
+        display: flex;
         
+        position: absolute;
+        object-fit: cover;
         pointer-events:auto;
+        
+        width: 572px;
+        height: 580px;
+        
+        width: 67.5324675324675vh;
+        height: 68.4769775678867vh;
+        
+        width: 36.4675324675325vh;
+        height: 36.9775678866588vh;
+        top: 5vh;
+        left: 198vh;
+        z-index: 2;
+        
+        transform: rotate(-7deg);
+        transform-origin: center;
       }
     }
       
     .autumn-text {
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
       
       width: 652px;
       height: 546px;
@@ -547,7 +563,7 @@ body {
     .blame-it-notesapp {
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
       
       width: 710px;
       height: 330px;
@@ -593,7 +609,7 @@ body {
     .silver-star1-2 {
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
       
       width: 214px;
       height: 210px;
@@ -695,7 +711,7 @@ body {
     }
            
     .play-lightsleeper-mobile { 
-      display: none;
+       display: none;
       
       @include respond(xs) {
         position: absolute;
@@ -797,7 +813,7 @@ body {
     .star-trio-1 {
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
       
       width: 264px;
       height: 425px;
@@ -820,7 +836,7 @@ body {
     .exitwounds-title {
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
       
       width: 857px;
       height: 429px;
@@ -866,7 +882,7 @@ body {
       
     .text-wrapper-2 {
       position: absolute;
-      pointer-events:none;
+      pointer-events: none;
       
       font-weight: 400;
       color: #4CA8E9;
@@ -898,7 +914,7 @@ body {
     .missed-calls {
       position: absolute;
       object-fit: cover;
-      pointer-events:none;
+      pointer-events: none;
       
       width: 672px;
       height: 736px;
@@ -1017,7 +1033,7 @@ body {
       
     .text-wrapper-3 {
       position: absolute;
-      pointer-events:none;
+      pointer-events: none;
       
       font-weight: 400;
       color: #4CA8E9;
@@ -1633,26 +1649,26 @@ body {
       }
       
       .landmines-title-mobile {
-        display: none!important;
-        position: absolute;
-        object-fit: cover;
-        pointer-events: none;
-        
-        width: 992px;
-        height: 229px;
-        
-        width: 134.05vh;
-        height: 30.95vh;
-        top: 0vh;
-        left: 0vh;
-        z-index: 0;
-                
-        transform: scale(1) rotate(0deg);
-        transform-origin: center;
+        display: none;
     
         @include respond(xs) {
-          display: flex!important;
+          display: flex;
+          
           position: absolute;
+          object-fit: cover;
+          pointer-events: none;
+          
+          width: 992px;
+          height: 229px;
+          
+          width: 134.05vh;
+          height: 30.95vh;
+          top: 0vh;
+          left: 0vh;
+          z-index: 0;
+                  
+          transform: rotate(0deg);
+          transform-origin: center;
         }   
       }
       
@@ -2910,7 +2926,7 @@ body {
       .about-ep {
         position: absolute;
         object-fit: cover;
-        pointer-events: none;
+        pointer-events: auto;
         
         width: 860px;
         height: 628px;
@@ -2922,8 +2938,9 @@ body {
         height: 27.973272vh;
         top: 65vh;
         left: 1107vh;
-        z-index: auto;
-        transform: scale(1) rotate(0deg);
+        
+        z-index: 1;
+        transform: rotate(0deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -6611,9 +6628,29 @@ body {
       
       .london-tv-mobile {
         display: none;
+
       
         @include respond(xs) {
           display: flex; 
+          
+          position: absolute;
+          object-fit: cover;
+          pointer-events: auto;
+          
+          width: 1275px;
+          height: 1000px;
+          
+          width: 140.10989010989vh;
+          height: 109.89010989011vh;
+          
+          width: 50.08928571426vh;
+          height: 39.28571428574vh;
+          top: -1vh;
+          left: 2532vh;
+          z-index: 4;
+          
+          transform: rotate(0deg);
+          transform-origin: center;
         }
       }
       
@@ -7024,29 +7061,6 @@ body {
         @include respond(xs) {
         }
       }
-      
-      .the-end-mobile {
-        position: absolute;
-        object-fit: cover;
-        pointer-events: none;
-        
-        width: 750px;
-        height: 250px;
-        
-        width: 82.4175824175824vh;
-        height: 27.4725274725275vh;
-        
-        width: 98.9010989010989vh;
-        height: 32.967032967033vh;
-        top: 28vh;
-        left: 2885vh;
-        z-index: auto;
-        display: none;
-      
-        @include respond(xs) {
-          pointer-events: none;
-        }
-      }
 
       .the-end {
         position: absolute;
@@ -7067,6 +7081,31 @@ body {
         
         @include respond(xs) {
            display: none;
+        }
+      }
+      
+      .the-end-mobile {
+        display: none;
+      
+        @include respond(xs) {
+          display: flex;
+
+          position: absolute;
+          object-fit: cover;
+          pointer-events: none;
+          
+          width: 750px;
+          height: 250px;
+          
+          width: 82.4175824175824vh;
+          height: 27.4725274725275vh;
+          
+          width: 98.9010989010989vh;
+          height: 32.967032967033vh;
+          top: 28vh;
+          left: 2885vh;
+          z-index: auto;
+
         }
       }
       
