@@ -29,8 +29,8 @@ img {
 	vertical-align:bottom;
 }
 a {
-	color:white;
-	text-decoration:none;
+	color: white;
+	text-decoration: none;
     transition: all 400ms;
     font-size: 1.6rem;
     font-family: $main-font;
@@ -85,35 +85,3 @@ p, strong {
 ::-webkit-input-placeholder {
     color: $main;
 }
-
-/* ========= BASE / INITIAL PAINT ========= */
-
-html, body { 
-  background: #0d161d;
-  color: #e7f1ff;
-  min-height: 100%;
-}
-
-/* ========= V146.2 — FIXING OVERLAY - LINE 446 ========= */  
-/* ========= GLOBAL CONTROLS ========= */
-
-/*
-:root{
-    --band-h: 100svh;
-    --rail-w: 2775svh;
-    --bg: #0d161d;
-    --fg: #e7f1ff;
-
-    @include respond(xs) {
-      --rail-w: 2513svh;
-    }
-  } */
-
-  *{ box-sizing:border-box }
-  html,body{
-    margin:0;
-    height:100svh; 
-    background:var(--bg); color:var(--fg);
-    overflow:hidden;
-    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-  }
