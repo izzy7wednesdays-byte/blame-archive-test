@@ -12,23 +12,8 @@
     display: none;
   }
 
-  .close-modal {
-    position: absolute;
-    top: 2svh;
-    right: 2svh;
-    width: 4svh;
-    height: 4svh;
-    background: url("assets/img/x.webp") no-repeat center / contain;
-    border: none;
-    cursor: pointer;
-  }
-
-.close-modal:hover {
-   transform: scale(1.15);
-   filter: brightness(1.1);
-  }
-
   .modal-content {
+    position: relative; // just added --> changed content
     background-color: transparent;
     max-height: 60svh;
     max-width: 102svh;
@@ -39,6 +24,20 @@
       width: 100%;
       height: auto;
       display: block;
+    }
+    .close-modal {
+      position: absolute;
+      top: 2svh;
+      right: 2svh;
+      width: 4svh;
+      height: 4svh;
+      background: url("assets/img/x.webp") no-repeat center / contain;
+      border: none;
+      cursor: pointer;
+   }
+   .close-modal:hover {
+     transform: scale(1.15);
+     filter: brightness(1.1);
     }
   }
 
