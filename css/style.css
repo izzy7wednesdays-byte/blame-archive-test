@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 xs:     0 - 576px
 sm:     576 - 768px
@@ -61,6 +60,22 @@ a:active {
   outline: 0;
 }
 
+a {
+  display: inline-block;
+  transform-origin: center center;
+}
+
+a img {
+  display: block;
+  transition: transform 300ms ease, filter 300ms ease;
+  transform-origin: center center;
+}
+
+a:hover img {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
 input:focus {
   outline: 0;
   border: 1px solid #04A4CC;
@@ -73,7 +88,7 @@ button {
 
 p, strong {
   font-size: 1.6rem;
-  line-height: 1.4; /* if you want a global line-height */
+  line-height: 1.4;
 }
 
 /*------------------------------------*\
@@ -107,41 +122,6 @@ p, strong {
 
 ::-webkit-input-placeholder {
   color: #4CA8E9;
-}
-
-/* ========= BASE / INITIAL PAINT ========= */
-html, body {
-  background: #0f0f12;
-  color: #e0e0e0;
-  min-height: 100%;
-}
-
-/* ========= V146.2 — FIXING OVERLAY - LINE 446 ========= */
-/* ========= GLOBAL CONTROLS ========= */
-:root {
-  --band-h: 100svh;
-  --rail-w: 2775svh;
-  --bg: #0d161d;
-  --fg: #e7f1ff;
-}
-@media (max-width: 36em) {
-  :root {
-    --rail-w: 2513svh;
-  }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  height: 100svh;
-  background: var(--bg);
-  color: var(--fg);
-  overflow: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Paddings */
@@ -753,38 +733,38 @@ body.desktop .audio-img {
   cursor: pointer;
   user-select: none;
   display: flex;
-  height: calc(var(--band-h) * var(--scale));
+  height: auto;
   width: auto;
   object-fit: contain;
 }
 body.desktop .audio-img:hover {
   scale: 1.02;
-  filter: brightness(1.15);
+  filter: brightness(1.1);
 }
 body.desktop .audio-img.is-playing {
   scale: 1.02;
-  filter: brightness(1.15);
+  filter: brightness(1.1);
 }
 body.desktop img {
   max-width: initial;
 }
 body.desktop > .rail {
-  width: 31773px;
+  width: 21456.204px;
   height: 847px;
   height: 100%;
   position: relative;
   display: flex;
   flex-direction: row;
   overflow-y: hidden;
-  width: 3751.2vh;
+  width: 2533.2vh;
 }
 body.desktop .pusher {
   width: 1px;
   height: 1px;
-  background-color: white;
+  background-color: #0d161d;
   position: absolute;
   top: 0;
-  left: 3716.6469893743vh;
+  left: 2990.7910271547vh;
 }
 @media (max-width: 36em) {
   body.desktop .pusher {
@@ -796,7 +776,7 @@ body.desktop img.open-modal {
 }
 body.desktop img.open-modal:hover {
   scale: 1.02;
-  filter: brightness(1.15);
+  filter: brightness(1.1);
 }
 body.desktop .special-message {
   position: absolute;
@@ -827,14 +807,13 @@ body.desktop .special-message-mobile {
     object-fit: cover;
     pointer-events: none;
     width: 860px;
-    height: 537px;
-    width: 94.5054945055vh;
+    height: 599px;
+    width: 91.1452184179vh;
     height: 59.010989011vh;
-    width: 160.6593406593vh;
-    height: 100.3186813187vh;
-    top: -36vh;
-    left: -50.5vh;
-    z-index: 1;
+    width: 91.1452184179vh;
+    height: 70.720188902vh;
+    top: -3vh;
+    left: -8.5vh;
   }
 }
 body.desktop .izzymacarthur {
@@ -860,17 +839,22 @@ body.desktop .izzymacarthur {
 }
 body.desktop .izzymacarthur-mobile {
   display: none;
-  position: absolute;
-  object-fit: cover;
-  width: 752px;
-  height: 200px;
-  width: 101.62vh;
-  height: 27.03vh;
-  z-index: 2;
 }
 @media (max-width: 36em) {
   body.desktop .izzymacarthur-mobile {
     display: flex;
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+    width: 752px;
+    height: 200px;
+    width: 88.7839433294vh;
+    height: 23.6127508855vh;
+    width: 35.5135773318vh;
+    height: 9.4451003542vh;
+    top: 22vh;
+    left: 6vh;
+    z-index: 2;
   }
 }
 body.desktop .social {
@@ -889,22 +873,32 @@ body.desktop .glitter-truck {
   top: 35.5vh;
   left: -24vh;
   z-index: auto;
-  transform: scale(1) rotate(0deg);
+  transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .glitter-truck {
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+    width: 800px;
+    height: 150px;
+    width: 107.12vh;
+    height: 20.27vh;
+    width: 56.6706021251vh;
+    height: 10.6257378985vh;
+    top: 27.5vh;
+    left: 2vh;
+  }
 }
 body.desktop .torn-note {
   position: absolute;
   object-fit: cover;
   pointer-events: none;
-  width: 989px;
-  height: 978px;
-  width: 133.65vh;
-  height: 132.16vh;
-  width: 49.9934065934vh;
-  height: 49.4373626374vh;
-  top: 53vh;
-  left: -4vh;
-  z-index: 3;
+  width: 35.0295159386vh;
+  height: 34.639905549vh;
+  top: 60vh;
+  left: -3vh;
   transform: rotate(2deg);
   transform-origin: center;
 }
@@ -924,6 +918,14 @@ body.desktop .tracklist {
   transform: rotate(7deg);
   transform-origin: center center;
 }
+@media (max-width: 36em) {
+  body.desktop .tracklist {
+    width: 23.5989010989vh;
+    height: 21.9505494505vh;
+    top: 1vh;
+    left: 32vh;
+  }
+}
 body.desktop .the-scrapbook {
   position: absolute;
   object-fit: cover;
@@ -939,6 +941,15 @@ body.desktop .the-scrapbook {
   z-index: 3;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .the-scrapbook {
+    width: 35.3406593407vh;
+    height: 16.2197802198vh;
+    top: 36vh;
+    left: 7.5vh;
+    z-index: 3;
+  }
 }
 body.desktop .lfg {
   position: absolute;
@@ -956,21 +967,31 @@ body.desktop .lfg {
   transform: scale(0.22) rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .lfg {
+    display: none;
+  }
+}
 body.desktop .lfg-mobile {
   display: none;
-  position: absolute;
-  object-fit: cover;
-  width: 378px;
-  height: 118px;
-  width: 51.08vh;
-  height: 15.95vh;
-  z-index: 5;
 }
 @media (max-width: 36em) {
   body.desktop .lfg-mobile {
-    display: none;
+    display: flex;
     position: absolute;
+    object-fit: contain;
     pointer-events: none;
+    width: 579px;
+    height: 181px;
+    width: 68.3589138135vh;
+    height: 21.3695395514vh;
+    width: 20.507674144vh;
+    height: 6.4108618654vh;
+    top: 76vh;
+    left: 58vh;
+    z-index: 5;
+    transform: rotate(0deg);
+    transform-origin: center;
   }
 }
 body.desktop .pink-arrow {
@@ -988,6 +1009,15 @@ body.desktop .pink-arrow {
   z-index: 5;
   transform: scale(0.1) rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .pink-arrow {
+    width: 11.4945054945vh;
+    height: 4.4725274725vh;
+    top: 84vh;
+    left: 33vh;
+    z-index: 1;
+  }
 }
 body.desktop .broken-cd {
   position: absolute;
@@ -1057,6 +1087,11 @@ body.desktop .silver-star1-1 {
   transform: rotate(14deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .silver-star1-1 {
+    left: 189vh;
+  }
+}
 body.desktop .lightsleeper-title {
   position: absolute;
   object-fit: cover;
@@ -1111,25 +1146,25 @@ body.desktop .about-lightsleeper {
   }
 }
 body.desktop .about-lightsleeper-mobile {
-  display: none !important;
-  position: absolute;
-  object-fit: cover;
-  width: 572px;
-  height: 580px;
-  width: 77.3vh;
-  height: 78.78vh;
-  width: 77.3vh;
-  height: 78.78vh;
-  top: 0vh;
-  left: 0vh;
-  z-index: 2;
-  transform: rotate(0deg);
-  transform-origin: center;
+  display: none;
 }
 @media (max-width: 36em) {
   body.desktop .about-lightsleeper-mobile {
-    display: flex !important;
+    display: flex;
+    position: absolute;
+    object-fit: cover;
     pointer-events: auto;
+    width: 572px;
+    height: 580px;
+    width: 67.5324675325vh;
+    height: 68.4769775679vh;
+    width: 36.4675324675vh;
+    height: 36.9775678867vh;
+    top: 5vh;
+    left: 198vh;
+    z-index: 2;
+    transform: rotate(-7deg);
+    transform-origin: center;
   }
 }
 body.desktop .autumn-text {
@@ -1930,24 +1965,23 @@ body.desktop .landmines-title {
   }
 }
 body.desktop .landmines-title-mobile {
-  display: none !important;
-  position: absolute;
-  object-fit: cover;
-  pointer-events: none;
-  width: 992px;
-  height: 229px;
-  width: 134.05vh;
-  height: 30.95vh;
-  top: 0vh;
-  left: 0vh;
-  z-index: 0;
-  transform: scale(1) rotate(0deg);
-  transform-origin: center;
+  display: none;
 }
 @media (max-width: 36em) {
   body.desktop .landmines-title-mobile {
-    display: flex !important;
+    display: flex;
     position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+    width: 992px;
+    height: 229px;
+    width: 134.05vh;
+    height: 30.95vh;
+    top: 41vh;
+    left: 575vh;
+    z-index: 0;
+    transform: rotate(0deg);
+    transform-origin: center;
   }
 }
 body.desktop .landmines-lyricvideo {
@@ -2132,7 +2166,7 @@ body.desktop .landmines-session-voicememos {
   height: 31.78767vh;
   top: 40vh;
   left: 705vh;
-  z-index: 0;
+  z-index: 2;
   transform: rotate(14deg);
   transform-origin: center;
 }
@@ -2163,7 +2197,7 @@ body.desktop .misery-ogchorus {
   height: 30.6885254vh;
   top: 4vh;
   left: 703vh;
-  z-index: auto;
+  z-index: 3;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -2204,7 +2238,7 @@ body.desktop .text-wrapper-9 {
   width: 49.126vh;
   top: 33.1177vh;
   left: 705.6357vh;
-  z-index: 3;
+  z-index: 0;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -2833,7 +2867,7 @@ body.desktop .text-wrapper-14 {
 body.desktop .about-ep {
   position: absolute;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: auto;
   width: 860px;
   height: 628px;
   width: 95.76837vh;
@@ -2842,8 +2876,8 @@ body.desktop .about-ep {
   height: 27.973272vh;
   top: 65vh;
   left: 1107vh;
-  z-index: auto;
-  transform: scale(1) rotate(0deg);
+  z-index: 1;
+  transform: rotate(0deg);
   transform-origin: center;
 }
 body.desktop .text-wrapper-15 {
@@ -3621,9 +3655,9 @@ body.desktop .caitlin-note {
   height: 38.4615384615vh;
   width: 47.2527472527vh;
   height: 19.2307692308vh;
-  top: 5vh;
+  top: 0.5vh;
   left: 1622vh;
-  z-index: auto;
+  z-index: 5;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -3662,7 +3696,7 @@ body.desktop .shoot-bts-1 {
 body.desktop .shoot-makeup {
   position: absolute;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: auto;
   width: 489px;
   height: 652px;
   width: 53.7362637363vh;
@@ -3717,7 +3751,7 @@ body.desktop .caitlin-text-3 {
 body.desktop .shoot-bts-2 {
   position: absolute;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: auto;
   width: 1080px;
   height: 1920px;
   width: 118.6813186813vh;
@@ -3807,7 +3841,7 @@ body.desktop .misery-bts {
 body.desktop .buddy-gif {
   position: absolute;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: auto;
   width: 498px;
   height: 278px;
   width: 54.7252747253vh;
@@ -4243,7 +4277,7 @@ body.desktop .the-cake {
 body.desktop .cake-boss {
   position: absolute;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: auto;
   width: 1920px;
   height: 1080px;
   width: 210.989010989vh;
@@ -4259,7 +4293,7 @@ body.desktop .cake-boss {
 body.desktop .happy-easter {
   position: absolute;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: auto;
   width: 1920px;
   height: 1080px;
   width: 210.989010989vh;
@@ -4275,7 +4309,7 @@ body.desktop .happy-easter {
 body.desktop .dab-video {
   position: absolute;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: auto;
   width: 1920px;
   height: 1080px;
   width: 210.989010989vh;
@@ -4323,6 +4357,7 @@ body.desktop .dvd-video {
 body.desktop .across-street {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 574px;
   height: 960px;
   width: 63.0769230769vh;
@@ -4338,7 +4373,7 @@ body.desktop .across-street {
 body.desktop .grew-here {
   position: absolute;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: auto;
   width: 814px;
   height: 964px;
   width: 89.4505494505vh;
@@ -4354,6 +4389,7 @@ body.desktop .grew-here {
 body.desktop .mazzy-star {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 814px;
   height: 964px;
   width: 89.4505494505vh;
@@ -4369,6 +4405,7 @@ body.desktop .mazzy-star {
 body.desktop .tisthedamn {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 714px;
   height: 962px;
   width: 78.4615384615vh;
@@ -4384,6 +4421,7 @@ body.desktop .tisthedamn {
 body.desktop .tv-unboxing {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 1080px;
   height: 1920px;
   width: 118.03279vh;
@@ -4399,6 +4437,7 @@ body.desktop .tv-unboxing {
 body.desktop .about-videos {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 859px;
   height: 530px;
   width: 94.3956043956vh;
@@ -4430,6 +4469,7 @@ body.desktop .exitwounds-subway {
 body.desktop .exitwounds-bts {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 1920px;
   height: 1080px;
   width: 210.989010989vh;
@@ -4445,6 +4485,7 @@ body.desktop .exitwounds-bts {
 body.desktop .landmines-bts-tiktok {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 1080px;
   height: 1920px;
   width: 118.03279vh;
@@ -4460,6 +4501,7 @@ body.desktop .landmines-bts-tiktok {
 body.desktop .landmines-bts {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 1920px;
   height: 1080px;
   width: 210.989010989vh;
@@ -4632,6 +4674,7 @@ body.desktop .pretty-little-liars {
 }
 body.desktop .text-wrapper-25 {
   position: absolute;
+  pointer-events: none;
   font-weight: 400;
   color: #4CA8E9;
   font-size: 17px;
@@ -4676,6 +4719,7 @@ body.desktop .m-title {
 body.desktop .candle-lighting {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 1080px;
   height: 1920px;
   width: 118.03279vh;
@@ -4711,6 +4755,7 @@ body.desktop .early-posters {
 }
 body.desktop .text-wrapper-26 {
   position: absolute;
+  pointer-events: auto;
   font-weight: 400;
   color: #4CA8E9;
   font-size: 15px;
@@ -4749,6 +4794,7 @@ body.desktop .poster-arrow {
 }
 body.desktop .text-wrapper-27 {
   position: absolute;
+  pointer-events: none;
   font-weight: 400;
   color: #4CA8E9;
   font-size: 19px;
@@ -4772,6 +4818,7 @@ body.desktop .text-wrapper-27 {
 body.desktop .about-matches {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 596px;
   height: 298px;
   width: 65.4945054945vh;
@@ -4824,6 +4871,7 @@ body.desktop .sticker-3 {
 body.desktop .poster {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 678px;
   height: 903px;
   width: 74.5054945055vh;
@@ -5008,7 +5056,7 @@ body.desktop .london-camcorder {
 body.desktop .london-live-1 {
   position: absolute;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: auto;
   width: 1080px;
   height: 1920px;
   width: 118.6813186813vh;
@@ -5024,6 +5072,7 @@ body.desktop .london-live-1 {
 body.desktop .london-live-2 {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 1080px;
   height: 1920px;
   width: 118.6813186813vh;
@@ -5039,7 +5088,7 @@ body.desktop .london-live-2 {
 body.desktop .hangout-vlog {
   position: absolute;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: auto;
   width: 1920px;
   height: 1080px;
   width: 210.989010989vh;
@@ -5172,6 +5221,7 @@ body.desktop .silver-star3-14 {
 body.desktop .about-london {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 562px;
   height: 727px;
   width: 61.7582417582vh;
@@ -5218,6 +5268,7 @@ body.desktop .onedirection {
 }
 body.desktop .text-wrapper-28 {
   position: absolute;
+  pointer-events: auto;
   font-weight: 400;
   color: #4CA8E9;
   font-size: 22px;
@@ -5383,6 +5434,7 @@ body.desktop .londoncard-arrow-1 {
 }
 body.desktop .text-wrapper-29 {
   position: absolute;
+  pointer-events: auto;
   font-weight: 400;
   color: #E1EFFA;
   font-size: 22px;
@@ -5480,7 +5532,7 @@ body.desktop .blue-star-20 {
 body.desktop .london-tv {
   position: absolute;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: auto;
   width: 1275px;
   height: 1000px;
   width: 140.1098901099vh;
@@ -5499,12 +5551,25 @@ body.desktop .london-tv {
   }
 }
 body.desktop .london-tv-mobile {
-  display: none !important;
+  display: none;
 }
 @media (max-width: 36em) {
   body.desktop .london-tv-mobile {
-    display: flex !important;
-    z-index: 47;
+    display: flex;
+    position: absolute;
+    object-fit: cover;
+    pointer-events: auto;
+    width: 1275px;
+    height: 1000px;
+    width: 140.1098901099vh;
+    height: 109.8901098901vh;
+    width: 50.0892857143vh;
+    height: 39.2857142857vh;
+    top: -1vh;
+    left: 2532vh;
+    z-index: 4;
+    transform: rotate(0deg);
+    transform-origin: center;
   }
 }
 body.desktop .londoncard-front {
@@ -5574,6 +5639,7 @@ body.desktop .dreamdotnet {
 body.desktop .church-video {
   position: absolute;
   object-fit: cover;
+  pointer-events: auto;
   width: 812px;
   height: 910px;
   width: 89.2307692308vh;
@@ -5588,6 +5654,7 @@ body.desktop .church-video {
 }
 body.desktop .text-wrapper-30 {
   position: absolute;
+  pointer-events: none;
   font-weight: 400;
   color: #4CA8E9;
   font-size: 17px;
@@ -5648,8 +5715,8 @@ body.desktop .glow-star-13 {
   height: 113px;
   width: 12.0879120879vh;
   height: 12.4175824176vh;
-  width: vh;
-  height: vh;
+  width: 12.0879120879vh;
+  height: 12.4175824176vh;
   top: 46vh;
   left: 1460vh;
   z-index: auto;
@@ -5695,6 +5762,7 @@ body.desktop .join-postcard {
 }
 body.desktop .text-wrapper-31 {
   position: absolute;
+  pointer-events: none;
   font-weight: 400;
   color: #4CA8E9;
   font-size: 23px;
@@ -5780,28 +5848,10 @@ body.desktop .lock-logo {
   transform: rotate(0deg);
   transform-origin: center;
 }
-body.desktop .the-end-mobile {
-  position: absolute;
-  object-fit: cover;
-  width: 750px;
-  height: 250px;
-  width: 82.4175824176vh;
-  height: 27.4725274725vh;
-  width: 98.9010989011vh;
-  height: 32.967032967vh;
-  top: 28vh;
-  left: 2885vh;
-  z-index: auto;
-  display: none;
-}
-@media (max-width: 36em) {
-  body.desktop .the-end-mobile {
-    pointer-events: none;
-  }
-}
 body.desktop .the-end {
   position: absolute;
   object-fit: cover;
+  pointer-events: none;
   width: 750px;
   height: 250px;
   width: 82.4175824176vh;
@@ -5817,6 +5867,26 @@ body.desktop .the-end {
     display: none;
   }
 }
+body.desktop .the-end-mobile {
+  display: none;
+}
+@media (max-width: 36em) {
+  body.desktop .the-end-mobile {
+    display: flex;
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+    width: 750px;
+    height: 250px;
+    width: 82.4175824176vh;
+    height: 27.4725274725vh;
+    width: 98.9010989011vh;
+    height: 32.967032967vh;
+    top: 28vh;
+    left: 2885vh;
+    z-index: auto;
+  }
+}
 body.desktop .back-button {
   position: absolute;
   object-fit: cover;
@@ -5825,10 +5895,10 @@ body.desktop .back-button {
   height: 122px;
   width: 74.0659340659vh;
   height: 13.4065934066vh;
-  width: vh;
-  height: vh;
+  width: 74.0659340659vh;
+  height: 13.4065934066vh;
   top: 69vh;
-  left: 2889vh;
+  left: 2896vh;
   z-index: 3;
 }
 body .wiggle {
@@ -5877,12 +5947,11 @@ body .ae-modal-closed {
   filter: brightness(1.1);
 }
 .modal .modal-content {
-  background: #fff;
-  border-radius: 1.5svh;
-  max-height: 80svh;
-  max-width: 80svh;
+  background-color: transparent;
+  max-height: 60svh;
+  max-width: 102svh;
   overflow-y: auto;
-  padding: 2svh;
+  padding: 0svh;
 }
 .modal .modal-content .modal-image {
   width: 100%;
@@ -5896,39 +5965,6 @@ body .ae-modal-closed {
 .modal .lottie-open-modal:hover {
   scale: 1.02;
   filter: brightness(1.15);
-}
-
-body.desktop > .rail {
-  width: 3751.2vh;
-  width: var(--rail-w);
-  height: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  overflow-y: hidden;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-}
-body.desktop > .rail::-webkit-scrollbar {
-  height: 8px;
-}
-body.desktop > .rail::-webkit-scrollbar-thumb {
-  background: #2c2c32;
-  border-radius: 8px;
-}
-body.desktop .pusher {
-  width: 1px;
-  height: 1px;
-  background-color: #ffffff;
-  position: absolute;
-  top: 0;
-  left: 3716.6469893743vh;
-}
-@media (max-width: 36em) {
-  body.desktop .pusher {
-    left: 3673vh;
-  }
 }
 
 .social {
@@ -5975,41 +6011,23 @@ body.desktop .pusher {
 }
 @media (max-width: 36em) {
   .social {
-    gap: 1.2svh;
+    position: absolute;
+    top: 25svh;
+    left: 0.5svh;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2svh;
+    gap: 1.4svh;
   }
   .social .social-sparkle-l,
   .social .social-sparkle-r {
-    width: 4svh;
+    width: 3.5svh;
   }
   .social .icon img {
-    width: 2.5svh;
-    height: 2.5svh;
-  }
-}
-
-.social.social-2 {
-  position: absolute;
-  top: 200svh;
-  left: 50svh;
-  gap: 2svh;
-}
-.social.social-2 .icon img {
-  width: 3svh;
-  height: 3svh;
-}
-.social.social-2 .social-sparkle-l,
-.social.social-2 .social-sparkle-r {
-  width: 5svh;
-}
-@media (max-width: 36em) {
-  .social.social-2 {
-    top: 120svh;
-    left: 8svh;
-    gap: 1.2svh;
-  }
-  .social.social-2 .icon img {
-    width: 2.4svh;
-    height: 2.4svh;
+    width: 2svh;
+    height: 2svh;
   }
 }
 
@@ -6021,12 +6039,16 @@ body.desktop .pusher {
   flex-direction: row;
   align-items: center;
   gap: 2svh;
+  top: 80svh;
+  left: 2824svh;
+  gap: 1.95svh;
 }
 .social-2 .social-sparkle-l2,
 .social-2 .social-sparkle-r2 {
   width: 5svh;
   height: auto;
   display: block;
+  width: 7svh;
   pointer-events: none;
 }
 .social-2 .icon {
@@ -6044,6 +6066,8 @@ body.desktop .pusher {
   height: 3svh;
   display: block;
   object-fit: contain;
+  width: 3.5svh;
+  height: 3.5svh;
 }
 .social-2 .icon .sr-only {
   position: absolute;
