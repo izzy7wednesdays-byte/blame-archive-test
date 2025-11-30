@@ -1285,10 +1285,10 @@ body.desktop .broken-breathing {
   height: 1080px;
   width: 210.989010989vh;
   height: 118.6813186813vh;
-  width: 42.1978021978vh;
-  height: 23.7362637363vh;
-  top: 10vh;
-  left: 163vh;
+  width: 52.7472527473vh;
+  height: 29.6703296703vh;
+  top: 68vh;
+  left: 265vh;
   z-index: 1;
   transform: rotate(0deg);
   transform-origin: center;
@@ -1495,8 +1495,8 @@ body.desktop .text-wrapper-3 {
   top: 73vh;
   left: 409vh;
   width: 16.093vh;
-  top: 72.2491vh;
-  left: 414.9453vh;
+  top: 73.0961vh;
+  left: 417.4863vh;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -1570,6 +1570,7 @@ body.desktop .text-wrapper-5 {
   letter-spacing: 0;
   line-height: normal;
   text-align: center;
+  text-transform: uppercase;
   font-size: 2.1175vh;
   width: 31.7625vh;
   top: 88.935vh;
@@ -1712,7 +1713,7 @@ body.desktop .landmines-bts-clip {
   height: 118.6813186813vh;
   width: 48.5274725275vh;
   height: 27.2967032967vh;
-  top: 5vh;
+  top: 3vh;
   left: 527vh;
   z-index: 3;
   transform: rotate(0deg);
@@ -1722,14 +1723,14 @@ body.desktop .landmines-voicememo {
   position: absolute;
   object-fit: cover;
   pointer-events: auto;
-  width: 1920px;
-  height: 1080px;
-  width: 210.989010989vh;
-  height: 118.6813186813vh;
-  width: 46.4175824176vh;
-  height: 29.6703296703vh;
-  top: 32vh;
-  left: 527vh;
+  width: 637px;
+  height: 283.271px;
+  width: 70vh;
+  height: 31.1286813187vh;
+  width: 49vh;
+  height: 21.7900769231vh;
+  top: 34vh;
+  left: 522vh;
   z-index: 2;
   transform: rotate(0deg);
   transform-origin: center;
@@ -1811,14 +1812,15 @@ body.desktop .text-wrapper-6 {
   height: 625px;
   top: 830px;
   left: 42px;
-  width: 132.28vh;
-  height: 82.67vh;
-  top: 83.85vh;
-  left: 580vh;
   width: 205vh;
   height: 100vh;
   top: 60vh;
   left: 564vh;
+  font-size: 2.0328vh;
+  width: 43.6205vh;
+  height: 8.47vh;
+  top: 60.137vh;
+  left: 562.408vh;
   z-index: 2;
   transform: rotate(0deg);
   transform-origin: center;
@@ -1972,17 +1974,15 @@ body.desktop .text-wrapper-7 {
   text-align: center;
   text-transform: uppercase;
   width: 1000px;
-  height: 625px;
   top: 830px;
   left: 42px;
-  width: 132.28vh;
-  height: 82.67vh;
-  top: 83.85vh;
-  left: 580vh;
   width: 29vh;
-  height: 96vh;
   top: 4vh;
   left: 638vh;
+  font-size: 2.0328vh;
+  width: 31.8472vh;
+  top: 4.7432vh;
+  left: 635.25vh;
   z-index: 2;
   transform: rotate(0deg);
   transform-origin: center;
@@ -2013,7 +2013,7 @@ body.desktop .landmines-og-guitar {
   width: 209.83607vh;
   width: 22.131148125vh;
   height: 39.344263125vh;
-  top: 55vh;
+  top: 53vh;
   left: 660vh;
   z-index: 1;
   transform: rotate(0deg);
@@ -2030,17 +2030,18 @@ body.desktop .text-wrapper-8 {
   text-align: center;
   text-transform: uppercase;
   width: 1000px;
-  height: 625px;
   top: 830px;
   left: 42px;
   width: 132.28vh;
-  height: 82.67vh;
   top: 83.85vh;
   left: 580vh;
   width: 22vh;
-  height: 110vh;
   top: 91vh;
   left: 661vh;
+  font-size: 1.694vh;
+  width: 26.257vh;
+  top: 91.5607vh;
+  left: 657.3567vh;
   z-index: 3;
   transform: rotate(0deg);
   transform-origin: center;
@@ -2124,7 +2125,7 @@ body.desktop .landmines-session-voicememos {
   height: 55.62842vh;
   width: 26.66667vh;
   height: 31.78767vh;
-  top: 38vh;
+  top: 40vh;
   left: 705vh;
   z-index: 0;
   transform: rotate(14deg);
@@ -2192,9 +2193,12 @@ body.desktop .text-wrapper-9 {
   width: 132.28vh;
   height: 82.67vh;
   width: 41vh;
-  height: 110vh;
   top: 33.5vh;
   left: 713vh;
+  font-size: 1.694vh;
+  width: 49.126vh;
+  top: 33.1177vh;
+  left: 705.6357vh;
   z-index: 3;
   transform: rotate(0deg);
   transform-origin: center;
@@ -2315,12 +2319,14 @@ body.desktop .text-wrapper-10 {
   text-transform: uppercase;
   width: 1000px;
   height: 625px;
-  width: 132.28vh;
-  height: 82.67vh;
   width: 42vh;
   height: 110vh;
   top: 32vh;
   left: 819vh;
+  font-size: 1.694vh;
+  width: 49.126vh;
+  top: 31.4237vh;
+  left: 809.8167vh;
   z-index: 3;
   transform: rotate(0deg);
   transform-origin: center;
@@ -2367,12 +2373,13 @@ body.desktop .text-wrapper-11 {
   text-transform: uppercase;
   width: 1000px;
   height: 625px;
-  width: 132.28vh;
-  height: 82.67vh;
   width: 11vh;
-  height: 110vh;
   top: 8vh;
   left: 872vh;
+  font-size: 1.694vh;
+  width: 10.164vh;
+  top: 6.8607vh;
+  left: 873.3417vh;
   z-index: 5;
   transform: rotate(0deg);
   transform-origin: center;
@@ -2403,13 +2410,13 @@ body.desktop .text-wrapper-12 {
   text-align: center;
   text-transform: uppercase;
   width: 1000px;
-  height: 625px;
-  width: 132.28vh;
-  height: 82.67vh;
   width: 31vh;
-  height: 110vh;
   top: 4vh;
   left: 886vh;
+  font-size: 1.694vh;
+  width: 25.41vh;
+  top: 1.7787vh;
+  left: 888.5877vh;
   z-index: 3;
   transform: rotate(0deg);
   transform-origin: center;
@@ -2542,15 +2549,14 @@ body.desktop .text-wrapper-13 {
   text-align: center;
   text-transform: uppercase;
   width: 1000px;
-  height: 625px;
-  width: 132.28vh;
-  height: 82.67vh;
   width: 42vh;
-  height: 110vh;
   top: 93.5vh;
   left: 926vh;
+  font-size: 1.694vh;
+  width: 46.585vh;
+  top: 93.5935vh;
+  left: 922.4677vh;
   z-index: 3;
-  transform: rotate(0deg);
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -2809,6 +2815,11 @@ body.desktop .text-wrapper-14 {
   width: 70.7vh;
   top: 54vh;
   left: 1092vh;
+  font-size: 2.541vh;
+  width: 34.727vh;
+  top: 58.0195vh;
+  left: 1110.0782vh;
+  z-index: 0;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -2840,12 +2851,14 @@ body.desktop .text-wrapper-15 {
   width: 260px;
   top: 820px;
   left: 4574px;
-  width: 26vh;
-  top: 82vh;
-  left: 457.4vh;
   width: 60.7vh;
   top: 91vh;
   left: 1096vh;
+  font-size: 2.1175vh;
+  width: 29.645vh;
+  top: 91.8995vh;
+  left: 1112.3651vh;
+  z-index: 0;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -2878,6 +2891,11 @@ body.desktop .text-wrapper-16 {
   width: 30.7vh;
   top: 93vh;
   left: 1153.5vh;
+  font-size: 2.0328vh;
+  width: 28.798vh;
+  top: 91.0525vh;
+  left: 1156.6632vh;
+  z-index: 0;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -2932,6 +2950,10 @@ body.desktop .text-wrapper-17 {
   width: 50.7vh;
   top: 84vh;
   left: 1176.5vh;
+  font-size: 1.694vh;
+  width: 15.246vh;
+  top: 84.2765vh;
+  left: 1194.7782vh;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -2970,6 +2992,10 @@ body.desktop .text-wrapper-18 {
   width: 30.7vh;
   top: 44vh;
   left: 1212vh;
+  font-size: 2.0328vh;
+  width: 26.257vh;
+  top: 44.4675vh;
+  left: 1213.4122vh;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -3004,6 +3030,10 @@ body.desktop .text-wrapper-19 {
   width: 31.7vh;
   top: 3vh;
   left: 1240vh;
+  font-size: 2.0328vh;
+  width: 33.88vh;
+  top: 2.9645vh;
+  left: 1248.1392vh;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -3103,6 +3133,10 @@ body.desktop .text-wrapper-20 {
   width: 28.7vh;
   top: 6vh;
   left: 1286vh;
+  font-size: 2.0328vh;
+  width: 15.246vh;
+  top: 5.5055vh;
+  left: 1293.0302vh;
   z-index: 2;
   transform: rotate(0deg);
   transform-origin: center;
@@ -3153,6 +3187,10 @@ body.desktop .text-wrapper-21 {
   width: 42.7vh;
   top: 57vh;
   left: 1313vh;
+  font-size: 2.0328vh;
+  width: 22.869vh;
+  top: 59.7135vh;
+  left: 1324.3692vh;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -3322,6 +3360,10 @@ body.desktop .text-wrapper-22 {
   width: 30.7vh;
   top: 89.5vh;
   left: 1397.5vh;
+  font-size: 2.0328vh;
+  width: 26.257vh;
+  top: 89.3585vh;
+  left: 1399.7522vh;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -3641,9 +3683,13 @@ body.desktop .text-wrapper-23 {
   width: 30.7vh;
   top: 83vh;
   left: 1621vh;
+  font-size: 2.0328vh;
+  width: 18.634vh;
+  top: 82.5825vh;
+  left: 1628.4422vh;
+  z-index: 0;
   transform: rotate(0deg);
   transform-origin: center;
-  z-index: 0;
 }
 body.desktop .caitlin-text-3 {
   position: absolute;
@@ -4132,6 +4178,10 @@ body.desktop .text-wrapper-24 {
   width: 30.7vh;
   top: 49vh;
   left: 1758vh;
+  font-size: 2.0328vh;
+  width: 22.869vh;
+  top: 48.7025vh;
+  left: 1763.1152vh;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -4588,6 +4638,10 @@ body.desktop .text-wrapper-25 {
   width: 91.7vh;
   top: 27vh;
   left: 2112vh;
+  font-size: 2.0328vh;
+  width: 47.432vh;
+  top: 24.9865vh;
+  left: 2133.2542vh;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -4663,6 +4717,10 @@ body.desktop .text-wrapper-26 {
   width: 30.7vh;
   top: 48vh;
   left: 2185vh;
+  font-size: 2.0328vh;
+  width: 35.574vh;
+  top: 49.5495vh;
+  left: 2183.2272vh;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -4697,6 +4755,10 @@ body.desktop .text-wrapper-27 {
   width: 20.7vh;
   top: 73vh;
   left: 2207vh;
+  font-size: 2.0328vh;
+  width: 18.634vh;
+  top: 74.9595vh;
+  left: 2206.0962vh;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -5161,6 +5223,10 @@ body.desktop .text-wrapper-28 {
   width: 24.7vh;
   top: 89vh;
   left: 2452vh;
+  font-size: 2.0328vh;
+  width: 20.328vh;
+  top: 89.3585vh;
+  left: 2455.9612vh;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -5323,6 +5389,10 @@ body.desktop .text-wrapper-29 {
   width: 22.7vh;
   top: 66vh;
   left: 2521vh;
+  font-size: 2.0328vh;
+  width: 20.328vh;
+  top: 68.1835vh;
+  left: 2522.8742vh;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -5524,6 +5594,10 @@ body.desktop .text-wrapper-30 {
   width: 28.7vh;
   top: 64vh;
   left: 2610vh;
+  font-size: 2.0328vh;
+  width: 33.033vh;
+  top: 63.9485vh;
+  left: 2609.2682vh;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -5627,6 +5701,10 @@ body.desktop .text-wrapper-31 {
   width: 38.7vh;
   top: 2vh;
   left: 2690vh;
+  font-size: 2.2022vh;
+  width: 33.4565vh;
+  top: 5.5055vh;
+  left: 2691.4272vh;
   z-index: 2;
   transform: rotate(0deg);
   transform-origin: center;
