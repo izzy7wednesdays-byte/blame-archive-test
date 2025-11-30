@@ -3,6 +3,7 @@ body.desktop {
   // === MAIN HORIZONTAL BAND  ===
   > .rail {
     width: 3751.2vh;
+    width: var(--rail-w);
     height: 100%;
     position: relative;
     display: flex;
