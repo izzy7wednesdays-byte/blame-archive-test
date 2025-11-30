@@ -727,7 +727,7 @@ body {
         left: 270vh;
         z-index: 2;
         
-        transform: scale(0.35) rotate(0deg);
+        transform: scale(1) rotate(0deg);
         transform-origin: center;
       }
     }
@@ -1359,16 +1359,16 @@ body {
         width: 1250px;
         height: 300px;
         
-        width: 169.92vh;
-        height: 40.54vh;
+        width: 137.362637362637vh;
+        height: 32.967032967033vh;
         
-        width: 63.72vh;
-        height: 15.2025vh;
-        top: 87vh;
+        width: 63.186813186813vh;
+        height: 15.1648351648352vh;
+        top: 85vh;
         left: 515vh;
         z-index: 1;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
         
          @include respond(xs) {
@@ -1381,18 +1381,18 @@ body {
         pointer-events: auto;
         
         width: 1920px;
-        height: 118.681318681px;
+        height: 1080px;
         
-        width: 259.46vh;
-        height: 145.95vh;
+        width: 210.989010989011vh;
+        height: 118.681318681319vh;
         
-        width: 259.46vh;
-        height: 145.95vh;
-        top: -56vh;
-        left: 424vh;
+        width: 48.5274725274725vh;
+        height: 27.2967032967034vh;
+        top: 5vh;
+        left: 527vh;
         z-index: 3;
         
-        transform: scale(0.18) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
          @include respond(xs) {
@@ -1406,15 +1406,17 @@ body {
         
         width: 1920px;
         height: 1080px;
+
+        width: 210.989010989011vh;
+        height: 118.681318681319vh;
         
-        width: 259.46vh;
-        height: 145.95vh;
-        
-        top: -28vh;
-        left: 419vh;
+        width: 46.4175824175824vh;
+        height: 29.6703296703298vh;
+        top: 32vh;
+        left: 527vh;
         z-index: 2;
         
-        transform: scale(0.18) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1438,7 +1440,7 @@ body {
         left: 521vh;
         z-index: 3;
                 
-        transform: scale(1) rotate(12deg);
+        transform: rotate(12deg);
         transform-origin: center;
         
          @include respond(xs) {
@@ -1454,13 +1456,16 @@ body {
         width: 540px;
         height: 288px;
         
-        width: 72.97vh;
-        height: 38.92vh;
-        top: 53vh;
-        left: 505vh;
+        width: 59.3406593406593vh;
+        height: 31.6483516483516vh;
+
+        width: 40.3516483516483vh;
+        height: 21.5208791208791vh;
+        top: 60vh;
+        left: 520vh;
         z-index: 0;
-                
-        transform: scale(0.55) rotate(0deg);
+        
+        transform: rotate(0deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -1476,13 +1481,16 @@ body {
         width: 1080px;
         height: 1920px;
         
-        width: 145.95vh;
-        height: 259.45vh;
-        top: -51vh;
-        left: 522vh;
+        width: 118.681318681319vh;
+        height: 210.989010989011vh;
+        
+        width: 21.956043956044vh;
+        height: 39.032967032967vh;
+        top: 60vh;
+        left: 582vh;
         z-index: 1;
         
-        transform: scale(0.15) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1534,13 +1542,16 @@ body {
         width: 440px;
         height: 1000px;
         
-        width: 54.46vh;
-        height: 135.16vh;
-        top: 21vh;
-        left: 550vh;
+        width: 48.3516483516484vh;
+        height: 109.89010989011vh;
+        
+        width: 10.3956043956044vh;
+        height: 23.6263736263737vh;
+        top: 76vh;
+        left: 570vh;
         z-index: 2;
-                
-        transform: scale(0.2) rotate(0deg);
+        
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {   
@@ -1550,18 +1561,21 @@ body {
       .landmines-license {
         position: absolute;
         object-fit: cover;
-        pointer-events: none, auto;
+        pointer-events: none;
         
         width: 860px;
         height: 502px;
         
-        width: 116.21vh;
-        height: 67.84vh;
-        top: -17vh;
-        left: 546vh;
+        width: 94.5054945054945vh;
+        height: 55.1648351648352vh;
+        
+        width: 46.3076923076923vh;
+        height: 27.0307692307692vh;
+        top: 7vh;
+        left: 583vh;
         z-index: 0;
-                
-        transform: scale(0.4) rotate(-6deg);
+        
+        transform: rotate(-6deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -1577,13 +1591,16 @@ body {
         width: 165px;
         height: 160px;
         
-        width: 22.30vh;
-        height: 21.52vh;
-        top: 24vh;
-        left: 567vh;
+        width: 18.1318681318681vh;
+        height: 17.5824175824176vh;
+        
+        width: 5.34890109890109vh;
+        height: 5.18681318681319vh;
+        top: 34vh;
+        left: 576vh;
         z-index: 0;
-                
-        transform: scale(0.26) rotate(-17deg);
+        
+        transform: rotate(-17deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -1599,13 +1616,16 @@ body {
         width: 154px;
         height: 147px;
         
-        width: 20.81vh;
-        height: 19.86vh;
-        top: 24vh;
-        left: 624vh;
+        width: 16.9230769230769vh;
+        height: 16.1538461538462vh;
+        
+        width: 8.46153846153845vh;
+        height: 8.0769230769231vh;
+        top: 31vh;
+        left: 634vh;
         z-index: 0;
-                
-        transform: scale(.4) rotate(10deg);
+        
+        transform: rotate(10deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1621,13 +1641,16 @@ body {
         width: 2249px;
         height: 550px;
         
-        width: 303.92vh;
-        height: 74.32vh;
-        top: 11vh;
-        left: 455vh;
+        width: 247.142857142857vh;
+        height: 60.4395604395604vh;
+        
+        width: 60.55vh;
+        height: 14.8076923076923vh;
+        top: 41vh;
+        left: 575vh;
         z-index: 0;
-                
-        transform: scale(0.2) rotate(0deg);
+        
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1670,14 +1693,15 @@ body {
         width: 259.46vh;
         height: 145.95vh;
         
-        width: 259.46vh;
-        height: 145.95vh;
-        top: 10vh;
-        left: 503vh;
+        width: 48.5274725274725vh;
+        height: 27.2967032967034vh;
+        top: 65vh;
+        left: 608vh;
         z-index: 1;
         
-        transform: scale(.20) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
+
       
         @include respond(xs) {
         }       
@@ -1686,6 +1710,7 @@ body {
       .text-wrapper-7 {
         position: absolute;
         display: flex;
+        pointer-events: none;
       
         font-weight: 400;
         color: #4CA8E9;
@@ -1729,12 +1754,12 @@ body {
         width: 78.25137vh;
         height: 117.48634vh;
 
-        width: 23.475411vh;
-        height: 35.245902vh;
+        width: 22.8061793279185vh;
+        height: 34.2411211976429vh;
         top: 22vh;
         left: 646vh;
         z-index: 2;
-        transform: scale(1) rotate(10deg);
+        transform: rotate(10deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1759,7 +1784,7 @@ body {
         left: 660vh;
         z-index: 1;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1819,7 +1844,7 @@ body {
         left: 672vh;
         z-index: 3;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1842,7 +1867,7 @@ body {
         top: 49vh;
         left: 678vh;
         z-index: 1;
-        transform: scale(1) rotate(33deg);
+        transform: rotate(33deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -1866,7 +1891,7 @@ body {
         top: 60vh;
         left: 686vh;
         z-index: 0;
-        transform: scale(1) rotate(29deg);
+        transform: rotate(29deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1890,7 +1915,7 @@ body {
         left: 685vh;
         z-index: 1;
              
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1914,7 +1939,7 @@ body {
         left: 705vh;
         z-index: 0;
         
-        transform: scale(1) rotate(14deg);            
+        transform: rotate(14deg);            
         transform-origin: center;
       
         @include respond(xs) {
@@ -1938,7 +1963,7 @@ body {
         left: 703vh;
         z-index: 0;
                 
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1963,7 +1988,7 @@ body {
         left: 703vh;
         z-index: auto ;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -1987,7 +2012,7 @@ body {
         left: 500vh;
         z-index: auto ;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -2042,7 +2067,7 @@ body {
         top: 43vh;
         left: 739vh;
         z-index: 0;
-        transform: scale(1) rotate(-11deg);
+        transform: rotate(-11deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -2065,7 +2090,7 @@ body {
         left: 759vh;
         z-index: auto ;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -2089,7 +2114,7 @@ body {
         left: 500vh;
         z-index: auto ;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
         
         @include respond(xs) {
@@ -2114,7 +2139,7 @@ body {
         left: 751vh;
         z-index: auto ;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -2138,7 +2163,7 @@ body {
         left: 766vh;
         z-index: auto ;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -2161,7 +2186,7 @@ body {
         left: 807vh;
         z-index: auto ;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
@@ -2217,7 +2242,7 @@ body {
         left: 790vh;
         z-index: auto ;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
