@@ -156,8 +156,8 @@ body {
         
         width: 35.5135773317592vh;
         height: 9.44510035419128vh;
-        top: 21vh;
-        left: 10vh;
+        top: 22vh;
+        left: 6vh;
         z-index: 2;
       }
     }
@@ -187,18 +187,20 @@ body {
       transform-origin: center;
 
       @include respond(xs) {
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        
         width: 800px;
         height: 150px;
         
         width: 107.12vh;
         height: 20.27vh;
         
-        width: 94.4510035419126vh;
-        height: 17.7095631641086vh;
         width: 56.6706021251476vh;
         height: 10.6257378984652vh;
         top: 27.5vh;
-        left: -11vh;
+        left: 2vh;
       }
     }
       
@@ -270,13 +272,11 @@ body {
       transform-origin: center;
       
       @include respond(xs) {
-        width: 44.1758241758242vh;
-        height: 20.2747252747253vh;
+        width: 35.3406593406594vh;
+        height: 16.2197802197802vh;
         top: 36vh;
-        left: 1.5vh;
+        left: 7.5vh;
         z-index: 3;
-        transform: rotate(0deg);
-        transform-origin: center;
       }
     }
       
@@ -356,6 +356,12 @@ body {
       transform-origin: center;
       
       @include respond(xs) {
+        width: 11.4945054945055vh;
+        height: 4.47252747252747vh;
+        
+        top: 84vh;
+        left: 33vh;
+        z-index: 1;
       }
     }
       
