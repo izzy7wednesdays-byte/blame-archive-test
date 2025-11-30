@@ -19,7 +19,7 @@ body {
       cursor: pointer;
       user-select: none;
       display: flex;
-      height: calc(var(--band-h) * var(--scale));
+      height: auto;
       width: auto;
       object-fit: contain;
 
@@ -27,14 +27,13 @@ body {
         scale: 1.02;
         filter: brightness(1.15);
       }
+      &.is-playing{
+        scale: 1.02;
+        filter: brightness(1.15);
+      }
    }
     
-    .audio-img.is-playing {
-      scale: 1.02;
-      filter: brightness(1.15);
-   }
-
-    /* testing */
+    // testing 
     a:hover {
       	scale: 1.02;
         filter: brightness(1.15);
@@ -54,6 +53,7 @@ body {
           overflow-y: hidden;
           width: 2533.2vh;
     }
+    
     .pusher {
       width: 1px;
       height: 1px;
@@ -64,7 +64,8 @@ body {
       @include respond(xs) {
         left: 3673vh;
       }
-    }    
+    }   
+    
     img {
         &.open-modal, {
           cursor: pointer;
