@@ -61,7 +61,7 @@ body {
     }   
     
     img {
-        &.open-modal, {
+        &.open-modal {
           cursor: pointer;
           &:hover {
               scale: 1.02;
