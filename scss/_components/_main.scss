@@ -28,6 +28,7 @@ body {
         filter: brightness(1.15);
       }
    }
+    
     .audio-img.is-playing {
       scale: 1.02;
       filter: brightness(1.15);
@@ -36,12 +37,13 @@ body {
     /* testing */
     a:hover {
       	scale: 1.02;
-        filter: brightness(1.15)
+        filter: brightness(1.15);
       }
 
     img {
       max-width: initial;
     }
+    
     & > .rail {
           width: 21456.204px;
           height: 847px;
