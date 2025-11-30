@@ -35,10 +35,10 @@ body {
         filter: brightness(1.15);
       }
     }
-    .audio-img.is-playing {
-      scale: 1.02;
-      filter: brightness(1.15);
-    }
+   // .audio-img.is-playing {
+   //   scale: 1.02;
+   //   filter: brightness(1.15);
+  //  }
 
     img {
       max-width: initial;
@@ -52,6 +52,7 @@ body {
           flex-direction: row;
           overflow-y: hidden;
           width: 3751.2vh;
+          width: 3551.2vh;
     }
     .pusher {
       width: 1px;
@@ -65,7 +66,7 @@ body {
       }
     }    
     img {
-        &.open-modal {
+        &.open-modal, .audio-img.is-playing {
           cursor: pointer;
           &:hover {
               scale: 1.02;
