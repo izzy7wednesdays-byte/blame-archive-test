@@ -62,34 +62,6 @@
   }
 }
 
-.social.social-2 {
-  position: absolute;
-  top: 200svh; 
-  left: 50svh;
-  gap: 2svh;
-
-  .icon img {
-    width: 3svh;
-    height: 3svh;
-  }
-
-  .social-sparkle-l,
-  .social-sparkle-r {
-    width: 5svh;
-  }
-
-  @include respond(xs) {
-    top: 120svh;
-    left: 8svh;
-    gap: 1.2svh;
-
-    .icon img {
-      width: 2.4svh;
-      height: 2.4svh;
-    }
-  }
-}
-
 .social-2 {
   position: absolute;
   top: 37svh;
@@ -99,11 +71,18 @@
   align-items: center;
   gap: 2svh; 
 
+  top: 80svh;
+  left: 2824svh;
+  gap:1.95svh;
+
   .social-sparkle-l2,
   .social-sparkle-r2 {
+
     width: 5svh;
     height: auto;
     display: block;
+
+    width: 7svh;
 
     pointer-events: none;
   }
@@ -125,6 +104,9 @@
       height: 3svh;
       display: block;
       object-fit: contain;
+
+      width: 3.5svh;
+      height: 3.5svh;
     }
 
     .sr-only {
