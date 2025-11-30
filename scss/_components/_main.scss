@@ -666,10 +666,11 @@ body {
       top: 22px;
       left: 2430px;
 
-      width: calc(6.2vh * 1000/847);
-      top: calc(2.2vh * 1000/847);
-      left: calc(243vh * 1000/847);
-       z-index: 4;
+      font-size: calc(1.4vh* 1000/847);
+      width: calc(6.2vh * 1000 / 847);
+      top: calc(2.45vh * 1000 / 847);
+      left: calc(243vh * 1000 / 847);
+      z-index: 4;
 
       transform: rotate(0deg);
       transform-origin: center;
@@ -888,13 +889,14 @@ body {
       top: 820px;
       left: 4574px;
       
-      width: 26vh;
-      top: 82vh;
-      left: 457.4vh;
-      
-      width: 30.7vh;
+       width: 30.7vh;
       top: 31vh;
       left: 356vh;
+      
+      font-size: calc(1.5vh * 1000/847);
+      width: calc(21.07vh * 1000 / 847);
+      top: calc(26.1vh * 1000 / 847);
+      left: calc(303.6vh * 1000 / 847);
       
       transform: rotate(13deg);
       transform-origin: center;
@@ -1034,17 +1036,15 @@ body {
       line-height: normal;
       text-align: center;
 
-      width: 260px;
-      top: 820px;
-      left: 4574px;
-      
-      width: 26vh;
-      top: 82vh;
-      left: 457.4vh;
+      font-size: calc(4vh * 847/1000);      
       
       width: 30.7vh;
       top: 73vh;
       left: 409vh;
+
+      width: calc(19.0vh * 847 / 1000);
+      top: calc(85.3vh * 847 / 1000);
+      left: calc(489.9vh * 847 / 1000);
       
       transform: rotate(0deg);
       transform-origin: center;
@@ -1086,17 +1086,11 @@ body {
       line-height: normal;
       text-align: center;
 
-      width: 260px;
-      top: 820px;
-      left: 4574px;
+      font-size: calc(3.35vh * 847 / 1000);
       
-      width: 26vh;
-      top: 82vh;
-      left: 457.4vh;
-      
-      width: 34.7vh;
-      top: 3vh;
-      left: 427vh;
+      width: calc(36.47vh * 847 / 1000);
+      top: calc(2.3vh * 847 / 1000);
+      left: calc(508.7vh * 847 / 1000);
       z-index: 0;
 
       transform: rotate(0deg);
@@ -1161,21 +1155,12 @@ body {
       letter-spacing: 0;
       line-height: normal;
       text-align: center;
-      
-      width: 1000px;
-      height: 625px;
-      top: 830px;
-      left: 42px;
-      
-      width: 132.28vh;
-      height: 82.67vh;
-      top: 83.85vh;
-      left: 80vh;
 
-      width: 205vh;
-      height: 100vh;
-      top: 90vh;
-      left: 331vh;
+      font-size: calc(2.5vh * 847 / 1000);
+
+      width: calc(37.5vh * 847 / 1000);
+      top: calc(105vh * 847 / 1000);
+      left: calc(500.1vh * 847 / 1000);
       z-index: 0;
 
       transform: rotate(0deg);
