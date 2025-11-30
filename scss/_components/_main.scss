@@ -662,18 +662,14 @@ body {
       text-align: center;
       text-transform: uppercase;
       
-      width: 260px;
-      top: 820px;
-      left: 4574px;
-      
-      width: 26vh;
-      top: 82vh;
-      left: 457.4vh;
-      
-      width: 30.7vh;
-      top: 4vh;
-      left: 275vh;
-      z-index: 4;
+      width: 62px;
+      top: 22px;
+      left: 2430px;
+
+      width: calc(6.2vh * 1000/847);
+      top: calc(2.2vh * 1000/847);
+      left: calc(243vh * 1000/847);
+       z-index: 4;
 
       transform: rotate(0deg);
       transform-origin: center;
