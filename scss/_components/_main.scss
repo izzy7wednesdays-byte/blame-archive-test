@@ -25,11 +25,11 @@ body {
 
       &:hover {
         scale: 1.02;
-        filter: brightness(1.15);
+        filter: brightness(1.1);
       }
       &.is-playing{
         scale: 1.02;
-        filter: brightness(1.15);
+        filter: brightness(1.1);
       }
    }
     
@@ -65,7 +65,7 @@ body {
           cursor: pointer;
           &:hover {
               scale: 1.02;
-              filter: brightness(1.15);
+              filter: brightness(1.1);
           }
         }
      }      
