@@ -1,6 +1,6 @@
 body {
   &.desktop {
-    background-color: #0d161d;;
+    background-color: #0d161d;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -37,23 +37,22 @@ body {
       max-width: initial;
     }
     & > .rail {
-          width: 31773px;
+          width: 21456.204px;
           height: 847px;
           height: 100%;
           position: relative;
           display: flex;
           flex-direction: row;
           overflow-y: hidden;
-          width: 3751.2vh;
-          width: 2500vh;
+          width: 2533.2vh;
     }
     .pusher {
       width: 1px;
       height: 1px;
-      background-color: white;
+      background-color: #0d161d;
       position: absolute;
       top: 0;
-      left: calc(2800vh * 1000/847);
+      left: calc(2533.2vh * 1000/847);
       @include respond(xs) {
         left: 3673vh;
       }
