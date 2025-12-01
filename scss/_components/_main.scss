@@ -354,7 +354,7 @@ body {
 
       z-index: 5;
       
-      transform: scale(.1) rotate(0deg);
+      transform:rotate(0deg);
       transform-origin: center;
       
       @include respond(xs) {
@@ -364,6 +364,26 @@ body {
         top: 84vh;
         left: 33vh;
         z-index: 1;
+      }
+    }
+    .pink-arrow-alt{
+      display: none
+          
+      @include respond(xs) {
+        display: none;
+        
+        position: absolute;
+        object-fit: cover;
+        pointer-events: none;
+        
+        width: 11.4945054945055vh;
+        height: 4.47252747252747vh;
+        top: 84vh;
+        left: 33vh;
+        z-index: 1;
+
+        transform: rotate(0deg);
+        transform-origin: center;
       }
     }
       
