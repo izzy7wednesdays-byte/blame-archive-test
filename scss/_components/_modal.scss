@@ -36,7 +36,7 @@
       filter: brightness(1.15);
     }
   }
-  button.close-modal {
+  button.close-modal, button.close-modal:hover {
     position: absolute;
     top: 2svh;
     right: 2svh;
@@ -49,15 +49,14 @@
     
     background-color: transparent;
     
-    background-image: url("/assets/ui/x.webp"); //no-repeat center / contain
-    background-position: center;
-    background-size: contain;
-    background-attachment: fixed;
-    
     border: none;
     cursor: pointer;
     z-index: 11;
     outline: 2px dotted magenta;
+
+    background-image: url("/assets/ui/x.webp"); //no-repeat center / contain
+    background-position: center;
+    background-size: contain;
     
     &:hover {
      transform: scale(1.15);
