@@ -36,12 +36,13 @@
       filter: brightness(1.15);
     }
   }
-  .close-modal {
+  button.close-modal {
     position: absolute;
     top: 2svh;
     right: 2svh;
     width: 4svh;
     height: 4svh;
+    background-color: red;
     background-image: url("assets/ui/x.webp") no-repeat center / contain;
     border: none;
     cursor: pointer;
