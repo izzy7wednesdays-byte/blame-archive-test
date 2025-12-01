@@ -7,12 +7,11 @@
   justify-content: center;
   padding: 4svh;
 
-  /* hidden state */
   &.hidden {
     display: none;
   }
 
-  /* dim background lives on a separate layer BEHIND everything */
+ 
   &::before {
     content: "";
     position: fixed;
@@ -22,7 +21,7 @@
   }
 
   .modal-content {
-    position: relative;              // anchor for the X
+    position: relative;              
     background-color: transparent;
     max-height: 60svh;
     max-width: 102svh;
@@ -49,12 +48,15 @@
 
   button.close-modal {
     position: absolute;
-    top: 2svh;
-    right: 2svh;
-
+    top: 1svh;
+    left: 1svh;
+    
     width: 5.8svh;
     height: 5.9svh;
-
+    
+    width: 1.73553719008265svh;
+    height: 1.77095631641086svh;
+    
     background-color: transparent;
     background-image: url("/assets/ui/x.webp");
     background-position: center;
@@ -66,7 +68,6 @@
     z-index: 11;
 
     &:hover {
-      transform: scale(1.15);
       filter: brightness(1.1);
     }
   }
