@@ -25,23 +25,7 @@
       height: auto;
       display: block;
     }
-    .close-modal {
-      position: absolute;
-      top: 2svh;
-      right: 2svh;
-      width: 4svh;
-      height: 4svh;
-      background: url("assets/ui/x.webp") no-repeat center / contain;
-      border: none;
-      cursor: pointer;
-      z-index: 11;
-   }
-   .close-modal:hover {
-     transform: scale(1.15);
-     filter: brightness(1.1);
-    }
-  }
-
+  }  
   .lottie-open-modal { 
     cursor: pointer;
     user-select: none;
@@ -49,6 +33,22 @@
     &:hover {
       scale: 1.02;
       filter: brightness(1.15);
+    }
+  }
+  .close-modal {
+    position: absolute;
+    top: 2svh;
+    right: 2svh;
+    width: 4svh;
+    height: 4svh;
+    background: url("assets/ui/x.webp") no-repeat center / contain;
+    border: none;
+    cursor: pointer;
+    z-index: 11;
+    
+    &:hover {
+     transform: scale(1.15);
+     filter: brightness(1.1);
     }
   }
 }
