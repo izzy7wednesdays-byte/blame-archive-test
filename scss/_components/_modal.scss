@@ -40,10 +40,20 @@
     position: absolute;
     top: 2svh;
     right: 2svh;
-    width: 4svh;
-    height: 4svh;
+
+    width: 49px;
+    height: 50px;
+    
+    width: 5.78512396694215svh;
+    height: 5.90318772136954svh;
+    
     background-color: transparent;
+    
     background-image: url("assets/ui/x.webp"); //no-repeat center / contain
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    
     border: none;
     cursor: pointer;
     z-index: 11;
