@@ -367,7 +367,7 @@ body {
       }
     }
     .pink-arrow-alt{
-      display: none
+      display: none;
           
       @include respond(xs) {
         display: none;
