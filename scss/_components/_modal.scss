@@ -2,18 +2,27 @@
   position: fixed;
   inset: 0;
   z-index: 10;
-//  background: rgba(0,0,0,0.6);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4svh;
 
+  /* hidden state */
   &.hidden {
     display: none;
   }
 
+  /* dim background lives on a separate layer BEHIND everything */
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);  // dim
+    z-index: -1;                     // put it behind modal contents
+  }
+
   .modal-content {
-    position: relative; // just added --> changed content
+    position: relative;              // anchor for the X
     background-color: transparent;
     max-height: 60svh;
     max-width: 102svh;
@@ -26,7 +35,8 @@
       display: block;
       z-index: 10;
     }
-  }  
+  }
+
   .lottie-open-modal { 
     cursor: pointer;
     user-select: none;
@@ -36,31 +46,28 @@
       filter: brightness(1.15);
     }
   }
-  button.close-modal, button.close-modal:hover {
+
+  button.close-modal {
     position: absolute;
     top: 2svh;
     right: 2svh;
 
-    width: 49px;
-    height: 50px;
-    
-    width: 5.78512396694215svh;
-    height: 5.90318772136954svh;
-    
+    width: 5.8svh;
+    height: 5.9svh;
+
     background-color: transparent;
-    
+    background-image: url("/assets/ui/x.webp");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
     border: none;
     cursor: pointer;
     z-index: 11;
-    outline: 2px dotted magenta;
 
-  //  background-image: url("/assets/ui/x.webp"); //no-repeat center / contain
-    background-position: center;
-    background-size: contain;
-    
     &:hover {
-     transform: scale(1.15);
-     filter: brightness(1.1);
+      transform: scale(1.15);
+      filter: brightness(1.1);
     }
   }
 }
