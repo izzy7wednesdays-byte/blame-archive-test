@@ -290,17 +290,16 @@ body {
       width: 819px;
       height: 297px;
       
-      width: 110.68vh;
-      height: 29.59vh;
+      width: 96.6942148760331vh;
+      height: 35.0649350649351vh;
       
-      width: 110.68vh;
-      height: 29.59vh;
-      top: 76vh;
-      left: 58vh;
+      width: 19.3388429752066vh;
+      height: 7.01298701298702vh;      
+      top: 86.5vh;
+      left: 104vh;
+      z-index: 1;
       
-      z-index: 5;
-      
-      transform: scale(.22) rotate(0deg);
+      transform: rotate(0deg);
       transform-origin: center;
      
       @include respond(xs) {
@@ -321,15 +320,16 @@ body {
         width: 579px;
         height: 181px;
         
-        width: 68.3589138134593vh;
-        height: 21.3695395513577vh;
+        width: 68.3589138135vh;
+        height: 21.3695395514vh;
         
-        width: 20.5076741440378vh;
-        height: 6.41086186540731vh;
-        top: 76vh;
-        left: 58vh;
+        width: 12.3046044864227vh;
+        height: 3.84651711924439vh;
         
-        z-index: 5;
+        top: 74vh;
+        left: 33vh;
+        
+        z-index: 1;
         
         transform: rotate(0deg);
         transform-origin: center;        
@@ -344,25 +344,24 @@ body {
       width: 1046px;
       height: 407px;
       
-      width: 141.49vh;
-      height: 55vh;
+      width: 123.494687131051vh;
+      height: 48.0519480519481vh;
       
-      width: 141.49vh;
-      height: 55vh; 
-      top: 63vh;
-      left: 62vh;
+      width: 16.0543093270366vh;
+      height: 6.24675324675325vh;
+      top: 87vh;
+      left: 128vh;
 
-      z-index: 5;
+      z-index: 1;
       
       transform:rotate(0deg);
       transform-origin: center;
       
       @include respond(xs) {
-        width: 11.4945054945055vh;
-        height: 4.47252747252747vh;
-        
-        top: 84vh;
-        left: 33vh;
+        width: 11.4945054945vh;
+        height: 4.4725274725vh;
+        top: 79vh;
+        left: 33vh;     
         z-index: 1;
       }
     }
@@ -385,9 +384,8 @@ body {
         transform: rotate(0deg);
         transform-origin: center;
       }
-    }
-      
-        // ========= LIGHT SLEEPER SECTION (slot classes) =========
+    }      
+    // ========= LIGHT SLEEPER SECTION (slot classes) =========
     .broken-cd { 
       position: absolute;
       object-fit: cover;
@@ -396,8 +394,8 @@ body {
       width: 552px;
       height: 576px;
       
-      width: 74.59vh;
-      height: 77.84vh;
+      width: 65.1711924439197vh;
+      height: 68.0047225501771vh;
   
       width: 73.03vh;
       height: 76.19vh;
@@ -409,6 +407,14 @@ body {
       transform-origin: center;
       
       @include respond(xs) {
+        width: 26.0684769775679vh;
+        height: 27.2018890200708vh;
+        top: 10vh;
+        left: 56vh;
+        z-index: 2;
+        
+        transform: rotate(87deg);
+        transform-origin: center;      
       }
     }
       
@@ -431,6 +437,7 @@ body {
       transform-origin: center;
       
       @include respond(xs) {
+        left: 81vh;
       }
     }
       
@@ -480,7 +487,10 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
-        left: 189vh;
+        width: 15.159386068477vh;
+        height: 14.8760330578513vh;
+        top: 20vh;
+        left: 85vh;
       }
     }
       
@@ -505,6 +515,10 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: 40.04vh;
+        height: 21.36vh;
+        top: 34vh;
+        left: 55vh;
       }
     }
       
@@ -529,6 +543,10 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: 42.5029515938606vh;
+        height: 23.9079102715466vh;
+        top: 57vh;
+        left: 55vh;       
       }
     }
       
@@ -572,12 +590,12 @@ body {
         width: 67.5324675324675vh;
         height: 68.4769775678867vh;
         
-        width: 36.4675324675325vh;
-        height: 36.9775678866588vh;
-        top: 5vh;
-        left: 198vh;
-        z-index: 2;
+        width: 27.012987012987vh;
+        height: 27.3907910271547vh;
         
+        top: 3vh;
+        left: 98vh;
+        z-index: 2;
         transform: rotate(-7deg);
         transform-origin: center;
       }
@@ -604,6 +622,11 @@ body {
       transform-origin: center;
       
       @include respond(xs) {
+        width: 30.7910271546635vh;
+        height: 25.7851239669422vh;
+        top: 37vh;
+        left: 101vh;
+        z-index: 5;
       }
     }
     
@@ -627,6 +650,10 @@ body {
       transform-origin: center;
       
       @include respond(xs) {
+        width: 34.9421428571428vh;
+        height: 15.2564285714286vh;
+        top: 64vh;
+        left: 98vh;
       }
     }
       
@@ -650,6 +677,8 @@ body {
       transform-origin: center;
    
       @include respond(xs) {
+        left: 128vh;
+        z-index: 6;
       }
     }
       
@@ -674,6 +703,10 @@ body {
       transform-origin: center;
       
       @include respond(xs) {
+        width: 18.8131868131868vh;
+        height: 18.4615384615385vh;
+        top: 60vh;
+        left: 128vh;
       }
     }
       
@@ -698,6 +731,9 @@ body {
       transform-origin: center;
                    
       @include respond(xs) {
+        pointer-events: none;
+        top: 9vh;
+        left: 156vh;
       }
     }
       
@@ -768,16 +804,16 @@ body {
         width: 1114px;
         height: 1114px;
         
-        width: 150.54vh;
-        height: 150.54vh;
+        width: 59.0318772136954vh;
+        height: 58.7957497048406vh;
         
-        width: 150.54vh;
-        height: 150.54vh;
-        top: 0vh;
-        left: 270vh;
-        z-index: 2;
+        width: 23.6127508854782vh;
+        height: 23.5182998819362vh;
+        top: 25vh;
+        left: 165vh;
+        z-index: 4;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       }
     }
@@ -803,7 +839,8 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
-        
+        top: 55vh;
+        left: 137vh;
       }
     }
       
@@ -828,11 +865,14 @@ body {
       transform-origin: center;
       
       @include respond(xs) {
+        width: 22.4643956043956vh;
+        height: 22.1805494505494vh;
+        top: 5vh;
+        left: 183vh;
+        z-index: 6;
       }
-    }
-      
-// ========= EXIT WOUNDS SECTION (slot classes) =========
-      
+    }      
+// ========= EXIT WOUNDS SECTION (slot classes) =========      
     .exitwounds-lyricvideo {
       position: absolute;
       object-fit: cover;
@@ -854,6 +894,10 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: 42.5029515938606vh;
+        height: 23.9079102715466vh;
+        top: 4vh;
+        left: 209vh;
       }
     }
       
@@ -877,6 +921,7 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        display: none;
       }
     }
       
@@ -900,6 +945,10 @@ body {
       transform-origin: center;
       
       @include respond(xs) {
+        width: 45.421vh;
+        height: 22.737vh;
+        top: 58vh;
+        left: 194vh;
       }
     }
       
@@ -924,6 +973,10 @@ body {
       transform-origin: center;
       
       @include respond(xs) {
+        width: 25.2283076923077vh;
+        height: 18.7507692307692vh;
+        top: 4vh;
+        left: 257vh;
       }
     }
       
@@ -955,6 +1008,8 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        top: calc(18vh * 1000 / 847);
+        left: calc(215.6vh * 1000 / 847);
       }
     }
       
@@ -978,6 +1033,10 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: 23.2763076923077vh;
+        height: 25.4930989010989vh;
+        top: 33vh;
+        left: 195vh;
       }
     }
       
@@ -1002,6 +1061,10 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: 17.973543956044vh;
+        height: 26.7930494505494vh;
+        top: 33vh;
+        left: 225vh;
       }
     }
       
