@@ -797,6 +797,8 @@ body {
        display: none;
       
       @include respond(xs) {
+        display: flex;
+        
         position: absolute;
         object-fit: cover;
         cursor: pointer;
@@ -1098,6 +1100,7 @@ body {
     
       @include respond(xs) {
         display: flex;
+        
         position: absolute;
         object-fit: cover;
         
