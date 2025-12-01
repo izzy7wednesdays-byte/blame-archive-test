@@ -1065,7 +1065,7 @@ body {
       @include respond(xs) {
         width: 17.973543956044vh;
         height: 26.7930494505494vh;
-        top: 33vh;
+        top: 30vh;
         left: 225vh;
       }
     }
@@ -1103,18 +1103,19 @@ body {
         
         position: absolute;
         object-fit: cover;
+        pointer-events: none;
         
         width: 833px;
         height: 192px;
-
-        width: 237.362637362637vh;
-        height: 118.681318681319vh;
         
-        width: 112.747252747253vh;
-        height: 56.3736263736265vh;
-        top: 0vh;
-        left: 0vh;
-                
+        width: 98.3471074380165vh;
+        height: 22.668240850059vh;
+        
+        width: 49.1735537190083vh;
+        height: 11.3341204250295vh;
+        top: 49vh;
+        left: 241vh;
+        
         transform: rotate(0deg);
         transform-origin: center;
       }
@@ -1144,10 +1145,10 @@ body {
         width: 18.0989010989011vh;
         height: 21.4615384615385vh;
         
-        width: vh;
-        height: vh;
-        top: vh;
-        left: vh;
+        width: 15.556080283353vh;
+        height: 18.4462809917355vh;
+        top: 63vh;
+        left: 244vh;
       }
     }
       
@@ -1179,8 +1180,8 @@ body {
         font-size: calc(4vh * 847/1000);  
         
         width: calc(19.0vh * 847 / 1000);
-        top: calc(86.3vh * 847 / 1000);
-        left: calc(492.9vh * 847 / 1000);
+        top: calc(73.32vh * 847 / 1000);
+        left: calc(309.91vh * 847 / 1000);
       }
     }
       
