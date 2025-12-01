@@ -45,6 +45,7 @@
     border: none;
     cursor: pointer;
     z-index: 11;
+    outline: 2px dotted magenta;
     
     &:hover {
      transform: scale(1.15);
