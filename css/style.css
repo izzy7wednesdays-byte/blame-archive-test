@@ -984,12 +984,20 @@ body.desktop .torn-note {
   position: absolute;
   object-fit: cover;
   pointer-events: none;
-  width: 35.0295159386vh;
-  height: 34.639905549vh;
-  top: 55vh;
+  width: 53.7119244392vh;
+  height: 53.1145218418vh;
+  top: 51vh;
   left: -3vh;
-  transform: rotate(2deg);
+  transform: rotate(2.5deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .torn-note {
+    width: 35.0295159386vh;
+    height: 34.639905549vh;
+    top: 55vh;
+    left: -3vh;
+  }
 }
 body.desktop .tracklist {
   position: absolute;
@@ -1046,14 +1054,14 @@ body.desktop .lfg {
   pointer-events: none;
   width: 819px;
   height: 297px;
-  width: 110.68vh;
-  height: 29.59vh;
-  width: 110.68vh;
-  height: 29.59vh;
-  top: 76vh;
-  left: 58vh;
-  z-index: 5;
-  transform: scale(0.22) rotate(0deg);
+  width: 96.694214876vh;
+  height: 35.0649350649vh;
+  width: 19.3388429752vh;
+  height: 7.012987013vh;
+  top: 86.5vh;
+  left: 104vh;
+  z-index: 1;
+  transform: rotate(0deg);
   transform-origin: center;
 }
 @media (max-width: 36em) {
@@ -1074,11 +1082,11 @@ body.desktop .lfg-mobile {
     height: 181px;
     width: 68.3589138135vh;
     height: 21.3695395514vh;
-    width: 20.507674144vh;
-    height: 6.4108618654vh;
-    top: 76vh;
-    left: 58vh;
-    z-index: 5;
+    width: 12.3046044864vh;
+    height: 3.8465171192vh;
+    top: 74vh;
+    left: 33vh;
+    z-index: 1;
     transform: rotate(0deg);
     transform-origin: center;
   }
@@ -1089,23 +1097,41 @@ body.desktop .pink-arrow {
   pointer-events: none;
   width: 1046px;
   height: 407px;
-  width: 141.49vh;
-  height: 55vh;
-  width: 141.49vh;
-  height: 55vh;
-  top: 63vh;
-  left: 62vh;
-  z-index: 5;
-  transform: scale(0.1) rotate(0deg);
+  width: 123.4946871311vh;
+  height: 48.0519480519vh;
+  width: 16.054309327vh;
+  height: 6.2467532468vh;
+  top: 87vh;
+  left: 128vh;
+  z-index: 1;
+  transform: rotate(0deg);
   transform-origin: center;
 }
 @media (max-width: 36em) {
   body.desktop .pink-arrow {
     width: 11.4945054945vh;
     height: 4.4725274725vh;
+    top: 79vh;
+    left: 33vh;
+    z-index: 1;
+  }
+}
+body.desktop .pink-arrow-alt {
+  display: none;
+}
+@media (max-width: 36em) {
+  body.desktop .pink-arrow-alt {
+    display: none;
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+    width: 11.4945054945vh;
+    height: 4.4725274725vh;
     top: 84vh;
     left: 33vh;
     z-index: 1;
+    transform: rotate(0deg);
+    transform-origin: center;
   }
 }
 body.desktop .broken-cd {
@@ -1114,8 +1140,8 @@ body.desktop .broken-cd {
   pointer-events: none;
   width: 552px;
   height: 576px;
-  width: 74.59vh;
-  height: 77.84vh;
+  width: 65.1711924439vh;
+  height: 68.0047225502vh;
   width: 73.03vh;
   height: 76.19vh;
   top: -14vh;
@@ -1123,6 +1149,17 @@ body.desktop .broken-cd {
   z-index: 2;
   transform: scale(0.5) rotate(87deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .broken-cd {
+    width: 26.0684769776vh;
+    height: 27.2018890201vh;
+    top: 10vh;
+    left: 56vh;
+    z-index: 2;
+    transform: rotate(87deg);
+    transform-origin: center;
+  }
 }
 body.desktop .blue-star-1 {
   position: absolute;
@@ -1138,6 +1175,11 @@ body.desktop .blue-star-1 {
   z-index: 1;
   transform: rotate(13deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .blue-star-1 {
+    left: 81vh;
+  }
 }
 body.desktop .blue-star-2 {
   position: absolute;
@@ -1178,7 +1220,10 @@ body.desktop .silver-star1-1 {
 }
 @media (max-width: 36em) {
   body.desktop .silver-star1-1 {
-    left: 189vh;
+    width: 15.1593860685vh;
+    height: 14.8760330579vh;
+    top: 20vh;
+    left: 85vh;
   }
 }
 body.desktop .lightsleeper-title {
@@ -1197,6 +1242,14 @@ body.desktop .lightsleeper-title {
   transform: rotate(-9deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .lightsleeper-title {
+    width: 40.04vh;
+    height: 21.36vh;
+    top: 34vh;
+    left: 55vh;
+  }
+}
 body.desktop .lightsleeper-visualizer {
   position: absolute;
   object-fit: cover;
@@ -1212,6 +1265,14 @@ body.desktop .lightsleeper-visualizer {
   z-index: 3;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .lightsleeper-visualizer {
+    width: 42.5029515939vh;
+    height: 23.9079102715vh;
+    top: 57vh;
+    left: 55vh;
+  }
 }
 body.desktop .about-lightsleeper {
   position: absolute;
@@ -1231,7 +1292,7 @@ body.desktop .about-lightsleeper {
 }
 @media (max-width: 36em) {
   body.desktop .about-lightsleeper {
-    display: none !important;
+    display: none;
   }
 }
 body.desktop .about-lightsleeper-mobile {
@@ -1247,10 +1308,10 @@ body.desktop .about-lightsleeper-mobile {
     height: 580px;
     width: 67.5324675325vh;
     height: 68.4769775679vh;
-    width: 36.4675324675vh;
-    height: 36.9775678867vh;
-    top: 5vh;
-    left: 198vh;
+    width: 27.012987013vh;
+    height: 27.3907910272vh;
+    top: 3vh;
+    left: 98vh;
     z-index: 2;
     transform: rotate(-7deg);
     transform-origin: center;
@@ -1272,6 +1333,15 @@ body.desktop .autumn-text {
   transform: rotate(7deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .autumn-text {
+    width: 30.7910271547vh;
+    height: 25.7851239669vh;
+    top: 39vh;
+    left: 100vh;
+    z-index: 5;
+  }
+}
 body.desktop .blame-it-notesapp {
   position: absolute;
   object-fit: cover;
@@ -1288,6 +1358,14 @@ body.desktop .blame-it-notesapp {
   transform: rotate(-3deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .blame-it-notesapp {
+    width: 34.9421428571vh;
+    height: 15.2564285714vh;
+    top: 64vh;
+    left: 98vh;
+  }
+}
 body.desktop .lightsleeper-studio {
   position: absolute;
   object-fit: cover;
@@ -1302,6 +1380,12 @@ body.desktop .lightsleeper-studio {
   z-index: 3;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .lightsleeper-studio {
+    left: 128vh;
+    z-index: 6;
+  }
 }
 body.desktop .silver-star1-2 {
   position: absolute;
@@ -1319,6 +1403,15 @@ body.desktop .silver-star1-2 {
   transform: rotate(10deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .silver-star1-2 {
+    width: 18.8131868132vh;
+    height: 18.4615384615vh;
+    top: 46vh;
+    left: 128vh;
+    z-index: 6;
+  }
+}
 body.desktop .lightsleeper-chords {
   position: absolute;
   object-fit: cover;
@@ -1334,6 +1427,13 @@ body.desktop .lightsleeper-chords {
   z-index: 3;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .lightsleeper-chords {
+    pointer-events: none;
+    top: 9vh;
+    left: 156vh;
+  }
 }
 body.desktop .text-wrapper {
   pointer-events: none;
@@ -1388,19 +1488,20 @@ body.desktop .play-lightsleeper-mobile {
 }
 @media (max-width: 36em) {
   body.desktop .play-lightsleeper-mobile {
+    display: flex;
     position: absolute;
     object-fit: cover;
     cursor: pointer;
     width: 1114px;
     height: 1114px;
-    width: 150.54vh;
-    height: 150.54vh;
-    width: 150.54vh;
-    height: 150.54vh;
-    top: 0vh;
-    left: 270vh;
-    z-index: 2;
-    transform: scale(1) rotate(0deg);
+    width: 59.0318772137vh;
+    height: 58.7957497048vh;
+    width: 23.6127508855vh;
+    height: 23.5182998819vh;
+    top: 25vh;
+    left: 165vh;
+    z-index: 4;
+    transform: rotate(0deg);
     transform-origin: center;
   }
 }
@@ -1420,6 +1521,14 @@ body.desktop .broken-breathing {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .broken-breathing {
+    width: 39.5604395604vh;
+    height: 22.2527472527vh;
+    top: 60vh;
+    left: 137vh;
+  }
+}
 body.desktop .lightsleeper-voicememo {
   position: absolute;
   object-fit: cover;
@@ -1435,6 +1544,15 @@ body.desktop .lightsleeper-voicememo {
   z-index: 2;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .lightsleeper-voicememo {
+    width: 22.4643956044vh;
+    height: 22.1805494505vh;
+    top: 5vh;
+    left: 183vh;
+    z-index: 6;
+  }
 }
 body.desktop .exitwounds-lyricvideo {
   position: absolute;
@@ -1452,6 +1570,14 @@ body.desktop .exitwounds-lyricvideo {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .exitwounds-lyricvideo {
+    width: 42.5029515939vh;
+    height: 23.9079102715vh;
+    top: 4vh;
+    left: 209vh;
+  }
+}
 body.desktop .star-trio-1 {
   position: absolute;
   object-fit: cover;
@@ -1467,6 +1593,11 @@ body.desktop .star-trio-1 {
   transform: rotate(195deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .star-trio-1 {
+    display: none;
+  }
+}
 body.desktop .exitwounds-title {
   position: absolute;
   object-fit: cover;
@@ -1481,6 +1612,14 @@ body.desktop .exitwounds-title {
   left: 324vh;
   transform: rotate(-10deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .exitwounds-title {
+    width: 45.421vh;
+    height: 22.737vh;
+    top: 58vh;
+    left: 179vh;
+  }
 }
 body.desktop .play-exitwounds {
   position: absolute;
@@ -1498,6 +1637,14 @@ body.desktop .play-exitwounds {
   z-index: 3;
   transform: rotate(13deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .play-exitwounds {
+    width: 25.2283076923vh;
+    height: 18.7507692308vh;
+    top: 4vh;
+    left: 257vh;
+  }
 }
 body.desktop .text-wrapper-2 {
   position: absolute;
@@ -1521,6 +1668,12 @@ body.desktop .text-wrapper-2 {
   transform: rotate(13deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .text-wrapper-2 {
+    top: 21.2514757969vh;
+    left: 254.5454545455vh;
+  }
+}
 body.desktop .missed-calls {
   position: absolute;
   object-fit: cover;
@@ -1535,6 +1688,14 @@ body.desktop .missed-calls {
   left: 372vh;
   transform: rotate(20deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .missed-calls {
+    width: 23.2763076923vh;
+    height: 25.4930989011vh;
+    top: 33vh;
+    left: 195vh;
+  }
 }
 body.desktop .about-exitwounds {
   position: absolute;
@@ -1551,6 +1712,14 @@ body.desktop .about-exitwounds {
   z-index: 2;
   transform: rotate(-10deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .about-exitwounds {
+    width: 17.973543956vh;
+    height: 26.7930494505vh;
+    top: 30vh;
+    left: 225vh;
+  }
 }
 body.desktop .exitwounds-animation {
   position: absolute;
@@ -1581,14 +1750,15 @@ body.desktop .exitwounds-animation-mobile {
     display: flex;
     position: absolute;
     object-fit: cover;
+    pointer-events: none;
     width: 833px;
     height: 192px;
-    width: 237.3626373626vh;
-    height: 118.6813186813vh;
-    width: 112.7472527473vh;
-    height: 56.3736263736vh;
-    top: 400vh;
-    left: 0vh;
+    width: 98.347107438vh;
+    height: 22.6682408501vh;
+    width: 49.173553719vh;
+    height: 11.334120425vh;
+    top: 33vh;
+    left: 253vh;
     transform: rotate(0deg);
     transform-origin: center;
   }
@@ -1609,6 +1779,16 @@ body.desktop .exitwounds-voicememo {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .exitwounds-voicememo {
+    width: 18.0989010989vh;
+    height: 21.4615384615vh;
+    width: 15.5560802834vh;
+    height: 18.4462809917vh;
+    top: 63vh;
+    left: 229vh;
+  }
+}
 body.desktop .text-wrapper-3 {
   position: absolute;
   pointer-events: none;
@@ -1628,6 +1808,16 @@ body.desktop .text-wrapper-3 {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .text-wrapper-3 {
+    font-size: 3.388vh;
+    width: 16.093vh;
+    top: 64.10096vh;
+    left: 249.5262vh;
+    transform: rotate(18deg);
+    transform-origin: center;
+  }
+}
 body.desktop .click-me-arrow {
   position: absolute;
   object-fit: cover;
@@ -1643,6 +1833,18 @@ body.desktop .click-me-arrow {
   z-index: 0;
   transform: rotate(-14deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .click-me-arrow {
+    width: 8.7065934066vh;
+    height: 4.3637362637vh;
+    width: 7.4833530106vh;
+    height: 3.7506493506vh;
+    top: 72vh;
+    left: 246.02vh;
+    transform: rotate(-1deg);
+    transform-origin: center;
+  }
 }
 body.desktop .text-wrapper-4 {
   position: absolute;
@@ -1660,6 +1862,14 @@ body.desktop .text-wrapper-4 {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .text-wrapper-4 {
+    font-size: 1.99892vh;
+    width: 28.12887vh;
+    top: 5.11588vh;
+    left: 284.63435vh;
+  }
+}
 body.desktop .substack-point-arrow {
   position: absolute;
   object-fit: cover;
@@ -1673,6 +1883,16 @@ body.desktop .substack-point-arrow {
   left: 445vh;
   transform: rotate(20deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .substack-point-arrow {
+    width: 62.6373626374vh;
+    height: 36.4835164835vh;
+    width: 17.3820070838vh;
+    height: 6.773270366vh;
+    top: 21vh;
+    left: 294.63vh;
+  }
 }
 body.desktop .scorpio-constellation {
   position: absolute;
@@ -1688,6 +1908,14 @@ body.desktop .scorpio-constellation {
   left: 427vh;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .scorpio-constellation {
+    width: vh;
+    height: vh;
+    top: 47vh;
+    left: 260.63vh;
+  }
 }
 body.desktop .text-wrapper-5 {
   position: absolute;
@@ -1707,6 +1935,14 @@ body.desktop .text-wrapper-5 {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .text-wrapper-5 {
+    font-size: 1.694vh;
+    width: 23.13157vh;
+    top: 75.12043vh;
+    left: 273.63182vh;
+  }
+}
 body.desktop .subscribe-arrow {
   position: absolute;
   object-fit: cover;
@@ -1720,6 +1956,16 @@ body.desktop .subscribe-arrow {
   left: 440vh;
   transform: rotate(-45deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .subscribe-arrow {
+    width: 6.5690672963vh;
+    height: 3.2415584416vh;
+    top: 70vh;
+    left: 283vh;
+    transform: rotate(-75deg);
+    transform-origin: center;
+  }
 }
 body.desktop .subscribe-button {
   position: absolute;
@@ -1737,6 +1983,14 @@ body.desktop .subscribe-button {
   transform: rotate(11deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .subscribe-button {
+    width: vh;
+    height: vh;
+    top: 57vh;
+    left: 276vh;
+  }
+}
 body.desktop .exitwounds-substackflier {
   position: absolute;
   object-fit: cover;
@@ -1752,6 +2006,14 @@ body.desktop .exitwounds-substackflier {
   z-index: 1;
   transform: rotate(9deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .exitwounds-substackflier {
+    width: vh;
+    height: vh;
+    top: 0vh;
+    left: 313.63vh;
+  }
 }
 body.desktop .silver-star3-1 {
   position: absolute;
@@ -1787,6 +2049,14 @@ body.desktop .blue-star-3 {
   transform: rotate(95deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .blue-star-3 {
+    width: vh;
+    height: vh;
+    top: 75vh;
+    left: 302.63vh;
+  }
+}
 body.desktop .silver-star3-2 {
   position: absolute;
   object-fit: cover;
@@ -1801,6 +2071,14 @@ body.desktop .silver-star3-2 {
   transform: rotate(14deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .silver-star3-2 {
+    width: vh;
+    height: vh;
+    top: 49vh;
+    left: 292.63vh;
+  }
+}
 body.desktop .silver-star3-3 {
   position: absolute;
   object-fit: cover;
@@ -1814,6 +2092,14 @@ body.desktop .silver-star3-3 {
   left: 504vh;
   transform: rotate(12deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .silver-star3-3 {
+    width: vh;
+    height: vh;
+    top: 78vh;
+    left: 312.63vh;
+  }
 }
 body.desktop .glitter-truck-2 {
   position: absolute;
@@ -1831,6 +2117,14 @@ body.desktop .glitter-truck-2 {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .glitter-truck-2 {
+    width: vh;
+    height: vh;
+    top: 76vh;
+    left: 319.63vh;
+  }
+}
 body.desktop .landmines-bts-clip {
   position: absolute;
   object-fit: cover;
@@ -1847,6 +2141,14 @@ body.desktop .landmines-bts-clip {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .landmines-bts-clip {
+    width: 36.3956043956vh;
+    height: 20.4725274725vh;
+    top: 8vh;
+    left: 377.63vh;
+  }
+}
 body.desktop .landmines-voicememo {
   position: absolute;
   object-fit: cover;
@@ -1862,6 +2164,14 @@ body.desktop .landmines-voicememo {
   z-index: 2;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .landmines-voicememo {
+    width: 42.1157024793vh;
+    height: 18.728661157vh;
+    top: 32vh;
+    left: 373.63vh;
+  }
 }
 body.desktop .blue-star-4 {
   position: absolute;
@@ -1902,6 +2212,10 @@ body.desktop .katstratford-car {
 }
 @media (max-width: 36em) {
   body.desktop .katstratford-car {
+    width: vh;
+    height: vh;
+    top: 55vh;
+    left: 368.63vh;
     z-index: 5;
   }
 }
@@ -1923,7 +2237,10 @@ body.desktop .vocals-landmines-1 {
 }
 @media (max-width: 36em) {
   body.desktop .vocals-landmines-1 {
-    --left:405svh;
+    width: vh;
+    height: vh;
+    top: 39vh;
+    left: 424.63vh;
   }
 }
 body.desktop .text-wrapper-6 {
@@ -1974,6 +2291,14 @@ body.desktop .october-lane {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .october-lane {
+    width: vh;
+    height: vh;
+    top: 62vh;
+    left: 411vh;
+  }
+}
 body.desktop .landmines-license {
   position: absolute;
   object-fit: cover;
@@ -1989,6 +2314,14 @@ body.desktop .landmines-license {
   z-index: 0;
   transform: rotate(-6deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .landmines-license {
+    width: 37.0461538462vh;
+    height: 21.6246153846vh;
+    top: 11vh;
+    left: 419vh;
+  }
 }
 body.desktop .silver-star3-4 {
   position: absolute;
@@ -2008,7 +2341,7 @@ body.desktop .silver-star3-4 {
 }
 @media (max-width: 36em) {
   body.desktop .silver-star3-4 {
-    display: none !important;
+    display: none;
   }
 }
 body.desktop .blue-star-5 {
@@ -2050,7 +2383,7 @@ body.desktop .landmines-title {
 }
 @media (max-width: 36em) {
   body.desktop .landmines-title {
-    display: none !important;
+    display: none;
   }
 }
 body.desktop .landmines-title-mobile {
@@ -2064,13 +2397,15 @@ body.desktop .landmines-title-mobile {
     pointer-events: none;
     width: 992px;
     height: 229px;
-    width: 134.05vh;
-    height: 30.95vh;
-    top: 41vh;
-    left: 575vh;
+    width: 992px;
+    height: 229px;
+    width: 117.119244392vh;
+    height: 27.0365997639vh;
+    width: 58.559622196vh;
+    height: 13.5182998819vh;
+    top: 33vh;
+    left: 449vh;
     z-index: 0;
-    transform: rotate(0deg);
-    transform-origin: center;
   }
 }
 body.desktop .landmines-lyricvideo {
@@ -2088,6 +2423,14 @@ body.desktop .landmines-lyricvideo {
   z-index: 1;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .landmines-lyricvideo {
+    width: 36.3956043956vh;
+    height: 20.4725274725vh;
+    top: 55vh;
+    left: 449vh;
+  }
 }
 body.desktop .text-wrapper-7 {
   position: absolute;
@@ -2114,6 +2457,14 @@ body.desktop .text-wrapper-7 {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .text-wrapper-7 {
+    font-size: 1.99892vh;
+    width: 29.12833vh;
+    top: 10.12165vh;
+    left: 482.63754vh;
+  }
+}
 body.desktop .about-landmines {
   position: absolute;
   object-fit: cover;
@@ -2130,6 +2481,14 @@ body.desktop .about-landmines {
   transform: rotate(10deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .about-landmines {
+    top: -3vh;
+    left: 459vh;
+    transform: rotate(13deg);
+    transform-origin: center;
+  }
+}
 body.desktop .landmines-og-guitar {
   position: absolute;
   object-fit: cover;
@@ -2145,6 +2504,14 @@ body.desktop .landmines-og-guitar {
   z-index: 1;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .landmines-og-guitar {
+    width: vh;
+    height: vh;
+    top: 42vh;
+    left: 518.64vh;
+  }
 }
 body.desktop .text-wrapper-8 {
   position: absolute;
@@ -2194,6 +2561,14 @@ body.desktop .landmines-reaction {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .landmines-reaction {
+    width: 22.131148125vh;
+    height: 39.344263125vh;
+    top: 2vh;
+    left: 514.64vh;
+  }
+}
 body.desktop .blue-star-6 {
   position: absolute;
   object-fit: cover;
@@ -2210,6 +2585,14 @@ body.desktop .blue-star-6 {
   transform: rotate(33deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .blue-star-6 {
+    width: vh;
+    height: vh;
+    top: 43vh;
+    left: 512.64vh;
+  }
+}
 body.desktop .blue-star-7 {
   position: absolute;
   object-fit: cover;
@@ -2225,6 +2608,14 @@ body.desktop .blue-star-7 {
   z-index: 0;
   transform: rotate(29deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .blue-star-7 {
+    width: vh;
+    height: vh;
+    top: vh;
+    left: vh;
+  }
 }
 body.desktop .play-landmines {
   position: absolute;
@@ -2243,6 +2634,14 @@ body.desktop .play-landmines {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .play-landmines {
+    width: vh;
+    height: vh;
+    top: 49vh;
+    left: 542.64vh;
+  }
+}
 body.desktop .landmines-session-voicememos {
   position: absolute;
   object-fit: cover;
@@ -2258,6 +2657,14 @@ body.desktop .landmines-session-voicememos {
   z-index: 2;
   transform: rotate(14deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .landmines-session-voicememos {
+    width: vh;
+    height: vh;
+    top: 48vh;
+    left: 488.64vh;
+  }
 }
 body.desktop .enchanted-bridge {
   position: absolute;
@@ -2275,20 +2682,36 @@ body.desktop .enchanted-bridge {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .enchanted-bridge {
+    width: vh;
+    height: vh;
+    top: 62vh;
+    left: 560.64vh;
+  }
+}
 body.desktop .misery-ogchorus {
   position: absolute;
   object-fit: cover;
-  width: 1920px;
-  height: 1080px;
-  width: 209.83607vh;
-  height: 118.03279vh;
-  width: 54.5573782vh;
-  height: 30.6885254vh;
-  top: 4vh;
+  width: 637px;
+  height: 283.271px;
+  width: 75.2066115702vh;
+  height: 31.1286813187vh;
+  width: 53.88vh;
+  height: 23.8vh;
+  top: 8vh;
   left: 703vh;
   z-index: 3;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .misery-ogchorus {
+    width: 43.104vh;
+    height: 19.04vh;
+    top: 4vh;
+    left: 647vh;
+  }
 }
 body.desktop .silver-star3-5 {
   position: absolute;
@@ -2305,6 +2728,14 @@ body.desktop .silver-star3-5 {
   z-index: auto;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .silver-star3-5 {
+    width: vh;
+    height: vh;
+    top: 62vh;
+    left: 560.64vh;
+  }
 }
 body.desktop .text-wrapper-9 {
   position: absolute;
@@ -2331,6 +2762,14 @@ body.desktop .text-wrapper-9 {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .text-wrapper-9 {
+    font-size: 1.694vh;
+    width: 39.1314vh;
+    top: 22.12364vh;
+    left: 648.64107vh;
+  }
+}
 body.desktop .little-miss-misery {
   position: absolute;
   object-fit: cover;
@@ -2347,6 +2786,14 @@ body.desktop .little-miss-misery {
   transform: rotate(-11deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .little-miss-misery {
+    width: vh;
+    height: vh;
+    top: 2vh;
+    left: 617.64vh;
+  }
+}
 body.desktop .about-misery {
   position: absolute;
   object-fit: cover;
@@ -2361,6 +2808,13 @@ body.desktop .about-misery {
   z-index: auto;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .about-misery {
+    top: 34vh;
+    left: 647vh;
+    z-index: 2;
+  }
 }
 body.desktop .silver-star3-6 {
   position: absolute;
@@ -2399,6 +2853,12 @@ body.desktop .kat-stratford-dancing {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .kat-stratford-dancing {
+    top: 33vh;
+    left: 610vh;
+  }
+}
 body.desktop .solo-cups {
   position: absolute;
   object-fit: cover;
@@ -2414,25 +2874,35 @@ body.desktop .solo-cups {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .solo-cups {
+    width: 19.986638vh;
+    height: 10.164812vh;
+    top: 50vh;
+    left: 627vh;
+  }
+}
 body.desktop .misery-wants-company {
   position: absolute;
   object-fit: cover;
-  width: 1920px;
-  height: 1080px;
-  width: 209.83607vh;
-  height: 118.03279vh;
-  width: 54.5573782vh;
-  height: 30.6885254vh;
-  top: 2vh;
-  left: 807vh;
-  z-index: auto;
+  width: 637px;
+  height: 277.519px;
+  width: 75.2066115702vh;
+  height: 32.7649350649vh;
+  width: 53.88vh;
+  height: 23.92vh;
+  top: 7vh;
+  left: 703vh;
+  z-index: 3;
   transform: rotate(0deg);
   transform-origin: center;
 }
 @media (max-width: 36em) {
   body.desktop .misery-wants-company {
-    --left: 627svh;
-    --y:74svh;
+    width: 43.920661157vh;
+    height: 19.1347220779vh;
+    top: 67vh;
+    left: 608vh;
   }
 }
 body.desktop .text-wrapper-10 {
@@ -2459,6 +2929,14 @@ body.desktop .text-wrapper-10 {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .text-wrapper-10 {
+    font-size: 1.694vh;
+    width: 41.13032vh;
+    top: 59.00202vh;
+    left: 608.00201vh;
+  }
+}
 body.desktop .misery-title {
   position: absolute;
   object-fit: cover;
@@ -2474,6 +2952,12 @@ body.desktop .misery-title {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .misery-title {
+    top: 1vh;
+    left: 539.64vh;
+  }
+}
 body.desktop .vocals-misery-4 {
   position: absolute;
   object-fit: cover;
@@ -2488,6 +2972,12 @@ body.desktop .vocals-misery-4 {
   z-index: 4;
   transform: scale(1) rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .vocals-misery-4 {
+    top: 3vh;
+    left: 716vh;
+  }
 }
 body.desktop .text-wrapper-11 {
   position: absolute;
@@ -2512,6 +3002,11 @@ body.desktop .text-wrapper-11 {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .text-wrapper-11 {
+    display: none;
+  }
+}
 body.desktop .play-misery {
   position: absolute;
   object-fit: cover;
@@ -2525,8 +3020,15 @@ body.desktop .play-misery {
   top: 40vh;
   left: 870vh;
   z-index: 5;
-  transform: scale(1) rotate(0deg);
+  transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .play-misery {
+    top: 43vh;
+    left: 727vh;
+    z-index: 2;
+  }
 }
 body.desktop .text-wrapper-12 {
   position: absolute;
@@ -2550,6 +3052,14 @@ body.desktop .text-wrapper-12 {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .text-wrapper-12 {
+    font-size: 1.694vh;
+    width: 19.13373vh;
+    top: 1.11804vh;
+    left: 691.64326vh;
+  }
+}
 body.desktop .misery-wlj {
   position: absolute;
   object-fit: cover;
@@ -2564,6 +3074,12 @@ body.desktop .misery-wlj {
   z-index: 4;
   transform: scale(1) rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .misery-wlj {
+    top: 15vh;
+    left: 692vh;
+  }
 }
 body.desktop .star-trio-2 {
   position: absolute;
@@ -2597,8 +3113,16 @@ body.desktop .misery-visualizer {
   top: 68vh;
   left: 864vh;
   z-index: 1;
-  transform: scale(1) rotate(0deg);
+  transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .misery-visualizer {
+    width: 36.3956043956vh;
+    height: 20.4725274725vb;
+    top: 56vh;
+    left: 690vh;
+  }
 }
 body.desktop .smurfette-1 {
   position: absolute;
@@ -2690,6 +3214,14 @@ body.desktop .text-wrapper-13 {
   transform: rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .text-wrapper-13 {
+    font-size: 1.694vh;
+    width: 49.126vh;
+    top: 33.1177vh;
+    left: 705.6357vh;
+  }
+}
 body.desktop .sleepwalking-radio-polaroid {
   position: absolute;
   object-fit: cover;
@@ -2745,16 +3277,17 @@ body.desktop .sleepwalking-title {
 body.desktop .sleepwalking-listeningparty {
   position: absolute;
   object-fit: cover;
-  width: 1920px;
-  height: 1080px;
-  width: 209.83607vh;
-  height: 118.03279vh;
-  width: 52.4590175vh;
-  height: 29.5081975vh;
-  top: 68vh;
-  left: 984vh;
-  z-index: auto;
-  transform: scale(1) rotate(0deg);
+  pointer-events: auto;
+  width: 292px;
+  height: 219px;
+  width: 34.4746162928vh;
+  height: 25.8559622196vh;
+  width: 44.8170011806vh;
+  height: 33.6127508855vh;
+  top: 64vh;
+  left: 986vh;
+  z-index: 1;
+  transform: rotate(0deg);
   transform-origin: center;
 }
 body.desktop .blue-star-8 {
@@ -2952,6 +3485,14 @@ body.desktop .text-wrapper-14 {
   z-index: 0;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .text-wrapper-14 {
+    font-size: 1.694vh;
+    width: 49.126vh;
+    top: 33.1177vh;
+    left: 705.6357vh;
+  }
 }
 body.desktop .about-ep {
   position: absolute;
@@ -6051,7 +6592,7 @@ body .ae-modal-closed {
 }
 .modal button.close-modal {
   position: absolute;
-  top: 1svh;
+  top: 1.5svh;
   left: 1svh;
   width: 5.8svh;
   height: 5.9svh;
