@@ -2892,7 +2892,7 @@ body.desktop .misery-wants-company {
   width: 53.88vh;
   height: 23.92vh;
   top: 7vh;
-  left: 703vh;
+  left: 806vh;
   z-index: 3;
   transform: rotate(0deg);
   transform-origin: center;
@@ -6599,7 +6599,7 @@ body .ae-modal-closed {
   width: 1.7355371901svh;
   height: 1.7709563164svh;
   background-color: transparent;
-  background-image: url("/assets/ui/x.webp");
+  background-image: url("/assets/ui/x.webp"), url("https://github.com/izzy7wednesdays-byte/blame-archive-test/blob/main/assets/ui/x.webp?raw=true");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
