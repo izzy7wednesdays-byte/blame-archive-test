@@ -624,8 +624,8 @@ body {
       @include respond(xs) {
         width: 30.7910271546635vh;
         height: 25.7851239669422vh;
-        top: 37vh;
-        left: 101vh;
+        top: 39vh;
+        left: 100vh;
         z-index: 5;
       }
     }
@@ -705,8 +705,9 @@ body {
       @include respond(xs) {
         width: 18.8131868131868vh;
         height: 18.4615384615385vh;
-        top: 60vh;
+        top: 46vh;
         left: 128vh;
+        z-index: 6;
       }
     }
       
@@ -841,8 +842,10 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
-        top: 55vh;
-        left: 137vh;
+        width: 39.5604395604396vh;
+        height: 22.2527472527474vh;
+        top: 60vh;
+        left: 137vh;           
       }
     }
       
@@ -950,7 +953,7 @@ body {
         width: 45.421vh;
         height: 22.737vh;
         top: 58vh;
-        left: 194vh;
+        left: 179vh;
       }
     }
       
@@ -1113,8 +1116,8 @@ body {
         
         width: 49.1735537190083vh;
         height: 11.3341204250295vh;
-        top: 49vh;
-        left: 241vh;
+        top: 33vh;
+        left: 253vh;
         
         transform: rotate(0deg);
         transform-origin: center;
@@ -1148,7 +1151,7 @@ body {
         width: 15.556080283353vh;
         height: 18.4462809917355vh;
         top: 63vh;
-        left: 244vh;
+        left: 229vh;
       }
     }
       
@@ -1180,8 +1183,11 @@ body {
         font-size: calc(4vh * 847/1000);  
         
         width: calc(19.0vh * 847 / 1000);
-        top: calc(73.32vh * 847 / 1000);
-        left: calc(309.91vh * 847 / 1000);
+        top: calc(75.68vh * 847 / 1000);
+        left: calc(294.6vh * 847 / 1000);
+
+        transform: rotate(18deg);
+        transform-origin: center;
       }
     }
       
@@ -1209,10 +1215,13 @@ body {
         width: 8.7065934065934vh;
         height: 4.36373626373627vh;
         
-        width: vh;
-        height: vh;
-        top: vh;
-        left: vh;
+        width: 7.48335301062574vh;
+        height: 3.75064935064935vh;
+        top: 72vh;
+        left: 246.02vh;
+        
+        transform: rotate(-1deg);
+        transform-origin: center;
       }
     }
       
@@ -1236,11 +1245,11 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
-        font-size: calc(2vh * 847 / 1000);
+        font-size: calc(2.36vh * 847 / 1000);
         
-        width: calc(58vh * 847 / 1000);
-        top: calc(39.1vh * 847 / 1000);
-        left: calc(833.1vh * 847 / 1000);
+        width: calc(33.21vh * 847 / 1000);
+        top: calc(6.04vh * 847 / 1000);
+        left: calc(336.05vh * 847 / 1000);
       }
     }
       
@@ -1266,10 +1275,10 @@ body {
         width: 62.6373626373626vh;
         height: 36.4835164835165vh;
         
-        width: vh;
-        height: vh;
-        top: vh;
-        left: vh;
+        width: 17.3820070838253vh;
+        height: 6.77327036599764vh;
+        top: 21vh;
+        left: 294.63vh;
       }
     }
       
@@ -1295,8 +1304,8 @@ body {
       @include respond(xs) {
         width: vh;
         height: vh;
-        top: vh;
-        left: vh;
+        top: 47vh;
+        left: 260.63vh;
       }
     }
       
@@ -1325,9 +1334,9 @@ body {
       @include respond(xs) {
         font-size: calc(2vh * 847 / 1000);
         
-        width: calc(58vh * 847 / 1000);
-        top: calc(39.1vh * 847 / 1000);
-        left: calc(833.1vh * 847 / 1000);
+        width: calc(27.31vh * 847 / 1000);
+        top: calc(88.69vh * 847 / 1000);
+        left: calc(323.06vh * 847 / 1000);
       }
     }
       
@@ -1350,10 +1359,13 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
-        width: vh;
-        height: vh;
-        top: vh;
-        left: vh;
+        width: 6.56906729634006vh;
+        height: 3.24155844155844vh;
+        top: 70vh;
+        left: 283vh;
+        
+        transform: rotate(-75deg);
+        transform-origin: center;
       }
     }
       
@@ -1380,8 +1392,8 @@ body {
       @include respond(xs) {
         width: vh;
         height: vh;
-        top: vh;
-        left: vh;
+        top: 57vh;
+        left: 276vh;
       }
     }
       
@@ -1408,8 +1420,8 @@ body {
       @include respond(xs) {
         width: vh;
         height: vh;
-        top: vh;
-        left: vh;
+        top: 0vh;
+        left: 313.63vh;
       }
     }
       
@@ -1458,8 +1470,8 @@ body {
       @include respond(xs) {
         width: vh;
         height: vh;
-        top: vh;
-        left: vh;
+        top: 75vh;
+        left: 302.63vh;
       }
     }
       
@@ -1484,8 +1496,8 @@ body {
       @include respond(xs) {
         width: vh;
         height: vh;
-        top: vh;
-        left: vh;
+        top: 49vh;
+        left: 292.63vh;
       }
     }
       
@@ -1510,8 +1522,8 @@ body {
       @include respond(xs) {
         width: vh;
         height: vh;
-        top: vh;
-        left: vh;
+        top: 78vh;
+        left: 312.63vh;
       }
     }      
       // ========= LANDMINES SECTION =========     
@@ -1538,8 +1550,8 @@ body {
          @include respond(xs) {
            width: vh;
            height: vh;
-           top: vh;
-           left: vh;
+           top: 76vh;
+           left: 319.63vh;
         } 
       }
       
@@ -1564,10 +1576,10 @@ body {
         transform-origin: center;
       
          @include respond(xs) {
-           width: vh;
-           height: vh;
-           top: vh;
-           left: vh;
+           width: 36.3956043956044vh;
+           height: 20.4725274725276vh;
+           top: 8vh;
+           left: 377.63vh;
         }
       }
       
@@ -1592,10 +1604,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          width: vh;
-          height: vh;
-          top: vh;
-          left: vh;
+          width: 42.1157024793388vh;
+          height: 18.7286611570248vh;
+          top: 32vh;
+          left: 373.63vh;
         }  
       }
       
@@ -1647,8 +1659,8 @@ body {
         @include respond(xs) {
           width: vh;
           height: vh;
-          top: vh;
-          left: vh;
+          top: 55vh;
+          left: 368.63vh;
           z-index: 5;
         }
       }
@@ -1676,8 +1688,8 @@ body {
         @include respond(xs) {
           width: vh;
           height: vh;
-          top: vh;
-          left: vh;
+          top: 39vh;
+          left: 424.63vh;
         }    
       }
       
@@ -1742,8 +1754,8 @@ body {
         @include respond(xs) {   
           width: vh;
           height: vh;
-          top: vh;
-          left: vh;
+          top: 62vh;
+          left: 411vh;
         }  
       }
       
@@ -1768,10 +1780,10 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
-          width: vh;
-          height: vh;
-          top: vh;
-          left: vh;
+          width: 37.0461538461538vh;
+          height: 21.6246153846154vh;
+          top: 11vh;
+          left: 419vh;
         }    
       }
       
@@ -1863,14 +1875,17 @@ body {
           width: 992px;
           height: 229px;
           
-          width: 134.05vh;
-          height: 30.95vh;
-          top: 41vh;
-          left: 575vh;
-          z-index: 0;
-                  
-          transform: rotate(0deg);
-          transform-origin: center;
+          width: 992px;
+          height: 229px;
+          
+          width: 117.119244391972vh;
+          height: 27.0365997638725vh;
+          
+          width: 58.559622195986vh;
+          height: 13.5182998819363vh;
+          top: 33vh;
+          left: 449vh;
+          z-index: 0;                  
         }   
       }
       
@@ -1896,10 +1911,10 @@ body {
 
       
         @include respond(xs) {
-          width: vh;
-          height: vh;
-          top: vh;
-          left: vh;
+          width: 36.3956043956044vh;
+          height: 20.4725274725276vh;
+          top: 55vh;
+          left: 449vh;
         }       
       }
       
@@ -1935,11 +1950,11 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          font-size: calc(2vh * 847 / 1000);
+          font-size: calc(2.36vh * 847 / 1000);
         
-          width: calc(58vh * 847 / 1000);
-          top: calc(39.1vh * 847 / 1000);
-          left: calc(833.1vh * 847 / 1000);
+          width: calc(34.39vh * 847 / 1000);
+          top: calc(11.95vh * 847 / 1000);
+          left: calc(569.82vh * 847 / 1000);
 
         }      
       }
@@ -1964,10 +1979,11 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          width: vh;
-          height: vh;
-          top: vh;
-          left: vh;
+          top: -3vh;
+          left: 459vh;
+          
+          transform: rotate(13deg);
+          transform-origin: center;
         }      
       }
       
@@ -1994,8 +2010,8 @@ body {
         @include respond(xs) {
           width: vh;
           height: vh;
-          top: vh;
-          left: vh;
+          top: 42vh;
+          left: 518.64vh;
 
         }       
       }
@@ -2060,10 +2076,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          width: vh;
-          height: vh;
-          top: vh;
-          left: vh;
+          width: 22.131148125vh;
+          height: 39.344263125vh;
+          top: 2vh;
+          left: 514.64vh;
         }
       }
       
@@ -2089,9 +2105,8 @@ body {
         @include respond(xs) {
           width: vh;
           height: vh;
-          top: vh;
-          left: vh;
-
+          top: 43vh;
+          left: 512.64vh;
         }  
       }
       
@@ -2146,8 +2161,8 @@ body {
         @include respond(xs) {
           width: vh;
           height: vh;
-          top: vh;
-          left: vh;
+          top: 49vh;
+          left: 542.64vh;
         }  
       }
       
@@ -2174,8 +2189,8 @@ body {
         @include respond(xs) {
           width: vh;
           height: vh;
-          top: vh;
-          left: vh;
+          top: 48vh;
+          left: 488.64vh;
         }  
       }
       
@@ -2202,8 +2217,8 @@ body {
         @include respond(xs) {
           width: vh;
           height: vh;
-          top: vh;
-          left: vh;
+          top: 62vh;
+          left: 560.64vh;
         }  
       }
       
@@ -2229,6 +2244,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: 43.104vh;
+          height: 19.04vh;
+          top: 4vh;
+          left: 647vh;
         }
       }
       
@@ -2253,6 +2272,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: vh;
+          height: vh;
+          top: 62vh;
+          left: 560.64vh;
         }
       }
       
@@ -2291,9 +2314,9 @@ body {
         @include respond(xs) {
           font-size: calc(2vh * 847 / 1000);
         
-          width: calc(58vh * 847 / 1000);
-          top: calc(39.1vh * 847 / 1000);
-          left: calc(833.1vh * 847 / 1000);
+          width: calc(46.2vh * 847 / 1000);
+          top: calc(26.12vh * 847 / 1000);
+          left: calc(765.81vh * 847 / 1000);
     
         }
       }
@@ -2318,6 +2341,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: vh;
+          height: vh;
+          top: 2vh;
+          left: 617.64vh;
         }
       }
       
@@ -2341,6 +2368,9 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
+          top: 34vh;
+          left: 647vh;
+          z-index: 2
         }
       }
       
@@ -2390,6 +2420,8 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          top: 33vh;
+          left: 610vh;
 
         }
       }
@@ -2414,6 +2446,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: 19.986638vh;
+          height: 10.164812vh;
+          top: 50vh;
+          left: 627vh;
         }
       }
       
@@ -2437,6 +2473,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: 43.9206611570248vh;
+          height: 19.1347220779221vh;
+          top: 67vh;
+          left: 608vh;
         }
       }
       
@@ -2472,9 +2512,9 @@ body {
         @include respond(xs) {
           font-size: calc(2vh * 847 / 1000);
         
-          width: calc(58vh * 847 / 1000);
-          top: calc(39.1vh * 847 / 1000);
-          left: calc(833.1vh * 847 / 1000);
+          width: calc(48.56vh * 847 / 1000);
+          top: calc(69.66vh * 847 / 1000);
+          left: calc(717.83vh * 847 / 1000);
 
         }
       }
@@ -2499,6 +2539,8 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          top: 1vh;
+          left: 539.64vh;
         }
       }
       
@@ -2522,6 +2564,8 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          top: 3vh;
+          left: 716vh;
         }
       }
       
@@ -2554,11 +2598,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {   
-          font-size: calc(2vh * 847 / 1000);
-        
-          width: calc(58vh * 847 / 1000);
-          top: calc(39.1vh * 847 / 1000);
-          left: calc(833.1vh * 847 / 1000);
+          display: none;
         }
       }
       
@@ -2579,10 +2619,13 @@ body {
         left: 870vh;
         z-index: 5;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
+          top: 43vh;
+          left: 727vh;
+          z-index: 2;
         }
       }
       
@@ -2617,9 +2660,9 @@ body {
         @include respond(xs) {
           font-size: calc(2vh * 847 / 1000);
         
-          width: calc(58vh * 847 / 1000);
-          top: calc(39.1vh * 847 / 1000);
-          left: calc(833.1vh * 847 / 1000);
+          width: calc(22.59vh * 847 / 1000);
+          top: calc(1.32vh * 847 / 1000);
+          left: calc(816.58vh * 847 / 1000);
 
         }
       }
@@ -2644,6 +2687,8 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          top: 15vh;
+          left: 692vh;
         }
       }
       
@@ -2687,10 +2732,14 @@ body {
         left: 864vh;
         z-index: 1;
         
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {   
+          width: 36.3956043956044vh;
+          height: 20.4725274725276vb;
+          top: 56vh;
+          left: 690vh;
         }
       }
       
