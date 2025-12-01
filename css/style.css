@@ -628,7 +628,6 @@ p, strong {
 }
 
 /* Reset form controls */
-button,
 input,
 select,
 textarea {
@@ -987,7 +986,7 @@ body.desktop .torn-note {
   pointer-events: none;
   width: 35.0295159386vh;
   height: 34.639905549vh;
-  top: 60vh;
+  top: 55vh;
   left: -3vh;
   transform: rotate(2deg);
   transform-origin: center;
@@ -6012,8 +6011,7 @@ body .ae-modal-closed {
 .modal {
   position: fixed;
   inset: 0;
-  z-index: 9999;
-  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6021,6 +6019,13 @@ body .ae-modal-closed {
 }
 .modal.hidden {
   display: none;
+}
+.modal::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
 }
 .modal .modal-content {
   position: relative;
@@ -6034,20 +6039,7 @@ body .ae-modal-closed {
   width: 100%;
   height: auto;
   display: block;
-}
-.modal .modal-content .close-modal {
-  position: absolute;
-  top: 2svh;
-  right: 2svh;
-  width: 4svh;
-  height: 4svh;
-  background: url("assets/img/x.webp") no-repeat center/contain;
-  border: none;
-  cursor: pointer;
-}
-.modal .modal-content .close-modal:hover {
-  transform: scale(1.15);
-  filter: brightness(1.1);
+  z-index: 10;
 }
 .modal .lottie-open-modal {
   cursor: pointer;
@@ -6056,6 +6048,26 @@ body .ae-modal-closed {
 .modal .lottie-open-modal:hover {
   scale: 1.02;
   filter: brightness(1.15);
+}
+.modal button.close-modal {
+  position: absolute;
+  top: 1svh;
+  left: 1svh;
+  width: 5.8svh;
+  height: 5.9svh;
+  width: 1.7355371901svh;
+  height: 1.7709563164svh;
+  background-color: transparent;
+  background-image: url("/assets/ui/x.webp");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  z-index: 11;
+}
+.modal button.close-modal:hover {
+  filter: brightness(1.1);
 }
 
 .social {
