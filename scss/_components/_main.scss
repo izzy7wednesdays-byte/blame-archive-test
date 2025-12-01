@@ -87,7 +87,7 @@ body {
       z-index: 1;
 
       @include respond(xs) {
-        display:none;
+        display: none;
       }
     }
       
@@ -308,7 +308,7 @@ body {
     }
       
     .lfg-mobile { 
-      display:none;
+      display: none;
 
       @include respond(xs) {
         display: flex;
@@ -570,7 +570,7 @@ body {
       transform-origin: center;
       
       @include respond(xs) {
-        display: none !important;
+        display: none;
       }
     }
     
@@ -763,7 +763,7 @@ body {
       transform-origin: center;
 
       @include respond(xs) {
-        display:none;
+        display: none;
       }
     }
 
@@ -1091,12 +1091,12 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
-        display:none;
+        display: none;
       }
     }
       
     .exitwounds-animation-mobile {
-      display:none;
+      display: none;
     
       @include respond(xs) {
         display: flex;
@@ -1112,7 +1112,7 @@ body {
         
         width: 112.747252747253vh;
         height: 56.3736263736265vh;
-        top: 400vh;
+        top: 0vh;
         left: 0vh;
                 
         transform: rotate(0deg);
@@ -1141,6 +1141,13 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: 18.0989010989011vh;
+        height: 21.4615384615385vh;
+        
+        width: vh;
+        height: vh;
+        top: vh;
+        left: vh;
       }
     }
       
@@ -1169,6 +1176,11 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        font-size: calc(4vh * 847/1000);  
+        
+        width: calc(19.0vh * 847 / 1000);
+        top: calc(86.3vh * 847 / 1000);
+        left: calc(492.9vh * 847 / 1000);
       }
     }
       
@@ -1193,6 +1205,13 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: 8.7065934065934vh;
+        height: 4.36373626373627vh;
+        
+        width: vh;
+        height: vh;
+        top: vh;
+        left: vh;
       }
     }
       
@@ -1216,6 +1235,11 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        font-size: calc(2vh * 847 / 1000);
+        
+        width: calc(58vh * 847 / 1000);
+        top: calc(39.1vh * 847 / 1000);
+        left: calc(833.1vh * 847 / 1000);
       }
     }
       
@@ -1238,6 +1262,13 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: 62.6373626373626vh;
+        height: 36.4835164835165vh;
+        
+        width: vh;
+        height: vh;
+        top: vh;
+        left: vh;
       }
     }
       
@@ -1261,6 +1292,10 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: vh;
+        height: vh;
+        top: vh;
+        left: vh;
       }
     }
       
@@ -1287,6 +1322,11 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        font-size: calc(2vh * 847 / 1000);
+        
+        width: calc(58vh * 847 / 1000);
+        top: calc(39.1vh * 847 / 1000);
+        left: calc(833.1vh * 847 / 1000);
       }
     }
       
@@ -1309,6 +1349,10 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: vh;
+        height: vh;
+        top: vh;
+        left: vh;
       }
     }
       
@@ -1333,6 +1377,10 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: vh;
+        height: vh;
+        top: vh;
+        left: vh;
       }
     }
       
@@ -1357,6 +1405,10 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: vh;
+        height: vh;
+        top: vh;
+        left: vh;
       }
     }
       
@@ -1380,7 +1432,7 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
-        display:none;
+        display: none;
       }
     }
       
@@ -1403,6 +1455,10 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: vh;
+        height: vh;
+        top: vh;
+        left: vh;
       }
     }
       
@@ -1425,6 +1481,10 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: vh;
+        height: vh;
+        top: vh;
+        left: vh;
       }
     }
       
@@ -1447,11 +1507,13 @@ body {
       transform-origin: center;
     
       @include respond(xs) {
+        width: vh;
+        height: vh;
+        top: vh;
+        left: vh;
       }
-    }
-      
-      // ========= LANDMINES SECTION =========
-      
+    }      
+      // ========= LANDMINES SECTION =========     
       .glitter-truck-2 {
         position: absolute;
         object-fit: cover;
@@ -1473,6 +1535,10 @@ body {
         transform-origin: center;
         
          @include respond(xs) {
+           width: vh;
+           height: vh;
+           top: vh;
+           left: vh;
         } 
       }
       
@@ -1497,6 +1563,10 @@ body {
         transform-origin: center;
       
          @include respond(xs) {
+           width: vh;
+           height: vh;
+           top: vh;
+           left: vh;
         }
       }
       
@@ -1521,6 +1591,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
         }  
       }
       
@@ -1545,7 +1619,7 @@ body {
         transform-origin: center;
         
          @include respond(xs) {
-           display:none;
+           display: none;
         }
       }
       
@@ -1570,7 +1644,11 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
-          z-index:5;
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
+          z-index: 5;
         }
       }
       
@@ -1595,7 +1673,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left:405svh;
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
         }    
       }
       
@@ -1633,7 +1714,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          display:none;
+          display: none;
         }    
       }
       
@@ -1658,6 +1739,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {   
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
         }  
       }
       
@@ -1682,7 +1767,10 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
-
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
         }    
       }
       
@@ -1707,7 +1795,7 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
-          display:none!important;
+          display: none;
         }    
       }
       
@@ -1732,7 +1820,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          display:none;
+          display: none;
         }     
       }
       
@@ -1757,7 +1845,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          display:none !important;
+          display: none;
         }     
       }
       
@@ -1807,6 +1895,10 @@ body {
 
       
         @include respond(xs) {
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
         }       
       }
       
@@ -1842,6 +1934,11 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          font-size: calc(2vh * 847 / 1000);
+        
+          width: calc(58vh * 847 / 1000);
+          top: calc(39.1vh * 847 / 1000);
+          left: calc(833.1vh * 847 / 1000);
 
         }      
       }
@@ -1866,7 +1963,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
         }      
       }
       
@@ -1891,6 +1991,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
 
         }       
       }
@@ -1955,6 +2059,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
         }
       }
       
@@ -1978,6 +2086,10 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
 
         }  
       }
@@ -2002,6 +2114,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
         }  
       }
       
@@ -2027,6 +2143,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
         }  
       }
       
@@ -2051,6 +2171,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
         }  
       }
       
@@ -2075,6 +2199,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: vh;
+          height: vh;
+          top: vh;
+          left: vh;
         }  
       }
       
@@ -2160,6 +2288,11 @@ body {
         transform-origin: center;
             
         @include respond(xs) {
+          font-size: calc(2vh * 847 / 1000);
+        
+          width: calc(58vh * 847 / 1000);
+          top: calc(39.1vh * 847 / 1000);
+          left: calc(833.1vh * 847 / 1000);
     
         }
       }
@@ -2231,7 +2364,7 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
-          display:none;  
+          display: none;  
         }
       }
       
@@ -2336,6 +2469,11 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          font-size: calc(2vh * 847 / 1000);
+        
+          width: calc(58vh * 847 / 1000);
+          top: calc(39.1vh * 847 / 1000);
+          left: calc(833.1vh * 847 / 1000);
 
         }
       }
@@ -2415,6 +2553,11 @@ body {
         transform-origin: center;
       
         @include respond(xs) {   
+          font-size: calc(2vh * 847 / 1000);
+        
+          width: calc(58vh * 847 / 1000);
+          top: calc(39.1vh * 847 / 1000);
+          left: calc(833.1vh * 847 / 1000);
         }
       }
       
@@ -2471,6 +2614,11 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          font-size: calc(2vh * 847 / 1000);
+        
+          width: calc(58vh * 847 / 1000);
+          top: calc(39.1vh * 847 / 1000);
+          left: calc(833.1vh * 847 / 1000);
 
         }
       }
@@ -2518,7 +2666,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          display:none;    
+          display: none;    
         }
       }
       
@@ -2668,6 +2816,11 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          font-size: calc(2vh * 847 / 1000);
+        
+          width: calc(58vh * 847 / 1000);
+          top: calc(39.1vh * 847 / 1000);
+          left: calc(833.1vh * 847 / 1000);
         }
       }
       
@@ -2787,7 +2940,7 @@ body {
       
         @include respond(xs) {
           --left: 815svh;  
-          display:none;
+          display: none;
         }
       }
       
@@ -2952,7 +3105,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          display:none;
+          display: none;
         }
       }
       
@@ -3031,6 +3184,11 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
+          font-size: calc(2vh * 847 / 1000);
+        
+          width: calc(58vh * 847 / 1000);
+          top: calc(39.1vh * 847 / 1000);
+          left: calc(833.1vh * 847 / 1000);
 
         }
       }
@@ -3186,7 +3344,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          display:none;
+          display: none;
         }
       }
       
@@ -5329,7 +5487,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          display:none;
+          display: none;
           //--left:1649svh;
         }
       }
@@ -5927,7 +6085,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          display:none;
+          display: none;
         }
       }
       
@@ -6551,7 +6709,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          display:none;
+          display: none;
           --left:2142svh;
         }
       }
@@ -6634,7 +6792,7 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
-          display:none;
+          display: none;
         }
       }
       
@@ -6734,7 +6892,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          display:none;
+          display: none;
         }
       }
       
@@ -6990,7 +7148,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          display:none;
+          display: none;
 
         }
       }
