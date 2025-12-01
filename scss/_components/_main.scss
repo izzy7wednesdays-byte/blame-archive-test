@@ -208,18 +208,20 @@ body {
       position: absolute;
       object-fit: cover;
       pointer-events: none;
-
-      width: 35.0295159386067vh;
-      height: 34.6399055489964vh;
-      top: 55vh;
+      
+      width: 53.7119244391969vh;
+      height: 53.1145218417945vh;
+      top: 51vh;
       left: -3vh;
       
-      transform: rotate(2deg);
+      transform: rotate(2.5deg);
       transform-origin: center;
 
       @include respond(xs) { 
-
-        
+        width: 35.0295159386067vh;
+        height: 34.6399055489964vh;
+        top: 55vh;
+        left: -3vh;        
       }
     }
       
@@ -1995,16 +1997,16 @@ body {
       .misery-ogchorus {
         position: absolute;
         object-fit: cover;
+
+        width: 637px;
+        height: 283.271px;
         
-        width: 1920px;
-        height: 1080px;
+        width: 75.2066115702479vh;
+        height: 31.1286813186813vh;
         
-        width: 209.83607vh;
-        height: 118.03279vh;
-        
-        width: 54.5573782vh;
-        height: 30.6885254vh;
-        top: 4vh;
+        width: 53.88vh;
+        height: 23.8vh;
+        top: 8vh;
         left: 703vh;
         z-index: 3;
         
@@ -2199,24 +2201,22 @@ body {
         position: absolute;
         object-fit: cover;
         
-        width: 1920px;
-        height: 1080px;
+        width: 637px;
+        height: 277.519px;
         
-        width: 209.83607vh;
-        height: 118.03279vh;
+        width: 75.2066115702479vh;
+        height: 32.7649350649351vh;
         
-        width: 54.5573782vh;
-        height: 30.6885254vh;
-        top: 2vh;
-        left: 807vh;
-        z-index: auto ;
+        width: 53.88vh;
+        height: 23.92vh;
+        top: 7vh;
+        left: 703vh;
+        z-index: 3;
         
         transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
-          --left: 627svh;
-          --y:74svh;
         }
       }
       
@@ -2659,20 +2659,21 @@ body {
       .sleepwalking-listeningparty {
         position: absolute;
         object-fit: cover;
+        pointer-events: auto;
+
+        width: 292px;
+        height: 219px;
         
-        width: 1920px;
-        height: 1080px;
+        width: 34.4746162927981vh;
+        height: 25.8559622195986vh;
         
-        width: 209.83607vh;
-        height: 118.03279vh;
+        width: 44.8170011806375vh;
+        height: 33.6127508854782vh;
+        top: 64vh;
+        left: 986vh;
+        z-index: 1;
         
-        width: 52.4590175vh;
-        height: 29.5081975vh;
-        top: 68vh;
-        left: 984vh;
-        z-index: auto;
-        
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
         @include respond(xs) {
