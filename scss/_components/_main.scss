@@ -2765,7 +2765,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-
+          width: 14.67258vh;
+          height: 18.16038vh;
+          top: 1vh;
+          left: 738vh;
         }
       }
       
@@ -2789,6 +2792,9 @@ body {
         transform-origin: center;
       
         @include respond(xs) {  
+          width: 20.7661468vh;
+          height: 30.36971vh;
+          left: 754vh;
         }
       }
       
@@ -2812,6 +2818,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: 25.38975472vh;
+          height: 16.14788416vh;
+          left: 756vh;
+          top: 35vhvh;
         }
       }
       
@@ -2834,7 +2844,9 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left: 725svh;    
+          width: 36.3956043956044vh;
+          height: 20.4725274725276vh;
+          left: 752vh;   
         }
       }
       
@@ -2867,10 +2879,9 @@ body {
       
         @include respond(xs) {
           font-size: calc(2vh * 847 / 1000);
-        
-          width: calc(58vh * 847 / 1000);
-          top: calc(39.1vh * 847 / 1000);
-          left: calc(833.1vh * 847 / 1000);
+          width: calc(38vh * 847 / 1000);
+          top: calc(66.1vh * 847 / 1000);
+          left: calc(886.1vh * 847 / 1000);
         }
       }
       
@@ -2894,7 +2905,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left: 761svh;       
+          width: 13.40044584vh;
+          height: 20.48997688vh; 
+          top: 62vh;
+          left: 783vh;
         }
       }
       
@@ -2918,6 +2932,9 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: 36.3956043956044vh;
+          height: 20.4725274725276vh;
+          left: 778vh;
         }
       }
       
@@ -2941,7 +2958,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-
+          width: 54.3081842325vh;
+          height: 16.0356348vh;
+          top: 41vh;
+          left: 785vh;
         }
       }
       
@@ -2966,6 +2986,9 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          width: 34.4746162927981vh;
+          height: 25.8559622195986vh;
+          left: 800vh;
 
         }
       }
@@ -2988,8 +3011,7 @@ body {
         transform: scale(1) rotate(20deg);
         transform-origin: center;
       
-        @include respond(xs) {
-          --left: 815svh;  
+        @include respond(xs) { 
           display: none;
         }
       }
@@ -3014,7 +3036,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-          --left: 816svh;
+          width: 26.54482305vh;
+          height: 27.37917675vh;
+          top: 64vh;
+          left: 830vh;
         }
       }
       
@@ -3037,7 +3062,10 @@ body {
         transform: scale(1) rotate(-5deg);
         transform-origin: center;
       
-        @include respond(xs) {     
+        @include respond(xs) {    
+          width: 23.381122875vh;
+          height: 41.571547875vh;
+          left: 857vh; 
         }
       }
       
@@ -3063,7 +3091,9 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
-
+          width: 68.01214122vh;
+          height: 45.2886381vh;
+          left: 815vh;
         }
       }
       
@@ -3085,7 +3115,9 @@ body {
         transform: scale(1) rotate(18deg);
         transform-origin: center;
       
-        @include respond(xs) {     
+        @include respond(xs) {    
+          left: 846vh;
+          top: 39vh; 
         }
       }
       
@@ -3108,7 +3140,9 @@ body {
         transform: rotate(19deg);
         transform-origin: center;
       
-        @include respond(xs) {      
+        @include respond(xs) {  
+          left: 780vh;
+          top: 28vh;    
         }
       }
       
@@ -3131,7 +3165,9 @@ body {
         transform: scale(1) rotate(19deg);
         transform-origin: center;
       
-        @include respond(xs) {      
+        @include respond(xs) {  
+          left: 803vh;
+          top: 27vh;    
         }
       }
       
@@ -3179,6 +3215,8 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          left: 885vh;
+          top: 8vh;
         }
       }
       
