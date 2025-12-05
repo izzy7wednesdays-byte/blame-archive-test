@@ -3140,6 +3140,14 @@ body.desktop .smurfette-1 {
   transform: scale(1) rotate(-13deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .smurfette-1 {
+    width: 14.67258vh;
+    height: 18.16038vh;
+    top: 1vh;
+    left: 738vh;
+  }
+}
 body.desktop .thestar-tarot {
   position: absolute;
   object-fit: cover;
@@ -3156,6 +3164,13 @@ body.desktop .thestar-tarot {
   transform: scale(1) rotate(-8deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .thestar-tarot {
+    width: 20.7661468vh;
+    height: 30.36971vh;
+    left: 754vh;
+  }
+}
 body.desktop .play-sleepwalking {
   position: absolute;
   object-fit: cover;
@@ -3171,6 +3186,14 @@ body.desktop .play-sleepwalking {
   z-index: auto;
   transform: scale(1) rotate(10deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .play-sleepwalking {
+    width: 25.38975472vh;
+    height: 16.14788416vh;
+    left: 756vh;
+    top: 35vhvh;
+  }
 }
 body.desktop .sleepwalking-radio {
   position: absolute;
@@ -3189,7 +3212,9 @@ body.desktop .sleepwalking-radio {
 }
 @media (max-width: 36em) {
   body.desktop .sleepwalking-radio {
-    --left: 725svh;
+    width: 36.3956043956vh;
+    height: 20.4725274725vh;
+    left: 752vh;
   }
 }
 body.desktop .text-wrapper-13 {
@@ -3217,9 +3242,9 @@ body.desktop .text-wrapper-13 {
 @media (max-width: 36em) {
   body.desktop .text-wrapper-13 {
     font-size: 1.694vh;
-    width: 49.126vh;
-    top: 33.1177vh;
-    left: 705.6357vh;
+    width: 32.186vh;
+    top: 55.9867vh;
+    left: 750.5267vh;
   }
 }
 body.desktop .sleepwalking-radio-polaroid {
@@ -3240,7 +3265,10 @@ body.desktop .sleepwalking-radio-polaroid {
 }
 @media (max-width: 36em) {
   body.desktop .sleepwalking-radio-polaroid {
-    --left: 761svh;
+    width: 13.40044584vh;
+    height: 20.48997688vh;
+    top: 62vh;
+    left: 783vh;
   }
 }
 body.desktop .sleepwalking-visualizer {
@@ -3258,6 +3286,13 @@ body.desktop .sleepwalking-visualizer {
   transform: scale(1) rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .sleepwalking-visualizer {
+    width: 36.3956043956vh;
+    height: 20.4725274725vh;
+    left: 778vh;
+  }
+}
 body.desktop .sleepwalking-title {
   position: absolute;
   object-fit: cover;
@@ -3274,6 +3309,14 @@ body.desktop .sleepwalking-title {
   transform: scale(1) rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .sleepwalking-title {
+    width: 54.3081842325vh;
+    height: 16.0356348vh;
+    top: 41vh;
+    left: 785vh;
+  }
+}
 body.desktop .sleepwalking-listeningparty {
   position: absolute;
   object-fit: cover;
@@ -3289,6 +3332,13 @@ body.desktop .sleepwalking-listeningparty {
   z-index: 1;
   transform: rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .sleepwalking-listeningparty {
+    width: 34.4746162928vh;
+    height: 25.8559622196vh;
+    left: 800vh;
+  }
 }
 body.desktop .blue-star-8 {
   position: absolute;
@@ -3307,7 +3357,6 @@ body.desktop .blue-star-8 {
 }
 @media (max-width: 36em) {
   body.desktop .blue-star-8 {
-    --left: 815svh;
     display: none;
   }
 }
@@ -3328,7 +3377,10 @@ body.desktop .about-sleepwalking {
 }
 @media (max-width: 36em) {
   body.desktop .about-sleepwalking {
-    --left: 816svh;
+    width: 26.54482305vh;
+    height: 27.37917675vh;
+    top: 64vh;
+    left: 830vh;
   }
 }
 body.desktop .sleepwalking-receipt {
@@ -3347,6 +3399,13 @@ body.desktop .sleepwalking-receipt {
   transform: scale(1) rotate(-5deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .sleepwalking-receipt {
+    width: 23.381122875vh;
+    height: 41.571547875vh;
+    left: 857vh;
+  }
+}
 body.desktop .ep-inspo {
   position: absolute;
   object-fit: cover;
@@ -3363,6 +3422,13 @@ body.desktop .ep-inspo {
   transform: scale(1) rotate(0deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .ep-inspo {
+    width: 68.01214122vh;
+    height: 45.2886381vh;
+    left: 815vh;
+  }
+}
 body.desktop .silver-star1-3 {
   position: absolute;
   object-fit: cover;
@@ -3377,6 +3443,12 @@ body.desktop .silver-star1-3 {
   left: 1043vh;
   transform: scale(1) rotate(18deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .silver-star1-3 {
+    left: 846vh;
+    top: 39vh;
+  }
 }
 body.desktop .blue-star-9 {
   position: absolute;
@@ -3394,6 +3466,12 @@ body.desktop .blue-star-9 {
   transform: rotate(19deg);
   transform-origin: center;
 }
+@media (max-width: 36em) {
+  body.desktop .blue-star-9 {
+    left: 780vh;
+    top: 28vh;
+  }
+}
 body.desktop .silver-star3-7 {
   position: absolute;
   object-fit: cover;
@@ -3409,6 +3487,12 @@ body.desktop .silver-star3-7 {
   z-index: 2;
   transform: scale(1) rotate(19deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .silver-star3-7 {
+    left: 803vh;
+    top: 27vh;
+  }
 }
 body.desktop .top-spotify-sparkles {
   position: absolute;
@@ -3446,6 +3530,12 @@ body.desktop .ep-inspo-sp {
   z-index: 2;
   transform: scale(1) rotate(0deg);
   transform-origin: center;
+}
+@media (max-width: 36em) {
+  body.desktop .ep-inspo-sp {
+    left: 885vh;
+    top: 8vh;
+  }
 }
 body.desktop .bottom-spotify-sparkles {
   position: absolute;
