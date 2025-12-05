@@ -2821,7 +2821,7 @@ body {
           width: 25.38975472vh;
           height: 16.14788416vh;
           left: 756vh;
-          top: 35vhvh;
+          top: 35vh;
         }
       }
       
@@ -3236,10 +3236,12 @@ body {
         top: 21vh;
         left: 1123vh;
         z-index: 4;
-        transform: scale(1) rotate(29deg);
+        transform: rotate(29deg);
         transform-origin: center;
       
         @include respond(xs) {
+          top: 16vh;
+          left: 891vh;
         }
       }
       
@@ -3272,12 +3274,11 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
-          font-size: calc(2vh * 847 / 1000);
-        
-          width: calc(58vh * 847 / 1000);
-          top: calc(39.1vh * 847 / 1000);
-          left: calc(833.1vh * 847 / 1000);
-
+          font-size: calc(3vh * 847 / 1000);
+          
+          width: calc(27vh * 847 / 1000);
+          top: calc(60.1vh * 847 / 1000);
+          left: calc(1051.1vh * 847 / 1000);
         }
       }
       
@@ -3302,6 +3303,10 @@ body {
         transform-origin: center;
         
         @include respond(xs) {
+          width: 30.6458784vh;
+          height: 22.3786176vh;
+          top: 60vh;
+          left: 886vh;
         }
       }
       
@@ -3334,6 +3339,10 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          font-size: calc(3vh * 847 / 1000);
+          width: calc(42vh * 847 / 1000);
+          top: calc(95.1vh * 847 / 1000);
+          left: calc(1042.6vh * 847 / 1000);
         }
       }
       
@@ -3352,10 +3361,11 @@ body {
         top: 50vh;
         left: 1159vh;
         z-index: 1;
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
-        @include respond(xs) {  
+        @include respond(xs) {
+          left: 920vh;
         }
       }
       
@@ -3386,7 +3396,13 @@ body {
         transform: rotate(0deg);
         transform-origin: center;
       
-        @include respond(xs) {   
+        @include respond(xs) {  
+          text-transform: uppercase;
+          font-size: calc(2.5vh * 847 / 1000);
+          
+          width: calc(27vh * 847 / 1000);
+          top: calc(50.1vh * 847 / 1000);
+          left: calc(1086.6vh * 847 / 1000);
         }
       }
       
@@ -3405,10 +3421,14 @@ body {
         top: 2vh;
         left: 1184vh;
         z-index: auto;
-        transform: scale(1) rotate(0deg);
+        transform: rotate(0deg);
         transform-origin: center;
       
-        @include respond(xs) {        
+        @include respond(xs) {   
+          width: 22.2527472527474vh;
+          height: 39.5604395604396vh;
+          left: 925vh;
+          z-index: 5;
         }
       }
       
@@ -3487,6 +3507,8 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          left: 949vh;
+          top: 14vh;
         }
       }
       
@@ -3518,7 +3540,11 @@ body {
         transform-origin: center;
          
         @include respond(xs) {
-
+          font-size: calc(2.4vh * 847 / 1000);
+          
+          width: calc(28vh * 847 / 1000);
+          top: calc(2.5vh * 847 / 1000);
+          left: calc(1120.6vh * 847 / 1000);
         }
       }
       
@@ -3543,6 +3569,7 @@ body {
         transform-origin: center;
       
         @include respond(xs) {
+          left: 949vh;
         }
       }
       
@@ -3574,7 +3601,11 @@ body {
         transform-origin: center;   
       
         @include respond(xs) {
-
+          font-size: calc(2vh * 847 / 1000);
+          
+          width: calc(33vh * 847 / 1000);
+          top: calc(54.5vh * 847 / 1000);
+          left: calc(1149.6vh * 847 / 1000);
         }
       }
       
